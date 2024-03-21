@@ -1,0 +1,23 @@
+.footer {
+    background-color: #D9D9D9;
+    width: 100%;
+    height: 140px;
+    align-self: flex-end;
+    text-align: center;
+}
+
+.container {
+    padding: 10px;
+}
+
+.name {
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.address {
+    margin: 0;
+    font-weight: 500;
+}

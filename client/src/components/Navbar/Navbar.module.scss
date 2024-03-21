@@ -1,0 +1,39 @@
+.navbar {
+    margin-bottom: 10px;
+}
+
+.title {
+    background-color: #C42537;
+    position: relative;
+    height: 50px;
+    color: white;
+    font-size: 24px;
+
+    .text {
+        position: absolute;
+        left: 35px;
+        top: 8px;
+        cursor: pointer;
+    }
+
+    .cart {
+        position: absolute;
+        right: 35px;
+        top: 8px;
+        cursor: pointer;
+    }
+}
+
+.logo__container {
+    position: relative;
+    height: 100px;
+}
+
+.logo {
+    position: absolute;
+    top: 5px;
+    left: 15px;
+    height: auto;
+    width: 250px;
+    cursor: pointer;
+}

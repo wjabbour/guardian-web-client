@@ -1,0 +1,33 @@
+.card {
+    cursor: pointer;
+    position: relative;
+    max-height: 300px;
+
+    img {
+        width: 200px;
+        max-height: 300px;
+        margin: 0;
+        padding: 0;
+        display: block;
+    }
+
+    .space {
+      background-color: white;
+    }
+
+    .label {
+        color: white;
+        background-color: #222E3F;
+        position: absolute;
+        bottom: 0px;
+        height: 30px;
+        width: 100%;
+        font-size: 17px;
+
+        p {
+            position: relative;
+            bottom: 10px;
+            left: 5px;
+        }
+    }
+}

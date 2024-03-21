@@ -1,0 +1,15 @@
+.landing {
+    display: flex;
+    justify-content: center;
+    background-color: #414042;
+    padding: 100px;
+}
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 90px;
+    max-width: 900px;
+    min-height: 450px;
+}
