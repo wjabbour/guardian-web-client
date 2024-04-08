@@ -64,12 +64,6 @@
     display: flex;
     gap: 15px;
   }
-
-  .color__name {
-    position: relative;
-    bottom: 10px;
-    font-weight: 400;
-  }
 }
 
 .selected {
@@ -87,9 +81,10 @@
 }
 
 .color__block {
-  height: 35px;
-  width: 40px;
+  height: 32px;
+  width: 38px;
   cursor: pointer;
+  border: 1px solid grey;
 }
 
 .checkout__container {
@@ -115,14 +110,35 @@
   background-color: black;
 }
 
+.Grey {
+  background-color: #8b8c8f;
+}
+
+.Red {
+  background-color: #eb4034;
+}
+
+.Royal { 
+  background-color: #09399e
+}
+
+.Blue {
+  background-color: #0653cf
+}
+
+.Anthracite {
+  background-color: #6c6d70
+}
+
+.Green { 
+  background-color: #025225
+}
+
+.Concrete {
+  background-color: #9da6b0
+}
+
 .Navy {
-  background-color: #202A44;
+  background-color: #00265e
 }
 
-.Gray {
-  background-color: #808080;
-}
-
-.Graphite {
-  background-color: #605D53;
-}
