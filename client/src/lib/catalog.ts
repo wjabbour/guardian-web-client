@@ -127,7 +127,7 @@ export const catalog: ClothingItem[] = [
     fullname: 'Port Authority® All-Conditions Jacket',
     colors: ['Black', 'Blue'],
     gender: 'male',
-    default_color: 'Black',
+    default_color: 'Black', 
     sizes: {
       Small: 75.99,
       Medium: 75.99,
@@ -154,6 +154,41 @@ export const catalog: ClothingItem[] = [
       '3XLarge': 77.99,
       '4XLarge': 78.99,
     }
-  }
+  },
+  {
+    code: 'K805',
+    name: '1/4-Zip Pullover',
+    fullname: 'Port Authority® 1/4-Zip Pullover',
+    colors: ['Black', 'Blue', 'Navy', 'Grey'],
+    gender: 'male',
+    default_color: 'Black', 
+    sizes: {
+      Small: 35.99,
+      Medium: 35.99,
+      Large: 35.99,
+      XLarge: 35.99,
+      '2XLarge': 36.99,
+      '3XLarge': 37.99,
+      '4XLarge': 38.99,
+    }
+  },
+
+  {
+    code: 'L805',
+    name: '1/4-Zip Pullover',
+    fullname: 'Port Authority® 1/4-Zip Pullover',
+    colors: ['Black', 'Blue', 'Navy', 'Grey'],
+    gender: 'female',
+    default_color: 'Black', 
+    sizes: {
+      Small: 35.99,
+      Medium: 35.99,
+      Large: 35.99,
+      XLarge: 35.99,
+      '2XLarge': 36.99,
+      '3XLarge': 37.99,
+      '4XLarge': 38.99,
+    }
+  },
 ]
 
