@@ -10,7 +10,6 @@
   display: flex;
   gap: 50px;
   background-color: white;
-  width: 800px;
   padding: 15px;
   height: 600px;
   overflow-y: scroll;
@@ -140,5 +139,20 @@
 
 .Navy {
   background-color: #00265e
+}
+
+table {
+  input {
+    width: 100%;
+  }
+}
+
+td {
+  width: 50px;
+}
+
+th {
+  text-align: right;
+  width: 75px;
 }
 
