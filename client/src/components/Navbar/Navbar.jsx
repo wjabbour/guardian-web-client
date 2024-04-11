@@ -10,6 +10,9 @@ export default function Navbar(props) {
                 <div className={styles.text} onClick={() => navigate('/')}></div>
                 <div className={styles.cart} onClick={() => navigate('/cart')}>Cart ({Object.keys(props.cart).length})</div>
             </div>
+            <div className={styles.logo__container}>
+                <img className={styles.logo} src={'/images/guardian.png'} onClick={() => navigate('/')}></img>
+            </div>
         </div>
     )
 }

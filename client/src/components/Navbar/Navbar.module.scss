@@ -1,8 +1,9 @@
 .navbar {
+  background-color: #001489;
+
 }
 
 .title {
-    background-color: #001489;
     position: relative;
     height: 100px;
     color: white;
@@ -18,21 +19,17 @@
     .cart {
         position: absolute;
         right: 35px;
-        top: 8px;
+        top: 35px;
         cursor: pointer;
     }
 }
 
-// .logo__container {
-//     position: relative;
-//     height: 100px;
-// }
 
-// .logo {
-//     position: absolute;
-//     top: 5px;
-//     left: 15px;
-//     height: auto;
-//     width: 250px;
-//     cursor: pointer;
-// }
+
+.logo {
+    position: absolute;
+    top: 25px;
+    left: 45px;
+    height: auto;
+    cursor: pointer;
+}

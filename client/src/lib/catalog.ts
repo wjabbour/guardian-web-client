@@ -88,6 +88,28 @@ export const catalog: ClothingItem[] = [
     }
   },
   {
+    code: 'CP80',
+    name: 'Twill Cap',
+    fullname: 'Port & Company® Six-Panel Twill Cap',
+    colors: ['Black', 'Red', 'Navy', 'Green', 'Blue', 'Grey', 'Brown' ],
+    gender: 'accessory',
+    default_color: 'Black',
+    sizes: {
+      'One Size Fits All': 14.29
+    }
+  },
+  {
+    code: 'C112',
+    name: 'Snapback',
+    fullname: 'Port Authority® Snapback Trucker Cap',
+    colors: ['Black', 'Navy', 'Black White', 'Blue', 'Red White', 'Royal White', 'Grey', 'Pink White', 'Camo', 'Khaki White'],
+    gender: 'accessory',
+    default_color: 'Black',
+    sizes: {
+      'One Size Fits All': 14.29
+    }
+  },
+  {
     code: 'NKDC1963',
     name: 'Dri-FIT Polo Shirt',
     fullname: 'Nike® Dri-FIT Polo',

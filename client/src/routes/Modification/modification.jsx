@@ -34,8 +34,9 @@ export default function Modification() {
       <div
         className={`${styles.color__block} ${styles[color]} ${selected_color === color ? styles.selected : ''}`}
         onClick={() => {
-          set_selected_color(color)
-          set_image_source(`/images/${item.code}_${color.toLowerCase()}.jpg`)
+          const selectedColor = color.split(' ').join('_')
+          set_selected_color(selectedColor)
+          set_image_source(`/images/${item.code}_${selectedColor.toLowerCase()}.jpg`)
         }}>
       </div>
       <div className={styles.color__name}>
