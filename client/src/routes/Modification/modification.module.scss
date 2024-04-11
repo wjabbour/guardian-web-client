@@ -12,18 +12,13 @@
   background-color: white;
   padding: 15px;
   height: 600px;
+  min-width: 600px;
   overflow-y: scroll;
 }
 
 #move {
   position: relative;
   right: 10px;
-}
-
-.form__container {
-  display: flex;
-  flex-direction: column;
-  gap: 35px;
 }
 
 .image__container {
@@ -156,7 +151,6 @@ td {
 }
 
 th {
-  text-align: right;
   width: 75px;
 }
 
