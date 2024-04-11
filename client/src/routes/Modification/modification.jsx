@@ -2,14 +2,6 @@ import styles from './modification.module.scss'
 import { catalog } from '../../lib/catalog'
 import { useLoaderData, useOutletContext } from 'react-router-dom'
 import { useState } from 'react'
-import QuantityDropDown from '../../components/QuantityDropDown/QuantityDropDown'
-import SizeDropDown from '../../components/SizeDropDown/SizeDropDown'
-import { addItemToCart } from '../../App'
-import TextField from '@mui/material/TextField';
-import InputLabel from '@mui/material/InputLabel';
-import MenuItem from '@mui/material/MenuItem';
-import FormControl from '@mui/material/FormControl';
-import Select from '@mui/material/Select';
 import Snackbar from '@mui/material/Snackbar';
 
 export async function loader({ params }) {
