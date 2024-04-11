@@ -99,7 +99,7 @@ export default function Modification() {
                   return <tr>
                     <th scope="row">{size}</th>
                     {item.colors.map(() => {
-                      return <td><input type="text" placeholder="0"></input></td>
+                      return <td><input type="text"></input></td>
                     })}
                   </tr>
                 })}

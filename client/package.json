@@ -21,7 +21,7 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "deploy": "npm run build && aws s3 cp build s3://cannonemployeestore.com/ --recursive && aws cloudfront create-invalidation --distribution-id E14D6FK2VK66GQ --paths \"/*\"",
+    "deploy": "AWS_PROFILE=stivers npm run build && aws s3 cp build s3://gpstivers.com/ --recursive && aws cloudfront create-invalidation --distribution-id EEZ12WJWK62SX --paths \"/*\"",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
