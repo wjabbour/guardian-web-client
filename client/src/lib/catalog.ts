@@ -15,7 +15,7 @@ export const catalog: ClothingItem[] = [
     code: 'J317',
     name: 'Soft Shell Jacket',
     fullname: 'Port Authority® Core Soft Shell Jacket',
-    colors: ['Black', 'Grey'],
+    colors: ['Black', 'Battleship Grey'],
     gender: 'male',
     default_color: 'Black',
     sizes: {
@@ -34,7 +34,7 @@ export const catalog: ClothingItem[] = [
     code: 'L317',
     name: 'Soft Shell Jacket',
     fullname: 'Port Authority® Ladies Core Soft Shell Jacket',
-    colors: ['Black', 'Grey'],
+    colors: ['Black', 'Battleship Grey'],
     gender: 'female',
     default_color: 'Black',
     sizes: {
@@ -53,7 +53,7 @@ export const catalog: ClothingItem[] = [
     code: 'ST650',
     name: 'Polo Shirt',
     fullname: 'Sport-Tek® Sport-Wick Polo',
-    colors: ['Black', 'Red', 'Royal', 'Green', 'Grey', 'Concrete', 'White'],
+    colors: ['Black', 'True Red', 'True Royal', 'Forest Green', 'Iron Grey', 'Grey Concrete', 'White'],
     gender: 'male',
     default_color: 'Black',
     sizes: {
@@ -69,10 +69,25 @@ export const catalog: ClothingItem[] = [
     }
   },
   {
+    code: 'TST650',
+    name: 'Tall Polo Shirt',
+    fullname: 'Sport-Tek® Tall Sport-Wick Polo',
+    colors: ['Black', 'True Red', 'True Royal', 'Iron Grey', 'Grey Concrete', 'White'],
+    gender: 'male',
+    default_color: 'Black',
+    sizes: {
+      LT: 27.99,
+      XLT: 28.99,
+      '2XLT': 29.99,
+      '3XLT': 31.99,
+      '4XLT': 32.99
+    }
+  },
+  {
     code: 'LST650',
     name: 'Polo Shirt',
     fullname: 'Sport-Tek® Sport-Wick Polo',
-    colors: ['Black', 'Red', 'Royal', 'Green', 'Grey', 'Concrete', 'White'],
+    colors: ['Black', 'True Red', 'True Royal', 'Forest Green', 'Iron Grey', 'Grey Concrete', 'White'],
     gender: 'female',
     default_color: 'Black',
     sizes: {
@@ -113,7 +128,7 @@ export const catalog: ClothingItem[] = [
     code: 'NKDC1963',
     name: 'Dri-FIT Polo Shirt',
     fullname: 'Nike® Dri-FIT Polo',
-    colors: ['Blue', 'Red', 'Black', 'White', 'Green', 'Anthracite','Grey'],
+    colors: ['Gym Blue', 'University Red', 'Black', 'White', 'George Green', 'Anthracite','Cool Grey'],
     gender: 'male',
     default_color: 'Black',
     sizes: {
@@ -130,7 +145,7 @@ export const catalog: ClothingItem[] = [
     code: 'NKDC1991',
     name: 'Dri-FIT Polo Shirt',
     fullname: 'Nike® Dri-FIT Polo',
-    colors: ['Blue', 'Red', 'Black', 'White', 'Green', 'Anthracite','Grey'],
+    colors: ['Gym Blue', 'University Red', 'Black', 'White', 'George Green', 'Anthracite','Cool Grey'],
     gender: 'female',
     default_color: 'Black',
     sizes: {
@@ -147,7 +162,7 @@ export const catalog: ClothingItem[] = [
     code: 'J331',
     name: 'Rain Jacket',
     fullname: 'Port Authority® All-Conditions Jacket',
-    colors: ['Black', 'Blue'],
+    colors: ['Black', 'Direct Blue'],
     gender: 'male',
     default_color: 'Black', 
     sizes: {
@@ -181,7 +196,7 @@ export const catalog: ClothingItem[] = [
     code: 'K805',
     name: '1/4-Zip Pullover',
     fullname: 'Port Authority® 1/4-Zip Pullover',
-    colors: ['Black', 'Blue', 'Navy', 'Grey'],
+    colors: ['Black', 'Regatta Blue', 'True Navy', 'Iron Grey'],
     gender: 'male',
     default_color: 'Black', 
     sizes: {
@@ -199,7 +214,7 @@ export const catalog: ClothingItem[] = [
     code: 'L805',
     name: '1/4-Zip Pullover',
     fullname: 'Port Authority® 1/4-Zip Pullover',
-    colors: ['Black', 'Blue', 'Navy', 'Grey'],
+    colors: ['Black', 'Regatta Blue', 'True Navy', 'Iron Grey'],
     gender: 'female',
     default_color: 'Black', 
     sizes: {

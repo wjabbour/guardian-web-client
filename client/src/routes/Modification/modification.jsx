@@ -24,7 +24,7 @@ export default function Modification() {
   const color_selection = item.colors.map((color) => {
     return <div className={styles.color__option} key={color}>
       <div
-        className={`${styles.color__block} ${styles[color]} ${selected_color === color ? styles.selected : ''}`}
+        className={`${styles.color__block} ${styles[color.split(' ').join('_')]} ${selected_color === color ? styles.selected : ''}`}
         onClick={() => {
           const selectedColor = color.split(' ').join('_')
           set_selected_color(selectedColor)
