@@ -1,3 +1,10 @@
+# TODO
+
+figure out paypal thing
+deploy backend and test
+fix color names
+add half color squares for hats
+
 # Contributor
 
 Turner Jabbour <br>
