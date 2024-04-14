@@ -75,7 +75,6 @@
 }
 
 .color__title {
-  margin-bottom: 10px;
   font-size: 18px;
   font-weight: 500;
 }
@@ -85,6 +84,18 @@
   width: 38px;
   cursor: pointer;
   border: 1px solid grey;
+}
+
+.color__triangle {
+  height: 0px;
+  width: 0px;
+  border-right: 38px solid transparent;
+  border-top: 29px solid white;
+}
+
+.color__name p {
+  width: 60px;
+  text-align: center;
 }
 
 .checkout__container {
@@ -106,6 +117,21 @@
   }
 }
 
+table {
+  margin-top: 50px;
+  input {
+    width: 100%;
+  }
+}
+
+td {
+  width: 50px;
+}
+
+th {
+  width: 75px;
+}
+
 .Black {
   background-color: black;
 }
@@ -116,6 +142,18 @@
 
 .True_Red {
   background-color: #eb4034;
+}
+
+.Red {
+  background-color: #eb4034;
+}
+
+.Pink {
+  background-color: #f659a5;
+}
+
+.Khaki {
+  background-color: #d8b60b;
 }
 
 .University_Red {
@@ -134,11 +172,27 @@
   background-color: #0653cf
 }
 
+.Royal {
+  background-color: #0653cf
+}
+
 .Regatta_Blue {
   background-color: #052e70
 }
 
+.Patriot_Royal {
+  background-color: #052e70
+}
+
 .Anthracite {
+  background-color: #575859
+}
+
+.Grey_Steel {
+  background-color: #575859
+}
+
+.Charcoal {
   background-color: #575859
 }
 
@@ -147,6 +201,10 @@
 }
 
 .George_Green {
+  background-color: #025225
+}
+
+.Hunter {
   background-color: #025225
 }
 
@@ -162,24 +220,18 @@
   background-color: #aeafb1
 }
 
+.Navy {
+  background-color: #021b40
+}
+
 .True_Navy {
   background-color: #021b40
 }
 
-.Brown {
-  background-color: #964B00
+.Woodland_Brown {
+  background-color: #b86818
 }
 
-table {
-  input {
-    width: 100%;
-  }
-}
-
-td {
-  width: 50px;
-}
-
-th {
-  width: 75px;
+.Woodland_Camo {
+  background-color: #03510d
 }

@@ -6,6 +6,7 @@ interface ClothingItem {
   sizes: {}
   default_color: string
   gender: 'male' | 'female' | 'accessory'
+  halfColors?: string[] // C112 is capable of being two-colored. We need this field to present specially colored divs for the color selector for those colors
   // some items are only purchasble by Service and Parts counter employees only
   restricted?: boolean;
 }
@@ -106,7 +107,7 @@ export const catalog: ClothingItem[] = [
     code: 'CP80',
     name: 'Twill Cap',
     fullname: 'Port & Company® Six-Panel Twill Cap',
-    colors: ['Black', 'Red', 'Navy', 'Green', 'Blue', 'Grey', 'Brown' ],
+    colors: ['Black', 'True Red', 'Navy', 'Hunter', 'Royal', 'Charcoal', 'Woodland Brown' ],
     gender: 'accessory',
     default_color: 'Black',
     sizes: {
@@ -117,8 +118,9 @@ export const catalog: ClothingItem[] = [
     code: 'C112',
     name: 'Snapback',
     fullname: 'Port Authority® Snapback Trucker Cap',
-    colors: ['Black', 'Navy', 'Black White', 'Blue', 'Red White', 'Royal White', 'Grey', 'Pink White', 'Camo', 'Khaki White'],
+    colors: ['Black', 'Navy', 'Black White', 'Patriot Royal', 'Red White', 'Royal White', 'Grey Steel', 'Pink White', 'Woodland Camo', 'Khaki White'],
     gender: 'accessory',
+    halfColors: ['Black White', 'Red White', 'Royal White', 'Pink White', 'Khaki White'],
     default_color: 'Black',
     sizes: {
       'One Size Fits All': 14.29

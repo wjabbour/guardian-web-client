@@ -17,24 +17,49 @@ export default function Modification() {
   const [snackbarOpen, setSnackbarOpen] = useState(false);
   const [snackbarText, setSnackbarText] = useState('Item added to cart')
   const sizes = Object.keys(item.sizes)
+  const halfColors = item.halfColors || []
   const colors = item.colors
   const [selected_size, set_size] = useState(sizes[0])
   const [price, set_price] = useState(item.sizes[selected_size])
 
   const color_selection = item.colors.map((color) => {
-    return <div className={styles.color__option} key={color}>
-      <div
-        className={`${styles.color__block} ${styles[color.split(' ').join('_')]} ${selected_color === color ? styles.selected : ''}`}
-        onClick={() => {
-          const selectedColor = color.split(' ').join('_')
-          set_selected_color(selectedColor)
-          set_image_source(`/images/${item.code}_${selectedColor.toLowerCase()}.jpg`)
-        }}>
+    if (halfColors.includes(color)) {
+      const primaryColor = color.split(' ')[0]
+      return <div className={styles.color__option} key={color}>
+        <div
+          className={`${styles.color__block} ${styles[primaryColor]}`}
+          onClick={() => {
+            const selectedColor = color.split(' ').join('_')
+            set_selected_color(selectedColor)
+            set_image_source(`/images/${item.code}_${selectedColor.toLowerCase()}.jpg`)
+          }}>
+            <div className={`${styles.color__triangle} `}>
+            </div>
+        </div>
+
+        <div className={styles.color__name}>
+          <p>{color}</p>
+        </div>
+
       </div>
-      <div className={styles.color__name}>
-        <p>{color}</p>
+    } else {
+      return <div className={styles.color__option} key={color}>
+        <div
+          className={`${styles.color__block} ${styles[color.split(' ').join('_')]} ${selected_color === color ? styles.selected : ''}`}
+          onClick={() => {
+            const selectedColor = color.split(' ').join('_')
+            set_selected_color(selectedColor)
+            set_image_source(`/images/${item.code}_${selectedColor.toLowerCase()}.jpg`)
+          }}>
+        </div>
+
+        <div className={styles.color__name}>
+          <p>{color}</p>
+        </div>
+
       </div>
-    </div>
+    }
+
   })
 
   function add_item_to_cart() {
@@ -48,12 +73,12 @@ export default function Modification() {
       const inputs = table.rows[i].getElementsByTagName("input")
       for (let j = 0; j < inputs.length; j++) {
         if (inputs[j].value) {
-          const cart_item = { name: item.fullname, price: item.sizes[sizes[i-1]], quantity: Number(inputs[j].value), size: sizes[i-1], color: colors[j], code: item.code }
+          const cart_item = { name: item.fullname, price: item.sizes[sizes[i - 1]], quantity: Number(inputs[j].value), size: sizes[i - 1], color: colors[j], code: item.code }
           new_cart[time + j] = cart_item
         }
       }
     }
-  
+
     set_cart(new_cart)
     sessionStorage.setItem('cart', JSON.stringify(new_cart))
     setSnackbarOpen(true)
