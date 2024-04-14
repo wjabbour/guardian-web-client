@@ -63,7 +63,6 @@ export default function Modification() {
   })
 
   function add_item_to_cart() {
-    const time = Date.now()
     const new_cart = {
       ...cart
     }
@@ -73,6 +72,11 @@ export default function Modification() {
       const inputs = table.rows[i].getElementsByTagName("input")
       for (let j = 0; j < inputs.length; j++) {
         if (inputs[j].value) {
+          const isNum = /^\d+$/.test(inputs[j].value);
+          if (!isNum) {
+            inputs[j].value = ""
+            continue
+          }
           const cart_item = { name: item.fullname, price: item.sizes[sizes[i - 1]], quantity: Number(inputs[j].value), size: sizes[i - 1], color: colors[j], code: item.code }
           const key = `${item.code},${Object.keys(item.sizes)[i-1]},${colors[j]}`
           if (new_cart[key]) {

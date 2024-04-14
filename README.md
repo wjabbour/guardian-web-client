@@ -2,7 +2,6 @@
 
 figure out paypal thing
 deploy backend and test
-fix cart
 add embroidery options
 
 # Contributor
