@@ -74,8 +74,14 @@ export default function Modification() {
       for (let j = 0; j < inputs.length; j++) {
         if (inputs[j].value) {
           const cart_item = { name: item.fullname, price: item.sizes[sizes[i - 1]], quantity: Number(inputs[j].value), size: sizes[i - 1], color: colors[j], code: item.code }
-          new_cart[time + j] = cart_item
+          const key = `${item.code},${Object.keys(item.sizes)[i-1]},${colors[j]}`
+          if (new_cart[key]) {
+            new_cart[key].quantity += Number(inputs[j].value)
+          } else {
+            new_cart[key] = cart_item
+          }
         }
+        inputs[j].value = ""
       }
     }
 
