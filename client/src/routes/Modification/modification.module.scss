@@ -1,7 +1,6 @@
 .container {
   display: flex;
   justify-content: center;
-  background-color: #414042;
   height: 80vh;
   padding: 100px;
 }
@@ -14,6 +13,7 @@
   height: 600px;
   min-width: 600px;
   overflow-y: scroll;
+  border: 1px solid black;
 }
 
 #move {
@@ -33,7 +33,6 @@
 .information__panel {
   position: relative;
   top: 50px;
-  height: 800px;
   padding-bottom: 35px;
 
   .name {
@@ -65,7 +64,7 @@
 
 .color__selector {
   display: flex;
-  justify-content: space-evenly;
+  gap: 15px;
 }
 
 .color__option {
@@ -118,7 +117,7 @@
 }
 
 table {
-  margin-top: 50px;
+  margin-top: 20px;
   input {
     width: 100%;
   }

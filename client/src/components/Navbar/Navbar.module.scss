@@ -1,35 +1,48 @@
 .navbar {
-  background-color: #001489;
-
-}
-
-.title {
+    min-height: 150px;
     position: relative;
-    height: 100px;
-    color: white;
-    font-size: 24px;
+}
 
-    .text {
-        position: absolute;
-        left: 35px;
-        top: 8px;
-        cursor: pointer;
-    }
+.cart__container {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    right: 1%;
+    top: 35px;
+    cursor: pointer;
+    border: 2px solid rgb(52, 52, 243);
+    border-radius: 25px;
+    height: 35px;
+    width: 120px;
+}
 
-    .cart {
-        position: absolute;
-        right: 35px;
-        top: 35px;
-        cursor: pointer;
-    }
+.cart {
+    font-size: 20px;
+    color: rgb(52, 52, 243);
+    font-weight: bold;
 }
 
 
 
-.logo {
+.guardian {
+    .logo {
+        height: 100px;
+    }
+
     position: absolute;
     top: 25px;
-    left: 45px;
-    height: auto;
+    left: 15%;
+    cursor: pointer;
+}
+
+.stivers {
+    .logo {
+        height: 120px;
+    }
+
+    position: absolute;
+    top: 25px;
+    right: 15%;
     cursor: pointer;
 }
