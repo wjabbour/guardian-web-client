@@ -10,7 +10,6 @@ export default function Cart() {
   const [cart, set_cart] = useOutletContext();
   const cart_keys = Object.keys(cart)
 
-
   return (
     <div className={styles.container}>
       <div className={styles.back__button} onClick={() => { navigate('/') }}>
@@ -56,14 +55,15 @@ export default function Cart() {
             })
           }
 
-          <div className={styles.subtotal__container}>
-            <div className={styles.info}>
-              <div className={styles.subtotal}>
-                Subtotal ({calculate_item_count(cart)} items): ${calculate_item_price(cart)}
-              </div>
-              <div className={styles.checkout__container} onClick={() => navigate('/checkout')}>
-                <p>Proceed to checkout</p>
-              </div>
+
+        </div>
+        <div className={styles.subtotal__container}>
+          <div className={styles.info}>
+            <div className={styles.subtotal}>
+              Subtotal ({calculate_item_count(cart)} items): ${calculate_item_price(cart)}
+            </div>
+            <div className={styles.checkout__container} onClick={() => navigate('/checkout')}>
+              <p>Proceed to checkout</p>
             </div>
           </div>
         </div>

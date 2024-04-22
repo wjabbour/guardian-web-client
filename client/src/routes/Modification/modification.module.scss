@@ -1,9 +1,9 @@
 .container {
   display: flex;
   justify-content: center;
-  height: 80vh;
-  padding: 100px;
+  
 }
+
 
 .back__button {
   position: relative;
@@ -16,8 +16,7 @@
   display: flex;
   gap: 50px;
   background-color: white;
-  padding: 15px;
-  height: 600px;
+  padding: 25px;
   min-width: 600px;
   border: 1px solid grey;
 }
@@ -101,6 +100,11 @@
 .color__name p {
   width: 60px;
   text-align: center;
+}
+
+.embroidery__selector {
+  margin-top: 20px;
+  width: 200px;
 }
 
 .checkout__container {

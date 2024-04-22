@@ -5,6 +5,11 @@ import { useState } from 'react'
 import Snackbar from '@mui/material/Snackbar';
 import { SvgIcon } from '@mui/material';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+import Box from '@mui/material/Box';
+import InputLabel from '@mui/material/InputLabel';
+import MenuItem from '@mui/material/MenuItem';
+import FormControl from '@mui/material/FormControl';
+import Select, { SelectChangeEvent } from '@mui/material/Select';
 
 export async function loader({ params }) {
   const item = catalog.find((i) => i.code === params.id)
@@ -25,6 +30,11 @@ export default function Modification() {
   const colors = item.colors
   const [selected_size, set_size] = useState(sizes[0])
   const [price, set_price] = useState(item.sizes[selected_size])
+  const [embroidery, setEmbroidery] = useState('');
+
+  const handleChange = (event) => {
+    setEmbroidery(event.target.value);
+  };
 
   const color_selection = item.colors.map((color) => {
     if (halfColors.includes(color)) {
@@ -60,7 +70,6 @@ export default function Modification() {
         <div className={styles.color__name}>
           <p>{color}</p>
         </div>
-
       </div>
     }
 
@@ -70,12 +79,14 @@ export default function Modification() {
     const new_cart = {
       ...cart
     }
+    let any_input_has_value = false
 
     const table = document.getElementById('table')
     for (let i = 1; i < table.rows.length; i++) {
       const inputs = table.rows[i].getElementsByTagName("input")
       for (let j = 0; j < inputs.length; j++) {
         if (inputs[j].value) {
+          any_input_has_value = true
           const isNum = /^\d+$/.test(inputs[j].value);
           if (!isNum) {
             inputs[j].value = ""
@@ -93,9 +104,14 @@ export default function Modification() {
       }
     }
 
-    set_cart(new_cart)
-    sessionStorage.setItem('cart', JSON.stringify(new_cart))
-    setSnackbarOpen(true)
+    if (!any_input_has_value) {
+
+    } else {
+      setEmbroidery('')
+      set_cart(new_cart)
+      sessionStorage.setItem('cart', JSON.stringify(new_cart))
+      setSnackbarOpen(true)
+    }
   }
 
   function handleSnackbarClose() {
@@ -119,6 +135,20 @@ export default function Modification() {
           <div className={styles.color__selector}>
             {color_selection}
           </div>
+          <div className={styles.embroidery__selector}>
+            <FormControl fullWidth>
+              <InputLabel>Embroidery</InputLabel>
+              <Select
+                value={embroidery}
+                label="embroidery"
+                onChange={handleChange}
+              >
+                <MenuItem value={"Stivers"}>Stivers</MenuItem>
+                <MenuItem value={"Quicklane"}>Quicklane</MenuItem>
+              </Select>
+            </FormControl>
+          </div>
+
           <div className={styles.form__container}>
             <table id="table">
               <thead>
