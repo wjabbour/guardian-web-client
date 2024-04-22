@@ -17,8 +17,8 @@ export default function Landing() {
                 </div>
                 <img src={'/images/ford.png'}></img>
                 <img src={'/images/hyundai.png'}></img>
-                <img src={'/images/chrysler.png'}></img>
-                <img src={'/images/dodge.png'}></img>
+                <img id={styles.dodge} src={'/images/chrysler.png'}></img>
+                <img id={styles.dodge} src={'/images/dodge.png'}></img>
                 <img src={'/images/jeep.png'}></img>
                 <img src={'/images/ram.png'}></img>
             </div>
