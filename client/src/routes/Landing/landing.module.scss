@@ -2,21 +2,21 @@
     display: flex;
     justify-content: center;
     align-content: center;
-    height: 650px;
     flex-direction: column;
     margin-bottom: 150px;
     gap: 120px;
-
 }
 
 .catalog {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 105px;
 }
 
 .logo__preview {
     display: flex;
+    flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
     
@@ -30,8 +30,12 @@
         width: 140px;
     }
 
-    #dodge {
+    .large__picture {
         width: 165px;
+    }
+
+    .quicklane {
+        width: 200px;
     }
 
     p {

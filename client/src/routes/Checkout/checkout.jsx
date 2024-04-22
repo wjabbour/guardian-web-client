@@ -17,8 +17,11 @@ import Tooltip from '@mui/material/Tooltip';
 import Typography from '@mui/material/Typography';
 import { SvgIcon } from '@mui/material';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+import Button from '@mui/material/Button';
+
 
 export default function Checkout() {
+  const KNOWN_CODES = ["STIFMO", "STIFBI", "STIHCO", "STICPR", "STISDE", "STICCO"]
   const paypalRef = useRef(null)
   const navigate = useNavigate()
   const [script_loaded, set_script_loaded] = useState(false)
@@ -32,6 +35,8 @@ export default function Checkout() {
   const [first_name, set_first_name] = useState('')
   const [last_name, set_last_name] = useState('')
   const [email, set_email] = useState('')
+  const [code, set_code] = useState('')
+  const [bypass_paypal, set_bypass_paypal] = useState(false)
   const [snackbarOpen, setSnackbarOpen] = useState(false);
   const [snackbarText, setSnackbarText] = useState('')
   const [errorSnackbarOpen, setErrorSnackbarOpen] = useState(false);
@@ -105,6 +110,13 @@ export default function Checkout() {
     set_email(event.target.value);
   };
 
+  const handle_code = (event) => {
+    set_code(event.target.value);
+    if (KNOWN_CODES.includes(event.target.value)) {
+      set_bypass_paypal(true)
+    }
+  };
+
   const handle_store = (event) => {
     set_store(event.target.value);
   };
@@ -138,13 +150,14 @@ export default function Checkout() {
             })}
           </Select>
         </FormControl>
+        <TextField className={styles.text__field} onChange={handle_code} label="Code" variant="filled" />
         <div className={styles.subtotal__container}>
           <div className={styles.subtotal}>
             Subtotal ({calculate_item_count(cart)} items): ${calculate_item_price(cart)}
           </div>
-          <div className={styles.checkout__container} ref={paypalRef}>
+          <div className={`${styles.checkout__container} ${bypass_paypal ? styles.hidden : styles.visible}`} ref={paypalRef}>
           </div>
-          <div id={styles.tooltip}>
+          <div className={`${styles.tooltip} ${bypass_paypal ? styles.hidden : styles.visible}`}>
             <Tooltip title={
               <Typography variant="h6" gutterBottom>
                 1. Please disable Adblock or manualy allow the PayPal window to open.
@@ -158,6 +171,9 @@ export default function Checkout() {
                 <InfoOutlinedIcon></InfoOutlinedIcon>
               </IconButton>
             </Tooltip>
+          </div>
+          <div className={`${styles.bypass__paypal__checkout} ${!bypass_paypal ? styles.hidden : styles.visible}`}>
+            <Button variant="contained">Checkout</Button>
           </div>
         </div>
       </div>

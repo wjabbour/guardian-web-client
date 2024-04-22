@@ -15,10 +15,12 @@ export default function Landing() {
                 <div className={styles.title}>
                     <p>Available Logos:</p>
                 </div>
+                <img className={styles.quicklane} src={'/images/quicklane.png'}></img>
+                <img src={'/images/stivers.png'}></img>
                 <img src={'/images/ford.png'}></img>
                 <img src={'/images/hyundai.png'}></img>
-                <img id={styles.dodge} src={'/images/chrysler.png'}></img>
-                <img id={styles.dodge} src={'/images/dodge.png'}></img>
+                <img className={styles.large__picture} src={'/images/chrysler.png'}></img>
+                <img className={styles.large__picture} src={'/images/dodge.png'}></img>
                 <img src={'/images/jeep.png'}></img>
                 <img src={'/images/ram.png'}></img>
             </div>

@@ -26,7 +26,7 @@
   right: 10px;
 }
 
-#tooltip {
+.tooltip {
   position: absolute;
   right: 0px;
   top: 15px;
@@ -38,7 +38,25 @@
 
 .subtotal__container {
   position: relative;
+  height: 150px;
   border-top: 1px solid black;
+}
+
+.visible {
+  visibility: visible;
+  opacity: 1;
+}
+
+.hidden {
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.5s linear;
+}
+
+.bypass__paypal__checkout {
+  position: absolute;
+  top: 15px;
+  right: 75px;
 }
 
 .subtotal {
