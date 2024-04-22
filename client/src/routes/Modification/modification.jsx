@@ -1,8 +1,10 @@
 import styles from './modification.module.scss'
 import { catalog } from '../../lib/catalog'
-import { useLoaderData, useOutletContext } from 'react-router-dom'
+import { useLoaderData, useOutletContext, useNavigate } from 'react-router-dom'
 import { useState } from 'react'
 import Snackbar from '@mui/material/Snackbar';
+import { SvgIcon } from '@mui/material';
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 
 export async function loader({ params }) {
   const item = catalog.find((i) => i.code === params.id)
@@ -11,6 +13,8 @@ export async function loader({ params }) {
 
 export default function Modification() {
   const item = useLoaderData();
+  const navigate = useNavigate();
+
   const [cart, set_cart] = useOutletContext();
   const [selected_color, set_selected_color] = useState(item.default_color);
   const [image_source, set_image_source] = useState(`/images/${item.code}_${selected_color.toLowerCase()}.jpg`)
@@ -33,8 +37,8 @@ export default function Modification() {
             set_selected_color(selectedColor)
             set_image_source(`/images/${item.code}_${selectedColor.toLowerCase()}.jpg`)
           }}>
-            <div className={`${styles.color__triangle} `}>
-            </div>
+          <div className={`${styles.color__triangle} `}>
+          </div>
         </div>
 
         <div className={styles.color__name}>
@@ -78,7 +82,7 @@ export default function Modification() {
             continue
           }
           const cart_item = { name: item.fullname, price: item.sizes[sizes[i - 1]], quantity: Number(inputs[j].value), size: sizes[i - 1], color: colors[j], code: item.code }
-          const key = `${item.code},${Object.keys(item.sizes)[i-1]},${colors[j]}`
+          const key = `${item.code},${Object.keys(item.sizes)[i - 1]},${colors[j]}`
           if (new_cart[key]) {
             new_cart[key].quantity += Number(inputs[j].value)
           } else {
@@ -100,6 +104,9 @@ export default function Modification() {
 
   return (
     <div className={styles.container}>
+      <div className={styles.back__button} onClick={() => { navigate('/') }}>
+        <SvgIcon fontSize='inherit'><ArrowBackIcon /></SvgIcon>
+      </div>
       <div className={styles.card}>
         <div className={styles.image__container}>
           <img src={image_source}></img>

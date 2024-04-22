@@ -1,5 +1,5 @@
 import styles from './checkout.module.scss'
-import { useOutletContext } from 'react-router-dom'
+import { useOutletContext, useNavigate } from 'react-router-dom'
 import { useState, useRef, useEffect } from 'react'
 import TextField from '@mui/material/TextField';
 import InputLabel from '@mui/material/InputLabel';
@@ -15,9 +15,12 @@ import InfoOutlinedIcon from '@mui/icons-material/InfoOutlined';
 import IconButton from '@mui/material/IconButton';
 import Tooltip from '@mui/material/Tooltip';
 import Typography from '@mui/material/Typography';
+import { SvgIcon } from '@mui/material';
+import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 
 export default function Checkout() {
   const paypalRef = useRef(null)
+  const navigate = useNavigate()
   const [script_loaded, set_script_loaded] = useState(false)
   const [cart, set_cart] = useOutletContext();
   const [store, set_store] = useState('')
@@ -113,6 +116,9 @@ export default function Checkout() {
 
   return (
     <div className={styles.container}>
+      <div className={styles.back__button} onClick={() => { navigate('/') }}>
+        <SvgIcon fontSize='inherit'><ArrowBackIcon /></SvgIcon>
+      </div>
       <div className={styles.card}>
         <TextField inputRef={first_name_ref} className={styles.text__field} onChange={handle_first_name} id="" label="First Name" variant="filled" />
         <TextField inputRef={last_name_ref} className={styles.text__field} onChange={handle_last_name} id="" label="Last Name" variant="filled" />

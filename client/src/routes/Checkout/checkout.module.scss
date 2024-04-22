@@ -4,6 +4,13 @@
   padding: 100px;
 }
 
+.back__button {
+  position: relative;
+  right: 50px;
+  cursor: pointer;
+  font-size: 32px;
+}
+
 .card {
   display: flex;
   flex-direction: column;

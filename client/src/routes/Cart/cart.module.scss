@@ -5,10 +5,17 @@
     padding: 100px;
 }
 
+.back__button {
+  position: relative;
+  right: 50px;
+  cursor: pointer;
+  font-size: 32px;
+}
+
 .card {
     background-color: white;
     width: 800px;
-    height: 500px;
+    height: 750px;
     padding: 15px;
     border: 1px solid black;
 }
