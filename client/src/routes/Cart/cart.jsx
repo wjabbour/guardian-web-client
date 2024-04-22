@@ -35,7 +35,7 @@ export default function Cart() {
                     </div>
                     <div className={styles.price}>${cart[k].price} each</div>
                     <div className={styles.color__title}>Color: {cart[k].color}</div>
-
+                    <div className={styles.color__title}>Embroidery: {cart[k].embroidery}</div>
                     <div className={styles.size}>
                       Size: {cart[k].size}
                     </div>

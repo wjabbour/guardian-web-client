@@ -5,11 +5,12 @@ import { useState } from 'react'
 import Snackbar from '@mui/material/Snackbar';
 import { SvgIcon } from '@mui/material';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
-import Box from '@mui/material/Box';
 import InputLabel from '@mui/material/InputLabel';
 import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
-import Select, { SelectChangeEvent } from '@mui/material/Select';
+import Select from '@mui/material/Select';
+import Alert from "@mui/material/Alert";
+
 
 export async function loader({ params }) {
   const item = catalog.find((i) => i.code === params.id)
@@ -25,6 +26,8 @@ export default function Modification() {
   const [image_source, set_image_source] = useState(`/images/${item.code}_${selected_color.toLowerCase()}.jpg`)
   const [snackbarOpen, setSnackbarOpen] = useState(false);
   const [snackbarText, setSnackbarText] = useState('Item added to cart')
+  const [errorSnackbarOpen, setErrorSnackbarOpen] = useState(false);
+  const [errorSnackbarText, setErrorSnackbarText] = useState('')
   const sizes = Object.keys(item.sizes)
   const halfColors = item.halfColors || []
   const colors = item.colors
@@ -35,6 +38,11 @@ export default function Modification() {
   const handleChange = (event) => {
     setEmbroidery(event.target.value);
   };
+
+  function handleSnackbarClose() {
+    setSnackbarOpen(false);
+    setErrorSnackbarOpen(false)
+  }
 
   const color_selection = item.colors.map((color) => {
     if (halfColors.includes(color)) {
@@ -80,6 +88,12 @@ export default function Modification() {
       ...cart
     }
     let any_input_has_value = false
+    
+    if (!embroidery) {
+      setErrorSnackbarOpen(true)
+      setErrorSnackbarText('Must select an embroidery')
+      return
+    }
 
     const table = document.getElementById('table')
     for (let i = 1; i < table.rows.length; i++) {
@@ -92,7 +106,7 @@ export default function Modification() {
             inputs[j].value = ""
             continue
           }
-          const cart_item = { name: item.fullname, price: item.sizes[sizes[i - 1]], quantity: Number(inputs[j].value), size: sizes[i - 1], color: colors[j], code: item.code }
+          const cart_item = { name: item.fullname, embroidery, price: item.sizes[sizes[i - 1]], quantity: Number(inputs[j].value), size: sizes[i - 1], color: colors[j], code: item.code }
           const key = `${item.code},${Object.keys(item.sizes)[i - 1]},${colors[j]}`
           if (new_cart[key]) {
             new_cart[key].quantity += Number(inputs[j].value)
@@ -116,6 +130,7 @@ export default function Modification() {
 
   function handleSnackbarClose() {
     setSnackbarOpen(false);
+    setErrorSnackbarOpen(false)
   }
 
   return (
@@ -183,6 +198,13 @@ export default function Modification() {
         message={snackbarText}
         onClose={handleSnackbarClose}
       />
+      <Snackbar
+        open={errorSnackbarOpen}
+        autoHideDuration={2500}
+        onClose={handleSnackbarClose}
+      >
+        <Alert severity="error">{errorSnackbarText}</Alert>
+      </Snackbar>
     </div>
   )
 }
