@@ -1,23 +1,23 @@
-interface ClothingItem {
+interface CatalogItem {
   code: string
   name: string
   fullname: string
   colors: string[]
   sizes: {}
   default_color: string
-  gender: 'male' | 'female' | 'accessory'
+  type: 'male' | 'female' | 'hat' | 'accessory'
   halfColors?: string[] // C112 is capable of being two-colored. We need this field to present specially colored divs for the color selector for those colors
   // some items are only purchasble by Service and Parts counter employees only
   restricted?: boolean;
 }
 
-export const catalog: ClothingItem[] = [
+export const catalog: CatalogItem[] = [
   {
     code: 'J317',
     name: 'Soft Shell Jacket',
     fullname: 'Port Authority® Core Soft Shell Jacket',
     colors: ['Black', 'Battleship Grey'],
-    gender: 'male',
+    type: 'male',
     default_color: 'Black',
     sizes: {
       Small: 44.99,
@@ -36,7 +36,7 @@ export const catalog: ClothingItem[] = [
     name: 'Soft Shell Jacket',
     fullname: 'Port Authority® Ladies Core Soft Shell Jacket',
     colors: ['Black', 'Battleship Grey'],
-    gender: 'female',
+    type: 'female',
     default_color: 'Black',
     sizes: {
       Small: 44.99,
@@ -55,7 +55,7 @@ export const catalog: ClothingItem[] = [
     name: 'Polo Shirt',
     fullname: 'Sport-Tek® Sport-Wick Polo',
     colors: ['Black', 'True Red', 'True Royal', 'Forest Green', 'Iron Grey', 'Grey Concrete', 'White'],
-    gender: 'male',
+    type: 'male',
     default_color: 'Black',
     sizes: {
       Small: 24.99,
@@ -74,7 +74,7 @@ export const catalog: ClothingItem[] = [
     name: 'Tall Polo Shirt',
     fullname: 'Sport-Tek® Tall Sport-Wick Polo',
     colors: ['Black', 'True Red', 'True Royal', 'Iron Grey', 'Grey Concrete', 'White'],
-    gender: 'male',
+    type: 'male',
     default_color: 'Black',
     sizes: {
       LT: 27.99,
@@ -89,7 +89,7 @@ export const catalog: ClothingItem[] = [
     name: 'Polo Shirt',
     fullname: 'Sport-Tek® Sport-Wick Polo',
     colors: ['Black', 'True Red', 'True Royal', 'Forest Green', 'Iron Grey', 'Grey Concrete', 'White'],
-    gender: 'female',
+    type: 'female',
     default_color: 'Black',
     sizes: {
       Small: 24.99,
@@ -107,11 +107,66 @@ export const catalog: ClothingItem[] = [
     code: 'CP80',
     name: 'Twill Cap',
     fullname: 'Port & Company® Six-Panel Twill Cap',
-    colors: ['Black', 'True Red', 'Navy', 'Hunter', 'Royal', 'Charcoal', 'Woodland Brown' ],
-    gender: 'accessory',
+    colors: ['Black', 'True Red', 'Navy', 'Hunter', 'Royal', 'Charcoal', 'Woodland Brown'],
+    type: 'hat',
     default_color: 'Black',
     sizes: {
       'One Size Fits All': 14.29
+    }
+  },
+  {
+    code: '04032',
+    name: 'Revolve Tumbler',
+    fullname: '20 oz. Revolve Tumbler',
+    colors: ['Black', 'Blue', 'Burgundy', 'Green', 'Navy', 'Red', 'Silver', 'White'],
+    type: 'accessory',
+    default_color: 'Black',
+    sizes: {
+      '20 oz.': 14.99
+    }
+  },
+  {
+    code: '04015',
+    name: 'Perfect-Fit Tumbler',
+    fullname: '10 oz. Perfect-Fit Tumbler',
+    colors: ['Black', 'Blue', 'Burgundy', 'Gun Metal', 'Navy', 'Red'],
+    type: 'accessory',
+    default_color: 'Black',
+    sizes: {
+      '10 oz.': 12.99
+    }
+  },
+  {
+    code: '1640',
+    name: 'Logo Key Chain',
+    fullname: 'Brushed Zinc/Leather/Big Logo Key Chain',
+    colors: ['Black'],
+    type: 'accessory',
+    default_color: 'Black',
+    sizes: {
+      'Default': 6.99
+    }
+  },
+  {
+    code: '1240',
+    name: 'Key Tag',
+    fullname: 'Zinc Strap Key Tag',
+    colors: ['Grey'],
+    type: 'accessory',
+    default_color: 'Grey',
+    sizes: {
+      'Default': 6.99
+    }
+  },
+  {
+    code: '2240',
+    name: 'Key Chain',
+    fullname: 'Carbon Fiber Strap Metal Key Chain',
+    colors: ['Grey'],
+    type: 'accessory',
+    default_color: 'Grey',
+    sizes: {
+      'Default': 6.99
     }
   },
   {
@@ -119,7 +174,7 @@ export const catalog: ClothingItem[] = [
     name: 'Snapback',
     fullname: 'Port Authority® Snapback Trucker Cap',
     colors: ['Black', 'Navy', 'Black White', 'Patriot Royal', 'Red White', 'Royal White', 'Grey Steel', 'Pink White', 'Woodland Camo', 'Khaki White'],
-    gender: 'accessory',
+    type: 'hat',
     halfColors: ['Black White', 'Red White', 'Royal White', 'Pink White', 'Khaki White'],
     default_color: 'Black',
     sizes: {
@@ -130,8 +185,8 @@ export const catalog: ClothingItem[] = [
     code: 'NKDC1963',
     name: 'Dri-FIT Polo Shirt',
     fullname: 'Nike® Dri-FIT Polo',
-    colors: ['Gym Blue', 'University Red', 'Black', 'White', 'George Green', 'Anthracite','Cool Grey'],
-    gender: 'male',
+    colors: ['Gym Blue', 'University Red', 'Black', 'White', 'George Green', 'Anthracite', 'Cool Grey'],
+    type: 'male',
     default_color: 'Black',
     sizes: {
       Small: 43.99,
@@ -147,8 +202,8 @@ export const catalog: ClothingItem[] = [
     code: 'NKDC1991',
     name: 'Dri-FIT Polo Shirt',
     fullname: 'Nike® Dri-FIT Polo',
-    colors: ['Gym Blue', 'University Red', 'Black', 'White', 'George Green', 'Anthracite','Cool Grey'],
-    gender: 'female',
+    colors: ['Gym Blue', 'University Red', 'Black', 'White', 'George Green', 'Anthracite', 'Cool Grey'],
+    type: 'female',
     default_color: 'Black',
     sizes: {
       Small: 43.99,
@@ -165,8 +220,8 @@ export const catalog: ClothingItem[] = [
     name: 'Rain Jacket',
     fullname: 'Port Authority® All-Conditions Jacket',
     colors: ['Black', 'Direct Blue'],
-    gender: 'male',
-    default_color: 'Black', 
+    type: 'male',
+    default_color: 'Black',
     sizes: {
       Small: 75.99,
       Medium: 75.99,
@@ -182,7 +237,7 @@ export const catalog: ClothingItem[] = [
     name: 'Rain Jacket',
     fullname: 'Port Authority® All-Conditions Jacket',
     colors: ['Black'],
-    gender: 'female',
+    type: 'female',
     default_color: 'Black',
     sizes: {
       Small: 75.99,
@@ -199,8 +254,8 @@ export const catalog: ClothingItem[] = [
     name: '1/4-Zip Pullover',
     fullname: 'Port Authority® 1/4-Zip Pullover',
     colors: ['Black', 'Regatta Blue', 'True Navy', 'Iron Grey'],
-    gender: 'male',
-    default_color: 'Black', 
+    type: 'male',
+    default_color: 'Black',
     sizes: {
       Small: 35.99,
       Medium: 35.99,
@@ -217,8 +272,8 @@ export const catalog: ClothingItem[] = [
     name: '1/4-Zip Pullover',
     fullname: 'Port Authority® 1/4-Zip Pullover',
     colors: ['Black', 'Regatta Blue', 'True Navy', 'Iron Grey'],
-    gender: 'female',
-    default_color: 'Black', 
+    type: 'female',
+    default_color: 'Black',
     sizes: {
       Small: 35.99,
       Medium: 35.99,

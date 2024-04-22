@@ -88,7 +88,8 @@ export default function Modification() {
       ...cart
     }
     let any_input_has_value = false
-    
+    let invalid_input = false
+
     if (!embroidery) {
       setErrorSnackbarOpen(true)
       setErrorSnackbarText('Must select an embroidery')
@@ -106,7 +107,25 @@ export default function Modification() {
             inputs[j].value = ""
             continue
           }
-          const cart_item = { name: item.fullname, embroidery, price: item.sizes[sizes[i - 1]], quantity: Number(inputs[j].value), size: sizes[i - 1], color: colors[j], code: item.code }
+          if (item.type === 'accessory' && Number(inputs[j].value) < 12) {
+            invalid_input = true
+            setErrorSnackbarOpen(true)
+            setErrorSnackbarText('Must order at least 12 units')
+            continue
+          }
+          const cart_item = {
+            name: item.fullname,
+            price: item.sizes[sizes[i - 1]],
+            quantity: Number(inputs[j].value),
+            size: sizes[i - 1],
+            color: colors[j],
+            code: item.code
+          }
+          if (item.type === 'accessory') {
+            cart_item['logo'] = embroidery
+          } else {
+            cart_item['embroidery'] = embroidery
+          }
           const key = `${item.code},${Object.keys(item.sizes)[i - 1]},${colors[j]}`
           if (new_cart[key]) {
             new_cart[key].quantity += Number(inputs[j].value)
@@ -118,7 +137,7 @@ export default function Modification() {
       }
     }
 
-    if (!any_input_has_value) {
+    if (!any_input_has_value || invalid_input) {
 
     } else {
       setEmbroidery('')
@@ -150,19 +169,42 @@ export default function Modification() {
           <div className={styles.color__selector}>
             {color_selection}
           </div>
-          <div className={styles.embroidery__selector}>
-            <FormControl fullWidth>
-              <InputLabel>Embroidery</InputLabel>
-              <Select
-                value={embroidery}
-                label="embroidery"
-                onChange={handleChange}
-              >
-                <MenuItem value={"Stivers"}>Stivers</MenuItem>
-                <MenuItem value={"Quicklane"}>Quicklane</MenuItem>
-              </Select>
-            </FormControl>
-          </div>
+          {item.type === 'accessory' &&
+            <div className={styles.embroidery__selector}>
+              <FormControl fullWidth>
+                <InputLabel>Logo</InputLabel>
+                <Select
+                  value={embroidery}
+                  label="embroidery"
+                  onChange={handleChange}
+                >
+                  <MenuItem value={"Ford"}>Ford</MenuItem>
+                  <MenuItem value={"Hyundai"}>Hyundai</MenuItem>
+                  <MenuItem value={"Chrysler"}>Chrysler</MenuItem>
+                  <MenuItem value={"Dodge"}>Dodge</MenuItem>
+                  <MenuItem value={"Jeep"}>Jeep</MenuItem>
+                  <MenuItem value={"Ram"}>Ram</MenuItem>
+                </Select>
+              </FormControl>
+            </div>
+          }
+
+          {item.type !== 'accessory' &&
+            <div className={styles.embroidery__selector}>
+              <FormControl fullWidth>
+                <InputLabel>Embroidery</InputLabel>
+                <Select
+                  value={embroidery}
+                  label="embroidery"
+                  onChange={handleChange}
+                >
+                  <MenuItem value={"Stivers"}>Stivers</MenuItem>
+                  <MenuItem value={"Quicklane"}>Quicklane</MenuItem>
+                </Select>
+              </FormControl>
+            </div>
+          }
+
 
           <div className={styles.form__container}>
             <table id="table">

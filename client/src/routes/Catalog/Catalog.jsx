@@ -14,11 +14,13 @@ export default function Catalog() {
   useEffect(() => {
     let inventory = []
     if (location.pathname.includes('womens')) {
-      inventory = catalog.filter((item) => item.gender === 'female')
+      inventory = catalog.filter((item) => item.type === 'female')
+    } else if (location.pathname.includes('hat')) {
+      inventory = catalog.filter((item) => item.type === 'hat')
     } else if (location.pathname.includes('accessories')) {
-      inventory = catalog.filter((item) => item.gender === 'accessory')
+      inventory = catalog.filter((item) => item.type === 'accessory')
     } else {
-      inventory = catalog.filter((item) => item.gender === 'male')
+      inventory = catalog.filter((item) => item.type === 'male')
     }
 
     set_catalog(inventory)
