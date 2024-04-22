@@ -87,11 +87,19 @@
 .image__container {
     display: flex;
     align-items: center;
+    justify-content: center;
+    width: 300px;
+    min-height: 300px;
+    .small {
+        max-height: 100px;
+    }
 
     img {
-        height: 270px;
+        max-height: 270px;
     }
 }
+
+
 
 .subtotal__container {
     position: relative;

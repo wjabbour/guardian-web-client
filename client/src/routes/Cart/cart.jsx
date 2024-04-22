@@ -27,7 +27,7 @@ export default function Cart() {
               return (
                 <div key={k} className={styles.line__item}>
                   <div className={styles.image__container}>
-                    <img src={`/images/${cart[k].code}_${cart[k].color.split(' ').join('_').toLowerCase()}.jpg`}></img>
+                    <img className={`${['1240', '2240', '1640'].includes(cart[k].code) ? styles.small : ''}`} src={`/images/${cart[k].code}_${cart[k].color.split(' ').join('_').toLowerCase()}.jpg`}></img>
                   </div>
                   <div className={styles.information__panel}>
                     <div className={styles.name}>
