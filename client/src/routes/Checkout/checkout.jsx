@@ -111,8 +111,8 @@ export default function Checkout() {
   };
 
   const handle_code = (event) => {
-    set_code(event.target.value);
-    if (KNOWN_CODES.includes(event.target.value)) {
+    set_code(event.target.value.toUpperCase());
+    if (KNOWN_CODES.includes(event.target.value.toUpperCase())) {
       set_bypass_paypal(true)
     }
   };
