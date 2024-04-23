@@ -29,10 +29,17 @@ export default function Catalog() {
 
   return (
     <div className={styles.landing}>
-      <div className={styles.back__button} onClick={() => { navigate('/') }}>
-        <SvgIcon fontSize='inherit'><ArrowBackIcon /></SvgIcon>
-      </div>
+      {location.pathname.includes('accessories') &&
+        <div className={styles.minimum}>
+          <div className={styles.text__wrapper}>
+            <p>Must order at least 12 units</p>
+          </div>
+        </div>
+      }
       <div className={styles.grid}>
+        <div className={styles.back__button} onClick={() => { navigate('/') }}>
+          <SvgIcon fontSize='inherit'><ArrowBackIcon /></SvgIcon>
+        </div>
         {
           available_catalog.map((item) => {
             return (
@@ -48,18 +55,19 @@ export default function Catalog() {
         <div className={styles.title}>
           <p>Available Logos:</p>
         </div>
+        
         {location.pathname.includes('accessories') &&
-          <>
+          <div className={styles.logos}>
             <img src={'/images/ford.png'}></img>
             <img src={'/images/hyundai.png'}></img>
             <img className={styles.large__picture} src={'/images/chrysler.png'}></img>
             <img className={styles.large__picture} src={'/images/dodge.png'}></img>
             <img src={'/images/jeep.png'}></img>
             <img src={'/images/ram.png'}></img>
-          </>
+          </div>
         }
         {location.pathname.includes('hats') &&
-          <>
+          <div className={styles.logos}>
             <img className={styles.quicklane} src={'/images/quicklane.png'}></img>
             <img src={'/images/stivers.png'}></img>
             <img src={'/images/ford.png'}></img>
@@ -68,13 +76,13 @@ export default function Catalog() {
             <img className={styles.large__picture} src={'/images/dodge.png'}></img>
             <img src={'/images/jeep.png'}></img>
             <img src={'/images/ram.png'}></img>
-          </>
+          </div>
         }
         {location.pathname.includes('mens') &&
-          <>
+          <div className={styles.logos}>
             <img className={styles.quicklane} src={'/images/quicklane.png'}></img>
             <img src={'/images/stivers.png'}></img>
-          </>
+          </div>
         }
 
 
