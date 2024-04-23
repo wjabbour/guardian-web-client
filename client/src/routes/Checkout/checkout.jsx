@@ -58,6 +58,17 @@ export default function Checkout() {
     return { first_name, last_name, store, email, cart };
   }
 
+  const bypassPaypalCheckout = async () => {
+    const req_body = build_request_body()
+    req_body['bypassPaypal'] = true
+    const response = await http.create_order(req_body)
+    if (response.error) {
+      setErrorSnackbarText(response.error.message)
+      setErrorSnackbarOpen(true)
+      return ''
+    }
+  }
+
   const renderButtons = () => {
     window.paypal.Buttons({
       createOrder: async function () {
@@ -173,7 +184,7 @@ export default function Checkout() {
             </Tooltip>
           </div>
           <div className={`${styles.bypass__paypal__checkout} ${!bypass_paypal ? styles.hidden : styles.visible}`}>
-            <Button variant="contained">Checkout</Button>
+            <Button onClick={bypassPaypalCheckout} variant="contained">Checkout</Button>
           </div>
         </div>
       </div>
