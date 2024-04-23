@@ -10,20 +10,6 @@ export default function Landing() {
                 <ClothingIcon img={'/images/C112_black.jpg'} label={`Hats`} link={'/catalog/hats'} no_space={false}/>
                 <ClothingIcon img={'/images/04032_black.jpg'} label={`Mugs & Keychains`} link={'/catalog/accessories'} no_space={false}/>
             </div>
-
-            <div className={styles.logo__preview}>
-                <div className={styles.title}>
-                    <p>Available Logos:</p>
-                </div>
-                <img className={styles.quicklane} src={'/images/quicklane.png'}></img>
-                <img src={'/images/stivers.png'}></img>
-                <img src={'/images/ford.png'}></img>
-                <img src={'/images/hyundai.png'}></img>
-                <img className={styles.large__picture} src={'/images/chrysler.png'}></img>
-                <img className={styles.large__picture} src={'/images/dodge.png'}></img>
-                <img src={'/images/jeep.png'}></img>
-                <img src={'/images/ram.png'}></img>
-            </div>
         </div>
     )
 }

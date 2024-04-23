@@ -10,6 +10,7 @@ export default function Catalog() {
   const navigate = useNavigate();
   const location = useLocation();
   const [available_catalog, set_catalog] = useState([])
+  console.log(available_catalog)
 
   useEffect(() => {
     let inventory = []
@@ -41,6 +42,42 @@ export default function Catalog() {
             )
           })
         }
+
+      </div>
+      <div className={styles.logo__preview}>
+        <div className={styles.title}>
+          <p>Available Logos:</p>
+        </div>
+        {location.pathname.includes('accessories') &&
+          <>
+            <img src={'/images/ford.png'}></img>
+            <img src={'/images/hyundai.png'}></img>
+            <img className={styles.large__picture} src={'/images/chrysler.png'}></img>
+            <img className={styles.large__picture} src={'/images/dodge.png'}></img>
+            <img src={'/images/jeep.png'}></img>
+            <img src={'/images/ram.png'}></img>
+          </>
+        }
+        {location.pathname.includes('hats') &&
+          <>
+            <img className={styles.quicklane} src={'/images/quicklane.png'}></img>
+            <img src={'/images/stivers.png'}></img>
+            <img src={'/images/ford.png'}></img>
+            <img src={'/images/hyundai.png'}></img>
+            <img className={styles.large__picture} src={'/images/chrysler.png'}></img>
+            <img className={styles.large__picture} src={'/images/dodge.png'}></img>
+            <img src={'/images/jeep.png'}></img>
+            <img src={'/images/ram.png'}></img>
+          </>
+        }
+        {location.pathname.includes('mens') &&
+          <>
+            <img className={styles.quicklane} src={'/images/quicklane.png'}></img>
+            <img src={'/images/stivers.png'}></img>
+          </>
+        }
+
+
       </div>
     </div>
   )

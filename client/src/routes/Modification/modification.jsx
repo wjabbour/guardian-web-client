@@ -189,7 +189,7 @@ export default function Modification() {
             </div>
           }
 
-          {item.type !== 'accessory' &&
+          {['female', 'male'].includes(item.type) &&
             <div className={styles.embroidery__selector}>
               <FormControl fullWidth>
                 <InputLabel>Embroidery</InputLabel>
@@ -200,6 +200,27 @@ export default function Modification() {
                 >
                   <MenuItem value={"Stivers"}>Stivers</MenuItem>
                   <MenuItem value={"Quicklane"}>Quicklane</MenuItem>
+                </Select>
+              </FormControl>
+            </div>
+          }
+          {item.type === 'hat' &&
+            <div className={styles.embroidery__selector}>
+              <FormControl fullWidth>
+                <InputLabel>Embroidery</InputLabel>
+                <Select
+                  value={embroidery}
+                  label="embroidery"
+                  onChange={handleChange}
+                >
+                  <MenuItem value={"Stivers"}>Stivers</MenuItem>
+                  <MenuItem value={"Quicklane"}>Quicklane</MenuItem>
+                  <MenuItem value={"Ford"}>Ford</MenuItem>
+                  <MenuItem value={"Hyundai"}>Hyundai</MenuItem>
+                  <MenuItem value={"Chrysler"}>Chrysler</MenuItem>
+                  <MenuItem value={"Dodge"}>Dodge</MenuItem>
+                  <MenuItem value={"Jeep"}>Jeep</MenuItem>
+                  <MenuItem value={"Ram"}>Ram</MenuItem>
                 </Select>
               </FormControl>
             </div>

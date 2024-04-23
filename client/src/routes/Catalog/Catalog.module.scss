@@ -12,11 +12,45 @@
     justify-content: center;
     gap: 90px;
     max-width: 900px;
+    padding: 15px;
 }
 
 .back__button {
   position: relative;
-  right: 100px;
+  right: 1%;
   cursor: pointer;
   font-size: 32px;
+}
+
+.logo__preview {
+  display: flex;
+  position: relative;
+  bottom: 15px;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  margin-left: 20px;
+  
+
+  .title {
+      display: flex;
+      align-items: center;
+  }
+
+  img {
+      width: 140px;
+  }
+
+  .large__picture {
+      width: 165px;
+  }
+
+  .quicklane {
+      width: 200px;
+  }
+
+  p {
+      font-weight: bold;
+      font-size: 24px;
+  }
 }

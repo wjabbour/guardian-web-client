@@ -3,7 +3,7 @@
     justify-content: center;
     align-content: center;
     flex-direction: column;
-    margin-bottom: 150px;
+    margin-bottom: 250px;
     gap: 120px;
 }
 
@@ -12,34 +12,4 @@
     flex-wrap: wrap;
     justify-content: center;
     gap: 105px;
-}
-
-.logo__preview {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
-    
-
-    .title {
-        display: flex;
-        align-items: center;
-    }
-
-    img {
-        width: 140px;
-    }
-
-    .large__picture {
-        width: 165px;
-    }
-
-    .quicklane {
-        width: 200px;
-    }
-
-    p {
-        font-weight: bold;
-        font-size: 24px;
-    }
 }
