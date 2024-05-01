@@ -1,6 +1,6 @@
 terraform {
   backend "s3" {
-    bucket = "cannon-terraform-state-v2"
+    bucket = "stivers-terraform-state"
     key    = "terraform.tfstate"
     workspace_key_prefix = ""
     region = "us-east-1"

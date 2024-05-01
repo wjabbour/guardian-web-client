@@ -28,6 +28,9 @@ export class Dynamo {
         store: {
           "S": store
         },
+        bypass: {
+          "BOOL": false
+        },
         created_at: {
           "S": `${Date.now()}`
         },
@@ -40,6 +43,48 @@ export class Dynamo {
         },
         paid: {
           "N": '0'
+        }
+      },
+      TableName: "orders"
+    })
+
+    await this.client.send(command);
+  }
+
+  async createBypassOrder(email: string, cart, first_name: string, last_name: string, store: string) {
+    const massaged_cart = cart.map((m) => {
+      return { "M": marshall(m) }
+    })
+
+    const command = new PutItemCommand({
+      "Item": {
+        email: {
+          "S": email
+        },
+        first_name: {
+          "S": first_name
+        },
+        last_name: {
+          "S": last_name
+        },
+        store: {
+          "S": store
+        },
+        created_at: {
+          "S": `${Date.now()}`
+        },
+        paid_at: {
+          "N": "-1"
+        },
+        bypass: {
+          "BOOL": true
+        },
+        order: { "L": massaged_cart, },
+        order_id: {
+          "S": "-1"
+        },
+        paid: {
+          "N": '1'
         }
       },
       TableName: "orders"

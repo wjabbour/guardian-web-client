@@ -3,21 +3,19 @@ import { logger } from './utils';
 
 const ses = new SESClient({});
 
-// TEMPORARY: this sends Turner an email to confirm that an order was placed. Turner will
-// then inspect the order in the DB to make sure everything looks correct.
 export async function send_order_confirmation_email (email) {
 
   const html =
     `
     <div style="text-align: center">
-      <h1 style="font-size: 38px">${email} has placed an order</h1>
+      <h1 style="font-size: 38px">Your order has been placed</h1>
     </div>
   `
 
-  await sendEmail(html, 'Order placed', ['doubleujabbour@gmail.com'])
+  await sendEmail(html, 'Order placed', [email])
 }
 
-async function sendEmail(html, subject, target_emails, source = 'turner') {
+async function sendEmail(html, subject, target_emails, source = 'doubleujabbour@gmail.com') {
   const command = new SendEmailCommand({
     Destination: {
       ToAddresses: target_emails,
@@ -29,7 +27,7 @@ async function sendEmail(html, subject, target_emails, source = 'turner') {
 
       Subject: { Data: subject },
     },
-    Source: `Seshi <${source}@cannonemployeestore.com>`,
+    Source: source,
   });
 
   try {

@@ -8,7 +8,7 @@ import { Dynamo } from './dynamo';
 const dynamo = new Dynamo();
 const sm = new SecretsManagerClient({ region: 'us-east-1' });
 const command = new GetSecretValueCommand({
-  SecretId: 'cannon-website'
+  SecretId: 'stivers-website'
 })
 
 export const handler = async (event: APIGatewayEvent): Promise<APIGatewayProxyResult> => {
@@ -36,10 +36,10 @@ export const handler = async (event: APIGatewayEvent): Promise<APIGatewayProxyRe
     const order_id = body.order_id
     logger.info({ message: 'Received order id', order_id });
 
-    await capture_paypal_order(access_token, order_id)
+    const txId = await capture_paypal_order(access_token, order_id)
     logger.info({ message: 'Captured paypal order' });
 
-    await dynamo.setPaid(order_id);
+    await dynamo.setPaid(order_id, txId);
     logger.info({ message: 'Updated item in database' });
 
     return {
@@ -63,5 +63,8 @@ async function capture_paypal_order(access_token, order_id) {
     Authorization: `Bearer ${access_token}`
   };
 
-  await axios.post(`https://api-m.paypal.com/v2/checkout/orders/${order_id}/capture`, null, { headers })
+  const response = await axios.post(`https://api-m.paypal.com/v2/checkout/orders/${order_id}/capture`, null, { headers })
+  // transactionId
+  logger.info({ message: 'Received transactionId', transactionId: response.data.purchase_units[0].payments.captures[0].id });
+  return response.data.purchase_units[0].payments.captures[0].id
 }

@@ -51,14 +51,14 @@ function createOrderCsv(orders) {
     let str = ''
 
     Object.keys(obj).forEach((k) => {
-      str += obj[k] + ','
+      str += `"${obj[k]}"` + ','
     })
 
     str += '\n'
     csv += str
   }
 
-  csv += 'Date,Store Code,Store Name,First Name,Last Name,Item,Quantity,Description,Size,Color,Price\n'
+  csv += 'Date,Store Code,Store Name,First Name,Last Name,Item,Quantity,Description,Size,Color,Logo,Price,usedStoreCode,transactionId\n'
 
   for (let i = 0; i < orders.length; i++) {
     const order = orders[i];
@@ -79,7 +79,10 @@ function createOrderCsv(orders) {
         description: getCatalogItemDescription(item.code),
         size: item.size,
         color: item.color,
-        price: getCatalogItemPrice(item.code, item.size)
+        logo: item.embroidery,
+        price: getCatalogItemPrice(item.code, item.size),
+        usedStoreCode: order.bypass,
+        transactionId: order.transaction_id || 'N/A'
       })
     }
   }
@@ -91,9 +94,9 @@ async function sendEmail(csv) {
   const date = dayjs()
   const date_str = date.format('MM-DD-YYYY')
   const buffer = Buffer.from(csv)
-  let ses_mail = 'From: Cannon Employee Store <turner@cannonemployeestore.com>\n'
+  let ses_mail = 'From: doubleujabbour@gmail.com\n'
   ses_mail += `To: doubleujabbour@gmail.com\n`
-  ses_mail += 'Subject: Weekly Cannon Orders\n'
+  ses_mail += 'Subject: Weekly Stivers Orders\n'
   ses_mail += `Content-Type: text/plain; name="${date_str}-orders.csv"\n`
   ses_mail += `Content-Disposition: attachment; filename="${date_str}-orders.csv"\n`
   ses_mail += 'Content-Transfer-Encoding: base64\n'
@@ -108,4 +111,3 @@ async function sendEmail(csv) {
   const command = new SendRawEmailCommand(input);
   await ses.send(command);
 }
-

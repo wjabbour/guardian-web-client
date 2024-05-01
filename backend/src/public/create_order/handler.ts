@@ -10,7 +10,7 @@ import { send_order_confirmation_email } from '../email';
 const dynamo = new Dynamo();
 const sm = new SecretsManagerClient({ region: 'us-east-1' });
 const command = new GetSecretValueCommand({
-  SecretId: 'cannon-website'
+  SecretId: 'stivers-website'
 })
 
 // once an order has been processed and sent to Guardian, we move it to the archived_orders table
@@ -77,7 +77,8 @@ export const handler = async (event: APIGatewayEvent): Promise<APIGatewayProxyRe
       obj['code'] = cart_item['code']
       obj['size'] = cart_item['size']
       obj['color'] = cart_item['color']
-      
+      obj['embroidery'] = cart_item['logo'] || cart_item['embroidery']
+
       cart.push(obj)
     })
 
@@ -86,19 +87,30 @@ export const handler = async (event: APIGatewayEvent): Promise<APIGatewayProxyRe
     const price = calculate_price(cart);
     logger.info({ message: 'Calculated cart price', price });
 
-    const order_id = await create_paypal_order(access_token, price);
-    logger.info({ message: 'Received order id', order_id })
+    if (body.bypassPaypal) {
+      logger.info({ message: 'Bypassing PayPal' })
+      await dynamo.createBypassOrder(body.email, cart, body.first_name, body.last_name, store_code)
+      await send_order_confirmation_email(body.email)
+      logger.info({ message: 'Sent confirmation email to myself' })
+      return {
+        statusCode: 200,
+        headers: addCors(event.headers?.origin)
+      };
+    } else {
+      const order_id = await create_paypal_order(access_token, price);
+      logger.info({ message: 'Received order id', order_id })
 
-    await dynamo.createOrder(body.email, cart, body.first_name, body.last_name, store_code, order_id)
-    
-    await send_order_confirmation_email(body.email)
-    logger.info({ message: 'Sent confirmation email to myself' })
+      await dynamo.createOrder(body.email, cart, body.first_name, body.last_name, store_code, order_id)
 
-    return {
-      statusCode: 200,
-      body: JSON.stringify({ order_id }),
-      headers: addCors(event.headers?.origin)
-    };
+      return {
+        statusCode: 200,
+        body: JSON.stringify({ order_id }),
+        headers: addCors(event.headers?.origin)
+      };
+    }
+
+
+
   } catch (e) {
     logger.error(e)
     return {

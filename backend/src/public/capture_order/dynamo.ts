@@ -8,7 +8,7 @@ export class Dynamo {
     this.client = new DynamoDBClient({ region: "us-east-1" });
   }
 
-  async setPaid(order_id: string) {
+  async setPaid(order_id: string, txId: string) {
     const command = new QueryCommand({
       "Select": "ALL_ATTRIBUTES",
       "ExpressionAttributeValues": {
@@ -30,13 +30,16 @@ export class Dynamo {
           email: item.email,
           created_at: item.created_at
         },
-        "UpdateExpression": 'set paid = :paid, paid_at = :paid_at',
+        "UpdateExpression": 'set paid = :paid, paid_at = :paid_at, transaction_id = :transaction_id',
         "ExpressionAttributeValues": {
           ":paid": {
             "N": "1"
           },
           ":paid_at": {
             "N": `${Date.now()}`
+          },
+          ":transaction_id": {
+            "S": txId
           }
         },
         TableName: 'orders'
