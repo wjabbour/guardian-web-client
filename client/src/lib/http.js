@@ -13,7 +13,7 @@ export async function create_order(order) {
   const body = { ...order }
 
   try {
-    const response = await axios.post('https://o1yn7lpenj.execute-api.us-east-1.amazonaws.com/v1/create-order', body);
+    const response = await axios.post('https://mxfj3q6m01.execute-api.us-east-1.amazonaws.com/v1/create-order', body);
     return { success: { data: response.data }, error: null }
   } catch (e) {
     return handleError(e)
@@ -24,7 +24,7 @@ export async function capture_order(order_id) {
   const body = { order_id }
 
   try {
-    const response = await axios.post('https://o1yn7lpenj.execute-api.us-east-1.amazonaws.com/v1/capture-order', body);
+    const response = await axios.post('https://mxfj3q6m01.execute-api.us-east-1.amazonaws.com/v1/capture-order', body);
     return { success: { data: response.data }, error: null }
   } catch (e) {
     return handleError(e)

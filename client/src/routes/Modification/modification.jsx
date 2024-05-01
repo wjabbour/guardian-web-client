@@ -107,7 +107,7 @@ export default function Modification() {
             inputs[j].value = ""
             continue
           }
-          if (item.type === 'accessory' || item.type === 'hat' && Number(inputs[j].value) < 12) {
+          if (item.type === 'accessory' && Number(inputs[j].value) < 12) {
             invalid_input = true
             setErrorSnackbarOpen(true)
             setErrorSnackbarText('Must order at least 12 units')

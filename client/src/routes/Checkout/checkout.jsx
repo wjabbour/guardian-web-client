@@ -17,8 +17,7 @@ import Tooltip from '@mui/material/Tooltip';
 import Typography from '@mui/material/Typography';
 import { SvgIcon } from '@mui/material';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
-import Button from '@mui/material/Button';
-
+import { LoadingButton } from '@mui/lab';
 
 export default function Checkout() {
   const KNOWN_CODES = ["STIFMO", "STIFBI", "STIHCO", "STICPR", "STISDE", "STICCO"]
@@ -36,6 +35,7 @@ export default function Checkout() {
   const [last_name, set_last_name] = useState('')
   const [email, set_email] = useState('')
   const [code, set_code] = useState('')
+  const [isLoading, setLoading] = useState(false)
   const [bypass_paypal, set_bypass_paypal] = useState(false)
   const [snackbarOpen, setSnackbarOpen] = useState(false);
   const [snackbarText, setSnackbarText] = useState('')
@@ -61,12 +61,22 @@ export default function Checkout() {
   const bypassPaypalCheckout = async () => {
     const req_body = build_request_body()
     req_body['bypassPaypal'] = true
+    setLoading(true)
     const response = await http.create_order(req_body)
     if (response.error) {
       setErrorSnackbarText(response.error.message)
       setErrorSnackbarOpen(true)
       return ''
+    } else {
+      setSnackbarText('Order placed successfully')
+      setSnackbarOpen(true)
+      first_name_ref.current.value = ''
+      last_name_ref.current.value = ''
+      email_ref.current.value = ''
+      store_ref.current.value = ''
     }
+    setLoading(false)
+
   }
 
   const renderButtons = () => {
@@ -93,8 +103,12 @@ export default function Checkout() {
           setErrorSnackbarOpen(true)
           return ''
         } else {
-          setSnackbarText('Transaction successful')
+          setSnackbarText('Order placed successfully')
           setSnackbarOpen(true)
+          first_name_ref.current.value = ''
+          last_name_ref.current.value = ''
+          email_ref.current.value = ''
+          store_ref.current.value = ''
         }
       },
       style: {
@@ -146,7 +160,7 @@ export default function Checkout() {
         <TextField inputRef={first_name_ref} className={styles.text__field} onChange={handle_first_name} id="" label="First Name" variant="filled" />
         <TextField inputRef={last_name_ref} className={styles.text__field} onChange={handle_last_name} id="" label="Last Name" variant="filled" />
         <TextField inputRef={email_ref} className={styles.text__field} onChange={handle_email} id="" label="Email" variant="filled" />
-        <FormControl id={styles.move} className={styles.text__field} variant="filled" sx={{ m: 1, minWidth: 120 }}>
+        <FormControl inputRef={store_ref} id={styles.move} className={styles.text__field} variant="filled" sx={{ m: 1, minWidth: 120 }}>
           <InputLabel>Store</InputLabel>
           <Select
             inputRef={store_ref}
@@ -184,7 +198,7 @@ export default function Checkout() {
             </Tooltip>
           </div>
           <div className={`${styles.bypass__paypal__checkout} ${!bypass_paypal ? styles.hidden : styles.visible}`}>
-            <Button onClick={bypassPaypalCheckout} variant="contained">Checkout</Button>
+            <LoadingButton loading={isLoading} onClick={bypassPaypalCheckout} variant="contained">Checkout</LoadingButton>
           </div>
         </div>
       </div>
