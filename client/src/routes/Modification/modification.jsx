@@ -126,7 +126,7 @@ export default function Modification() {
           } else {
             cart_item['embroidery'] = embroidery
           }
-          const key = `${item.code},${Object.keys(item.sizes)[i - 1]},${colors[j]}`
+          const key = `${item.code},${Object.keys(item.sizes)[i - 1]},${colors[j]},${embroidery}`
           if (new_cart[key]) {
             new_cart[key].quantity += Number(inputs[j].value)
           } else {
