@@ -30,10 +30,8 @@ export default function Catalog() {
   return (
     <div className={styles.landing}>
       {location.pathname.includes('accessories') &&
-        <div className={styles.minimum}>
-          <div className={styles.text__wrapper}>
-            <p>Must order at least 12 units</p>
-          </div>
+        <div className={styles.text__wrapper}>
+          <p>Must order at least 12 units</p>
         </div>
       }
       <div className={styles.grid}>
@@ -55,7 +53,7 @@ export default function Catalog() {
         <div className={styles.title}>
           <p>Available Logos:</p>
         </div>
-        
+
         {location.pathname.includes('accessories') &&
           <div className={styles.logos}>
             <img src={'/images/ford.png'}></img>
@@ -66,7 +64,7 @@ export default function Catalog() {
             <img src={'/images/ram.png'}></img>
           </div>
         }
-        {location.pathname.includes('hats') &&
+        {/* {location.pathname.includes('hats') &&
           <div className={styles.logos}>
             <img className={styles.quicklane} src={'/images/quicklane.png'}></img>
             <img src={'/images/stivers.png'}></img>
@@ -77,7 +75,7 @@ export default function Catalog() {
             <img src={'/images/jeep.png'}></img>
             <img src={'/images/ram.png'}></img>
           </div>
-        }
+        } */}
         {location.pathname.includes('mens') &&
           <div className={styles.logos}>
             <img className={styles.quicklane} src={'/images/quicklane.png'}></img>
