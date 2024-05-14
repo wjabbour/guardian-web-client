@@ -11,23 +11,28 @@ const ses = new SESClient({});
 export const handler = async (): Promise<APIGatewayProxyResult> => {
 
   try {
-    const orders = await dynamo.getPaidOrders();
-    logger.info({ message: 'Retrieved orders for the week', orders });
+    const paidOrders = await dynamo.getPaidOrders();
+    logger.info({ message: 'Retrieved paid orders for the week', paidOrders });
 
-    if (orders.length === 0) {
+    // orders where users entered the store code to bypass the pay with paypal step
+    const bypassedOrders = await dynamo.getBypassedOrders();
+    logger.info({ message: 'Retrieved bypassed orders for the week', bypassedOrders });
+
+    if (paidOrders.length === 0 && bypassedOrders.length === 0) {
       logger.info({ message: 'No orders this week' });
       return {
         statusCode: 200
       }
     }
 
-    const csv = createOrderCsv(orders)
+    const csv = createOrderCsv([...paidOrders, ...bypassedOrders])
     logger.info({ message: 'Created CSV file of orders' });
 
     await sendEmail(csv)
     logger.info({ message: 'Successfully sent CSV file to Guardian' });
 
     await dynamo.archivePaidOrders()
+    await dynamo.archiveBypassedOrders()
     logger.info('successfully triggered lambda')
 
     await dynamo.deleteOldUnpaidOrders();

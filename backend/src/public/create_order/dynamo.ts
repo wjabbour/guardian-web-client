@@ -29,7 +29,7 @@ export class Dynamo {
           "S": store
         },
         bypass: {
-          "BOOL": false
+          "N": "0"
         },
         created_at: {
           "S": `${Date.now()}`
@@ -77,7 +77,7 @@ export class Dynamo {
           "N": "-1"
         },
         bypass: {
-          "BOOL": true
+          "N": "1"
         },
         order: { "L": massaged_cart, },
         order_id: {

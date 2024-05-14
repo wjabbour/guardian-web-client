@@ -26,9 +26,23 @@ resource "aws_dynamodb_table" "orders_table" {
     type = "S"
   }
 
+  attribute {
+    name = "bypass"
+    type = "N"
+  }
+
   global_secondary_index {
     name               = "paid-index"
     hash_key           = "paid"
+    write_capacity     = 1
+    read_capacity      = 1
+    projection_type    = "ALL"
+    non_key_attributes = []
+  }
+
+  global_secondary_index {
+    name               = "bypass-index"
+    hash_key           = "bypass"
     write_capacity     = 1
     read_capacity      = 1
     projection_type    = "ALL"
