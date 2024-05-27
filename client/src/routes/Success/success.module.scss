@@ -1,0 +1,150 @@
+.container {
+    display: flex;
+    justify-content: center;
+    padding: 100px;
+  }
+  
+  .back__button {
+    position: relative;
+    right: 50px;
+    cursor: pointer;
+    font-size: 32px;
+  }
+  
+  .card {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    width: 800px;
+    padding: 15px;
+    gap: 15px;
+    border: 1px solid grey;
+  }
+
+  .title {
+    text-align: center;
+  }
+  
+  #move {
+    position: relative;
+    right: 10px;
+  }
+  
+  .tooltip {
+    position: absolute;
+    right: 0px;
+    top: 15px;
+  }
+  
+  .text__field {
+    width: 225px;
+  }
+  
+  .subtotal__container {
+    position: relative;
+    height: 150px;
+    border-top: 1px solid black;
+  }
+  
+  .visible {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+  .hidden {
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.5s linear;
+  }
+  
+  .bypass__paypal__checkout {
+    position: absolute;
+    top: 15px;
+    right: 75px;
+  }
+  
+  .subtotal {
+    position: absolute;
+    font-size: 18px;
+    top: 15px;
+    left: 0px;
+    font-weight: 500;
+  }
+  
+  .checkout__container {
+    position: relative;
+    left: 350px;
+    margin-top: 15px;
+    width: 400px;
+  }
+
+  .scrollable {
+    position: relative;
+    overflow-y: auto;
+    overflow-x: none;
+}
+
+.line__item {
+    position: relative;
+    display: flex;
+    height: 320px;
+    margin-top: 15px;
+
+    svg {
+        cursor: pointer;
+    }
+}
+
+.information__panel {
+    position: absolute;
+    top: 40px;
+    left: 300px;
+
+    .name {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    .price {
+        font-weight: bold;
+        font-size: 18px;
+        margin-bottom: 15px;
+    }
+
+    .color__title {
+        position: relative;
+        bottom: 10px;
+        font-weight: 500;
+        font-size: 18px;
+    }
+
+    .size {
+        position: relative;
+        bottom: 10px;
+        font-weight: 500;
+        font-size: 18px;
+    }
+
+    .quantity {
+        position: relative;
+        bottom: 10px;
+        font-weight: 500;
+        font-size: 18px;
+    }
+}
+
+.image__container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    min-height: 300px;
+    .small {
+        max-height: 100px;
+    }
+
+    img {
+        max-height: 270px;
+    }
+}

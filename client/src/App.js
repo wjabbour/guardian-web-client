@@ -9,6 +9,7 @@ import {
   createBrowserRouter,
   RouterProvider
 } from "react-router-dom";
+import Success from './routes/Success/success';
 
 function App() {
   const router = createBrowserRouter([
@@ -20,6 +21,7 @@ function App() {
         { path: '/catalog/:type', element: <Catalog /> },
         { path: '/cart', element: <Cart /> },
         { path: '/checkout', element: <Checkout /> },
+        { path: '/success', element: <Success /> },
         { path: '/item/:id', loader: modificationLoader, element: <Modification /> },
       ]
     }

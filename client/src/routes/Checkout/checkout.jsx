@@ -29,7 +29,6 @@ export default function Checkout() {
   const first_name_ref = useRef(null)
   const last_name_ref = useRef(null)
   const email_ref = useRef(null)
-  const password_ref = useRef(null)
   const store_ref = useRef(null)
   const [first_name, set_first_name] = useState('')
   const [last_name, set_last_name] = useState('')
@@ -74,9 +73,15 @@ export default function Checkout() {
       last_name_ref.current.value = ''
       email_ref.current.value = ''
       store_ref.current.value = ''
+      navigate('/success', {
+        state: {
+          cart: { ...cart }
+        }
+      })
+      set_cart({})
     }
-    setLoading(false)
 
+    setLoading(false)
   }
 
   const renderButtons = () => {
@@ -109,6 +114,13 @@ export default function Checkout() {
           last_name_ref.current.value = ''
           email_ref.current.value = ''
           store_ref.current.value = ''
+
+          navigate('/success', {
+            state: {
+              cart: { ...cart }
+            }
+          })
+          set_cart({})
         }
       },
       style: {
