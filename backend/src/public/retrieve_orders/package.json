@@ -1,0 +1,10 @@
+{
+  "name": "retrieve_orders",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "esbuild --platform=node --bundle --minify --outdir=build handler.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

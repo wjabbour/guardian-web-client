@@ -1,46 +1,56 @@
 .navbar {
-    min-height: 150px;
-    position: relative;
+  min-height: 150px;
+  position: relative;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: 2px solid rgb(52, 52, 243);
+  border-radius: 25px;
+  height: 35px;
+  width: 120px;
+  padding: 0px 5px 0px 5px;
 }
 
 .cart__container {
-    position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    right: 1%;
-    top: 35px;
-    cursor: pointer;
-    border: 2px solid rgb(52, 52, 243);
-    border-radius: 25px;
-    height: 35px;
-    width: 120px;
+  position: absolute;
+  right: 1%;
+  top: 35px;
+}
+
+.orders__container {
+  position: absolute;
+  left: 1%;
+  top: 35px;
 }
 
 .cart {
-    font-size: 20px;
-    color: rgb(52, 52, 243);
-    font-weight: bold;
+  font-size: 20px;
+  color: rgb(52, 52, 243);
+  font-weight: bold;
 }
 
 .guardian {
-    .logo {
-        height: 100px;
-    }
+  .logo {
+    height: 100px;
+  }
 
-    position: absolute;
-    top: 25px;
-    left: 15%;
-    cursor: pointer;
+  position: absolute;
+  top: 25px;
+  left: 15%;
+  cursor: pointer;
 }
 
 .stivers {
-    .logo {
-        height: 120px;
-    }
+  .logo {
+    height: 120px;
+  }
 
-    position: absolute;
-    top: 25px;
-    right: 15%;
-    cursor: pointer;
+  position: absolute;
+  top: 25px;
+  right: 15%;
+  cursor: pointer;
 }

@@ -20,6 +20,15 @@ export async function create_order(order) {
   }
 }
 
+export async function retrieve_orders() {
+  try {
+    const response = await axios.get('https://mxfj3q6m01.execute-api.us-east-1.amazonaws.com/v1/retrieve-orders');
+    return { success: { data: response.data }, error: null }
+  } catch (e) {
+    return handleError(e)
+  }
+}
+
 export async function capture_order(order_id) {
   const body = { order_id }
 
