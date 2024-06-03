@@ -9,7 +9,7 @@ export const STORES = [
 
 export const EMBROIDERIES = {
   hat: ['Stivers', 'Quicklane', 'Ford', 'Hyundai', 'Chrysler', 'Dodge', 'Jeep', 'Ram'],
-  mens: ['Stivers', 'Quicklane'],
-  womens: ['Stivers', 'Quicklane'],
-  accessory: ['Ford', 'Hyundai', 'Chrysler', 'Dodge', 'Jeep', 'Ram']
+  mens: ['Stivers', 'Quicklane', 'Subaru'],
+  womens: ['Stivers', 'Quicklane', 'Subaru'],
+  accessory: ['Ford', 'Hyundai', 'Chrysler', 'Dodge', 'Jeep', 'Ram', 'Subaru']
 }
