@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-function handleError(e, error_message) {
+function handleError(e, error_message?) {
   const message = e.response?.data.message || error_message || 'Unexpected error. Please try again.';
   if (e.response) {
     return { success: null, error: { message, status: e.response.status } }

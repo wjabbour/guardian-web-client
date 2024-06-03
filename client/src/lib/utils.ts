@@ -1,3 +1,5 @@
+import { EMBROIDERIES } from "./constants";
+
 export function calculate_item_count(cart) {
     let count = 0;
 
@@ -16,4 +18,8 @@ export function calculate_item_price(cart) {
     })
 
     return price.toFixed(2)
+}
+
+export function getEmbroidery(type) {
+  return EMBROIDERIES[type]
 }

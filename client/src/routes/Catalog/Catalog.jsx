@@ -5,23 +5,44 @@ import { useNavigate, useLocation } from 'react-router-dom'
 import { catalog } from '../../lib/catalog'
 import { SvgIcon } from '@mui/material';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+import { getEmbroidery } from '../../lib/utils'
 
 export default function Catalog() {
   const navigate = useNavigate();
   const location = useLocation();
   const [available_catalog, set_catalog] = useState([])
-  console.log(available_catalog)
 
+  const logos = getEmbroidery(location.pathname.split('/')[2]).map((l) => {
+    l = l.toLowerCase()
+    if (l === 'chrysler' || l === 'dodge') {
+      return <img className={styles.large__picture} src={`/images/${l}.png`}></img>
+    } else if (l === 'quicklane') {
+      return <img className={styles.quicklane} src={`/images/${l}.png`}></img>
+    } else {
+      return <img src={`/images/${l}.png`}></img>
+    }
+  })
+  console.log(logos)
+  const logosDiv = <div className={styles.logos}>
+    {logos}
+    {/* <img src={'/images/ford.png'}></img>
+    <img src={'/images/hyundai.png'}></img>
+    <img className={styles.large__picture} src={'/images/chrysler.png'}></img>
+    <img className={styles.large__picture} src={'/images/dodge.png'}></img>
+    <img src={'/images/jeep.png'}></img>
+    <img src={'/images/ram.png'}></img> */}
+  </div>
   useEffect(() => {
     let inventory = []
-    if (location.pathname.includes('womens')) {
-      inventory = catalog.filter((item) => item.type === 'female')
-    } else if (location.pathname.includes('hat')) {
+    console.log(location.pathname)
+    if (location.pathname === '/catalog/womens') {
+      inventory = catalog.filter((item) => item.type === 'womens')
+    } else if (location.pathname === '/catalog/hats') {
       inventory = catalog.filter((item) => item.type === 'hat')
-    } else if (location.pathname.includes('accessories')) {
+    } else if (location.pathname === '/catalog/accessory') {
       inventory = catalog.filter((item) => item.type === 'accessory')
     } else {
-      inventory = catalog.filter((item) => item.type === 'male')
+      inventory = catalog.filter((item) => item.type === 'mens')
     }
 
     set_catalog(inventory)
@@ -53,37 +74,7 @@ export default function Catalog() {
         <div className={styles.title}>
           <p>Available Logos:</p>
         </div>
-
-        {location.pathname.includes('accessories') &&
-          <div className={styles.logos}>
-            <img src={'/images/ford.png'}></img>
-            <img src={'/images/hyundai.png'}></img>
-            <img className={styles.large__picture} src={'/images/chrysler.png'}></img>
-            <img className={styles.large__picture} src={'/images/dodge.png'}></img>
-            <img src={'/images/jeep.png'}></img>
-            <img src={'/images/ram.png'}></img>
-          </div>
-        }
-        {/* {location.pathname.includes('hats') &&
-          <div className={styles.logos}>
-            <img className={styles.quicklane} src={'/images/quicklane.png'}></img>
-            <img src={'/images/stivers.png'}></img>
-            <img src={'/images/ford.png'}></img>
-            <img src={'/images/hyundai.png'}></img>
-            <img className={styles.large__picture} src={'/images/chrysler.png'}></img>
-            <img className={styles.large__picture} src={'/images/dodge.png'}></img>
-            <img src={'/images/jeep.png'}></img>
-            <img src={'/images/ram.png'}></img>
-          </div>
-        } */}
-        {location.pathname.includes('mens') &&
-          <div className={styles.logos}>
-            <img className={styles.quicklane} src={'/images/quicklane.png'}></img>
-            <img src={'/images/stivers.png'}></img>
-          </div>
-        }
-
-
+        {logosDiv}
       </div>
     </div>
   )

@@ -10,7 +10,7 @@ import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 import Alert from "@mui/material/Alert";
-
+import { getEmbroidery } from '../../lib/utils';
 
 export async function loader({ params }) {
   const item = catalog.find((i) => i.code === params.id)
@@ -38,6 +38,23 @@ export default function Modification() {
   const handleChange = (event) => {
     setEmbroidery(event.target.value);
   };
+
+  const embroideries = getEmbroidery(item.type).map((e) => {
+    return <MenuItem value={e}>{e}</MenuItem>
+  })
+
+  const embroiderySelector = <div className={styles.embroidery__selector}>
+    <FormControl fullWidth>
+      <InputLabel>Logo</InputLabel>
+      <Select
+        value={embroidery}
+        label="embroidery"
+        onChange={handleChange}
+      >
+        {embroideries}
+      </Select>
+    </FormControl>
+  </div>
 
   function handleSnackbarClose() {
     setSnackbarOpen(false);
@@ -169,64 +186,7 @@ export default function Modification() {
           <div className={styles.color__selector}>
             {color_selection}
           </div>
-          {item.type === 'accessory' &&
-            <div className={styles.embroidery__selector}>
-              <FormControl fullWidth>
-                <InputLabel>Logo</InputLabel>
-                <Select
-                  value={embroidery}
-                  label="embroidery"
-                  onChange={handleChange}
-                >
-                  <MenuItem value={"Ford"}>Ford</MenuItem>
-                  <MenuItem value={"Hyundai"}>Hyundai</MenuItem>
-                  <MenuItem value={"Chrysler"}>Chrysler</MenuItem>
-                  <MenuItem value={"Dodge"}>Dodge</MenuItem>
-                  <MenuItem value={"Jeep"}>Jeep</MenuItem>
-                  <MenuItem value={"Ram"}>Ram</MenuItem>
-                </Select>
-              </FormControl>
-            </div>
-          }
-
-          {['female', 'male'].includes(item.type) &&
-            <div className={styles.embroidery__selector}>
-              <FormControl fullWidth>
-                <InputLabel>Embroidery</InputLabel>
-                <Select
-                  value={embroidery}
-                  label="embroidery"
-                  onChange={handleChange}
-                >
-                  <MenuItem value={"Stivers"}>Stivers</MenuItem>
-                  <MenuItem value={"Quicklane"}>Quicklane</MenuItem>
-                </Select>
-              </FormControl>
-            </div>
-          }
-          {item.type === 'hat' &&
-            <div className={styles.embroidery__selector}>
-              <FormControl fullWidth>
-                <InputLabel>Embroidery</InputLabel>
-                <Select
-                  value={embroidery}
-                  label="embroidery"
-                  onChange={handleChange}
-                >
-                  <MenuItem value={"Stivers"}>Stivers</MenuItem>
-                  <MenuItem value={"Quicklane"}>Quicklane</MenuItem>
-                  <MenuItem value={"Ford"}>Ford</MenuItem>
-                  <MenuItem value={"Hyundai"}>Hyundai</MenuItem>
-                  <MenuItem value={"Chrysler"}>Chrysler</MenuItem>
-                  <MenuItem value={"Dodge"}>Dodge</MenuItem>
-                  <MenuItem value={"Jeep"}>Jeep</MenuItem>
-                  <MenuItem value={"Ram"}>Ram</MenuItem>
-                </Select>
-              </FormControl>
-            </div>
-          }
-
-
+          {embroiderySelector}
           <div className={styles.form__container}>
             <table id="table">
               <thead>

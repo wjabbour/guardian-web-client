@@ -6,3 +6,10 @@ export const STORES = [
     'Stivers Decatur Subaru, 1950 Orion DR, Decatur, GA 30033', 
     'Stivers Chevrolet, 111 Newland Road, Columbia, SC 29229', 
 ]
+
+export const EMBROIDERIES = {
+  hat: ['Stivers', 'Quicklane', 'Ford', 'Hyundai', 'Chrysler', 'Dodge', 'Jeep', 'Ram'],
+  mens: ['Stivers', 'Quicklane'],
+  womens: ['Stivers', 'Quicklane'],
+  accessory: ['Ford', 'Hyundai', 'Chrysler', 'Dodge', 'Jeep', 'Ram']
+}
