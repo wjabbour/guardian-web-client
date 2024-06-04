@@ -14,26 +14,21 @@ export const handler = async (): Promise<APIGatewayProxyResult> => {
     const paidOrders = await dynamo.getPaidOrders();
     logger.info({ message: 'Retrieved paid orders for the week', paidOrders });
 
-    // orders where users entered the store code to bypass the pay with paypal step
-    const bypassedOrders = await dynamo.getBypassedOrders();
-    logger.info({ message: 'Retrieved bypassed orders for the week', bypassedOrders });
 
-    if (paidOrders.length === 0 && bypassedOrders.length === 0) {
+    if (paidOrders.length === 0) {
       logger.info({ message: 'No orders this week' });
       return {
         statusCode: 200
       }
     }
 
-    const csv = createOrderCsv([...paidOrders, ...bypassedOrders])
+    const csv = createOrderCsv(paidOrders)
     logger.info({ message: 'Created CSV file of orders' });
 
     await sendEmail(csv)
     logger.info({ message: 'Successfully sent CSV file to Guardian' });
 
     await dynamo.archivePaidOrders()
-    await dynamo.archiveBypassedOrders()
-    logger.info('successfully triggered lambda')
 
     await dynamo.deleteOldUnpaidOrders();
     logger.info('deleted old unpaid orders')
@@ -63,7 +58,7 @@ function createOrderCsv(orders) {
     csv += str
   }
 
-  csv += 'Date,Store Code,Store Name,First Name,Last Name,Item,Quantity,Description,Size,Color,Logo,Price,usedStoreCode,transactionId\n'
+  csv += 'Date,Store Code,Store Name,First Name,Last Name,Item,Quantity,Description,Size,Color,Logo,Placement,Price,usedStoreCode,transactionId\n'
 
   for (let i = 0; i < orders.length; i++) {
     const order = orders[i];
@@ -85,6 +80,7 @@ function createOrderCsv(orders) {
         size: item.size,
         color: item.color,
         logo: item.embroidery,
+        placement: item.placement,
         price: getCatalogItemPrice(item.code, item.size),
         usedStoreCode: order.bypass,
         transactionId: order.transaction_id || 'N/A'

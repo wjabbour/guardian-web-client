@@ -37,11 +37,9 @@ export default function Cart() {
                     <div className={styles.color__title}>Color: {cart[k].color}</div>
                     {cart[k].embroidery &&
                       <div className={styles.color__title}>Embroidery: {cart[k].embroidery}</div>
-
                     }
-                    {cart[k].logo &&
-                      <div className={styles.color__title}>Logo: {cart[k].logo}</div>
-
+                    {cart[k].type !== 'accessory' &&
+                      <div className={styles.color__title}>Placement: {cart[k].placement}</div>
                     }
                     <div className={styles.size}>
                       Size: {cart[k].size}

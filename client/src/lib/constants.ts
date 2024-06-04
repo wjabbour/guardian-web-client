@@ -13,3 +13,5 @@ export const EMBROIDERIES = {
   womens: ['Stivers', 'Quicklane', 'Subaru'],
   accessory: ['Ford', 'Hyundai', 'Chrysler', 'Dodge', 'Jeep', 'Ram', 'Subaru']
 }
+
+export const LOGO_PLACEMENTS = ['Right Sleeve', 'Left Chest']

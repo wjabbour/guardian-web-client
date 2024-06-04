@@ -77,7 +77,8 @@ export const handler = async (event: APIGatewayEvent): Promise<APIGatewayProxyRe
       obj['code'] = cart_item['code']
       obj['size'] = cart_item['size']
       obj['color'] = cart_item['color']
-      obj['embroidery'] = cart_item['logo'] || cart_item['embroidery']
+      obj['embroidery'] = cart_item['embroidery']
+      obj['placement'] = cart_item['placement']
 
       cart.push(obj)
     })

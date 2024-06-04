@@ -11,6 +11,7 @@ import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 import Alert from "@mui/material/Alert";
 import { getEmbroidery } from '../../lib/utils';
+import { LOGO_PLACEMENTS } from '../../lib/constants';
 
 export async function loader({ params }) {
   const item = catalog.find((i) => i.code === params.id)
@@ -34,16 +35,21 @@ export default function Modification() {
   const [selected_size, set_size] = useState(sizes[0])
   const [price, set_price] = useState(item.sizes[selected_size])
   const [embroidery, setEmbroidery] = useState('');
+  const [placement, setPlacement] = useState('Left Chest');
 
   const handleChange = (event) => {
     setEmbroidery(event.target.value);
+  };
+
+  const handlePlacementChange = (event) => {
+    setPlacement(event.target.value);
   };
 
   const embroideries = getEmbroidery(item.type).map((e) => {
     return <MenuItem value={e}>{e}</MenuItem>
   })
 
-  const embroiderySelector = <div className={styles.embroidery__selector}>
+  const embroiderySelector = <div className={styles.selector}>
     <FormControl fullWidth>
       <InputLabel>Logo</InputLabel>
       <Select
@@ -52,6 +58,23 @@ export default function Modification() {
         onChange={handleChange}
       >
         {embroideries}
+      </Select>
+    </FormControl>
+  </div>
+
+  const placements = LOGO_PLACEMENTS.map((l) => {
+    return <MenuItem value={l}>{l}</MenuItem>
+  })
+
+  const placementSelector = <div className={styles.selector}>
+    <FormControl fullWidth>
+      <InputLabel>Logo Placement</InputLabel>
+      <Select
+        value={placement}
+        label="placement"
+        onChange={handlePlacementChange}
+      >
+        {placements}
       </Select>
     </FormControl>
   </div>
@@ -79,7 +102,6 @@ export default function Modification() {
         <div className={styles.color__name}>
           <p>{color}</p>
         </div>
-
       </div>
     } else {
       return <div className={styles.color__option} key={color}>
@@ -91,13 +113,11 @@ export default function Modification() {
             set_image_source(`/images/${item.code}_${selectedColor.toLowerCase()}.jpg`)
           }}>
         </div>
-
         <div className={styles.color__name}>
           <p>{color}</p>
         </div>
       </div>
     }
-
   })
 
   function add_item_to_cart() {
@@ -130,19 +150,19 @@ export default function Modification() {
             setErrorSnackbarText('Must order at least 12 units')
             continue
           }
+          
           const cart_item = {
+            type: item.type,
             name: item.fullname,
             price: item.sizes[sizes[i - 1]],
             quantity: Number(inputs[j].value),
             size: sizes[i - 1],
             color: colors[j],
-            code: item.code
+            code: item.code,
+            placement: item.type === 'accessory' ? 'N/A' : placement,
+            embroidery
           }
-          if (item.type === 'accessory') {
-            cart_item['logo'] = embroidery
-          } else {
-            cart_item['embroidery'] = embroidery
-          }
+
           const key = `${item.code},${Object.keys(item.sizes)[i - 1]},${colors[j]},${embroidery}`
           if (new_cart[key]) {
             new_cart[key].quantity += Number(inputs[j].value)
@@ -187,6 +207,7 @@ export default function Modification() {
             {color_selection}
           </div>
           {embroiderySelector}
+          {item.type !== 'accessory' && placementSelector}
           <div className={styles.form__container}>
             <table id="table">
               <thead>
