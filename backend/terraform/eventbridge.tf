@@ -7,6 +7,7 @@ module "eventbridge" {
     crons = {
       description         = "Trigger lambda every Friday at 22:00 UTC"
       schedule_expression = "cron(0 22 ? * FRI *)"
+      enabled = true
     }
   }
 
