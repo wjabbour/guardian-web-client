@@ -15,6 +15,7 @@ import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 export default function BasicTable() {
   const navigate = useNavigate()
   const [orders, setOrders] = useState([])
+  const seen = {}
 
   useEffect(() => {
     http.retrieve_orders()
@@ -23,6 +24,11 @@ export default function BasicTable() {
         res.success.data.orders.forEach((order) => {
           if (!order.bypass && !order.transaction_id) return
           order.order.forEach((o) => {
+            const date = new Date(parseInt(order.created_at))
+            date.setSeconds(0)
+            date.setHours(0)
+            date.setMinutes(0)
+            date.setMilliseconds(0)
             orders.push({
               email: order.email,
               first_name: order.first_name,
@@ -34,24 +40,13 @@ export default function BasicTable() {
               size: o.size,
               store: order.store,
               transaction_id: order.transaction_id || "N/A",
-              created_at: order.created_at
+              created_at: date
             })
           })
         })
 
         orders.sort((a, b) => {
-          const a_date = new Date(parseInt(a.created_at))
-          const b_date = new Date(parseInt(b.created_at))
-          a_date.setSeconds(0)
-          a_date.setHours(0)
-          a_date.setMinutes(0)
-          a_date.setMilliseconds(0)
-          b_date.setSeconds(0)
-          b_date.setHours(0)
-          b_date.setMinutes(0)
-          b_date.setMilliseconds(0)
-
-          const result = b_date.getTime() - a_date.getTime()
+          const result = b.created_at.getTime() - a.created_at.getTime()
           if (result) return result
           if (b.last_name.toUpperCase() < a.last_name.toUpperCase()) {
             return 1
@@ -90,12 +85,24 @@ export default function BasicTable() {
             {orders.map((row, i) => (
               <TableRow
                 key={i}
-                sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
+                sx={{
+                  'td': {
+                    borderTop: () => {
+                      if (seen[row.created_at.toDateString()]) {
+                        console.log(row.created_at)
+                        return 0
+                      } else {
+                        seen[row.created_at.toDateString()] = 1
+                        return 2
+                      }
+                    }
+                  }
+                }}
               >
-                <TableCell component="th" scope="row">
+                <TableCell scope="row">
                   {row.email}
                 </TableCell>
-                <TableCell align="right">{new Date(parseInt(row.created_at)).toDateString()}</TableCell>
+                <TableCell align="right" width="10px" sx={{ whiteSpace: 'nowrap' }}>{row.created_at.toDateString()}</TableCell>
                 <TableCell align="right">{row.first_name}</TableCell>
                 <TableCell align="right">{row.last_name}</TableCell>
                 <TableCell align="right">{row.code}</TableCell>
