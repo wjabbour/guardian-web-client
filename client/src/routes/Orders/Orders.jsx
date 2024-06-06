@@ -89,7 +89,6 @@ export default function BasicTable() {
                   'td': {
                     borderTop: () => {
                       if (seen[row.created_at.toDateString()]) {
-                        console.log(row.created_at)
                         return 0
                       } else {
                         seen[row.created_at.toDateString()] = 1

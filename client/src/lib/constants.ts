@@ -14,4 +14,12 @@ export const EMBROIDERIES = {
   accessory: ['Ford', 'Hyundai', 'Chrysler', 'Dodge', 'Jeep', 'Ram', 'Subaru']
 }
 
-export const LOGO_PLACEMENTS = ['Right Sleeve', 'Left Chest']
+export const LOGO_PLACEMENTS = function () {
+  const url = window.location.href
+  if (url.includes('localhost:3000')) {
+    return ['Right Sleeve', 'Left Chest'];
+  } else if (url.includes('gpstivers.com')) {
+    return ['Right Sleeve', 'Left Chest'];
+  }
+}
+

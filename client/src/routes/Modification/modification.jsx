@@ -1,6 +1,6 @@
 import styles from './modification.module.scss'
 import { catalog } from '../../lib/catalog'
-import { useLoaderData, useOutletContext, useNavigate } from 'react-router-dom'
+import { useLoaderData, useOutletContext, useNavigate, useLocation } from 'react-router-dom'
 import { useState } from 'react'
 import Snackbar from '@mui/material/Snackbar';
 import { SvgIcon } from '@mui/material';
@@ -21,6 +21,7 @@ export async function loader({ params }) {
 export default function Modification() {
   const item = useLoaderData();
   const navigate = useNavigate();
+  const location = useLocation()
 
   const [cart, set_cart] = useOutletContext();
   const [selected_color, set_selected_color] = useState(item.default_color);
@@ -62,7 +63,7 @@ export default function Modification() {
     </FormControl>
   </div>
 
-  const placements = LOGO_PLACEMENTS.map((l) => {
+  const placements = LOGO_PLACEMENTS().map((l) => {
     return <MenuItem value={l}>{l}</MenuItem>
   })
 

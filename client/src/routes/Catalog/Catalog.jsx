@@ -22,19 +22,11 @@ export default function Catalog() {
       return <img src={`/images/${l}.png`}></img>
     }
   })
-  console.log(logos)
   const logosDiv = <div className={styles.logos}>
     {logos}
-    {/* <img src={'/images/ford.png'}></img>
-    <img src={'/images/hyundai.png'}></img>
-    <img className={styles.large__picture} src={'/images/chrysler.png'}></img>
-    <img className={styles.large__picture} src={'/images/dodge.png'}></img>
-    <img src={'/images/jeep.png'}></img>
-    <img src={'/images/ram.png'}></img> */}
   </div>
   useEffect(() => {
     let inventory = []
-    console.log(location.pathname)
     if (location.pathname === '/catalog/womens') {
       inventory = catalog.filter((item) => item.type === 'womens')
     } else if (location.pathname === '/catalog/hats') {
