@@ -1,5 +1,8 @@
 # Required Tools to Deploy Site
 
+### VSCode
+VSCode is basically an advanced text editor. It makes viewing and updating the source code much easier. Go [here](https://code.visualstudio.com/download) to download VSCode.
+
 ### Node
 Node is a JavaScript runtime and also includes the package manager `npm`. `npm` is used to install all of the packages needed to run the site.
 

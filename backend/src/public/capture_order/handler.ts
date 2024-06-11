@@ -64,7 +64,6 @@ async function capture_paypal_order(access_token, order_id) {
   };
 
   const response = await axios.post(`https://api-m.paypal.com/v2/checkout/orders/${order_id}/capture`, null, { headers })
-  // transactionId
   logger.info({ message: 'Received transactionId', transactionId: response.data.purchase_units[0].payments.captures[0].id });
   return response.data.purchase_units[0].payments.captures[0].id
 }

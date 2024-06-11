@@ -5,7 +5,6 @@ import axios from 'axios';
 import qs from 'qs'
 import { SecretsManagerClient, GetSecretValueCommand } from "@aws-sdk/client-secrets-manager";
 import { catalog } from '../catalog';
-import { send_order_confirmation_email } from '../email';
 
 const dynamo = new Dynamo();
 const sm = new SecretsManagerClient({ region: 'us-east-1' });
@@ -91,8 +90,6 @@ export const handler = async (event: APIGatewayEvent): Promise<APIGatewayProxyRe
     if (body.bypassPaypal) {
       logger.info({ message: 'Bypassing PayPal' })
       await dynamo.createBypassOrder(body.email, cart, body.first_name, body.last_name, store_code)
-      await send_order_confirmation_email(body.email)
-      logger.info({ message: 'Sent confirmation email to myself' })
       return {
         statusCode: 200,
         headers: addCors(event.headers?.origin)

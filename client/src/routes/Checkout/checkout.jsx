@@ -182,7 +182,7 @@ export default function Checkout() {
             <MenuItem value="">
               <em>None</em>
             </MenuItem>
-            {STORES.map((store) => {
+            {STORES().map((store) => {
               return <MenuItem value={store}>{store}</MenuItem>
             })}
           </Select>

@@ -21,5 +21,5 @@ export function calculate_item_price(cart) {
 }
 
 export function getEmbroidery(type) {
-  return EMBROIDERIES[type]
+  return EMBROIDERIES()[type]
 }
