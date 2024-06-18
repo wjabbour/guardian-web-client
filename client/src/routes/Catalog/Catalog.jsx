@@ -2,12 +2,12 @@ import styles from './Catalog.module.scss'
 import ClothingIcon from '../../components/ClothingIcon/ClothingIcon'
 import { useState, useEffect } from 'react'
 import { useNavigate, useLocation } from 'react-router-dom'
-import { catalog } from '../../lib/catalog'
+import { Catalog } from '../../lib/catalog'
 import { SvgIcon } from '@mui/material';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import { getEmbroidery } from '../../lib/utils'
 
-export default function Catalog() {
+export default function ClothingCatalog() {
   const navigate = useNavigate();
   const location = useLocation();
   const [available_catalog, set_catalog] = useState([])
@@ -28,13 +28,13 @@ export default function Catalog() {
   useEffect(() => {
     let inventory = []
     if (location.pathname === '/catalog/womens') {
-      inventory = catalog.filter((item) => item.type === 'womens')
+      inventory = Catalog().filter((item) => item.type === 'womens')
     } else if (location.pathname === '/catalog/hats') {
-      inventory = catalog.filter((item) => item.type === 'hat')
+      inventory = Catalog().filter((item) => item.type === 'hat')
     } else if (location.pathname === '/catalog/accessory') {
-      inventory = catalog.filter((item) => item.type === 'accessory')
+      inventory = Catalog().filter((item) => item.type === 'accessory')
     } else {
-      inventory = catalog.filter((item) => item.type === 'mens')
+      inventory = Catalog().filter((item) => item.type === 'mens')
     }
 
     set_catalog(inventory)

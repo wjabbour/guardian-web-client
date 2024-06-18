@@ -1,5 +1,5 @@
 import styles from './modification.module.scss'
-import { catalog } from '../../lib/catalog'
+import { Catalog } from '../../lib/catalog'
 import { useLoaderData, useOutletContext, useNavigate, useLocation } from 'react-router-dom'
 import { useState } from 'react'
 import Snackbar from '@mui/material/Snackbar';
@@ -14,7 +14,7 @@ import { getEmbroidery } from '../../lib/utils';
 import { LOGO_PLACEMENTS } from '../../lib/constants';
 
 export async function loader({ params }) {
-  const item = catalog.find((i) => i.code === params.id)
+  const item = Catalog().find((i) => i.code === params.id)
   return item;
 }
 

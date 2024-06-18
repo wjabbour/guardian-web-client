@@ -54,7 +54,7 @@ cd ..
 `cd ..` always navigates you to the parent folder of the current folder you are in.
 
 ### project root
-I may mention something called a `project root`. This is referring to the root directory of the project. The project is a giant folder, and it contains sub-folders of `client` and `backend`. Some commands, you will need to `cd` into the `client` folder and run them. Other commands, you may need to `cd` into the `backend` folder and run them. Some commands, you may need to run from the `project root`.
+I may mention something called a `project root`. This is referring to the root directory of the project. The project is a giant folder, and it contains sub-folders of `client` and `backend`. For some commands, you will need to `cd` into the `client` folder and run them. Other commands, you may need to `cd` into the `backend` folder and run them. Some commands, you may need to run from the `project root`. You will need to use the `cd` command to navigate through the folders.
 
 ### git commands
 git is relatively complex, but you will be using it in a very simple way. <br><br> **Run all git commands from the project root.**<br><br>
@@ -68,6 +68,8 @@ git commit -m "made changes"
 git push
 ```
 
+This updates the history of the project and pushes this new project history to an external server hosted by GitHub. This way, if your computer ever blows up, you will always have a copy of the codebase available in the cloud.
+
 # Adding A New Site
 
 ## Buy the domain in GoDaddy
@@ -77,6 +79,74 @@ You must purchase a domain in GoDaddy. Go to godaddy.com, type in the name of th
 Now we need to make it so that we manage the DNS in AWS rather than in GoDaddy. Go to the AWS console, go to Route53, create a hosted zone. The hosted zone name needs to be the exact name of your domain. 
 
 For example, if you purchase the domain "gpstivers.com" then you need to create a hosted zone and set its name to "gpstivers.com".
+
+## Configure the site
+Each site has a unique set of `stores`, `store codes` (a unique identifier for each store), `embroideries` (the available logos that a user can have their apparel embroidered with), `item catalog` (the available items that a user may add to their cart), and `logo placements` (the places on the apparel that the embroideries can be placed).
+
+First, take note of the domain name that this site will be deployed to. You will need this when updating the configuration file in `{project_root}/client/src/lib/constants.ts`.
+
+### Updating the stores
+The list of stores for a domain populates the options of the select box on the checkout screen. This allows the user to choose which store address the order should be shipped to.
+
+In `{project_root}/client/src/lib/constants.ts` you will find a function named `STORES`.
+
+If the function looks like this:
+```
+export const STORES = function () {
+  const url = window.location.href
+  if (url.includes('localhost:3000')) {
+    return [
+      'Stivers Ford Montgomery, 4000 Eastern Blvd Montgomery, AL, 36116',
+      'Stivers Ford Montgomery, 500 Palisades Blvd, Birmingham, AL, 35209',
+      'Stivers Hyundai, 9950 Farrow Rd, Columbia, SC, 29203',
+      'Stivers CDJR, 2209 Cobbs Ford Road, Prattville, AL 36066',
+      'Stivers Decatur Subaru, 1950 Orion DR, Decatur, GA 30033',
+      'Stivers Chevrolet, 111 Newland Road, Columbia, SC 29229',
+    ]
+  } else if (url.includes('gpstivers.com')) {
+    return [
+      'Stivers Ford Montgomery, 4000 Eastern Blvd Montgomery, AL, 36116',
+      'Stivers Ford Montgomery, 500 Palisades Blvd, Birmingham, AL, 35209',
+      'Stivers Hyundai, 9950 Farrow Rd, Columbia, SC, 29203',
+      'Stivers CDJR, 2209 Cobbs Ford Road, Prattville, AL 36066',
+      'Stivers Decatur Subaru, 1950 Orion DR, Decatur, GA 30033',
+      'Stivers Chevrolet, 111 Newland Road, Columbia, SC 29229',
+    ]
+  }
+}
+```
+
+and you are deploying a new site to the domain name `example.com`, then you will update the code like so:
+```
+export const STORES = function () {
+  const url = window.location.href
+  if (url.includes('localhost:3000')) {
+    return [
+      'Stivers Ford Montgomery, 4000 Eastern Blvd Montgomery, AL, 36116',
+      'Stivers Ford Montgomery, 500 Palisades Blvd, Birmingham, AL, 35209',
+      'Stivers Hyundai, 9950 Farrow Rd, Columbia, SC, 29203',
+      'Stivers CDJR, 2209 Cobbs Ford Road, Prattville, AL 36066',
+      'Stivers Decatur Subaru, 1950 Orion DR, Decatur, GA 30033',
+      'Stivers Chevrolet, 111 Newland Road, Columbia, SC 29229',
+    ]
+  } else if (url.includes('gpstivers.com')) {
+    return [
+      'Stivers Ford Montgomery, 4000 Eastern Blvd Montgomery, AL, 36116',
+      'Stivers Ford Montgomery, 500 Palisades Blvd, Birmingham, AL, 35209',
+      'Stivers Hyundai, 9950 Farrow Rd, Columbia, SC, 29203',
+      'Stivers CDJR, 2209 Cobbs Ford Road, Prattville, AL 36066',
+      'Stivers Decatur Subaru, 1950 Orion DR, Decatur, GA 30033',
+      'Stivers Chevrolet, 111 Newland Road, Columbia, SC 29229',
+    ]
+  } else if (url.includes('example.com')) {
+    return [
+      'example address 1',
+      'example address 2',
+      'example address 3'
+    ]
+  }
+}
+```
 
 # Contributor
 
