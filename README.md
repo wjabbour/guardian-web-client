@@ -25,6 +25,10 @@ git is a version control system. You will use this to save changes that you make
 ### AWS CLI v2
 The AWS CLI is used to manage credentials that will be used by Terraform to interact with AWS. [This page](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html) has instructions for setting up AWS CLI v2.
 
+The AWS access key and secret key will need to be securely shared with you.
+
+With the cli installed, run the command `aws configure`. For "AWS Access Key ID" enter the AWS access key. For "AWS Secret Access Key" enter the secret key. For "Default region name" enter `us-east-1`. For "Default output format" enter `json`. Your local AWS profile has now been created.
+
 
 ### Ready To Go?
 Open up PowerShell and try checking the version number of the programs to ensure installation was performed successfully. If you get a message saying something like "could not recognize that command" then something is wrong.
@@ -72,13 +76,89 @@ This updates the history of the project and pushes this new project history to a
 
 # Adding A New Site
 
-## Buy the domain in GoDaddy
-You must purchase a domain in GoDaddy. Go to godaddy.com, type in the name of the domain you want to use, don't buy any of the extra stuff they try and sell you. Once complete, you will have a domain name.
+### Buy the domain in GoDaddy
+You must purchase a domain in GoDaddy. Go to GoDaddy.com, type in the name of the domain you want to use, don't buy any of the extra stuff they try and sell you. Once complete, you will have a domain name. Louis Budbill has the GoDaddy account where all domains have been purchased so far.
 
-## Configure DNS
-Now we need to make it so that we manage the DNS in AWS rather than in GoDaddy. Go to the AWS console, go to Route53, create a hosted zone. The hosted zone name needs to be the exact name of your domain. 
+### Configure DNS
+Now we need to make it so that we manage the DNS in AWS rather than in GoDaddy.
 
-For example, if you purchase the domain "gpstivers.com" then you need to create a hosted zone and set its name to "gpstivers.com".
+Sign into the AWS console as a root user (Louis Budbill has the sign-in information), type Route 53 in the search bar, create a hosted zone. The hosted zone name needs to be the exact name of your domain. For example, if you purchase the domain "gpstivers.com" then you need to create a hosted zone and set its name to "gpstivers.com". Make sure the hosted zone is a public hosted zone.
+
+A hosted zone is a container for DNS records. Find the DNS record in your zone with type "NS". GoDaddy will need to know the values for this record.
+
+Sign into GoDaddy and find the domain that you just purchased. GoDaddy's website may change over time so I won't list the exact steps, but you need to find the DNS settings for the domain. Once you are viewing the DNS settings for the domain, navigate to the DNS settings for the Nameservers. Click "Change Nameservers". Click "I'll use my own nameservers". Here is where we will paste the nameserver values from our DNS record in Route 53. The Route 53 record contains four nameserver values and we will need to enter all four here. Be sure to omit the trailing period character from each of the four nameserver values as you paste them into GoDaddy.
+
+We have now completed the process of transferring DNS management from GoDaddy to AWS.
+
+### Setup S3
+Now we need to create an S3 bucket. Type S3 in the search bar in your AWS console. Click "create bucket". The S3 bucket name needs to be the exact name of your domain. For example, if you purchase the domain "gpstivers.com" then you need to create an S3 bucket and set its name to "gpstivers.com".
+
+Uncheck the box that indicates this S3 bucket should block all public access. Check the acknowledgement box that you are aware this is making your S3 bucket public.
+
+Navigate to your newly created bucket. Click the "Properties" button. Scroll down to "Static website hosting" and enable it. Set both index document and error document to "index.html" and save changes.
+
+The last step is to modify the permissions. Click the "Permissions" button. Update the bucket policy:
+```
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "PublicReadGetObject",
+            "Effect": "Allow",
+            "Principal": "*",
+            "Action": "s3:GetObject",
+            "Resource": "arn:aws:s3:::example.com/*"
+        }
+    ]
+}
+```
+
+Be sure to put your domain name in place of `example.com`.
+
+### Setup Certificates
+Now we need to create a HTTPS certificate for the website. Type Certificate Manager in the search bar in your AWS console. Click "Request certificate". Request a public certificate. Enter your fully qualified domain name (e.g. `example.com`). Keep all settings the same and click "Request". We have now requested a certificate from AWS. To receive that certificate, we need to prove that we own `example.com`. Navigate to that certificate you requested (may need to refresh page to see it). Click "Create records in Route 53". From here, the ownership verification process may take a few minutes, but is fully automated. Refresh the page every few minutes until you see the status of the certificate change from "Pending Validation" to "Issued". Once the certificate has been issued, this step is complete.
+
+### Setup Cloudfront
+Now we need to create a Cloudfront distribution. Type Cloudfront in the search bar in your AWS console. Click "Create distribution". For origin name, select the S3 bucket URL of the bucket you just created which should have the format of `{your_domain}.s3.amazonaws.com`.
+
+Update "Allowed HTTP methods" to `GET, HEAD, OPTIONS, PUT, POST, PATCH, DELETE`. Click "Do not enable security protections" under "Web Application Firewall". For "Price class" select `Use only North America and Europe`. For "Alternate domain name (CNAME) - optional" input your domain name. For "Custom SSL certificate - optional" choose the certificate that was just issued. For "Default root object - optional" put `index.html`. Take note of this distribution ID (which looks something like `E1YPW3JQQ2QQ81`).
+
+Now that we have created all of the necessary AWS resources, we need to make some changes to the code.
+
+### Hook up Cloudfront to Route 53
+Now we need to create a DNS record in Route 53 that points to this Cloudfront distribution. Once setup, when users enter your domain in the browser URL bar, it will go to the Cloudfront distribution which will respond with the contents of the S3 bucket (our website).
+
+Go to Route 53. Go to the hosted zone for your domain. Click "Create record". Enable the "Alias" checkbox. Set "Route traffic to" to "Alias to Cloudfront distribution". For the second select box, choose the CloudFront distribution that was just created. Click "Create records".
+
+### client/package.json
+We need to update some lines under `scripts`.
+
+If scripts looks like this:
+```
+"scripts": {
+    "deploy": "npm run deploy-stivers",
+    "deploy-stivers": "npm run build && aws s3 cp build s3://gpstivers.com/ --recursive && aws cloudfront create-invalidation --distribution-id EEZ12WJWK62SX --paths \"/*\"",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+```
+
+then you need to update it like so:
+```
+"scripts": {
+    "deploy": "npm run deploy-stivers && npm run deploy-example",
+    "deploy-stivers": "npm run build && aws s3 cp build s3://gpstivers.com/ --recursive && aws cloudfront create-invalidation --distribution-id EEZ12WJWK62SX --paths \"/*\"",
+    "deploy-example": "npm run build && aws s3 cp build s3://{your_domain}/ --recursive && aws cloudfront create-invalidation --distribution-id {cloudfront_distribution_id} --paths \"/*\"",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+```
+
+`your_domain` needs to be the value of your domain, e.g. `example.com`. The `cloudfront_distribution_id` needs to be the ID that you took note of earlier. You can always go back and view your distribution ID by going to CloudFront in AWS.
 
 ## Configure the site
 Each site has a unique set of `stores`, `store codes` (a unique identifier for each store), `embroideries` (the available logos that a user can have their apparel embroidered with), `item catalog` (the available items that a user may add to their cart), and `logo placements` (the places on the apparel that the embroideries can be placed).

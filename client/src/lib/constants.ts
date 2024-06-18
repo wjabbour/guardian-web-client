@@ -18,6 +18,12 @@ export const STORES = function () {
       'Stivers Decatur Subaru, 1950 Orion DR, Decatur, GA 30033',
       'Stivers Chevrolet, 111 Newland Road, Columbia, SC 29229',
     ]
+  } else if (url.includes('gptameron.com')) {
+    return [
+      '1',
+      '2',
+      '3',
+    ]
   }
 }
 
