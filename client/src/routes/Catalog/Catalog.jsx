@@ -13,13 +13,13 @@ export default function ClothingCatalog() {
   const [available_catalog, set_catalog] = useState([])
 
   const logos = getEmbroidery(location.pathname.split('/')[2]).map((l) => {
-    l = l.toLowerCase()
+    l = l.toLowerCase().split(' ').join('_')
     if (l === 'chrysler' || l === 'dodge') {
-      return <img className={styles.large__picture} src={`/images/${l}.png`}></img>
+      return <img key={l} className={styles.large__picture} src={`/images/${l}.png`}></img>
     } else if (l === 'quicklane') {
-      return <img className={styles.quicklane} src={`/images/${l}.png`}></img>
+      return <img key={l} className={styles.quicklane} src={`/images/${l}.png`}></img>
     } else {
-      return <img src={`/images/${l}.png`}></img>
+      return <img key={l} src={`/images/${l}.png`}></img>
     }
   })
   const logosDiv = <div className={styles.logos}>
