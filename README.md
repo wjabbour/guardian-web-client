@@ -228,6 +228,29 @@ export const STORES = function () {
 }
 ```
 
+`EMBROIDERIES` is updated in the exact same way. Let's talk about what these values mean. Consider the following object returned from the `EMBROIDERIES` function:
+```
+return {
+      hat: ['Stivers'],
+      mens: ['Quicklane'],
+      womens: ['Subaru'],
+      accessory: ['Ford', 'Hyundai']
+    }
+```
+
+These values are used to determine two things:
+1) The available options in the `Logo` dropdown on the item modification page.
+2) The logos displayed on the catalog page when the user selects a specific group of item (accessories, mens, womens).
+
+With the values above, if a user were to click on "Men's Apparel" then the catalog page would display the Quicklane logo picture. If a user were then to choose an apparel from the catalog screen and thus be directed to the modification page, when they click the `Logo` dropdown they would only see Quicklane as an option. The same logic follows for womens, accessory, and hat.
+
+#### Uploading the logo pictures
+To upload a logo picture, download a .png or .jpg file of the logo to your computer. Move that file from your Downloads folder to `{project_root}/client/public/images`. Ensure the filename is all lowercase. For example, for the Subaru logo, there is the file `{project_root}/client/public/images/subaru.png`. Ideally the logos you use are relatively uniform in size. If not, I can manually resize them.
+
+`LOGOS` is updated in the same way.
+
+`TITLE` is updated the same way. The value returned here determines the text displayed in the user's browser tab.
+
 # Contributor
 
 Turner Jabbour <br>

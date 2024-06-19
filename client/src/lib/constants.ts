@@ -20,9 +20,15 @@ export const STORES = function () {
     ]
   } else if (url.includes('gptameron.com')) {
     return [
-      '1',
-      '2',
-      '3',
+      'Tameron Honda, 9871 Justina Ave Daphne, AL 36526',
+      'Tameron Buick GMC, 27161 US - 98 Daphne, AL 36526',
+      'Tameron CDJR, 27161 US - 98 Daphne, AL 36526',
+      'Tameron Subaru, 1431 I-65 Service Road Mobile, AL 36606',
+      'Tameron Nissan, 1015 E. I65 Service Road South Mobile, AL 36606',
+      'Tameron Kia, 10611 Boney Ave D\'Iberville, MS 39540',
+      'Tameron Kia Westbank, 1884 Westbank Expressway Harvey, LA 70058',
+      'Tameron Honda, 1675 Montgomery Blvd Birmingham, AL 35216',
+      'Tameron Hyundai, 1595 Montgomery Hwy Hoover, AL 35216'
     ]
   }
 }
@@ -62,6 +68,17 @@ export const LOGO_PLACEMENTS = function () {
     return ['Right Sleeve', 'Left Chest'];
   } else if (url.includes('gptameron.com')) {
     return ['Left Chest'];
+  }
+}
+
+export const TITLE = function () {
+  const url = window.location.href
+  if (url.includes('localhost:3000')) {
+    return 'Local';
+  } else if (url.includes('gpstivers.com')) {
+    return 'Stivers';
+  } else if (url.includes('gptameron.com')) {
+    return 'Tameron';
   }
 }
 

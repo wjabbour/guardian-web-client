@@ -11,6 +11,8 @@ import {
   RouterProvider
 } from "react-router-dom";
 import Success from './routes/Success/success';
+import { Helmet } from 'react-helmet';
+import { TITLE } from './lib/constants';
 
 function App() {
   const router = createBrowserRouter([
@@ -31,6 +33,9 @@ function App() {
 
   return (
     <div className='main__page'>
+      <Helmet>
+        <title>{TITLE()}</title>
+      </Helmet>
       <RouterProvider router={router}></RouterProvider>
     </div>
   );
