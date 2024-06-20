@@ -247,9 +247,55 @@ With the values above, if a user were to click on "Men's Apparel" then the catal
 #### Uploading the logo pictures
 To upload a logo picture, download a .png or .jpg file of the logo to your computer. Move that file from your Downloads folder to `{project_root}/client/public/images`. Ensure the filename is all lowercase. For example, for the Subaru logo, there is the file `{project_root}/client/public/images/subaru.png`. Ideally the logos you use are relatively uniform in size. If not, I can manually resize them.
 
-`LOGOS` is updated in the same way.
+`LOGO_PLACEMENTS` is updated in the same way.
 
 `TITLE` is updated the same way. The value returned here determines the text displayed in the user's browser tab.
+
+`COMPANY_LOGO` is updated in the same way. You must add a company logo picture using the same instructions above for adding normal logo pictures.
+
+### Updating the catalog
+
+Let's take a look at a catalog item:
+```
+{
+  code: 'NKDC1963',
+  name: 'Nike® Dri-FIT Polo Shirt',
+  fullname: 'Nike® Dri-FIT Polo',
+  colors: ['Anthracite', 'Game Royal', 'University Red', 'Black'],
+  type: 'mens',
+  default_color: 'Black',
+  sizes: {
+    Small: 36.99,
+    Medium: 36.99,
+    Large: 36.99,
+    XLarge: 36.99,
+    '2XLarge': 38.99,
+    '3XLarge': 39.99,
+    '4XLarge': 40.99,
+    'LT': 40.99,
+    'XLT': 42.99,
+    '2XLT': 43.99,
+    '3XLT': 44.99,
+    '4XLT': 45.99,
+  }
+},
+```
+
+signing into github and pulling the code
+
+going to aws console
+
+talk about name vs fullname
+
+talk about adding item pictures
+
+https://sanmar.com/
+
+fix yellow box not rendering around currently selected color in  modificiation screen
+
+make accessories not show for tameron and others that dont ahve them in cataliog
+
+adding new colored box, adding each of the colors of the items
 
 # Contributor
 

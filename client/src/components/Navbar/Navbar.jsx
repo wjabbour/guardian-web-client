@@ -1,5 +1,6 @@
 import styles from './Navbar.module.scss';
 import { useNavigate } from 'react-router-dom';
+import { COMPANY_LOGO } from '../../lib/constants';
 
 export default function Navbar(props) {
   const navigate = useNavigate();
@@ -16,7 +17,7 @@ export default function Navbar(props) {
         <img className={styles.logo} src={'/images/guardian.png'} onClick={() => navigate('/')}></img>
       </div>
       <div className={styles.stivers}>
-        <img className={styles.logo} src={'/images/stivers.png'} onClick={() => navigate('/')}></img>
+        <img className={styles.logo} src={`/images/${COMPANY_LOGO()}`} onClick={() => navigate('/')}></img>
       </div>
     </div>
   )

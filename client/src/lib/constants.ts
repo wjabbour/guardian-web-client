@@ -52,10 +52,8 @@ export const EMBROIDERIES = function () {
     }
   }  else if (url.includes('gptameron.com')) {
     return {
-      hat: ['Stivers', 'Quicklane', 'Ford', 'Hyundai', 'Chrysler', 'Dodge', 'Jeep', 'Ram'],
-      mens: ['Stivers', 'Quicklane', 'Subaru'],
-      womens: ['Stivers', 'Quicklane', 'Subaru'],
-      accessory: ['Ford', 'Hyundai', 'Chrysler', 'Dodge', 'Jeep', 'Ram', 'Subaru']
+      mens: ['Tameron'],
+      womens: ['Tameron'],
     }
   }
 }
@@ -67,7 +65,7 @@ export const LOGO_PLACEMENTS = function () {
   } else if (url.includes('gpstivers.com')) {
     return ['Right Sleeve', 'Left Chest'];
   } else if (url.includes('gptameron.com')) {
-    return ['Left Chest'];
+    return ['Right Sleeve'];
   }
 }
 
@@ -79,6 +77,17 @@ export const TITLE = function () {
     return 'Stivers';
   } else if (url.includes('gptameron.com')) {
     return 'Tameron';
+  }
+}
+
+export const COMPANY_LOGO = function () {
+  const url = window.location.href
+  if (url.includes('localhost:3000')) {
+    return 'stivers.png';
+  } else if (url.includes('gpstivers.com')) {
+    return 'stivers.png';
+  } else if (url.includes('gptameron.com')) {
+    return 'tameron.png';
   }
 }
 
