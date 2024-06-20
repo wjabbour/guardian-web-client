@@ -18,9 +18,9 @@ import Typography from '@mui/material/Typography';
 import { SvgIcon } from '@mui/material';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import { LoadingButton } from '@mui/lab';
+import { KNOWN_CODES } from '../../lib/constants';
 
 export default function Checkout() {
-  const KNOWN_CODES = ["STIFMO", "STIFBI", "STIHCO", "STICPR", "STISDE", "STICCO"]
   const paypalRef = useRef(null)
   const navigate = useNavigate()
   const [script_loaded, set_script_loaded] = useState(false)

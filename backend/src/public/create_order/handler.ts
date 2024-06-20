@@ -1,10 +1,10 @@
 import { APIGatewayProxyResult, APIGatewayEvent } from 'aws-lambda';
-import { logger, addCors, getStoreCode } from '../utils';
+import { logger, addCors, getStoreCode, getCatalogItemDescription, getCatalogItemPrice } from '../utils';
 import { Dynamo } from './dynamo';
 import axios from 'axios';
 import qs from 'qs'
 import { SecretsManagerClient, GetSecretValueCommand } from "@aws-sdk/client-secrets-manager";
-import { catalog } from '../catalog';
+import { Catalog } from '../catalog';
 
 const dynamo = new Dynamo();
 const sm = new SecretsManagerClient({ region: 'us-east-1' });
@@ -78,13 +78,14 @@ export const handler = async (event: APIGatewayEvent): Promise<APIGatewayProxyRe
       obj['color'] = cart_item['color']
       obj['embroidery'] = cart_item['embroidery']
       obj['placement'] = cart_item['placement']
-
+      obj['description'] = getCatalogItemDescription(cart_item['code'], event.headers?.origin)
+      obj['price'] = getCatalogItemPrice(cart_item['code'], cart_item['size'], event.headers?.origin)
       cart.push(obj)
     })
 
     logger.info({ message: 'Constructed cart', cart });
 
-    const price = calculate_price(cart);
+    const price = calculate_price(cart, event.headers?.origin);
     logger.info({ message: 'Calculated cart price', price });
 
     if (body.bypassPaypal) {
@@ -106,9 +107,6 @@ export const handler = async (event: APIGatewayEvent): Promise<APIGatewayProxyRe
         headers: addCors(event.headers?.origin)
       };
     }
-
-
-
   } catch (e) {
     logger.error(e)
     return {
@@ -119,12 +117,12 @@ export const handler = async (event: APIGatewayEvent): Promise<APIGatewayProxyRe
   }
 };
 
-function calculate_price(cart) {
+function calculate_price(cart, origin) {
   let price = 0;
 
   cart.forEach((item) => {
     logger.info({ message: 'Determining price for item', item })
-    const catalog_item = catalog.find((i) => item.code === i.code)
+    const catalog_item = Catalog(origin).find((i) => item.code === i.code)
     logger.info({ message: 'Retrieved catalog item', catalog_item })
     price += catalog_item.sizes[item.size] * item.quantity
     logger.info({ message: 'Updated price', price, quantity: item.quantity })

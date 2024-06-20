@@ -95,17 +95,17 @@ export const Catalog = function (): CatalogItem[] {
           '6XLarge': 29.99,
         }
       },
-      {
-        code: 'CP80',
-        name: 'Twill Cap',
-        fullname: 'Port & Company® Six-Panel Twill Cap',
-        colors: ['Black', 'True Red', 'Navy', 'Hunter', 'Royal', 'Charcoal', 'Woodland Brown'],
-        type: 'hat',
-        default_color: 'Black',
-        sizes: {
-          'One Size Fits All': 14.29
-        }
-      },
+      // {
+      //   code: 'CP80',
+      //   name: 'Twill Cap',
+      //   fullname: 'Port & Company® Six-Panel Twill Cap',
+      //   colors: ['Black', 'True Red', 'Navy', 'Hunter', 'Royal', 'Charcoal', 'Woodland Brown'],
+      //   type: 'hat',
+      //   default_color: 'Black',
+      //   sizes: {
+      //     'One Size Fits All': 14.29
+      //   }
+      // },
       {
         code: '04032',
         name: '20oz. Revolve Tumbler',
@@ -161,18 +161,18 @@ export const Catalog = function (): CatalogItem[] {
           'Default': 6.99
         }
       },
-      {
-        code: 'C112',
-        name: 'Snapback',
-        fullname: 'Port Authority® Snapback Trucker Cap',
-        colors: ['Black', 'Navy', 'Black White', 'Patriot Royal', 'Red White', 'Royal White', 'Grey Steel', 'Pink White', 'Woodland Camo', 'Khaki White'],
-        type: 'hat',
-        halfColors: ['Black White', 'Red White', 'Royal White', 'Pink White', 'Khaki White'],
-        default_color: 'Black',
-        sizes: {
-          'One Size Fits All': 14.29
-        }
-      },
+      // {
+      //   code: 'C112',
+      //   name: 'Snapback',
+      //   fullname: 'Port Authority® Snapback Trucker Cap',
+      //   colors: ['Black', 'Navy', 'Black White', 'Patriot Royal', 'Red White', 'Royal White', 'Grey Steel', 'Pink White', 'Woodland Camo', 'Khaki White'],
+      //   type: 'hat',
+      //   halfColors: ['Black White', 'Red White', 'Royal White', 'Pink White', 'Khaki White'],
+      //   default_color: 'Black',
+      //   sizes: {
+      //     'One Size Fits All': 14.29
+      //   }
+      // },
       {
         code: 'NKDC1963',
         name: 'Nike® Dri-FIT Polo Shirt',
@@ -370,17 +370,17 @@ export const Catalog = function (): CatalogItem[] {
           '6XLarge': 29.99,
         }
       },
-      {
-        code: 'CP80',
-        name: 'Twill Cap',
-        fullname: 'Port & Company® Six-Panel Twill Cap',
-        colors: ['Black', 'True Red', 'Navy', 'Hunter', 'Royal', 'Charcoal', 'Woodland Brown'],
-        type: 'hat',
-        default_color: 'Black',
-        sizes: {
-          'One Size Fits All': 14.29
-        }
-      },
+      // {
+      //   code: 'CP80',
+      //   name: 'Twill Cap',
+      //   fullname: 'Port & Company® Six-Panel Twill Cap',
+      //   colors: ['Black', 'True Red', 'Navy', 'Hunter', 'Royal', 'Charcoal', 'Woodland Brown'],
+      //   type: 'hat',
+      //   default_color: 'Black',
+      //   sizes: {
+      //     'One Size Fits All': 14.29
+      //   }
+      // },
       {
         code: '04032',
         name: '20oz. Revolve Tumbler',
@@ -436,18 +436,18 @@ export const Catalog = function (): CatalogItem[] {
           'Default': 6.99
         }
       },
-      {
-        code: 'C112',
-        name: 'Snapback',
-        fullname: 'Port Authority® Snapback Trucker Cap',
-        colors: ['Black', 'Navy', 'Black White', 'Patriot Royal', 'Red White', 'Royal White', 'Grey Steel', 'Pink White', 'Woodland Camo', 'Khaki White'],
-        type: 'hat',
-        halfColors: ['Black White', 'Red White', 'Royal White', 'Pink White', 'Khaki White'],
-        default_color: 'Black',
-        sizes: {
-          'One Size Fits All': 14.29
-        }
-      },
+      // {
+      //   code: 'C112',
+      //   name: 'Snapback',
+      //   fullname: 'Port Authority® Snapback Trucker Cap',
+      //   colors: ['Black', 'Navy', 'Black White', 'Patriot Royal', 'Red White', 'Royal White', 'Grey Steel', 'Pink White', 'Woodland Camo', 'Khaki White'],
+      //   type: 'hat',
+      //   halfColors: ['Black White', 'Red White', 'Royal White', 'Pink White', 'Khaki White'],
+      //   default_color: 'Black',
+      //   sizes: {
+      //     'One Size Fits All': 14.29
+      //   }
+      // },
       {
         code: 'NKDC1963',
         name: 'Nike® Dri-FIT Polo Shirt',

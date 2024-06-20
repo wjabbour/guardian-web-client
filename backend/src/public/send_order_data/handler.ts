@@ -1,7 +1,7 @@
 import { APIGatewayProxyResult } from 'aws-lambda';
 import { logger } from '../utils';
 import { Dynamo } from './dynamo';
-import { getStore, getCatalogItemDescription, getCatalogItemPrice } from "../utils";
+import { getStore } from "../utils";
 import dayjs from 'dayjs';
 import { SESClient, SendRawEmailCommand } from '@aws-sdk/client-ses';
 
@@ -28,10 +28,10 @@ export const handler = async (): Promise<APIGatewayProxyResult> => {
     await sendEmail(csv)
     logger.info({ message: 'Successfully sent CSV file to Guardian' });
 
-    await dynamo.archivePaidOrders()
+    // await dynamo.archivePaidOrders()
 
-    await dynamo.deleteOldUnpaidOrders();
-    logger.info('deleted old unpaid orders')
+    // await dynamo.deleteOldUnpaidOrders();
+    // logger.info('deleted old unpaid orders')
 
     return {
       statusCode: 200,
@@ -76,12 +76,12 @@ function createOrderCsv(orders) {
         last_name: order.last_name,
         item: item.code,
         quantity: item.quantity,
-        description: getCatalogItemDescription(item.code),
+        description: item.description,
         size: item.size,
         color: item.color,
         logo: item.embroidery,
         placement: item.placement,
-        price: getCatalogItemPrice(item.code, item.size),
+        price: item.price,
         usedStoreCode: order.bypass,
         transactionId: order.transaction_id || 'N/A'
       })

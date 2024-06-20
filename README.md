@@ -22,13 +22,21 @@ Check out [this StackOverflow post](https://stackoverflow.com/questions/1618280/
 ### git
 git is a version control system. You will use this to save changes that you make to the website configurations. Go [here](https://git-scm.com/download/win) to download the appropriate version of git for your operating system (be sure to choose correctly between 32-bit and 64-bit).
 
+### GitHub
+The code is deployed on GitHub. You must download and install git to interact with GitHub. Go to github.com and create an account or sign in. The code is available [here](https://github.com/wjabbour/stivers).
+
+First, in your shell, navigate to where you want this code to be stored on your file system. You will be going here whenever you want to run commands to deploy the site so make sure its convenient. Personally, I create a folder named `source` and put it directly under my user folder. So the path to the codebase ends up being `C/Users/wjabbour/source/stivers`.
+
+So in that case, I first navigate to the `source` directory.
+
+Type `git clone https://github.com/wjabbour/stivers.git`. Now `cd` into the `stivers` directory so that you're ready to run subsequent commands. Done!
+
 ### AWS CLI v2
 The AWS CLI is used to manage credentials that will be used by Terraform to interact with AWS. [This page](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html) has instructions for setting up AWS CLI v2.
 
 The AWS access key and secret key will need to be securely shared with you.
 
 With the cli installed, run the command `aws configure`. For "AWS Access Key ID" enter the AWS access key. For "AWS Secret Access Key" enter the secret key. For "Default region name" enter `us-east-1`. For "Default output format" enter `json`. Your local AWS profile has now been created.
-
 
 ### Ready To Go?
 Open up PowerShell and try checking the version number of the programs to ensure installation was performed successfully. If you get a message saying something like "could not recognize that command" then something is wrong.
@@ -160,7 +168,7 @@ then you need to update it like so:
 
 `your_domain` needs to be the value of your domain, e.g. `example.com`. The `cloudfront_distribution_id` needs to be the ID that you took note of earlier. You can always go back and view your distribution ID by going to CloudFront in AWS.
 
-## Configure the site
+## Configure the client
 Each site has a unique set of `stores`, `store codes` (a unique identifier for each store), `embroideries` (the available logos that a user can have their apparel embroidered with), `item catalog` (the available items that a user may add to their cart), and `logo placements` (the places on the apparel that the embroideries can be placed).
 
 First, take note of the domain name that this site will be deployed to. You will need this when updating the configuration file in `{project_root}/client/src/lib/constants.ts`.
@@ -226,6 +234,34 @@ export const STORES = function () {
     ]
   }
 }
+```
+
+### Updating store codes
+Add each store code to the `KNOWN_CODES` array.
+
+For example, if you have a store code of `ABC` and the array looks like this:
+```
+export const KNOWN_CODES = [
+  "STIFMO",
+  "STIFBI",
+  "STIHCO",
+  "STICPR",
+  "STISDE",
+  "STICCO"
+]
+```
+
+then you should update it like so:
+```
+export const KNOWN_CODES = [
+  "STIFMO",
+  "STIFBI",
+  "STIHCO",
+  "STICPR",
+  "STISDE",
+  "STICCO",
+  "ABC"
+]
 ```
 
 `EMBROIDERIES` is updated in the exact same way. Let's talk about what these values mean. Consider the following object returned from the `EMBROIDERIES` function:
@@ -315,11 +351,48 @@ For example, if you have item `A` which is available in colors `['Puke Green']` 
 
 `your_hex_code` always begins with the `#` character and ends with 6 alphanumeric characters. It is up to you to decide the hex code. VSCode has a nice hexcode picker. If that doesn't work for you, you can go online and find a hexcode->color converter and copy the hex code that most closely matches the color to the `modification.module.scss` file.
 
-signing into github and pulling the code
+## Configure the backend
 
-going to aws console
+### Updating stores and store codes
+We need to add the `stores` and `store codes` here. Open `{project_root}/backend/src/utils.ts`. Take a look at `STORES`. If you have a new site and it has one store `My Store, 123 Street State Zip` and the store code is `ABC` and `STORES` currently looks like this:
 
-make accessories not show for tameron and others that dont ahve them in cataliog
+```
+const STORES = {
+  'Stivers Ford Montgomery, 4000 Eastern Blvd Montgomery, AL, 36116': "STIFMO",
+  'Stivers Ford Montgomery, 500 Palisades Blvd, Birmingham, AL, 35209': "STIFBI"
+}
+```
+
+then you should update it to look like this
+
+```
+const STORES = {
+  'Stivers Ford Montgomery, 4000 Eastern Blvd Montgomery, AL, 36116': "STIFMO",
+  'Stivers Ford Montgomery, 500 Palisades Blvd, Birmingham, AL, 35209': "STIFBI",
+  'My Store, 123 Street State Zip': "ABC"
+}
+```
+
+### Updating the catalog
+Copy the entire catalog file from the client and paste it to the catalog file in the backend.
+
+Client: `{project_root}/client/src/lib/catalog.ts`
+Backend: `{project_root}/backend/src/catalog.ts`
+
+### Updating CORS
+In `{project_root}/backend/src/utils.ts` there is an array named `ALLOWED_ORIGINS`. add the full URL of the new site to this array. e.g. `https://{your_url}`
+
+## Deploying the site
+
+With everything complete, we are ready to deploy. Deployment is the process of taking all of your local changes and pushing them to the cloud to update what the end users will interact with. We must deploy the client code (which will update the website in the users browser) and the backend code (which receives requests from the client and performs actions).
+
+From the project root, `cd` into the client directory and run `npm run deploy`. This will take a few minutes.
+
+Move back to the project root and `cd` into the backend directory and run `npm run deploy`. This will take a few minutes.
+
+Done!
+
+Be sure to save your changes in git using the instructions above.
 
 # Contributor
 
@@ -329,10 +402,9 @@ doubleujabbour@gmail.com <br>
 
 # Cloud Environment
 
-Lambda, Dynamo, S3 and CloudFront are deployed in AWS account 732682028282.
-Terraform state S3 is deployed in AWS account 671072365384.
+Lambda, Dynamo, S3, CloudFront, and Terraform state are deployed in AWS account 732682028282.
 
-S3 and CloudFront were deployed manually. Lambda and Dynamo are provisioned via Terraform.
+S3 and CloudFront were deployed manually. Lambda, API Gateway, Dynamo are provisioned via Terraform.
 
 # Paypal
 

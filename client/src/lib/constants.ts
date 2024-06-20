@@ -33,6 +33,24 @@ export const STORES = function () {
   }
 }
 
+export const KNOWN_CODES = [
+  "STIFMO",
+  "STIFBI",
+  "STIHCO",
+  "STICPR",
+  "STISDE",
+  "STICCO",
+  "TAMHDA",
+  "TAMBDA",
+  "TAMCDA",
+  "TAMSMO",
+  "TAMNMO",
+  "TAMKDI",
+  "TAMKWE",
+  "TAMHBI",
+  "TAMEHO"
+]
+
 export const EMBROIDERIES = function () {
   const url = window.location.href
 

@@ -1,9 +1,9 @@
 import pino from 'pino';
-import { catalog } from './catalog';
+import { Catalog } from './catalog';
 
 export const logger = pino();
 
-const ALLOWED_ORIGINS = ['http://localhost:3000', 'https://gpstivers.com']
+const ALLOWED_ORIGINS = ['http://localhost:3000', 'https://gpstivers.com', 'https://gptameron.com']
 
 
 export function addCors(origin, map?) {
@@ -21,33 +21,44 @@ export function addCors(origin, map?) {
   return headers
 }
 
-const STORE_NAMES = [
-  'Stivers Ford Montgomery, 4000 Eastern Blvd Montgomery, AL, 36116',  
-  'Stivers Ford Montgomery, 500 Palisades Blvd, Birmingham, AL, 35209', 
-  'Stivers Hyundai, 9950 Farrow Rd, Columbia, SC, 29203', 
-  'Stivers CDJR, 2209 Cobbs Ford Road, Prattville, AL 36066', 
-  'Stivers Decatur Subaru, 1950 Orion DR, Decatur, GA 30033', 
-  'Stivers Chevrolet, 111 Newland Road, Columbia, SC 29229', 
-]
-
-const STORE_CODES = ["STIFMO", "STIFBI", "STIHCO", "STICPR", "STISDE", "STICCO"]
+const STORES = {
+  'Stivers Ford Montgomery, 4000 Eastern Blvd Montgomery, AL, 36116': "STIFMO",
+  'Stivers Ford Montgomery, 500 Palisades Blvd, Birmingham, AL, 35209': "STIFBI",
+  'Stivers Hyundai, 9950 Farrow Rd, Columbia, SC, 29203': "STIHCO",
+  'Stivers CDJR, 2209 Cobbs Ford Road, Prattville, AL 36066': "STICPR",
+  'Stivers Decatur Subaru, 1950 Orion DR, Decatur, GA 30033': "STISDE",
+  'Stivers Chevrolet, 111 Newland Road, Columbia, SC 29229': "STICCO",
+  'Tameron Honda, 9871 Justina Ave Daphne, AL 36526': "TAMHDA",
+  'Tameron Buick GMC, 27161 US - 98 Daphne, AL 36526': "TAMBDA",
+  'Tameron CDJR, 27161 US - 98 Daphne, AL 36526': "TAMCDA",
+  'Tameron Subaru, 1431 I-65 Service Road Mobile, AL 36606': "TAMSMO",
+  'Tameron Nissan, 1015 E. I65 Service Road South Mobile, AL 36606': "TAMNMO",
+  'Tameron Kia, 10611 Boney Ave D\'Iberville, MS 39540': "TAMKDI",
+  'Tameron Kia Westbank, 1884 Westbank Expressway Harvey, LA 70058': "TAMKWE",
+  'Tameron Honda, 1675 Montgomery Blvd Birmingham, AL 35216': "TAMHBI",
+  'Tameron Hyundai, 1595 Montgomery Hwy Hoover, AL 35216': "TAMEHO"
+}
 
 export function getStoreCode(store) {
-  const idx = STORE_NAMES.indexOf(store);
-  return STORE_CODES[idx]
+  return STORES[store]
 }
 
 export function getStore(store_code) {
-  const idx = STORE_CODES.indexOf(store_code);
-  return STORE_NAMES[idx]
+  const keys = Object.keys(STORES)
+
+  for (let i = 0; i < keys.length; i++) {
+    if (STORES[keys[i]] === store_code) {
+      return keys[i]
+    }
+  }
 }
 
-export function getCatalogItemPrice (item_code, size) {
-  const item = catalog.find((i) => { return i.code === item_code })
+export function getCatalogItemPrice(item_code, size, origin) {
+  const item = Catalog(origin).find((i) => { return i.code === item_code })
   return item.sizes[size]
 }
 
-export function getCatalogItemDescription (item_code) {
-  const item = catalog.find((i) => { return i.code === item_code })
+export function getCatalogItemDescription(item_code, origin) {
+  const item = Catalog(origin).find((i) => { return i.code === item_code })
   return item.fullname
 }
