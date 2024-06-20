@@ -319,8 +319,6 @@ signing into github and pulling the code
 
 going to aws console
 
-fix yellow box not rendering around currently selected color in  modificiation screen
-
 make accessories not show for tameron and others that dont ahve them in cataliog
 
 # Contributor

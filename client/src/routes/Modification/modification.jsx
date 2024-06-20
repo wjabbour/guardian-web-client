@@ -21,7 +21,6 @@ export async function loader({ params }) {
 export default function Modification() {
   const item = useLoaderData();
   const navigate = useNavigate();
-  const location = useLocation()
 
   const [cart, set_cart] = useOutletContext();
   const [selected_color, set_selected_color] = useState(item.default_color);
@@ -109,9 +108,8 @@ export default function Modification() {
         <div
           className={`${styles.color__block} ${styles[color.split(' ').join('_')]} ${selected_color === color ? styles.selected : ''}`}
           onClick={() => {
-            const selectedColor = color.split(' ').join('_')
-            set_selected_color(selectedColor)
-            set_image_source(`/images/${item.code}_${selectedColor.toLowerCase()}.jpg`)
+            set_selected_color(color)
+            set_image_source(`/images/${item.code}_${color.split(' ').join('_').toLowerCase()}.jpg`)
           }}>
         </div>
         <div className={styles.color__name}>
