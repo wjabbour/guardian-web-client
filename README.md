@@ -281,21 +281,47 @@ Let's take a look at a catalog item:
 },
 ```
 
+`code` corresponds to the item code, like `NKDC1991`.
+`name` is a shortended name for the item that is displayed on the catalog pages. Some item names are so long that they exceed the box width on the catalog pages.
+`fullname` is the name of the item that will appear both on the modification page and in the order file that is generated weekly.
+`colors` are the available colors that this item comes in.
+`type` is either `mens`, `womens`, `accessory`, or `hat`. The value here will determine which catalog the item is present in.
+`default_color` is the color which should be selected and previewed by default on the modification page.
+`sizes` is a mapping of sizes to prices.
+
+### Adding new items
+If this item has never appeared on any of the sites before then you will need to add its pictures. You will need one picture of the item in each color that it is available and you will need one picture of the item in its default color.
+
+Follow the instructions for adding logo pictures to add item pictures.
+
+For example, if you have item `A` that is available in colors `['Blue', 'Black', 'Green']` then the following files should be in the `images` folder.
+```
+A_blue.jpg
+A_black.jpg
+A_green.jpg
+A.jpg
+```
+
+### Adding new colors
+If this is the first time you are using a specific color for an item, that item color will need to be added to `{project_root}/client/src/routes/Modification/modification.module.scss`. Without this, the color box on the modification page will be white.
+
+For example, if you have item `A` which is available in colors `['Puke Green']` then you will need the following lines in `modification.module.scss`
+
+```
+.Puke_Green {
+  background-color: {your_hex_code};
+}
+```
+
+`your_hex_code` always begins with the `#` character and ends with 6 alphanumeric characters. It is up to you to decide the hex code. VSCode has a nice hexcode picker. If that doesn't work for you, you can go online and find a hexcode->color converter and copy the hex code that most closely matches the color to the `modification.module.scss` file.
+
 signing into github and pulling the code
 
 going to aws console
 
-talk about name vs fullname
-
-talk about adding item pictures
-
-https://sanmar.com/
-
 fix yellow box not rendering around currently selected color in  modificiation screen
 
 make accessories not show for tameron and others that dont ahve them in cataliog
-
-adding new colored box, adding each of the colors of the items
 
 # Contributor
 
