@@ -1,16 +1,18 @@
 import { APIGatewayProxyResult } from 'aws-lambda';
 import { addCors, logger } from '../utils';
 import { Dynamo } from './dynamo';
+import { COMPANIES } from "../utils";
 
 const dynamo = new Dynamo();
 
 export const handler = async (event): Promise<APIGatewayProxyResult> => {
 
   try {
-    const currentOrders = await dynamo.getCurrentOrders();
+    const company_name = COMPANIES[event.headers?.origin]
+    const currentOrders = await dynamo.getCurrentOrders(company_name);
     logger.info({ message: 'Retrieved current orders', currentOrders });
 
-    const archivedOrders = await dynamo.getArchivedOrders();
+    const archivedOrders = await dynamo.getArchivedOrders(company_name);
     logger.info({ message: 'Retrieved archived orders', archivedOrders });
 
     return {

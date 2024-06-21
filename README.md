@@ -382,6 +382,28 @@ Backend: `{project_root}/backend/src/catalog.ts`
 ### Updating CORS
 In `{project_root}/backend/src/utils.ts` there is an array named `ALLOWED_ORIGINS`. add the full URL of the new site to this array. e.g. `https://{your_url}`
 
+### Updating COMPANIES
+In `{project_root}/backend/src/utils.ts` there is an object named `COMPANIES`. This controls which orders are returned when users are attempting to view historical order information on the website.
+
+If the object looks like the following:
+```
+export const COMPANIES: { [index: string]: string } = {
+  'localhost:3000': 'Stivers',
+  'https://gpstivers.com': 'Stivers',
+  'https://gptameron.com': 'Tameron'
+}
+```
+
+and you add a new site `example.com` then you need to update it to look like this:
+```
+export const COMPANIES: { [index: string]: string } = {
+  'localhost:3000': 'Stivers',
+  'https://gpstivers.com': 'Stivers',
+  'https://gptameron.com': 'Tameron',
+  'https://example.com': 'Example'
+}
+```
+
 ## Deploying the site
 
 With everything complete, we are ready to deploy. Deployment is the process of taking all of your local changes and pushing them to the cloud to update what the end users will interact with. We must deploy the client code (which will update the website in the users browser) and the backend code (which receives requests from the client and performs actions).

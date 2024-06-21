@@ -21,6 +21,12 @@ export function addCors(origin, map?) {
   return headers
 }
 
+export const COMPANIES: { [index: string]: string } = {
+  'localhost:3000': 'Stivers',
+  'https://gpstivers.com': 'Stivers',
+  'https://gptameron.com': 'Tameron'
+}
+
 const STORES = {
   'Stivers Ford Montgomery, 4000 Eastern Blvd Montgomery, AL, 36116': "STIFMO",
   'Stivers Ford Montgomery, 500 Palisades Blvd, Birmingham, AL, 35209': "STIFBI",

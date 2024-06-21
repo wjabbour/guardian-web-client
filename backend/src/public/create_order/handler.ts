@@ -5,24 +5,13 @@ import axios from 'axios';
 import qs from 'qs'
 import { SecretsManagerClient, GetSecretValueCommand } from "@aws-sdk/client-secrets-manager";
 import { Catalog } from '../catalog';
+import { COMPANIES } from '../utils';
 
 const dynamo = new Dynamo();
 const sm = new SecretsManagerClient({ region: 'us-east-1' });
 const command = new GetSecretValueCommand({
   SecretId: 'stivers-website'
 })
-
-// once an order has been processed and sent to Guardian, we move it to the archived_orders table
-interface Order {
-  paid: number; // this is set to 1 once the user pays via Paypal
-  code: string;
-  quantity: number;
-  first_name: string;
-  last_name: string;
-  store: string;
-  email: string;
-  order_id: string; // this is the id from Paypal. We need this during capture to find the order to set paid=true
-}
 
 export const handler = async (event: APIGatewayEvent): Promise<APIGatewayProxyResult> => {
   try {
@@ -88,9 +77,12 @@ export const handler = async (event: APIGatewayEvent): Promise<APIGatewayProxyRe
     const price = calculate_price(cart, event.headers?.origin);
     logger.info({ message: 'Calculated cart price', price });
 
+    const company_name = COMPANIES[event.headers?.origin]
+    logger.info({ message: 'Determined company name', company_name });
+
     if (body.bypassPaypal) {
       logger.info({ message: 'Bypassing PayPal' })
-      await dynamo.createBypassOrder(body.email, cart, body.first_name, body.last_name, store_code)
+      await dynamo.createBypassOrder(body.email, cart, body.first_name, body.last_name, store_code, company_name)
       return {
         statusCode: 200,
         headers: addCors(event.headers?.origin)
@@ -99,7 +91,7 @@ export const handler = async (event: APIGatewayEvent): Promise<APIGatewayProxyRe
       const order_id = await create_paypal_order(access_token, price);
       logger.info({ message: 'Received order id', order_id })
 
-      await dynamo.createOrder(body.email, cart, body.first_name, body.last_name, store_code, order_id)
+      await dynamo.createOrder(body.email, cart, body.first_name, body.last_name, store_code, company_name, order_id)
 
       return {
         statusCode: 200,

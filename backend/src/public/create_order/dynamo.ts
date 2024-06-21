@@ -9,7 +9,7 @@ export class Dynamo {
     this.client = new DynamoDBClient({ region: "us-east-1" });
   }
 
-  async createOrder(email: string, cart, first_name: string, last_name: string, store: string, order_id: string) {
+  async createOrder(email: string, cart, first_name: string, last_name: string, store: string, company_name: string, order_id: string) {
     const massaged_cart = cart.map((m) => {
       return { "M": marshall(m) }
     })
@@ -27,6 +27,9 @@ export class Dynamo {
         },
         store: {
           "S": store
+        },
+        company_name: {
+          "S": company_name
         },
         bypass: {
           "N": "0"
@@ -51,7 +54,7 @@ export class Dynamo {
     await this.client.send(command);
   }
 
-  async createBypassOrder(email: string, cart, first_name: string, last_name: string, store: string) {
+  async createBypassOrder(email: string, cart, first_name: string, last_name: string, store: string, company_name: string) {
     const massaged_cart = cart.map((m) => {
       return { "M": marshall(m) }
     })
@@ -69,6 +72,9 @@ export class Dynamo {
         },
         store: {
           "S": store
+        },
+        company_name: {
+          "S": company_name
         },
         created_at: {
           "S": `${Date.now()}`

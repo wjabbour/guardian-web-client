@@ -9,9 +9,13 @@ export class Dynamo {
     this.client = new DynamoDBClient({ region: "us-east-1" });
   }
 
-  async getCurrentOrders() {
+  async getCurrentOrders(company_name: string) {
     const command = new ScanCommand({
       "TableName": "orders",
+      FilterExpression: 'company_name = :company_name',
+      ExpressionAttributeValues: {
+        ":company_name": { 'S': company_name }
+      }
     })
 
     const response = await this.client.send(command);
@@ -23,9 +27,13 @@ export class Dynamo {
     }
   }
 
-  async getArchivedOrders() {
+  async getArchivedOrders(company_name: string) {
     const command = new ScanCommand({
       "TableName": "archived_orders",
+      FilterExpression: 'company_name = :company_name',
+      ExpressionAttributeValues: {
+        ":company_name": { 'S': company_name }
+      }
     })
 
     const response = await this.client.send(command);
