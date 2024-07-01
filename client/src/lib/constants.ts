@@ -25,10 +25,19 @@ export const STORES = function () {
       'Tameron CDJR, 27161 US - 98 Daphne, AL 36526',
       'Tameron Subaru, 1431 I-65 Service Road Mobile, AL 36606',
       'Tameron Nissan, 1015 E. I65 Service Road South Mobile, AL 36606',
-      'Tameron Kia, 10611 Boney Ave D\'Iberville, MS 39540',
+      'Tameron Kia, 10611 Boney Ave D, Iberville, MS 39540',
       'Tameron Kia Westbank, 1884 Westbank Expressway Harvey, LA 70058',
       'Tameron Honda, 1675 Montgomery Blvd Birmingham, AL 35216',
       'Tameron Hyundai, 1595 Montgomery Hwy Hoover, AL 35216'
+    ]
+  } else if (url.includes('gp-premier.com')) {
+    return [
+      'Premier Honda, 11801 E I-10 Service Rd, New Orleans, LA 70128',
+      'Toyota of New Orleans, 13150 I-10 Service Rd, New Orleans, LA 70128',
+      'Premier Hyundai of Harvey, 1700 Westbank Expressway, Harvey, LA 70058',
+      'Premier Nissan of Harvey, 4000 LaPalco Boulevard, Harvey, LA 70058',
+      'Premier VW of Harvey, 4050 LaPalco Boulevard, Harvey, LA 70058',
+      'Premier CDJR of Harvey, 1660 Westbrook Expressway, Harvey, LA 70058',
     ]
   }
 }
@@ -48,7 +57,13 @@ export const KNOWN_CODES = [
   "TAMKDI",
   "TAMKWE",
   "TAMHBI",
-  "TAMEHO"
+  "TAMEHO",
+  "PREHNE",
+  "TOYNNE",
+  "PREHHA",
+  "PRENHA",
+  "PREVHA",
+  "PRECHB"
 ]
 
 export const EMBROIDERIES = function () {
@@ -95,6 +110,8 @@ export const TITLE = function () {
     return 'Stivers';
   } else if (url.includes('gptameron.com')) {
     return 'Tameron';
+  } else if (url.includes('gp-premier.com')) {
+    return 'Premier';
   }
 }
 
@@ -106,6 +123,7 @@ export const COMPANY_LOGO = function () {
     return 'stivers.png';
   } else if (url.includes('gptameron.com')) {
     return 'tameron.png';
+  } else if (url.includes('gp-premier.com')) {
+    return 'premier.png';
   }
 }
-

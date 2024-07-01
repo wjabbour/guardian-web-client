@@ -3,7 +3,7 @@ import { Catalog } from './catalog';
 
 export const logger = pino();
 
-const ALLOWED_ORIGINS = ['http://localhost:3000', 'https://gpstivers.com', 'https://gptameron.com']
+const ALLOWED_ORIGINS = ['http://localhost:3000', 'https://gpstivers.com', 'https://gptameron.com', 'https://gp-premier.com']
 
 
 export function addCors(origin, map?) {
@@ -24,7 +24,8 @@ export function addCors(origin, map?) {
 export const COMPANIES: { [index: string]: string } = {
   'localhost:3000': 'Stivers',
   'https://gpstivers.com': 'Stivers',
-  'https://gptameron.com': 'Tameron'
+  'https://gptameron.com': 'Tameron',
+  'https://gp-premier.com': 'Premier'
 }
 
 const STORES = {
@@ -42,7 +43,13 @@ const STORES = {
   'Tameron Kia, 10611 Boney Ave D\'Iberville, MS 39540': "TAMKDI",
   'Tameron Kia Westbank, 1884 Westbank Expressway Harvey, LA 70058': "TAMKWE",
   'Tameron Honda, 1675 Montgomery Blvd Birmingham, AL 35216': "TAMHBI",
-  'Tameron Hyundai, 1595 Montgomery Hwy Hoover, AL 35216': "TAMEHO"
+  'Tameron Hyundai, 1595 Montgomery Hwy Hoover, AL 35216': "TAMEHO",
+  'Premier Honda, 11801 E I-10 Service Rd, New Orleans, LA 70128': "PREHNE",
+  'Toyota of New Orleans, 13150 I-10 Service Rd, New Orleans, LA 70128': "TOYNNE",
+  'Premier Hyundai of Harvey, 1700 Westbank Expressway, Harvey, LA 70058': "PREHHA",
+  'Premier Nissan of Harvey, 4000 LaPalco Boulevard, Harvey, LA 70058': "PRENHA",
+  'Premier VW of Harvey, 4050 LaPalco Boulevard, Harvey, LA 70058': "PREVHA",
+  'Premier CDJR of Harvey, 1660 Westbrook Expressway, Harvey, LA 70058': "PRECHB"
 }
 
 export function getStoreCode(store) {

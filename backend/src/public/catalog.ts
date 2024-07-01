@@ -533,7 +533,6 @@ export const Catalog = function (origin): CatalogItem[] {
           '4XLarge': 38.99,
         }
       },
-
       {
         code: 'L805',
         name: 'Port Authority® 1/4-Zip Pullover',
@@ -698,5 +697,60 @@ export const Catalog = function (origin): CatalogItem[] {
         }
       },
     ]
-  }
+  }  else if (url.includes('gp-premier.com')) {
+    return [
+      {
+        code: 'ST650',
+        name: 'Sport-Tek® Polo Shirt',
+        fullname: 'Sport-Tek® Sport-Wick Polo',
+        colors: ['Black', 'Iron Grey', 'White'],
+        type: 'mens',
+        default_color: 'Black',
+        sizes: {
+            Small: 22.99,
+            Medium: 22.99,
+            Large: 22.99,
+            XLarge: 22.99,
+            '2XLarge': 24.98,
+            '3XLarge': 28.98,
+            '4XLarge': 30.98,
+            '5XLarge': 34.98,
+            '6XLarge': 36.98,
+          }
+        },
+        {         
+            code: 'LST650',
+            name: 'Sport-Tek® Polo Shirt',
+            fullname: 'Sport-Tek® Sport-Wick Polo',
+            colors: ['Black', 'Iron Grey', 'White'],
+            type: 'womens',
+            default_color: 'Black',
+            sizes: {
+              Small: 22.99,
+              Medium: 22.99,
+              Large: 22.99,
+              XLarge: 22.99,
+              '2XLarge': 24.98,
+              '3XLarge': 28.98,
+              '4XLarge': 30.98,
+            }
+        },
+        {         
+            code: 'TST650',
+            name: 'Sport-Tek® Tall Polo Shirt',
+            fullname: 'Sport-Tek® Tall Sport-Wick Polo',
+            colors: ['Black', 'Iron Grey', 'White'],
+            type: 'mens',
+            default_color: 'Black',
+            sizes: {
+              LT: 24.98,
+              XLT: 26.98,
+              '2XLT': 28.98,
+              '3XLT': 30.98,
+              '4XLT': 32.98,
+            }
+        },
+    ]
+   }
 }
+
