@@ -83,7 +83,12 @@ export const EMBROIDERIES = function () {
       womens: ['Stivers', 'Quicklane', 'Subaru'],
       accessory: ['Ford', 'Hyundai', 'Chrysler', 'Dodge', 'Jeep', 'Ram', 'Subaru']
     }
-  }  else if (url.includes('gptameron.com')) {
+  } else if (url.includes('gptameron.com')) {
+    return {
+      mens: ['Tameron'],
+      womens: ['Tameron'],
+    }
+  } else if (url.includes('gp-premier.com')) {
     return {
       mens: ['Tameron'],
       womens: ['Tameron'],
