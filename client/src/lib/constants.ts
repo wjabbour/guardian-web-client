@@ -111,6 +111,7 @@ export const LOGO_PLACEMENTS = function () {
     return ['Right Sleeve'];
   } else if (url.includes('gp-premier.com')) {
     return ['Left Chest'];
+ }
 }
 
 export const TITLE = function () {
