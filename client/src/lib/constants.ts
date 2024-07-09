@@ -90,11 +90,6 @@ export const EMBROIDERIES = function () {
     }
   } else if (url.includes('gp-premier.com')) {
     return {
-      mens: ['Tameron'],
-      womens: ['Tameron'],
-    }
- }  else if (url.includes('gp-premier.com')) {
-    return {
       mens: ['Premier'],
       womens: ['Premier'],
     }
