@@ -88,6 +88,11 @@ export const EMBROIDERIES = function () {
       mens: ['Tameron'],
       womens: ['Tameron'],
     }
+ }  else if (url.includes('gp-premier.com')) {
+    return {
+      mens: ['Premier'],
+      womens: ['Premier'],
+    }
   }
 }
 
@@ -99,7 +104,8 @@ export const LOGO_PLACEMENTS = function () {
     return ['Right Sleeve', 'Left Chest'];
   } else if (url.includes('gptameron.com')) {
     return ['Right Sleeve'];
-  }
+  } else if (url.includes('gp-premier.com')) {
+    return ['Left Chest'];
 }
 
 export const TITLE = function () {

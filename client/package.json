@@ -19,7 +19,7 @@
     "react-scripts": "^5.0.1",
     "sass": "^1.66.1",
     "sass-loader": "^13.3.2",
-    "typescript": "4.9.5",
+    "typescript": "3.9.4",
     "uuidv4": "^6.2.13",
     "web-vitals": "^2.1.4"
   },
@@ -27,7 +27,7 @@
     "deploy": "npm run deploy-stivers && npm run deploy-tameron && npm run deploy-premier",
     "deploy-tameron": "npm run build && aws s3 cp build s3://gptameron.com/ --recursive && aws cloudfront create-invalidation --distribution-id E1YPW3JQQ2QQ81 --paths \"/*\"",
     "deploy-stivers": "npm run build && aws s3 cp build s3://gpstivers.com/ --recursive && aws cloudfront create-invalidation --distribution-id EEZ12WJWK62SX --paths \"/*\"",
-    "deploy-premier": "npm run build && aws s3 cp build s3://gp-premier.com/ --recursive && aws cloudfront create-invalidation --distribution-id EHOX2CBVSN2AB--paths \"/*\"",
+    "deploy-premier": "npm run build && aws s3 cp build s3://gp-premier.com/ --recursive && aws cloudfront create-invalidation --distribution-id EHOX2CBVSN2AB --paths \"/*\"",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
