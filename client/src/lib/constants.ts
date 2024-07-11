@@ -90,8 +90,8 @@ export const EMBROIDERIES = function () {
     }
   } else if (url.includes('gp-premier.com')) {
     return {
-      mens: ['Premier'],
-      womens: ['Premier'],
+      mens: ['Premier', 'Premhonda', 'Premnsharvey', 'Premvwharvey', 'Premhyundai'],
+      womens: ['Premier', 'Premhonda', 'Premnsharvey', 'Premvwharvey', 'Premhyundai'],
     }
   }
 }
