@@ -131,6 +131,6 @@ export const COMPANY_LOGO = function () {
   } else if (url.includes('gptameron.com')) {
     return 'tameron.png';
   } else if (url.includes('gp-premier.com')) {
-    return 'premier.png';
+    return ['premier.png', 'stivers.png'];
   }
 }
