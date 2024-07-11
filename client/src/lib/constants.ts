@@ -92,7 +92,6 @@ export const EMBROIDERIES = function () {
     return {
       mens: ['Premier', 'Premhonda', 'PPremnsharvey', 'Premvwharvey', 'Premhyundai', 'Toyotano'],
       womens: ['Premier', 'Premhonda', 'PPremnsharvey', 'Premvwharvey', 'Premhyundai', 'Toyotano']
-    }
   }
 }
 
