@@ -90,8 +90,9 @@ export const EMBROIDERIES = function () {
     }
   } else if (url.includes('gp-premier.com')) {
     return {
-      mens: ['Premier', 'Premhonda', 'Premnsharvey', 'Premvwharvey', 'Premhyundai'],
-      womens: ['Premier', 'Premhonda', 'Premnsharvey', 'Premvwharvey', 'Premhyundai'],
+      mens: ['Premier', 'Premier Honda', 'Premier Nissan Harvey', 'Premier VW Harvey', 'Premier Hyundai', 'Toyota New Orleans'],
+      womens: ['Premier', 'Premier Honda', 'Premier Nissan Harvey', 'Premier VW Harvey', 'Premier Hyundai', 'Toyota New Orleans'],
+      accessory: ['Premier', 'Premier Honda', 'Premier Nissan Harvey', 'Premier VW Harvey', 'Premier Hyundai', 'Toyota New Orleans']
     }
   }
 }
