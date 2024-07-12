@@ -92,12 +92,11 @@ export const EMBROIDERIES = function () {
     return {
       mens: ['Premier', 'Premhonda','Premnsharvey', 'Premvwharvey', 'Premhyundai', 'Toyotano'],
       womens: ['Premier', 'Premhonda','Premnsharvey', 'Premvwharvey', 'Premhyundai', 'Toyotano'],
+    }
   }
-}
 
 export const LOGO_PLACEMENTS = function () {
   const url = window.location.href
-
   if (url.includes('localhost:3000')) {
     return ['Right Sleeve', 'Left Chest'];
   } else if (url.includes('gpstivers.com')) {
@@ -106,7 +105,7 @@ export const LOGO_PLACEMENTS = function () {
     return ['Right Sleeve'];
   } else if (url.includes('gp-premier.com')) {
     return ['Left Chest'];
- }
+  }
 }
 
 export const TITLE = function () {
