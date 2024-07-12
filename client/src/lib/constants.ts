@@ -97,6 +97,7 @@ export const EMBROIDERIES = function () {
 
 export const LOGO_PLACEMENTS = function () {
   const url = window.location.href
+
   if (url.includes('localhost:3000')) {
     return ['Right Sleeve', 'Left Chest'];
   } else if (url.includes('gpstivers.com')) {
