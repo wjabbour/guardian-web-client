@@ -254,8 +254,8 @@ export const Catalog = function (origin): CatalogItem[] {
           Large: 26.99,
           XLarge: 26.99,
           '2XLarge': 28.99,
-          '3XLarge': 28.99,
-          '4XLarge': 28.99,
+          '3XLarge': 29.99,
+          '4XLarge': 31.99,
         }
       },
       {
@@ -780,8 +780,8 @@ export const Catalog = function (origin): CatalogItem[] {
             Large: 26.99,
             XLarge: 26.99,
             '2XLarge': 28.99,
-            '3XLarge': 28.99,
-            '4XLarge': 28.99,
+            '3XLarge': 29.99,
+            '4XLarge': 31.99,
           }
         },
         {

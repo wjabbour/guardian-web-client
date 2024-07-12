@@ -63,7 +63,8 @@ export const KNOWN_CODES = [
   "PREHHA",
   "PRENHA",
   "PREVHA",
-  "PRECHB"
+  "PRECHB",
+  "PRENME"
 ]
 
 export const EMBROIDERIES = function () {
@@ -90,8 +91,8 @@ export const EMBROIDERIES = function () {
     }
   } else if (url.includes('gp-premier.com')) {
     return {
-      mens: ['Premier', 'Premhonda','Premnsharvey', 'Premvwharvey', 'Premhyundai', 'Toyotano'],
-      womens: ['Premier', 'Premhonda','Premnsharvey', 'Premvwharvey', 'Premhyundai', 'Toyotano'],
+      mens: ['Premier', 'Premhonda','Premnsharvey', 'Premvwharvey', 'Premhyundai', 'Toyotano', 'Premnissan'],
+      womens: ['Premier', 'Premhonda','Premnsharvey', 'Premvwharvey', 'Premhyundai', 'Toyotano', 'Premnissan'],
     }
   }
 }

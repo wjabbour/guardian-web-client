@@ -49,7 +49,8 @@ const STORES = {
   'Premier Hyundai of Harvey, 1700 Westbank Expressway, Harvey, LA 70058': "PREHHA",
   'Premier Nissan of Harvey, 4000 LaPalco Boulevard, Harvey, LA 70058': "PRENHA",
   'Premier VW of Harvey, 4050 LaPalco Boulevard, Harvey, LA 70058': "PREVHA",
-  'Premier CDJR of Harvey, 1660 Westbrook Expressway, Harvey, LA 70058': "PRECHB"
+  'Premier CDJR of Harvey, 1660 Westbrook Expressway, Harvey, LA 70058': "PRECHB",
+  'Premier Nissan, 6636 Veterans Blvd, Metarie, LA 70003': "PRENME"
 }
 
 export function getStoreCode(store) {
