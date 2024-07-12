@@ -736,7 +736,109 @@ export const Catalog = function (origin): CatalogItem[] {
             }
         },
         {         
-            code: 'TST650',
+          code: 'NKDC1963',
+          name: 'Nike® Dri-FIT Polo Shirt',
+          fullname: 'Nike® Dri-FIT Polo',
+          colors: ['Anthracite','Black', 'University Red', 'White'],
+          type: 'mens',
+          default_color: 'Black',
+          sizes: {
+            Small: 36.99,
+            Medium: 36.99,
+            Large: 36.99,
+            XLarge: 36.99,
+            '2XLarge': 38.99,
+            '3XLarge': 39.99,
+            '4XLarge': 40.99,
+          }
+        },
+        {   
+          code: 'L317',
+          name: 'Port Authority® Jacket',
+          fullname: 'Port Authority® Ladies Core Soft Shell Jacket',
+          colors: ['Black'],
+          type: 'womens',
+          default_color: 'Black',
+          sizes: {
+            Small: 37.99,
+            Medium: 37.99,
+            Large: 37.99,
+            XLarge: 37.99,
+            '2XLarge': 38.99,
+            '3XLarge': 39.99,
+            '4XLarge': 40.99,
+          }
+        },
+        {
+          code: 'J317',
+          name: 'Port Authority® Jacket',
+          fullname: 'Port Authority® Core Soft Shell Jacket',
+          colors: ['Black'],
+          type: 'mens',
+          default_color: 'Black',
+          sizes: {
+            Small: 37.99,
+            Medium: 37.99,
+            Large: 37.99,
+            XLarge: 37.99,
+            '2XLarge': 38.99,
+            '3XLarge': 39.99,
+            '4XLarge': 40.99,
+            '5XLarge': 41.99,
+            '6XLarge': 42.99
+          }
+        },
+        {
+          code: 'NKDC1991',
+          name: 'Ladies Nike® Polo',
+          fullname: 'Ladies Nike® Micro Pique Polo',
+          colors: ['Anthracite','Black', 'University Red', 'White'],
+          type: 'womens',
+          default_color: 'Black',
+          sizes: {
+            Small: 36.99,
+            Medium: 36.99,
+            Large: 36.99,
+            XLarge: 36.99,
+            '2XLarge': 38.99
+          }
+        },
+        {
+        code: 'K805',
+        name: 'Port Authority® 1/4-Zip Pullover',
+        fullname: 'Port Authority® 1/4-Zip Pullover',
+        colors: ['Black'],
+        type: 'mens',
+        default_color: 'Black',
+        sizes: {
+          Small: 30.99,
+          Medium: 30.99,
+          Large: 30.99,
+          XLarge: 30.99,
+          '2XLarge': 32.99,
+          '3XLarge': 33.99,
+          '4XLarge': 34.99,
+        }
+      },
+      {
+        code: 'L805',
+        name: 'Port Authority® 1/4-Zip Pullover',
+        fullname: 'Port Authority® 1/4-Zip Pullover',
+        colors: ['Black'],
+        type: 'womens',
+        default_color: 'Black',
+        sizes: {
+          Small: 30.99,
+          Medium: 30.99,
+          Large: 30.99,
+          XLarge: 30.99,
+          '2XLarge': 32.99,
+          '3XLarge': 33.99,
+          '4XLarge': 34.99, 
+        }
+      },
+      {
+          code: 'TST650',
             name: 'Sport-Tek® Tall Polo Shirt',
             fullname: 'Sport-Tek® Tall Sport-Wick Polo',
             colors: ['Black', 'Iron Grey', 'White'],
