@@ -750,6 +750,11 @@ export const Catalog = function (): CatalogItem[] {
             '2XLarge': 38.99,
             '3XLarge': 39.99,
             '4XLarge': 40.99,
+            'LT': 40.99,
+            'XLT': 42.99,
+            '2XLT': 43.99,
+            '3XLT': 44.99,
+            '4XLT': 45.99
           }
         },
         {   
