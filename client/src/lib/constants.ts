@@ -91,9 +91,9 @@ export const EMBROIDERIES = function () {
   } else if (url.includes('gp-premier.com')) {
     return {
       mens: ['Premier', 'Premhonda','Premnsharvey', 'Premvwharvey', 'Premhyundai', 'Toyotano'],
-      womens: ['Premier', 'Premhonda','Premnsharvey', 'Premvwharvey', 'Premhyundai', 'Toyotano'],
-    }
-  }
+      womens: ['Premier', 'Premhonda','Premnsharvey', 'Premvwharvey', 'Premhyundai', 'Toyotano']
+    } 
+  
 
 export const LOGO_PLACEMENTS = function () {
   const url = window.location.href
