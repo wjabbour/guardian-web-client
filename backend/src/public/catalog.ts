@@ -615,7 +615,7 @@ export const Catalog = function (origin): CatalogItem[] {
         code: 'J317',
         name: 'Port Authority® Jacket',
         fullname: 'Port Authority® Core Soft Shell Jacket',
-        colors: ['Black', 'Battleship Grey'],
+        colors: ['Black'],
         type: 'mens',
         default_color: 'Black',
         sizes: {
@@ -700,7 +700,7 @@ export const Catalog = function (origin): CatalogItem[] {
         code: 'L317',
         name: 'Port Authority® Jacket',
         fullname: 'Port Authority® Ladies Core Soft Shell Jacket',
-        colors: ['Black', 'Battleship Grey'],
+        colors: ['Black'],
         type: 'womens',
         default_color: 'Black',
         sizes: {
