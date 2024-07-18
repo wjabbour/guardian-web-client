@@ -631,6 +631,40 @@ export const Catalog = function (origin): CatalogItem[] {
         }
       },
       {
+        code: 'J7710',
+        name: 'Port Authority® Northwest Slicker',
+        fullname: 'Port Authority® Northwest Slicker',
+        colors: ['Black'],
+        type: 'mens',
+        default_color: 'Black',
+        sizes: {
+          Small: 58.98,
+          Medium: 58.98,
+          Large: 58.98,
+          XLarge: 58.98,
+          '2XLarge': 60.98,
+          '3XLarge': 61.98,
+          '4XLarge': 62.98,
+         }
+      },
+      {
+        code: 'L7710',
+        name: 'Port Authority® Ladies Northwest Slicker',
+        fullname: 'Port Authority® Ladies Northwest Slicker',
+        colors: ['Black'],
+        type: 'womens',
+        default_color: 'Black',
+        sizes: {
+          Small: 58.98,
+          Medium: 58.98,
+          Large: 58.98,
+          XLarge: 58.98,
+          '2XLarge': 60.98,
+          '3XLarge': 61.98,
+          '4XLarge': 62.98,
+        }
+      },
+      {  
         code: 'MCK01086',
         name: 'Cutter & Buck® 1/4" Zip',
         fullname: 'Cutter & Buck® Eco Mens 1/4" Zip',
