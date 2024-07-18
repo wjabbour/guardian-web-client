@@ -649,7 +649,7 @@ export const Catalog = function (origin): CatalogItem[] {
       },
       {
         code: 'L7710',
-        name: 'Port Authority® Ladies Slicker',
+        name: 'Port Authority® Slicker',
         fullname: 'Port Authority® Ladies Northwest Slicker',
         colors: ['Black'],
         type: 'womens',
