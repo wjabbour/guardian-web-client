@@ -408,6 +408,8 @@ export const COMPANIES: { [index: string]: string } = {
 
 With everything complete, we are ready to deploy. Deployment is the process of taking all of your local changes and pushing them to the cloud to update what the end users will interact with. We must deploy the client code (which will update the website in the users browser) and the backend code (which receives requests from the client and performs actions).
 
+From the project root, run `git pull`. This will ensure that you have all of the latest code before you make any changes.
+
 From the project root, `cd` into the client directory and run `npm run deploy`. This will take a few minutes.
 
 Move back to the project root and `cd` into the backend directory and run `npm run deploy`. This will take a few minutes.

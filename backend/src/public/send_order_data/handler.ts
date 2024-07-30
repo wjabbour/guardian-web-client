@@ -28,10 +28,10 @@ export const handler = async (): Promise<APIGatewayProxyResult> => {
     await sendEmail(csv)
     logger.info({ message: 'Successfully sent CSV file to Guardian' });
 
-    // await dynamo.archivePaidOrders()
+    await dynamo.archivePaidOrders()
 
-    // await dynamo.deleteOldUnpaidOrders();
-    // logger.info('deleted old unpaid orders')
+    await dynamo.deleteOldUnpaidOrders();
+    logger.info('deleted old unpaid orders')
 
     return {
       statusCode: 200,
