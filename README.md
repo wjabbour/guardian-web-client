@@ -131,6 +131,8 @@ Now we need to create a Cloudfront distribution. Type Cloudfront in the search b
 
 Update "Allowed HTTP methods" to `GET, HEAD, OPTIONS, PUT, POST, PATCH, DELETE`. Click "Do not enable security protections" under "Web Application Firewall". For "Price class" select `Use only North America and Europe`. For "Alternate domain name (CNAME) - optional" input your domain name. For "Custom SSL certificate - optional" choose the certificate that was just issued. For "Default root object - optional" put `index.html`. Take note of this distribution ID (which looks something like `E1YPW3JQQ2QQ81`).
 
+Once the distribution has been created, navigate to that distribution in the AWS console. Under `Error pages`, click the `Create custom error response` button on the right. For `HTTP error code`, select 403. For `Customize error response` select `Yes`. For `Response page path` put `/`. For `HTTP Response code` select `200`.
+
 Now that we have created all of the necessary AWS resources, we need to make some changes to the code.
 
 ### Hook up Cloudfront to Route 53
