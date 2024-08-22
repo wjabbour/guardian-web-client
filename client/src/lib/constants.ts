@@ -82,8 +82,8 @@ export const EMBROIDERIES = function () {
   if (url.includes('localhost:3000')) {
     return {
       hat: ['Stivers', 'Quicklane', 'Ford', 'Hyundai', 'Chrysler', 'Dodge', 'Jeep', 'Ram'],
-      mens: ['Stivers', 'Quicklane', 'Subaru', 'Stivers Ford'],
-      womens: ['Stivers', 'Quicklane', 'Subaru', 'Stivers Ford'],
+      mens: ['Stivers', 'Quicklane', 'Subaru', 'Stiversford'],
+      womens: ['Stivers', 'Quicklane', 'Subaru', 'Stiversford'],
       accessory: ['Ford', 'Hyundai', 'Chrysler', 'Dodge', 'Jeep', 'Ram', 'Subaru']
     }
   } else if (url.includes('gpstivers.com')) {
