@@ -86,15 +86,15 @@ export const EMBROIDERIES = function () {
   if (url.includes('localhost:3000')) {
     return {
       hat: ['Stivers', 'Quicklane', 'Ford', 'Hyundai', 'Chrysler', 'Dodge', 'Jeep', 'Ram'],
-      mens: ['Stivers', 'Quicklane', 'Subaru', 'Stiversfordsouth'],
-      womens: ['Stivers', 'Quicklane', 'Subaru', 'Stiversfordsouth'],
+      mens: ['Stivers', 'Quicklane', 'Subaru', 'Stivers Ford South'],
+      womens: ['Stivers', 'Quicklane', 'Subaru', 'Stivers Ford South'],
       accessory: ['Ford', 'Hyundai', 'Chrysler', 'Dodge', 'Jeep', 'Ram', 'Subaru']
     }
   } else if (url.includes('gpstivers.com')) {
     return {
       hat: ['Stivers', 'Quicklane', 'Ford', 'Hyundai', 'Chrysler', 'Dodge', 'Jeep', 'Ram'],
-      mens: ['Stivers', 'Stiversfordsouth', 'Quicklane', 'Subaru'],
-      womens: ['Stivers', 'Stiversfordsouth','Quicklane', 'Subaru'],
+      mens: ['Stivers', 'Stivers Ford South', 'Quicklane', 'Subaru'],
+      womens: ['Stivers', 'Stivers Ford South','Quicklane', 'Subaru'],
       accessory: ['Ford', 'Hyundai', 'Chrysler', 'Dodge', 'Jeep', 'Ram', 'Subaru']
     }
   } else if (url.includes('gptameron.com')) {
