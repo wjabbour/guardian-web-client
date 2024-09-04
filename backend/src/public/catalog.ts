@@ -208,7 +208,7 @@ export const Catalog = function (origin): CatalogItem[] {
         }
       },
       {
-        code: 'CGM437',
+        code: 'CGW437',
         name: 'Opti-Vent Polo',
         fullname: 'Ladies Opti-Vent Polo',
         colors: ['Peacoat', 'Salsa', 'White'],
@@ -572,6 +572,23 @@ export const Catalog = function (origin): CatalogItem[] {
         fullname: 'Opti-Vent Polo',
         colors: ['Peacoat', 'Salsa', 'White'],
         type: 'mens',
+        default_color: 'Black',
+        sizes: {
+          Small: 44.99,
+          Medium: 44.99,
+          Large: 44.99,
+          XLarge: 44.99,
+          '2XLarge': 46.99,
+          '3XLarge': 47.99,
+          '4XLarge': 48.99,
+        }
+      },
+      {
+        code: 'CGW437',
+        name: 'Opti-Vent Polo',
+        fullname: 'Ladies Opti-Vent Polo',
+        colors: ['Peacoat', 'Salsa', 'White'],
+        type: 'womens',
         default_color: 'Black',
         sizes: {
           Small: 44.99,
