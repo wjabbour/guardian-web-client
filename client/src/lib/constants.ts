@@ -8,6 +8,7 @@ export const STORES = function () {
       'Stivers CDJR, 2209 Cobbs Ford Road, Prattville, AL 36066',
       'Stivers Decatur Subaru, 1950 Orion DR, Decatur, GA 30033',
       'Stivers Chevrolet, 111 Newland Road, Columbia, SC 29229',
+      'Stivers Ford South Atlanta, 4355 Jonesboro Rd, Union City, GA 30291',
     ]
   } else if (url.includes('gpstivers.com')) {
     return [
@@ -27,6 +28,7 @@ export const STORES = function () {
     'Stivers CDJR, 2209 Cobbs Ford Road, Prattville, AL 36066',
     'Stivers Decatur Subaru, 1950 Orion DR, Decatur, GA 30033',
     'Stivers Chevrolet, 111 Newland Road, Columbia, SC 29229',
+    'Stivers Ford South Atlanta, 4355 Jonesboro Rd, Union City, GA 30291',
    ]
   } else if (url.includes('gptameron.com')) {
     return [
@@ -84,15 +86,15 @@ export const EMBROIDERIES = function () {
   if (url.includes('localhost:3000')) {
     return {
       hat: ['Stivers', 'Quicklane', 'Ford', 'Hyundai', 'Chrysler', 'Dodge', 'Jeep', 'Ram'],
-      mens: ['Stivers', 'Quicklane', 'Subaru', 'Stiversford'],
-      womens: ['Stivers', 'Quicklane', 'Subaru', 'Stiversford'],
+      mens: ['Stivers', 'Quicklane', 'Subaru', 'Stiversfordsouth'],
+      womens: ['Stivers', 'Quicklane', 'Subaru', 'Stiversfordsouth'],
       accessory: ['Ford', 'Hyundai', 'Chrysler', 'Dodge', 'Jeep', 'Ram', 'Subaru']
     }
   } else if (url.includes('gpstivers.com')) {
     return {
       hat: ['Stivers', 'Quicklane', 'Ford', 'Hyundai', 'Chrysler', 'Dodge', 'Jeep', 'Ram'],
-      mens: ['Stivers', 'Stiversford', 'Quicklane', 'Subaru'],
-      womens: ['Stivers', 'Stiversford','Quicklane', 'Subaru'],
+      mens: ['Stivers', 'Stiversfordsouth', 'Quicklane', 'Subaru'],
+      womens: ['Stivers', 'Stiversfordsouth','Quicklane', 'Subaru'],
       accessory: ['Ford', 'Hyundai', 'Chrysler', 'Dodge', 'Jeep', 'Ram', 'Subaru']
     }
   } else if (url.includes('gptameron.com')) {
