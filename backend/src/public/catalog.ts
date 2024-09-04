@@ -191,6 +191,23 @@ export const Catalog = function (origin): CatalogItem[] {
         }
       },
       {
+        code: 'CGM451',
+        name: 'Opti-Vent Polo',
+        fullname: 'Opti-Vent Polo',
+        colors: ['Black', 'Medium Blue', 'Peacoat', 'White'],
+        type: 'mens',
+        default_color: 'Black',
+        sizes: {
+          Small: 44.99,
+          Medium: 44.99,
+          Large: 44.99,
+          XLarge: 44.99,
+          '2XLarge': 46.99,
+          '3XLarge': 47.99,
+          '4XLarge': 48.99,
+        }
+      },
+      {
         code: 'NKDC1991',
         name: 'Nike® Dri-FIT Polo Shirt',
         fullname: 'Nike® Dri-FIT Polo',
@@ -242,23 +259,6 @@ export const Catalog = function (origin): CatalogItem[] {
         }
       },
       {
-        code: 'ST657',
-        name: 'Sport-Tek® Long Sleeve Polo Shirt',
-        fullname: 'Sport-Tek® Long Sleeve Sport-Wick Polo',
-        colors: ['Black','Iron Grey','White'],
-        type: 'mens',
-        default_color: 'Black',
-        sizes: {
-          Small: 26.99,
-          Medium: 26.99,
-          Large: 26.99,
-          XLarge: 26.99,
-          '2XLarge': 28.99,
-          '3XLarge': 29.99,
-          '4XLarge': 31.99,
-        }
-      },
-      {
         code: 'K805',
         name: 'Port Authority® 1/4-Zip Pullover',
         fullname: 'Port Authority® 1/4-Zip Pullover',
@@ -275,7 +275,23 @@ export const Catalog = function (origin): CatalogItem[] {
           '4XLarge': 38.99,
         }
       },
-
+      {
+        code: 'ST657',
+        name: 'Sport-Tek® Long Sleeve Polo Shirt',
+        fullname: 'Sport-Tek® Long Sleeve Sport-Wick Polo',
+        colors: ['Black','Iron Grey','White'],
+        type: 'mens',
+        default_color: 'Black',
+        sizes: {
+          Small: 26.99,
+          Medium: 26.99,
+          Large: 26.99,
+          XLarge: 26.99,
+          '2XLarge': 28.99,
+          '3XLarge': 29.99,
+          '4XLarge': 31.99,
+        }
+      },
       {
         code: 'L805',
         name: 'Port Authority® 1/4-Zip Pullover',
@@ -350,7 +366,7 @@ export const Catalog = function (origin): CatalogItem[] {
           '3XLarge': 26.99,
           '4XLarge': 27.99,
           '5XLarge': 28.99,
-          '6XLarge': 29.99,
+          '6XLarge': 29.99
         }
       },
       {
@@ -531,6 +547,23 @@ export const Catalog = function (origin): CatalogItem[] {
           '2XLarge': 76.99,
           '3XLarge': 77.99,
           '4XLarge': 78.99,
+        }
+      },
+      {
+        code: 'CGM451',
+        name: 'Opti-Vent Polo',
+        fullname: 'Opti-Vent Polo',
+        colors: ['Black', 'Medium Blue', 'Peacoat', 'White'],
+        type: 'mens',
+        default_color: 'Black',
+        sizes: {
+          Small: 44.99,
+          Medium: 44.99,
+          Large: 44.99,
+          XLarge: 44.99,
+          '2XLarge': 46.99,
+          '3XLarge': 47.99,
+          '4XLarge': 48.99,
         }
       },
       {
