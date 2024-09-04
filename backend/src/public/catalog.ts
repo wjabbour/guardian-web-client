@@ -177,7 +177,7 @@ export const Catalog = function (origin): CatalogItem[] {
         code: 'NKDC1963',
         name: 'Nike® Dri-FIT Polo Shirt',
         fullname: 'Nike® Dri-FIT Polo',
-        colors: ['Gym Blue', 'Valor Blue', 'Black', 'White', 'Anthracite', 'Navy', 'Blue Tint'],
+        colors: ['Gym Blue', 'Valor Blue', 'Black', 'White', 'Anthracite', 'University Red', 'Navy', 'Blue Tint'],
         type: 'mens',
         default_color: 'Black',
         sizes: {
@@ -194,8 +194,25 @@ export const Catalog = function (origin): CatalogItem[] {
         code: 'CGM451',
         name: 'Opti-Vent Polo',
         fullname: 'Opti-Vent Polo',
-        colors: ['Black', 'Medium Blue', 'Peacoat', 'White'],
+        colors: ['Peacoat', 'Salsa', 'White'],
         type: 'mens',
+        default_color: 'Black',
+        sizes: {
+          Small: 44.99,
+          Medium: 44.99,
+          Large: 44.99,
+          XLarge: 44.99,
+          '2XLarge': 46.99,
+          '3XLarge': 47.99,
+          '4XLarge': 48.99,
+        }
+      },
+      {
+        code: 'CGM437',
+        name: 'Opti-Vent Polo',
+        fullname: 'Ladies Opti-Vent Polo',
+        colors: ['Peacoat', 'Salsa', 'White'],
+        type: 'womens',
         default_color: 'Black',
         sizes: {
           Small: 44.99,
@@ -211,7 +228,7 @@ export const Catalog = function (origin): CatalogItem[] {
         code: 'NKDC1991',
         name: 'Nike® Dri-FIT Polo Shirt',
         fullname: 'Nike® Dri-FIT Polo',
-        colors: ['Gym Blue', 'Valor Blue', 'Black', 'White', 'Anthracite', 'Navy', 'Blue Tint'],
+        colors: ['Gym Blue', 'Valor Blue', 'Black', 'White', 'Anthracite', 'University Red', 'Navy', 'Blue Tint'],
         type: 'womens',
         default_color: 'Black',
         sizes: {
@@ -485,7 +502,7 @@ export const Catalog = function (origin): CatalogItem[] {
         code: 'NKDC1963',
         name: 'Nike® Dri-FIT Polo Shirt',
         fullname: 'Nike® Dri-FIT Polo',
-        colors: ['Gym Blue', 'Valor Blue', 'Black', 'White', 'Anthracite', 'Navy', 'Blue Tint'],
+        colors: ['Gym Blue', 'Valor Blue', 'Black', 'White', 'Anthracite', 'University Red', 'Navy', 'Blue Tint'],
         type: 'mens',
         default_color: 'Black',
         sizes: {
@@ -502,7 +519,7 @@ export const Catalog = function (origin): CatalogItem[] {
         code: 'NKDC1991',
         name: 'Nike® Dri-FIT Polo Shirt',
         fullname: 'Nike® Dri-FIT Polo',
-        colors: ['Gym Blue', 'Valor Blue', 'Black', 'White', 'Anthracite', 'Navy', 'Blue Tint'],
+        colors: ['Gym Blue', 'Valor Blue', 'Black', 'White', 'Anthracite', 'University Red', 'Navy', 'Blue Tint'],
         type: 'womens',
         default_color: 'Black',
         sizes: {
@@ -553,7 +570,7 @@ export const Catalog = function (origin): CatalogItem[] {
         code: 'CGM451',
         name: 'Opti-Vent Polo',
         fullname: 'Opti-Vent Polo',
-        colors: ['Black', 'Medium Blue', 'Peacoat', 'White'],
+        colors: ['Peacoat', 'Salsa', 'White'],
         type: 'mens',
         default_color: 'Black',
         sizes: {
