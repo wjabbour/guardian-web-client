@@ -43,6 +43,25 @@ export const Catalog = function (origin): CatalogItem[] {
         }
       },
       {
+        code: 'PC61',
+        name: 'Port & Company Essential Tee',
+        fullname: 'Port & Company Essential Tee',
+        colors: ['Black', 'Candy Pink', 'Medium Grey'],
+        type: 'mens',
+        default_color: 'Black',
+        sizes: {
+          Small: 8.99,
+          Medium: 8.99,
+          Large: 8.99,
+          XLarge: 8.99,
+          '2XLarge': 10.99,
+          '3XLarge': 11.99,
+          '4XLarge': 12.99,
+          '5XLarge': 13.99,
+          '6XLarge': 14.99
+        }
+      },
+      {
         code: 'ST650',
         name: 'Sport-Tek® Polo Shirt',
         fullname: 'Sport-Tek® Sport-Wick Polo',
@@ -74,6 +93,23 @@ export const Catalog = function (origin): CatalogItem[] {
           '2XLT': 29.99,
           '3XLT': 31.99,
           '4XLT': 32.99
+        }
+      },
+      {
+        code: 'ST350',
+        name: 'Sport-Tek PosiCharge Tee',
+        fullname: 'Sport-Tek PosiCharge Competitor Tee',
+        colors: ['Black', 'Iron Grey', 'Neon Pink'],
+        type: 'mens',
+        default_color: 'Black',
+        sizes: {
+          Small: 12.99,
+          Medium: 12.99,
+          Large: 12.99,
+          XLarge: 12.99,
+          '2XLarge': 14.99,
+          '3XLarge': 15.99,
+          '4XLarge': 16.99,
         }
       },
       {
@@ -365,6 +401,42 @@ export const Catalog = function (origin): CatalogItem[] {
           '4XLarge': 47.99,
           '5XLarge': 48.99,
           '6XLarge': 49.99
+        }
+      },
+      {
+        code: 'PC61',
+        name: 'Port & Company Essential Tee',
+        fullname: 'Port & Company Essential Tee',
+        colors: ['Black', 'Candy Pink', 'Medium Grey'],
+        type: 'mens',
+        default_color: 'Black',
+        sizes: {
+          Small: 8.99,
+          Medium: 8.99,
+          Large: 8.99,
+          XLarge: 8.99,
+          '2XLarge': 10.99,
+          '3XLarge': 11.99,
+          '4XLarge': 12.99,
+          '5XLarge': 13.99,
+          '6XLarge': 14.99
+        }
+      },
+      {
+        code: 'ST350',
+        name: 'Sport-Tek PosiCharge Tee',
+        fullname: 'Sport-Tek PosiCharge Competitor Tee',
+        colors: ['Black', 'Iron Grey', 'Neon Pink'],
+        type: 'mens',
+        default_color: 'Black',
+        sizes: {
+          Small: 12.99,
+          Medium: 12.99,
+          Large: 12.99,
+          XLarge: 12.99,
+          '2XLarge': 14.99,
+          '3XLarge': 15.99,
+          '4XLarge': 16.99,
         }
       },
       {
