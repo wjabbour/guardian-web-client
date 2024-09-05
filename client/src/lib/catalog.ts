@@ -228,8 +228,8 @@ export const Catalog = function (): CatalogItem[] {
       },
       {
         code: 'CGM451',
-        name: 'Opti-Vent Polo',
-        fullname: 'Opti-Vent Polo',
+        name: 'Callaway Opti-Vent Polo',
+        fullname: 'Callaway Opti-Vent Polo',
         colors: ['Peacoat', 'Salsa', 'White'],
         type: 'mens',
         default_color: 'Black',
@@ -245,8 +245,8 @@ export const Catalog = function (): CatalogItem[] {
       },
       {
         code: 'CGW437',
-        name: 'Opti-Vent Polo',
-        fullname: 'Ladies Opti-Vent Polo',
+        name: 'Callaway Opti-Vent Polo',
+        fullname: 'Callaway Ladies Opti-Vent Polo',
         colors: ['Peacoat', 'Salsa', 'White'],
         type: 'womens',
         default_color: 'Black',
@@ -640,8 +640,8 @@ export const Catalog = function (): CatalogItem[] {
       },
       {
         code: 'CGM451',
-        name: 'Opti-Vent Polo',
-        fullname: 'Opti-Vent Polo',
+        name: 'Callaway Opti-Vent Polo',
+        fullname: 'Callaway Opti-Vent Polo',
         colors: ['Peacoat', 'Salsa', 'White'],
         type: 'mens',
         default_color: 'Black',
@@ -657,8 +657,8 @@ export const Catalog = function (): CatalogItem[] {
       },
       {
         code: 'CGW437',
-        name: 'Opti-Vent Polo',
-        fullname: 'Ladies Opti-Vent Polo',
+        name: 'Callaway Opti-Vent Polo',
+        fullname: 'Callaway Ladies Opti-Vent Polo',
         colors: ['Peacoat', 'Salsa', 'White'],
         type: 'womens',
         default_color: 'Black',
