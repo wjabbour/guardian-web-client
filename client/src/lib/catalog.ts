@@ -82,7 +82,7 @@ export const Catalog = function (): CatalogItem[] {
       },
       {
         code: 'TST650',
-        name: 'Sport-Tek® Tall Polo Shirt',
+        name: 'Sport-Tek® TALL Polo Shirt',
         fullname: 'Sport-Tek® Tall Sport-Wick Polo',
         colors: ['Black', 'True Royal', 'Iron Grey', 'Grey Concrete', 'White', 'Navy', 'Blue Lake'],
         type: 'mens',
@@ -460,7 +460,7 @@ export const Catalog = function (): CatalogItem[] {
       },
       {
         code: 'TST650',
-        name: 'Sport-Tek® Tall Polo Shirt',
+        name: 'Sport-Tek® TALL Polo Shirt',
         fullname: 'Sport-Tek® Tall Sport-Wick Polo',
         colors: ['Black', 'True Royal', 'Iron Grey', 'Grey Concrete', 'White', 'Navy', 'Blue Lake'],
         type: 'mens',
