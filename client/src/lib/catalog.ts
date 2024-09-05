@@ -44,7 +44,7 @@ export const Catalog = function (): CatalogItem[] {
       },
       {
         code: 'PC61',
-        name: 'Port & Company Essential Tee',
+        name: 'Port & Company Tee',
         fullname: 'Port & Company Essential Tee',
         colors: ['Black', 'Candy Pink', 'Medium Grey'],
         type: 'mens',
@@ -405,7 +405,7 @@ export const Catalog = function (): CatalogItem[] {
       },
       {
         code: 'PC61',
-        name: 'Port & Company Essential Tee',
+        name: 'Port & Company Tee',
         fullname: 'Port & Company Essential Tee',
         colors: ['Black', 'Candy Pink', 'Medium Grey'],
         type: 'mens',
