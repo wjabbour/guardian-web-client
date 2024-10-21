@@ -62,6 +62,25 @@ export const Catalog = function (): CatalogItem[] {
         }
       },
       {
+        code: 'JST72',
+        name: 'Sport-Tek® V-Neck Raglan Wind Shirt',
+        fullname: 'Sport-Tek® Raglan Wind Shirt',
+        colors: ['Black'],
+        type: 'mens',
+        default_color: 'Black',
+        sizes: {
+          Small: 25.99,
+          Medium: 25.99,
+          Large: 25.99,
+          XLarge: 25.99,
+          '2XLarge': 26.99,
+          '3XLarge': 27.99,
+          '4XLarge': 28.99,
+          '5XLarge': 29.99,
+          '6XLarge': 30.99,
+        }
+      },
+      {
         code: 'ST650',
         name: 'Sport-Tek® Polo Shirt',
         fullname: 'Sport-Tek® Sport-Wick Polo',
@@ -605,6 +624,23 @@ export const Catalog = function (): CatalogItem[] {
         }
       },
       {
+        code: 'CGM451',
+        name: 'Callaway Opti-Vent Polo',
+        fullname: 'Callaway Opti-Vent Polo',
+        colors: ['Peacoat', 'Salsa', 'White'],
+        type: 'mens',
+        default_color: 'Black',
+        sizes: {
+          Small: 44.99,
+          Medium: 44.99,
+          Large: 44.99,
+          XLarge: 44.99,
+          '2XLarge': 46.99,
+          '3XLarge': 47.99,
+          '4XLarge': 48.99,
+        }
+      },
+      {
         code: 'J331',
         name: 'Port Authority® Rain Jacket',
         fullname: 'Port Authority® All-Conditions Jacket',
@@ -639,20 +675,22 @@ export const Catalog = function (): CatalogItem[] {
         }
       },
       {
-        code: 'CGM451',
-        name: 'Callaway Opti-Vent Polo',
-        fullname: 'Callaway Opti-Vent Polo',
-        colors: ['Peacoat', 'Salsa', 'White'],
+        code: 'JST72',
+        name: 'Sport-Tek® V-Neck Raglan Wind Shirt',
+        fullname: 'Sport-Tek® Raglan Wind Shirt',
+        colors: ['Black'],
         type: 'mens',
         default_color: 'Black',
         sizes: {
-          Small: 44.99,
-          Medium: 44.99,
-          Large: 44.99,
-          XLarge: 44.99,
-          '2XLarge': 46.99,
-          '3XLarge': 47.99,
-          '4XLarge': 48.99,
+          Small: 25.99,
+          Medium: 25.99,
+          Large: 25.99,
+          XLarge: 25.99,
+          '2XLarge': 26.99,
+          '3XLarge': 27.99,
+          '4XLarge': 28.99,
+          '5XLarge': 29.99,
+          '6XLarge': 30.99,
         }
       },
       {
