@@ -101,6 +101,7 @@ export const EMBROIDERIES = function () {
     return {
       mens: ['Tameron'],
       womens: ['Tameron'],
+      hat: ['Tameron'],
     }
   } else if (url.includes('gp---------.com')) {
     return {

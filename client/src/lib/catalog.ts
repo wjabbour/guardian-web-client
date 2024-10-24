@@ -751,7 +751,7 @@ export const Catalog = function (): CatalogItem[] {
         code: 'NKDC1963',
         name: 'Nike® Dri-FIT Polo Shirt',
         fullname: 'Nike® Dri-FIT Polo Shirt',
-        colors: ['Anthracite', 'Game Royal', 'University Red', 'Black'],
+        colors: ['Black'],
         type: 'mens',
         default_color: 'Black',
         sizes: {
@@ -879,7 +879,7 @@ export const Catalog = function (): CatalogItem[] {
         code: 'NKDC1991',
         name: 'Ladies Nike® Polo',
         fullname: 'Ladies Nike® Micro Pique Polo',
-        colors: ['Anthracite', 'Game Royal', 'University Red', 'Black'],
+        colors: ['Black'],
         type: 'womens',
         default_color: 'Black',
         sizes: {
