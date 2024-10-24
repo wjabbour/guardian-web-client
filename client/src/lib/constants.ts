@@ -127,7 +127,7 @@ export const LOGO_PLACEMENTS = function () {
   } else if (url.includes('gp---------.com')) {
     return ['Right Sleeve', 'Left Chest'];
   } else if (url.includes('gptameron.com')) {
-    return ['Right Sleeve'];
+    return ['Right Sleeve', 'Front'];
   } else if (url.includes('gp-premier.com')) {
     return ['Left Chest'];
   }
