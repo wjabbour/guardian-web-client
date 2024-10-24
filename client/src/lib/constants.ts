@@ -86,15 +86,15 @@ export const EMBROIDERIES = function () {
   if (url.includes('localhost:3000')) {
     return {
       hat: ['Stivers', 'Quicklane', 'Ford', 'Hyundai', 'Chrysler', 'Dodge', 'Jeep', 'Ram'],
-      mens: ['Stivers', 'Quicklane', 'Subaru', 'Stivers Ford South'],
-      womens: ['Stivers', 'Quicklane', 'Subaru', 'Stivers Ford South'],
+      mens: ['Stivers', 'Quicklane', 'Subaru', 'Stivers Ford South', 'Stivers Ford Birmingham'],
+      womens: ['Stivers', 'Quicklane', 'Subaru', 'Stivers Ford South', 'Stivers Ford Birmingham'],
       accessory: ['Ford', 'Hyundai', 'Chrysler', 'Dodge', 'Jeep', 'Ram', 'Subaru']
     }
   } else if (url.includes('gpstivers.com')) {
     return {
       hat: ['Stivers', 'Quicklane', 'Ford', 'Hyundai', 'Chrysler', 'Dodge', 'Jeep', 'Ram'],
-      mens: ['Stivers', 'Stivers Ford South', 'Quicklane', 'Subaru'],
-      womens: ['Stivers', 'Stivers Ford South','Quicklane', 'Subaru'],
+      mens: ['Stivers', 'Quicklane', 'Subaru', 'Stivers Ford South', 'Stivers Ford Birmingham'],
+      womens: ['Stivers', 'Quicklane', 'Subaru', 'Stivers Ford South', 'Stivers Ford Birmingham'],
       accessory: ['Ford', 'Hyundai', 'Chrysler', 'Dodge', 'Jeep', 'Ram', 'Subaru']
     }
   } else if (url.includes('gptameron.com')) {

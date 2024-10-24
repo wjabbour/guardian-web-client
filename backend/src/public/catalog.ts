@@ -118,7 +118,7 @@ export const Catalog = function (origin): CatalogItem[] {
         code: 'ST350',
         name: 'Sport-Tek PosiCharge Tee',
         fullname: 'Sport-Tek PosiCharge Competitor Tee',
-        colors: ['Black', 'Iron Grey', 'Neon Pink'],
+        colors: ['Black', 'Iron Grey', 'True Navy', 'Neon Pink'],
         type: 'mens',
         default_color: 'Black',
         sizes: {
@@ -431,7 +431,7 @@ export const Catalog = function (origin): CatalogItem[] {
         code: 'ST350',
         name: 'Sport-Tek PosiCharge Tee',
         fullname: 'Sport-Tek PosiCharge Competitor Tee',
-        colors: ['Black', 'Iron Grey', 'Neon Pink'],
+        colors: ['Black', 'Iron Grey', 'True Navy', 'Neon Pink'],
         type: 'mens',
         default_color: 'Black',
         sizes: {
