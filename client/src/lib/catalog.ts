@@ -396,7 +396,7 @@ export const Catalog = function (): CatalogItem[] {
         code: 'NE1100',
         name: 'New Era Interception Cap',
         fullname: 'New Era Interception Cap',
-        colors: ['Graphite_Black'],
+        colors: ['Graphite Black'],
         type: 'mens',
         default_color: 'Graphite',
         sizes: {
