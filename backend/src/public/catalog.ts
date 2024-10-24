@@ -396,9 +396,9 @@ export const Catalog = function (origin): CatalogItem[] {
         code: 'NE1100',
         name: 'New Era Interception Cap',
         fullname: 'New Era Interception Cap',
-        colors: ['Graphite Black'],
+        colors: ['Graphite_Black'],
         type: 'mens',
-        halfColors: ['Graphite Black'],
+        halfColors: ['Graphite_Black'],
         default_color: 'Graphite',
         sizes: {
           Small: 13.98,
@@ -964,9 +964,9 @@ export const Catalog = function (origin): CatalogItem[] {
         code: 'NE1100',
         name: 'New Era Interception Cap',
         fullname: 'New Era Interception Cap',
-        colors: ['Graphite Black'],
+        colors: ['Graphite_Black'],
         type: 'mens',
-        halfColors: ['Graphite Black'],
+        halfColors: ['Graphite_Black'],
         default_color: 'Graphite',
         sizes: {
           Small: 13.98,
