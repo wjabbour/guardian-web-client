@@ -392,6 +392,20 @@ export const Catalog = function (origin): CatalogItem[] {
           'One Size Fits All': 10.99
         }
       },
+      {
+        code: 'NE1100',
+        name: 'New Era Interception Cap',
+        fullname: 'New Era Interception Cap',
+        colors: ['Graphite Black'],
+        type: 'mens',
+        halfColors: ['Graphite Black'],
+        default_color: 'Graphite',
+        sizes: {
+          Small: 13.98,
+          Medium: 13.98,
+          Large: 13.98
+        }
+      },
     ]
   } else if (url.includes('gpstivers.com')) {
     return [
@@ -944,6 +958,20 @@ export const Catalog = function (origin): CatalogItem[] {
         default_color: 'Black',
         sizes: {
           'One Size Fits All': 10.99
+        }
+      },
+      {
+        code: 'NE1100',
+        name: 'New Era Interception Cap',
+        fullname: 'New Era Interception Cap',
+        colors: ['Graphite Black'],
+        type: 'mens',
+        halfColors: ['Graphite Black'],
+        default_color: 'Graphite',
+        sizes: {
+          Small: 13.98,
+          Medium: 13.98,
+          Large: 13.98
         }
       },
     ]
