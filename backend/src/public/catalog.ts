@@ -381,6 +381,17 @@ export const Catalog = function (origin): CatalogItem[] {
           '4XLarge': 38.99,
         }
       },
+      {
+        code: 'CP91L',
+        name: 'Port & Company Beanie Cap',
+        fullname: 'Port & Company Fleece-Lined Beanie Cap',
+        colors: ['Black'],
+        type: 'hat',
+        default_color: 'Black',
+        sizes: {
+          'One Size Fits All': 10.99
+        }
+      },
     ]
   } else if (url.includes('gpstivers.com')) {
     return [
@@ -922,6 +933,17 @@ export const Catalog = function (origin): CatalogItem[] {
           '2XLarge': 38.99,
           '3XLarge': 39.99,
           '4XLarge': 40.99,
+        }
+      },
+      {
+        code: 'CP91L',
+        name: 'Port & Company Beanie Cap',
+        fullname: 'Port & Company Fleece-Lined Beanie Cap',
+        colors: ['Black'],
+        type: 'hat',
+        default_color: 'Black',
+        sizes: {
+          'One Size Fits All': 10.99
         }
       },
     ]
