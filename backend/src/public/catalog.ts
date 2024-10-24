@@ -386,7 +386,7 @@ export const Catalog = function (origin): CatalogItem[] {
         name: 'Port & Company Beanie Cap',
         fullname: 'Port & Company Fleece-Lined Beanie Cap',
         colors: ['Black'],
-        type: 'hat',
+        type: 'mens',
         default_color: 'Black',
         sizes: {
           'One Size Fits All': 10.99
@@ -940,7 +940,7 @@ export const Catalog = function (origin): CatalogItem[] {
         name: 'Port & Company Beanie Cap',
         fullname: 'Port & Company Fleece-Lined Beanie Cap',
         colors: ['Black'],
-        type: 'hat',
+        type: 'mens',
         default_color: 'Black',
         sizes: {
           'One Size Fits All': 10.99
