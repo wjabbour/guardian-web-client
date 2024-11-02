@@ -1,25 +1,25 @@
-import { EMBROIDERIES } from "./constants";
+import { getConfigValue } from "./config";
 
 export function calculate_item_count(cart) {
-    let count = 0;
+  let count = 0;
 
-    Object.keys(cart).forEach((k) => {
-        count += cart[k].quantity
-    })
+  Object.keys(cart).forEach((k) => {
+    count += cart[k].quantity;
+  });
 
-    return count
+  return count;
 }
 
 export function calculate_item_price(cart) {
-    let price = 0;
+  let price = 0;
 
-    Object.keys(cart).forEach((k) => {
-        price += cart[k].price * cart[k].quantity
-    })
+  Object.keys(cart).forEach((k) => {
+    price += cart[k].price * cart[k].quantity;
+  });
 
-    return price.toFixed(2)
+  return price.toFixed(2);
 }
 
 export function getEmbroidery(type) {
-  return EMBROIDERIES()[type]
+  return getConfigValue("embroideries")[type];
 }

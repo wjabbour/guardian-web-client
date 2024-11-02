@@ -1,24 +1,40 @@
-import styles from './Navbar.module.scss';
-import { useNavigate } from 'react-router-dom';
-import { COMPANY_LOGO } from '../../lib/constants';
+import styles from "./Navbar.module.scss";
+import { useNavigate } from "react-router-dom";
+import { getConfigValue } from "../../lib/config";
 
 export default function Navbar(props) {
   const navigate = useNavigate();
 
   return (
     <div className={styles.navbar}>
-      <div className={`${styles.container} ${styles.orders__container}`} onClick={() => navigate('/orders')}>
+      <div
+        className={`${styles.container} ${styles.orders__container}`}
+        onClick={() => navigate("/orders")}
+      >
         <div className={styles.cart}>View Orders</div>
       </div>
-      <div className={`${styles.container} ${styles.cart__container}`} onClick={() => navigate('/cart')}>
-        <div className={styles.cart}>Cart ({Object.keys(props.cart).length})</div>
+      <div
+        className={`${styles.container} ${styles.cart__container}`}
+        onClick={() => navigate("/cart")}
+      >
+        <div className={styles.cart}>
+          Cart ({Object.keys(props.cart).length})
+        </div>
       </div>
       <div className={styles.guardian}>
-        <img className={styles.logo} src={'/images/guardian.png'} onClick={() => navigate('/')}></img>
+        <img
+          className={styles.logo}
+          src={"/images/guardian.png"}
+          onClick={() => navigate("/")}
+        ></img>
       </div>
       <div className={styles.stivers}>
-        <img className={styles.logo} src={`/images/${COMPANY_LOGO()}`} onClick={() => navigate('/')}></img>
+        <img
+          className={styles.logo}
+          src={`/images/${getConfigValue("company_logo")}`}
+          onClick={() => navigate("/")}
+        ></img>
       </div>
     </div>
-  )
+  );
 }
