@@ -22,7 +22,7 @@ export function addCors(origin, map?) {
 }
 
 export const COMPANIES: { [index: string]: string } = {
-  'localhost:3000': 'Stivers',
+  'http://localhost:3000': 'Stivers',
   'https://gpstivers.com': 'Stivers',
   'https://gptameron.com': 'Tameron',
   'https://gp-premier.com': 'Premier'

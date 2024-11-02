@@ -9,6 +9,7 @@ export const handler = async (event): Promise<APIGatewayProxyResult> => {
 
   try {
     const company_name = COMPANIES[event.headers?.origin]
+  
     const currentOrders = await dynamo.getCurrentOrders(company_name);
     logger.info({ message: 'Retrieved current orders', currentOrders });
 
