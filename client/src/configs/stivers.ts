@@ -2,6 +2,7 @@ export const config = {
   title: "Stivers",
   company_logo: "stivers.png",
   logo_placements: ["Right Sleeve", "Left Chest"],
+  show_modification_thumbnail: false,
   embroideries: {
     hat: [
       "Stivers",

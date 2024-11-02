@@ -21,4 +21,5 @@ export interface Config {
   logo_placements: string[];
   embroideries: Embroidery;
   stores: string[];
+  show_modification_thumbnail: boolean;
 }

@@ -2,6 +2,7 @@ export const config = {
   title: "Premier",
   company_logo: "premier.png",
   logo_placements: ["Left Chest"],
+  show_modification_thumbnail: false,
   embroideries: {
     mens: [
       "Premier",

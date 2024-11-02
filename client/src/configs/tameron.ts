@@ -2,6 +2,7 @@ export const config = {
   title: "Tameron",
   company_logo: "tameron.png",
   logo_placements: ["Right Sleeve", "Front"],
+  show_modification_thumbnail: true,
   embroideries: {
     mens: ["Tameron"],
     womens: ["Tameron"],

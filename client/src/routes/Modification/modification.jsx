@@ -1,10 +1,6 @@
 import styles from "./modification.module.scss";
 import { Catalog } from "../../lib/catalog";
-import {
-  useLoaderData,
-  useOutletContext,
-  useNavigate,
-} from "react-router-dom";
+import { useLoaderData, useOutletContext, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import Snackbar from "@mui/material/Snackbar";
 import { SvgIcon } from "@mui/material";
@@ -16,6 +12,7 @@ import Select from "@mui/material/Select";
 import Alert from "@mui/material/Alert";
 import { getEmbroidery } from "../../lib/utils";
 import { getConfigValue } from "../../lib/config";
+import Thumbnail from "./Thumbnail";
 
 export async function loader({ params }) {
   const item = Catalog().find((i) => i.code === params.id);
@@ -229,15 +226,16 @@ export default function Modification() {
           <div className={styles.name}>{item.fullname}</div>
           <div className={styles.price}>Starts at ${price} each</div>
           <div className={styles.color__selector}>{color_selection}</div>
-          <div className={styles.logo_thumbnail}>
-            <img
-              className={styles.logo}
-              src={"/images/guardian.png"}
-              onClick={() => navigate("/")}
-            ></img>
+          <div className={`${styles.flex} ${styles.md_margin_bottom}`}>
+            <div>
+              {embroiderySelector}
+              {item.type !== "accessory" && placementSelector}
+            </div>
+            <div>
+              <Thumbnail img={embroidery} />
+            </div>
           </div>
-          {embroiderySelector}
-          {item.type !== "accessory" && placementSelector}
+
           <div className={styles.form__container}>
             <table id="table">
               <thead>

@@ -1,5 +1,5 @@
 import styles from './cart.module.scss'
-import { useOutletContext, useNavigate, useLocation } from 'react-router-dom'
+import { useOutletContext, useNavigate } from 'react-router-dom'
 import DeleteIcon from '@mui/icons-material/Delete';
 import { calculate_item_count, calculate_item_price } from '../../lib/utils';
 import { SvgIcon } from '@mui/material';

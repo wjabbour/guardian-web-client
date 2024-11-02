@@ -1,0 +1,16 @@
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
+
+.logo_thumbnail {
+  width: 200px;
+  position: relative;
+  margin-left: 15px;
+  img {
+    max-width: 180px;
+  }
+}
