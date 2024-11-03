@@ -7,7 +7,7 @@ import { Config } from "./interfaces";
 export function getConfigValue(val: keyof Config) {
   const url = window.location.href;
   if (url.includes("localhost:3000")) {
-    return StiversConfig[val];
+    return TameronConfig[val];
   } else if (url.includes("gpstivers.com")) {
     return StiversConfig[val];
   } else if (url.includes("gp---------.com")) {

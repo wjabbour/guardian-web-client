@@ -13,17 +13,42 @@ import { SvgIcon } from "@mui/material";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import Snackbar from "@mui/material/Snackbar";
 import Alert from "@mui/material/Alert";
+import Row from "./Row";
 
 export default function BasicTable() {
   const navigate = useNavigate();
   const [orders, setOrders] = useState([]);
+  const [ordersGroupedByDate, setOrdersGroupedByDate] = useState({});
   const [errorSnackbarOpen, setErrorSnackbarOpen] = useState(false);
   const [errorSnackbarText, setErrorSnackbarText] = useState("");
 
-  const seen = {};
-
   function handleSnackbarClose() {
     setErrorSnackbarOpen(false);
+  }
+
+  function groupOrdersByDate(orders) {
+    const groups = {};
+    orders.forEach((order) => {
+      if (groups[order.created_at.toDateString()]) {
+        groups[order.created_at.toDateString()].push(order);
+      } else {
+        groups[order.created_at.toDateString()] = [order];
+      }
+    });
+
+    setOrdersGroupedByDate(groups);
+  }
+
+  function rows() {
+    return Object.keys(ordersGroupedByDate).map((k) => {
+      return (
+        <Row
+          name={k}
+          count={ordersGroupedByDate[k].length}
+          orders={ordersGroupedByDate[k]}
+        />
+      );
+    });
   }
 
   useEffect(() => {
@@ -33,7 +58,9 @@ export default function BasicTable() {
         setErrorSnackbarOpen(true);
         return;
       }
+
       const orders = [];
+
       res.success.data.orders.forEach((order) => {
         if (!order.bypass && !order.transaction_id) return;
         order.order.forEach((o) => {
@@ -69,6 +96,8 @@ export default function BasicTable() {
           return 0;
         }
       });
+
+      groupOrdersByDate(orders);
       setOrders(orders);
     });
   }, []);
@@ -88,56 +117,12 @@ export default function BasicTable() {
         <Table aria-label="simple table">
           <TableHead>
             <TableRow>
-              <TableCell>Email</TableCell>
-              <TableCell align="right">Date</TableCell>
-              <TableCell align="right">First Name</TableCell>
-              <TableCell align="right">Last Name</TableCell>
-              <TableCell align="right">Code</TableCell>
-              <TableCell align="right">Color</TableCell>
-              <TableCell align="right">Quantity</TableCell>
-              <TableCell align="right">Embroidery</TableCell>
-              <TableCell align="right">Size</TableCell>
-              <TableCell align="right">Store</TableCell>
-              <TableCell align="right">Transaction ID</TableCell>
+              <TableCell />
+              <TableCell align="center">Date</TableCell>
+              <TableCell align="center">Order Count</TableCell>
             </TableRow>
           </TableHead>
-          <TableBody>
-            {orders.map((row, i) => (
-              <TableRow
-                key={i}
-                sx={{
-                  td: {
-                    borderTop: () => {
-                      if (seen[row.created_at.toDateString()]) {
-                        return 0;
-                      } else {
-                        seen[row.created_at.toDateString()] = 1;
-                        return 2;
-                      }
-                    },
-                  },
-                }}
-              >
-                <TableCell scope="row">{row.email}</TableCell>
-                <TableCell
-                  align="right"
-                  width="10px"
-                  sx={{ whiteSpace: "nowrap" }}
-                >
-                  {row.created_at.toDateString()}
-                </TableCell>
-                <TableCell align="right">{row.first_name}</TableCell>
-                <TableCell align="right">{row.last_name}</TableCell>
-                <TableCell align="right">{row.code}</TableCell>
-                <TableCell align="right">{row.color}</TableCell>
-                <TableCell align="right">{row.quantity}</TableCell>
-                <TableCell align="right">{row.embroidery}</TableCell>
-                <TableCell align="right">{row.size}</TableCell>
-                <TableCell align="right">{row.store}</TableCell>
-                <TableCell align="right">{row.transaction_id}</TableCell>
-              </TableRow>
-            ))}
-          </TableBody>
+          <TableBody>{rows()}</TableBody>
         </Table>
       </TableContainer>
       <Snackbar
