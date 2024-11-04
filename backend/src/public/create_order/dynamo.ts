@@ -1,101 +1,94 @@
-import { DynamoDBClient, PutItemCommand } from "@aws-sdk/client-dynamodb";
-import { marshall } from "@aws-sdk/util-dynamodb";
+import {
+  DynamoDBClient,
+  PutItemCommand,
+  GetItemCommand,
+} from "@aws-sdk/client-dynamodb";
+import { marshall, unmarshall } from "@aws-sdk/util-dynamodb";
 
 export class Dynamo {
-
-  client: DynamoDBClient
+  client: DynamoDBClient;
 
   constructor() {
     this.client = new DynamoDBClient({ region: "us-east-1" });
   }
 
-  async createOrder(email: string, cart, first_name: string, last_name: string, store: string, company_name: string, order_id: string) {
-    const massaged_cart = cart.map((m) => {
-      return { "M": marshall(m) }
-    })
-
-    const command = new PutItemCommand({
-      "Item": {
+  async getOrder(email: string, created_at: string) {
+    const command = new GetItemCommand({
+      Key: {
         email: {
-          "S": email
-        },
-        first_name: {
-          "S": first_name
-        },
-        last_name: {
-          "S": last_name
-        },
-        store: {
-          "S": store
-        },
-        company_name: {
-          "S": company_name
-        },
-        bypass: {
-          "N": "0"
+          S: email,
         },
         created_at: {
-          "S": `${Date.now()}`
+          S: created_at,
         },
-        paid_at: {
-          "N": "-1"
-        },
-        order: { "L": massaged_cart, },
-        order_id: {
-          "S": order_id
-        },
-        paid: {
-          "N": '0'
-        }
       },
-      TableName: "orders"
-    })
+      TableName: "archived_orders",
+    });
 
-    await this.client.send(command);
+    const response = await this.client.send(command);
+    if (response.Item) {
+      return unmarshall(response.Item);
+    } else {
+      return null;
+    }
   }
 
-  async createBypassOrder(email: string, cart, first_name: string, last_name: string, store: string, company_name: string) {
+  // return composite key so that we can re-fetch for tameron orders
+  async createOrder(
+    email: string,
+    cart,
+    first_name: string,
+    last_name: string,
+    store: string,
+    company_name: string,
+    order_id: string,
+    table_name: string,
+    bypass: number
+  ) {
     const massaged_cart = cart.map((m) => {
-      return { "M": marshall(m) }
-    })
+      return { M: marshall(m) };
+    });
+
+    const created_at = Date.now() + "";
 
     const command = new PutItemCommand({
-      "Item": {
+      Item: {
         email: {
-          "S": email
+          S: email,
         },
         first_name: {
-          "S": first_name
+          S: first_name,
         },
         last_name: {
-          "S": last_name
+          S: last_name,
         },
         store: {
-          "S": store
+          S: store,
         },
         company_name: {
-          "S": company_name
-        },
-        created_at: {
-          "S": `${Date.now()}`
-        },
-        paid_at: {
-          "N": "-1"
+          S: company_name,
         },
         bypass: {
-          "N": "1"
+          N: `${bypass}`,
         },
-        order: { "L": massaged_cart, },
+        created_at: {
+          S: created_at,
+        },
+        paid_at: {
+          N: "-1",
+        },
+        order: { L: massaged_cart },
         order_id: {
-          "S": "-1"
+          S: order_id,
         },
         paid: {
-          "N": '1'
-        }
+          N: "0",
+        },
       },
-      TableName: "orders"
-    })
+      TableName: table_name,
+    });
 
     await this.client.send(command);
+    return { email, created_at };
   }
 }
