@@ -65,6 +65,7 @@ export default function Checkout() {
     if (response.error) {
       setErrorSnackbarText(response.error.message);
       setErrorSnackbarOpen(true);
+      setLoading(false);
       return "";
     } else {
       setSnackbarText("Order placed successfully");
