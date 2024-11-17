@@ -4,6 +4,7 @@ export const config = {
   logo_placements: ["Right Sleeve", "Front"],
   show_modification_thumbnail: true,
   minimum_apparel_order: true,
+  render_logo_preview: true,
   embroideries: {
     mens: ["Tameron"],
     womens: ["Tameron"],

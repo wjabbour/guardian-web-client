@@ -4,6 +4,7 @@ export const config = {
   logo_placements: ["Left Chest"],
   show_modification_thumbnail: false,
   minimum_apparel_order: false,
+  render_logo_preview: false,
   embroideries: {
     mens: [
       "Premier",

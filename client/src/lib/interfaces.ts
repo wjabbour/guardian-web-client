@@ -33,4 +33,5 @@ export interface Config {
   stores: string[];
   show_modification_thumbnail: boolean;
   minimum_apparel_order: boolean;
+  render_logo_preview: boolean;
 }

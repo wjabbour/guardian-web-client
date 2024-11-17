@@ -41,6 +41,8 @@ export default function Cart() {
     }
   }
 
+  console.log(cart);
+
   return (
     <div className={styles.container}>
       <div
@@ -95,6 +97,14 @@ export default function Cart() {
                     }}
                   />
                 </div>
+                {cart[k].type !== "customs" &&
+                  getConfigValue("render_logo_preview") && (
+                    <div className={styles.image__container}>
+                      <img
+                        src={`/images/${cart[k].embroidery.toLowerCase()}.png`}
+                      ></img>
+                    </div>
+                  )}
                 <div className={styles.image__container}>
                   <img
                     className={`${
