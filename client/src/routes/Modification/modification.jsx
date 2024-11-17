@@ -227,7 +227,9 @@ export default function Modification() {
         </div>
         <div className={styles.information__panel}>
           <div className={styles.name}>{item.fullname}</div>
-          <div className={styles.price}>Starts at ${price} each</div>
+          {item.type !== "customs" && (
+            <div className={styles.price}>Starts at ${price} each</div>
+          )}
           <div className={styles.color__selector}>
             <ColorSelector
               item={item}
