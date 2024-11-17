@@ -3,11 +3,12 @@ export const config = {
   company_logo: "tameron.png",
   logo_placements: ["Right Sleeve", "Front"],
   show_modification_thumbnail: true,
+  minimum_apparel_order: true,
   embroideries: {
     mens: ["Tameron"],
     womens: ["Tameron"],
     hat: ["Tameron"],
-    customs: []
+    customs: [],
   },
   stores: [
     "Tameron Honda, 9871 Justina Ave Daphne, AL 36526",

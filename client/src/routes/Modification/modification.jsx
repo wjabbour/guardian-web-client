@@ -192,7 +192,6 @@ export default function Modification() {
       discounts but have multiple sizes
     */
     const total_quantity = current_quantity + selected_customs_quantity;
-    console.log(total_quantity);
     if (Object.keys(item.sizes).length === 1) {
       let basePrice = item.sizes["default"];
       for (let i = 0; i < item.discount.length; i++) {

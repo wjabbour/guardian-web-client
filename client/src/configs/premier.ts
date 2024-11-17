@@ -3,6 +3,7 @@ export const config = {
   company_logo: "premier.png",
   logo_placements: ["Left Chest"],
   show_modification_thumbnail: false,
+  minimum_apparel_order: false,
   embroideries: {
     mens: [
       "Premier",

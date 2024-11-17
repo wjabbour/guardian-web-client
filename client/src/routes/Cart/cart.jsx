@@ -1,14 +1,45 @@
 import styles from "./cart.module.scss";
 import { useOutletContext, useNavigate } from "react-router-dom";
+import { useState } from "react";
 import DeleteIcon from "@mui/icons-material/Delete";
 import { calculate_item_count, calculate_item_price } from "../../lib/utils";
 import { SvgIcon } from "@mui/material";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
+import { getConfigValue } from "../../lib/config";
+import Snackbar from "@mui/material/Snackbar";
+import Alert from "@mui/material/Alert";
 
+const apparel_types = ["mens", "womens"];
 export default function Cart() {
   const navigate = useNavigate();
   const [cart, set_cart] = useOutletContext();
   const cart_keys = Object.keys(cart);
+  const [errorSnackbarOpen, setErrorSnackbarOpen] = useState(false);
+  const [errorSnackbarText, setErrorSnackbarText] = useState("");
+
+  function handleSnackbarClose() {
+    setErrorSnackbarOpen(false);
+  }
+  /*
+    we enforce that tameron employees must order either 0 or 12 >= items of apparel
+  */
+  function checkout() {
+    const MIN = 0;
+    const MAX = 12;
+    let apparel_count = 0;
+    if (getConfigValue("minimum_apparel_order")) {
+      Object.values(cart).forEach((item) => {
+        if (apparel_types.includes(item.type)) apparel_count++;
+      });
+    }
+
+    if (apparel_count > MIN && apparel_count < MAX) {
+      setErrorSnackbarOpen(true);
+      setErrorSnackbarText("Must order at least 12 apparel items");
+    } else {
+      navigate("/checkout");
+    }
+  }
 
   return (
     <div className={styles.container}>
@@ -87,15 +118,19 @@ export default function Cart() {
               Subtotal ({calculate_item_count(cart)} items): $
               {calculate_item_price(cart)}
             </div>
-            <div
-              className={styles.checkout__container}
-              onClick={() => navigate("/checkout")}
-            >
+            <div className={styles.checkout__container} onClick={checkout}>
               <p>Proceed to checkout</p>
             </div>
           </div>
         </div>
       </div>
+      <Snackbar
+        open={errorSnackbarOpen}
+        autoHideDuration={2500}
+        onClose={handleSnackbarClose}
+      >
+        <Alert severity="error">{errorSnackbarText}</Alert>
+      </Snackbar>
     </div>
   );
 }

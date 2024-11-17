@@ -32,4 +32,5 @@ export interface Config {
   embroideries: Embroidery;
   stores: string[];
   show_modification_thumbnail: boolean;
+  minimum_apparel_order: boolean;
 }

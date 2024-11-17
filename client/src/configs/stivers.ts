@@ -3,6 +3,7 @@ export const config = {
   company_logo: "stivers.png",
   logo_placements: ["Right Sleeve", "Left Chest"],
   show_modification_thumbnail: false,
+  minimum_apparel_order: false,
   embroideries: {
     hat: [
       "Stivers",
