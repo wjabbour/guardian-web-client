@@ -76,7 +76,7 @@ export class Dynamo {
           paid_at: "-1",
           order: cart,
           order_id,
-          paid: 0,
+          paid: bypass,
         },
         TableName: table_name,
       })

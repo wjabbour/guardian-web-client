@@ -13,8 +13,8 @@ import Alert from "@mui/material/Alert";
 import { getEmbroidery } from "../../lib/utils";
 import { getConfigValue } from "../../lib/config";
 import Thumbnail from "./Thumbnail";
-import Checkbox from "@mui/material/Checkbox";
-import ColorSelection from "./ColorSelection";
+import ColorSelector from "./ColorSelector";
+import QuantitySelector from "./QuantitySelector";
 
 export async function loader({ params }) {
   return Catalog().find((i) => i.code === params.id);
@@ -136,7 +136,7 @@ export default function Modification() {
             colors[j]
           },${embroidery}`;
           if (new_cart[key]) {
-            new_cart[key].quantity += Number(inputs[j].value);
+            new_cart[key].quantity += cart_item.quantity;
           } else {
             new_cart[key] = cart_item;
           }
@@ -148,24 +148,25 @@ export default function Modification() {
     // this is a customs item
     if (selected_customs_quantity) {
       any_input_has_value = true;
-
+      const key = `${item.code}`;
       const cart_item = {
         type: item.type,
         name: item.fullname,
-        price: item.sizes[selected_customs_quantity],
+        price: getPriceWithDiscount(new_cart[key]?.quantity ?? 0),
         quantity: Number(selected_customs_quantity),
-        size: null,
+        size: "default",
         color: "Black",
         code: item.code,
         placement: null,
         embroidery,
       };
 
-      console.log(cart_item)
-
-      const key = Date.now()
-
-      new_cart[key] = cart_item;
+      if (new_cart[key]) {
+        new_cart[key].quantity += cart_item.quantity;
+        new_cart[key].price = cart_item.price;
+      } else {
+        new_cart[key] = cart_item;
+      }
     }
 
     if (!any_input_has_value || invalid_input) {
@@ -175,6 +176,31 @@ export default function Modification() {
       set_cart(new_cart);
       sessionStorage.setItem("cart", JSON.stringify(new_cart));
       setSnackbarOpen(true);
+    }
+  }
+
+  function getPriceWithDiscount(current_quantity) {
+    if (!item.discount) {
+      return item.sizes[selected_customs_quantity];
+    }
+
+    /*
+      this is currently the case for all items with discounts (all items with a discount property
+      also have only one size, default)
+
+      but im adding this check so we dont accidentally apply this logic to future items which may require
+      discounts but have multiple sizes
+    */
+    const total_quantity = current_quantity + selected_customs_quantity;
+    console.log(total_quantity);
+    if (Object.keys(item.sizes).length === 1) {
+      let basePrice = item.sizes["default"];
+      for (let i = 0; i < item.discount.length; i++) {
+        if (total_quantity >= item.discount[i].quantity)
+          basePrice = item.discount[i].price;
+      }
+
+      return basePrice;
     }
   }
 
@@ -203,7 +229,7 @@ export default function Modification() {
           <div className={styles.name}>{item.fullname}</div>
           <div className={styles.price}>Starts at ${price} each</div>
           <div className={styles.color__selector}>
-            <ColorSelection
+            <ColorSelector
               item={item}
               set_selected_color={set_selected_color}
               selected_color={selected_color}
@@ -221,44 +247,12 @@ export default function Modification() {
             </div>
           </div>
 
-          <div className={styles.form__container}>
-            <table id="table">
-              <thead>
-                <tr>
-                  <th scope="col"></th>
-                  {item.colors.map((color) => {
-                    return <th scope="col">{color}</th>;
-                  })}
-                </tr>
-              </thead>
-              <tbody>
-                {sizes.map((size) => {
-                  return (
-                    <tr>
-                      <th scope="row">{size}</th>
-                      {item.colors.map(() => {
-                        return (
-                          <td>
-                            {item.type === "customs" && (
-                              <Checkbox
-                                checked={selected_customs_quantity === size}
-                                onChange={() =>
-                                  set_selected_customs_quantity(size)
-                                }
-                              />
-                            )}
-                            {item.type !== "customs" && (
-                              <input type="text"></input>
-                            )}
-                          </td>
-                        );
-                      })}
-                    </tr>
-                  );
-                })}
-              </tbody>
-            </table>
-          </div>
+          <QuantitySelector
+            item={item}
+            sizes={sizes}
+            selected_customs_quantity={selected_customs_quantity}
+            set_selected_customs_quantity={set_selected_customs_quantity}
+          />
 
           <div
             className={styles.checkout__container}

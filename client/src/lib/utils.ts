@@ -14,11 +14,7 @@ export function calculate_item_price(cart) {
   let price = 0;
 
   Object.keys(cart).forEach((k) => {
-    if (cart[k].type === "customs") {
-      price += cart[k].price;
-    } else {
-      price += cart[k].price * cart[k].quantity;
-    }
+    price += cart[k].price * cart[k].quantity;
   });
 
   return price.toFixed(2);

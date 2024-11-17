@@ -7,10 +7,12 @@ export const TameronCatalog: CatalogItem[] = [
     colors: ["Black"],
     type: "customs",
     default_color: "Black",
+    discount: [
+      { quantity: 1000, price: 0.49 },
+      { quantity: 2500, price: 0.45 },
+    ],
     sizes: {
-      500: 36.99,
-      1000: 36.99,
-      2500: 36.99,
+      default: 0.59,
     },
   },
   {
@@ -20,23 +22,27 @@ export const TameronCatalog: CatalogItem[] = [
     colors: ["Black"],
     type: "customs",
     default_color: "Black",
+    discount: [
+      { quantity: 1000, price: 0.49 },
+      { quantity: 2500, price: 0.45 },
+    ],
     sizes: {
-      500: 36.99,
-      1000: 36.99,
-      2500: 36.99,
+      default: 0.59,
     },
   },
   {
     code: "die_cut_decals",
     name: "Die Cut Decals",
     fullname: "Die Cut Decals",
-    colors: ["Black"],
+    colors: ["Black", "White"],
     type: "customs",
     default_color: "Black",
+    discount: [
+      { quantity: 1000, price: 0.49 },
+      { quantity: 2500, price: 0.45 },
+    ],
     sizes: {
-      500: 36.99,
-      1000: 36.99,
-      2500: 36.99,
+      default: 0.59,
     },
   },
   {
@@ -46,10 +52,12 @@ export const TameronCatalog: CatalogItem[] = [
     colors: ["Black"],
     type: "customs",
     default_color: "Black",
+    discount: [
+      { quantity: 1000, price: 0.49 },
+      { quantity: 2500, price: 0.45 },
+    ],
     sizes: {
-      500: 36.99,
-      1000: 36.99,
-      2500: 36.99,
+      Default: 0.59,
     },
   },
   {

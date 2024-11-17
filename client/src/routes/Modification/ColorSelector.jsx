@@ -1,6 +1,6 @@
 import styles from "./modification.module.scss";
 
-export default function ColorSelection({
+export default function ColorSelector({
   item,
   set_selected_color,
   selected_color,

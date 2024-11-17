@@ -79,6 +79,12 @@ export function getStore(store_code) {
   }
 }
 
+export function getCatalogItem(item_code, size, origin) {
+  return Catalog(origin).find((i) => {
+    return i.code === item_code;
+  });
+}
+
 export function getCatalogItemPrice(item_code, size, origin) {
   const item = Catalog(origin).find((i) => {
     return i.code === item_code;

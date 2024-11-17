@@ -4,8 +4,8 @@ import {
   addCors,
   getStoreCode,
   getCatalogItemDescription,
-  getCatalogItemPrice,
   sendEmail,
+  getCatalogItem,
 } from "../utils";
 import { Dynamo } from "./dynamo";
 import axios from "axios";
@@ -60,7 +60,7 @@ export const handler = async (
     const company_name = COMPANIES[event.headers?.origin];
     logger.info({ message: "Determined company name", company_name });
 
-    if (event.headers?.origin.includes("tameron")) {
+    if (company_name === "Tameron") {
       logger.info({ message: "Tameron order, sending immediately" });
       /*
         Tameron orders should be sent immediately, so we don't need to wait for the send_order_data cron
@@ -142,20 +142,49 @@ function construct_cart(cart, origin) {
 
     obj["quantity"] = cart_item["quantity"];
     obj["code"] = cart_item["code"];
-    if (cart_item["size"]) obj["size"] = cart_item["size"];
+    obj["size"] = cart_item["size"];
     obj["color"] = cart_item["color"];
     if (cart_item["embroidery"]) obj["embroidery"] = cart_item["embroidery"];
     if (cart_item["placement"]) obj["placement"] = cart_item["placement"];
     obj["description"] = getCatalogItemDescription(cart_item["code"], origin);
-    obj["price"] = getCatalogItemPrice(
+
+    const catalog_item = getCatalogItem(
       cart_item["code"],
       cart_item["size"],
       origin
+    );
+    obj["price"] = getPriceWithDiscount(
+      catalog_item,
+      obj["size"],
+      obj["quantity"]
     );
     massaged_cart.push(obj);
   });
 
   return massaged_cart;
+}
+
+function getPriceWithDiscount(item, size, quantity) {
+  if (!item.discount) {
+    return item.sizes[size];
+  }
+
+  /*
+    this is currently the case for all items with discounts (all items with a discount property
+    also have only one size, default)
+
+    but im adding this check so we dont accidentally apply this logic to future items which may require
+    discounts but have multiple sizes
+  */
+  if (Object.keys(item.sizes).length === 1) {
+    let basePrice = item.sizes["default"];
+    for (let i = 0; i < item.discount.length; i++) {
+      if (quantity >= item.discount[i].quantity)
+        basePrice = item.discount[i].price;
+    }
+
+    return basePrice;
+  }
 }
 
 function calculate_price(cart, origin) {
@@ -165,11 +194,7 @@ function calculate_price(cart, origin) {
     logger.info({ message: "Determining price for item", item });
     const catalog_item = Catalog(origin).find((i) => item.code === i.code);
     logger.info({ message: "Retrieved catalog item", catalog_item });
-    if (catalog_item.type === "customs") {
-      price += catalog_item.sizes[item.quantity];
-    } else {
-      price += catalog_item.sizes[item.size] * item.quantity;
-    }
+    price += item.price * item.quantity;
     logger.info({ message: "Updated price", price, quantity: item.quantity });
   });
 
