@@ -27,6 +27,7 @@
     "@aws-sdk/client-secrets-manager": "^3.334.0",
     "@aws-sdk/client-ses": "^3.326.0",
     "@aws-sdk/client-sqs": "^3.321.1",
+    "@aws-sdk/lib-dynamodb": "^3.689.0",
     "@aws-sdk/util-dynamodb": "^3.303.0",
     "axios": "^1.4.0",
     "dayjs": "^1.11.10",

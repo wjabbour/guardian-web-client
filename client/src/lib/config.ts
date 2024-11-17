@@ -1,7 +1,7 @@
 import { config as PremierConfig } from "../configs/premier";
 import { config as StiversConfig } from "../configs/stivers";
 import { config as TameronConfig } from "../configs/tameron";
-import { config as TestConfig } from "../configs/gp-------";
+import { config as NewSiteConfig } from "../configs/gp-------";
 import { Config } from "./interfaces";
 
 export function getConfigValue(val: keyof Config) {
@@ -11,7 +11,7 @@ export function getConfigValue(val: keyof Config) {
   } else if (url.includes("gpstivers.com")) {
     return StiversConfig[val];
   } else if (url.includes("gp---------.com")) {
-    return TestConfig[val];
+    return NewSiteConfig[val];
   } else if (url.includes("gptameron.com")) {
     return TameronConfig[val];
   } else if (url.includes("gp-premier.com")) {

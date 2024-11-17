@@ -142,10 +142,10 @@ function construct_cart(cart, origin) {
 
     obj["quantity"] = cart_item["quantity"];
     obj["code"] = cart_item["code"];
-    obj["size"] = cart_item["size"];
+    if (cart_item["size"]) obj["size"] = cart_item["size"];
     obj["color"] = cart_item["color"];
-    obj["embroidery"] = cart_item["embroidery"];
-    obj["placement"] = cart_item["placement"];
+    if (cart_item["embroidery"]) obj["embroidery"] = cart_item["embroidery"];
+    if (cart_item["placement"]) obj["placement"] = cart_item["placement"];
     obj["description"] = getCatalogItemDescription(cart_item["code"], origin);
     obj["price"] = getCatalogItemPrice(
       cart_item["code"],
@@ -165,7 +165,11 @@ function calculate_price(cart, origin) {
     logger.info({ message: "Determining price for item", item });
     const catalog_item = Catalog(origin).find((i) => item.code === i.code);
     logger.info({ message: "Retrieved catalog item", catalog_item });
-    price += catalog_item.sizes[item.size] * item.quantity;
+    if (catalog_item.type === "customs") {
+      price += catalog_item.sizes[item.quantity];
+    } else {
+      price += catalog_item.sizes[item.size] * item.quantity;
+    }
     logger.info({ message: "Updated price", price, quantity: item.quantity });
   });
 

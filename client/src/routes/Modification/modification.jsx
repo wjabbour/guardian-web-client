@@ -13,29 +13,30 @@ import Alert from "@mui/material/Alert";
 import { getEmbroidery } from "../../lib/utils";
 import { getConfigValue } from "../../lib/config";
 import Thumbnail from "./Thumbnail";
+import Checkbox from "@mui/material/Checkbox";
+import ColorSelection from "./ColorSelection";
 
 export async function loader({ params }) {
-  const item = Catalog().find((i) => i.code === params.id);
-  return item;
+  return Catalog().find((i) => i.code === params.id);
 }
 
 export default function Modification() {
   const item = useLoaderData();
   const navigate = useNavigate();
-
-  const [cart, set_cart] = useOutletContext();
   const [selected_color, set_selected_color] = useState(item.default_color);
   const [image_source, set_image_source] = useState(
     `/images/${item.code}_${selected_color.toLowerCase()}.jpg`
   );
+  const [cart, set_cart] = useOutletContext();
   const [snackbarOpen, setSnackbarOpen] = useState(false);
   const [snackbarText] = useState("Item added to cart");
   const [errorSnackbarOpen, setErrorSnackbarOpen] = useState(false);
   const [errorSnackbarText, setErrorSnackbarText] = useState("");
   const sizes = Object.keys(item.sizes);
-  const halfColors = item.halfColors || [];
   const colors = item.colors;
   const [selected_size] = useState(sizes[0]);
+  const [selected_customs_quantity, set_selected_customs_quantity] =
+    useState(null);
   const [price] = useState(item.sizes[selected_size]);
   const [embroidery, setEmbroidery] = useState("");
   const [placement, setPlacement] = useState("Left Chest");
@@ -88,54 +89,6 @@ export default function Modification() {
     setErrorSnackbarOpen(false);
   }
 
-  const color_selection = item.colors.map((color) => {
-    if (halfColors.includes(color)) {
-      const primaryColor = color.split(" ")[0];
-      return (
-        <div className={styles.color__option} key={color}>
-          <div
-            className={`${styles.color__block} ${styles[primaryColor]}`}
-            onClick={() => {
-              const selectedColor = color.split(" ").join("_");
-              set_selected_color(selectedColor);
-              set_image_source(
-                `/images/${item.code}_${selectedColor.toLowerCase()}.jpg`
-              );
-            }}
-          >
-            <div className={`${styles.color__triangle} `}></div>
-          </div>
-
-          <div className={styles.color__name}>
-            <p>{color}</p>
-          </div>
-        </div>
-      );
-    } else {
-      return (
-        <div className={styles.color__option} key={color}>
-          <div
-            className={`${styles.color__block} ${
-              styles[color.split(" ").join("_")]
-            } ${selected_color === color ? styles.selected : ""}`}
-            onClick={() => {
-              set_selected_color(color);
-              set_image_source(
-                `/images/${item.code}_${color
-                  .split(" ")
-                  .join("_")
-                  .toLowerCase()}.jpg`
-              );
-            }}
-          ></div>
-          <div className={styles.color__name}>
-            <p>{color}</p>
-          </div>
-        </div>
-      );
-    }
-  });
-
   function add_item_to_cart() {
     const new_cart = {
       ...cart,
@@ -143,7 +96,7 @@ export default function Modification() {
     let any_input_has_value = false;
     let invalid_input = false;
 
-    if (!embroidery) {
+    if (!embroidery && item.type !== "customs") {
       setErrorSnackbarOpen(true);
       setErrorSnackbarText("Must select an embroidery");
       return;
@@ -192,9 +145,33 @@ export default function Modification() {
       }
     }
 
+    // this is a customs item
+    if (selected_customs_quantity) {
+      any_input_has_value = true;
+
+      const cart_item = {
+        type: item.type,
+        name: item.fullname,
+        price: item.sizes[selected_customs_quantity],
+        quantity: Number(selected_customs_quantity),
+        size: null,
+        color: "Black",
+        code: item.code,
+        placement: null,
+        embroidery,
+      };
+
+      console.log(cart_item)
+
+      const key = Date.now()
+
+      new_cart[key] = cart_item;
+    }
+
     if (!any_input_has_value || invalid_input) {
     } else {
       setEmbroidery("");
+      set_selected_customs_quantity(null);
       set_cart(new_cart);
       sessionStorage.setItem("cart", JSON.stringify(new_cart));
       setSnackbarOpen(true);
@@ -225,11 +202,19 @@ export default function Modification() {
         <div className={styles.information__panel}>
           <div className={styles.name}>{item.fullname}</div>
           <div className={styles.price}>Starts at ${price} each</div>
-          <div className={styles.color__selector}>{color_selection}</div>
+          <div className={styles.color__selector}>
+            <ColorSelection
+              item={item}
+              set_selected_color={set_selected_color}
+              selected_color={selected_color}
+              set_image_source={set_image_source}
+            />
+          </div>
           <div className={`${styles.flex} ${styles.md_margin_bottom}`}>
             <div>
-              {embroiderySelector}
-              {item.type !== "accessory" && placementSelector}
+              {item.type !== "customs" && embroiderySelector}
+              {!["accessory", "customs"].includes(item.type) &&
+                placementSelector}
             </div>
             <div>
               <Thumbnail img={embroidery} />
@@ -254,7 +239,17 @@ export default function Modification() {
                       {item.colors.map(() => {
                         return (
                           <td>
-                            <input type="text"></input>
+                            {item.type === "customs" && (
+                              <Checkbox
+                                checked={selected_customs_quantity === size}
+                                onChange={() =>
+                                  set_selected_customs_quantity(size)
+                                }
+                              />
+                            )}
+                            {item.type !== "customs" && (
+                              <input type="text"></input>
+                            )}
                           </td>
                         );
                       })}

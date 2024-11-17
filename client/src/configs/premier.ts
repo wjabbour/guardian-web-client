@@ -22,6 +22,7 @@ export const config = {
       "Toyota New Orleans",
       "Premier Nissan",
     ],
+    customs: [],
   },
   stores: [
     "Premier Honda, 11801 E I-10 Service Rd, New Orleans, LA 70128",

@@ -282,6 +282,8 @@ To upload a logo picture, download a .png or .jpg file of the logo to your compu
 
 ### Updating the catalog
 
+You will need to add a new catalog item to the relevant catalog configuration found under `{project_root}/client/src/catalogs`
+
 Let's take a look at a catalog item:
 
 ```

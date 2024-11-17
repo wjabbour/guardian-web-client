@@ -1,8 +1,10 @@
 .card {
     cursor: pointer;
     position: relative;
-    max-height: 300px;
+    height: 300px;
     border: 1px solid grey;
+    display: flex;
+    align-items: center;
 
     img {
         width: 200px;

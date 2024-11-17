@@ -7,6 +7,7 @@ export const config = {
     mens: ["Tameron"],
     womens: ["Tameron"],
     hat: ["Tameron"],
+    customs: []
   },
   stores: [
     "Tameron Honda, 9871 Justina Ave Daphne, AL 36526",

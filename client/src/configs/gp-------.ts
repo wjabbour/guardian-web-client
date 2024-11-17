@@ -37,6 +37,7 @@ export const config = {
       "Ram",
       "Subaru",
     ],
+    customs: [],
   },
   stores: [
     "Stivers Ford Montgomery, 4000 Eastern Blvd Montgomery, AL, 36116",

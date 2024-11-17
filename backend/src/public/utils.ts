@@ -27,7 +27,7 @@ export function addCors(origin, map?) {
 }
 
 export const COMPANIES: { [index: string]: string } = {
-  "http://localhost:3000": "Stivers",
+  "http://localhost:3000": "Tameron",
   "https://gpstivers.com": "Stivers",
   "https://gptameron.com": "Tameron",
   "https://gp-premier.com": "Premier",
@@ -127,10 +127,10 @@ function createOrderCsv(orders) {
         item: item.code,
         quantity: item.quantity,
         description: item.description,
-        size: item.size,
+        size: item.size || "",
         color: item.color,
-        logo: item.embroidery,
-        placement: item.placement,
+        logo: item.embroidery || "",
+        placement: item.placement || "",
         price: item.price,
         usedStoreCode: order.bypass,
         transactionId: order.transaction_id || "N/A",

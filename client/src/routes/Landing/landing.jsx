@@ -8,17 +8,18 @@ export default function Landing() {
   catalog.forEach((item) => {
     types[item.type] = 1
   })
-  console.log(types)
+
   return (
     <div className={styles.landing}>
       <div className={styles.catalog}>
         {types['mens'] &&
           <ClothingIcon img={'/images/J317_black.jpg'} label={`Men's Apparel`} link={'/catalog/mens'} no_space={true} />
-
         }
         {types['womens'] &&
           <ClothingIcon img={'/images/L317_black.jpg'} label={`Women's Apparel`} link={'/catalog/womens'} no_space={true} />
-
+        }
+        {types['customs'] &&
+          <ClothingIcon img={'/images/TAMHDA-33P3D-444019A.jpg'} label={`Customs & Decals`} link={'/catalog/customs'} no_space={true} />
         }
         {types['accessory'] &&
           <ClothingIcon img={'/images/04032_black.jpg'} label={`Mugs & Keychains`} link={'/catalog/accessory'} no_space={false} />

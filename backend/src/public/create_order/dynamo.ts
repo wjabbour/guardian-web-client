@@ -1,15 +1,19 @@
-import {
-  DynamoDBClient,
-  PutItemCommand,
-  GetItemCommand,
-} from "@aws-sdk/client-dynamodb";
-import { marshall, unmarshall } from "@aws-sdk/util-dynamodb";
+import { DynamoDBClient, GetItemCommand } from "@aws-sdk/client-dynamodb";
+import { unmarshall } from "@aws-sdk/util-dynamodb";
+import { DynamoDBDocumentClient, PutCommand } from "@aws-sdk/lib-dynamodb";
+import { logger } from "../utils";
 
 export class Dynamo {
   client: DynamoDBClient;
+  documentClient: DynamoDBDocumentClient;
 
   constructor() {
     this.client = new DynamoDBClient({ region: "us-east-1" });
+    this.documentClient = DynamoDBDocumentClient.from(this.client, {
+      marshallOptions: {
+        removeUndefinedValues: true,
+      },
+    });
   }
 
   async getOrder(email: string, created_at: string) {
@@ -45,50 +49,39 @@ export class Dynamo {
     table_name: string,
     bypass: number
   ) {
-    const massaged_cart = cart.map((m) => {
-      return { M: marshall(m) };
+    logger.info({
+      email,
+      cart,
+      first_name,
+      last_name,
+      store,
+      company_name,
+      order_id,
+      table_name,
+      bypass,
     });
 
     const created_at = Date.now() + "";
 
-    const command = new PutItemCommand({
-      Item: {
-        email: {
-          S: email,
+    await this.documentClient.send(
+      new PutCommand({
+        Item: {
+          email,
+          first_name,
+          last_name,
+          store,
+          company_name,
+          bypass,
+          created_at,
+          paid_at: "-1",
+          order: cart,
+          order_id,
+          paid: 0,
         },
-        first_name: {
-          S: first_name,
-        },
-        last_name: {
-          S: last_name,
-        },
-        store: {
-          S: store,
-        },
-        company_name: {
-          S: company_name,
-        },
-        bypass: {
-          N: `${bypass}`,
-        },
-        created_at: {
-          S: created_at,
-        },
-        paid_at: {
-          N: "-1",
-        },
-        order: { L: massaged_cart },
-        order_id: {
-          S: order_id,
-        },
-        paid: {
-          N: "0",
-        },
-      },
-      TableName: table_name,
-    });
+        TableName: table_name,
+      })
+    );
 
-    await this.client.send(command);
     return { email, created_at };
   }
 }
