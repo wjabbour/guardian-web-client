@@ -32,19 +32,6 @@ export default function Cart() {
           {cart_keys.map((k) => {
             return (
               <div key={k} className={styles.line__item}>
-                <div className={styles.image__container}>
-                  <img
-                    className={`${
-                      ["1240", "2240", "1640"].includes(cart[k].code)
-                        ? styles.small
-                        : ""
-                    }`}
-                    src={`/images/${cart[k].code}_${cart[k].color
-                      .split(" ")
-                      .join("_")
-                      .toLowerCase()}.jpg`}
-                  ></img>
-                </div>
                 <div className={styles.information__panel}>
                   <div className={styles.name}>{cart[k].name}</div>
                   <div className={styles.price}>${cart[k].price} each</div>
@@ -76,6 +63,19 @@ export default function Cart() {
                       set_cart({ ...cart });
                     }}
                   />
+                </div>
+                <div className={styles.image__container}>
+                  <img
+                    className={`${
+                      ["1240", "2240", "1640"].includes(cart[k].code)
+                        ? styles.small
+                        : ""
+                    }`}
+                    src={`/images/${cart[k].code}_${cart[k].color
+                      .split(" ")
+                      .join("_")
+                      .toLowerCase()}.jpg`}
+                  ></img>
                 </div>
               </div>
             );

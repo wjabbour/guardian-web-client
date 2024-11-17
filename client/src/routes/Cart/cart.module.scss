@@ -1,139 +1,143 @@
 .container {
-    display: flex;
-    justify-content: center;
-    height: 80vh;
-    padding: 100px;
+  display: flex;
+  justify-content: center;
+  height: 80vh;
+  padding: 100px;
 }
 
 .back__button {
-    position: relative;
-    right: 50px;
-    cursor: pointer;
-    font-size: 32px;
+  position: relative;
+  right: 50px;
+  cursor: pointer;
+  font-size: 32px;
 }
 
 .card {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    background-color: white;
-    width: 800px;
-    min-height: 500px;
-    padding: 15px;
-    border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: white;
+  width: 800px;
+  min-height: 500px;
+  padding: 15px;
+  border: 1px solid black;
 }
 
 .no__items {
-    margin-bottom: 25px;
-    font-size: 18px;
+  margin-bottom: 25px;
+  font-size: 18px;
 }
 
 .scrollable {
-    position: relative;
-    overflow-y: auto;
-    overflow-x: none;
+  position: relative;
+  overflow-y: auto;
+  overflow-x: none;
+
+
 }
 
 .line__item {
-    position: relative;
-    display: flex;
-    height: 320px;
-    margin-top: 15px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  height: 300px;
+  padding-top: 25px;
+  padding-left: 55px;
 
-    svg {
-        cursor: pointer;
-    }
+  &:not(:last-child) {
+    border-bottom: 1px solid grey;
+  }
+
+  svg {
+    cursor: pointer;
+  }
 }
 
 .information__panel {
-    position: absolute;
-    top: 40px;
-    left: 300px;
+  .name {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
 
-    .name {
-        font-size: 24px;
-        font-weight: bold;
-        margin-bottom: 10px;
-    }
+  .price {
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
 
-    .price {
-        font-weight: bold;
-        font-size: 18px;
-        margin-bottom: 15px;
-    }
+  .color__title {
+    position: relative;
+    bottom: 10px;
+    font-weight: 500;
+    font-size: 18px;
+  }
 
-    .color__title {
-        position: relative;
-        bottom: 10px;
-        font-weight: 500;
-        font-size: 18px;
-    }
+  .size {
+    position: relative;
+    bottom: 10px;
+    font-weight: 500;
+    font-size: 18px;
+  }
 
-    .size {
-        position: relative;
-        bottom: 10px;
-        font-weight: 500;
-        font-size: 18px;
-    }
-
-    .quantity {
-        position: relative;
-        bottom: 10px;
-        font-weight: 500;
-        font-size: 18px;
-    }
+  .quantity {
+    position: relative;
+    bottom: 10px;
+    font-weight: 500;
+    font-size: 18px;
+  }
 }
 
 .image__container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 300px;
-    min-height: 300px;
-    .small {
-        max-height: 100px;
-    }
+  position: relative;
+  bottom: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+  min-height: 300px;
+  .small {
+    max-height: 100px;
+  }
 
-    img {
-        max-height: 270px;
-        max-width: 270px;
-    }
+  img {
+    max-height: 270px;
+    max-width: 270px;
+  }
 }
 
-
-
 .subtotal__container {
-    position: relative;
-    min-height: 120px;
-    border-top: 1px solid black;
+  position: relative;
+  min-height: 120px;
+  border-top: 1px solid black;
 }
 
 .subtotal {
-    font-size: 18px;
-    font-weight: 500;
+  font-size: 18px;
+  font-weight: 500;
 }
 
 .info {
-    position: absolute;
-    top: 15px;
-    right: 25px;
+  position: absolute;
+  top: 15px;
+  right: 25px;
 }
 
 .checkout__container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #f3c313;
-    width: 205px;
-    height: 30px;
-    margin-top: 15px;
-    border-radius: 15px;
-    cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f3c313;
+  width: 205px;
+  height: 30px;
+  margin-top: 15px;
+  border-radius: 15px;
+  cursor: pointer;
 
-    p {
-        font-size: 16px;
-        position: relative;
-        bottom: 1px;
-        font-weight: 500;
-    }
+  p {
+    font-size: 16px;
+    position: relative;
+    bottom: 1px;
+    font-weight: 500;
+  }
 }
