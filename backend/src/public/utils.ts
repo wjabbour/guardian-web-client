@@ -158,7 +158,7 @@ export async function sendEmail(orders) {
   const date_str = date.format("MM-DD-YYYY");
   const buffer = Buffer.from(csv);
   let ses_mail = "From: doubleujabbour@gmail.com\n";
-  ses_mail += `To: doubleujabbour@gmail.com\n`;
+  ses_mail += `To: lbudbill@gpcorp.com, lbudbell@comcast.net\n`;
   ses_mail += "Subject: Weekly Stivers Orders\n";
   ses_mail += `Content-Type: text/plain; name="${date_str}-orders.csv"\n`;
   ses_mail += `Content-Disposition: attachment; filename="${date_str}-orders.csv"\n`;
