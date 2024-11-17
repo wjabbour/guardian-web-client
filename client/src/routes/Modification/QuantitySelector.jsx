@@ -1,14 +1,14 @@
 import styles from "./modification.module.scss";
 import Checkbox from "@mui/material/Checkbox";
-import { useState } from "react";
 
 export default function QuantitySelector({
   item,
   sizes,
   selected_customs_quantity,
   set_selected_customs_quantity,
+  set_selected_customs_color,
+  selected_customs_color,
 }) {
-  const [selected_customs_color, set_selected_customs_color] = useState(null);
   sizes = item.type === "customs" ? [500, 1000, 2500] : sizes;
   function ColorHeaders() {
     return (

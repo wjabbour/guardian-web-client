@@ -37,6 +37,7 @@ export default function Modification() {
   const [selected_size] = useState(sizes[0]);
   const [selected_customs_quantity, set_selected_customs_quantity] =
     useState(null);
+  const [selected_customs_color, set_selected_customs_color] = useState(null);
   const [price] = useState(item.sizes[selected_size]);
   const [embroidery, setEmbroidery] = useState("");
   const [placement, setPlacement] = useState("Left Chest");
@@ -148,14 +149,14 @@ export default function Modification() {
     // this is a customs item
     if (selected_customs_quantity) {
       any_input_has_value = true;
-      const key = `${item.code}`;
+      const key = `${item.code},${selected_customs_color}`;
       const cart_item = {
         type: item.type,
         name: item.fullname,
         price: getPriceWithDiscount(new_cart[key]?.quantity ?? 0),
         quantity: Number(selected_customs_quantity),
         size: "default",
-        color: "Black",
+        color: selected_customs_color,
         code: item.code,
         placement: null,
         embroidery,
@@ -253,6 +254,8 @@ export default function Modification() {
             sizes={sizes}
             selected_customs_quantity={selected_customs_quantity}
             set_selected_customs_quantity={set_selected_customs_quantity}
+            selected_customs_color={selected_customs_color}
+            set_selected_customs_color={set_selected_customs_color}
           />
 
           <div
