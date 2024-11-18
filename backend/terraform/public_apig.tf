@@ -14,6 +14,7 @@ resource "aws_api_gateway_deployment" "this" {
       module.create_order_route,
       module.retrieve_orders_route,
       module.capture_order_route,
+      module.update_historical_order,
     ]))
   }
 
@@ -39,6 +40,15 @@ module "create_order_route" {
   uri         = module.create_order.lambda_function_invoke_arn
   api_gateway = aws_api_gateway_rest_api.this
 }
+
+module "update_historical_order_route" {
+  source      = "./api_gateway_route"
+  http_method = "POST"
+  path_part   = "update-historical-order"
+  uri         = module.update_historical_order.lambda_function_invoke_arn
+  api_gateway = aws_api_gateway_rest_api.this
+}
+
 
 module "retrieve_orders_route" {
   source      = "./api_gateway_route"

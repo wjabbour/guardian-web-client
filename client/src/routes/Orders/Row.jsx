@@ -8,11 +8,42 @@ import { useState, Fragment } from "react";
 import Table from "@mui/material/Table";
 import TableHead from "@mui/material/TableHead";
 import Box from "@mui/material/Box";
-
+import moment from "moment";
+import EditIcon from "@mui/icons-material/Edit";
+import { SvgIcon } from "@mui/material";
 import Collapse from "@mui/material/Collapse";
+import TextField from "@mui/material/TextField";
+import { update_historical_order } from "../../lib/http";
 
-export default function Row({ name, count, orders }) {
+export default function Row({ orders }) {
   const [open, setOpen] = useState(false);
+  const [edit, setEdit] = useState(false);
+  const [po, setPo] = useState(orders[0].po || "N/A");
+  const [est_ship_date, set_est_ship_date] = useState(
+    orders[0].est_ship_date || "N/A"
+  );
+
+  function handleEstShipDate(e) {
+    set_est_ship_date(e.target.value);
+  }
+
+  function handlePo(e) {
+    setPo(e.target.value);
+  }
+
+  async function updateHistoricalOrder() {
+    if (edit) {
+      await update_historical_order(
+        orders[0].email,
+        orders[0].created_at,
+        po,
+        est_ship_date
+      );
+      setEdit(false);
+    } else {
+      setEdit(true);
+    }
+  }
 
   return (
     <Fragment>
@@ -26,8 +57,45 @@ export default function Row({ name, count, orders }) {
             {open ? <KeyboardArrowUpIcon /> : <KeyboardArrowDownIcon />}
           </IconButton>
         </TableCell>
-        <TableCell align="center">{name}</TableCell>
-        <TableCell align="center">{count}</TableCell>
+        <TableCell>
+          <SvgIcon
+            style={{ cursor: "pointer" }}
+            onClick={updateHistoricalOrder}
+          >
+            <EditIcon />
+          </SvgIcon>
+        </TableCell>
+        <TableCell align="center">{orders[0].first_name}</TableCell>
+        <TableCell align="center">{orders[0].last_name}</TableCell>
+        <TableCell align="center">
+          {moment(orders[0].created_at).format("MMMM DD, YYYY")}
+        </TableCell>
+        <TableCell align="center">{orders.length}</TableCell>
+        {edit && (
+          <>
+            <TableCell align="center">
+              <Box>
+                <TextField value={po} onChange={handlePo}></TextField>
+              </Box>
+            </TableCell>
+            <TableCell align="center">
+              <Box>
+                <TextField
+                  value={est_ship_date}
+                  onChange={handleEstShipDate}
+                ></TextField>
+              </Box>
+            </TableCell>
+          </>
+        )}
+        {!edit && (
+          <>
+            <TableCell align="center">{po}</TableCell>
+            <TableCell align="center">
+              {est_ship_date}
+            </TableCell>
+          </>
+        )}
       </TableRow>
       <TableRow>
         <TableCell
@@ -58,7 +126,7 @@ export default function Row({ name, count, orders }) {
                         width="10px"
                         sx={{ whiteSpace: "nowrap" }}
                       >
-                        {row.created_at.toDateString()}
+                        {moment(row.created_at).format('MMMM DD, YYYY')}
                       </TableCell>
                       <TableCell align="right">{row.first_name}</TableCell>
                       <TableCell align="right">{row.last_name}</TableCell>

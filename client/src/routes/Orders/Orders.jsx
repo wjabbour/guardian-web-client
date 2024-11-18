@@ -14,11 +14,11 @@ import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import Snackbar from "@mui/material/Snackbar";
 import Alert from "@mui/material/Alert";
 import Row from "./Row";
+import moment from "moment";
 
 export default function BasicTable() {
   const navigate = useNavigate();
   const [orders, setOrders] = useState([]);
-  const [ordersGroupedByDate, setOrdersGroupedByDate] = useState({});
   const [errorSnackbarOpen, setErrorSnackbarOpen] = useState(false);
   const [errorSnackbarText, setErrorSnackbarText] = useState("");
 
@@ -26,28 +26,9 @@ export default function BasicTable() {
     setErrorSnackbarOpen(false);
   }
 
-  function groupOrdersByDate(orders) {
-    const groups = {};
-    orders.forEach((order) => {
-      if (groups[order.created_at.toDateString()]) {
-        groups[order.created_at.toDateString()].push(order);
-      } else {
-        groups[order.created_at.toDateString()] = [order];
-      }
-    });
-
-    setOrdersGroupedByDate(groups);
-  }
-
   function rows() {
-    return Object.keys(ordersGroupedByDate).map((k) => {
-      return (
-        <Row
-          name={k}
-          count={ordersGroupedByDate[k].length}
-          orders={ordersGroupedByDate[k]}
-        />
-      );
+    return orders.map((order) => {
+      return <Row orders={order} />;
     });
   }
 
@@ -62,17 +43,15 @@ export default function BasicTable() {
       const orders = [];
 
       res.success.data.orders.forEach((order) => {
+        const cart = [];
         if (!order.bypass && !order.transaction_id) return;
         order.order.forEach((o) => {
-          const date = new Date(parseInt(order.created_at));
-          date.setSeconds(0);
-          date.setHours(0);
-          date.setMinutes(0);
-          date.setMilliseconds(0);
-          orders.push({
+          cart.push({
             email: order.email,
             first_name: order.first_name,
             last_name: order.last_name,
+            po: order.po,
+            est_ship_date: order.est_ship_date,
             code: o.code,
             color: o.color,
             quantity: o.quantity,
@@ -80,24 +59,17 @@ export default function BasicTable() {
             size: o.size,
             store: order.store,
             transaction_id: order.transaction_id || "N/A",
-            created_at: date,
+            created_at: parseInt(order.created_at),
           });
         });
+
+        orders.push(cart);
       });
 
       orders.sort((a, b) => {
-        const result = b.created_at.getTime() - a.created_at.getTime();
-        if (result) return result;
-        if (b.last_name.toUpperCase() < a.last_name.toUpperCase()) {
-          return 1;
-        } else if (b.last_name.toUpperCase() > a.last_name.toUpperCase()) {
-          return -1;
-        } else {
-          return 0;
-        }
+        return moment(b[0].created_at).isBefore(moment(a[0].created_at));
       });
 
-      groupOrdersByDate(orders);
       setOrders(orders);
     });
   }, []);
@@ -118,8 +90,13 @@ export default function BasicTable() {
           <TableHead>
             <TableRow>
               <TableCell />
-              <TableCell align="center">Date</TableCell>
-              <TableCell align="center">Order Count</TableCell>
+              <TableCell />
+              <TableCell align="center">First Name</TableCell>
+              <TableCell align="center">Last Name</TableCell>
+              <TableCell align="center">Order Date</TableCell>
+              <TableCell align="center">Items Purchased</TableCell>
+              <TableCell align="center">PO</TableCell>
+              <TableCell align="center">Est Ship Date</TableCell>
             </TableRow>
           </TableHead>
           <TableBody>{rows()}</TableBody>
