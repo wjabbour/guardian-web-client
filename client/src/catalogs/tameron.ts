@@ -46,7 +46,7 @@ export const TameronCatalog: CatalogItem[] = [
     },
   },
   {
-    code: "THCD",
+    code: "TAMHDA-THC-444025B",
     name: "Trailer Hitch Covers",
     fullname: "Trailer Hitch Covers",
     colors: ["Black"],
@@ -57,7 +57,7 @@ export const TameronCatalog: CatalogItem[] = [
       { quantity: 2500, price: 0.45 },
     ],
     sizes: {
-      Default: 0.59,
+      default: 0.59,
     },
   },
   {

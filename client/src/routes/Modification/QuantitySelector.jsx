@@ -4,10 +4,12 @@ import Checkbox from "@mui/material/Checkbox";
 export default function QuantitySelector({
   item,
   sizes,
-  selected_customs_quantity,
-  set_selected_customs_quantity,
+  set_selected_customs_black_quantity,
+  set_selected_customs_white_quantity,
   set_selected_customs_color,
   selected_customs_color,
+  selected_customs_black_quantity,
+  selected_customs_white_quantity,
 }) {
   sizes = item.type === "customs" ? [500, 1000, 2500] : sizes;
   function ColorHeaders() {
@@ -36,12 +38,16 @@ export default function QuantitySelector({
                     {item.type === "customs" && (
                       <Checkbox
                         checked={
-                          selected_customs_quantity === size &&
-                          selected_customs_color === color
+                          color === "Black"
+                            ? selected_customs_black_quantity === size
+                            : selected_customs_white_quantity === size
                         }
                         onChange={() => {
-                          set_selected_customs_quantity(size);
-                          set_selected_customs_color(color);
+                          if (color === "Black") {
+                            set_selected_customs_black_quantity(size);
+                          } else {
+                            set_selected_customs_white_quantity(size);
+                          }
                         }}
                       />
                     )}

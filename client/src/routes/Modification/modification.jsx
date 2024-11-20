@@ -35,9 +35,10 @@ export default function Modification() {
   const sizes = Object.keys(item.sizes);
   const colors = item.colors;
   const [selected_size] = useState(sizes[0]);
-  const [selected_customs_quantity, set_selected_customs_quantity] =
+  const [selected_customs_white_quantity, set_selected_customs_white_quantity] =
     useState(null);
-  const [selected_customs_color, set_selected_customs_color] = useState(null);
+  const [selected_customs_black_quantity, set_selected_customs_black_quantity] =
+    useState(null);
   const [price] = useState(item.sizes[selected_size]);
   const [embroidery, setEmbroidery] = useState("");
   const [placement, setPlacement] = useState("Left Chest");
@@ -146,43 +147,52 @@ export default function Modification() {
       }
     }
 
-    // this is a customs item
-    if (selected_customs_quantity) {
+    if (selected_customs_black_quantity) {
       any_input_has_value = true;
-      const key = `${item.code},${selected_customs_color}`;
-      const cart_item = {
-        type: item.type,
-        name: item.fullname,
-        price: getPriceWithDiscount(new_cart[key]?.quantity ?? 0),
-        quantity: Number(selected_customs_quantity),
-        size: "default",
-        color: selected_customs_color,
-        code: item.code,
-        placement: null,
-        embroidery,
-      };
+      addCustomsToCart(selected_customs_black_quantity, "Black", new_cart);
+    }
 
-      if (new_cart[key]) {
-        new_cart[key].quantity += cart_item.quantity;
-        new_cart[key].price = cart_item.price;
-      } else {
-        new_cart[key] = cart_item;
-      }
+    if (selected_customs_white_quantity) {
+      any_input_has_value = true;
+      addCustomsToCart(selected_customs_white_quantity, "White", new_cart);
     }
 
     if (!any_input_has_value || invalid_input) {
     } else {
       setEmbroidery("");
-      set_selected_customs_quantity(null);
+      set_selected_customs_black_quantity(null);
+      set_selected_customs_white_quantity(null);
       set_cart(new_cart);
       sessionStorage.setItem("cart", JSON.stringify(new_cart));
       setSnackbarOpen(true);
     }
   }
 
-  function getPriceWithDiscount(current_quantity) {
+  function addCustomsToCart(quantity, color, new_cart) {
+    const key = `${item.code},${color}`;
+    const cart_item = {
+      type: item.type,
+      name: item.fullname,
+      price: getPriceWithDiscount(new_cart[key]?.quantity ?? 0, quantity),
+      quantity: Number(quantity),
+      size: "default",
+      color: color,
+      code: item.code,
+      placement: null,
+      embroidery,
+    };
+
+    if (new_cart[key]) {
+      new_cart[key].quantity += cart_item.quantity;
+      new_cart[key].price = cart_item.price;
+    } else {
+      new_cart[key] = cart_item;
+    }
+  }
+
+  function getPriceWithDiscount(cart_quantity, new_cart_item_quantity) {
     if (!item.discount) {
-      return item.sizes[selected_customs_quantity];
+      return item.sizes["default"];
     }
 
     /*
@@ -192,7 +202,7 @@ export default function Modification() {
       but im adding this check so we dont accidentally apply this logic to future items which may require
       discounts but have multiple sizes
     */
-    const total_quantity = current_quantity + selected_customs_quantity;
+    const total_quantity = cart_quantity + new_cart_item_quantity;
     if (Object.keys(item.sizes).length === 1) {
       let basePrice = item.sizes["default"];
       for (let i = 0; i < item.discount.length; i++) {
@@ -252,10 +262,14 @@ export default function Modification() {
           <QuantitySelector
             item={item}
             sizes={sizes}
-            selected_customs_quantity={selected_customs_quantity}
-            set_selected_customs_quantity={set_selected_customs_quantity}
-            selected_customs_color={selected_customs_color}
-            set_selected_customs_color={set_selected_customs_color}
+            set_selected_customs_white_quantity={
+              set_selected_customs_white_quantity
+            }
+            set_selected_customs_black_quantity={
+              set_selected_customs_black_quantity
+            }
+            selected_customs_black_quantity={selected_customs_black_quantity}
+            selected_customs_white_quantity={selected_customs_white_quantity}
           />
 
           <div
