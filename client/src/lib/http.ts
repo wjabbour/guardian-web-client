@@ -55,9 +55,10 @@ export async function update_historical_order(
   email,
   created_at,
   po,
+  customer_po,
   est_ship_date
 ) {
-  const body = { email, created_at: created_at + "", po, est_ship_date };
+  const body = { email, created_at: created_at + "", po, est_ship_date, customer_po };
 
   try {
     const response = await axios.post(

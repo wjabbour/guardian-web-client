@@ -13,6 +13,7 @@ export const handler = async (event): Promise<APIGatewayProxyResult> => {
       body.email,
       body.created_at,
       body.po,
+      body.customer_po,
       body.est_ship_date
     );
 

@@ -15,10 +15,13 @@ import Collapse from "@mui/material/Collapse";
 import TextField from "@mui/material/TextField";
 import { update_historical_order } from "../../lib/http";
 
-export default function Row({ orders }) {
+export default function Row({ orders, editClick, isAdmin }) {
   const [open, setOpen] = useState(false);
   const [edit, setEdit] = useState(false);
   const [po, setPo] = useState(orders[0].po || "N/A");
+  const [customer_po, set_customer_po] = useState(
+    orders[0].customer_po || "N/A"
+  );
   const [est_ship_date, set_est_ship_date] = useState(
     orders[0].est_ship_date || "N/A"
   );
@@ -31,12 +34,21 @@ export default function Row({ orders }) {
     setPo(e.target.value);
   }
 
+  function handleCustomerPo(e) {
+    set_customer_po(e.target.value);
+  }
+
   async function updateHistoricalOrder() {
+    editClick();
+    if (!isAdmin) {
+      return;
+    }
     if (edit) {
       await update_historical_order(
         orders[0].email,
         orders[0].created_at,
         po,
+        customer_po,
         est_ship_date
       );
       setEdit(false);
@@ -81,6 +93,14 @@ export default function Row({ orders }) {
             <TableCell align="center">
               <Box>
                 <TextField
+                  value={customer_po}
+                  onChange={handleCustomerPo}
+                ></TextField>
+              </Box>
+            </TableCell>
+            <TableCell align="center">
+              <Box>
+                <TextField
                   value={est_ship_date}
                   onChange={handleEstShipDate}
                 ></TextField>
@@ -91,9 +111,8 @@ export default function Row({ orders }) {
         {!edit && (
           <>
             <TableCell align="center">{po}</TableCell>
-            <TableCell align="center">
-              {est_ship_date}
-            </TableCell>
+            <TableCell align="center">{customer_po}</TableCell>
+            <TableCell align="center">{est_ship_date}</TableCell>
           </>
         )}
       </TableRow>
@@ -126,7 +145,7 @@ export default function Row({ orders }) {
                         width="10px"
                         sx={{ whiteSpace: "nowrap" }}
                       >
-                        {moment(row.created_at).format('MMMM DD, YYYY')}
+                        {moment(row.created_at).format("MMMM DD, YYYY")}
                       </TableCell>
                       <TableCell align="right">{row.first_name}</TableCell>
                       <TableCell align="right">{row.last_name}</TableCell>

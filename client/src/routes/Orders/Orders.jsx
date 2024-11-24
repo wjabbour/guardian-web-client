@@ -15,12 +15,21 @@ import Snackbar from "@mui/material/Snackbar";
 import Alert from "@mui/material/Alert";
 import Row from "./Row";
 import moment from "moment";
+import PasswordEntryDialog from "./PasswordEntryDialog";
 
 export default function BasicTable() {
   const navigate = useNavigate();
   const [orders, setOrders] = useState([]);
   const [errorSnackbarOpen, setErrorSnackbarOpen] = useState(false);
   const [errorSnackbarText, setErrorSnackbarText] = useState("");
+  const [isAdmin, setIsAdmin] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  function editClick() {
+    if (!isAdmin) {
+      setIsModalOpen(true);
+    }
+  }
 
   function handleSnackbarClose() {
     setErrorSnackbarOpen(false);
@@ -28,7 +37,7 @@ export default function BasicTable() {
 
   function rows() {
     return orders.map((order) => {
-      return <Row orders={order} />;
+      return <Row orders={order} editClick={editClick} isAdmin={isAdmin} />;
     });
   }
 
@@ -51,6 +60,7 @@ export default function BasicTable() {
             first_name: order.first_name,
             last_name: order.last_name,
             po: order.po,
+            customer_po: order.customer_po,
             est_ship_date: order.est_ship_date,
             code: o.code,
             color: o.color,
@@ -96,6 +106,7 @@ export default function BasicTable() {
               <TableCell align="center">Order Date</TableCell>
               <TableCell align="center">Items Purchased</TableCell>
               <TableCell align="center">PO</TableCell>
+              <TableCell align="center">Customer PO</TableCell>
               <TableCell align="center">Est Ship Date</TableCell>
             </TableRow>
           </TableHead>
@@ -109,6 +120,12 @@ export default function BasicTable() {
       >
         <Alert severity="error">{errorSnackbarText}</Alert>
       </Snackbar>
+      <PasswordEntryDialog
+        isAdmin={isAdmin}
+        setIsAdmin={setIsAdmin}
+        isModalOpen={isModalOpen}
+        setIsModalOpen={setIsModalOpen}
+      />
     </div>
   );
 }
