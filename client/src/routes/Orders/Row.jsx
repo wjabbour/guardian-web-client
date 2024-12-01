@@ -82,6 +82,7 @@ export default function Row({ orders, editClick, isAdmin }) {
         <TableCell align="center">
           {moment(orders[0].created_at).format("MMMM DD, YYYY")}
         </TableCell>
+        <TableCell align="center">{`${orders[0].quantity} x ${orders[0].color} ${orders[0].code}`}</TableCell>
         <TableCell align="center">{orders.length}</TableCell>
       </TableRow>
       <TableRow>
@@ -90,17 +91,25 @@ export default function Row({ orders, editClick, isAdmin }) {
             <Box>
               <Table style={{ marginBottom: "35px" }}>
                 <TableHead>
-                  <TableCell style={{fontWeight: 'bold'}}>Email</TableCell>
-                  <TableCell style={{fontWeight: 'bold'}}>Date</TableCell>
-                  <TableCell style={{fontWeight: 'bold'}}>First Name</TableCell>
-                  <TableCell style={{fontWeight: 'bold'}}>Last Name</TableCell>
-                  <TableCell style={{fontWeight: 'bold'}}>Code</TableCell>
-                  <TableCell style={{fontWeight: 'bold'}}>Color</TableCell>
-                  <TableCell style={{fontWeight: 'bold'}}>Quantity</TableCell>
-                  <TableCell style={{fontWeight: 'bold'}}>Embroidery</TableCell>
-                  <TableCell style={{fontWeight: 'bold'}}>Size</TableCell>
-                  <TableCell style={{fontWeight: 'bold'}}>Store</TableCell>
-                  <TableCell style={{fontWeight: 'bold'}}>Transaction ID</TableCell>
+                  <TableCell style={{ fontWeight: "bold" }}>Email</TableCell>
+                  <TableCell style={{ fontWeight: "bold" }}>Date</TableCell>
+                  <TableCell style={{ fontWeight: "bold" }}>
+                    First Name
+                  </TableCell>
+                  <TableCell style={{ fontWeight: "bold" }}>
+                    Last Name
+                  </TableCell>
+                  <TableCell style={{ fontWeight: "bold" }}>Code</TableCell>
+                  <TableCell style={{ fontWeight: "bold" }}>Color</TableCell>
+                  <TableCell style={{ fontWeight: "bold" }}>Quantity</TableCell>
+                  <TableCell style={{ fontWeight: "bold" }}>
+                    Embroidery
+                  </TableCell>
+                  <TableCell style={{ fontWeight: "bold" }}>Size</TableCell>
+                  <TableCell style={{ fontWeight: "bold" }}>Store</TableCell>
+                  <TableCell style={{ fontWeight: "bold" }}>
+                    Transaction ID
+                  </TableCell>
                 </TableHead>
                 <TableBody>
                   {orders.map((row, i) => (
