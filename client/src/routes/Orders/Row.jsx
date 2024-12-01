@@ -83,79 +83,41 @@ export default function Row({ orders, editClick, isAdmin }) {
           {moment(orders[0].created_at).format("MMMM DD, YYYY")}
         </TableCell>
         <TableCell align="center">{orders.length}</TableCell>
-        {edit && (
-          <>
-            <TableCell align="center">
-              <Box>
-                <TextField value={po} onChange={handlePo}></TextField>
-              </Box>
-            </TableCell>
-            <TableCell align="center">
-              <Box>
-                <TextField
-                  value={customer_po}
-                  onChange={handleCustomerPo}
-                ></TextField>
-              </Box>
-            </TableCell>
-            <TableCell align="center">
-              <Box>
-                <TextField
-                  value={est_ship_date}
-                  onChange={handleEstShipDate}
-                ></TextField>
-              </Box>
-            </TableCell>
-          </>
-        )}
-        {!edit && (
-          <>
-            <TableCell align="center">{po}</TableCell>
-            <TableCell align="center">{customer_po}</TableCell>
-            <TableCell align="center">{est_ship_date}</TableCell>
-          </>
-        )}
       </TableRow>
       <TableRow>
-        <TableCell
-          style={{ paddingBottom: 0, paddingTop: 0, borderBottom: "none" }}
-        >
+        <TableCell style={{ paddingBottom: 0, paddingTop: 0 }} colSpan={6}>
           <Collapse in={open} timeout="auto" unmountOnExit>
-            <Box style={{ marginLeft: "10%" }}>
-              <Table>
+            <Box>
+              <Table style={{ marginBottom: "35px" }}>
                 <TableHead>
-                  <TableCell>Email</TableCell>
-                  <TableCell align="right">Date</TableCell>
-                  <TableCell align="right">First Name</TableCell>
-                  <TableCell align="right">Last Name</TableCell>
-                  <TableCell align="right">Code</TableCell>
-                  <TableCell align="right">Color</TableCell>
-                  <TableCell align="right">Quantity</TableCell>
-                  <TableCell align="right">Embroidery</TableCell>
-                  <TableCell align="right">Size</TableCell>
-                  <TableCell align="right">Store</TableCell>
-                  <TableCell align="right">Transaction ID</TableCell>
+                  <TableCell style={{fontWeight: 'bold'}}>Email</TableCell>
+                  <TableCell style={{fontWeight: 'bold'}}>Date</TableCell>
+                  <TableCell style={{fontWeight: 'bold'}}>First Name</TableCell>
+                  <TableCell style={{fontWeight: 'bold'}}>Last Name</TableCell>
+                  <TableCell style={{fontWeight: 'bold'}}>Code</TableCell>
+                  <TableCell style={{fontWeight: 'bold'}}>Color</TableCell>
+                  <TableCell style={{fontWeight: 'bold'}}>Quantity</TableCell>
+                  <TableCell style={{fontWeight: 'bold'}}>Embroidery</TableCell>
+                  <TableCell style={{fontWeight: 'bold'}}>Size</TableCell>
+                  <TableCell style={{fontWeight: 'bold'}}>Store</TableCell>
+                  <TableCell style={{fontWeight: 'bold'}}>Transaction ID</TableCell>
                 </TableHead>
                 <TableBody>
                   {orders.map((row, i) => (
                     <TableRow>
                       <TableCell scope="row">{row.email}</TableCell>
-                      <TableCell
-                        align="right"
-                        width="10px"
-                        sx={{ whiteSpace: "nowrap" }}
-                      >
+                      <TableCell width="10px" sx={{ whiteSpace: "nowrap" }}>
                         {moment(row.created_at).format("MMMM DD, YYYY")}
                       </TableCell>
-                      <TableCell align="right">{row.first_name}</TableCell>
-                      <TableCell align="right">{row.last_name}</TableCell>
-                      <TableCell align="right">{row.code}</TableCell>
-                      <TableCell align="right">{row.color}</TableCell>
-                      <TableCell align="right">{row.quantity}</TableCell>
-                      <TableCell align="right">{row.embroidery}</TableCell>
-                      <TableCell align="right">{row.size}</TableCell>
-                      <TableCell align="right">{row.store}</TableCell>
-                      <TableCell align="right">{row.transaction_id}</TableCell>
+                      <TableCell>{row.first_name}</TableCell>
+                      <TableCell>{row.last_name}</TableCell>
+                      <TableCell>{row.code}</TableCell>
+                      <TableCell>{row.color}</TableCell>
+                      <TableCell>{row.quantity}</TableCell>
+                      <TableCell>{row.embroidery}</TableCell>
+                      <TableCell>{row.size}</TableCell>
+                      <TableCell>{row.store}</TableCell>
+                      <TableCell>{row.transaction_id}</TableCell>
                     </TableRow>
                   ))}
                 </TableBody>

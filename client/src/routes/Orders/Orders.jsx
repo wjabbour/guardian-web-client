@@ -105,9 +105,6 @@ export default function BasicTable() {
               <TableCell align="center">Last Name</TableCell>
               <TableCell align="center">Order Date</TableCell>
               <TableCell align="center">Items Purchased</TableCell>
-              <TableCell align="center">PO</TableCell>
-              <TableCell align="center">Customer PO</TableCell>
-              <TableCell align="center">Est Ship Date</TableCell>
             </TableRow>
           </TableHead>
           <TableBody>{rows()}</TableBody>
