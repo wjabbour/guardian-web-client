@@ -14,7 +14,6 @@ import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import Snackbar from "@mui/material/Snackbar";
 import Alert from "@mui/material/Alert";
 import Row from "./Row";
-import moment from "moment";
 import PasswordEntryDialog from "./PasswordEntryDialog";
 
 export default function BasicTable() {
@@ -37,7 +36,7 @@ export default function BasicTable() {
 
   function rows() {
     return orders.map((order) => {
-      return <Row orders={order} editClick={editClick} isAdmin={isAdmin} />;
+      return <Row order={order} editClick={editClick} isAdmin={isAdmin} />;
     });
   }
 
@@ -49,35 +48,9 @@ export default function BasicTable() {
         return;
       }
 
-      const orders = [];
-
-      res.success.data.orders.forEach((order) => {
-        const cart = [];
-        if (!order.bypass && !order.transaction_id) return;
-        order.order.forEach((o) => {
-          cart.push({
-            email: order.email,
-            first_name: order.first_name,
-            last_name: order.last_name,
-            po: order.po,
-            customer_po: order.customer_po,
-            est_ship_date: order.est_ship_date,
-            code: o.code,
-            color: o.color,
-            quantity: o.quantity,
-            embroidery: o.embroidery,
-            size: o.size,
-            store: order.store,
-            transaction_id: order.transaction_id || "N/A",
-            created_at: parseInt(order.created_at),
-          });
-        });
-
-        orders.push(cart);
-      });
-
+      const orders = res.success.data.orders;
       orders.sort((a, b) => {
-        return moment(b[0].created_at).isBefore(moment(a[0].created_at));
+        return b.created_at - a.created_at;
       });
 
       setOrders(orders);
@@ -100,12 +73,14 @@ export default function BasicTable() {
           <TableHead>
             <TableRow>
               <TableCell />
-              <TableCell />
+              <TableCell align="center">Email</TableCell>
               <TableCell align="center">First Name</TableCell>
               <TableCell align="center">Last Name</TableCell>
               <TableCell align="center">Order Date</TableCell>
               <TableCell align="center">Order Preview</TableCell>
               <TableCell align="center">Items Purchased</TableCell>
+              <TableCell align="center">Store</TableCell>
+              <TableCell align="center">Transaction ID</TableCell>
             </TableRow>
           </TableHead>
           <TableBody>{rows()}</TableBody>

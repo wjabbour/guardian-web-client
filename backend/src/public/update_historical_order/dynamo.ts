@@ -1,40 +1,36 @@
 import { DynamoDBClient, UpdateItemCommand } from "@aws-sdk/client-dynamodb";
+import { DynamoDBDocumentClient, UpdateCommand } from "@aws-sdk/lib-dynamodb";
+import { marshall } from "@aws-sdk/util-dynamodb";
 
 export class Dynamo {
   client: DynamoDBClient;
+  documentClient: DynamoDBDocumentClient;
 
   constructor() {
     this.client = new DynamoDBClient({ region: "us-east-1" });
+    this.documentClient = DynamoDBDocumentClient.from(this.client, {
+      marshallOptions: {
+        removeUndefinedValues: true,
+      },
+    });
   }
 
-  async updateOrderData(
-    email: string,
-    created_at: string,
-    po: string,
-    customer_po: string,
-    est_ship_date: string
-  ) {
-    const update_command = new UpdateItemCommand({
+  async updateOrderData(email: string, created_at: string, cart: any) {
+    const update_command = new UpdateCommand({
       Key: {
-        email: { S: email },
-        created_at: { S: created_at },
+        email,
+        created_at,
       },
-      UpdateExpression:
-        "set po = :po, est_ship_date = :est_ship_date, customer_po = :customer_po",
+      UpdateExpression: "set #order = :cart",
       ExpressionAttributeValues: {
-        ":po": {
-          S: po,
-        },
-        ":customer_po": {
-          S: customer_po,
-        },
-        ":est_ship_date": {
-          S: est_ship_date,
-        },
+        ":cart": cart,
+      },
+      ExpressionAttributeNames: {
+        "#order": "order",
       },
       TableName: "archived_orders",
     });
 
-    await this.client.send(update_command);
+    await this.documentClient.send(update_command);
   }
 }

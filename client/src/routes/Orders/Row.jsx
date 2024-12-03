@@ -15,16 +15,18 @@ import Collapse from "@mui/material/Collapse";
 import TextField from "@mui/material/TextField";
 import { update_historical_order } from "../../lib/http";
 
-export default function Row({ orders, editClick, isAdmin }) {
+export default function Row({ order, editClick, isAdmin }) {
+  const cart = [];
+  order.order.forEach((order) => {
+    cart.push({ ...order });
+  });
+
   const [open, setOpen] = useState(false);
   const [edit, setEdit] = useState(false);
-  const [po, setPo] = useState(orders[0].po || "N/A");
-  const [customer_po, set_customer_po] = useState(
-    orders[0].customer_po || "N/A"
-  );
-  const [est_ship_date, set_est_ship_date] = useState(
-    orders[0].est_ship_date || "N/A"
-  );
+  const [po, setPo] = useState("N/A");
+  const [customer_po, set_customer_po] = useState("N/A");
+  const [est_ship_date, set_est_ship_date] = useState("N/A");
+  const [last_clicked_idx, set_last_clicked_idx] = useState(null);
 
   function handleEstShipDate(e) {
     set_est_ship_date(e.target.value);
@@ -38,23 +40,26 @@ export default function Row({ orders, editClick, isAdmin }) {
     set_customer_po(e.target.value);
   }
 
-  async function updateHistoricalOrder() {
-    editClick();
-    if (!isAdmin) {
-      return;
-    }
+  async function handleEditClick(e, i) {
+    // confirming the edit
+    // set the fields first before popping password modal so that values can be passed to textfield on next render
     if (edit) {
-      await update_historical_order(
-        orders[0].email,
-        orders[0].created_at,
-        po,
-        customer_po,
-        est_ship_date
-      );
+      order.order[i].po = po;
+      order.order[i].customer_po = customer_po;
+      order.order[i].est_ship_date = est_ship_date;
+      await update_historical_order(order.email, order.created_at, order.order);
+    }
+    set_last_clicked_idx(i);
+    setPo(cart[i].po);
+    set_est_ship_date(cart[i].est_ship_date);
+    set_customer_po(cart[i].customer_po);
+    editClick();
+    if (edit) {
       setEdit(false);
     } else {
       setEdit(true);
     }
+    if (!isAdmin) return;
   }
 
   return (
@@ -69,36 +74,24 @@ export default function Row({ orders, editClick, isAdmin }) {
             {open ? <KeyboardArrowUpIcon /> : <KeyboardArrowDownIcon />}
           </IconButton>
         </TableCell>
-        <TableCell>
-          <SvgIcon
-            style={{ cursor: "pointer" }}
-            onClick={updateHistoricalOrder}
-          >
-            <EditIcon />
-          </SvgIcon>
-        </TableCell>
-        <TableCell align="center">{orders[0].first_name}</TableCell>
-        <TableCell align="center">{orders[0].last_name}</TableCell>
+        <TableCell align="center">{order.email}</TableCell>
+        <TableCell align="center">{order.first_name}</TableCell>
+        <TableCell align="center">{order.last_name}</TableCell>
         <TableCell align="center">
-          {moment(orders[0].created_at).format("MMMM DD, YYYY")}
+          {moment(parseInt(order.created_at)).format("MMMM DD, YYYY")}
         </TableCell>
-        <TableCell align="center">{`${orders[0].quantity} x ${orders[0].color} ${orders[0].code}`}</TableCell>
-        <TableCell align="center">{orders.length}</TableCell>
+        <TableCell align="center">{`${cart[0].quantity} x ${cart[0].color} ${cart[0].code}`}</TableCell>
+        <TableCell align="center">{cart.length}</TableCell>
+        <TableCell align="center">{order.store}</TableCell>
+        <TableCell align="center">{order.transaction_id || "N/A"}</TableCell>
       </TableRow>
       <TableRow>
-        <TableCell style={{ paddingBottom: 0, paddingTop: 0 }} colSpan={6}>
+        <TableCell style={{ paddingBottom: 0, paddingTop: 0 }} colSpan={9}>
           <Collapse in={open} timeout="auto" unmountOnExit>
             <Box>
               <Table style={{ marginBottom: "35px" }}>
                 <TableHead>
-                  <TableCell style={{ fontWeight: "bold" }}>Email</TableCell>
-                  <TableCell style={{ fontWeight: "bold" }}>Date</TableCell>
-                  <TableCell style={{ fontWeight: "bold" }}>
-                    First Name
-                  </TableCell>
-                  <TableCell style={{ fontWeight: "bold" }}>
-                    Last Name
-                  </TableCell>
+                  <TableCell />
                   <TableCell style={{ fontWeight: "bold" }}>Code</TableCell>
                   <TableCell style={{ fontWeight: "bold" }}>Color</TableCell>
                   <TableCell style={{ fontWeight: "bold" }}>Quantity</TableCell>
@@ -106,27 +99,60 @@ export default function Row({ orders, editClick, isAdmin }) {
                     Embroidery
                   </TableCell>
                   <TableCell style={{ fontWeight: "bold" }}>Size</TableCell>
-                  <TableCell style={{ fontWeight: "bold" }}>Store</TableCell>
                   <TableCell style={{ fontWeight: "bold" }}>
-                    Transaction ID
+                    Customer PO
+                  </TableCell>
+                  <TableCell style={{ fontWeight: "bold" }}>PO</TableCell>
+                  <TableCell style={{ fontWeight: "bold" }}>
+                    Est. Ship Date
                   </TableCell>
                 </TableHead>
                 <TableBody>
-                  {orders.map((row, i) => (
+                  {cart.map((row, i) => (
                     <TableRow>
-                      <TableCell scope="row">{row.email}</TableCell>
-                      <TableCell width="10px" sx={{ whiteSpace: "nowrap" }}>
-                        {moment(row.created_at).format("MMMM DD, YYYY")}
+                      <TableCell>
+                        <SvgIcon
+                          style={{ cursor: "pointer" }}
+                          onClick={(e) => handleEditClick(e, i)}
+                        >
+                          <EditIcon />
+                        </SvgIcon>
                       </TableCell>
-                      <TableCell>{row.first_name}</TableCell>
-                      <TableCell>{row.last_name}</TableCell>
                       <TableCell>{row.code}</TableCell>
                       <TableCell>{row.color}</TableCell>
                       <TableCell>{row.quantity}</TableCell>
                       <TableCell>{row.embroidery}</TableCell>
                       <TableCell>{row.size}</TableCell>
-                      <TableCell>{row.store}</TableCell>
-                      <TableCell>{row.transaction_id}</TableCell>
+                      {edit && isAdmin && last_clicked_idx === i && (
+                        <Fragment>
+                          <TableCell>
+                            <TextField
+                              value={customer_po}
+                              onChange={handleCustomerPo}
+                            ></TextField>
+                          </TableCell>
+                          <TableCell>
+                            <TextField
+                              value={po}
+                              onChange={handlePo}
+                            ></TextField>
+                          </TableCell>
+                          <TableCell>
+                            <TextField
+                              value={est_ship_date}
+                              onChange={handleEstShipDate}
+                            ></TextField>
+                          </TableCell>
+                        </Fragment>
+                      )}
+
+                      {(!edit || i !== last_clicked_idx) && (
+                        <Fragment>
+                          <TableCell>{row.customer_po || "N/A"}</TableCell>
+                          <TableCell>{row.po || "N/A"}</TableCell>
+                          <TableCell>{row.est_ship_date || "N/A"}</TableCell>
+                        </Fragment>
+                      )}
                     </TableRow>
                   ))}
                 </TableBody>

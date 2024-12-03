@@ -54,11 +54,9 @@ export async function capture_order(order_id) {
 export async function update_historical_order(
   email,
   created_at,
-  po,
-  customer_po,
-  est_ship_date
+  cart
 ) {
-  const body = { email, created_at: created_at + "", po, est_ship_date, customer_po };
+  const body = { email, created_at: created_at + "", cart };
 
   try {
     const response = await axios.post(

@@ -9,13 +9,7 @@ export const handler = async (event): Promise<APIGatewayProxyResult> => {
     const body = JSON.parse(event.body) || "{}";
     logger.info({ message: "Received body", body });
 
-    await dynamo.updateOrderData(
-      body.email,
-      body.created_at,
-      body.po,
-      body.customer_po,
-      body.est_ship_date
-    );
+    await dynamo.updateOrderData(body.email, body.created_at, body.cart);
 
     return {
       statusCode: 200,
