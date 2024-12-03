@@ -21,6 +21,8 @@ export default function Row({ order, editClick, isAdmin }) {
     cart.push({ ...order });
   });
 
+  console.log(order)
+
   const [open, setOpen] = useState(false);
   const [edit, setEdit] = useState(false);
   const [po, setPo] = useState("N/A");
@@ -80,7 +82,7 @@ export default function Row({ order, editClick, isAdmin }) {
         <TableCell align="center">
           {moment(parseInt(order.created_at)).format("MMMM DD, YYYY")}
         </TableCell>
-        <TableCell align="center">{`${cart[0].quantity} x ${cart[0].color} ${cart[0].code}`}</TableCell>
+        <TableCell align="center">{`${cart[0].quantity} x ${cart[0].color} ${cart[0].description || cart[0].code}`}</TableCell>
         <TableCell align="center">{cart.length}</TableCell>
         <TableCell align="center">{order.store}</TableCell>
         <TableCell align="center">{order.transaction_id || "N/A"}</TableCell>
@@ -93,6 +95,7 @@ export default function Row({ order, editClick, isAdmin }) {
                 <TableHead>
                   <TableCell />
                   <TableCell style={{ fontWeight: "bold" }}>Code</TableCell>
+                  <TableCell style={{ fontWeight: "bold" }}>Description</TableCell>
                   <TableCell style={{ fontWeight: "bold" }}>Color</TableCell>
                   <TableCell style={{ fontWeight: "bold" }}>Quantity</TableCell>
                   <TableCell style={{ fontWeight: "bold" }}>
@@ -119,6 +122,7 @@ export default function Row({ order, editClick, isAdmin }) {
                         </SvgIcon>
                       </TableCell>
                       <TableCell>{row.code}</TableCell>
+                      <TableCell>{row.description}</TableCell>
                       <TableCell>{row.color}</TableCell>
                       <TableCell>{row.quantity}</TableCell>
                       <TableCell>{row.embroidery}</TableCell>
