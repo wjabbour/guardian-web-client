@@ -21,8 +21,6 @@ export default function Row({ order, editClick, isAdmin }) {
     cart.push({ ...order });
   });
 
-  console.log(order)
-
   const [open, setOpen] = useState(false);
   const [edit, setEdit] = useState(false);
   const [po, setPo] = useState("N/A");

@@ -3,6 +3,19 @@ import { unmarshall } from "@aws-sdk/util-dynamodb";
 import { DynamoDBDocumentClient, PutCommand } from "@aws-sdk/lib-dynamodb";
 import { logger } from "../utils";
 
+interface Order {
+  email: string;
+  order: any;
+  first_name: string;
+  last_name: string;
+  store: string;
+  company_name: string;
+  customer_po: string;
+  order_id: string;
+  bypass: number;
+  paid: number;
+}
+
 export class Dynamo {
   client: DynamoDBClient;
   documentClient: DynamoDBDocumentClient;
@@ -37,51 +50,21 @@ export class Dynamo {
     }
   }
 
-  // return composite key so that we can re-fetch for tameron orders
-  async createOrder(
-    email: string,
-    cart,
-    first_name: string,
-    last_name: string,
-    store: string,
-    company_name: string,
-    order_id: string,
-    table_name: string,
-    bypass: number
-  ) {
-    logger.info({
-      email,
-      cart,
-      first_name,
-      last_name,
-      store,
-      company_name,
-      order_id,
-      table_name,
-      bypass,
-    });
-
+  // return created_at so that we can re-fetch for tameron orders
+  async createOrder(order: Order, table_name: string) {
     const created_at = Date.now() + "";
+
+    order["paid_at"] = "-1";
+    order["created_at"] = created_at;
+    logger.info(order);
 
     await this.documentClient.send(
       new PutCommand({
-        Item: {
-          email,
-          first_name,
-          last_name,
-          store,
-          company_name,
-          bypass,
-          created_at,
-          paid_at: "-1",
-          order: cart,
-          order_id,
-          paid: bypass,
-        },
+        Item: order,
         TableName: table_name,
       })
     );
 
-    return { email, created_at };
+    return created_at;
   }
 }

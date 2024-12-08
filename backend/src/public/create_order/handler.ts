@@ -38,9 +38,13 @@ export const handler = async (
       };
     }
 
-    const store_code = getStoreCode(body.store);
+    const email = body.email;
+    const first_name = body.first_name;
+    const customer_po = body.customer_po || "";
+    const last_name = body.last_name;
+    const store = getStoreCode(body.store);
 
-    if (!store_code) {
+    if (!store) {
       logger.warn({ message: "Unrecognized store" });
       return {
         statusCode: 400,
@@ -49,9 +53,9 @@ export const handler = async (
       };
     }
 
-    logger.info({ message: "Determined store code", store_code });
+    logger.info({ message: "Determined store code", store });
 
-    const cart = construct_cart(body.cart, event.headers?.origin);
+    const cart = construct_cart(body.cart, customer_po, event.headers?.origin);
     logger.info({ message: "Constructed cart", cart });
 
     const price = calculate_price(cart, event.headers?.origin);
@@ -66,16 +70,21 @@ export const handler = async (
         Tameron orders should be sent immediately, so we don't need to wait for the send_order_data cron
         to run and move the order from orders table to archived_orders
       */
-      const { email, created_at } = await dynamo.createOrder(
-        body.email,
-        cart,
-        body.first_name,
-        body.last_name,
-        store_code,
-        company_name,
-        "-1",
-        "archived_orders",
-        1
+
+      const created_at = await dynamo.createOrder(
+        {
+          email,
+          order: cart,
+          first_name,
+          last_name,
+          store,
+          company_name,
+          customer_po,
+          bypass: 1,
+          order_id: "-1",
+          paid: 1,
+        },
+        "archived_orders"
       );
       const order = await dynamo.getOrder(email, created_at);
       logger.info("Received Tameron order", order);
@@ -88,16 +97,21 @@ export const handler = async (
     if (body.bypassPaypal) {
       logger.info({ message: "Bypassing PayPal" });
       await dynamo.createOrder(
-        body.email,
-        cart,
-        body.first_name,
-        body.last_name,
-        store_code,
-        company_name,
-        "-1",
-        "orders",
-        1
+        {
+          email,
+          order: cart,
+          first_name,
+          last_name,
+          store,
+          customer_po,
+          company_name,
+          bypass: 1,
+          order_id: "-1",
+          paid: 1,
+        },
+        "orders"
       );
+
       return {
         statusCode: 200,
         headers: addCors(event.headers?.origin),
@@ -107,15 +121,19 @@ export const handler = async (
       logger.info({ message: "Received order id", order_id });
 
       await dynamo.createOrder(
-        body.email,
-        cart,
-        body.first_name,
-        body.last_name,
-        store_code,
-        company_name,
-        order_id,
-        "orders",
-        0
+        {
+          email,
+          order: cart,
+          first_name,
+          last_name,
+          store,
+          customer_po,
+          company_name,
+          bypass: 0,
+          order_id,
+          paid: 0,
+        },
+        "orders"
       );
 
       return {
@@ -134,7 +152,7 @@ export const handler = async (
   }
 };
 
-function construct_cart(cart, origin) {
+function construct_cart(cart: any, customer_po: string, origin: string) {
   const massaged_cart = [];
   Object.keys(cart).forEach((k) => {
     const obj = {};
@@ -158,6 +176,8 @@ function construct_cart(cart, origin) {
       obj["size"],
       obj["quantity"]
     );
+
+    obj["customer_po"] = customer_po;
     massaged_cart.push(obj);
   });
 

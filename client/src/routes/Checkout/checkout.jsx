@@ -30,10 +30,12 @@ export default function Checkout() {
   const last_name_ref = useRef(null);
   const email_ref = useRef(null);
   const store_ref = useRef(null);
+  const customer_po_ref = useRef(null);
   const [first_name, set_first_name] = useState("");
   const [last_name, set_last_name] = useState("");
   const [email, set_email] = useState("");
   const [code, set_code] = useState("");
+  const [customer_po, set_customer_po] = useState("");
   const [isLoading, setLoading] = useState(false);
   const [bypass_paypal, set_bypass_paypal] = useState(false);
   const [snackbarOpen, setSnackbarOpen] = useState(false);
@@ -53,8 +55,9 @@ export default function Checkout() {
     const last_name = last_name_ref.current.value;
     const email = email_ref.current.value;
     const store = store_ref.current.value;
+    const customer_po = customer_po_ref.current.value;
 
-    return { first_name, last_name, store, email, cart };
+    return { first_name, last_name, store, email, cart, customer_po };
   }
 
   const bypassPaypalCheckout = async () => {
@@ -74,6 +77,7 @@ export default function Checkout() {
       last_name_ref.current.value = "";
       email_ref.current.value = "";
       store_ref.current.value = "";
+      customer_po_ref.current.value = "";
       navigate("/success", {
         state: {
           cart: { ...cart },
@@ -121,6 +125,7 @@ export default function Checkout() {
             last_name_ref.current.value = "";
             email_ref.current.value = "";
             store_ref.current.value = "";
+            customer_po_ref.current.value = "";
 
             navigate("/success", {
               state: {
@@ -166,6 +171,10 @@ export default function Checkout() {
     set_store(event.target.value);
   };
 
+  const handle_customer_po = (event) => {
+    set_customer_po(event.target.value);
+  };
+
   function handleSnackbarClose() {
     setSnackbarOpen(false);
     setErrorSnackbarOpen(false);
@@ -206,6 +215,14 @@ export default function Checkout() {
           onChange={handle_email}
           id=""
           label="Email"
+          variant="filled"
+        />
+        <TextField
+          inputRef={customer_po_ref}
+          className={styles.text__field}
+          onChange={handle_customer_po}
+          id=""
+          label="Customer PO"
           variant="filled"
         />
         <FormControl
