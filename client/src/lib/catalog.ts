@@ -9,6 +9,8 @@ export const Catalog = function (): CatalogItem[] {
   const url = window.location.href;
   if (url.includes("localhost:3000")) {
     return NewCustomerCatalog;
+  } else if (url.includes("newcustomer.gpstivers.com")) {
+    return NewCustomerCatalog;
   } else if (url.includes("gpstivers.com")) {
     return StiversCatalog;
   } else if (url.includes("gp---------.com")) {
