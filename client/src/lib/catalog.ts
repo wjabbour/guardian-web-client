@@ -3,11 +3,12 @@ import { TameronCatalog } from "../catalogs/tameron";
 import { StiversCatalog } from "../catalogs/stivers";
 import { NewSiteCatalog } from "../catalogs/gp---------";
 import { PremierCatalog } from "../catalogs/premier";
+import { NewCustomerCatalog } from "../catalogs/newcustomer";
 
 export const Catalog = function (): CatalogItem[] {
   const url = window.location.href;
   if (url.includes("localhost:3000")) {
-    return TameronCatalog;
+    return NewCustomerCatalog;
   } else if (url.includes("gpstivers.com")) {
     return StiversCatalog;
   } else if (url.includes("gp---------.com")) {

@@ -1,13 +1,14 @@
 import { config as PremierConfig } from "../configs/premier";
 import { config as StiversConfig } from "../configs/stivers";
 import { config as TameronConfig } from "../configs/tameron";
+import { config as NewCustomerConfig } from "../configs/newcustomer";
 import { config as NewSiteConfig } from "../configs/gp-------";
 import { Config } from "./interfaces";
 
 export function getConfigValue(val: keyof Config) {
   const url = window.location.href;
   if (url.includes("localhost:3000")) {
-    return TameronConfig[val];
+    return NewCustomerConfig[val];
   } else if (url.includes("gpstivers.com")) {
     return StiversConfig[val];
   } else if (url.includes("gp---------.com")) {
