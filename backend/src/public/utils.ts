@@ -35,21 +35,19 @@ export const COMPANIES: { [index: string]: string } = {
 
 const STORES = {
   "Stivers Ford Montgomery, 4000 Eastern Blvd Montgomery, AL, 36116": "STIFMO",
-  "Stivers Ford Montgomery, 500 Palisades Blvd, Birmingham, AL, 35209":
-    "STIFBI",
+  "Stivers Ford Montgomery, 500 Palisades Blvd, Birmingham, AL, 35209": "STIFBI",
   "Stivers Hyundai, 9950 Farrow Rd, Columbia, SC, 29203": "STIHCO",
   "Stivers CDJR, 2209 Cobbs Ford Road, Prattville, AL 36066": "STICPR",
-  "Stivers Decatur Subaru, 1950 Orion DR, Decatur, GA 30033": "STISDE",
+  "Stivers Decatur Subaru, 1950 Orion Dr, Decatur, GA 30033": "STISDE",
   "Stivers Chevrolet, 111 Newland Road, Columbia, SC 29229": "STICCO",
-  "Stivers Ford South Atlanta, 4355 Jonesboro Rd, Union City, GA 30291":
-    "STIFSO",
-  "Tameron Honda, 9871 Justina Ave Daphne, AL 36526": "TAMHDA",
-  "Tameron Buick GMC, 27161 US - 98 Daphne, AL 36526": "TAMBDA",
+  "Stivers Ford South Atlanta, 4355 Jonesboro Rd, Union City, GA 30291": "STIFSO",
+  "Tameron Honda, 9871 Justina Ave, Daphne, AL 36526": "TAMHDA",
+  "Tameron Buick GMC, 27161 US - 98, Daphne, AL 36526": "TAMBDA",
   "Tameron CDJR, 27161 US - 98 Daphne, AL 36526": "TAMCDA",
   "Tameron Subaru, 1431 I-65 Service Road Mobile, AL 36606": "TAMSMO",
-  "Tameron Nissan, 1015 E. I65 Service Road South Mobile, AL 36606": "TAMNMO",
-  "Tameron Kia, 10611 Boney Ave D'Iberville, MS 39540": "TAMKDI",
-  "Tameron Kia Westbank, 1884 Westbank Expressway Harvey, LA 70058": "TAMKWE",
+  "Tameron Nissan, 1015 E. I65 Service Road, South Mobile, AL 36606": "TAMNMO",
+  "Tameron Kia, 10611 Boney Ave, D'Iberville, MS 39540": "TAMKDI",
+  "Tameron Kia Westbank, 1884 Westbank Expressway, Harvey, LA 70058": "TAMKWE",
   "Tameron Honda, 1675 Montgomery Blvd Birmingham, AL 35216": "TAMHBI",
   "Tameron Hyundai, 1595 Montgomery Hwy Hoover, AL 35216": "TAMEHO",
   "Premier Honda, 11801 E I-10 Service Rd, New Orleans, LA 70128": "PREHNE",
@@ -63,6 +61,23 @@ const STORES = {
   "Premier CDJR of Harvey, 1660 Westbrook Expressway, Harvey, LA 70058":
     "PRECHB",
   "Premier Nissan, 6636 Veterans Blvd, Metarie, LA 70003": "PRENME",
+  "Leith Acura, 2300 Capital Summit Court, Raleigh, NC 27616": "10118LEIARA",
+  "Chris Leith Automotive, PO Box 1707, Wake Forest, NC 27588": "CHRIWA",
+  "Leith Acura, 2300 Capital Summit Ct, Raleigh, NC 27616": "LEIARA",
+  "Leith CDJR, 11220 N. US HWY 15 501 N, Aberdeen, NC 27603": "LEICAB",
+  "Leith Chrysler Jeep, 400 Autopark Boulevard, Cary, NC 27511": "LEICCA",
+  "Leith Corporate Headquarters, 8005 Capital Blvd, Raleigh, NC 27616": "LEICRA",
+  "Leith Ford, PO Box 1809, Wendell, NC 27591": "LEIFWE",
+  "Leith Honda, 3940 Capital Hills Drive, Raleigh, NC 27616": "LEIHRA",
+  "Leith Lincoln, 2350 Capital Summit Ct, Raleigh, NC 27616": "LEILRA",
+  "Leith Nissan, 2100 Auto Park Drive, Cary, NC 27511": "LEINCA",
+  "Leith Nissan, 2000 Auto Park Drive, Cary, NC 27511": "LEITCA",
+  "Leith BMW/Mercedes Benz, 5603 Capital Blvd, Raleigh, NC 27616": "LEITR2",
+  "Leith Mercedes, 5601 Capital Boulevard, Raleigh, NC 27616": "LEITRA",
+  "Leith Toyota, 8005 Capital Blvd, Raleigh, NC 27616": "LEITRL",
+  "Leith Autopark Kia, 5330 Rolesville Rd, Wendell, NC 27591": "LEITWE",
+  "Leith Volkswagen, 4005 Capital Hills Drive, Raleigh, NC 27616": "LEIVRA",
+  "Leith Chrysler Jeep, 5500 Capital Blvd, Raleigh, NC 27619": "LETCRA",
 };
 
 export function getStoreCode(store) {

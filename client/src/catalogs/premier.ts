@@ -156,6 +156,8 @@ export const PremierCatalog: CatalogItem[] = [
       "2XLarge": 32.99,
       "3XLarge": 33.99,
       "4XLarge": 34.99,
+      "5XLarge": 35.99,
+      "6XLarge": 36.99,
     },
   },
   {
