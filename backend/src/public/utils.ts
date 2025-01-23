@@ -7,6 +7,7 @@ export const logger = pino();
 
 const ALLOWED_ORIGINS = [
   "http://localhost:3000",
+  "https://newcustomer.gpstivers.com",
   "https://gpstivers.com",
   "https://gptameron.com",
   "https://gp-premier.com",
@@ -29,6 +30,7 @@ export function addCors(origin, map?) {
 export const COMPANIES: { [index: string]: string } = {
   "http://localhost:3000": "Stivers",
   "https://gpstivers.com": "Stivers",
+  "https://newcustomer.gpstivers.com": "Stivers",
   "https://gptameron.com": "Tameron",
   "https://gp-premier.com": "Premier",
 };
