@@ -39,6 +39,5 @@ export const KNOWN_CODES = [
   "LEITRL",
   "LEITWE",
   "LEIVRA",
-  "LETCRA",
-  "HOUSE0",
+  "LETCRA",  
 ]
