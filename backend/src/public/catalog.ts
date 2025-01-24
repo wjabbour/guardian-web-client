@@ -1,6 +1,7 @@
 import { TameronCatalog } from "./catalogs/tameron";
 import { StiversCatalog } from "./catalogs/stivers";
 import { PremierCatalog } from "./catalogs/premier";
+import {NewcustomerCatalog} from "./catalogs/newcustomer";
 import { CatalogItem } from "./interfaces";
 
 export const Catalog = function (origin): CatalogItem[] {
@@ -14,6 +15,6 @@ export const Catalog = function (origin): CatalogItem[] {
   } else if (url.includes("gp-premier.com")) {
     return PremierCatalog; 
   } else if (url.includes("newcustomer.gpstivers.com")) {
-    return StiversCatalog; 
+    return NewcustomerCatalog; 
   }
 };
