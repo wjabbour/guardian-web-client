@@ -6,19 +6,10 @@ export const config = {
     minimum_apparel_order: false,
     render_logo_preview: false,
     embroideries: {
-      hat: [
-        "Guardian",        
-      ],
-      mens: [
-        "Guardian",
-      ],
-      womens: [
-        "Guardian",
-      ],
-      accessory: [
-        "Guardian",     
-       
-      ],
+      hat: ["Guardian"],          
+      mens:["Guardian"],    
+      womens: ["Guardian"],       
+      accessory: ["Guardian"],
       customs: [],
     },
     stores: [
