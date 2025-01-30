@@ -56,6 +56,7 @@ export default function BasicTable() {
       setOrders(orders);
     });
   }, []);
+
   return (
     <div className={styles.container}>
       <div

@@ -62,6 +62,7 @@ export default function Row({ order, editClick, isAdmin }) {
     if (!isAdmin) return;
   }
 
+
   return (
     <Fragment>
       <TableRow sx={{ "& > *": { borderBottom: "unset" } }}>
@@ -80,12 +81,14 @@ export default function Row({ order, editClick, isAdmin }) {
         <TableCell align="center">
           {moment(parseInt(order.created_at)).format("MMMM DD, YYYY")}
         </TableCell>
-        <TableCell align="center">{`${cart[0].quantity} x ${cart[0].color} ${cart[0].description || cart[0].code}`}</TableCell>
+        <TableCell align="center">{`${cart[0].quantity} x ${cart[0].color} ${
+          cart[0].description || cart[0].code
+        }`}</TableCell>
         <TableCell align="center">{cart.length}</TableCell>
         <TableCell align="center">{order.store}</TableCell>
         <TableCell align="center">{order.transaction_id || "N/A"}</TableCell>
       </TableRow>
-      <TableRow>
+      <TableRow style={{ backgroundColor: "#fdf1bb" }}>
         <TableCell style={{ paddingBottom: 0, paddingTop: 0 }} colSpan={9}>
           <Collapse in={open} timeout="auto" unmountOnExit>
             <Box>
@@ -93,7 +96,9 @@ export default function Row({ order, editClick, isAdmin }) {
                 <TableHead>
                   <TableCell />
                   <TableCell style={{ fontWeight: "bold" }}>Code</TableCell>
-                  <TableCell style={{ fontWeight: "bold" }}>Description</TableCell>
+                  <TableCell style={{ fontWeight: "bold" }}>
+                    Description
+                  </TableCell>
                   <TableCell style={{ fontWeight: "bold" }}>Color</TableCell>
                   <TableCell style={{ fontWeight: "bold" }}>Quantity</TableCell>
                   <TableCell style={{ fontWeight: "bold" }}>
