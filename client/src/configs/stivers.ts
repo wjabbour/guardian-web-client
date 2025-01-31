@@ -49,5 +49,6 @@ export const config = {
     "Stivers Decatur Subaru, 1950 Orion Dr, Decatur, GA 30033",
     "Stivers Chevrolet, 111 Newland Road, Columbia, SC 29229",
     "Stivers Ford South Atlanta, 4355 Jonesboro Rd, Union City, GA 30291",
+    "Stivers Ford Troy, 121 US-231, Troy, AL 36081",
   ],
 };

@@ -43,6 +43,7 @@ const STORES = {
   "Stivers Decatur Subaru, 1950 Orion Dr, Decatur, GA 30033": "STISDE",
   "Stivers Chevrolet, 111 Newland Road, Columbia, SC 29229": "STICCO",
   "Stivers Ford South Atlanta, 4355 Jonesboro Rd, Union City, GA 30291": "STIFSO",
+  "Stivers Ford Troy, 121 US-231, Troy, AL 36081": "STIFTR",
   "Tameron Honda, 9871 Justina Ave, Daphne, AL 36526": "TAMHDA",
   "Tameron Buick GMC, 27161 US - 98, Daphne, AL 36526": "TAMBDA",
   "Tameron CDJR, 27161 US - 98 Daphne, AL 36526": "TAMCDA",
