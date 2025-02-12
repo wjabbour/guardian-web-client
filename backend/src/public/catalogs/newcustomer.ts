@@ -385,8 +385,5 @@ export const NewcustomerCatalog: CatalogItem[] = [
     sizes: {
       Default: 0.00,
     },
-  },
-
-   },
   },   
 ];
