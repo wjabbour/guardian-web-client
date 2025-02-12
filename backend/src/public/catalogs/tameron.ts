@@ -8,11 +8,11 @@ export const TameronCatalog: CatalogItem[] = [
     type: "customs",
     default_color: "Black",
     discount: [
-      { quantity: 1000, price: 0.49 },
-      { quantity: 2500, price: 0.45 },
+      { quantity: 1000, price: 0.00 },
+      { quantity: 2500, price: 0.00 },
     ],
     sizes: {
-      default: 0.59,
+      default: 0.00,
     },
   },
   {
@@ -23,11 +23,11 @@ export const TameronCatalog: CatalogItem[] = [
     type: "customs",
     default_color: "Black",
     discount: [
-      { quantity: 1000, price: 0.49 },
-      { quantity: 2500, price: 0.45 },
+      { quantity: 1000, price: 0.00 },
+      { quantity: 2500, price: 0.00 },
     ],
     sizes: {
-      default: 0.59,
+      default: 0.00,
     },
   },
   {
@@ -38,11 +38,11 @@ export const TameronCatalog: CatalogItem[] = [
     type: "customs",
     default_color: "Black",
     discount: [
-      { quantity: 1000, price: 0.49 },
-      { quantity: 2500, price: 0.45 },
+      { quantity: 1000, price: 0.00 },
+      { quantity: 2500, price: 0.00 },
     ],
     sizes: {
-      default: 0.59,
+      default: 0.00,
     },
   },
   {
@@ -53,11 +53,11 @@ export const TameronCatalog: CatalogItem[] = [
     type: "customs",
     default_color: "Black",
     discount: [
-      { quantity: 1000, price: 0.49 },
-      { quantity: 2500, price: 0.45 },
+      { quantity: 1000, price: 0.00 },
+      { quantity: 2500, price: 0.00 },
     ],
     sizes: {
-      Default: 0.59,
+      Default: 0.00,
     },
   },
   {

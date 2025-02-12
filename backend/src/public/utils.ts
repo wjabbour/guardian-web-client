@@ -50,9 +50,7 @@ const STORES = {
   "Tameron Subaru, 1431 I-65 Service Road Mobile, AL 36606": "TAMSMO",
   "Tameron Nissan, 1015 E. I65 Service Road, South Mobile, AL 36606": "TAMNMO",
   "Tameron Kia, 10611 Boney Ave, D'Iberville, MS 39540": "TAMKDI",
-  "Tameron Kia Westbank, 1884 Westbank Expressway, Harvey, LA 70058": "TAMKWE",
-  "Tameron Honda, 1675 Montgomery Blvd Birmingham, AL 35216": "TAMHBI",
-  "Tameron Hyundai, 1595 Montgomery Hwy Hoover, AL 35216": "TAMEHO",
+  "Tameron Kia Westbank, 1884 Westbank Expressway, Harvey, LA 70058": "TAMKWE",  
   "Premier Honda, 11801 E I-10 Service Rd, New Orleans, LA 70128": "PREHNE",
   "Toyota of New Orleans, 13150 I-10 Service Rd, New Orleans, LA 70128":
     "TOYNNE",
@@ -81,6 +79,17 @@ const STORES = {
   "Leith Autopark Kia, 5330 Rolesville Rd, Wendell, NC 27591": "LEITWE",
   "Leith Volkswagen, 4005 Capital Hills Drive, Raleigh, NC 27616": "LEIVRA",
   "Leith Chrysler Jeep, 5500 Capital Blvd, Raleigh, NC 27619": "LETCRA",
+  "Hennessy Jaguar Land Rover, 3040 Piedmont Rd NE, Atlanta, GA 30305": "HENCAT",
+  "Hennessy Cadillac, 3377 Satellite Blvd, Duluth, GA 30096": "HENCDU",
+  "Hennessy Ford, 5675 Peachtree Ind Blvd, Atlanta, GA 30341": "HENFAT",
+  "Hennessy Honda, 8931 Highway 92, Woodstock, GA 30189": "HENHWO",
+  "Hennessy Jaguar, 3423 Old Norcross Rd, Duluth, GA 30096": "HENJDU",
+  "Hennessy Land Rover, 1505 Mansell Rd, Alpharetta, GA 30004": "HENLAL",
+  "Hennessy Lexus, 5955 Peachtree Ind Blvd, Atlanta, GA 30341": "HENLAT",
+  "Hennessy Lexus Duluth, 3383 Satellite Blvd, Duluth, GA 30096": "HENLDU",
+  "Hennessy Mazda Buick GMC, 7261 Jonesboro Rd, Morrow, GA 30260": "HENMMO",
+  "Hennessy Porsche Marietta, 2501 Windy Hill Rd SE, Marietta, GA 30067": "HENPMA",
+  "Hennessy Porsche, 990 Mansell Rd, Roswell, GA 30076": "HENPRO",
 };
 
 export function getStoreCode(store) {
