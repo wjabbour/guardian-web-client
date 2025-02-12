@@ -21,7 +21,7 @@ export const NewCustomerCatalog: CatalogItem[] = [
   },
   {
     code: "J331",
-    name: "Port Authority® Rain Jacket",
+    name: "Port Authority® Jacket",
     fullname: "Port Authority® All-Conditions Jacket",
     colors: ["Black", "Direct Blue", "True Navy"],
     type: "mens",
@@ -107,7 +107,7 @@ export const NewCustomerCatalog: CatalogItem[] = [
     code: "NKDC1963",
     name: "Nike® Dri-FIT Polo Shirt",
     fullname: "Nike Dri-FIT Micro Pique 2.0 Polo",
-    colors: [ "Anthracite", "Black", "Game Royal", "University Red"],
+    colors: [ "Anthracite", "Black","Game Royal","University Red"],
     type: "mens",
     default_color: "Black",
     sizes: {
@@ -143,7 +143,7 @@ export const NewCustomerCatalog: CatalogItem[] = [
   },
   {
     code: "S608",
-    name: "Port Authority® Long Sleeve Shirt",
+    name: "Port Authority® Shirt",
     fullname: "Port Authority® Long Sleeve Easy Care Shirt",
     colors: ["Black", "Red", "Royal", "Steel Grey"],
     type: "mens",
@@ -241,7 +241,7 @@ export const NewCustomerCatalog: CatalogItem[] = [
       Large: 79.99,
       XLarge: 79.99,
       "2XLarge": 81.99,
-      "3XLarge": 83.99,      
+      "3XLarge": 83.99,     
     },
   },   
 ];

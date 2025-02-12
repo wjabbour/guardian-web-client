@@ -21,7 +21,7 @@ export const NewcustomerCatalog: CatalogItem[] = [
   },
   {
     code: "J331",
-    name: "Port Authority® Rain Jacket",
+    name: "Port Authority® Jacket",
     fullname: "Port Authority® All-Conditions Jacket",
     colors: ["Black", "Direct Blue", "True Navy"],
     type: "mens",
@@ -143,7 +143,7 @@ export const NewcustomerCatalog: CatalogItem[] = [
   },
   {
     code: "S608",
-    name: "Port Authority® Long Sleeve Shirt",
+    name: "Port Authority® Shirt",
     fullname: "Port Authority® Long Sleeve Easy Care Shirt",
     colors: ["Black", "Red", "Royal", "Steel Grey"],
     type: "mens",
@@ -241,7 +241,152 @@ export const NewcustomerCatalog: CatalogItem[] = [
       Large: 79.99,
       XLarge: 79.99,
       "2XLarge": 81.99,
-      "3XLarge": 83.99,     
+      "3XLarge": 83.99,  
     },
+  },
+  {
+    code: "HENCAT-33P-497838B",
+    name: "Soft Drive Out Plates",
+    fullname: "Soft Plates",
+    colors: ["Black"],
+    type: "customs",
+    default_color: "Black",
+    discount: [
+      { quantity: 1000, price: 0.00 },
+      { quantity: 2500, price: 0.00 },
+    ],
+    sizes: {
+      default: 0.00,
+    },
+  }, 
+  {
+    code: "HENCAT-33P-497628B",
+    name: "Soft Drive Out Plates",
+    fullname: "Soft Plates",
+    colors: ["Black"],
+    type: "customs",
+    default_color: "Black",
+    discount: [
+      { quantity: 1000, price: 0.00 },
+      { quantity: 2500, price: 0.00 },
+    ],
+    sizes: {
+      default: 0.00,
+    },
+  }, 
+  {
+    code: "HENLDU-34MLF-366502A",
+    name: "Metal Frames",
+    fullname: "Metal Frames",
+    colors: ["Metal"],
+    type: "customs",
+    default_color: "Metal",
+    discount: [
+      { quantity: 1000, price: 0.00 },
+      { quantity: 2500, price: 0.00 },
+    ],
+    sizes: {
+      default: 0.00,
+    },
+  }, 
+  {
+    code: "HENLAT-34MLF-379167A",
+    name: "Metal Frames",
+    fullname: "Metal Frames",
+    colors: ["Metal"],
+    type: "customs",
+    default_color: "Metal",
+    discount: [
+      { quantity: 1000, price: 0.00 },
+      { quantity: 2500, price: 0.00 },
+    ],
+    sizes: {
+      default: 0.00,
+    },
+  }, 
+  {
+    code: "HENLAL-34CF-459349A",
+    name: "Chrome Faced Frames",
+    fullname: "Chrome Faced Frames",
+    colors: ["Chrome Faced"],
+    type: "customs",
+    default_color: "Chrome Faced",
+    discount: [
+      { quantity: 1000, price: 0.00 },
+      { quantity: 2500, price: 0.00 },
+    ],
+    sizes: {
+      default: 0.00,
+    },
+  }, 
+  {
+    code: "HENLAL-33G24-373653A",
+    name: "Soft Drive Out Plates",
+    fullname: "Soft Plates",
+    colors: ["Black"],
+    type: "customs",
+    default_color: "Black",
+    discount: [
+      { quantity: 1000, price: 0.00 },
+      { quantity: 2500, price: 0.00 },
+    ],
+    sizes: {
+      default: 0.00,
+    },
+  }, 
+  {
+    code: "HENLAT-33G24-367503A",
+    name: "Soft Drive Out Plates",
+    fullname: "Soft Plates",
+    colors: ["White"],
+    type: "customs",
+    default_color: "White",
+    discount: [
+      { quantity: 1000, price: 0.00 },
+      { quantity: 2500, price: 0.00 },
+    ],
+    sizes: {
+      default: 0.00,
+    },
+  }, 
+  {
+    code: "HENLDU-33G24-373661B",
+    name: "Soft Drive Out Plates",
+    fullname: "Soft Plates",
+    colors: ["White"],
+    type: "customs",
+    default_color: "White",
+    discount: [
+      { quantity: 1000, price: 0.00 },
+      { quantity: 2500, price: 0.00 },
+    ],
+    sizes: {
+      default: 0.00,
+    },
+  }, 
+  {
+    code: "1640",
+    name: "Logo Key Chain",
+    fullname: "Brushed Zinc/Leather/Big Logo Key Chain",
+    colors: ["Black"],
+    type: "accessory",
+    default_color: "Black",
+    sizes: {
+      Default: 0.00,
+    },
+  },
+  {
+    code: "HENLAT-GPLLKR-456506L",
+    name: "Leather Loop Keychain",
+    fullname: "Leather Loop Metal Keychain",
+    colors: ["Black Leather"],
+    type: "accessory",
+    default_color: "Black Leather",
+    sizes: {
+      Default: 0.00,
+    },
+  },
+
+   },
   },   
 ];
