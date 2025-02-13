@@ -113,7 +113,14 @@ export default function Modification() {
     let any_input_has_value = false;
     let invalid_input = false;
 
-    if (!embroidery && item.type !== "customs") {
+    const hasEmbroideryOptions = embroideries.length > 0;
+    const embroideryTypes = ["mens", "womens", "accessory"];
+
+    if (
+      hasEmbroideryOptions &&
+      embroideryTypes.includes(item.type) &&
+      !embroidery
+    ) {
       setErrorSnackbarOpen(true);
       setErrorSnackbarText("Must select an embroidery");
       return;
