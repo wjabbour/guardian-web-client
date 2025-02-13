@@ -56,35 +56,50 @@ export default function Modification() {
     return <MenuItem value={e}>{e}</MenuItem>;
   });
 
-  const embroiderySelector = (
-    <div className={styles.selector}>
-      <FormControl fullWidth>
-        <InputLabel>Logo</InputLabel>
-        <Select value={embroidery} label="embroidery" onChange={handleChange}>
-          {embroideries}
-        </Select>
-      </FormControl>
-    </div>
-  );
+  const embroiderySelector = () => {
+    if (item.type === "customs" || embroideries.length === 0) {
+      return <></>;
+    }
 
-  const placements = logo_placements.map((l) => {
-    return <MenuItem value={l}>{l}</MenuItem>;
-  });
+    return (
+      <div className={styles.selector}>
+        <FormControl fullWidth>
+          <InputLabel>Logo</InputLabel>
+          <Select value={embroidery} label="embroidery" onChange={handleChange}>
+            {embroideries}
+          </Select>
+        </FormControl>
+      </div>
+    );
+  };
 
-  const placementSelector = (
-    <div className={styles.selector}>
-      <FormControl fullWidth>
-        <InputLabel>Logo Placement</InputLabel>
-        <Select
-          value={placement}
-          label="placement"
-          onChange={handlePlacementChange}
-        >
-          {placements}
-        </Select>
-      </FormControl>
-    </div>
-  );
+  const placementSelector = () => {
+    const hasCorrectType = ["womens", "mens"].includes(item.type);
+    const hasPlacementOptions = logo_placements.length > 0;
+
+    if (hasCorrectType && hasPlacementOptions) {
+      const placements = logo_placements.map((l) => {
+        return <MenuItem value={l}>{l}</MenuItem>;
+      });
+
+      return (
+        <div className={styles.selector}>
+          <FormControl fullWidth>
+            <InputLabel>Logo Placement</InputLabel>
+            <Select
+              value={placement}
+              label="placement"
+              onChange={handlePlacementChange}
+            >
+              {placements}
+            </Select>
+          </FormControl>
+        </div>
+      );
+    } else {
+      return <></>;
+    }
+  };
 
   function handleSnackbarClose() {
     setSnackbarOpen(false);
@@ -98,7 +113,14 @@ export default function Modification() {
     let any_input_has_value = false;
     let invalid_input = false;
 
-    if (!embroidery && item.type !== "customs") {
+    const hasEmbroideryOptions = embroideries.length > 0;
+    const embroideryTypes = ["mens", "womens", "accessory"];
+
+    if (
+      hasEmbroideryOptions &&
+      embroideryTypes.includes(item.type) &&
+      !embroidery
+    ) {
       setErrorSnackbarOpen(true);
       setErrorSnackbarText("Must select an embroidery");
       return;
@@ -250,9 +272,8 @@ export default function Modification() {
           </div>
           <div className={`${styles.flex} ${styles.md_margin_bottom}`}>
             <div>
-              {item.type !== "customs" && embroiderySelector}
-              {!["accessory", "customs"].includes(item.type) &&
-                placementSelector}
+              {embroiderySelector()}
+              {placementSelector()}
             </div>
             <div>
               <Thumbnail img={embroidery} />

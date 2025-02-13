@@ -26,11 +26,11 @@ interface Embroidery {
 }
 
 export interface Config {
-  title: string;
-  company_logo: string;
-  logo_placements: string[];
-  embroideries: Embroidery;
-  stores: string[];
+  title: string; // the text that will appear in the browser tab
+  company_logo: string; // the name of the image file to render in the navbar
+  logo_placements: string[]; // the text values in the logo select on the item modification page
+  embroideries: Embroidery; // the text values in the placement select on the item modification page
+  stores: string[]; // the text values in the stores select on the checkout screen
   show_modification_thumbnail: boolean;
   minimum_apparel_order: boolean;
   render_logo_preview: boolean;
