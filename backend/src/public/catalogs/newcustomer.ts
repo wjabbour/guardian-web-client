@@ -57,7 +57,7 @@ export const NewcustomerCatalog: CatalogItem[] = [
     code: "NF0A7V4F",
     name: "The North Face® Jacket",
     fullname: "The North Face® Down Hybrid Jacket",
-    colors: ["Black","Medium Grey Heather"],
+    colors: ["Black","Medium Grey Hthr"],
     type: "mens",
     default_color: "Black",
     sizes: {
