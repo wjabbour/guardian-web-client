@@ -245,36 +245,6 @@ export const NewcustomerCatalog: CatalogItem[] = [
     },
   },
   {
-    code: "HENCAT-33P-497838B",
-    name: "Soft Drive Out Plates",
-    fullname: "Soft Plates",
-    colors: ["Black"],
-    type: "customs",
-    default_color: "Black",
-    discount: [
-      { quantity: 1000, price: 0.00 },
-      { quantity: 2500, price: 0.00 },
-    ],
-    sizes: {
-      default: 0.00,
-    },
-  }, 
-  {
-    code: "HENCAT-33P-497628B",
-    name: "Soft Drive Out Plates",
-    fullname: "Soft Plates",
-    colors: ["Black"],
-    type: "customs",
-    default_color: "Black",
-    discount: [
-      { quantity: 1000, price: 0.00 },
-      { quantity: 2500, price: 0.00 },
-    ],
-    sizes: {
-      default: 0.00,
-    },
-  }, 
-  {
     code: "HENLDU-34MLF-366502A",
     name: "Metal Frames",
     fullname: "Metal Frames",
@@ -356,6 +326,36 @@ export const NewcustomerCatalog: CatalogItem[] = [
     colors: ["White"],
     type: "customs",
     default_color: "White",
+    discount: [
+      { quantity: 1000, price: 0.00 },
+      { quantity: 2500, price: 0.00 },
+    ],
+    sizes: {
+      default: 0.00,
+    },
+  }, 
+  {
+    code: "HENCAT-33P-497838B",
+    name: "Soft Drive Out Plates",
+    fullname: "Soft Plates",
+    colors: ["Black"],
+    type: "customs",
+    default_color: "Black",
+    discount: [
+      { quantity: 1000, price: 0.00 },
+      { quantity: 2500, price: 0.00 },
+    ],
+    sizes: {
+      default: 0.00,
+    },
+  }, 
+  {
+    code: "HENCAT-33P-497628B",
+    name: "Soft Drive Out Plates",
+    fullname: "Soft Plates",
+    colors: ["Black"],
+    type: "customs",
+    default_color: "Black",
     discount: [
       { quantity: 1000, price: 0.00 },
       { quantity: 2500, price: 0.00 },
