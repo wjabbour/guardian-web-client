@@ -6,10 +6,10 @@ export const config = {
     minimum_apparel_order: true,
     render_logo_preview: true,
     embroideries: {
-      hat: ["Hennessy Porsche", "Porsche Atlanta NW", "Cadillac", "Hennessy Ford", "Hennessy Ford Lincoln", "Hennessy Honda", "Hennessy Mazda GMC", "Porsche North Atl", "Porsche"],          
-      mens:["Hennessy Porsche", "Porsche Atlanta NW", "Cadillac", "Hennessy Ford", "Hennessy Ford Lincoln", "Hennessy Honda", "Hennessy Mazda GMC", "Porsche North Atl", "Porsche"],     
-      womens: ["Hennessy Porsche", "Porsche Atlanta NW", "Cadillac", "Hennessy Ford", "Hennessy Ford Lincoln", "Hennessy Honda", "Hennessy Mazda GMC", "Porsche North Atl", "Porsche"],        
-      accessory: ["Hennessy Porsche", "Porsche Atlanta NW", "Cadillac", "Hennessy Ford", "Hennessy Ford Lincoln", "Hennessy Honda", "Hennessy Mazda GMC", "Porsche North Atl", "Porsche"], 
+      hat: [ "Cadillac", "Hennessy Ford", "Hennessy Ford Lincoln", "Hennessy Honda", "Hennessy Mazda GMC", "Hennessy Porsche", "Porsche", "Porsche Atlanta NW",   "Porsche North Atl"], 
+      mens: [ "Cadillac", "Hennessy Ford", "Hennessy Ford Lincoln", "Hennessy Honda", "Hennessy Mazda GMC", "Hennessy Porsche", "Porsche", "Porsche Atlanta NW","Porsche North Atl"],     
+      womens: [ "Cadillac", "Hennessy Ford", "Hennessy Ford Lincoln", "Hennessy Honda", "Hennessy Mazda GMC", "Hennessy Porsche", "Porsche", "Porsche Atlanta NW",   "Porsche North Atl"],         
+      accessory: [ "Cadillac", "Hennessy Ford", "Hennessy Ford Lincoln", "Hennessy Honda", "Hennessy Mazda GMC", "Hennessy Porsche", "Porsche", "Porsche Atlanta NW",   "Porsche North Atl"], 
       customs: [], 
     },
     stores: [

@@ -59,7 +59,7 @@ export const NewCustomerCatalog: CatalogItem[] = [
     fullname: "The North Face® Down Hybrid Jacket",
     colors: ["TNF Black", "TNF Med Gry Hthr"],
     type: "mens",
-    default_color: "TNF Black",
+    default_color: "Tnf Black",
     sizes: {
       Small: 199.00,
       Medium: 199.00,
