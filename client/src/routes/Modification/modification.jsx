@@ -1,4 +1,4 @@
-import styles from "./modification.module.scss";
+import styles from "./Modification.module.scss";
 import { Catalog } from "../../lib/catalog";
 import { useLoaderData, useOutletContext, useNavigate } from "react-router-dom";
 import { useState } from "react";

@@ -1,4 +1,4 @@
-import styles from "./landing.module.scss";
+import styles from "./Landing.module.scss";
 import ClothingIcon from "../../components/ClothingIcon/ClothingIcon";
 import { Catalog } from "../../lib/catalog";
 

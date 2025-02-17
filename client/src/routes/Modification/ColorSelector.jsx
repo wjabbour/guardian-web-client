@@ -1,4 +1,4 @@
-import styles from "./modification.module.scss";
+import styles from "./Modification.module.scss";
 
 export default function ColorSelector({
   item,

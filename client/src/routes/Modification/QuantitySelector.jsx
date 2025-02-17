@@ -1,4 +1,4 @@
-import styles from "./modification.module.scss";
+import styles from "./Modification.module.scss";
 import Checkbox from "@mui/material/Checkbox";
 
 export default function QuantitySelector({

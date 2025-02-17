@@ -1,4 +1,4 @@
-import styles from "./checkout.module.scss";
+import styles from "./Checkout.module.scss";
 import { useOutletContext, useNavigate } from "react-router-dom";
 import { useState, useRef, useEffect } from "react";
 import TextField from "@mui/material/TextField";

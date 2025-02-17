@@ -1,15 +1,15 @@
 import "./App.css";
 import Catalog from "./routes/Catalog/Catalog";
-import Landing from "./routes/Landing/landing";
+import Landing from "./routes/Landing/Landing";
 import Root from "./routes/root";
 import Modification, {
   loader as modificationLoader,
-} from "../src/routes/Modification/modification";
-import Cart from "./routes/Cart/cart";
+} from "./routes/Modification/Modification";
+import Cart from "./routes/Cart/Cart";
 import Orders from "./routes/Orders/Orders";
-import Checkout from "./routes/Checkout/checkout";
+import Checkout from "./routes/Checkout/Checkout";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Success from "./routes/Success/success";
+import Success from "./routes/Success/Success";
 import { Helmet } from "react-helmet";
 import { getConfigValue } from "./lib/config";
 

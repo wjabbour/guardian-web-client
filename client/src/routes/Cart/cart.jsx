@@ -1,4 +1,4 @@
-import styles from "./cart.module.scss";
+import styles from "./Cart.module.scss";
 import { useOutletContext, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import DeleteIcon from "@mui/icons-material/Delete";
