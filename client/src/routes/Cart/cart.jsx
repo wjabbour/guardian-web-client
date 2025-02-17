@@ -28,7 +28,6 @@ export default function Cart() {
     const MAX = 12;
     let apparel_count = 0;
     if (getConfigValue("minimum_apparel_order")) {
-      console.log(cart);
       Object.values(cart).forEach((item) => {
         if (apparel_types.includes(item.type)) apparel_count += item.quantity;
       });
@@ -41,8 +40,6 @@ export default function Cart() {
       navigate("/checkout");
     }
   }
-
-  console.log(cart);
 
   return (
     <div className={styles.container}>

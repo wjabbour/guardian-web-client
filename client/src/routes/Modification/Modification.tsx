@@ -15,19 +15,20 @@ import { getConfigValue } from "../../lib/config";
 import Thumbnail from "./Thumbnail";
 import ColorSelector from "./ColorSelector";
 import QuantitySelector from "./QuantitySelector";
+import { CartItem } from "../../lib/interfaces";
 
 export async function loader({ params }) {
   return Catalog().find((i) => i.code === params.id);
 }
 
 export default function Modification() {
-  const item = useLoaderData();
+  const item: any = useLoaderData();
   const navigate = useNavigate();
   const [selected_color, set_selected_color] = useState(item.default_color);
   const [image_source, set_image_source] = useState(
     `/images/${item.code}_${selected_color.toLowerCase()}.jpg`
   );
-  const [cart, set_cart] = useOutletContext();
+  const [cart, set_cart] = useOutletContext<any>();
   const [snackbarOpen, setSnackbarOpen] = useState(false);
   const [snackbarText] = useState("Item added to cart");
   const [errorSnackbarOpen, setErrorSnackbarOpen] = useState(false);
@@ -42,7 +43,7 @@ export default function Modification() {
   const [price] = useState(item.sizes[selected_size]);
   const [embroidery, setEmbroidery] = useState("");
   const [placement, setPlacement] = useState("Left Chest");
-  const logo_placements = getConfigValue("logo_placements");
+  const logo_placements = getConfigValue("logo_placements") as string[];
 
   const handleChange = (event) => {
     setEmbroidery(event.target.value);
@@ -106,10 +107,11 @@ export default function Modification() {
     setErrorSnackbarOpen(false);
   }
 
-  function add_item_to_cart() {
+  function addItemToCart() {
     const new_cart = {
       ...cart,
     };
+
     let any_input_has_value = false;
     let invalid_input = false;
 
@@ -126,17 +128,20 @@ export default function Modification() {
       return;
     }
 
-    const table = document.getElementById("table");
+    const table = document.getElementById("table") as any;
+    // the first row is the table headers, skip it
     for (let i = 1; i < table.rows.length; i++) {
       const inputs = table.rows[i].getElementsByTagName("input");
       for (let j = 0; j < inputs.length; j++) {
         if (inputs[j].value) {
           any_input_has_value = true;
           const isNum = /^\d+$/.test(inputs[j].value);
+
           if (!isNum) {
             inputs[j].value = "";
             continue;
           }
+
           if (item.type === "accessory" && Number(inputs[j].value) < 12) {
             invalid_input = true;
             setErrorSnackbarOpen(true);
@@ -144,9 +149,7 @@ export default function Modification() {
             continue;
           }
 
-          const cart_item = {
-            type: item.type,
-            name: item.fullname,
+          const cart_item: CartItem = {
             price: item.sizes[sizes[i - 1]],
             quantity: Number(inputs[j].value),
             size: sizes[i - 1],
@@ -236,11 +239,6 @@ export default function Modification() {
     }
   }
 
-  function handleSnackbarClose() {
-    setSnackbarOpen(false);
-    setErrorSnackbarOpen(false);
-  }
-
   return (
     <div className={styles.container}>
       <div
@@ -295,7 +293,7 @@ export default function Modification() {
 
           <div
             className={styles.checkout__container}
-            onClick={add_item_to_cart}
+            onClick={() => addItemToCart()}
           >
             <p>Add To Cart</p>
           </div>

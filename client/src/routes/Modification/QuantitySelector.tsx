@@ -6,8 +6,6 @@ export default function QuantitySelector({
   sizes,
   set_selected_customs_black_quantity,
   set_selected_customs_white_quantity,
-  set_selected_customs_color,
-  selected_customs_color,
   selected_customs_black_quantity,
   selected_customs_white_quantity,
 }) {
