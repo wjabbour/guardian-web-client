@@ -18,7 +18,6 @@ import Typography from "@mui/material/Typography";
 import { SvgIcon } from "@mui/material";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import { LoadingButton } from "@mui/lab";
-import { KNOWN_CODES } from "../../lib/constants";
 
 export default function Checkout() {
   const paypalRef = useRef(null);
@@ -162,7 +161,9 @@ export default function Checkout() {
 
   const handle_code = (event) => {
     set_code(event.target.value.toUpperCase());
-    if (KNOWN_CODES.includes(event.target.value.toUpperCase())) {
+    if (
+      getConfigValue("bypass_codes").includes(event.target.value.toUpperCase())
+    ) {
       set_bypass_paypal(true);
     }
   };

@@ -221,37 +221,6 @@ The list of stores for a domain populates the options of the select box on the c
 
 In the config file, you will find a property named `stores`.
 
-### Updating store codes
-
-Add each store code to the `KNOWN_CODES` array in `{project_root}/client/src/lib/constants.ts`.
-
-For example, if you have a store code of `ABC` and the array looks like this:
-
-```
-export const KNOWN_CODES = [
-  "STIFMO",
-  "STIFBI",
-  "STIHCO",
-  "STICPR",
-  "STISDE",
-  "STICCO"
-]
-```
-
-then you should update it like so:
-
-```
-export const KNOWN_CODES = [
-  "STIFMO",
-  "STIFBI",
-  "STIHCO",
-  "STICPR",
-  "STISDE",
-  "STICCO",
-  "ABC"
-]
-```
-
 ### Updating Embroideries
 In the config file, you will find a property named `embroideries`. Let's talk about what these values mean. Consider the following `embroideries` object.
 

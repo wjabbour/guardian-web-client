@@ -1,4 +1,6 @@
-export const config = {
+import { Config } from "../lib/interfaces";
+
+export const config: Config = {
   title: "Premier",
   company_logo: "premier.png",
   logo_placements: ["Left Chest"],
@@ -34,4 +36,5 @@ export const config = {
     "Premier VW of Harvey, 4050 LaPalco Boulevard, Harvey, LA 70058",
     "Premier CDJR of Harvey, 1660 Westbrook Expressway, Harvey, LA 70058",
   ],
+  bypass_codes: [],
 };

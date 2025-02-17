@@ -34,4 +34,5 @@ export interface Config {
   show_modification_thumbnail: boolean;
   minimum_apparel_order: boolean;
   render_logo_preview: boolean;
+  bypass_codes: string[]; // the codes that will enable a user to place an order without the paypal flow
 }

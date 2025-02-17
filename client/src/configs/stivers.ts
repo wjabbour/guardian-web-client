@@ -1,4 +1,6 @@
-export const config = {
+import { Config } from "../lib/interfaces";
+
+export const config: Config = {
   title: "Stivers",
   company_logo: "stivers.png",
   logo_placements: ["Right Sleeve", "Left Chest"],
@@ -50,5 +52,15 @@ export const config = {
     "Stivers Chevrolet, 111 Newland Road, Columbia, SC 29229",
     "Stivers Ford South Atlanta, 4355 Jonesboro Rd, Union City, GA 30291",
     "Stivers Ford Troy, 121 US-231, Troy, AL 36081",
+  ],
+  bypass_codes: [
+    "STIFMO",
+    "STIFBI",
+    "STIHCO",
+    "STICPR",
+    "STISDE",
+    "STICCO",
+    "STIFSO",
+    "STIFTR",
   ],
 };

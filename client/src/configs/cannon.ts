@@ -1,4 +1,5 @@
-export const config = {
+import { Config } from "../lib/interfaces";
+export const config: Config = {
   title: "Cannon Motor Company",
   company_logo: "cannon_logo.png",
   logo_placements: [],
@@ -38,4 +39,5 @@ export const config = {
     "Cannon GMC Vicksburg",
     "Cannon CDJR Senatobia",
   ],
+  bypass_codes: ["CANNJA"],
 };

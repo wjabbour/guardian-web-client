@@ -1,4 +1,6 @@
-export const config = {
+import { Config } from "../lib/interfaces";
+
+export const config: Config = {
   title: "Leith",
   company_logo: "leith.png",
   logo_placements: ["Left Chest"],
@@ -30,4 +32,5 @@ export const config = {
     "Leith Volkswagen, 4005 Capital Hills Drive, Raleigh, NC 27616",
     "Leith Chrysler Jeep, 5500 Capital Blvd, Raleigh, NC 27619",
   ],
+  bypass_codes: [],
 };
