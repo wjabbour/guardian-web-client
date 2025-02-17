@@ -40,7 +40,7 @@ const STORES = {
   "Stivers Ford Montgomery, 500 Palisades Blvd, Birmingham, AL, 35209":
     "STIFBI",
   "Stivers Hyundai, 9950 Farrow Rd, Columbia, SC, 29203": "STIHCO",
-  "Stivers CDJR, 2209 Cobbs Ford Road, Prattville, AL 36066": "STICPR",
+  "Stivers CDJR, 2209 Cobbs Ford Rd, Prattville, AL 36066": "STICPR",
   "Stivers Decatur Subaru, 1950 Orion Dr, Decatur, GA 30033": "STISDE",
   "Stivers Chevrolet, 111 Newland Road, Columbia, SC 29229": "STICCO",
   "Stivers Ford South Atlanta, 4355 Jonesboro Rd, Union City, GA 30291":
