@@ -36,5 +36,13 @@ export const config: Config = {
     "Premier VW of Harvey, 4050 LaPalco Boulevard, Harvey, LA 70058",
     "Premier CDJR of Harvey, 1660 Westbrook Expressway, Harvey, LA 70058",
   ],
-  bypass_codes: [],
+  bypass_codes: [
+    "PREHNE",
+    "TOYNNE",
+    "PREHHA",
+    "PRENHA",
+    "PREVHA",
+    "PRECHB",
+    "PRENME",
+  ],
 };
