@@ -34,4 +34,27 @@ export interface Config {
   show_modification_thumbnail: boolean;
   minimum_apparel_order: boolean;
   render_logo_preview: boolean;
+  bypass_codes: string[]; // the codes that will enable a user to place an order without the paypal flow
+}
+
+export interface CartItem {
+  code: string;
+  color: string;
+  quantity: number;
+  size: string;
+  price: number;
+  placement: string;
+  embroidery: string;
+}
+
+export interface Order {
+  email: string;
+  created_at: string;
+  first_name: string;
+  last_name: string;
+  order: CartItem[];
+  order_id: string;
+  paid: 0 | 1;
+  paid_at: number;
+  store: string;
 }

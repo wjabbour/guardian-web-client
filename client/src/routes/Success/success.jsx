@@ -1,4 +1,4 @@
-import styles from './success.module.scss'
+import styles from './Success.module.scss'
 import { useNavigate, useLocation } from 'react-router-dom'
 import { SvgIcon } from '@mui/material';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
