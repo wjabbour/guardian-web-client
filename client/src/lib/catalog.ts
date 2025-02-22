@@ -17,5 +17,7 @@ export const Catalog = function (): CatalogItem[] {
     return TameronCatalog;
   } else if (url.includes("gp-premier.com")) {
     return PremierCatalog;
+  } else if (url.includes("cannonemployeestore.com")) {
+    return CannonCatalog;
   }
 };
