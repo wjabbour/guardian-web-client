@@ -17,5 +17,7 @@ export function getConfigValue(val: keyof Config) {
     return TameronConfig[val];
   } else if (url.includes("gp-premier.com")) {
     return PremierConfig[val];
+  } else if (url.includes("cannonemployeestore.com")) {
+    return CannonConfig[val];
   }
 }
