@@ -21,6 +21,10 @@ module "send_order_data" {
       source_arn = module.eventbridge.eventbridge_rule_arns["crons"]
     }
   }
+
+  environment_variables = {
+    DEPLOYMENT = var.deployment
+  }
 }
 
 data "aws_iam_policy_document" "send_order_data" {

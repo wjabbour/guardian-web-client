@@ -35,6 +35,7 @@ export interface Config {
   minimum_apparel_order: boolean;
   render_logo_preview: boolean;
   bypass_codes: string[]; // the codes that will enable a user to place an order without the paypal flow
+  server_hostname: string; // cannon client talks to a different server than all the other clients
 }
 
 export interface CartItem {

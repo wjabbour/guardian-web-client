@@ -6,7 +6,9 @@
   "scripts": {
     "build": "tsc -noEmit",
     "test": "jest",
-    "deploy": "npm run build && npm run build --ws && cd terraform && terraform init && terraform workspace select prod && terraform apply -auto-approve"
+    "pre-deploy": "npm run build && npm run build --ws && cd terraform && terraform init && terraform workspace select prod",
+    "deploy-standard": "npm run pre-deploy && cd terraform && terraform apply -auto-approve -var-file=tfvars/standard.tfvars",
+    "deploy-cannon": "npm run pre-deploy && cd terraform && terraform apply -auto-approve -var-file=tfvars/cannon.tfvars"
   },
   "keywords": [],
   "author": "",

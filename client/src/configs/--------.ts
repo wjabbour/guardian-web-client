@@ -18,4 +18,5 @@ export const config: Config = {
     "Guardian Products, 5575 Spalding Drive, Peachtree Corners, GA 30092",
   ],
   bypass_codes: [],
+  server_hostname: "https://mxfj3q6m01.execute-api.us-east-1.amazonaws.com",
 };

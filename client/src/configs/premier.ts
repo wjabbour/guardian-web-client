@@ -45,4 +45,5 @@ export const config: Config = {
     "PRECHB",
     "PRENME",
   ],
+  server_hostname: "https://mxfj3q6m01.execute-api.us-east-1.amazonaws.com",
 };

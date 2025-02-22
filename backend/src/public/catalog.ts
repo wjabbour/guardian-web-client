@@ -1,7 +1,8 @@
 import { TameronCatalog } from "./catalogs/tameron";
 import { StiversCatalog } from "./catalogs/stivers";
 import { PremierCatalog } from "./catalogs/premier";
-import {NewcustomerCatalog} from "./catalogs/newcustomer";
+import { NewcustomerCatalog } from "./catalogs/newcustomer";
+import { CannonCatalog } from "./catalogs/cannon";
 import { CatalogItem } from "./interfaces";
 
 export const Catalog = function (origin): CatalogItem[] {
@@ -9,12 +10,14 @@ export const Catalog = function (origin): CatalogItem[] {
   if (url.includes("localhost:3000")) {
     return TameronCatalog;
   } else if (url.includes("gpstivers.com")) {
-    return StiversCatalog; 
+    return StiversCatalog;
   } else if (url.includes("gptameron.com")) {
     return TameronCatalog;
   } else if (url.includes("gp-premier.com")) {
-    return PremierCatalog; 
+    return PremierCatalog;
   } else if (url.includes("newcustomer.gpstivers.com")) {
-    return NewcustomerCatalog; 
+    return NewcustomerCatalog;
+  } else if (url.includes("cannonemployeestore.com")) {
+    return CannonCatalog;
   }
 };

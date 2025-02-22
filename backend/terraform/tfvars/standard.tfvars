@@ -1,0 +1,1 @@
+deployment = "standard"

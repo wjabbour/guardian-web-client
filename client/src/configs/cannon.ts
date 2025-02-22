@@ -40,4 +40,5 @@ export const config: Config = {
     "Cannon CDJR Senatobia",
   ],
   bypass_codes: ["CANNJA"],
+  server_hostname: "https://o1yn7lpenj.execute-api.us-east-1.amazonaws.com",
 };

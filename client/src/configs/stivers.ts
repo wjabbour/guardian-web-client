@@ -63,4 +63,5 @@ export const config: Config = {
     "STIFSO",
     "STIFTR",
   ],
+  server_hostname: "https://mxfj3q6m01.execute-api.us-east-1.amazonaws.com",
 };

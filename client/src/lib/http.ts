@@ -1,4 +1,7 @@
 import axios from "axios";
+import { getConfigValue } from "./config";
+
+const hostname = getConfigValue("server_hostname");
 
 function handleError(e, error_message?) {
   const message =
@@ -16,10 +19,7 @@ export async function create_order(order) {
   const body = { ...order };
 
   try {
-    const response = await axios.post(
-      "https://mxfj3q6m01.execute-api.us-east-1.amazonaws.com/v1/create-order",
-      body
-    );
+    const response = await axios.post(`${hostname}/v1/create-order`, body);
     return { success: { data: response.data }, error: null };
   } catch (e) {
     return handleError(e);
@@ -28,9 +28,7 @@ export async function create_order(order) {
 
 export async function retrieve_orders() {
   try {
-    const response = await axios.get(
-      "https://mxfj3q6m01.execute-api.us-east-1.amazonaws.com/v1/retrieve-orders"
-    );
+    const response = await axios.get(`${hostname}/v1/retrieve-orders`);
     return { success: { data: response.data }, error: null };
   } catch (e) {
     return handleError(e);
@@ -41,26 +39,19 @@ export async function capture_order(order_id) {
   const body = { order_id };
 
   try {
-    const response = await axios.post(
-      "https://mxfj3q6m01.execute-api.us-east-1.amazonaws.com/v1/capture-order",
-      body
-    );
+    const response = await axios.post(`${hostname}/v1/capture-order`, body);
     return { success: { data: response.data }, error: null };
   } catch (e) {
     return handleError(e);
   }
 }
 
-export async function update_historical_order(
-  email,
-  created_at,
-  cart
-) {
+export async function update_historical_order(email, created_at, cart) {
   const body = { email, created_at: created_at + "", cart };
 
   try {
     const response = await axios.post(
-      "https://mxfj3q6m01.execute-api.us-east-1.amazonaws.com/v1/update-historical-order",
+      `${hostname}/v1/update-historical-order`,
       body
     );
     return { success: { data: response.data }, error: null };

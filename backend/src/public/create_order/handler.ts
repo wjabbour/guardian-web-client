@@ -64,12 +64,12 @@ export const handler = async (
     const company_name = COMPANIES[event.headers?.origin];
     logger.info({ message: "Determined company name", company_name });
 
+    /*
+      Tameron orders should be sent immediately, so we don't need to wait for the send_order_data cron
+      to run and move the order from orders table to archived_orders
+    */
     if (company_name === "Tameron") {
       logger.info({ message: "Tameron order, sending immediately" });
-      /*
-        Tameron orders should be sent immediately, so we don't need to wait for the send_order_data cron
-        to run and move the order from orders table to archived_orders
-      */
 
       const created_at = await dynamo.createOrder(
         {
@@ -86,6 +86,7 @@ export const handler = async (
         },
         "archived_orders"
       );
+
       const order = await dynamo.getOrder(email, created_at);
       logger.info("Received Tameron order", order);
       await sendEmail([order]);
@@ -94,6 +95,7 @@ export const handler = async (
         headers: addCors(event.headers?.origin),
       };
     }
+
     if (body.bypassPaypal) {
       logger.info({ message: "Bypassing PayPal" });
       await dynamo.createOrder(
@@ -171,6 +173,7 @@ function construct_cart(cart: any, customer_po: string, origin: string) {
       cart_item["size"],
       origin
     );
+
     obj["price"] = getPriceWithDiscount(
       catalog_item,
       obj["size"],

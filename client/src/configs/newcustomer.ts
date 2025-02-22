@@ -68,4 +68,5 @@ export const config: Config = {
     "Hennessy Porsche, 990 Mansell Rd, Roswell, GA 30076",
   ],
   bypass_codes: [],
+  server_hostname: "https://mxfj3q6m01.execute-api.us-east-1.amazonaws.com",
 };

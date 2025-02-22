@@ -1,6 +1,7 @@
 import { APIGatewayProxyResult } from "aws-lambda";
 import { logger, sendEmail } from "../utils";
 import { Dynamo } from "./dynamo";
+import { getConfigValue } from "../utils";
 
 const dynamo = new Dynamo();
 
@@ -31,3 +32,5 @@ export const handler = async (): Promise<APIGatewayProxyResult> => {
     };
   }
 };
+
+handler();

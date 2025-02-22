@@ -2,15 +2,20 @@ import pino from "pino";
 import { Catalog } from "./catalog";
 import dayjs from "dayjs";
 import { SendRawEmailCommand, SESClient } from "@aws-sdk/client-ses";
+import { cannonConfig } from "./configs/cannon";
+import { standardConfig } from "./configs/standard";
+import { Config } from "./interfaces";
 
 export const logger = pino();
 
+// TODO: these should live in configs so that only cannon server allows cannon origin, etc
 const ALLOWED_ORIGINS = [
   "http://localhost:3000",
   "https://newcustomer.gpstivers.com",
   "https://gpstivers.com",
   "https://gptameron.com",
   "https://gp-premier.com",
+  "https://cannonemployeestore.com",
 ];
 
 export function addCors(origin, map?) {
@@ -27,15 +32,51 @@ export function addCors(origin, map?) {
   return headers;
 }
 
+export function getConfigValue(
+  configProperty: string
+): Config[typeof configProperty] {
+  const deployment = process.env["DEPLOYMENT"];
+  if (deployment === "standard") {
+    return standardConfig[configProperty];
+  }
+
+  return standardConfig[configProperty];
+}
+
 export const COMPANIES: { [index: string]: string } = {
   "http://localhost:3000": "Stivers",
   "https://gpstivers.com": "Stivers",
   "https://newcustomer.gpstivers.com": "Stivers",
   "https://gptameron.com": "Tameron",
   "https://gp-premier.com": "Premier",
+  "https://cannonemployeestore.com": "Cannon",
 };
 
 const STORES = {
+  "Cannon Ford of Cleveland": "CANFCL",
+  "Cannon Ford of Starkville": "CANLST",
+  "Cannon Chevrolet Buick GMC": "CANBCL",
+  "Cannon Chevrolet Greenwood": "CANCGR",
+  "Cannon Chevrolet Buick GMC of West Point": "CANCWE",
+  "Cannon Chevrolet Buick Cadillac of Oxford": "CANCOX",
+  "Cannon Honda": "CANHPO",
+  "Cannon CDJR of Cleveland": "CANCCL",
+  "Cannon Ford of Pascagoula": "CANFPA",
+  "Cannon CDJR Greenwood": "CANCGE",
+  "Cannon Preowned Grenada": "CANPGR",
+  "Cannon Toyota of Vicksburg": "CANTVI",
+  "Cannon Toyota of Mosspoint": "CANTMO",
+  "Cannon Ford Nissan of Pascagula": "CANNPA",
+  "Cannon CDJR of West Point": "CANDWE",
+  "Cannon Preowned of Jackson": "CANPJA",
+  "Cannon Preowned Calhoun City": "CANPCC",
+  "Cannon Nissan of Greenwood": "CANNGR",
+  "Cannon Nissan of Jackson": "CANNJA",
+  "Cannon Nissan of Oxford": "CANNOX",
+  "Grenada Nissan": "GREIGR",
+  "Cannon Chevrolet Nissan of Laurel": "CANCLR",
+  "Cannon GMC Vicksburg": "CANBVI",
+  "Cannon CDJR Senatobia": "CANCSE",
   "Stivers Ford Montgomery, 4000 Eastern Blvd Montgomery, AL, 36116": "STIFMO",
   "Stivers Ford Montgomery, 500 Palisades Blvd, Birmingham, AL, 35209":
     "STIFBI",
@@ -179,18 +220,20 @@ function createOrderCsv(orders) {
   return csv;
 }
 
+// TODO: send order to kristy if cannon
 export async function sendEmail(orders) {
   logger.info("Creating orders csv");
   const csv = createOrderCsv(orders);
   logger.info("Created orders csv", csv);
   const ses = new SESClient({});
+  const recipients: string[] = getConfigValue("email_recipients");
 
   logger.info("Preparing email");
   const date = dayjs();
   const date_str = date.format("MM-DD-YYYY");
   const buffer = Buffer.from(csv);
   let ses_mail = "From: doubleujabbour@gmail.com\n";
-  ses_mail += `To: lbudbill@gpcorp.com, lbudbell@comcast.net\n`;
+  ses_mail += `To: ${recipients.join(", ")}\n`;
   ses_mail += "Subject: Weekly Stivers Orders\n";
   ses_mail += `Content-Type: text/plain; name="${date_str}-orders.csv"\n`;
   ses_mail += `Content-Disposition: attachment; filename="${date_str}-orders.csv"\n`;

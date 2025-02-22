@@ -72,28 +72,6 @@ export class Dynamo {
     }
   }
 
-  async getBypassedOrders() {
-    const command = new QueryCommand({
-      "Select": "ALL_ATTRIBUTES",
-      "ExpressionAttributeValues": {
-        ":bypass": {
-          "N": "1"
-        }
-      },
-      "KeyConditionExpression": "bypass = :bypass",
-      "TableName": "orders",
-      "IndexName": "bypass-index"
-    })
-
-    const response = await this.client.send(command);
-
-    if (response.Items) {
-      return response.Items.map((i) => unmarshall(i))
-    } else {
-      return []
-    }
-  }
-
   async archivePaidOrders() {
     const command = new QueryCommand({
       "Select": "ALL_ATTRIBUTES",
