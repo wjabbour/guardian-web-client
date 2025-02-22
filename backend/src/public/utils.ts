@@ -166,9 +166,19 @@ export function getCatalogItemPrice(item_code, size, origin) {
 }
 
 export function getCatalogItemDescription(item_code, origin) {
+  logger.info(
+    `Getting item description from catalog for item code ${item_code}`
+  );
   const item = Catalog(origin).find((i) => {
     return i.code === item_code;
   });
+
+  if (item) {
+    logger.info(`Found item: ${item.fullname}`);
+  } else {
+    logger.warn("Did not find item");
+  }
+
   return item.fullname;
 }
 
