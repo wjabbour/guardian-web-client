@@ -44,29 +44,5 @@ export class Dynamo {
       return [];
     }
   }
-
-  // async writeCompanyName() {
-  //   const orders = await this.getArchivedOrders("");
-  //   const newOrders = orders.map((o) => {
-  //     o["company_name"] = "Cannon";
-  //     return o;
-  //   });
-
-  //   const commands = newOrders.map((o) => {
-  //     return new PutCommand({
-  //       TableName: "archived_orders",
-  //       Item: o,
-  //     });
-  //   });
-
-  //   for (const command of commands) {
-  //     await this.client.send(command);
-  //     await new Promise((res) => {
-  //       setTimeout(() => {
-  //         res(1);
-  //       }, 1000);
-  //     });
-  //   }
-  // }
 }
 
