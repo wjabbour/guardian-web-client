@@ -7,8 +7,8 @@
     "build": "tsc -noEmit",
     "test": "jest",
     "pre-deploy": "npm run build && npm run build --ws && cd terraform && terraform init && terraform workspace select prod",
-    "deploy-standard": "AWS_PROFILE=default npm run pre-deploy && cd terraform && terraform apply -auto-approve -var-file=tfvars/standard.tfvars",
-    "deploy-cannon": "AWS_PROFILE=cannon npm run pre-deploy && cd terraform && terraform apply -auto-approve -var-file=tfvars/cannon.tfvars"
+    "deploy-standard": "npm run pre-deploy && cd terraform && terraform apply -auto-approve -var-file=tfvars/standard.tfvars",
+    "deploy-cannon": "set AWS_PROFILE=cannon && npm run pre-deploy && cd terraform && terraform apply -auto-approve -var-file=tfvars/cannon.tfvars"
   },
   "keywords": [],
   "author": "",
