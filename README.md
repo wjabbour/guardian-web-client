@@ -305,17 +305,17 @@ A.jpg
 
 ### Adding new colors
 
-If this is the first time you are using a specific color for an item, that item color will need to be added to `{project_root}/client/src/routes/Modification/modification.module.scss`. Without this, the color box on the modification page will be white.
+If this is the first time you are using a specific color for an item, that item color will need to be added to `{project_root}/client/src/routes/Modification/Modification.module.scss`. Without this, the color box on the modification page will be white.
 
-For example, if you have item `A` which is available in colors `['Puke Green']` then you will need the following lines in `modification.module.scss`
+For example, if you have item `A` which is available in colors `['Lime Green']` then you will need the following lines in `modification.module.scss`
 
 ```
-.Puke_Green {
+.Lime_Green {
   background-color: {your_hex_code};
 }
 ```
 
-`your_hex_code` always begins with the `#` character and ends with 6 alphanumeric characters. It is up to you to decide the hex code. VSCode has a nice hexcode picker. If that doesn't work for you, you can go online and find a hexcode->color converter and copy the hex code that most closely matches the color to the `modification.module.scss` file.
+`your_hex_code` always begins with the `#` character and ends with 6 alphanumeric characters. It is up to you to decide the hex code. VSCode has a nice hexcode picker. If that doesn't work for you, you can go online and find a hexcode->color converter and copy the hex code that most closely matches the color to the `Modification.module.scss` file.
 
 ## Configure the backend
 
