@@ -69,6 +69,15 @@ export const handler = async (
       to run and move the order from orders table to archived_orders
     */
     if (company_name === "Tameron") {
+      // this prevents Tameron client being able to submit arbitrary orders
+      if (!body.bypassPaypal) {
+        logger.warn("All Tameron orders should have bypassPaypal as true");
+        return {
+          statusCode: 400,
+          body: JSON.stringify({ message: "Must enter code to place order" }),
+          headers: addCors(event.headers?.origin),
+        };
+      }
       logger.info({ message: "Tameron order, sending immediately" });
 
       const created_at = await dynamo.createOrder(
@@ -98,6 +107,34 @@ export const handler = async (
 
     if (body.bypassPaypal) {
       logger.info({ message: "Bypassing PayPal" });
+
+      if (company_name === "Cannon") {
+        const created_at = await dynamo.createOrder(
+          {
+            email,
+            order: cart,
+            first_name,
+            last_name,
+            store,
+            company_name,
+            customer_po,
+            bypass: 1,
+            order_id: "-1",
+            paid: 1,
+          },
+          "orders"
+        );
+
+        const order = await dynamo.getOrder(email, created_at);
+        logger.info("Received Tameron order", order);
+        await sendEmail([order]);
+        return {
+          statusCode: 200,
+          headers: addCors(event.headers?.origin),
+        };
+      }
+
+      // company is not cannon but is bypassPaypal
       await dynamo.createOrder(
         {
           email,
@@ -118,32 +155,33 @@ export const handler = async (
         statusCode: 200,
         headers: addCors(event.headers?.origin),
       };
-    } else {
-      const order_id = await create_paypal_order(price);
-      logger.info({ message: "Received order id", order_id });
-
-      await dynamo.createOrder(
-        {
-          email,
-          order: cart,
-          first_name,
-          last_name,
-          store,
-          customer_po,
-          company_name,
-          bypass: 0,
-          order_id,
-          paid: 0,
-        },
-        "orders"
-      );
-
-      return {
-        statusCode: 200,
-        body: JSON.stringify({ order_id }),
-        headers: addCors(event.headers?.origin),
-      };
     }
+
+    // bypassPaypal = false
+    const order_id = await create_paypal_order(price);
+    logger.info({ message: "Received order id", order_id });
+
+    await dynamo.createOrder(
+      {
+        email,
+        order: cart,
+        first_name,
+        last_name,
+        store,
+        customer_po,
+        company_name,
+        bypass: 0,
+        order_id,
+        paid: 0,
+      },
+      "orders"
+    );
+
+    return {
+      statusCode: 200,
+      body: JSON.stringify({ order_id }),
+      headers: addCors(event.headers?.origin),
+    };
   } catch (e) {
     logger.error(e);
     return {
