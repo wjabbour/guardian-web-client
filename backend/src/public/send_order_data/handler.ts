@@ -17,7 +17,8 @@ export const handler = async (): Promise<APIGatewayProxyResult> => {
       };
     }
 
-    await sendEmail(paidOrders);
+    // TODO: fix this
+    await sendEmail(paidOrders, "");
     await dynamo.archivePaidOrders();
     await dynamo.deleteOldUnpaidOrders();
     logger.info("deleted old unpaid orders");

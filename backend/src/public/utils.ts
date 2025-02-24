@@ -231,7 +231,7 @@ function createOrderCsv(orders) {
 }
 
 // TODO: send order to kristy if cannon
-export async function sendEmail(orders) {
+export async function sendEmail(orders: {}, companyName: string) {
   logger.info("Creating orders csv");
   const csv = createOrderCsv(orders);
   logger.info("Created orders csv", csv);
@@ -244,7 +244,7 @@ export async function sendEmail(orders) {
   const buffer = Buffer.from(csv);
   let ses_mail = "From: doubleujabbour@gmail.com\n";
   ses_mail += `To: ${recipients.join(", ")}\n`;
-  ses_mail += "Subject: Weekly Stivers Orders\n";
+  ses_mail += `Subject: Weekly ${companyName} Orders\n`;
   ses_mail += `Content-Type: text/plain; name="${date_str}-orders.csv"\n`;
   ses_mail += `Content-Disposition: attachment; filename="${date_str}-orders.csv"\n`;
   ses_mail += "Content-Transfer-Encoding: base64\n";
