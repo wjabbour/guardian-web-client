@@ -1,6 +1,13 @@
-import { DynamoDBClient, GetItemCommand } from "@aws-sdk/client-dynamodb";
+import { DynamoDBClient, UpdateItemCommand } from "@aws-sdk/client-dynamodb";
 import { unmarshall } from "@aws-sdk/util-dynamodb";
-import { DynamoDBDocumentClient, PutCommand } from "@aws-sdk/lib-dynamodb";
+import {
+  QueryCommand,
+  DeleteCommand,
+  DynamoDBDocumentClient,
+  GetCommand,
+  PutCommand,
+  UpdateCommand,
+} from "@aws-sdk/lib-dynamodb";
 import { logger } from "./utils";
 
 interface Order {
@@ -30,21 +37,17 @@ class Dynamo {
   }
 
   async getOrder(email: string, created_at: string) {
-    const command = new GetItemCommand({
+    const command = new GetCommand({
       Key: {
-        email: {
-          S: email,
-        },
-        created_at: {
-          S: created_at,
-        },
+        email,
+        created_at,
       },
       TableName: "archived_orders",
     });
 
-    const response = await this.client.send(command);
+    const response = await this.documentClient.send(command);
     if (response.Item) {
-      return unmarshall(response.Item);
+      return response.Item;
     } else {
       return null;
     }
@@ -66,6 +69,75 @@ class Dynamo {
     );
 
     return created_at;
+  }
+
+  async setPaid(order_id: string, txId: string) {
+    const command = new QueryCommand({
+      Select: "ALL_ATTRIBUTES",
+      ExpressionAttributeValues: {
+        ":order_id": order_id,
+      },
+      KeyConditionExpression: "order_id = :order_id",
+      TableName: "orders",
+      IndexName: "order-id-index",
+    });
+
+    const response = await this.documentClient.send(command);
+
+    if (response.Items.length > 0) {
+      const item = response.Items[0];
+      const update_command = new UpdateCommand({
+        Key: {
+          email: item.email,
+          created_at: item.created_at,
+        },
+        UpdateExpression:
+          "set paid = :paid, paid_at = :paid_at, transaction_id = :transaction_id",
+        ExpressionAttributeValues: {
+          ":paid": 1,
+          ":paid_at": Date.now(),
+          ":transaction_id": txId,
+        },
+        TableName: "orders",
+      });
+
+      await this.documentClient.send(update_command);
+      return { email: item.email, created_at: item.created_at };
+    }
+  }
+
+  async archiveCannonOrder(created_at: string, email: string) {
+    const command = new GetCommand({
+      Key: {
+        created_at,
+        email,
+      },
+      TableName: "orders",
+    });
+
+    const response = await this.documentClient.send(command);
+    const item = response.Item;
+
+    const putItem = new PutCommand({
+      Item: item,
+      TableName: "archived_orders",
+    });
+
+    await this.documentClient.send(putItem);
+
+    const deleteItem = new DeleteCommand({
+      Key: {
+        email: {
+          S: item.email,
+        },
+        created_at: {
+          S: item.created_at,
+        },
+      },
+      TableName: "orders",
+    });
+
+    await this.documentClient.send(deleteItem);
   }
 }
 
