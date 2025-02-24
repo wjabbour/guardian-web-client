@@ -1,7 +1,7 @@
 import { DynamoDBClient, GetItemCommand } from "@aws-sdk/client-dynamodb";
 import { unmarshall } from "@aws-sdk/util-dynamodb";
 import { DynamoDBDocumentClient, PutCommand } from "@aws-sdk/lib-dynamodb";
-import { logger } from "../utils";
+import { logger } from "./utils";
 
 interface Order {
   email: string;
@@ -16,7 +16,7 @@ interface Order {
   paid: number;
 }
 
-export class Dynamo {
+class Dynamo {
   client: DynamoDBClient;
   documentClient: DynamoDBDocumentClient;
 
@@ -68,3 +68,5 @@ export class Dynamo {
     return created_at;
   }
 }
+
+export const dynamoClient = new Dynamo();

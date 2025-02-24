@@ -7,7 +7,6 @@ import {
   sendEmail,
   getCatalogItem,
 } from "../utils";
-import { Dynamo } from "./dynamo";
 import axios from "axios";
 import qs from "qs";
 import {
@@ -16,8 +15,8 @@ import {
 } from "@aws-sdk/client-secrets-manager";
 import { Catalog } from "../catalog";
 import { COMPANIES } from "../utils";
+import { dynamoClient } from "../dynamoClient";
 
-const dynamo = new Dynamo();
 const sm = new SecretsManagerClient({ region: "us-east-1" });
 const command = new GetSecretValueCommand({
   SecretId: "stivers-website",
@@ -80,7 +79,7 @@ export const handler = async (
       }
       logger.info({ message: "Tameron order, sending immediately" });
 
-      const created_at = await dynamo.createOrder(
+      const created_at = await dynamoClient.createOrder(
         {
           email,
           order: cart,
@@ -96,8 +95,7 @@ export const handler = async (
         "archived_orders"
       );
 
-      const order = await dynamo.getOrder(email, created_at);
-      logger.info("Received Tameron order", order);
+      const order = await dynamoClient.getOrder(email, created_at);
       await sendEmail([order]);
       return {
         statusCode: 200,
@@ -109,7 +107,7 @@ export const handler = async (
       logger.info({ message: "Bypassing PayPal" });
 
       if (company_name === "Cannon") {
-        const created_at = await dynamo.createOrder(
+        const created_at = await dynamoClient.createOrder(
           {
             email,
             order: cart,
@@ -125,8 +123,7 @@ export const handler = async (
           "archived_orders"
         );
 
-        const order = await dynamo.getOrder(email, created_at);
-        logger.info("Received Tameron order", order);
+        const order = await dynamoClient.getOrder(email, created_at);
         await sendEmail([order]);
         return {
           statusCode: 200,
@@ -135,7 +132,7 @@ export const handler = async (
       }
 
       // company is not cannon but is bypassPaypal
-      await dynamo.createOrder(
+      await dynamoClient.createOrder(
         {
           email,
           order: cart,
@@ -161,7 +158,7 @@ export const handler = async (
     const order_id = await create_paypal_order(price);
     logger.info({ message: "Received order id", order_id });
 
-    await dynamo.createOrder(
+    await dynamoClient.createOrder(
       {
         email,
         order: cart,
