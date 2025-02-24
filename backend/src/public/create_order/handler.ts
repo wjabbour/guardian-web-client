@@ -122,7 +122,7 @@ export const handler = async (
             order_id: "-1",
             paid: 1,
           },
-          "archived-orders"
+          "archived_orders"
         );
 
         const order = await dynamo.getOrder(email, created_at);
