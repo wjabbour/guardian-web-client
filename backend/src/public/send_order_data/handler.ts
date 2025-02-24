@@ -32,5 +32,3 @@ export const handler = async (): Promise<APIGatewayProxyResult> => {
     };
   }
 };
-
-handler();
