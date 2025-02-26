@@ -16,7 +16,7 @@ export const CannonCatalog: CatalogItem[] = [
     code: "F218",
     name: "Fleece Pullover",
     fullname: 'Port Authority® Value Fleece 1/4" Zip Pullover',
-    colors: ["Black", "Gray", "Navy"],
+    colors: ["Black", "Gray"],
     type: "mens",
     default_color: "Black",
     sizes: {
@@ -36,7 +36,7 @@ export const CannonCatalog: CatalogItem[] = [
     code: "K805",
     name: '1/4" Zip Pullover',
     fullname: "Port Authority® Vertical Texture 1/4-Zip Pullover",
-    colors: ["Black", "Navy"],
+    colors: ["Black"],
     type: "mens",
     default_color: "Black",
     sizes: {
@@ -228,7 +228,7 @@ export const CannonCatalog: CatalogItem[] = [
     code: "LST253",
     name: '1/4" Zip Sweatshirt',
     fullname: "Sport Tek® Ladies 1/4 Zip Sweatshirt",
-    colors: ["Black", "Navy", "Graphite"],
+    colors: ["Black", "Graphite"],
     default_color: "Black",
     sizes: {
       XSmall: 37.39,
