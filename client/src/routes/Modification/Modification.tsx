@@ -26,7 +26,7 @@ export default function Modification() {
   const navigate = useNavigate();
   const [selected_color, set_selected_color] = useState(item.default_color);
   const [image_source, set_image_source] = useState(
-    `/images/${item.code}_${selected_color.toLowerCase()}.jpg`
+    `/images/${item.code}_${selected_color.toLowerCase().split(' ').join('_')}.jpg`
   );
   const [cart, set_cart] = useOutletContext<any>();
   const [snackbarOpen, setSnackbarOpen] = useState(false);
