@@ -35,12 +35,13 @@
 .image__container {
   display: flex;
   align-items: center;
-  height: 520px;
+  justify-content: center;
+  max-height: 520px;
   min-width: 400px;
   max-width: 450px;
 
   img {
-    height: auto;
+    max-height: 100%;
     max-width: 450px;
     aspect-ratio: auto;
   }
