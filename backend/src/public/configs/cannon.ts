@@ -4,6 +4,7 @@ export const cannonConfig: Config = {
     "lbudbill@gpcorp.com",
     "lbudbell@comcast.net",
     "kburton@nobodybeatsacannondeal.com",
-    "doubleujabbour@gmail.com"
-  ], // determines who receives the order emails
+    "doubleujabbour@gmail.com",
+  ],
+  secretName: "cannon-website",
 };

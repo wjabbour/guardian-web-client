@@ -16,10 +16,11 @@ import {
 import { Catalog } from "../catalog";
 import { COMPANIES } from "../utils";
 import { dynamoClient } from "../dynamoClient";
+import { getConfigValue } from "../utils";
 
 const sm = new SecretsManagerClient({ region: "us-east-1" });
 const command = new GetSecretValueCommand({
-  SecretId: "stivers-website",
+  SecretId: getConfigValue("secretName"),
 });
 
 export const handler = async (

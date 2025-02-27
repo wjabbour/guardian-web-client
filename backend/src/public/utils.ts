@@ -32,15 +32,13 @@ export function addCors(origin, map?) {
   return headers;
 }
 
-export function getConfigValue(
-  configProperty: string
-): Config[typeof configProperty] {
+export function getConfigValue(configProperty: string): any {
   const deployment = process.env["DEPLOYMENT"];
   if (deployment === "standard") {
     return standardConfig[configProperty];
   }
 
-  return standardConfig[configProperty];
+  return cannonConfig[configProperty];
 }
 
 export const COMPANIES: { [index: string]: string } = {
