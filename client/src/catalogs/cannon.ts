@@ -2,6 +2,66 @@ import { CatalogItem } from "../lib/interfaces";
 
 export const CannonCatalog: CatalogItem[] = [
   {
+    code: "CANNJA-33P-403490A",
+    name: "Plastic Plates",
+    fullname: "White Plastic w/red imprint",
+    colors: ["White"],
+    type: "customs",
+    default_color: "White",
+    discount: [
+      { quantity: 5000, price: 0.00 },
+    ],
+    sizes: {
+      default: 0.00,
+    },
+  }, 
+  {
+    code: "CANNJA-33MRE-400137B",
+    name: "Metal Plates",
+    fullname: "White Aluminum Plate w/red/blue imprint",
+    colors: ["White"],
+    type: "customs",
+    default_color: "White",
+    discount: [
+      { quantity: 5000, price: 0.00 },
+    ],
+    sizes: {
+      default: 0.00,
+    },
+  }, 
+  { 
+    code: "CANNJA-31DD-502545A",
+    name: "Die Cut Decal",
+    fullname: "Vinyl Diecut Decal (order in quantities of 5000)",
+    colors: ["Black", "Red", "Silver", "White"],
+    type: "customs",
+    default_color: "Black",
+    discount: [
+      { quantity: 500, price: 0.00 },
+      { quantity: 1000, price: 0.00 },
+      { quantity: 1250, price: 0.00 },
+    ],
+    sizes: {
+      default: 0.00,
+    },
+  }, 
+  {
+    code: "GP546",
+    name: "Deal Jackets",
+    fullname: "9 x 12 Deal Jacket",
+    colors: ["Blue", "Buff", "Fuchsia", "Green", "Grey", "Lavender", "Pink", "Salmon", "White", "Yellow"],
+    type: "customs",
+    default_color: "Buff",
+    discount: [
+      { quantity: 500, price: 0.00 },
+      { quantity: 1000, price: 0.00 },
+      { quantity: 1250, price: 0.00 },
+    ],
+    sizes: {
+      default: 0.00,
+    },
+  }, 
+  {
     code: "TM1MY394",
     name: "Cuffed Beanie",
     fullname: "Travis Matthew® Solid Cuffed Beanie",

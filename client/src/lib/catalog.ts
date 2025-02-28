@@ -8,7 +8,7 @@ import { CannonCatalog } from "../catalogs/cannon";
 export const Catalog = function (): CatalogItem[] {
   const url = window.location.href;
   if (url.includes("localhost:3000")) {
-    return NewCustomerCatalog;
+    return CannonCatalog;
   } else if (url.includes("newcustomer.gpstivers.com")) {
     return NewCustomerCatalog;
   } else if (url.includes("gpstivers.com")) {

@@ -66,7 +66,7 @@ const STORES = {
   "Cannon Preowned Grenada": "CANPGR",
   "Cannon Toyota of Vicksburg": "CANTVI",
   "Cannon Toyota of Mosspoint": "CANTMO",
-  "Cannon Ford Nissan of Pascagula": "CANNPA",
+  "Cannon Nissan of Moss Point": "CANNMO",
   "Cannon CDJR of West Point": "CANDWE",
   "Cannon Preowned of Jackson": "CANPJA",
   "Cannon Preowned Calhoun City": "CANPCC",

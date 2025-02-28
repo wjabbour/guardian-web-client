@@ -26,8 +26,7 @@ export const config: Config = {
     "Cannon CDJR Greenwood",
     "Cannon Preowned Grenada",
     "Cannon Toyota of Vicksburg",
-    "Cannon Toyota of Mosspoint",
-    "Cannon Ford Nissan of Pascagula",
+    "Cannon Toyota of Mosspoint",    
     "Cannon CDJR of West Point",
     "Cannon Preowned of Jackson",
     "Cannon Preowned Calhoun City",
@@ -38,6 +37,7 @@ export const config: Config = {
     "Cannon Chevrolet Nissan of Laurel",
     "Cannon GMC Vicksburg",
     "Cannon CDJR Senatobia",
+    "Cannon Nissan of Moss Point"
   ],
   bypass_codes: ["CANNJA"],
   server_hostname: "https://o1yn7lpenj.execute-api.us-east-1.amazonaws.com",
