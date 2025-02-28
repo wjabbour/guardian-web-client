@@ -31,8 +31,8 @@ export const CannonCatalog: CatalogItem[] = [
   }, 
   { 
     code: "CANNJA-31DD-502545A",
-    name: "Die Cut Decal",
-    fullname: "Vinyl Diecut Decal (order in quantities of 5000)",
+    name: "Die Cut Decals",
+    fullname: "Vinyl Diecut Decals (order in quantities of 5000)",
     colors: ["Black", "Red", "Silver", "White"],
     type: "customs",
     default_color: "Black",
@@ -48,14 +48,13 @@ export const CannonCatalog: CatalogItem[] = [
   {
     code: "GP546",
     name: "Deal Jackets",
-    fullname: "9 x 12 Deal Jacket",
+    fullname: "9 in. x 12 in. Deal Jacket (500/box)",
     colors: ["Blue", "Buff", "Fuchsia", "Green", "Grey", "Lavender", "Pink", "Salmon", "White", "Yellow"],
     type: "customs",
     default_color: "Buff",
     discount: [
       { quantity: 500, price: 0.00 },
-      { quantity: 1000, price: 0.00 },
-      { quantity: 1250, price: 0.00 },
+      { quantity: 1000, price: 0.00 },     
     ],
     sizes: {
       default: 0.00,
