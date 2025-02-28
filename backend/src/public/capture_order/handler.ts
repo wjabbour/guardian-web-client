@@ -57,7 +57,7 @@ export const handler = async (
     if (email && created_at && company_name === "Cannon") {
       await dynamoClient.archiveCannonOrder(created_at, email);
       const order = await dynamoClient.getOrder(email, created_at);
-      await sendEmail([order], "Cannon");
+      await sendEmail([order], "Cannon", email);
     }
 
     return {

@@ -34,5 +34,6 @@ interface Order {
 }
 
 export interface Config {
-  [key: string]: string[];
+  email_recipients: string[]; // determines who receives the order emails
+  secretName: string; // the name of the secret to fetch from Secrets Manager
 }

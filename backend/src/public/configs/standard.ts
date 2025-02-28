@@ -5,5 +5,7 @@ export const standardConfig: Config = {
     "lbudbill@gpcorp.com",
     "lbudbell@comcast.net",
     "doubleujabbour@gmail.com",
-  ], // determines who receives the order emails
+  ],
+  // TODO: can use same secret name across accounts and remove this config value
+  secretName: "stivers-website",
 };

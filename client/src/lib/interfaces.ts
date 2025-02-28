@@ -36,6 +36,12 @@ export interface Config {
   render_logo_preview: boolean;
   bypass_codes: string[]; // the codes that will enable a user to place an order without the paypal flow
   server_hostname: string; // cannon client talks to a different server than all the other clients
+  account_reps: AccountRep[]; // the account reps contact info to be displayed on the footer
+}
+
+interface AccountRep {
+  name: string;
+  phone: string;
 }
 
 export interface CartItem {

@@ -46,4 +46,8 @@ export const config: Config = {
     "PRENME",
   ],
   server_hostname: "https://mxfj3q6m01.execute-api.us-east-1.amazonaws.com",
+  account_reps: [
+    { name: "Louis Budbill", phone: "678-287-1659" },
+    { name: "Glenn Rodney", phone: "678-287-1608" },
+  ],
 };
