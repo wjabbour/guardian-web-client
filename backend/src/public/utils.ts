@@ -228,13 +228,24 @@ function createOrderCsv(orders) {
   return csv;
 }
 
-// TODO: send order to kristy if cannon
-export async function sendEmail(orders: {}, companyName: string) {
+/*
+  recipient is an optional email to also send the order to. This is used
+  for Cannon to send the user who just placed the order an order email
+*/
+export async function sendEmail(
+  orders: {},
+  companyName: string,
+  recipient?: string
+) {
   logger.info("Creating orders csv");
   const csv = createOrderCsv(orders);
   logger.info("Created orders csv", csv);
   const ses = new SESClient({});
   const recipients: string[] = getConfigValue("email_recipients");
+
+  if (recipient) {
+    recipients.push(recipient);
+  }
 
   logger.info("Preparing email");
   const date = dayjs();

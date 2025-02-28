@@ -97,7 +97,7 @@ export const handler = async (
       );
 
       const order = await dynamoClient.getOrder(email, created_at);
-      await sendEmail([order], "Tameron");
+      await sendEmail([order], "Tameron", email);
       return {
         statusCode: 200,
         headers: addCors(event.headers?.origin),
