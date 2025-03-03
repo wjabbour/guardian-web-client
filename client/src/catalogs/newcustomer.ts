@@ -365,7 +365,7 @@ export const NewCustomerCatalog: CatalogItem[] = [
     },
   }, 
   {
-    code: "1640",
+    code: "G1640",
     name: "Logo Key Chain",
     fullname: "Brushed Zinc/Leather/Big Logo Key Chain",
     colors: ["Black"],
