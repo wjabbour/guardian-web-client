@@ -45,7 +45,8 @@ export const GuardianCatalog: CatalogItem[] = [
       { quantity: 2500, price: 0.45 },
     ],
     sizes: {
-      default: 0.59,
+      1000: 0.0,
+      2500: 0.0,
     },
   },
   {
@@ -60,7 +61,8 @@ export const GuardianCatalog: CatalogItem[] = [
       { quantity: 2500, price: 0.45 },
     ],
     sizes: {
-      default: 0.59,
+      1000: 0.0,
+      2500: 0.0,
     },
   },
   {
@@ -75,7 +77,8 @@ export const GuardianCatalog: CatalogItem[] = [
       { quantity: 2500, price: 0.45 },
     ],
     sizes: {
-      default: 0.59,
+      1000: 0.0,
+      2500: 0.0,
     },
   },
   {
@@ -90,7 +93,8 @@ export const GuardianCatalog: CatalogItem[] = [
       { quantity: 2500, price: 0.45 },
     ],
     sizes: {
-      default: 0.59,
+      1000: 0.0,
+      2500: 0.0,
     },
   },
   {
@@ -105,7 +109,8 @@ export const GuardianCatalog: CatalogItem[] = [
       { quantity: 2500, price: 0.45 },
     ],
     sizes: {
-      default: 0.59,
+      1000: 0.0,
+      2500: 0.0,
     },
   },
   {
@@ -120,7 +125,8 @@ export const GuardianCatalog: CatalogItem[] = [
       { quantity: 2500, price: 0.45 },
     ],
     sizes: {
-      default: 0.59,
+      1000: 0.0,
+      2500: 0.0,
     },
   },
   {

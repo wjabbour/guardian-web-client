@@ -26,7 +26,10 @@ export default function Modification() {
   const navigate = useNavigate();
   const [selected_color, set_selected_color] = useState(item.default_color);
   const [image_source, set_image_source] = useState(
-    `/images/${item.code}_${selected_color.toLowerCase().split(' ').join('_')}.jpg`
+    `/images/${item.code}_${selected_color
+      .toLowerCase()
+      .split(" ")
+      .join("_")}.jpg`
   );
   const [cart, set_cart] = useOutletContext<any>();
   const [snackbarOpen, setSnackbarOpen] = useState(false);
@@ -44,6 +47,8 @@ export default function Modification() {
   const [embroidery, setEmbroidery] = useState("");
   const [placement, setPlacement] = useState("Left Chest");
   const logo_placements = getConfigValue("logo_placements") as string[];
+  const [customsOrder, setCustomsOrder] = useState({});
+  console.log(customsOrder);
 
   const handleChange = (event) => {
     setEmbroidery(event.target.value);
@@ -112,6 +117,11 @@ export default function Modification() {
       ...cart,
     };
 
+    if (item.type === "customs") {
+      console.log("customs");
+      return;
+    }
+
     let any_input_has_value = false;
     let invalid_input = false;
 
@@ -170,16 +180,6 @@ export default function Modification() {
         }
         inputs[j].value = "";
       }
-    }
-
-    if (selected_customs_black_quantity) {
-      any_input_has_value = true;
-      addCustomsToCart(selected_customs_black_quantity, "Black", new_cart);
-    }
-
-    if (selected_customs_white_quantity) {
-      any_input_has_value = true;
-      addCustomsToCart(selected_customs_white_quantity, "White", new_cart);
     }
 
     if (!any_input_has_value || invalid_input) {
@@ -281,14 +281,8 @@ export default function Modification() {
           <QuantitySelector
             item={item}
             sizes={sizes}
-            set_selected_customs_white_quantity={
-              set_selected_customs_white_quantity
-            }
-            set_selected_customs_black_quantity={
-              set_selected_customs_black_quantity
-            }
-            selected_customs_black_quantity={selected_customs_black_quantity}
-            selected_customs_white_quantity={selected_customs_white_quantity}
+            customsOrder={customsOrder}
+            setCustomsOrder={setCustomsOrder}
           />
 
           <div
