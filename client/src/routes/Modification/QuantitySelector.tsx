@@ -37,7 +37,6 @@ export default function QuantitySelector({
                         onChange={() => {
                           // we are unselecting the checkbox
                           if (clone[size]?.includes(color)) {
-                            console.log("here");
                             const idx = clone[size].indexOf(color);
 
                             if (idx > -1) {

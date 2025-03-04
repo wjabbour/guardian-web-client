@@ -48,7 +48,6 @@ export default function Modification() {
   const [placement, setPlacement] = useState("Left Chest");
   const logo_placements = getConfigValue("logo_placements") as string[];
   const [customsOrder, setCustomsOrder] = useState({});
-  console.log(customsOrder);
 
   const handleChange = (event) => {
     setEmbroidery(event.target.value);
@@ -117,8 +116,44 @@ export default function Modification() {
       ...cart,
     };
 
+    console.log(customsOrder);
     if (item.type === "customs") {
-      console.log("customs");
+      // check customs order not empty
+
+      const noCustoms =
+        Object.keys(customsOrder).length === 0
+          ? true
+          : Object.values(customsOrder).every(
+              (arr: string[]) => arr.length === 0
+            );
+
+      if (noCustoms) {
+        setErrorSnackbarOpen(true);
+        setErrorSnackbarText("Must make a selection");
+        return;
+      }
+
+      const items: { [key: string]: number } = {};
+
+      Object.keys(customsOrder).forEach((k: string) => {
+        // the keys of customsOrder are the different available quantities
+        const quantity = parseInt(k);
+        const colors = customsOrder[k];
+
+        colors.forEach((color) => {
+          items[color] = items[color] ? items[color] + quantity : quantity;
+        });
+      });
+
+      for (const [key, value] of Object.entries(items)) {
+        console.log(key, value)
+        addCustomsToCart(value, key, new_cart);
+      }
+
+      set_cart(new_cart);
+      sessionStorage.setItem("cart", JSON.stringify(new_cart));
+      setSnackbarOpen(true);
+      setCustomsOrder({})
       return;
     }
 
@@ -194,11 +229,12 @@ export default function Modification() {
   }
 
   function addCustomsToCart(quantity, color, new_cart) {
+    console.log("here");
     const key = `${item.code},${color}`;
     const cart_item = {
       type: item.type,
       name: item.fullname,
-      price: getPriceWithDiscount(new_cart[key]?.quantity ?? 0, quantity),
+      price: 0,
       quantity: Number(quantity),
       size: "default",
       color: color,
