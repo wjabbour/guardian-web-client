@@ -53,7 +53,8 @@ export default function BasicTable() {
         return b.created_at - a.created_at;
       });
 
-      setOrders(orders);
+      const paidOrders = orders.filter((order) => order.paid !== 0)
+      setOrders(paidOrders);
     });
   }, []);
 
