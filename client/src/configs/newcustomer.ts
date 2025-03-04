@@ -71,6 +71,6 @@ export const config: Config = {
   server_hostname: "https://mxfj3q6m01.execute-api.us-east-1.amazonaws.com",
   account_reps: [
     { name: "Andrew Sarazua", phone: "678-287-1604" },
-    { name: "Louis Budbill", phone: "678-287-1649" },    
+    { name: "John Boston", phone: "678-287-1601" },    
   ],
 };
