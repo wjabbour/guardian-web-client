@@ -252,8 +252,8 @@ export const NewcustomerCatalog: CatalogItem[] = [
     type: "customs",
     default_color: "Metal",
     discount: [
+      { quantity: 500, price: 0.00 },
       { quantity: 1000, price: 0.00 },
-      { quantity: 2500, price: 0.00 },
     ],
     sizes: {
       default: 0.00,
