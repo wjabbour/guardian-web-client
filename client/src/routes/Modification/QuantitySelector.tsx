@@ -4,12 +4,9 @@ import Checkbox from "@mui/material/Checkbox";
 export default function QuantitySelector({
   item,
   sizes,
-  set_selected_customs_black_quantity,
-  set_selected_customs_white_quantity,
-  selected_customs_black_quantity,
-  selected_customs_white_quantity,
+  customsOrder,
+  setCustomsOrder,
 }) {
-  sizes = item.type === "customs" ? [500, 1000, 2500] : sizes;
   function ColorHeaders() {
     return (
       <thead>
@@ -24,6 +21,7 @@ export default function QuantitySelector({
   }
 
   function QuantityOptions() {
+    const clone = structuredClone(customsOrder);
     return (
       <tbody>
         {sizes.map((size) => {
@@ -35,17 +33,23 @@ export default function QuantitySelector({
                   <td>
                     {item.type === "customs" && (
                       <Checkbox
-                        checked={
-                          color === "Black"
-                            ? selected_customs_black_quantity === size
-                            : selected_customs_white_quantity === size
-                        }
+                        checked={clone[size]?.includes(color)}
                         onChange={() => {
-                          if (color === "Black") {
-                            set_selected_customs_black_quantity(size);
+                          // we are unselecting the checkbox
+                          if (clone[size]?.includes(color)) {
+                            const idx = clone[size].indexOf(color);
+
+                            if (idx > -1) {
+                              clone[size].splice(idx, 1);
+                            }
                           } else {
-                            set_selected_customs_white_quantity(size);
+                            if (clone[size]) {
+                              clone[size].push(color);
+                            } else {
+                              clone[size] = [color];
+                            }
                           }
+                          setCustomsOrder(clone);
                         }}
                       />
                     )}

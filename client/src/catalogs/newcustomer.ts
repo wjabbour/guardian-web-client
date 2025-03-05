@@ -50,23 +50,23 @@ export const NewCustomerCatalog: CatalogItem[] = [
       XLarge: 56.99,
       "2XLarge": 58.99,
       "3XLarge": 60.99,
-      "4XLarge": 62.99,      
+      "4XLarge": 62.99,
     },
   },
   {
     code: "NF0A7V4F",
     name: "The North Face® Jacket",
     fullname: "The North Face® Down Hybrid Jacket",
-    colors: ["Black","Medium Grey Hthr"],
+    colors: ["Black", "Medium Grey Hthr"],
     type: "mens",
     default_color: "Black",
     sizes: {
-      Small: 199.00,
-      Medium: 199.00,
-      Large: 199.00,
-      XLarge: 199.00,
-      "2XLarge": 201.00,
-      "3XLarge": 203.00,
+      Small: 199.0,
+      Medium: 199.0,
+      Large: 199.0,
+      XLarge: 199.0,
+      "2XLarge": 201.0,
+      "3XLarge": 203.0,
     },
   },
   {
@@ -107,7 +107,7 @@ export const NewCustomerCatalog: CatalogItem[] = [
     code: "NKDC1963",
     name: "Nike® Dri-FIT Polo Shirt",
     fullname: "Nike Dri-FIT Micro Pique 2.0 Polo",
-    colors: [ "Anthracite", "Black","Game Royal","University Red"],
+    colors: ["Anthracite", "Black", "Game Royal", "University Red"],
     type: "mens",
     default_color: "Black",
     sizes: {
@@ -129,7 +129,7 @@ export const NewCustomerCatalog: CatalogItem[] = [
     code: "TM1MAA370",
     name: "TravisMathew Solid Polo",
     fullname: "TravisMathew Cabana Solid Polo",
-    colors: [ "Black", "Classic Blue", "Crimson", "Stormy Grey"],
+    colors: ["Black", "Classic Blue", "Crimson", "Stormy Grey"],
     type: "mens",
     default_color: "Black",
     sizes: {
@@ -164,7 +164,7 @@ export const NewCustomerCatalog: CatalogItem[] = [
     code: "OG1002",
     name: "OGIO® Woven Shirt",
     fullname: "OGIO® Commuter Woven Shirt",
-    colors: [ "Blacktop", "Gear Grey Hthr", "Metal Blue Hthr", "White"],
+    colors: ["Blacktop", "Gear Grey Hthr", "Metal Blue Hthr", "White"],
     type: "mens",
     default_color: "Blacktop",
     sizes: {
@@ -176,12 +176,12 @@ export const NewCustomerCatalog: CatalogItem[] = [
       "3XLarge": 50.99,
       "4XLarge": 52.99,
     },
-  },  
+  },
   {
     code: "BB18002",
     name: "Brooks Brothers® Shirt",
     fullname: "Brooks Brothers® Wrinkle-Free Nailhead Shirt",
-    colors: [ "Cobalt Blue", "Deep Black", "Navy Blazer", "White"],
+    colors: ["Cobalt Blue", "Deep Black", "Navy Blazer", "White"],
     type: "mens",
     default_color: "Deep Black",
     sizes: {
@@ -193,12 +193,12 @@ export const NewCustomerCatalog: CatalogItem[] = [
       "3XLarge": 69.99,
       "4XLarge": 71.99,
     },
-  },  
+  },
   {
     code: "K584",
     name: "Port Authority® 1/4-Zip",
     fullname: "Port Authority® Silk Touch™ 1/4-Zip",
-    colors: [ "Black", "Red", "Royal", "Steel Grey"],
+    colors: ["Black", "Red", "Royal", "Steel Grey"],
     type: "mens",
     default_color: "Black",
     sizes: {
@@ -210,12 +210,12 @@ export const NewCustomerCatalog: CatalogItem[] = [
       "3XLarge": 33.99,
       "4XLarge": 35.99,
     },
-  },  
+  },
   {
     code: "NKBV6044",
     name: "Nike 1/2-Zip Cover-Up",
     fullname: "Nike Dry 1/2-Zip Cover-Up",
-    colors: [ "Black", "Black Heather", "Gym Blue"],
+    colors: ["Black", "Black Heather", "Gym Blue"],
     type: "mens",
     default_color: "Black",
     sizes: {
@@ -227,12 +227,17 @@ export const NewCustomerCatalog: CatalogItem[] = [
       "3XLarge": 68.99,
       "4XLarge": 70.99,
     },
-  },  
+  },
   {
     code: "TM1MY397",
     name: "TravisMathew 1/4-Zip",
     fullname: "TravisMathew Coto Performance 1/4-Zip",
-    colors: [ "Black", "Brilliant Blue Hthr", "Quiet Shade Grey Hthr", "Vintage Indigo"],
+    colors: [
+      "Black",
+      "Brilliant Blue Hthr",
+      "Quiet Shade Grey Hthr",
+      "Vintage Indigo",
+    ],
     type: "mens",
     default_color: "Black",
     sizes: {
@@ -241,7 +246,7 @@ export const NewCustomerCatalog: CatalogItem[] = [
       Large: 79.99,
       XLarge: 79.99,
       "2XLarge": 81.99,
-      "3XLarge": 83.99,  
+      "3XLarge": 83.99,
     },
   },
   {
@@ -252,13 +257,14 @@ export const NewCustomerCatalog: CatalogItem[] = [
     type: "customs",
     default_color: "Metal",
     discount: [
-      { quantity: 1000, price: 0.00 },
-      { quantity: 2500, price: 0.00 },
+      { quantity: 1000, price: 0.0 },
+      { quantity: 2500, price: 0.0 },
     ],
     sizes: {
-      default: 0.00,
+      1000: 0.0,
+      2500: 0.0,
     },
-  }, 
+  },
   {
     code: "HENLAT-34MLF-379167A",
     name: "Zinc Metal Frames",
@@ -267,13 +273,14 @@ export const NewCustomerCatalog: CatalogItem[] = [
     type: "customs",
     default_color: "Metal",
     discount: [
-      { quantity: 1000, price: 0.00 },
-      { quantity: 2500, price: 0.00 },
+      { quantity: 1000, price: 0.0 },
+      { quantity: 2500, price: 0.0 },
     ],
     sizes: {
-      default: 0.00,
+      1000: 0.0,
+      2500: 0.0,
     },
-  }, 
+  },
   {
     code: "HENLAL-34CF-459349A",
     name: "Chrome Faced Frames",
@@ -282,13 +289,14 @@ export const NewCustomerCatalog: CatalogItem[] = [
     type: "customs",
     default_color: "Chrome Faced",
     discount: [
-      { quantity: 1000, price: 0.00 },
-      { quantity: 2500, price: 0.00 },
+      { quantity: 1000, price: 0.0 },
+      { quantity: 2500, price: 0.0 },
     ],
     sizes: {
-      default: 0.00,
+      1000: 0.0,
+      2500: 0.0,
     },
-  }, 
+  },
   {
     code: "HENLAL-33G24-373653A",
     name: "Poly Coated Plates",
@@ -297,13 +305,14 @@ export const NewCustomerCatalog: CatalogItem[] = [
     type: "customs",
     default_color: "White",
     discount: [
-      { quantity: 1000, price: 0.00 },
-      { quantity: 2500, price: 0.00 },
+      { quantity: 1000, price: 0.0 },
+      { quantity: 2500, price: 0.0 },
     ],
     sizes: {
-      default: 0.00,
+      1000: 0.0,
+      2500: 0.0,
     },
-  }, 
+  },
   {
     code: "HENLAT-33G24-367503A",
     name: "Poly Coated Plates",
@@ -312,13 +321,14 @@ export const NewCustomerCatalog: CatalogItem[] = [
     type: "customs",
     default_color: "White",
     discount: [
-      { quantity: 1000, price: 0.00 },
-      { quantity: 2500, price: 0.00 },
+      { quantity: 1000, price: 0.0 },
+      { quantity: 2500, price: 0.0 },
     ],
     sizes: {
-      default: 0.00,
+      1000: 0.0,
+      2500: 0.0,
     },
-  }, 
+  },
   {
     code: "HENLDU-33G24-373661B",
     name: "Poly Coated Plates",
@@ -327,13 +337,14 @@ export const NewCustomerCatalog: CatalogItem[] = [
     type: "customs",
     default_color: "White",
     discount: [
-      { quantity: 1000, price: 0.00 },
-      { quantity: 2500, price: 0.00 },
+      { quantity: 1000, price: 0.0 },
+      { quantity: 2500, price: 0.0 },
     ],
     sizes: {
-      default: 0.00,
+      1000: 0.0,
+      2500: 0.0,
     },
-  }, 
+  },
   {
     code: "HENCAT-33P-497838B",
     name: "Plastic Plates",
@@ -342,13 +353,14 @@ export const NewCustomerCatalog: CatalogItem[] = [
     type: "customs",
     default_color: "White",
     discount: [
-      { quantity: 1000, price: 0.00 },
-      { quantity: 2500, price: 0.00 },
+      { quantity: 1000, price: 0.0 },
+      { quantity: 2500, price: 0.0 },
     ],
     sizes: {
-      default: 0.00,
+      1000: 0.0,
+      2500: 0.0,
     },
-  }, 
+  },
   {
     code: "HENCAT-33P-497628B",
     name: "Plastic Plates",
@@ -357,13 +369,14 @@ export const NewCustomerCatalog: CatalogItem[] = [
     type: "customs",
     default_color: "White",
     discount: [
-      { quantity: 1000, price: 0.00 },
-      { quantity: 2500, price: 0.00 },
+      { quantity: 1000, price: 0.0 },
+      { quantity: 2500, price: 0.0 },
     ],
     sizes: {
-      default: 0.00,
+      1000: 0.0,
+      2500: 0.0,
     },
-  }, 
+  },
   {
     code: "G1640",
     name: "Logo Key Chain",
@@ -372,7 +385,7 @@ export const NewCustomerCatalog: CatalogItem[] = [
     type: "accessory",
     default_color: "Black",
     sizes: {
-      Default: 0.00,
+      Default: 0.0,
     },
   },
   {
@@ -383,7 +396,7 @@ export const NewCustomerCatalog: CatalogItem[] = [
     type: "accessory",
     default_color: "Black Leather",
     sizes: {
-      Default: 0.00,
+      Default: 0.0,
     },
-  },   
+  },
 ];

@@ -26,7 +26,10 @@ export default function Modification() {
   const navigate = useNavigate();
   const [selected_color, set_selected_color] = useState(item.default_color);
   const [image_source, set_image_source] = useState(
-    `/images/${item.code}_${selected_color.toLowerCase().split(' ').join('_')}.jpg`
+    `/images/${item.code}_${selected_color
+      .toLowerCase()
+      .split(" ")
+      .join("_")}.jpg`
   );
   const [cart, set_cart] = useOutletContext<any>();
   const [snackbarOpen, setSnackbarOpen] = useState(false);
@@ -44,6 +47,7 @@ export default function Modification() {
   const [embroidery, setEmbroidery] = useState("");
   const [placement, setPlacement] = useState("Left Chest");
   const logo_placements = getConfigValue("logo_placements") as string[];
+  const [customsOrder, setCustomsOrder] = useState({});
 
   const handleChange = (event) => {
     setEmbroidery(event.target.value);
@@ -112,6 +116,47 @@ export default function Modification() {
       ...cart,
     };
 
+    console.log(customsOrder);
+    if (item.type === "customs") {
+      // check customs order not empty
+
+      const noCustoms =
+        Object.keys(customsOrder).length === 0
+          ? true
+          : Object.values(customsOrder).every(
+              (arr: string[]) => arr.length === 0
+            );
+
+      if (noCustoms) {
+        setErrorSnackbarOpen(true);
+        setErrorSnackbarText("Must make a selection");
+        return;
+      }
+
+      const items: { [key: string]: number } = {};
+
+      Object.keys(customsOrder).forEach((k: string) => {
+        // the keys of customsOrder are the different available quantities
+        const quantity = parseInt(k);
+        const colors = customsOrder[k];
+
+        colors.forEach((color) => {
+          items[color] = items[color] ? items[color] + quantity : quantity;
+        });
+      });
+
+      for (const [key, value] of Object.entries(items)) {
+        console.log(key, value)
+        addCustomsToCart(value, key, new_cart);
+      }
+
+      set_cart(new_cart);
+      sessionStorage.setItem("cart", JSON.stringify(new_cart));
+      setSnackbarOpen(true);
+      setCustomsOrder({})
+      return;
+    }
+
     let any_input_has_value = false;
     let invalid_input = false;
 
@@ -172,16 +217,6 @@ export default function Modification() {
       }
     }
 
-    if (selected_customs_black_quantity) {
-      any_input_has_value = true;
-      addCustomsToCart(selected_customs_black_quantity, "Black", new_cart);
-    }
-
-    if (selected_customs_white_quantity) {
-      any_input_has_value = true;
-      addCustomsToCart(selected_customs_white_quantity, "White", new_cart);
-    }
-
     if (!any_input_has_value || invalid_input) {
     } else {
       setEmbroidery("");
@@ -194,11 +229,12 @@ export default function Modification() {
   }
 
   function addCustomsToCart(quantity, color, new_cart) {
+    console.log("here");
     const key = `${item.code},${color}`;
     const cart_item = {
       type: item.type,
       name: item.fullname,
-      price: getPriceWithDiscount(new_cart[key]?.quantity ?? 0, quantity),
+      price: 0,
       quantity: Number(quantity),
       size: "default",
       color: color,
@@ -281,14 +317,8 @@ export default function Modification() {
           <QuantitySelector
             item={item}
             sizes={sizes}
-            set_selected_customs_white_quantity={
-              set_selected_customs_white_quantity
-            }
-            set_selected_customs_black_quantity={
-              set_selected_customs_black_quantity
-            }
-            selected_customs_black_quantity={selected_customs_black_quantity}
-            selected_customs_white_quantity={selected_customs_white_quantity}
+            customsOrder={customsOrder}
+            setCustomsOrder={setCustomsOrder}
           />
 
           <div
