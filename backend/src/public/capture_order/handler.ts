@@ -1,5 +1,11 @@
 import { APIGatewayProxyResult, APIGatewayEvent } from "aws-lambda";
-import { logger, addCors, COMPANIES, sendEmail } from "../utils";
+import {
+  logger,
+  addCors,
+  COMPANIES,
+  sendEmail,
+  getConfigValue,
+} from "../utils";
 import axios from "axios";
 import qs from "qs";
 import {
@@ -10,7 +16,7 @@ import { dynamoClient } from "../dynamoClient";
 
 const sm = new SecretsManagerClient({ region: "us-east-1" });
 const command = new GetSecretValueCommand({
-  SecretId: "stivers-website",
+  SecretId: getConfigValue("secretName"),
 });
 
 export const handler = async (
