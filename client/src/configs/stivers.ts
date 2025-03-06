@@ -6,7 +6,7 @@ export const config: Config = {
   logo_placements: ["Right Sleeve", "Left Chest"],
   show_modification_thumbnail: false,
   minimum_apparel_order: false,
-  render_logo_preview: false,
+  render_logo_preview: true,
   embroideries: {
     hat: [
       "Stivers",
@@ -24,6 +24,8 @@ export const config: Config = {
       "Subaru",
       "Stivers Ford South",
       "Stivers Ford Birmingham",
+      "Stivers Montgomery",
+      "Stivers Prattville",
     ],
     womens: [
       "Stivers",
@@ -31,6 +33,8 @@ export const config: Config = {
       "Subaru",
       "Stivers Ford South",
       "Stivers Ford Birmingham",
+      "Stivers Montgomery",
+      "Stivers Prattville",
     ],
     accessory: [
       "Ford",
@@ -51,7 +55,7 @@ export const config: Config = {
     "Stivers Decatur Subaru, 1950 Orion Dr, Decatur, GA 30033",
     "Stivers Chevrolet, 111 Newland Road, Columbia, SC 29229",
     "Stivers Ford South Atlanta, 4355 Jonesboro Rd, Union City, GA 30291",
-    "Stivers Ford Troy, 121 US-231, Troy, AL 36081",
+    "Stivers Ford Troy, 121 US-231, Troy, AL 36081",    
   ],
   bypass_codes: [
     "STIFMO",
