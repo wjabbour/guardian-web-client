@@ -127,12 +127,8 @@ class Dynamo {
 
     const deleteItem = new DeleteCommand({
       Key: {
-        email: {
-          S: item.email,
-        },
-        created_at: {
-          S: item.created_at,
-        },
+        created_at,
+        email,
       },
       TableName: "orders",
     });
