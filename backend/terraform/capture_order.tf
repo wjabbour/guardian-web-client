@@ -31,7 +31,8 @@ data "aws_iam_policy_document" "capture_order" {
   statement {
     actions = [
       "dynamodb:*",
-      "secretsmanager:*"
+      "secretsmanager:*",
+      "ses:*"
     ]
 
     resources = ["*"]
