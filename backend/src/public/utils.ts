@@ -228,6 +228,27 @@ function createOrderCsv(orders) {
   return csv;
 }
 
+function constructEmail(recipient: string, companyName: string, csv: any) {
+  const date = dayjs();
+  const date_str = date.format("MM-DD-YYYY");
+  const buffer = Buffer.from(csv);
+  let ses_mail = "From: doubleujabbour@gmail.com\n";
+  ses_mail += `To: ${recipient}\n`;
+  ses_mail += `Subject: Weekly ${companyName} Orders\n`;
+  ses_mail += `Content-Type: text/plain; name="${date_str}-orders.csv"\n`;
+  ses_mail += `Content-Disposition: attachment; filename="${date_str}-orders.csv"\n`;
+  ses_mail += "Content-Transfer-Encoding: base64\n";
+  ses_mail += `${buffer.toString("base64")}\n`;
+
+  const input = {
+    RawMessage: {
+      Data: Buffer.from(ses_mail),
+    },
+  };
+
+  return input;
+}
+
 /*
   recipient is an optional email to also send the order to. This is used
   for Cannon to send the user who just placed the order an order email
@@ -247,26 +268,14 @@ export async function sendEmail(
     recipients.push(recipient);
   }
 
-  logger.info("Preparing email");
-  const date = dayjs();
-  const date_str = date.format("MM-DD-YYYY");
-  const buffer = Buffer.from(csv);
-  let ses_mail = "From: doubleujabbour@gmail.com\n";
-  ses_mail += `To: ${recipients.join(", ")}\n`;
-  ses_mail += `Subject: Weekly ${companyName} Orders\n`;
-  ses_mail += `Content-Type: text/plain; name="${date_str}-orders.csv"\n`;
-  ses_mail += `Content-Disposition: attachment; filename="${date_str}-orders.csv"\n`;
-  ses_mail += "Content-Transfer-Encoding: base64\n";
-  ses_mail += `${buffer.toString("base64")}\n`;
+  for (const recipient of recipients) {
+    logger.info("Preparing email");
+    const input = constructEmail(recipient, companyName, csv);
+    logger.info(`Sending email to ${recipient}`);
+    const command = new SendRawEmailCommand(input);
+    await ses.send(command);
+    logger.info("Email sent");
+  }
 
-  const input = {
-    RawMessage: {
-      Data: Buffer.from(ses_mail),
-    },
-  };
-
-  logger.info("Sending email");
-  const command = new SendRawEmailCommand(input);
-  await ses.send(command);
-  logger.info("Email sent");
+  logger.info("All emails sent");
 }

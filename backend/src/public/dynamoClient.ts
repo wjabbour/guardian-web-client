@@ -1,5 +1,4 @@
-import { DynamoDBClient, UpdateItemCommand } from "@aws-sdk/client-dynamodb";
-import { unmarshall } from "@aws-sdk/util-dynamodb";
+import { DynamoDBClient } from "@aws-sdk/client-dynamodb";
 import {
   QueryCommand,
   DeleteCommand,
@@ -116,6 +115,7 @@ class Dynamo {
     });
 
     const response = await this.documentClient.send(command);
+    logger.info("Retrieved order");
     const item = response.Item;
 
     const putItem = new PutCommand({
@@ -124,20 +124,18 @@ class Dynamo {
     });
 
     await this.documentClient.send(putItem);
+    logger.info("Archived order");
 
     const deleteItem = new DeleteCommand({
       Key: {
-        email: {
-          S: item.email,
-        },
-        created_at: {
-          S: item.created_at,
-        },
+        created_at,
+        email,
       },
       TableName: "orders",
     });
 
     await this.documentClient.send(deleteItem);
+    logger.info("Deleted order");
   }
 }
 

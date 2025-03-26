@@ -1,5 +1,11 @@
 import { APIGatewayProxyResult, APIGatewayEvent } from "aws-lambda";
-import { logger, addCors, COMPANIES, sendEmail } from "../utils";
+import {
+  logger,
+  addCors,
+  COMPANIES,
+  sendEmail,
+  getConfigValue,
+} from "../utils";
 import axios from "axios";
 import qs from "qs";
 import {
@@ -10,7 +16,7 @@ import { dynamoClient } from "../dynamoClient";
 
 const sm = new SecretsManagerClient({ region: "us-east-1" });
 const command = new GetSecretValueCommand({
-  SecretId: "stivers-website",
+  SecretId: getConfigValue("secretName"),
 });
 
 export const handler = async (
@@ -51,10 +57,12 @@ export const handler = async (
     logger.info({ message: "Determined company name", company_name });
 
     const { email, created_at } = await dynamoClient.setPaid(order_id, txId);
-    logger.info({ message: "Updated item in database" });
+    logger.info({ message: "Set the order as paid in the database" });
+    logger.info(`Retrieved the following order keys: ${email}, ${created_at}`);
 
     // send cannon orders immediately
     if (email && created_at && company_name === "Cannon") {
+      logger.info('Cannon order, sending immediately')
       await dynamoClient.archiveCannonOrder(created_at, email);
       const order = await dynamoClient.getOrder(email, created_at);
       await sendEmail([order], "Cannon", email);
