@@ -71,6 +71,29 @@ export const CannonCatalog: CatalogItem[] = [
     },
   },
   {
+    code: "5470",
+    name: "A/P Voucher Jacket",
+    fullname: "9 in. x 12 in. A/P Voucher Jacket (DSA-540)",
+    colors: [
+      "Blue",
+      "Buff",      
+      "Green",      
+      "Lavender",
+      "Pink",      
+      "White",      
+    ],
+    type: "customs",
+    default_color: "Buff",
+    discount: [
+      { quantity: 100, price: 0.0 },
+      { quantity: 500, price: 0.0 },      
+    ],
+    sizes: {
+      100: 0.0,
+      500: 0.0,      
+    },
+  },
+  {
     code: "TM1MY394",
     name: "Cuffed Beanie",
     fullname: "Travis Matthew® Solid Cuffed Beanie",

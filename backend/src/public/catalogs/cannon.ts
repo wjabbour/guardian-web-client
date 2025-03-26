@@ -49,7 +49,18 @@ export const CannonCatalog: CatalogItem[] = [
     code: "GP546",
     name: "Deal Jackets",
     fullname: "9 in. x 12 in. Deal Jacket (500/box)",
-    colors: ["Blue", "Buff", "Fuchsia", "Green", "Grey", "Lavender", "Pink", "Salmon", "White", "Yellow"],
+    colors: [
+      "Blue", 
+      "Buff", 
+      "Fuchsia", 
+      "Green", 
+      "Grey", 
+      "Lavender", 
+      "Pink", 
+      "Salmon", 
+      "White", 
+      "Yellow"
+    ],
     type: "customs",
     default_color: "Buff",
     discount: [
@@ -60,6 +71,29 @@ export const CannonCatalog: CatalogItem[] = [
       default: 0.00,
     },
   }, 
+  {
+    code: "5470",
+    name: "A/P Voucher Jacket",
+    fullname: "9 in. x 12 in. A/P Voucher Jacket (DSA-540)",
+    colors: [
+      "Blue",
+      "Buff",      
+      "Green",      
+      "Lavender",
+      "Pink",      
+      "White",      
+    ],
+    type: "customs",
+    default_color: "Buff",
+    discount: [
+      { quantity: 100, price: 0.0 },
+      { quantity: 500, price: 0.0 },      
+    ],
+    sizes: {
+      100: 0.0,
+      500: 0.0,      
+    },
+  },
   {
     code: "TM1MY394",
     name: "Cuffed Beanie",
