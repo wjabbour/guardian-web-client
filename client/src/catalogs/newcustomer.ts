@@ -87,6 +87,23 @@ export const NewCustomerCatalog: CatalogItem[] = [
     },
   },
   {
+    code: "LOG101",
+    name: "OGIO® - Jewel Polo",
+    fullname: "OGIO® - Jewel Polo",
+    colors: ["Blacktop", "Blue Mist", "Bright White", "Diesel Grey", "Electric Blue", "Gridiron Green", "Navy", "Pink Crush", "Rogue Grey", "Signal Red", "Spar Blue"],
+    type: "womens",
+    default_color: "Blacktop",
+    sizes: {
+      Small: 33.99,
+      Medium: 33.99,
+      Large: 33.99,
+      XLarge: 33.99,
+      "2XLarge": 35.99,
+      "3XLarge": 37.99,
+      "4XLarge": 39.99,
+    },
+  },
+  {
     code: "OG101",
     name: "OGIO® - Caliber2.0 Polo",
     fullname: "OGIO® - Caliber2.0 Polo",
