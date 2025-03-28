@@ -28,6 +28,14 @@ export default function Landing() {
             no_space={true}
           />
         )}
+        {types["office"] && (
+          <ClothingIcon
+            img={"/images/5470_buff.jpg"}
+            label={`Office Supplies`}
+            link={"/catalog/office"}
+            no_space={true}
+          />
+        )}
         {types["customs"] && (
           <ClothingIcon
             img={"/images/Guardian_33P3D.jpg"}

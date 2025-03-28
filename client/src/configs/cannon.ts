@@ -12,6 +12,7 @@ export const config: Config = {
     womens: [],
     accessory: [],
     customs: [],
+    office: [],     
   },
   stores: [
     "Cannon Ford of Cleveland",
