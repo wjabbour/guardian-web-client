@@ -28,6 +28,14 @@ export default function Landing() {
             no_space={true}
           />
         )}
+        {types["service"] && (
+          <ClothingIcon
+              img={"/images/600088V_plastic.jpg"}
+              label={`Service`}
+              link={"/catalog/service"}
+              no_space={true}
+          />
+        )}
         {types["customs"] && (
           <ClothingIcon
             img={"/images/Guardian_33P3D.jpg"}

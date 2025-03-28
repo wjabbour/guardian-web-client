@@ -108,6 +108,20 @@ export const CannonCatalog: CatalogItem[] = [
     },
   },
   {
+    code: "600088V",
+    name: "Seat Covers",
+    fullname: "No-Slip Plastic Seat Covers (500/roll)",
+    colors: ["Plastic"],
+    type: "service",
+    default_color: "Plastic",
+    discount: [
+      { quantity: 500, price: 73.50 },      
+    ],
+    sizes: {
+      default: 0.00,
+    },
+  }, 
+  {
     code: "TM1MY394",
     name: "Cuffed Beanie",
     fullname: "Travis Matthew® Solid Cuffed Beanie",

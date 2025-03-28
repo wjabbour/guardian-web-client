@@ -46,6 +46,20 @@ export const CannonCatalog: CatalogItem[] = [
     },
   }, 
   {
+    code: "600088V",
+    name: "Seat Covers",
+    fullname: "No-Slip Plastic Seat Covers (500/roll)",
+    colors: ["Plastic"],
+    type: "service",
+    default_color: "Plastic",
+    discount: [
+      { quantity: 500, price: 73.50 },      
+    ],
+    sizes: {
+      default: 0.00,
+    },
+  }, 
+  {
     code: "GP546",
     name: "Deal Jackets",
     fullname: "9 in. x 12 in. Deal Jacket (500/box)",
