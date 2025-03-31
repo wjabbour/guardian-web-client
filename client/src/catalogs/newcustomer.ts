@@ -267,6 +267,29 @@ export const NewCustomerCatalog: CatalogItem[] = [
     },
   },
   {
+    code: "5470",
+    name: "A/P Voucher Jacket",
+    fullname: "9 in. x 12 in. A/P Voucher Jacket (DSA-540)",
+    colors: [
+      "Blue",
+      "Buff",      
+      "Green",      
+      "Lavender",
+      "Pink",      
+      "White",      
+    ],
+    type: "office",
+    default_color: "Buff",
+    discount: [
+      { quantity: 100, price: 0.0 },
+      { quantity: 500, price: 0.0 },      
+    ],
+    sizes: {
+      100: 0.0,
+      500: 0.0,      
+    },
+  },
+  {
     code: "HENLDU-34MLF-366502A",
     name: "Zinc Metal Frames",
     fullname: "Zinc Metal Frame w/black imprint",
