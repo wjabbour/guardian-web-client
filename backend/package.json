@@ -7,6 +7,7 @@
     "build": "tsc -noEmit",
     "test": "jest",
     "pre-deploy": "npm run build && npm run build --ws && cd terraform && terraform init",
+    "deploy": "npm run deploy-standard && npm run deploy-cannon",
     "deploy-standard": "npm run pre-deploy && cd terraform && terraform workspace select standard && terraform apply -auto-approve -var-file=tfvars/standard.tfvars",
     "deploy-cannon": "npm run pre-deploy && cd terraform && terraform workspace select cannon && terraform apply -auto-approve -var-file=tfvars/cannon.tfvars"
   },
