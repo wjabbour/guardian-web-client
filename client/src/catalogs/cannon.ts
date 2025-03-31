@@ -59,7 +59,7 @@ export const CannonCatalog: CatalogItem[] = [
       "White",
       "Yellow",
     ],
-    type: "customs",
+    type: "office",
     default_color: "Buff",
     discount: [
       { quantity: 500, price: 0.0 },
@@ -68,6 +68,20 @@ export const CannonCatalog: CatalogItem[] = [
     sizes: {
       500: 0.0,
       1000: 0.0,
+    },
+  },
+  {
+    code: "310",
+    name: "File Number Labels",
+    fullname: "File Right Number Labels (500/box)",
+    colors: ["Number 0","Number 1","Number 2","Number 3","Number 4","Number 5","Number 6","Number 7","Number 8","Number 9"],       
+    type: "office",
+    default_color: "Number 0",
+    discount: [
+      { quantity: 500, price: 8.99 },          
+    ],
+    sizes: {
+      500: 0.0,      
     },
   },
   {
@@ -82,7 +96,7 @@ export const CannonCatalog: CatalogItem[] = [
       "Pink",      
       "White",      
     ],
-    type: "customs",
+    type: "office",
     default_color: "Buff",
     discount: [
       { quantity: 100, price: 0.0 },
@@ -93,6 +107,20 @@ export const CannonCatalog: CatalogItem[] = [
       500: 0.0,      
     },
   },
+  {
+    code: "600088V",
+    name: "Seat Covers",
+    fullname: "No-Slip Plastic Seat Covers (500/roll)",
+    colors: ["Plastic"],
+    type: "service",
+    default_color: "Plastic",
+    discount: [
+      { quantity: 500, price: 73.50 },      
+    ],
+    sizes: {
+      default: 0.00,
+    },
+  }, 
   {
     code: "TM1MY394",
     name: "Cuffed Beanie",

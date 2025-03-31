@@ -10,8 +10,10 @@ export const config: Config = {
     hat: [],
     mens: [],
     womens: [],
-    accessory: [],
+    accessory: [],    
     customs: [],
+    office: [],
+    service: [],     
   },
   stores: [
     "Cannon Ford of Cleveland",
