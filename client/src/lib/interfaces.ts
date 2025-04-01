@@ -5,7 +5,14 @@ export interface CatalogItem {
   colors: string[];
   sizes: {};
   default_color: string;
-  type: "mens" | "womens" | "hat" | "accessory" | "customs" | "office"| "service";
+  type:
+    | "mens"
+    | "womens"
+    | "hat"
+    | "accessory"
+    | "customs"
+    | "office"
+    | "service";
   halfColors?: string[]; // C112 is capable of being two-colored. We need this field to present specially colored divs for the color selector for those colors
   // some items are only purchasble by Service and Parts counter employees only
   restricted?: boolean;
@@ -37,6 +44,8 @@ export interface Config {
   bypass_codes: string[]; // the codes that will enable a user to place an order without the paypal flow
   server_hostname: string; // cannon client talks to a different server than all the other clients
   account_reps: AccountRep[]; // the account reps contact info to be displayed on the footer
+  // renders the new landing page and uses a different routing system, eventually this will be true for all sites and this config property will go away
+  use_landing_v2?: boolean; 
 }
 
 interface AccountRep {

@@ -2,7 +2,7 @@ import styles from "./Landing.module.scss";
 import ClothingIcon from "../../components/ClothingIcon/ClothingIcon";
 import { Catalog } from "../../lib/catalog";
 
-export default function Landing() {
+export default function LandingV2() {
   const catalog = Catalog();
   const types = {};
   catalog.forEach((item) => {

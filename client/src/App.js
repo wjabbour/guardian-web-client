@@ -1,6 +1,7 @@
 import "./App.css";
 import Catalog from "./routes/Catalog/Catalog";
 import Landing from "./routes/Landing/Landing";
+import LandingV2 from "./routes/LandingV2/Landing";
 import Root from "./routes/root";
 import Modification, {
   loader as modificationLoader,
@@ -14,12 +15,13 @@ import { Helmet } from "react-helmet";
 import { getConfigValue } from "./lib/config";
 
 function App() {
+  const shouldUseLandingV2 = getConfigValue("use_landing_v2") ?? false;
   const router = createBrowserRouter([
     {
       path: "/",
       element: <Root />,
       children: [
-        { index: true, element: <Landing /> },
+        { index: true, element: shouldUseLandingV2 ? <LandingV2 /> : <Landing /> },
         { path: "/catalog/:type", element: <Catalog /> },
         { path: "/cart", element: <Cart /> },
         { path: "/checkout", element: <Checkout /> },
