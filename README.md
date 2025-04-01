@@ -103,17 +103,17 @@ You must purchase a domain in GoDaddy. Go to GoDaddy.com, type in the name of th
 
 Now we need to make it so that we manage the DNS in AWS rather than in GoDaddy.
 
-Sign into the AWS console as a root user (Louis Budbill has the sign-in information), type Route 53 in the search bar, create a hosted zone. The hosted zone name needs to be the exact name of your domain. For example, if you purchase the domain "gpstivers.com" then you need to create a hosted zone and set its name to "gpstivers.com". Make sure the hosted zone is a public hosted zone.
+Sign into the AWS console as a root user (Louis Budbill has the sign-in information), type Route 53 in the search bar, create a hosted zone. The hosted zone name needs to be the exact name of your domain. For example, if you purchase the domain `gpstivers.com` then you need to create a hosted zone and set its name to `gpstivers.com`. Make sure the hosted zone is a public hosted zone.
 
 A hosted zone is a container for DNS records. Find the DNS record in your zone with type "NS". GoDaddy will need to know the values for this record.
 
-Sign into GoDaddy and find the domain that you just purchased. GoDaddy's website may change over time so I won't list the exact steps, but you need to find the DNS settings for the domain. Once you are viewing the DNS settings for the domain, navigate to the DNS settings for the Nameservers. Click "Change Nameservers". Click "I'll use my own nameservers". Here is where we will paste the nameserver values from our DNS record in Route 53. The Route 53 record contains four nameserver values and we will need to enter all four here. Be sure to omit the trailing period character from each of the four nameserver values as you paste them into GoDaddy.
+Sign into GoDaddy and find the domain that you just purchased. GoDaddy's website may change over time so I won't list the exact steps, but you need to find the DNS settings for the domain. Once you are viewing the DNS settings for the domain, navigate to the DNS settings for the Nameservers. Click "Change Nameservers". Click "I'll use my own nameservers". Here is where we will paste the nameserver values from our DNS `NS` record in Route 53. The Route 53 record contains four nameserver values and we will need to enter all four here. Be sure to omit the trailing period character from each of the four nameserver values as you paste them into GoDaddy.
 
 We have now completed the process of transferring DNS management from GoDaddy to AWS.
 
 ### Setup S3
 
-Now we need to create an S3 bucket. Type S3 in the search bar in your AWS console. Click "create bucket". The S3 bucket name needs to be the exact name of your domain. For example, if you purchase the domain "gpstivers.com" then you need to create an S3 bucket and set its name to "gpstivers.com".
+Now we need to create an S3 bucket. Type S3 in the search bar in your AWS console. Click "create bucket". The S3 bucket name needs to be the exact name of your domain. For example, if you purchase the domain `gpstivers.com` then you need to create an S3 bucket and set its name to `gpstivers.com`.
 
 Uncheck the box that indicates this S3 bucket should block all public access. Check the acknowledgement box that you are aware this is making your S3 bucket public.
 
@@ -140,23 +140,23 @@ Be sure to put your domain name in place of `example.com`.
 
 ### Setup Certificates
 
-Now we need to create a HTTPS certificate for the website. Type Certificate Manager in the search bar in your AWS console. Click "Request certificate". Request a public certificate. Enter your fully qualified domain name (e.g. `example.com`). Keep all settings the same and click "Request". We have now requested a certificate from AWS. To receive that certificate, we need to prove that we own `example.com`. Navigate to that certificate you requested (may need to refresh page to see it). Click "Create records in Route 53". From here, the ownership verification process may take a few minutes, but is fully automated. Refresh the page every few minutes until you see the status of the certificate change from "Pending Validation" to "Issued". Once the certificate has been issued, this step is complete.
+Now we need to create a HTTPS certificate for the website. Type Certificate Manager in the search bar in your AWS console. Click "Request certificate". Request a public certificate. Enter your fully qualified domain name (e.g. `example.com`). Choose `DNS validation - recommended` as your validation method. Keep other all settings the same and click `Request`. 
+
+We have now requested a certificate from AWS. To receive that certificate, we need to prove that we own `example.com`. Navigate to that certificate you requested (you may need to refresh page to see it). Click `Create records in Route 53`. From here, the ownership verification process may take a few minutes, but is fully automated. Refresh the page every few minutes until you see the status of the certificate change from "Pending Validation" to "Issued". Once the certificate has been issued, this step is complete.
 
 ### Setup Cloudfront
 
 Now we need to create a Cloudfront distribution. Type Cloudfront in the search bar in your AWS console. Click "Create distribution". For origin name, select the S3 bucket URL of the bucket you just created which should have the format of `{your_domain}.s3.amazonaws.com`.
 
-Update "Allowed HTTP methods" to `GET, HEAD, OPTIONS, PUT, POST, PATCH, DELETE`. Click "Do not enable security protections" under "Web Application Firewall". For "Price class" select `Use only North America and Europe`. For "Alternate domain name (CNAME) - optional" input your domain name. For "Custom SSL certificate - optional" choose the certificate that was just issued. For "Default root object - optional" put `index.html`. Take note of this distribution ID (which looks something like `E1YPW3JQQ2QQ81`).
+Update `Allowed HTTP methods` to `GET, HEAD, OPTIONS, PUT, POST, PATCH, DELETE`. Click `Do not enable security protections` under `Web Application Firewall`. For "Price class" select `Use only North America and Europe`. For "Alternate domain name (CNAME) - optional" input your domain name. For "Custom SSL certificate - optional" choose the certificate that was just issued. For "Default root object - optional" put `index.html`. Take note of this distribution ID (which looks something like `E1YPW3JQQ2QQ81`).
 
-Once the distribution has been created, navigate to that distribution in the AWS console. Under `Error pages`, click the `Create custom error response` button on the right. For `HTTP error code`, select 403. For `Customize error response` select `Yes`. For `Response page path` put `/`. For `HTTP Response code` select `200`.
-
-Now that we have created all of the necessary AWS resources, we need to make some changes to the code.
+Once the distribution has been created, navigate to the distribution in the AWS console. Under `Error pages`, click the `Create custom error response` button on the right. For `HTTP error code`, select 403. For `Customize error response` select `Yes`. For `Response page path` put `/`. For `HTTP Response code` select `200`.
 
 ### Hook up Cloudfront to Route 53
 
 Now we need to create a DNS record in Route 53 that points to this Cloudfront distribution. Once setup, when users enter your domain in the browser URL bar, it will go to the Cloudfront distribution which will respond with the contents of the S3 bucket (our website).
 
-Go to Route 53. Go to the hosted zone for your domain. Click "Create record". Enable the "Alias" checkbox. Set "Route traffic to" to "Alias to Cloudfront distribution". For the second select box, choose the CloudFront distribution that was just created. Click "Create records".
+Go to Route 53. Go to the hosted zone for your domain. Click `Create record`. Leave `Record name` blank. Enable the `Alias` checkbox. Set `Route traffic to` to `Alias to Cloudfront distribution`. For the second select box, choose the CloudFront distribution that was just created. Click `Create records`.
 
 ### client/package.json
 
