@@ -10,7 +10,7 @@ export default function LandingV2() {
   });
 
   return (
-    <div className={styles.landing}>
+    <div className="mt-5">
       <div className={styles.catalog}>
         {types["mens"] && (
           <ClothingIcon
