@@ -20,5 +20,7 @@ export function getConfigValue(val: keyof Config) {
     return PremierConfig[val];
   } else if (url.includes("cannonemployeestore.com")) {
     return CannonConfig[val];
+  } else if (url.includes("gpc81.com")) {
+    return HennessyConfig[val];
   }
 }

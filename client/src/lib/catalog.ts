@@ -4,6 +4,7 @@ import { StiversCatalog } from "../catalogs/stivers";
 import { PremierCatalog } from "../catalogs/premier";
 import { NewCustomerCatalog } from "../catalogs/newcustomer";
 import { CannonCatalog } from "../catalogs/cannon";
+import { HennessyCatalog } from "../catalogs/hennessy";
 
 export const Catalog = function (): CatalogItem[] {
   const url = window.location.href;
@@ -19,5 +20,7 @@ export const Catalog = function (): CatalogItem[] {
     return PremierCatalog;
   } else if (url.includes("cannonemployeestore.com")) {
     return CannonCatalog;
+  } else if (url.includes("gpc81.com")) {
+    return HennessyCatalog;
   }
 };

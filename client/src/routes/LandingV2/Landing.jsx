@@ -28,7 +28,7 @@ export default function LandingV2() {
             no_space={true}
           />
         )}
-        {types["service"] && (
+        {/* {types["service"] && (
           <ClothingIcon
               img={"/images/600088V_plastic.jpg"}
               label={`Service`}
@@ -59,7 +59,7 @@ export default function LandingV2() {
             link={"/catalog/accessory"}
             no_space={false}
           />
-        )}
+        )} */}
       </div>
     </div>
   );
