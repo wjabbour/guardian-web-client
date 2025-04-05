@@ -1,5 +1,6 @@
 import "../App.css";
-import { Outlet, useNavigation } from "react-router-dom";
+import { Outlet, useNavigation, useNavigate } from "react-router-dom";
+import { useContext } from "react";
 import CircularProgress from "@mui/material/CircularProgress";
 import Box from "@mui/material/Box";
 import Backdrop from "@mui/material/Backdrop";
@@ -14,9 +15,11 @@ const CartContext = createContext({});
 
 export default function Root() {
   const navigation = useNavigation();
+  const navigate = useNavigate();
   const shouldUseLandingV2 = getConfigValue("use_landing_v2") ?? false;
   const [cart, set_cart] = useState(rehydrate());
   const [user, setUser] = useState({ isLoggedIn: false });
+  console.log(user);
   const [isModalOpen, setModalOpen] = useState(false);
   function rehydrate() {
     if (sessionStorage.getItem("cart")) {
@@ -89,8 +92,9 @@ export default function Root() {
         isModalOpen={isModalOpen}
         setIsModalOpen={setModalOpen}
         onPasswordChange={(password) => {
-          if (password === 'Turner') {
-            console.log('navigatinig')
+          if (password === "Turner") {
+            setUser({ isLoggedIn: true });
+            // navigate("/hennessy");
           }
         }}
       />
