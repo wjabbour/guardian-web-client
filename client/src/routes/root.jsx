@@ -7,6 +7,7 @@ import Navbar from "../components/Navbar/Navbar";
 import Footer from "../components/Footer/Footer";
 import { useState, createContext } from "react";
 import { getConfigValue } from "../lib/config";
+import PasswordEntryDialog from "../components/PasswordEntryDialog";
 
 const UserContext = createContext({ isLoggedIn: false });
 const CartContext = createContext({});
@@ -16,6 +17,7 @@ export default function Root() {
   const shouldUseLandingV2 = getConfigValue("use_landing_v2") ?? false;
   const [cart, set_cart] = useState(rehydrate());
   const [user, setUser] = useState({ isLoggedIn: false });
+  const [isModalOpen, setModalOpen] = useState(false);
   function rehydrate() {
     if (sessionStorage.getItem("cart")) {
       return JSON.parse(sessionStorage.getItem("cart"));
@@ -56,7 +58,12 @@ export default function Root() {
                   src="/images/guardian_nav.jpg"
                   className="w-full h-full"
                 ></img>
-                <div className="absolute right-10 top-12 h-[70px] w-[220px] bg-[#0324fc] flex items-center justify-center text-5xl text-white drop-shadow-lg cursor-pointer">
+                <div
+                  onClick={() => {
+                    setModalOpen(true);
+                  }}
+                  className="absolute right-10 top-12 h-[70px] w-[220px] bg-[#0324fc] flex items-center justify-center text-5xl text-white drop-shadow-lg cursor-pointer"
+                >
                   LOGIN
                 </div>
               </div>
@@ -78,6 +85,15 @@ export default function Root() {
         </div>
       )}
       {!shouldUseLandingV2 && <Footer />}
+      <PasswordEntryDialog
+        isModalOpen={isModalOpen}
+        setIsModalOpen={setModalOpen}
+        onPasswordChange={(password) => {
+          if (password === 'Turner') {
+            console.log('navigatinig')
+          }
+        }}
+      />
     </div>
   );
 }

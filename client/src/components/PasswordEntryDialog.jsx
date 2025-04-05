@@ -9,7 +9,7 @@ const ADMIN_PASSWORD = "Louis123";
 export default function PasswordEntryDialog({
   isModalOpen,
   setIsModalOpen,
-  setIsAdmin,
+  onPasswordChange,
 }) {
   const [password, setPassword] = useState("");
 
@@ -22,17 +22,19 @@ export default function PasswordEntryDialog({
   }
 
   useEffect(() => {
-    if (password === ADMIN_PASSWORD) {
-      setIsAdmin(true);
-      setIsModalOpen(false);
-    }
+    onPasswordChange(password);
   }, [password]);
 
   return (
     <Dialog open={isModalOpen} onClose={handleClose}>
-      <DialogTitle>Enter admin password</DialogTitle>
+      <DialogTitle>Enter password</DialogTitle>
       <Box
-        sx={{ display: "flex", justifyContent: "center", marginBottom: "10px" }}
+        sx={{
+          display: "flex",
+          justifyContent: "center",
+          marginBottom: "10px",
+          padding: "10px",
+        }}
       >
         <TextField value={password} onChange={handlePassword}></TextField>
       </Box>

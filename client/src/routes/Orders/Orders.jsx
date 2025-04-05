@@ -14,7 +14,7 @@ import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import Snackbar from "@mui/material/Snackbar";
 import Alert from "@mui/material/Alert";
 import Row from "./Row";
-import PasswordEntryDialog from "./PasswordEntryDialog";
+import PasswordEntryDialog from "../../components/PasswordEntryDialog";
 
 export default function BasicTable() {
   const navigate = useNavigate();
@@ -53,7 +53,7 @@ export default function BasicTable() {
         return b.created_at - a.created_at;
       });
 
-      const paidOrders = orders.filter((order) => order.paid !== 0)
+      const paidOrders = orders.filter((order) => order.paid !== 0);
       setOrders(paidOrders);
     });
   }, []);
@@ -97,9 +97,14 @@ export default function BasicTable() {
       </Snackbar>
       <PasswordEntryDialog
         isAdmin={isAdmin}
-        setIsAdmin={setIsAdmin}
         isModalOpen={isModalOpen}
         setIsModalOpen={setIsModalOpen}
+        onPasswordChange={(password) => {
+          if (password === "Louis123") {
+            setIsAdmin(true);
+            setIsModalOpen(false);
+          }
+        }}
       />
     </div>
   );

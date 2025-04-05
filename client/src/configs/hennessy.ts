@@ -74,5 +74,5 @@ export const config: Config = {
     { name: "Andrew Sarazua", phone: "678-287-1604" },
     { name: "John Boston", phone: "678-287-1601" },
   ],
-  use_landing_v2: false,
+  use_landing_v2: true,
 };
