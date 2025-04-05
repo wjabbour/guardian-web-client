@@ -45,10 +45,7 @@ export default function Root() {
             </p>
           </div>
           <div className="relative h-[190px]">
-            <img
-              src="/images/guardian_nav.jpg"
-              className="w-full h-full"
-            ></img>
+            <img src="/images/guardian_nav.jpg" className="w-full h-full"></img>
             <div className="absolute right-10 top-12 h-[70px] w-[220px] bg-[#0324fc] flex items-center justify-center text-5xl text-white drop-shadow-lg">
               LOGIN
             </div>
@@ -58,7 +55,17 @@ export default function Root() {
       {!shouldUseLandingV2 && <Navbar cart={cart} />}
 
       <Outlet context={[cart, set_cart]} />
-      <Footer />
+      {shouldUseLandingV2 && (
+        <div>
+          <div className="flex flex-col items-center mt-[80px] text-[24px] font-bold">
+            <span>
+              Guardian Products 5575 Spalding Drive, Peachtree Corners, GA 30092
+            </span>
+            <span>Phone 800 727-7222</span>
+          </div>
+        </div>
+      )}
+      {!shouldUseLandingV2 && <Footer />}
     </div>
   );
 }
