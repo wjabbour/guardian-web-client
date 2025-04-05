@@ -49,7 +49,7 @@ export default function Root() {
               src="/images/guardian_nav.jpg"
               className="w-full h-full"
             ></img>
-            <div className="absolute right-5 top-10 h-[75px] w-[225px] bg-[#0324fc] flex items-center justify-center text-5xl text-white drop-shadow-lg">
+            <div className="absolute right-10 top-12 h-[70px] w-[220px] bg-[#0324fc] flex items-center justify-center text-5xl text-white drop-shadow-lg">
               LOGIN
             </div>
           </div>
