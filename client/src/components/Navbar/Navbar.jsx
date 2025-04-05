@@ -8,7 +8,7 @@ export default function Navbar(props) {
   return (
     <div className={styles.navbar}>
       <div
-        className="absolute top-5 left-5 flex justify-center border-solid border-2 border-blue-700 rounded-[18px] w-[145px]"
+        className="absolute top-5 left-5 flex justify-center border-solid border-2 border-blue-700 rounded-[18px] w-[145px] cursor-pointer"
         onClick={() => navigate("/orders")}
       >
         <div className={styles.cart}>View Orders</div>
