@@ -5,7 +5,7 @@ function Category(props) {
         window.open(props.location, "_blank");
       }}
     >
-      <div className="h-[375px] w-[300px] cursor-pointer">
+      <div className="h-[375px] w-[300px] cursor-pointer shadow-lg">
         <img src={props.photo_url} className="h-full w-full"></img>
       </div>
       <div className="flex justify-center mt-3 cursor-default">
