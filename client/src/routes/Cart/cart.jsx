@@ -124,7 +124,7 @@ export default function Cart() {
             );
           })}
         </div>
-        <div className={styles.subtotal__container}>
+        <div className="relative h-[150px] border-t-[1px] border-solid border-black">
           <div className={styles.info}>
             <div className={styles.subtotal}>
               Subtotal ({calculate_item_count(cart)} items): $
