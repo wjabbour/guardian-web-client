@@ -5,13 +5,17 @@ import Box from "@mui/material/Box";
 import Backdrop from "@mui/material/Backdrop";
 import Navbar from "../components/Navbar/Navbar";
 import Footer from "../components/Footer/Footer";
-import { useState } from "react";
+import { useState, createContext } from "react";
 import { getConfigValue } from "../lib/config";
+
+const UserContext = createContext({ isLoggedIn: false });
+const CartContext = createContext({});
 
 export default function Root() {
   const navigation = useNavigation();
   const shouldUseLandingV2 = getConfigValue("use_landing_v2") ?? false;
   const [cart, set_cart] = useState(rehydrate());
+  const [user, setUser] = useState({ isLoggedIn: false });
   function rehydrate() {
     if (sessionStorage.getItem("cart")) {
       return JSON.parse(sessionStorage.getItem("cart"));
@@ -37,26 +41,34 @@ export default function Root() {
           <CircularProgress />
         </Box>
       </div>
-      {shouldUseLandingV2 && (
-        <div>
-          <div className="flex items-center justify-center bg-[#0324fc] h-[70px]">
-            <p className="text-white text-4xl drop-shadow-lg">
-              Contact us at 800-727-7222 or email us at support@gpcorp.com
-            </p>
-          </div>
-          <div className="relative h-[190px]">
-            <img src="/images/guardian_nav.jpg" className="w-full h-full"></img>
-            <div className="absolute right-10 top-12 h-[70px] w-[220px] bg-[#0324fc] flex items-center justify-center text-5xl text-white drop-shadow-lg">
-              LOGIN
-            </div>
-          </div>
-        </div>
-      )}
-      {!shouldUseLandingV2 && <Navbar cart={cart} />}
 
-      <Outlet context={[cart, set_cart]} />
+      <CartContext.Provider>
+        <UserContext.Provider user={user}>
+          {shouldUseLandingV2 && (
+            <div>
+              <div className="flex items-center justify-center bg-[#0324fc] h-[70px] cursor-default">
+                <p className="text-white text-4xl drop-shadow-lg">
+                  Contact us at 800-727-7222 or email us at support@gpcorp.com
+                </p>
+              </div>
+              <div className="relative h-[190px]">
+                <img
+                  src="/images/guardian_nav.jpg"
+                  className="w-full h-full"
+                ></img>
+                <div className="absolute right-10 top-12 h-[70px] w-[220px] bg-[#0324fc] flex items-center justify-center text-5xl text-white drop-shadow-lg cursor-pointer">
+                  LOGIN
+                </div>
+              </div>
+            </div>
+          )}
+          {!shouldUseLandingV2 && <Navbar cart={cart} />}
+          <Outlet context={[cart, set_cart]} />
+        </UserContext.Provider>
+      </CartContext.Provider>
+
       {shouldUseLandingV2 && (
-        <div>
+        <div className="cursor-default">
           <div className="flex flex-col items-center mt-[80px] text-[24px] font-bold">
             <span>
               Guardian Products 5575 Spalding Drive, Peachtree Corners, GA 30092
