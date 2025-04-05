@@ -39,12 +39,12 @@ export default function Root() {
       </div>
       {shouldUseLandingV2 && (
         <div>
-          <div className="flex items-center justify-center bg-[#0324fc] h-[70px] border-solid border-b-2 border-black">
+          <div className="flex items-center justify-center bg-[#0324fc] h-[70px]">
             <p className="text-white text-4xl drop-shadow-lg">
               Contact us at 800-727-7222 or email us at support@gpcorp.com
             </p>
           </div>
-          <div className="relative h-[150px] border-solid border-b-2 border-black">
+          <div className="relative h-[190px]">
             <img
               src="/images/guardian_nav.jpg"
               className="w-full h-full"
