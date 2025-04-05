@@ -30,7 +30,7 @@ export default function QuantitySelector({
               <th scope="row">{size}</th>
               {item.colors.map((color) => {
                 return (
-                  <td>
+                  <td className="p-[2px]">
                     {item.type === "customs" && (
                       <Checkbox
                         checked={clone[size]?.includes(color)}
@@ -53,7 +53,7 @@ export default function QuantitySelector({
                         }}
                       />
                     )}
-                    {item.type !== "customs" && <input type="text"></input>}
+                    {item.type !== "customs" && <input className="border-2 border-solid border-gray-600 rounded-md p-1" type="text"></input>}
                   </td>
                 );
               })}
