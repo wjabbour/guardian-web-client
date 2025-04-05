@@ -260,11 +260,7 @@ export default function Checkout() {
             }`}
             ref={paypalRef}
           ></div>
-          <div
-            className={`${styles.tooltip} ${
-              bypass_paypal ? styles.hidden : styles.visible
-            }`}
-          >
+          <div className={bypass_paypal ? "hidden" : "absolute top-2 left-[310px]"}>
             <Tooltip
               title={
                 <Typography variant="h6" gutterBottom>
