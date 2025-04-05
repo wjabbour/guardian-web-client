@@ -95,11 +95,15 @@ export default function Cart() {
                     }}
                   />
                 </div>
+
                 {cart[k].type !== "customs" &&
                   getConfigValue("render_logo_preview") && (
-                    <div className={styles.image__container}>
+                    <div className="relative left-[155px] w-[95px] z-10">
                       <img
-                        src={`/images/${cart[k].embroidery.toLowerCase()}.png`}
+                        src={`/images/${cart[k].embroidery
+                          .split(" ")
+                          .join("_")
+                          .toLowerCase()}.png`}
                       ></img>
                     </div>
                   )}
