@@ -45,7 +45,13 @@ export default function Root() {
             </p>
           </div>
           <div className="relative h-[150px] border-solid border-b-2 border-black">
-            <div className="absolute right-5 top-10 h-[75px] w-[225px] bg-[#0324fc] flex items-center justify-center text-5xl text-white drop-shadow-lg">LOGIN</div>
+            <img
+              src="/images/guardian_nav.jpg"
+              className="w-full h-full"
+            ></img>
+            <div className="absolute right-5 top-10 h-[75px] w-[225px] bg-[#0324fc] flex items-center justify-center text-5xl text-white drop-shadow-lg">
+              LOGIN
+            </div>
           </div>
         </div>
       )}
