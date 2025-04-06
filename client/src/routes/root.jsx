@@ -6,7 +6,6 @@ import Backdrop from "@mui/material/Backdrop";
 import Navbar from "../components/Navbar/Navbar";
 import Footer from "../components/Footer/Footer";
 import { useState, createContext } from "react";
-import { getConfigValue } from "../lib/config";
 import PasswordEntryDialog from "../components/PasswordEntryDialog";
 import { useNextGenRouting } from "../hooks/useNextGenRouting";
 
@@ -16,7 +15,10 @@ const CartContext = createContext({});
 export default function Root() {
   const navigation = useNavigation();
   const navigate = useNavigate();
-  const useRouting = useNextGenRouting();
+  const useRouting =
+    useNextGenRouting() &&
+    ["localhost", "gpc81"].includes(window.location.hostname) &&
+    window.location.pathname === "/";
   const [cart, set_cart] = useState(rehydrate());
   const [user, setUser] = useState({ isLoggedIn: false });
   const [isModalOpen, setModalOpen] = useState(false);
@@ -48,7 +50,7 @@ export default function Root() {
 
       <CartContext.Provider>
         <UserContext.Provider user={user}>
-          {new URL(window.location.href).pathname === "/" && (
+          {useRouting && (
             <div>
               <div className="flex items-center justify-center bg-[#0324fc] h-[70px] cursor-default">
                 <p className="text-white text-4xl drop-shadow-lg">
@@ -71,9 +73,7 @@ export default function Root() {
               </div>
             </div>
           )}
-          {new URL(window.location.href).pathname !== "/" && (
-            <Navbar cart={cart} />
-          )}
+          {!useRouting && <Navbar cart={cart} />}
           <Outlet context={[cart, set_cart]} />
         </UserContext.Provider>
       </CartContext.Provider>
