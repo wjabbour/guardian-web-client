@@ -93,7 +93,7 @@ export default function Root() {
         isModalOpen={isModalOpen}
         setIsModalOpen={setModalOpen}
         onPasswordChange={(password, setPassword) => {
-          if (password === "Turner") {
+          if (password === "HennessY") {
             setUser({ isLoggedIn: true });
             setModalOpen(false);
             navigate("/hennessy");
