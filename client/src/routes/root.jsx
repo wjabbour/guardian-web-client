@@ -9,7 +9,7 @@ import { useState, createContext } from "react";
 import PasswordEntryDialog from "../components/PasswordEntryDialog";
 import { useNextGenRouting } from "../hooks/useNextGenRouting";
 
-const UserContext = createContext({ isLoggedIn: false });
+export const UserContext = createContext({ isLoggedIn: false });
 const CartContext = createContext({});
 
 export default function Root() {
@@ -92,11 +92,12 @@ export default function Root() {
       <PasswordEntryDialog
         isModalOpen={isModalOpen}
         setIsModalOpen={setModalOpen}
-        onPasswordChange={(password) => {
+        onPasswordChange={(password, setPassword) => {
           if (password === "Turner") {
             setUser({ isLoggedIn: true });
             setModalOpen(false);
             navigate("/hennessy");
+            setPassword("");
           }
         }}
       />

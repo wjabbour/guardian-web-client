@@ -22,7 +22,7 @@ export default function PasswordEntryDialog({
   }
 
   useEffect(() => {
-    onPasswordChange(password);
+    onPasswordChange(password, setPassword);
   }, [password]);
 
   return (
