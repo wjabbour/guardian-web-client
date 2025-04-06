@@ -1,5 +1,13 @@
 import { getConfigValue } from "./config";
 
+export function getDomainAwarePath(destination) {
+  const prefix = getConfigValue("route_prefix");
+  const url = window.location.href;
+  const shouldPrefixRoute = url.includes("gpc81") || url.includes("localhost");
+
+  return shouldPrefixRoute ? prefix + destination : destination;
+}
+
 export function calculate_item_count(cart) {
   let count = 0;
 

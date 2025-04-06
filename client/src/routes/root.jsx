@@ -1,6 +1,5 @@
 import "../App.css";
 import { Outlet, useNavigation, useNavigate } from "react-router-dom";
-import { useContext } from "react";
 import CircularProgress from "@mui/material/CircularProgress";
 import Box from "@mui/material/Box";
 import Backdrop from "@mui/material/Backdrop";
@@ -9,6 +8,7 @@ import Footer from "../components/Footer/Footer";
 import { useState, createContext } from "react";
 import { getConfigValue } from "../lib/config";
 import PasswordEntryDialog from "../components/PasswordEntryDialog";
+import { useNextGenRouting } from "../hooks/useNextGenRouting";
 
 const UserContext = createContext({ isLoggedIn: false });
 const CartContext = createContext({});
@@ -16,10 +16,9 @@ const CartContext = createContext({});
 export default function Root() {
   const navigation = useNavigation();
   const navigate = useNavigate();
-  const shouldUseLandingV2 = getConfigValue("use_landing_v2") ?? false;
+  const useRouting = useNextGenRouting();
   const [cart, set_cart] = useState(rehydrate());
   const [user, setUser] = useState({ isLoggedIn: false });
-  console.log(user);
   const [isModalOpen, setModalOpen] = useState(false);
   function rehydrate() {
     if (sessionStorage.getItem("cart")) {
@@ -49,7 +48,7 @@ export default function Root() {
 
       <CartContext.Provider>
         <UserContext.Provider user={user}>
-          {shouldUseLandingV2 && (
+          {new URL(window.location.href).pathname === "/" && (
             <div>
               <div className="flex items-center justify-center bg-[#0324fc] h-[70px] cursor-default">
                 <p className="text-white text-4xl drop-shadow-lg">
@@ -72,12 +71,14 @@ export default function Root() {
               </div>
             </div>
           )}
-          {!shouldUseLandingV2 && <Navbar cart={cart} />}
+          {new URL(window.location.href).pathname !== "/" && (
+            <Navbar cart={cart} />
+          )}
           <Outlet context={[cart, set_cart]} />
         </UserContext.Provider>
       </CartContext.Provider>
 
-      {shouldUseLandingV2 && (
+      {useRouting && (
         <div className="cursor-default">
           <div className="flex flex-col items-center mt-[80px] text-[24px] font-bold">
             <span>
@@ -87,14 +88,15 @@ export default function Root() {
           </div>
         </div>
       )}
-      {!shouldUseLandingV2 && <Footer />}
+      {!useRouting && <Footer />}
       <PasswordEntryDialog
         isModalOpen={isModalOpen}
         setIsModalOpen={setModalOpen}
         onPasswordChange={(password) => {
           if (password === "Turner") {
             setUser({ isLoggedIn: true });
-            // navigate("/hennessy");
+            setModalOpen(false);
+            navigate("/hennessy");
           }
         }}
       />

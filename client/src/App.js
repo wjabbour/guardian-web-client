@@ -13,28 +13,62 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Success from "./routes/Success/Success";
 import { Helmet } from "react-helmet";
 import { getConfigValue } from "./lib/config";
+import { useNextGenRouting } from "./hooks/useNextGenRouting";
 
 function App() {
-  const shouldUseLandingV2 = getConfigValue("use_landing_v2") ?? false;
-  const router = createBrowserRouter([
-    {
-      path: "/",
-      element: <Root />,
-      children: [
-        { index: true, element: shouldUseLandingV2 ? <LandingV2 /> : <Landing /> },
-        { path: "/catalog/:type", element: <Catalog /> },
-        { path: "/cart", element: <Cart /> },
-        { path: "/checkout", element: <Checkout /> },
-        { path: "/success", element: <Success /> },
-        { path: "/orders", element: <Orders /> },
-        {
-          path: "/item/:id",
-          loader: modificationLoader,
-          element: <Modification />,
-        },
-      ],
-    },
-  ]);
+  const useRouting = useNextGenRouting();
+  let router;
+  if (!useRouting) {
+    router = createBrowserRouter([
+      {
+        path: "/",
+        element: <Root />,
+        children: [
+          {
+            path: "/",
+            element: <Landing />,
+          },
+          { path: "/catalog/:type", element: <Catalog /> },
+          { path: "/cart", element: <Cart /> },
+          { path: "/checkout", element: <Checkout /> },
+          { path: "/success", element: <Success /> },
+          { path: "/orders", element: <Orders /> },
+          {
+            path: "/item/:id",
+            loader: modificationLoader,
+            element: <Modification />,
+          },
+        ],
+      },
+    ]);
+  } else {
+    router = createBrowserRouter([
+      {
+        path: "/",
+        element: <Root />,
+        children: [
+          {
+            path: "/",
+            element: <LandingV2 />,
+          },
+          {
+            path: "/:storeName",
+            element: <Landing />,
+          },
+          { path: "/:storeName/catalog/:type", element: <Catalog /> },
+          { path: "/:storeName/cart", element: <Cart /> },
+          { path: "/:storeName/checkout", element: <Checkout /> },
+          { path: "/:storeName/success", element: <Success /> },
+          { path: "/:storeName/orders", element: <Orders /> },
+          {
+            path: "/:storeName/item/:id",
+            loader: modificationLoader,
+            element: <Modification />,
+          },
+        ],
+      },
+    ]);
+  }
 
   return (
     <div className="main__page">

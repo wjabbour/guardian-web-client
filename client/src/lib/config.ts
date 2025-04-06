@@ -10,17 +10,17 @@ export function getConfigValue(val: keyof Config) {
   const url = window.location.href;
   if (url.includes("localhost:3000")) {
     return HennessyConfig[val];
-  } else if (url.includes("newcustomer.gpstivers.com")) {
+  } else if (url.includes("newcustomer")) {
     return NewCustomerConfig[val];
-  } else if (url.includes("gpstivers.com")) {
+  } else if (url.includes("gpstivers")) {
     return StiversConfig[val];
-  } else if (url.includes("gptameron.com")) {
+  } else if (url.includes("gptameron")) {
     return TameronConfig[val];
-  } else if (url.includes("gp-premier.com")) {
+  } else if (url.includes("gp-premier")) {
     return PremierConfig[val];
-  } else if (url.includes("cannonemployeestore.com")) {
+  } else if (url.includes("cannon")) {
     return CannonConfig[val];
-  } else if (url.includes("gpc81.com")) {
+  } else if (url.includes("gpc81")) {
     return HennessyConfig[val];
   }
 }

@@ -44,8 +44,8 @@ export interface Config {
   bypass_codes: string[]; // the codes that will enable a user to place an order without the paypal flow
   server_hostname: string; // cannon client talks to a different server than all the other clients
   account_reps: AccountRep[]; // the account reps contact info to be displayed on the footer
-  // renders the new landing page and uses a different routing system, eventually this will be true for all sites and this config property will go away
-  use_landing_v2?: boolean; 
+  /** for gpc81, prepends the store name to the url */   
+  route_prefix?: string 
 }
 
 interface AccountRep {
