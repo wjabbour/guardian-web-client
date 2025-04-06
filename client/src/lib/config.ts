@@ -6,7 +6,6 @@ import { config as CannonConfig } from "../configs/cannon";
 import { config as HennessyConfig } from "../configs/hennessy";
 import { Config } from "./interfaces";
 
-
 const DEFAULT_CONFIG = {
   title: 'Guardian'
 }

@@ -23,8 +23,8 @@ export default function Success() {
         </SvgIcon>
       </div>
       <div className={styles.card}>
-        <div className={styles.title}>
-          <h1>Order Successfully Placed</h1>
+        <div className="flex justify-center text-xl font-bold">
+          <h1>Order Placed Successfully</h1>
         </div>
         <div className={styles.scrollable}>
           {cart_keys.map((k) => {

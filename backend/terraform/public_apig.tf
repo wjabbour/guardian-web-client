@@ -52,7 +52,7 @@ module "update_historical_order_route" {
 
 module "retrieve_orders_route" {
   source      = "./api_gateway_route"
-  http_method = "GET"
+  http_method = "POST"
   path_part   = "retrieve-orders"
   uri         = module.retrieve_orders.lambda_function_invoke_arn
   api_gateway = aws_api_gateway_rest_api.this

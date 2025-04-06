@@ -14,7 +14,6 @@ import {
   GetSecretValueCommand,
 } from "@aws-sdk/client-secrets-manager";
 import { Catalog } from "../catalog";
-import { COMPANIES } from "../utils";
 import { dynamoClient } from "../dynamoClient";
 import { getConfigValue } from "../utils";
 
@@ -53,16 +52,23 @@ export const handler = async (
       };
     }
 
+    const company_name = body.companyName;
+
+    if (!company_name) {
+      logger.warn({ message: "Unrecognized company name" });
+      return {
+        statusCode: 400,
+      };
+    }
+    logger.info({ message: "Determined company name", company_name });
+
     logger.info({ message: "Determined store code", store });
 
-    const cart = construct_cart(body.cart, customer_po, event.headers?.origin);
+    const cart = construct_cart(body.cart, customer_po, company_name);
     logger.info({ message: "Constructed cart", cart });
 
-    const price = calculate_price(cart, event.headers?.origin);
+    const price = calculate_price(cart, company_name);
     logger.info({ message: "Calculated cart price", price });
-
-    const company_name = COMPANIES[event.headers?.origin];
-    logger.info({ message: "Determined company name", company_name });
 
     /*
       Tameron orders should be sent immediately, so we don't need to wait for the send_order_data cron
@@ -190,7 +196,7 @@ export const handler = async (
   }
 };
 
-function construct_cart(cart: any, customer_po: string, origin: string) {
+function construct_cart(cart: any, customer_po: string, company_name: string) {
   const massaged_cart = [];
   Object.keys(cart).forEach((k) => {
     const obj = {};
@@ -202,12 +208,15 @@ function construct_cart(cart: any, customer_po: string, origin: string) {
     obj["color"] = cart_item["color"];
     if (cart_item["embroidery"]) obj["embroidery"] = cart_item["embroidery"];
     if (cart_item["placement"]) obj["placement"] = cart_item["placement"];
-    obj["description"] = getCatalogItemDescription(cart_item["code"], origin);
+    obj["description"] = getCatalogItemDescription(
+      cart_item["code"],
+      company_name
+    );
 
     const catalog_item = getCatalogItem(
       cart_item["code"],
       cart_item["size"],
-      origin
+      company_name
     );
 
     obj["price"] = getPriceWithDiscount(
@@ -246,12 +255,14 @@ function getPriceWithDiscount(item, size, quantity) {
   }
 }
 
-function calculate_price(cart, origin) {
+function calculate_price(cart, company_name) {
   let price = 0;
 
   cart.forEach((item) => {
     logger.info({ message: "Determining price for item", item });
-    const catalog_item = Catalog(origin).find((i) => item.code === i.code);
+    const catalog_item = Catalog(company_name).find(
+      (i) => item.code === i.code
+    );
     logger.info({ message: "Retrieved catalog item", catalog_item });
     price += item.price * item.quantity;
     logger.info({ message: "Updated price", price, quantity: item.quantity });

@@ -2,6 +2,7 @@ import axios from "axios";
 import { getConfigValue } from "./config";
 
 const hostname = getConfigValue("server_hostname");
+const companyName = getConfigValue("title");
 
 function handleError(e, error_message?) {
   const message =
@@ -16,7 +17,7 @@ function handleError(e, error_message?) {
 }
 
 export async function create_order(order) {
-  const body = { ...order };
+  const body = { ...order, companyName };
 
   try {
     const response = await axios.post(`${hostname}/v1/create-order`, body);
@@ -27,8 +28,9 @@ export async function create_order(order) {
 }
 
 export async function retrieve_orders() {
+  const body = { companyName };
   try {
-    const response = await axios.get(`${hostname}/v1/retrieve-orders`);
+    const response = await axios.post(`${hostname}/v1/retrieve-orders`, body);
     return { success: { data: response.data }, error: null };
   } catch (e) {
     return handleError(e);
@@ -36,7 +38,7 @@ export async function retrieve_orders() {
 }
 
 export async function capture_order(order_id) {
-  const body = { order_id };
+  const body = { order_id, companyName };
 
   try {
     const response = await axios.post(`${hostname}/v1/capture-order`, body);

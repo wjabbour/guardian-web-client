@@ -1,23 +1,20 @@
 import { TameronCatalog } from "./catalogs/tameron";
 import { StiversCatalog } from "./catalogs/stivers";
 import { PremierCatalog } from "./catalogs/premier";
-import { NewcustomerCatalog } from "./catalogs/newcustomer";
 import { CannonCatalog } from "./catalogs/cannon";
 import { CatalogItem } from "./interfaces";
+import { HennessyCatalog } from "./catalogs/hennessy";
 
-export const Catalog = function (origin): CatalogItem[] {
-  const url = origin;
-  if (url.includes("localhost:3000")) {
+export const Catalog = function (companyName: string): CatalogItem[] {
+  if (companyName === "Tameron") {
     return TameronCatalog;
-  } else if (url.includes("gpstivers.com")) {
+  } else if (companyName === "Stivers") {
     return StiversCatalog;
-  } else if (url.includes("gptameron.com")) {
-    return TameronCatalog;
-  } else if (url.includes("gp-premier.com")) {
+  } else if (companyName === "Premier") {
     return PremierCatalog;
-  } else if (url.includes("newcustomer.gpstivers.com")) {
-    return NewcustomerCatalog;
-  } else if (url.includes("cannonemployeestore.com")) {
+  } else if (companyName === "Cannon") {
     return CannonCatalog;
+  } else if (companyName === "Hennessy") {
+    return HennessyCatalog;
   }
 };

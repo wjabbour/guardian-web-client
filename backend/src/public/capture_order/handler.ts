@@ -53,7 +53,14 @@ export const handler = async (
     const txId = await capture_paypal_order(access_token, order_id);
     logger.info({ message: "Captured paypal order" });
 
-    const company_name = COMPANIES[event.headers?.origin];
+    const company_name = body.companyName;
+
+    if (!company_name) {
+      logger.warn({ message: "Unrecognized company name" });
+      return {
+        statusCode: 400,
+      };
+    }
     logger.info({ message: "Determined company name", company_name });
 
     const { email, created_at } = await dynamoClient.setPaid(order_id, txId);
@@ -62,7 +69,7 @@ export const handler = async (
 
     // send cannon orders immediately
     if (email && created_at && company_name === "Cannon") {
-      logger.info('Cannon order, sending immediately')
+      logger.info("Cannon order, sending immediately");
       await dynamoClient.archiveCannonOrder(created_at, email);
       const order = await dynamoClient.getOrder(email, created_at);
       await sendEmail([order], "Cannon", email);

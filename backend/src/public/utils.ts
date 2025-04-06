@@ -4,7 +4,6 @@ import dayjs from "dayjs";
 import { SendRawEmailCommand, SESClient } from "@aws-sdk/client-ses";
 import { cannonConfig } from "./configs/cannon";
 import { standardConfig } from "./configs/standard";
-import { Config } from "./interfaces";
 
 export const logger = pino();
 
@@ -16,6 +15,7 @@ const ALLOWED_ORIGINS = [
   "https://gptameron.com",
   "https://gp-premier.com",
   "https://cannonemployeestore.com",
+  "https://gpc81.com"
 ];
 
 export function addCors(origin, map?) {
@@ -150,24 +150,24 @@ export function getStore(store_code) {
   }
 }
 
-export function getCatalogItem(item_code, size, origin) {
-  return Catalog(origin).find((i) => {
+export function getCatalogItem(item_code, size, company_name) {
+  return Catalog(company_name).find((i) => {
     return i.code === item_code;
   });
 }
 
-export function getCatalogItemPrice(item_code, size, origin) {
-  const item = Catalog(origin).find((i) => {
+export function getCatalogItemPrice(item_code, size, company_name) {
+  const item = Catalog(company_name).find((i) => {
     return i.code === item_code;
   });
   return item.sizes[size];
 }
 
-export function getCatalogItemDescription(item_code, origin) {
+export function getCatalogItemDescription(item_code, company_name) {
   logger.info(
     `Getting item description from catalog for item code ${item_code}`
   );
-  const item = Catalog(origin).find((i) => {
+  const item = Catalog(company_name).find((i) => {
     return i.code === item_code;
   });
 

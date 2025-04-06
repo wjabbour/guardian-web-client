@@ -68,7 +68,7 @@ export const config: Config = {
     "Hennessy Porsche Marietta, 2501 Windy Hill Rd SE, Marietta, GA 30067",
     "Hennessy Porsche, 990 Mansell Rd, Roswell, GA 30076",
   ],
-  bypass_codes: [],
+  bypass_codes: ['TURNER'],
   server_hostname: "https://mxfj3q6m01.execute-api.us-east-1.amazonaws.com",
   account_reps: [
     { name: "Andrew Sarazua", phone: "678-287-1604" },

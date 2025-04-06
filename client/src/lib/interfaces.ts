@@ -33,7 +33,7 @@ interface Embroidery {
 }
 
 export interface Config {
-  title: string; // the text that will appear in the browser tab
+  title: string; // VERY IMPORTANT: this value is passed to the backend in every API so the backend can perform company specific logic... this is also the text that will appear in the browser tab
   company_logo: string; // the name of the image file to render in the navbar
   logo_placements: string[]; // the text values in the logo select on the item modification page
   embroideries: Embroidery; // the text values in the placement select on the item modification page
@@ -44,8 +44,8 @@ export interface Config {
   bypass_codes: string[]; // the codes that will enable a user to place an order without the paypal flow
   server_hostname: string; // cannon client talks to a different server than all the other clients
   account_reps: AccountRep[]; // the account reps contact info to be displayed on the footer
-  /** for gpc81, prepends the store name to the url */   
-  route_prefix?: string 
+  /** for gpc81, prepends the store name to the url */
+  route_prefix?: string;
 }
 
 interface AccountRep {

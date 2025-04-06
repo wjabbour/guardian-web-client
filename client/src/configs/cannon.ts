@@ -1,6 +1,6 @@
 import { Config } from "../lib/interfaces";
 export const config: Config = {
-  title: "Cannon Motor Company",
+  title: "Cannon",
   company_logo: "cannon_logo.png",
   logo_placements: [],
   show_modification_thumbnail: false,
