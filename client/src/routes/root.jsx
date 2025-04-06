@@ -15,10 +15,7 @@ const CartContext = createContext({});
 export default function Root() {
   const navigation = useNavigation();
   const navigate = useNavigate();
-  const useRouting =
-    useNextGenRouting() &&
-    ["localhost", "gpc81"].includes(window.location.hostname) &&
-    window.location.pathname === "/";
+  const useRouting = useNextGenRouting() && window.location.pathname === "/";
   const [cart, set_cart] = useState(rehydrate());
   const [user, setUser] = useState({ isLoggedIn: false });
   const [isModalOpen, setModalOpen] = useState(false);
