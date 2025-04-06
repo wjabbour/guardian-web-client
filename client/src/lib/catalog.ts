@@ -10,17 +10,17 @@ export const Catalog = function (): CatalogItem[] {
   const url = window.location.href;
   if (url.includes("localhost:3000")) {
     return NewCustomerCatalog;
-  } else if (url.includes("newcustomer.gpstivers.com")) {
+  } else if (url.includes("newcustomer")) {
     return NewCustomerCatalog;
-  } else if (url.includes("gpstivers.com")) {
+  } else if (url.includes("gpstivers")) {
     return StiversCatalog;
-  } else if (url.includes("gptameron.com")) {
+  } else if (url.includes("gptameron")) {
     return TameronCatalog;
-  } else if (url.includes("gp-premier.com")) {
+  } else if (url.includes("gp-premier")) {
     return PremierCatalog;
-  } else if (url.includes("cannonemployeestore.com")) {
+  } else if (url.includes("cannon")) {
     return CannonCatalog;
-  } else if (url.includes("gpc81.com")) {
+  } else if (url.includes("hennessy")) {
     return HennessyCatalog;
   }
 };

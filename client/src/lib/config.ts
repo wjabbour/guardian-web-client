@@ -6,6 +6,11 @@ import { config as CannonConfig } from "../configs/cannon";
 import { config as HennessyConfig } from "../configs/hennessy";
 import { Config } from "./interfaces";
 
+
+const DEFAULT_CONFIG = {
+  title: 'Guardian'
+}
+
 export function getConfigValue(val: keyof Config) {
   const url = window.location.href;
   if (url.includes("localhost:3000")) {
@@ -20,7 +25,10 @@ export function getConfigValue(val: keyof Config) {
     return PremierConfig[val];
   } else if (url.includes("cannon")) {
     return CannonConfig[val];
-  } else if (url.includes("gpc81")) {
+  } else if (url.includes("hennessy")) {
     return HennessyConfig[val];
+  } else {
+    // when the user is on gpc81.com landing page we need to display a string in the browser tab
+    return DEFAULT_CONFIG[val]
   }
 }
