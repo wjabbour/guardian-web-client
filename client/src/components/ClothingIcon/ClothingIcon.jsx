@@ -1,6 +1,7 @@
 import styles from "./ClothingIcon.module.scss";
 import { useNavigate } from "react-router-dom";
 import { useRef, useState } from "react";
+import { getDomainAwarePath } from "../../lib/utils";
 
 export default function ClothingIcon(props) {
   const ref = useRef(null);
@@ -14,7 +15,7 @@ export default function ClothingIcon(props) {
   return (
     <div
       className="cursor-pointer relative flex flex-col justify-center border-[1px] border-solid border-gray-500"
-      onClick={() => navigate(props.link)}
+      onClick={() => navigate(getDomainAwarePath(props.link))}
     >
       {props.no_space != true && (
         <div

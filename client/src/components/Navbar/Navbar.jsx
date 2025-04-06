@@ -26,14 +26,14 @@ export default function Navbar(props) {
         <img
           className={styles.logo}
           src={"/images/guardian.png"}
-          onClick={() => navigate("/")}
+          onClick={() => navigate(getDomainAwarePath("/"))}
         ></img>
       </div>
       <div className={styles.stivers}>
         <img
           className={styles.logo}
           src={`/images/${getConfigValue("company_logo")}`}
-          onClick={() => navigate("/")}
+          onClick={() => navigate(getDomainAwarePath("/"))}
         ></img>
       </div>
     </div>

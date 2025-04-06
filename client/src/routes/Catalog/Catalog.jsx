@@ -6,27 +6,28 @@ import { Catalog } from "../../lib/catalog";
 import { SvgIcon } from "@mui/material";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import LogoPreview from "./LogoPreview";
+import { getDomainAwarePath } from "../../lib/utils";
 
 export default function ClothingCatalog() {
   const navigate = useNavigate();
   const location = useLocation();
   const [available_catalog, set_catalog] = useState([]);
-  const embroideryType = location.pathname.split("/")[2];
+  const embroideryType = location.pathname.split('catalog/')[1];
   useEffect(() => {
     let inventory = [];
-    if (location.pathname === "/catalog/womens") {
+    if (location.pathname.includes("/catalog/womens")) {
       inventory = Catalog().filter((item) => item.type === "womens");
-    } else if (location.pathname === "/catalog/hats") {
+    } else if (location.pathname.includes("/catalog/hats")) {
       inventory = Catalog().filter((item) => item.type === "hat");
-    } else if (location.pathname === "/catalog/accessory") {
+    } else if (location.pathname.includes("/catalog/accessory")) {
       inventory = Catalog().filter((item) => item.type === "accessory");
-    } else if (location.pathname === "/catalog/service") {
+    } else if (location.pathname.includes("/catalog/service")) {
       inventory = Catalog().filter((item) => item.type === "service");
-    } else if (location.pathname === "/catalog/customs") {
+    } else if (location.pathname.includes("/catalog/customs")) {
       inventory = Catalog().filter((item) => item.type === "customs");
-    } else if (location.pathname === "/catalog/office") {
+    } else if (location.pathname.includes("/catalog/office")) {
       inventory = Catalog().filter((item) => item.type === "office");
-    } else if (location.pathname === "/catalog/mens") {
+    } else if (location.pathname.includes("/catalog/mens")) {
       inventory = Catalog().filter((item) => item.type === "mens");
     }
 
@@ -44,7 +45,7 @@ export default function ClothingCatalog() {
         <div
           className={styles.back__button}
           onClick={() => {
-            navigate("/");
+            navigate(getDomainAwarePath("/cart"));
           }}
         >
           <SvgIcon fontSize="inherit">
@@ -55,7 +56,7 @@ export default function ClothingCatalog() {
           return (
             <div
               onClick={() => {
-                navigate(`/item/${item.code}`);
+                navigate(getDomainAwarePath(`/item/${item.code}`));
               }}
               key={item.name}
             >
