@@ -2,7 +2,11 @@ import styles from "./Cart.module.scss";
 import { useOutletContext, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import DeleteIcon from "@mui/icons-material/Delete";
-import { calculate_item_count, calculate_item_price } from "../../lib/utils";
+import {
+  calculate_item_count,
+  calculate_item_price,
+  getDomainAwarePath,
+} from "../../lib/utils";
 import { SvgIcon } from "@mui/material";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import { getConfigValue } from "../../lib/config";
@@ -37,7 +41,7 @@ export default function Cart() {
       setErrorSnackbarOpen(true);
       setErrorSnackbarText("Must order at least 12 apparel items");
     } else {
-      navigate("/checkout");
+      navigate(getDomainAwarePath("/checkout"));
     }
   }
 
@@ -46,7 +50,7 @@ export default function Cart() {
       <div
         className={styles.back__button}
         onClick={() => {
-          navigate("/");
+          navigate(getDomainAwarePath("/"));
         }}
       >
         <SvgIcon fontSize="inherit">

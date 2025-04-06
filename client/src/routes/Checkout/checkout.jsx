@@ -7,7 +7,11 @@ import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 import { getConfigValue } from "../../lib/config";
-import { calculate_item_count, calculate_item_price } from "../../lib/utils";
+import {
+  calculate_item_count,
+  calculate_item_price,
+  getDomainAwarePath,
+} from "../../lib/utils";
 import * as http from "../../lib/http";
 import Snackbar from "@mui/material/Snackbar";
 import Alert from "@mui/material/Alert";
@@ -77,7 +81,7 @@ export default function Checkout() {
       email_ref.current.value = "";
       store_ref.current.value = "";
       customer_po_ref.current.value = "";
-      navigate("/success", {
+      navigate(getDomainAwarePath("/success"), {
         state: {
           cart: { ...cart },
         },
@@ -126,7 +130,7 @@ export default function Checkout() {
             store_ref.current.value = "";
             customer_po_ref.current.value = "";
 
-            navigate("/success", {
+            navigate(getDomainAwarePath("/success"), {
               state: {
                 cart: { ...cart },
               },
@@ -186,7 +190,7 @@ export default function Checkout() {
       <div
         className={styles.back__button}
         onClick={() => {
-          navigate("/");
+          navigate(getDomainAwarePath("/"));
         }}
       >
         <SvgIcon fontSize="inherit">
@@ -260,7 +264,9 @@ export default function Checkout() {
             }`}
             ref={paypalRef}
           ></div>
-          <div className={bypass_paypal ? "hidden" : "absolute top-2 left-[310px]"}>
+          <div
+            className={bypass_paypal ? "hidden" : "absolute top-2 left-[310px]"}
+          >
             <Tooltip
               title={
                 <Typography variant="h6" gutterBottom>

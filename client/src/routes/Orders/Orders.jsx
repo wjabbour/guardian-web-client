@@ -15,6 +15,7 @@ import Snackbar from "@mui/material/Snackbar";
 import Alert from "@mui/material/Alert";
 import Row from "./Row";
 import PasswordEntryDialog from "../../components/PasswordEntryDialog";
+import { getDomainAwarePath } from "../../lib/utils";
 
 export default function BasicTable() {
   const navigate = useNavigate();
@@ -63,7 +64,7 @@ export default function BasicTable() {
       <div
         className={styles.back__button}
         onClick={() => {
-          navigate("/");
+          navigate(getDomainAwarePath("/"));
         }}
       >
         <SvgIcon fontSize="inherit">

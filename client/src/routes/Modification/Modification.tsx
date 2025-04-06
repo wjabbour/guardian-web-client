@@ -10,7 +10,7 @@ import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 import Alert from "@mui/material/Alert";
-import { getEmbroidery } from "../../lib/utils";
+import { getDomainAwarePath, getEmbroidery } from "../../lib/utils";
 import { getConfigValue } from "../../lib/config";
 import Thumbnail from "./Thumbnail";
 import ColorSelector from "./ColorSelector";
@@ -146,14 +146,14 @@ export default function Modification() {
       });
 
       for (const [key, value] of Object.entries(items)) {
-        console.log(key, value)
+        console.log(key, value);
         addCustomsToCart(value, key, new_cart);
       }
 
       set_cart(new_cart);
       sessionStorage.setItem("cart", JSON.stringify(new_cart));
       setSnackbarOpen(true);
-      setCustomsOrder({})
+      setCustomsOrder({});
       return;
     }
 
@@ -280,7 +280,7 @@ export default function Modification() {
       <div
         className={styles.back__button}
         onClick={() => {
-          navigate("/");
+          navigate(getDomainAwarePath("/"));
         }}
       >
         <SvgIcon fontSize="inherit">

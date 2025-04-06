@@ -45,7 +45,7 @@ export default function ClothingCatalog() {
         <div
           className={styles.back__button}
           onClick={() => {
-            navigate(getDomainAwarePath("/cart"));
+            navigate(getDomainAwarePath("/"));
           }}
         >
           <SvgIcon fontSize="inherit">
