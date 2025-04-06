@@ -74,5 +74,5 @@ export const config: Config = {
     { name: "Andrew Sarazua", phone: "678-287-1604" },
     { name: "John Boston", phone: "678-287-1601" },
   ],
-  route_prefix: "/hennessy/",
+  route_prefix: "/hennessy",
 };
