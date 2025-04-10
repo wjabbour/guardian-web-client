@@ -34,11 +34,11 @@ export default function Checkout() {
   const email_ref = useRef(null);
   const store_ref = useRef(null);
   const customer_po_ref = useRef(null);
-  const [first_name, set_first_name] = useState("");
-  const [last_name, set_last_name] = useState("");
-  const [email, set_email] = useState("");
-  const [code, set_code] = useState("");
-  const [customer_po, set_customer_po] = useState("");
+  const [, set_first_name] = useState("");
+  const [, set_last_name] = useState("");
+  const [, set_email] = useState("");
+  const [, set_code] = useState("");
+  const [, set_customer_po] = useState("");
   const [isLoading, setLoading] = useState(false);
   const [bypass_paypal, set_bypass_paypal] = useState(false);
   const [snackbarOpen, setSnackbarOpen] = useState(false);
