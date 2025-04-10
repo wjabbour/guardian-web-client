@@ -258,32 +258,28 @@ export default function Checkout() {
             Subtotal ({calculate_item_count(cart)} items): $
             {calculate_item_price(cart)}
           </div>
-          <div
-            className={`${styles.checkout__container} ${
-              bypass_paypal ? styles.hidden : styles.visible
-            }`}
-            ref={paypalRef}
-          ></div>
-          <div
-            className={bypass_paypal ? "hidden" : "absolute top-2 left-[310px]"}
-          >
-            <Tooltip
-              title={
-                <Typography variant="h6" gutterBottom>
-                  1. Please disable Adblock or manualy allow the PayPal window
-                  to open.
-                  <br></br>
-                  <br></br>
-                  2. Please do not refresh this page as you are entering your
-                  payment info.
-                </Typography>
-              }
-            >
-              <IconButton>
-                <InfoOutlinedIcon></InfoOutlinedIcon>
-              </IconButton>
-            </Tooltip>
+          <div className={bypass_paypal ? "hidden" : ""}>
+            <div className={styles.checkout__container} ref={paypalRef}></div>
+            <div className="absolute top-2 left-[310px]">
+              <Tooltip
+                title={
+                  <Typography variant="h6" gutterBottom>
+                    1. Please disable Adblock or manualy allow the PayPal window
+                    to open.
+                    <br></br>
+                    <br></br>
+                    2. Please do not refresh this page as you are entering your
+                    payment info.
+                  </Typography>
+                }
+              >
+                <IconButton>
+                  <InfoOutlinedIcon></InfoOutlinedIcon>
+                </IconButton>
+              </Tooltip>
+            </div>
           </div>
+
           <div
             className={`${styles.bypass__paypal__checkout} ${
               !bypass_paypal ? styles.hidden : styles.visible
