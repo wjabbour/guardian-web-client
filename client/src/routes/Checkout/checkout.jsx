@@ -45,6 +45,7 @@ export default function Checkout() {
   const [snackbarText, setSnackbarText] = useState("");
   const [errorSnackbarOpen, setErrorSnackbarOpen] = useState(false);
   const [errorSnackbarText, setErrorSnackbarText] = useState("");
+  const isPayPalSupported = getConfigValue("paypal_not_supported") !== true;
 
   useEffect(() => {
     if (window.paypal && !script_loaded) {
@@ -258,7 +259,7 @@ export default function Checkout() {
             Subtotal ({calculate_item_count(cart)} items): $
             {calculate_item_price(cart)}
           </div>
-          <div className={bypass_paypal ? "hidden" : ""}>
+          <div className={(bypass_paypal || !isPayPalSupported) ? "hidden" : ""}>
             <div className={styles.checkout__container} ref={paypalRef}></div>
             <div className="absolute top-2 left-[310px]">
               <Tooltip
@@ -282,13 +283,14 @@ export default function Checkout() {
 
           <div
             className={`${styles.bypass__paypal__checkout} ${
-              !bypass_paypal ? styles.hidden : styles.visible
+              !(bypass_paypal || !isPayPalSupported) ? styles.hidden : styles.visible
             }`}
           >
             <LoadingButton
               loading={isLoading}
               onClick={bypassPaypalCheckout}
               variant="contained"
+              disabled={!bypass_paypal}
             >
               Checkout
             </LoadingButton>

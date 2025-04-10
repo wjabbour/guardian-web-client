@@ -46,6 +46,8 @@ export interface Config {
   account_reps: AccountRep[]; // the account reps contact info to be displayed on the footer
   /** for gpc81, prepends the store name to the url */
   route_prefix?: string;
+  // true for websites where we dont want to show the end user the paypal buttons during checkout
+  paypal_not_supported?: boolean;
 }
 
 interface AccountRep {
