@@ -199,67 +199,71 @@ export default function Checkout() {
         </SvgIcon>
       </div>
       <div className="flex flex-col gap-[15px] w-[800px] border-2 border-gray-400 border-solid p-[15px] rounded-md">
-        <TextField
-          inputRef={first_name_ref}
-          className={styles.text__field}
-          onChange={handle_first_name}
-          id=""
-          label="First Name"
-          variant="filled"
-        />
-        <TextField
-          inputRef={last_name_ref}
-          className={styles.text__field}
-          onChange={handle_last_name}
-          id=""
-          label="Last Name"
-          variant="filled"
-        />
-        <TextField
-          inputRef={email_ref}
-          className={styles.text__field}
-          onChange={handle_email}
-          id=""
-          label="Email"
-          variant="filled"
-        />
-        <TextField
-          inputRef={customer_po_ref}
-          className={styles.text__field}
-          onChange={handle_customer_po}
-          id=""
-          label="Customer PO"
-          variant="filled"
-        />
-        <FormControl
-          inputRef={store_ref}
-          id={styles.move}
-          className={styles.text__field}
-          variant="filled"
-          sx={{ m: 1, minWidth: 120 }}
-        >
-          <InputLabel>Store</InputLabel>
-          <Select inputRef={store_ref} value={store} onChange={handle_store}>
-            <MenuItem value="">
-              <em>None</em>
-            </MenuItem>
-            {getConfigValue("stores").map((store) => {
-              return <MenuItem value={store}>{store}</MenuItem>;
-            })}
-          </Select>
-        </FormControl>
-        <TextField
-          className={styles.text__field}
-          onChange={handle_code}
-          label="Code"
-          variant="filled"
-        />
+        <div className="relative flex flex-col gap-[15px]">
+          <div className="absolute left-[280px] w-[490px] h-[400px] border-2 border-solid border-black"></div>
+          <TextField
+            inputRef={first_name_ref}
+            className={styles.text__field}
+            onChange={handle_first_name}
+            id=""
+            label="First Name"
+            variant="filled"
+          />
+          <TextField
+            inputRef={last_name_ref}
+            className={styles.text__field}
+            onChange={handle_last_name}
+            id=""
+            label="Last Name"
+            variant="filled"
+          />
+          <TextField
+            inputRef={email_ref}
+            className={styles.text__field}
+            onChange={handle_email}
+            id=""
+            label="Email"
+            variant="filled"
+          />
+          <TextField
+            inputRef={customer_po_ref}
+            className={styles.text__field}
+            onChange={handle_customer_po}
+            id=""
+            label="Customer PO"
+            variant="filled"
+          />
+          <FormControl
+            inputRef={store_ref}
+            id={styles.move}
+            className={styles.text__field}
+            variant="filled"
+            sx={{ m: 1, minWidth: 120 }}
+          >
+            <InputLabel>Store</InputLabel>
+            <Select inputRef={store_ref} value={store} onChange={handle_store}>
+              <MenuItem value="">
+                <em>None</em>
+              </MenuItem>
+              {getConfigValue("stores").map((store) => {
+                return <MenuItem value={store}>{store}</MenuItem>;
+              })}
+            </Select>
+          </FormControl>
+          <TextField
+            className={styles.text__field}
+            onChange={handle_code}
+            label="Code"
+            variant="filled"
+          />
+        </div>
+
         <div className={styles.subtotal__container}>
           <div className={styles.subtotal}>
             Subtotal ({calculate_item_count(cart)} items): $
             {calculate_item_price(cart)}
           </div>
-          <div className={(bypass_paypal || !isPayPalSupported) ? "hidden" : ""}>
+          <div className={bypass_paypal || !isPayPalSupported ? "hidden" : ""}>
             <div className={styles.checkout__container} ref={paypalRef}></div>
             <div className="absolute top-2 left-[310px]">
               <Tooltip
@@ -283,7 +287,9 @@ export default function Checkout() {
 
           <div
             className={`${styles.bypass__paypal__checkout} ${
-              !(bypass_paypal || !isPayPalSupported) ? styles.hidden : styles.visible
+              !(bypass_paypal || !isPayPalSupported)
+                ? styles.hidden
+                : styles.visible
             }`}
           >
             <LoadingButton
