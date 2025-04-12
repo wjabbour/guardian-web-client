@@ -187,9 +187,9 @@ export default function Checkout() {
   }
 
   return (
-    <div className={styles.container}>
+    <div className="flex justify-center p-[75px]">
       <div
-        className={styles.back__button}
+        className="relative right-[50px] text-[32px] cursor-pointer"
         onClick={() => {
           navigate(getDomainAwarePath("/"));
         }}
@@ -198,7 +198,7 @@ export default function Checkout() {
           <ArrowBackIcon />
         </SvgIcon>
       </div>
-      <div className={styles.card}>
+      <div className="flex flex-col gap-[15px] w-[800px] border-2 border-gray-400 border-solid p-[15px] rounded-md">
         <TextField
           inputRef={first_name_ref}
           className={styles.text__field}
