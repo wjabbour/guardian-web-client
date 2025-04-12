@@ -48,6 +48,8 @@ export interface Config {
   route_prefix?: string;
   // true for websites where we dont want to show the end user the paypal buttons during checkout
   paypal_not_supported?: boolean;
+  /** for gpc81, the password that the user will enter to navigate to this website */
+  password?: string;
 }
 
 interface AccountRep {

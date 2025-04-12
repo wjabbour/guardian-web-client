@@ -317,6 +317,22 @@ For example, if you have item `A` which is available in colors `['Lime Green']` 
 
 `your_hex_code` always begins with the `#` character and ends with 6 alphanumeric characters. It is up to you to decide the hex code. VSCode has a nice hexcode picker. If that doesn't work for you, you can go online and find a hexcode->color converter and copy the hex code that most closely matches the color to the `Modification.module.scss` file.
 
+## gpc81
+
+Before April 2025, all websites were deployed to separate domains. But going forward, we would like to use gpc81.com as the base domain and have all other sites be accessible from this domain via path parameters. 
+
+e.g.
+```
+gpc81.com -> main landing page
+gpc81.com/hennessy -> hennessy landing page
+gpc81.com/stivers -> stivers landing page
+```
+
+To make your website accessible from gpc81, you will need to set two properties on that websites config in {project_root}/client/src/configs`.
+
+1. `route_prefix` - this should be a string, prefixed with a forward slash. For example, `/test`, `/cannon`, `/my-new-site`. Two configs must not share the same value for `route_prefix`.
+2. `password` - this is the password that the user must enter on gpc81 to be navigated to this website. Two configs must not share the same value for `password`.
+
 ## Configure the backend
 
 ### Updating stores and store codes

@@ -7,7 +7,27 @@ import { config as HennessyConfig } from "../configs/hennessy";
 import { Config } from "./interfaces";
 
 const DEFAULT_CONFIG = {
-  title: 'Guardian'
+  title: "Guardian",
+};
+
+/*
+  every new config should be added to this array
+*/
+const allConfigs: Config[] = [
+  PremierConfig,
+  StiversConfig,
+  TameronConfig,
+  NewCustomerConfig,
+  CannonConfig,
+  HennessyConfig,
+];
+
+export function getRoutePrefix(password: string): string | undefined {
+  const config = allConfigs.find((config) => {
+    return (config.password === password);
+  });
+
+  return config ? config.route_prefix : undefined;
 }
 
 export function getConfigValue(val: keyof Config) {
@@ -28,6 +48,6 @@ export function getConfigValue(val: keyof Config) {
     return HennessyConfig[val];
   } else {
     // when the user is on gpc81.com landing page we need to display a string in the browser tab
-    return DEFAULT_CONFIG[val]
+    return DEFAULT_CONFIG[val];
   }
 }

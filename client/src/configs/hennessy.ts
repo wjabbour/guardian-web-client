@@ -76,4 +76,5 @@ export const config: Config = {
   ],
   route_prefix: "/hennessy",
   paypal_not_supported: true,
+  password: "HennessY",
 };

@@ -8,6 +8,7 @@ import Footer from "../components/Footer/Footer";
 import { useState, createContext } from "react";
 import PasswordEntryDialog from "../components/PasswordEntryDialog";
 import { useNextGenRouting } from "../hooks/useNextGenRouting";
+import { getRoutePrefix } from "../lib/config";
 
 export const UserContext = createContext({ isLoggedIn: false });
 const CartContext = createContext({});
@@ -19,6 +20,7 @@ export default function Root() {
   const [cart, set_cart] = useState(rehydrate());
   const [user, setUser] = useState({ isLoggedIn: false });
   const [isModalOpen, setModalOpen] = useState(false);
+  const conditionalNavigation = [];
   function rehydrate() {
     if (sessionStorage.getItem("cart")) {
       return JSON.parse(sessionStorage.getItem("cart"));
@@ -90,10 +92,11 @@ export default function Root() {
         isModalOpen={isModalOpen}
         setIsModalOpen={setModalOpen}
         onPasswordChange={(password, setPassword) => {
-          if (password === "HennessY") {
+          const prefix = getRoutePrefix(password);
+          if (prefix) {
             setUser({ isLoggedIn: true });
             setModalOpen(false);
-            navigate("/hennessy");
+            navigate(prefix);
             setPassword("");
           }
         }}
