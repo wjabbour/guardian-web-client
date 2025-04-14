@@ -298,7 +298,7 @@ export default function Checkout() {
               loading={isLoading}
               onClick={bypassPaypalCheckout}
               variant="contained"
-              disabled={!bypass_paypal}
+              disabled={!bypass_paypal || Object.values(cart).length === 0}
             >
               Checkout
             </LoadingButton>
