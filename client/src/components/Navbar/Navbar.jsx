@@ -16,7 +16,7 @@ export default function Navbar(props) {
       </div>
       <div
         className={`${styles.container} ${styles.cart__container}`}
-        onClick={() => navigate(getDomainAwarePath("/cart"))}
+        onClick={() => navigate(getDomainAwarePath("/checkout"))}
       >
         <div className={styles.cart}>
           Cart ({Object.keys(props.cart).length})

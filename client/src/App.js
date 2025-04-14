@@ -6,7 +6,6 @@ import Root from "./routes/root";
 import Modification, {
   loader as modificationLoader,
 } from "./routes/Modification/Modification";
-import Cart from "./routes/Cart/Cart";
 import Orders from "./routes/Orders/Orders";
 import Checkout from "./routes/Checkout/Checkout";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
@@ -29,7 +28,6 @@ function App() {
             element: <Landing />,
           },
           { path: "/catalog/:type", element: <Catalog /> },
-          { path: "/cart", element: <Cart /> },
           { path: "/checkout", element: <Checkout /> },
           { path: "/success", element: <Success /> },
           { path: "/orders", element: <Orders /> },
@@ -56,7 +54,6 @@ function App() {
             element: <Landing />,
           },
           { path: "/:storeName/catalog/:type", element: <Catalog /> },
-          { path: "/:storeName/cart", element: <Cart /> },
           { path: "/:storeName/checkout", element: <Checkout /> },
           { path: "/:storeName/success", element: <Success /> },
           { path: "/:storeName/orders", element: <Orders /> },
