@@ -23,6 +23,7 @@ import { SvgIcon } from "@mui/material";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import { LoadingButton } from "@mui/lab";
 import CartItems from "./CartItems";
+import { Catalog } from "../../lib/catalog";
 
 export default function Checkout() {
   const paypalRef = useRef(null);
@@ -47,6 +48,23 @@ export default function Checkout() {
   const [errorSnackbarOpen, setErrorSnackbarOpen] = useState(false);
   const [errorSnackbarText, setErrorSnackbarText] = useState("");
   const isPayPalSupported = getConfigValue("paypal_not_supported") !== true;
+  /*
+    a bit hacky, if someone places an order on tameron and they have at least
+    one apparel item, then we want to ensure that they order at least 12 total apparel (but we should
+    allow them to purchase as few other types of items and not restrict that all orders must have 12 apparel items)
+
+    The nature of this check will allow this restriction to not be applied to other sites
+  */
+  const tameronOrders =
+    window.location.hostname.includes("tameron") ||
+    window.location.pathname.includes("tameron")
+      ? Object.values(cart).reduce((acc, curr) => {
+          const item = Catalog().find((i) => i.code === curr.code);
+          if (["mens", "womens"].includes(item.type)) acc += curr.quantity;
+          return acc;
+        }, 0)
+      : 0;
+  const allowTameronCheckout = tameronOrders === 0 || tameronOrders >= 12;
 
   useEffect(() => {
     if (window.paypal && !script_loaded) {
@@ -298,7 +316,11 @@ export default function Checkout() {
               loading={isLoading}
               onClick={bypassPaypalCheckout}
               variant="contained"
-              disabled={!bypass_paypal || Object.values(cart).length === 0}
+              disabled={
+                !bypass_paypal ||
+                Object.values(cart).length === 0 ||
+                !allowTameronCheckout
+              }
             >
               Checkout
             </LoadingButton>
