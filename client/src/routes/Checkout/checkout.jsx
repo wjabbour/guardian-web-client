@@ -22,6 +22,7 @@ import Typography from "@mui/material/Typography";
 import { SvgIcon } from "@mui/material";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import { LoadingButton } from "@mui/lab";
+import CartItems from "./CartItems";
 
 export default function Checkout() {
   const paypalRef = useRef(null);
@@ -186,6 +187,7 @@ export default function Checkout() {
     setErrorSnackbarOpen(false);
   }
 
+  console.log(cart);
   return (
     <div className="flex justify-center p-[75px]">
       <div
@@ -200,7 +202,7 @@ export default function Checkout() {
       </div>
       <div className="flex flex-col gap-[15px] w-[800px] border-2 border-gray-400 border-solid p-[15px] rounded-md">
         <div className="relative flex flex-col gap-[15px]">
-          <div className="absolute left-[280px] w-[490px] h-[400px] border-2 border-solid border-black"></div>
+          <CartItems />
           <TextField
             inputRef={first_name_ref}
             className={styles.text__field}
