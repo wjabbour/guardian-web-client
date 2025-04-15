@@ -15,7 +15,7 @@ export const Catalog = function (): CatalogItem[] {
   } else if (url.includes("gpstivers")) {
     return StiversCatalog;
   } else if (url.includes("gptameron")) {
-    return TameronCatalog;
+    return TameronCatalog;  
   } else if (url.includes("gp-premier")) {
     return PremierCatalog;
   } else if (url.includes("cannon")) {

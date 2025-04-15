@@ -134,6 +134,7 @@ const STORES = {
   "Hennessy Porsche Marietta, 2501 Windy Hill Rd SE, Marietta, GA 30067":
     "HENPMA",
   "Hennessy Porsche, 990 Mansell Rd, Roswell, GA 30076": "HENPRO",
+  "Guardian Products, 5575 Spalding Drive, Peachtree Corners, GA 30092": "GUAPRO",
 };
 
 export function getStoreCode(store) {
