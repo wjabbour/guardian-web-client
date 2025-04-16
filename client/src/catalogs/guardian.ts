@@ -93,7 +93,7 @@ export const GuardianCatalog: CatalogItem[] = [
     name: "Key Tags",
     fullname: "Key Tag Versa #200 (250/box)",
     colors: ["Blue", "Gray", "Green", "Lilac", "Lime Green", "Orange", "Red", "Tan", "White", "Yellow"],
-    type: "office",
+    type: "sales",
     default_color: "White",
     discount: [
       { quantity: 250, price: 19.99 },      
@@ -107,7 +107,7 @@ export const GuardianCatalog: CatalogItem[] = [
     name: "Stock Stickers",
     fullname: "Kleer-Back Stock Stickers Versa #400 (100/pk)",
     colors: ["Blue", "Green", "Orange", "Red", "White", "Yellow"],
-    type: "office",
+    type: "sales",
     default_color: "White",
     discount: [
       { quantity: 100, price: 9.99 },      
@@ -131,7 +131,7 @@ export const GuardianCatalog: CatalogItem[] = [
     },
   },
   {
-    code: "55-010",
+    code: "55010",
     name: "Steering Wheel Covers",
     fullname: "Steering Wheel Covers (500/bx)",
     colors: ["Plastic"],
