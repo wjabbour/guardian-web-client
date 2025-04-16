@@ -62,7 +62,7 @@ export const HennessyCatalog: CatalogItem[] = [
     fullname: "Oval Year Stickers Black/Silver (12/pk)",
     colors: ["YR 2016","YR 2017","YR 2018","YR 2019","YR 2020","YR 2021","YR 2022","YR 2023","YR 2024","YR 2025","YR 2026"],
     type: "sales",
-    default_color: "319SB_Yr 2016",
+    default_color: "Yr 2016",
     discount: [
       { quantity: 12, price: 10.99 },      
     ],
