@@ -20,7 +20,7 @@ export default function LandingV2() {
     <div className="mt-5">
       <div className="flex items-center gap-[105px] justify-center">
         <Category
-          location="https://www.flipsnack.com/gpcorp/guardian-auto-catalog/full-view.html"
+          location="https://www.flipsnack.com/gpcorp/2025-guardian-auto-catalog-lb/full-view.html "
           photo_url="/images/auto.png"
           title={"Auto Catalog"}
         ></Category>
