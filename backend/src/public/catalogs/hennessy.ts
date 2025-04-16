@@ -43,6 +43,62 @@ export const HennessyCatalog: CatalogItem[] = [
     },
   },
   {
+    code: "GP200",
+    name: "Key Tags",
+    fullname: "Key Tag Versa #200 (250/bx)",
+    colors: ["Blue", "Gray", "Green", "Lilac", "Lime Green", "Orange", "Red", "Tan", "White", "Yellow"],
+    type: "sales",
+    default_color: "White",
+    discount: [
+      { quantity: 250, price: 31.95 },      
+    ],
+    sizes: {
+      250: 0.0,      
+    },
+  },
+  {    
+    code: "319SB",
+    name: "Year Stickers",
+    fullname: "Oval Year Stickers Black/Silver (12/pk)",
+    colors: ["YR_2016","YR_2017","YR_2018","YR_2019","YR_2020","YR_2021","YR_2022","YR_2023","YR_2024","YR_2026","YR_2026"],
+    type: "sales",
+    default_color: "YR_2016",
+    discount: [
+      { quantity: 12, price: 10.99 },      
+    ],
+    sizes: {
+      12: 0.0,      
+    },
+  },
+  {
+    code: "GP790",
+    name: "Sticker",
+    fullname: "Sticker - Vehicle Not for Sale (100/pk)",
+    colors: ["Yellow"],
+    type: "sales",
+    default_color: "Yellow",
+    discount: [
+      { quantity: 100, price: 26.14 },      
+    ],
+    sizes: {
+      100: 0.0,      
+    },
+  },
+  {
+    code: "BGVinyl",
+    name: "Vinyl Sheet",
+    fullname: "8.5 x 11 Blank Vinyl Sheet #9300 (100/pk)",
+    colors: ["White"],
+    type: "sales",
+    default_color: "White",
+    discount: [
+      { quantity: 100, price: 135.00 },      
+    ],
+    sizes: {
+      100: 0.0,      
+    },
+  },
+  {
     code: "J317",
     name: "Port Authority® Jacket",
     fullname: "Port Authority® Core Soft Shell Jacket",
