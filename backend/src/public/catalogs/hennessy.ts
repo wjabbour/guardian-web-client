@@ -58,11 +58,11 @@ export const HennessyCatalog: CatalogItem[] = [
   },
   {    
     code: "319SB",
-    name: "Year Stickers",
+    name: "Oval Year Stickers",
     fullname: "Oval Year Stickers Black/Silver (12/pk)",
     colors: ["YR_2016","YR_2017","YR_2018","YR_2019","YR_2020","YR_2021","YR_2022","YR_2023","YR_2024","YR_2026","YR_2026"],
     type: "sales",
-    default_color: "YR_2016",
+    default_color: "Yr_2016",
     discount: [
       { quantity: 12, price: 10.99 },      
     ],
