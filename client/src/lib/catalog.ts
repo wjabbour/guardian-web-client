@@ -4,6 +4,7 @@ import { StiversCatalog } from "../catalogs/stivers";
 import { PremierCatalog } from "../catalogs/premier";
 import { NewCustomerCatalog } from "../catalogs/newcustomer";
 import { CannonCatalog } from "../catalogs/cannon";
+import { GuardianCatalog } from "../catalogs/guardian";
 import { HennessyCatalog } from "../catalogs/hennessy";
 
 export const Catalog = function (): CatalogItem[] {
@@ -18,6 +19,8 @@ export const Catalog = function (): CatalogItem[] {
     return TameronCatalog;  
   } else if (url.includes("gp-premier")) {
     return PremierCatalog;
+  } else if (url.includes("guardian")) {
+    return GuardianCatalog;
   } else if (url.includes("cannon")) {
     return CannonCatalog;
   } else if (url.includes("hennessy")) {
