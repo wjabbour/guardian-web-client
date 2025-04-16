@@ -144,9 +144,9 @@ export const GuardianCatalog: CatalogItem[] = [
     },
   },
   {
-    code: "HENLDU-34MLF-366502A",
+    code: "guardian frame",
     name: "Zinc Metal Frames",
-    fullname: "Zinc Metal Frame w/black imprint",
+    fullname: "Zinc Metal Frame",
     colors: ["Metal"],
     type: "customs",
     default_color: "Metal",
@@ -180,7 +180,7 @@ export const GuardianCatalog: CatalogItem[] = [
     },
   },
   {
-    code: "guard rectangle dd",
+    code: "guardian decal",
     name: "Die Cut Decals",
     fullname: "Vinyl Diecut Decals",
     colors: ["White"],
