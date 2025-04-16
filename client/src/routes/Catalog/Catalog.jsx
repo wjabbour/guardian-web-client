@@ -27,6 +27,8 @@ export default function ClothingCatalog() {
       inventory = Catalog().filter((item) => item.type === "customs");
     } else if (location.pathname.includes("/catalog/office")) {
       inventory = Catalog().filter((item) => item.type === "office");
+    } else if (location.pathname.includes("/catalog/sales")) {
+      inventory = Catalog().filter((item) => item.type === "sales");
     } else if (location.pathname.includes("/catalog/mens")) {
       inventory = Catalog().filter((item) => item.type === "mens");
     }

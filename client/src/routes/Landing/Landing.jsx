@@ -44,6 +44,14 @@ export default function Landing() {
             no_space={true}
           />
         )}
+        {types["sales"] && (
+          <ClothingIcon
+            img={"/images/GP790.jpg"}
+            label={`Sales`}
+            link={"/catalog/sales"}
+            no_space={true}
+          />
+        )}
         {types["customs"] && (
           <ClothingIcon
             img={"/images/Guardian_33P3D.jpg"}
