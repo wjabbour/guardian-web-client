@@ -65,7 +65,7 @@ export default function Root() {
                   onClick={() => {
                     setModalOpen(true);
                   }}
-                  className="absolute right-10 top-12 h-[70px] w-[220px] bg-[#0324fc] flex items-center justify-center text-5xl text-white drop-shadow-lg cursor-pointer"
+                  className="absolute right-10 top-12 h-[70px] w-[220px] bg-[#0324fc] flex items-center justify-center text-5xl text-white drop-shadow-lg cursor-pointer rounded-md"
                 >
                   LOGIN
                 </div>
