@@ -144,7 +144,7 @@ export const GuardianCatalog: CatalogItem[] = [
     },
   },
   {
-    code: "guardian_frame",
+    code: "guardianframe",
     name: "Zinc Metal Frames",
     fullname: "Zinc Metal Frame",
     colors: ["Metal"],
@@ -180,7 +180,7 @@ export const GuardianCatalog: CatalogItem[] = [
     },
   },
   {
-    code: "guardian_decal",
+    code: "guardiandecal",
     name: "Die Cut Decals",
     fullname: "Vinyl Diecut Decals",
     colors: ["White"],
