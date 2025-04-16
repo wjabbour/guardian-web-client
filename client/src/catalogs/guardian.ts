@@ -163,7 +163,7 @@ export const GuardianCatalog: CatalogItem[] = [
     },
   },
   {
-    code: "guard_plastic_plate",
+    code: "guardianpp",
     name: "Poly Coated Plates",
     fullname: "Poly Coated Cardboard w/blue imprint",
     colors: ["White"],
