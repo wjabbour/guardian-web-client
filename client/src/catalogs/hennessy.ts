@@ -1,6 +1,48 @@
 import { CatalogItem } from "../lib/interfaces";
 export const HennessyCatalog: CatalogItem[] = [
   {
+    code: "600088V",
+    name: "Seat Covers",
+    fullname: "No-Slip Plastic Seat Covers (500/roll)",
+    colors: ["Plastic"],
+    type: "service",
+    default_color: "Plastic",
+    discount: [
+      { quantity: 500, price: 59.99 },      
+    ],
+    sizes: {
+      default: 0.00,
+    },
+  }, 
+  {
+    code: "3088",
+    name: "Floor Mats",
+    fullname: "Floor Mats/Coated Paper (500/bx)",
+    colors: ["White"],
+    type: "service",
+    default_color: "White",
+    discount: [
+      { quantity: 500, price: 59.99 },      
+    ],
+    sizes: {
+      500: 0.0,      
+    },
+  },
+  {
+    code: "SDNRG",
+    name: "Service Numbers",
+    fullname: "Service Dispatch Numbers (1000/bx)",
+    colors: ["H","J","K","L","M","N","O","P","Q","R"],
+    type: "service",
+    default_color: "H",
+    discount: [
+      { quantity: 1000, price: 84.99 },      
+    ],
+    sizes: {
+      1000: 0.0,      
+    },
+  },
+  {
     code: "J317",
     name: "Port Authority® Jacket",
     fullname: "Port Authority® Core Soft Shell Jacket",
