@@ -14,46 +14,42 @@ export default function Landing() {
       <div className={styles.catalog}>
         {types["mens"] && (
           <ClothingIcon
-            img={"/images/mens"}            
+            img={"/images/mens.jpg"}            
             link={"/catalog/mens"}
             no_space={true}
           />
         )}
         {types["womens"] && (
           <ClothingIcon
-            img={"/images/"}
-            label={`Women's Apparel`}
+            img={"/images/womens.jpg"}            
             link={"/catalog/womens"}
             no_space={true}
           />
         )}
         {types["office"] && (
           <ClothingIcon
-            img={"/images/"}
-            label={`Office Supplies`}
+            img={"/images/office.jpg"}            
             link={"/catalog/office"}
             no_space={true}
           />
         )}
         {types["service"] && (
           <ClothingIcon
-            img={"/images/"}
-            label={`Service`}
+            img={"/images/service.jpg"}            
             link={"/catalog/service"}
             no_space={true}
           />
         )}
         {types["sales"] && (
           <ClothingIcon
-            img={"/images/"}
-            label={`Sales`}
+            img={"/images/sales.jpg"}            
             link={"/catalog/sales"}
             no_space={true}
           />
         )}
         {types["customs"] && (
           <ClothingIcon
-            img={"/images/"}                                 
+            img={"/images/customs.jpg"}                                 
             link={"/catalog/customs"}
             no_space={true}
           />
