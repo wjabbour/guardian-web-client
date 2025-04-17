@@ -32,9 +32,9 @@ export const HennessyCatalog: CatalogItem[] = [
     code: "SDNRG",
     name: "Service Numbers",
     fullname: "Service Dispatch Numbers (1000/bx)",
-    colors: ["H","J","K","L","M","N","O","P","Q","R"],
+    colors: ["0000", "1000", "2000", "3000", "4000", "5000", "6000", "7000", "8000", "9000"],
     type: "service",
-    default_color: "H",
+    default_color: "0000",
     discount: [
       { quantity: 1000, price: 84.99 },      
     ],
@@ -50,10 +50,10 @@ export const HennessyCatalog: CatalogItem[] = [
     type: "sales",
     default_color: "White",
     discount: [
-      { quantity: 250, price: 31.95 },      
+      { quantity: 1, price: 31.95 },      
     ],
     sizes: {
-      250: 0.0,      
+      1: 0.0,      
     },
   },
   {    
@@ -64,10 +64,10 @@ export const HennessyCatalog: CatalogItem[] = [
     type: "sales",
     default_color: "YR 2016",
     discount: [
-      { quantity: 12, price: 10.99 },      
+      { quantity: 1, price: 10.99 },      
     ],
     sizes: {
-      12: 0.0,      
+      1: 0.0,    
     },
   },
   {
@@ -78,10 +78,10 @@ export const HennessyCatalog: CatalogItem[] = [
     type: "sales",
     default_color: "Yellow",
     discount: [
-      { quantity: 100, price: 26.14 },      
+      { quantity: 1, price: 26.14 },      
     ],
     sizes: {
-      100: 0.0,      
+      1: 0.0,      
     },
   },
   {
@@ -92,10 +92,10 @@ export const HennessyCatalog: CatalogItem[] = [
     type: "sales",
     default_color: "White",
     discount: [
-      { quantity: 100, price: 135.00 },      
+      { quantity: 1, price: 135.00 },      
     ],
     sizes: {
-      100: 0.0,      
+      1: 0.0,      
     },
   },
   {
