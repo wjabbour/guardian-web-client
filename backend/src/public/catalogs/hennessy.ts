@@ -34,7 +34,7 @@ export const HennessyCatalog: CatalogItem[] = [
     fullname: "Service Dispatch Numbers (1000/bx)",
     colors: ["0000", "1000", "2000", "3000", "4000", "5000", "6000", "7000", "8000", "9000"],
     type: "service",
-    default_color: "1000",
+    default_color: "0000",
     discount: [
       { quantity: 1, price: 84.99 },      
     ],
