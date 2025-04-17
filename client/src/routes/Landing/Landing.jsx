@@ -54,7 +54,7 @@ export default function Landing() {
         )}
         {types["customs"] && (
           <ClothingIcon
-            img={"/images/Guardian_33P3D.jpg"}
+            img={"/images/custom.jpg"}
             label={`Customs & Decals`}
             link={"/catalog/customs"}
             no_space={true}
