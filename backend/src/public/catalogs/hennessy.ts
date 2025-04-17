@@ -60,9 +60,9 @@ export const HennessyCatalog: CatalogItem[] = [
     code: "117L",
     name: "Car Covers",
     fullname: "Car Cover - Large 25 ft. (30/roll)",
-    colors: ["Clear"],
+    colors: ["Plastic"],
     type: "bodyshop",
-    default_color: "Clear",
+    default_color: "Plastic",
     discount: [
       { quantity: 1, price: 180.99 },      
     ],
