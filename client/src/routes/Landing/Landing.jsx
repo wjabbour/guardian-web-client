@@ -38,8 +38,22 @@ export default function Landing() {
             img={"/images/service.jpg"}            
             link={"/catalog/service"}
             no_space={true}
-          />
+          />  
         )}
+        {types["customs"] && (
+          <ClothingIcon
+            img={"/images/customs.jpg"}                                 
+            link={"/catalog/customs"}
+            no_space={true}
+          />      
+        )}
+        {types["sales"] && (
+          <ClothingIcon
+            img={"/images/sales.jpg"}            
+            link={"/catalog/sales"}
+            no_space={true}
+          />
+        )}        
         {types["detail"] && (
           <ClothingIcon
             img={"/images/detail.jpg"}            
@@ -61,20 +75,6 @@ export default function Landing() {
             no_space={true}
           />
         )}
-        {types["sales"] && (
-          <ClothingIcon
-            img={"/images/sales.jpg"}            
-            link={"/catalog/sales"}
-            no_space={true}
-          />
-        )}
-        {types["customs"] && (
-          <ClothingIcon
-            img={"/images/customs.jpg"}                                 
-            link={"/catalog/customs"}
-            no_space={true}
-          />
-        )}
         {types["accessory"] && (
           <ClothingIcon
             img={"/images/04032_black.jpg"}
@@ -82,7 +82,7 @@ export default function Landing() {
             link={"/catalog/accessory"}
             no_space={false}
           />
-        )}
+        )}        
       </div>
     </div>
   );
