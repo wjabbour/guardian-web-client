@@ -14,8 +14,7 @@ export default function Landing() {
       <div className={styles.catalog}>
         {types["mens"] && (
           <ClothingIcon
-            img={"/images/"}
-            label={`Men's Apparel`}
+            img={"/images/mens"}            
             link={"/catalog/mens"}
             no_space={true}
           />
