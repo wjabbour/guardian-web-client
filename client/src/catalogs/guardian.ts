@@ -82,7 +82,7 @@ export const GuardianCatalog: CatalogItem[] = [
     type: "service",
     default_color: "Plastic",
     discount: [
-      { quantity: 500, price: 59.99 },      
+      { quantity: 1, price: 59.99 },      
     ],
     sizes: {
       default: 0.00,
@@ -96,10 +96,10 @@ export const GuardianCatalog: CatalogItem[] = [
     type: "sales",
     default_color: "White",
     discount: [
-      { quantity: 250, price: 19.99 },      
+      { quantity: 1, price: 19.99 },      
     ],
     sizes: {
-      250: 0.0,      
+      1: 0.0,      
     },
   },
   {
@@ -110,10 +110,10 @@ export const GuardianCatalog: CatalogItem[] = [
     type: "sales",
     default_color: "White",
     discount: [
-      { quantity: 100, price: 9.99 },      
+      { quantity: 1, price: 9.99 },      
     ],
     sizes: {
-      100: 0.0,      
+      1: 0.0,      
     },
   },
   {
@@ -124,10 +124,10 @@ export const GuardianCatalog: CatalogItem[] = [
     type: "service",
     default_color: "White",
     discount: [
-      { quantity: 500, price: 59.99 },      
+      { quantity: 1, price: 59.99 },      
     ],
     sizes: {
-      500: 0.0,      
+      1: 0.0,      
     },
   },
   {
@@ -138,10 +138,10 @@ export const GuardianCatalog: CatalogItem[] = [
     type: "service",
     default_color: "Plastic",
     discount: [
-      { quantity: 500, price: 59.99 },      
+      { quantity: 1, price: 59.99 },      
     ],
     sizes: {
-      500: 0.0,      
+      1: 0.0,      
     },
   },
   {
