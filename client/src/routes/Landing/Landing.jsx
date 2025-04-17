@@ -54,10 +54,9 @@ export default function Landing() {
         )}
         {types["customs"] && (
           <ClothingIcon
-            img={"/images/custom.jpg"}
-            label={`Customs & Decals`}           
+            img={"/images/custom.jpg"}                      
             link={"/catalog/customs"}
-            no_space={true}
+            no_space={false}
           />
         )}
         {types["accessory"] && (
