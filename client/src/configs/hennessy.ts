@@ -56,6 +56,10 @@ export const config: Config = {
     office: [],
     sales: [],
     service: [],
+    detail: [],
+    bodyshop: [],
+    parts: [],
+
   },
   stores: [
     "Hennessy Jaguar Land Rover, 3040 Piedmont Rd NE, Atlanta, GA 30305",

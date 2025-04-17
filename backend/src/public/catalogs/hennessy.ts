@@ -43,6 +43,48 @@ export const HennessyCatalog: CatalogItem[] = [
     },
   },
   {
+    code: "1470",
+    name: "Multi-Purpose Tags",
+    fullname: "Multi-Purpose Tags (500/box)",
+    colors: ["Blue", "Green", "White", "Yellow"],
+    type: "parts",
+    default_color: "Yellow",
+    discount: [
+      { quantity: 1, price: 25.99 },      
+    ],
+    sizes: {
+      1: 0.0,      
+    },
+  },
+  {
+    code: "117L",
+    name: "Car Covers",
+    fullname: "Car Cover - Large 25 ft. (30/roll)",
+    colors: ["Clear"],
+    type: "bodyshop",
+    default_color: "Clear",
+    discount: [
+      { quantity: 1, price: 180.99 },      
+    ],
+    sizes: {
+      1: 0.0,      
+    },
+  },
+  {
+    code: "45450",
+    name: "Sanitizing",
+    fullname: "Safe Shield Sanitizing System (1 gallon)",
+    colors: ["black"],
+    type: "detail",
+    default_color: "black",
+    discount: [
+      { quantity: 1, price: 44.99 },      
+    ],
+    sizes: {
+      1: 0.0,      
+    },
+  },
+  {
     code: "GP200",
     name: "Key Tags",
     fullname: "Key Tag Versa #200 (250/bx)",

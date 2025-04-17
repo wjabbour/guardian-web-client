@@ -40,6 +40,27 @@ export default function Landing() {
             no_space={true}
           />
         )}
+        {types["detail"] && (
+          <ClothingIcon
+            img={"/images/detail.jpg"}            
+            link={"/catalog/detail"}
+            no_space={true}
+          />
+        )}
+        {types["bodyshop"] && (
+          <ClothingIcon
+            img={"/images/bodyshop.jpg"}            
+            link={"/catalog/bodyshop"}
+            no_space={true}
+          />
+        )}
+        {types["parts"] && (
+          <ClothingIcon
+            img={"/images/parts.jpg"}            
+            link={"/catalog/parts"}
+            no_space={true}
+          />
+        )}
         {types["sales"] && (
           <ClothingIcon
             img={"/images/sales.jpg"}            

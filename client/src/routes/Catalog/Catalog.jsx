@@ -21,6 +21,12 @@ export default function ClothingCatalog() {
       inventory = Catalog().filter((item) => item.type === "hat");
     } else if (location.pathname.includes("/catalog/accessory")) {
       inventory = Catalog().filter((item) => item.type === "accessory");
+    } else if (location.pathname.includes("/catalog/detail")) {
+      inventory = Catalog().filter((item) => item.type === "detail");
+    } else if (location.pathname.includes("/catalog/bodyshop")) {
+      inventory = Catalog().filter((item) => item.type === "bodyshop");
+    } else if (location.pathname.includes("/catalog/parts")) {
+      inventory = Catalog().filter((item) => item.type === "parts");
     } else if (location.pathname.includes("/catalog/service")) {
       inventory = Catalog().filter((item) => item.type === "service");
     } else if (location.pathname.includes("/catalog/customs")) {
