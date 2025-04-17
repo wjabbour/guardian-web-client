@@ -14,7 +14,7 @@ export default function Landing() {
       <div className={styles.catalog}>
         {types["mens"] && (
           <ClothingIcon
-            img={"/images/J317_black.jpg"}
+            img={"/images/"}
             label={`Men's Apparel`}
             link={"/catalog/mens"}
             no_space={true}
@@ -22,7 +22,7 @@ export default function Landing() {
         )}
         {types["womens"] && (
           <ClothingIcon
-            img={"/images/L317_black.jpg"}
+            img={"/images/"}
             label={`Women's Apparel`}
             link={"/catalog/womens"}
             no_space={true}
@@ -30,7 +30,7 @@ export default function Landing() {
         )}
         {types["office"] && (
           <ClothingIcon
-            img={"/images/5470_buff.jpg"}
+            img={"/images/"}
             label={`Office Supplies`}
             link={"/catalog/office"}
             no_space={true}
@@ -38,7 +38,7 @@ export default function Landing() {
         )}
         {types["service"] && (
           <ClothingIcon
-            img={"/images/600088V_plastic.jpg"}
+            img={"/images/"}
             label={`Service`}
             link={"/catalog/service"}
             no_space={true}
@@ -46,7 +46,7 @@ export default function Landing() {
         )}
         {types["sales"] && (
           <ClothingIcon
-            img={"/images/GP790.jpg"}
+            img={"/images/"}
             label={`Sales`}
             link={"/catalog/sales"}
             no_space={true}
@@ -54,7 +54,7 @@ export default function Landing() {
         )}
         {types["customs"] && (
           <ClothingIcon
-            img={"/images/custom.png"}                                 
+            img={"/images/"}                                 
             link={"/catalog/customs"}
             no_space={true}
           />
