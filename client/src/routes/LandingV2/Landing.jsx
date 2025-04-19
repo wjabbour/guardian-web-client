@@ -19,7 +19,7 @@ function Category(props) {
 function AutoCatalogLink(props) {
   return (
     <p
-      className="text-2xl font-bold text-cyan-600 cursor-pointer underline"
+      className="text-2xl font-bold text-cyan-700 cursor-pointer underline tracking-tight"
       onClick={() =>
         window.open(
           "https://www.flipsnack.com/gpcorp/2025-guardian-auto-catalog-lb/full-view.html?p=" +
