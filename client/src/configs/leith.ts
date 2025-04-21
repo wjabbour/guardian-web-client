@@ -1,6 +1,6 @@
 export const config = {
     title: "Leith",
-    company_logo: "honda.png",
+    company_logo: "leith.png",
     logo_placements: ["Left Chest","Yoke"],
     show_modification_thumbnail: true,
     minimum_apparel_order: true,
