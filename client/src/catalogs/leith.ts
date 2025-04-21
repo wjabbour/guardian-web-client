@@ -1,6 +1,6 @@
-import { CatalogItem } from "../interfaces";
+import { CatalogItem } from "../lib/interfaces";
 export const LeithCatalog: CatalogItem[] = [
-  {
+  { 
     code: "ST650",
     name: "Sport-Tek® Polo Shirt",
     fullname: "Sport-Tek® Micropique Polo",
