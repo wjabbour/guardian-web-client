@@ -6,6 +6,7 @@ import { NewCustomerCatalog } from "../catalogs/newcustomer";
 import { CannonCatalog } from "../catalogs/cannon";
 import { GuardianCatalog } from "../catalogs/guardian";
 import { HennessyCatalog } from "../catalogs/hennessy";
+import { LeithCatalog } from "../catalogs/leith";
 
 export const Catalog = function (): CatalogItem[] {
   const url = window.location.href;
@@ -25,5 +26,7 @@ export const Catalog = function (): CatalogItem[] {
     return CannonCatalog;
   } else if (url.includes("hennessy")) {
     return HennessyCatalog;
+  } else if (url.includes("leith")) {
+    return LeithCatalog;
   }
 };
