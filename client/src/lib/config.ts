@@ -37,7 +37,7 @@ export function getRoutePrefix(password: string): string | undefined {
 export function getConfigValue(val: keyof Config) {
   const url = window.location.href;
   if (url.includes("localhost:3000")) {
-    return DEFAULT_CONFIG[val];
+    return HennessyConfig[val];
   } else if (url.includes("newcustomer")) {
     return NewCustomerConfig[val];
   } else if (url.includes("gpstivers")) {
