@@ -5,6 +5,7 @@ import { config as NewCustomerConfig } from "../configs/newcustomer";
 import { config as GuardianConfig } from "../configs/guardian";
 import { config as CannonConfig } from "../configs/cannon";
 import { config as HennessyConfig } from "../configs/hennessy";
+import { config as LeithConfig } from "../configs/leith";
 import { Config } from "./interfaces";
 
 const DEFAULT_CONFIG = {
@@ -21,6 +22,7 @@ const allConfigs: Config[] = [
   TameronConfig,
   NewCustomerConfig,
   CannonConfig,
+  LeithConfig,
   HennessyConfig,
 ];
 
@@ -48,6 +50,8 @@ export function getConfigValue(val: keyof Config) {
     return GuardianConfig[val];
   } else if (url.includes("cannon")) {
     return CannonConfig[val];
+  } else if (url.includes("leith")) {
+    return LeithConfig[val];
   } else if (url.includes("hennessy")) {
     return HennessyConfig[val];
   } else {
