@@ -1,9 +1,6 @@
 import axios from "axios";
 import { getConfigValue } from "./config";
 
-const hostname = getConfigValue("server_hostname");
-const companyName = getConfigValue("title");
-
 function handleError(e, error_message?) {
   const message =
     e.response?.data.message ||
@@ -17,10 +14,13 @@ function handleError(e, error_message?) {
 }
 
 export async function create_order(order) {
-  const body = { ...order, companyName };
+  const body = { ...order, companyName: getConfigValue("title") };
 
   try {
-    const response = await axios.post(`${hostname}/v1/create-order`, body);
+    const response = await axios.post(
+      `${getConfigValue("server_hostname")}/v1/create-order`,
+      body
+    );
     return { success: { data: response.data }, error: null };
   } catch (e) {
     return handleError(e);
@@ -28,9 +28,12 @@ export async function create_order(order) {
 }
 
 export async function retrieve_orders() {
-  const body = { companyName };
+  const body = { companyName: getConfigValue("title") };
   try {
-    const response = await axios.post(`${hostname}/v1/retrieve-orders`, body);
+    const response = await axios.post(
+      `${getConfigValue("server_hostname")}/v1/retrieve-orders`,
+      body
+    );
     return { success: { data: response.data }, error: null };
   } catch (e) {
     return handleError(e);
@@ -38,10 +41,13 @@ export async function retrieve_orders() {
 }
 
 export async function capture_order(order_id) {
-  const body = { order_id, companyName };
+  const body = { order_id, companyName: getConfigValue("title") };
 
   try {
-    const response = await axios.post(`${hostname}/v1/capture-order`, body);
+    const response = await axios.post(
+      `${getConfigValue("server_hostname")}/v1/capture-order`,
+      body
+    );
     return { success: { data: response.data }, error: null };
   } catch (e) {
     return handleError(e);
@@ -53,7 +59,7 @@ export async function update_historical_order(email, created_at, cart) {
 
   try {
     const response = await axios.post(
-      `${hostname}/v1/update-historical-order`,
+      `${getConfigValue("server_hostname")}/v1/update-historical-order`,
       body
     );
     return { success: { data: response.data }, error: null };
