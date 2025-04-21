@@ -6,9 +6,9 @@ export const config = {
     minimum_apparel_order: true,
     render_logo_preview: true,
     embroideries: {
-      mens: ["Honda"],
-      womens: ["Honda"],
-      hat: ["Honda"],
+      mens: [""],
+      womens: [""],
+      hat: [""],
       customs: [],
     },
     stores: [
