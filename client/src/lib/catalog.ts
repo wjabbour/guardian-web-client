@@ -11,7 +11,7 @@ import { LeithCatalog } from "../catalogs/leith";
 export const Catalog = function (): CatalogItem[] {
   const url = window.location.href;
   if (url.includes("localhost:3000")) {
-    return NewCustomerCatalog;
+    return HennessyCatalog;
   } else if (url.includes("newcustomer")) {
     return NewCustomerCatalog;
   } else if (url.includes("gpstivers")) {
