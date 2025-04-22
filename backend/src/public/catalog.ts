@@ -3,6 +3,7 @@ import { StiversCatalog } from "./catalogs/stivers";
 import { PremierCatalog } from "./catalogs/premier";
 import { CannonCatalog } from "./catalogs/cannon";
 import { GuardianCatalog } from "./catalogs/guardian";
+import { LeithCatalog } from "./catalogs/leith";
 import { CatalogItem } from "./interfaces";
 import { HennessyCatalog } from "./catalogs/hennessy";
 
@@ -19,5 +20,7 @@ export const Catalog = function (companyName: string): CatalogItem[] {
     return GuardianCatalog;
   } else if (companyName === "Hennessy") {
     return HennessyCatalog;
+  } else if (companyName === "Leith") {
+    return LeithCatalog;
   }
 };
