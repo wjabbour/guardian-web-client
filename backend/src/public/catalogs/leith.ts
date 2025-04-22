@@ -95,7 +95,7 @@ export const LeithCatalog: CatalogItem[] = [
     code: "L540LS",
     name: "Port Authority® Polo",
     fullname: "Port Authority Womens Long Sleeve Polo",
-    colors: ["Black", "Navy", "Red", "Royal", "Steel Grey"],
+    colors: ["Black", "Bright Purple", "Carolina Blue", "Navy", "Red", "Royal", "Steel Grey"],
     type: "womens",
     default_color: "Black",
     sizes: {

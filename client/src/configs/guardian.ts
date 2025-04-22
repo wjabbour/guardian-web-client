@@ -24,6 +24,9 @@ export const config: Config = {
     office: [],
     service: [],
     sales: [],
+    detail: [],
+    bodyshop: [],
+    parts: [],
   },
   stores: [
     "Guardian Products, 5575 Spalding Drive, Peachtree Corners, GA 30092",
