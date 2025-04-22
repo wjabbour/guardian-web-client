@@ -75,16 +75,16 @@ const STORES = {
   "Cannon Chevrolet Nissan of Laurel": "CANCLR",
   "Cannon GMC Vicksburg": "CANBVI",
   "Cannon CDJR Senatobia": "CANCSE",
+
   "Stivers Ford Montgomery, 4000 Eastern Blvd Montgomery, AL, 36116": "STIFMO",
-  "Stivers Ford Montgomery, 500 Palisades Blvd, Birmingham, AL, 35209":
-    "STIFBI",
+  "Stivers Ford Montgomery, 500 Palisades Blvd, Birmingham, AL, 35209": "STIFBI",
   "Stivers Hyundai, 9950 Farrow Rd, Columbia, SC, 29203": "STIHCO",
   "Stivers CDJR, 2209 Cobbs Ford Rd, Prattville, AL 36066": "STICPR",
   "Stivers Decatur Subaru, 1950 Orion Dr, Decatur, GA 30033": "STISDE",
   "Stivers Chevrolet, 111 Newland Road, Columbia, SC 29229": "STICCO",
-  "Stivers Ford South Atlanta, 4355 Jonesboro Rd, Union City, GA 30291":
-    "STIFSO",
+  "Stivers Ford South Atlanta, 4355 Jonesboro Rd, Union City, GA 30291": "STIFSO",
   "Stivers Ford Troy, 121 US-231, Troy, AL 36081": "STIFTR",
+
   "Tameron Honda, 9871 Justina Ave Daphne, AL 36526": "TAMHDA",
   "Tameron Buick GMC, 27161 US - 98 Daphne, AL 36526": "TAMBDA",
   "Tameron CDJR, 27161 US - 98 Daphne, AL 36526": "TAMCDA",
@@ -92,24 +92,21 @@ const STORES = {
   "Tameron Nissan, 1015 E. I65 Service Road South Mobile, AL 36606": "TAMNMO",
   "Tameron Kia, 10611 Boney Ave D, Iberville, MS 39540": "TAMKDI",
   "Tameron Kia Westbank, 1884 Westbank Expressway Harvey, LA 70058": "TAMKWE",
+
   "Premier Honda, 11801 E I-10 Service Rd, New Orleans, LA 70128": "PREHNE",
-  "Toyota of New Orleans, 13150 I-10 Service Rd, New Orleans, LA 70128":
-    "TOYNNE",
-  "Premier Hyundai of Harvey, 1700 Westbank Expressway, Harvey, LA 70058":
-    "PREHHA",
-  "Premier Nissan of Harvey, 4000 LaPalco Boulevard, Harvey, LA 70058":
-    "PRENHA",
+  "Toyota of New Orleans, 13150 I-10 Service Rd, New Orleans, LA 70128": "TOYNNE",
+  "Premier Hyundai of Harvey, 1700 Westbank Expressway, Harvey, LA 70058": "PREHHA",
+  "Premier Nissan of Harvey, 4000 LaPalco Boulevard, Harvey, LA 70058": "PRENHA",
   "Premier VW of Harvey, 4050 LaPalco Boulevard, Harvey, LA 70058": "PREVHA",
-  "Premier CDJR of Harvey, 1660 Westbrook Expressway, Harvey, LA 70058":
-    "PRECHB",
+  "Premier CDJR of Harvey, 1660 Westbrook Expressway, Harvey, LA 70058": "PRECHB",
   "Premier Nissan, 6636 Veterans Blvd, Metarie, LA 70003": "PRENME",
+
   "Leith Acura, 2300 Capital Summit Court, Raleigh, NC 27616": "10118LEIARA",
   "Chris Leith Automotive, PO Box 1707, Wake Forest, NC 27588": "CHRIWA",
   "Leith Acura, 2300 Capital Summit Ct, Raleigh, NC 27616": "LEIARA",
   "Leith CDJR, 11220 N. US HWY 15 501 N, Aberdeen, NC 27603": "LEICAB",
   "Leith Chrysler Jeep, 400 Autopark Boulevard, Cary, NC 27511": "LEICCA",
-  "Leith Corporate Headquarters, 8005 Capital Blvd, Raleigh, NC 27616":
-    "LEICRA",
+  "Leith Corporate Headquarters, 8005 Capital Blvd, Raleigh, NC 27616": "LEICRA",
   "Leith Ford, PO Box 1809, Wendell, NC 27591": "LEIFWE",
   "Leith Honda, 3940 Capital Hills Drive, Raleigh, NC 27616": "LEIHRA",
   "Leith Lincoln, 2350 Capital Summit Ct, Raleigh, NC 27616": "LEILRA",
@@ -121,8 +118,8 @@ const STORES = {
   "Leith Autopark Kia, 5330 Rolesville Rd, Wendell, NC 27591": "LEITWE",
   "Leith Volkswagen, 4005 Capital Hills Drive, Raleigh, NC 27616": "LEIVRA",
   "Leith Chrysler Jeep, 5500 Capital Blvd, Raleigh, NC 27619": "LETCRA",
-  "Hennessy Jaguar Land Rover, 3040 Piedmont Rd NE, Atlanta, GA 30305":
-    "HENCAT",
+
+  "Hennessy Jaguar Land Rover, 3040 Piedmont Rd NE, Atlanta, GA 30305": "HENCAT",
   "Hennessy Cadillac, 3377 Satellite Blvd, Duluth, GA 30096": "HENCDU",
   "Hennessy Ford, 5675 Peachtree Industrial Blvd, Atlanta, GA 30341": "HENFAT",
   "Hennessy Honda, 8931 Highway 92, Woodstock, GA 30189": "HENHWO",
@@ -131,11 +128,10 @@ const STORES = {
   "Hennessy Lexus, 5955 Peachtree Industrial Blvd, Atlanta, GA 30341": "HENLAT",
   "Hennessy Lexus Duluth, 3383 Satellite Blvd, Duluth, GA 30096": "HENLDU",
   "Hennessy Mazda Buick GMC, 7261 Jonesboro Rd, Morrow, GA 30260": "HENMMO",
-  "Hennessy Porsche Marietta, 2501 Windy Hill Rd SE, Marietta, GA 30067":
-    "HENPMA",
+  "Hennessy Porsche Marietta, 2501 Windy Hill Rd SE, Marietta, GA 30067": "HENPMA",
   "Hennessy Porsche, 990 Mansell Rd, Roswell, GA 30076": "HENPRO",
-  "Guardian Products, 5575 Spalding Drive, Peachtree Corners, GA 30092":
-    "GUAPRO",
+  
+  "Guardian Products, 5575 Spalding Drive, Peachtree Corners, GA 30092": "GUAPRO",
 };
 
 export function getStoreCode(store) {

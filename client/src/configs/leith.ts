@@ -14,10 +14,8 @@ export const config = {
     stores: [
       "Leith Honda, 3940 Capital Hills Drive, NC 27606",      
     ],
-    bypass_codes: [
-      "LEITH",
+    bypass_codes: ["LEITH"],  
     
-    ],
     server_hostname: "https://mxfj3q6m01.execute-api.us-east-1.amazonaws.com",
     account_reps: [
       { name: "Bob Sugden", phone: "678-287-1662" },

@@ -127,6 +127,23 @@ export const GuardianCatalog: CatalogItem[] = [
   },
 },
 {
+  code: "L805",
+  name: "Port Authority® Pullover",
+  fullname: "Port Authority® Women's Vertical Texture Full-Zip Jacket",
+  colors: ["Black", "Iron Grey", "Regatta Blue", "True Navy"],
+  type: "womens",
+  default_color: "Black",
+  sizes: {
+    Small: 32.99,
+    Medium: 32.99,
+    Large: 32.99,
+    XLarge: 32.99,
+    "2XLarge": 33.99,
+    "3XLarge": 34.99,
+    "4XLarge": 35.99,
+    },
+  },  
+  {
   code: "600088V",
   name: "Seat Covers",
   fullname: "No-Slip Plastic Seat Covers (500/roll)",
