@@ -14,14 +14,14 @@ export default function Landing() {
       <div className={styles.catalog}>
         {types["mens"] && (
           <ClothingIcon
-            img={"/images/mens.jpg"}            
+            img={"/images/mens1.jpg"}            
             link={"/catalog/mens"}
             no_space={true}
           />
         )}
         {types["womens"] && (
           <ClothingIcon
-            img={"/images/ladies.jpg"}            
+            img={"/images/ladies1.jpg"}            
             link={"/catalog/womens"}
             no_space={true}
           />
