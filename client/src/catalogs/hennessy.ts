@@ -11,7 +11,7 @@ export const HennessyCatalog: CatalogItem[] = [
       { quantity: 500, price: 73.50 },      
     ],
     sizes: {
-      default: 73.50,
+      1: 73.50,
     },
   }, 
   {
@@ -25,7 +25,7 @@ export const HennessyCatalog: CatalogItem[] = [
       { quantity: 500, price: 72.97 },      
     ],
     sizes: {
-      default: 72.97,      
+      1: 72.97,      
     },
   },
   {
@@ -68,7 +68,7 @@ export const HennessyCatalog: CatalogItem[] = [
       { quantity: 1, price: 10.99 },      
     ],
     sizes: {
-      default: 10.99,    
+      1: 10.99,    
     },
   },
   {
@@ -82,7 +82,7 @@ export const HennessyCatalog: CatalogItem[] = [
       { quantity: 1, price: 10.69 },      
     ],
     sizes: {
-      default: 10.69,      
+      1: 10.69,      
     },
   },
   {   
@@ -96,7 +96,7 @@ export const HennessyCatalog: CatalogItem[] = [
       { quantity: 1, price: 36.95 },      
     ],
     sizes: {
-      default: 36.95,      
+      1: 36.95,      
     },
   },
   {   
@@ -110,7 +110,7 @@ export const HennessyCatalog: CatalogItem[] = [
       { quantity: 1, price: 27.95 },      
     ],
     sizes: {
-      default: 27.95,      
+      1: 27.95,      
     },
   },
   {
@@ -220,6 +220,23 @@ export const HennessyCatalog: CatalogItem[] = [
     },
   },
   {
+        code: "ST350",
+    name: "Sport-Tek PosiCharge Tee",
+    fullname: "Sport-Tek PosiCharge Competitor Tee",
+    colors: ["Black"],
+    type: "mens",
+    default_color: "Black",
+    sizes: {
+      Small: 10.99,
+      Medium: 10.99,
+      Large: 10.99,
+      XLarge: 10.99,
+      "2XLarge": 11.99,
+      "3XLarge": 12.99,
+      "4XLarge": 13.99,      
+    },
+  },
+  {
     code: "J317",
     name: "Port Authority® Jacket",
     fullname: "Port Authority® Core Soft Shell Jacket",
@@ -253,23 +270,6 @@ export const HennessyCatalog: CatalogItem[] = [
       "2XLarge": 50.99,
       "3XLarge": 51.99,
       "4XLarge": 52.99,      
-    },
-  },
-  {
-    code: "ST350",
-    name: "Sport-Tek PosiCharge Tee",
-    fullname: "Sport-Tek PosiCharge Competitor Tee",
-    colors: ["Black"],
-    type: "mens",
-    default_color: "Black",
-    sizes: {
-      Small: 10.99,
-      Medium: 10.99,
-      Large: 10.99,
-      XLarge: 10.99,
-      "2XLarge": 11.99,
-      "3XLarge": 12.99,
-      "4XLarge": 13.99,      
     },
   },
   {
@@ -449,7 +449,7 @@ export const HennessyCatalog: CatalogItem[] = [
       { quantity: 500, price: 3.59 },     
      ],
     sizes: {
-      500: 0.0,         
+      1: 0.0,         
     },
   },
   {
@@ -463,7 +463,7 @@ export const HennessyCatalog: CatalogItem[] = [
       { quantity: 360, price: 2.89 },     
      ],
     sizes: {
-      360: 0.0,         
+      1: 0.0,         
     },
   },
   {
@@ -477,7 +477,7 @@ export const HennessyCatalog: CatalogItem[] = [
       { quantity: 1000, price: 1.69 },     
      ],
     sizes: {
-      1000: 0.0,         
+      1: 0.0,         
     },
   },
   {
@@ -491,7 +491,7 @@ export const HennessyCatalog: CatalogItem[] = [
       { quantity: 1000, price: 1.69 },     
      ],
     sizes: {
-      1000: 0.0,         
+      1: 0.0,         
     },
   },
   {
@@ -505,7 +505,7 @@ export const HennessyCatalog: CatalogItem[] = [
       { quantity: 100, price: 2.29 },     
      ],
     sizes: {
-      100: 0.0,         
+      1: 0.0,         
     },
   },
   ];
