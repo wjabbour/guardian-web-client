@@ -4,14 +4,23 @@ export const GenericCatalog: CatalogItem[] = [
     code: "SDNRG",
     name: "Service Numbers",
     fullname: "Service Dispatch Numbers (1000/bx)",
-    colors: ["_0000", "1000", "2000", "3000", "4000", "5000", "6000", "7000", "8000", "9000"],
+    colors: [
+      "_0000",
+      "1000",
+      "2000",
+      "3000",
+      "4000",
+      "5000",
+      "6000",
+      "7000",
+      "8000",
+      "9000",
+    ],
     type: "service",
     default_color: "1000",
-    discount: [
-      { quantity: 1, price: 84.99 },      
-    ],
+    discount: [{ quantity: 1, price: 84.99 }],
     sizes: {
-      1: 0.0,      
+      1: 0.0,
     },
   },
   {
@@ -21,11 +30,9 @@ export const GenericCatalog: CatalogItem[] = [
     colors: ["Blue", "Green", "White", "Yellow"],
     type: "parts",
     default_color: "Yellow",
-    discount: [
-      { quantity: 1, price: 25.99 },      
-    ],
+    discount: [{ quantity: 1, price: 25.99 }],
     sizes: {
-      1: 0.0,      
+      1: 0.0,
     },
   },
   {
@@ -35,11 +42,9 @@ export const GenericCatalog: CatalogItem[] = [
     colors: ["Plastic"],
     type: "bodyshop",
     default_color: "Plastic",
-    discount: [
-      { quantity: 1, price: 180.99 },      
-    ],
+    discount: [{ quantity: 1, price: 180.99 }],
     sizes: {
-      1: 0.0,      
+      1: 0.0,
     },
   },
   {
@@ -49,11 +54,9 @@ export const GenericCatalog: CatalogItem[] = [
     colors: ["Black"],
     type: "detail",
     default_color: "Black",
-    discount: [
-      { quantity: 1, price: 44.99 },      
-    ],
+    discount: [{ quantity: 1, price: 44.99 }],
     sizes: {
-      1: 0.0,      
+      1: 0.0,
     },
   },
   {
@@ -98,12 +101,12 @@ export const GenericCatalog: CatalogItem[] = [
     type: "mens",
     default_color: "Black",
     sizes: {
-      Small: 189.00,
-      Medium: 189.00,
-      Large: 189.00,
-      XLarge: 189.00,
-      "2XLarge": 191.00,
-      "3XLarge": 193.00,
+      Small: 189.0,
+      Medium: 189.0,
+      Large: 189.0,
+      XLarge: 189.0,
+      "2XLarge": 191.0,
+      "3XLarge": 193.0,
     },
   },
   {
@@ -203,13 +206,13 @@ export const GenericCatalog: CatalogItem[] = [
     type: "mens",
     default_color: "Black",
     sizes: {
-      Small: 62.50,
-      Medium: 62.50,
-      Large: 62.50,
-      XLarge: 62.50,
-      "2XLarge": 64.50,
-      "3XLarge": 66.50,
-      "4XLarge": 68.50,
+      Small: 62.5,
+      Medium: 62.5,
+      Large: 62.5,
+      XLarge: 62.5,
+      "2XLarge": 64.5,
+      "3XLarge": 66.5,
+      "4XLarge": 68.5,
     },
   },
   {
@@ -249,4 +252,4 @@ export const GenericCatalog: CatalogItem[] = [
       500: 0.0,
     },
   },
-  {
+];
