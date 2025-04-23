@@ -63,7 +63,7 @@ export const HennessyCatalog: CatalogItem[] = [
     colors: ["YR 07","YR 08","YR 09","YR 10","YR 11","YR 12","YR 13","YR 13","YR 14","YR 15","YR 16", "YR 17", "YR 18",
     "YR 19", "YR 20", "YR 21", "YR 22", "YR 23", "YR 24", "YR 25", "YR 26"],
     type: "sales",
-    default_color: "YR 2025",
+    default_color: "YR 25",
     discount: [
       { quantity: 1, price: 10.99 },      
     ],
