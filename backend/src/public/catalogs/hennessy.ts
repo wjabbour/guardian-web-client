@@ -73,7 +73,7 @@ export const HennessyCatalog: CatalogItem[] = [
   },
   {
     code: "GP955",
-    name: "Grease Marker",
+    name: "Grease Markers",
     fullname: "Grease Marker (1 each)",
     colors: ["Blue", "Green", "Pink", "Orange", "Purple", "Red", "White", "Yellow"],
     type: "sales",
@@ -88,7 +88,7 @@ export const HennessyCatalog: CatalogItem[] = [
   {   
     code: "GP200",
     name: "Key Tags",
-    fullname: "Key Tag Versa #200 (250/bx)",
+    fullname: "Versa-Tags Key Tag #200 (250/bx)",
     colors: ["Blue", "Gray", "Green", "Lilac", "Lime Green", "Orange", "Red", "Tan", "White", "Yellow"],
     type: "sales",
     default_color: "Blue",
