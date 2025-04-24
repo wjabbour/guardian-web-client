@@ -408,9 +408,9 @@ export const HennessyCatalog: CatalogItem[] = [
     code: "HENFAT-33G24-443352",
     name: "Poly Coated Plate",
     fullname: "Poly Coated Cardboard w/black/blue imprint",
-    colors: ["White"],
+    colors: ["Black"],
     type: "customs",
-    default_color: "White",
+    default_color: "Black",
     discount: [
       { quantity: 1000, price: .89 },
       { quantity: 2500, price: .79 },
