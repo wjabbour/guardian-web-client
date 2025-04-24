@@ -277,7 +277,7 @@ export const HennessyCatalog: CatalogItem[] = [
     name: "Laser Engraved Keychain",
     fullname: "Blue Banner Keychain w/Laser Engraved Imprint",
     colors: ["Metal"],
-    type: "customs",
+    type: "accessory",
     default_color: "Metal",
     discount: [
       { quantity: 500, price: 2.39 },
@@ -440,7 +440,7 @@ export const HennessyCatalog: CatalogItem[] = [
   },
   {
     code: "HENFAT-FOB-506092",
-    name: "Laser Engraved Leather Keychain",
+    name: "Laser Engraved Keychain",
     fullname: "Chrome Keychain w/laser engraved imprint",
     colors: ["Metal"],
     type: "accessory",
