@@ -101,7 +101,7 @@ export const HennessyCatalog: CatalogItem[] = [
   },
   {   
     code: "GP790",
-    name: "Sticker",
+    name: "Not for Sale Sticker",
     fullname: "Sticker - Vehicle Not for Sale (100/pk)",
     colors: ["Yellow"],
     type: "sales",
