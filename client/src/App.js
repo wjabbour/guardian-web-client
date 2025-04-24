@@ -9,7 +9,7 @@ import Modification, {
 import Orders from "./routes/Orders/Orders";
 import Checkout from "./routes/Checkout/Checkout";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Success from "./routes/Success/Success";
+import Success from "./routes/Success/success";
 import { Helmet } from "react-helmet";
 import { getConfigValue } from "./lib/config";
 import { useNextGenRouting } from "./hooks/useNextGenRouting";
