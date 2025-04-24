@@ -63,7 +63,7 @@ export const HennessyCatalog: CatalogItem[] = [
     colors: ["YR 07","YR 08","YR 09","YR 10","YR 11","YR 12","YR 13","YR 13","YR 14","YR 15","YR 16", "YR 17", "YR 18",
     "YR 19", "YR 20", "YR 21", "YR 22", "YR 23", "YR 24", "YR 25", "YR 26"],
     type: "sales",
-    default_color: "YR 25",
+    default_color: "YR 07",
     discount: [
       { quantity: 1, price: 10.99 },      
     ],
@@ -77,7 +77,7 @@ export const HennessyCatalog: CatalogItem[] = [
     fullname: "Grease Marker (1 each)",
     colors: ["Blue", "Green", "Pink", "Orange", "Purple", "Red", "White", "Yellow"],
     type: "sales",
-    default_color: "Orange",
+    default_color: "Blue",
     discount: [
       { quantity: 1, price: 10.69 },      
     ],
@@ -91,7 +91,7 @@ export const HennessyCatalog: CatalogItem[] = [
     fullname: "Key Tag Versa #200 (250/bx)",
     colors: ["Blue", "Gray", "Green", "Lilac", "Lime Green", "Orange", "Red", "Tan", "White", "Yellow"],
     type: "sales",
-    default_color: "White",
+    default_color: "Blue",
     discount: [
       { quantity: 1, price: 36.95 },      
     ],
@@ -119,7 +119,7 @@ export const HennessyCatalog: CatalogItem[] = [
     fullname: "Brooks Brothers® Wrinkle-Free Nailhead Shirt",
     colors: ["Cobalt Blue", "White"],
     type: "mens",
-    default_color: "White",
+    default_color: "Cobalt Blue",
     sizes: {
       Small: 79.99,
       Medium: 79.99,
@@ -136,7 +136,7 @@ export const HennessyCatalog: CatalogItem[] = [
     fullname: "Brooks Brothers® Women's Wrinkle-Free Nailhead Shirt",
     colors: ["Cobalt Blue", "White"],
     type: "womens",
-    default_color: "White",
+    default_color: "Cobalt Blue",
     sizes: {
       Small: 79.99,
       Medium: 79.99,
