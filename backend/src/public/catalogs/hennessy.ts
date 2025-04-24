@@ -326,7 +326,7 @@ export const HennessyCatalog: CatalogItem[] = [
   },
   {
     code: "HENFAT-34MRE-419207",
-    name: "Alumninum Embossed Plate",
+    name: "Aluminum Embossed Plate",
     fullname: "Aluminum Plate w/black imprint",
     colors: ["Black"],
     type: "customs",
