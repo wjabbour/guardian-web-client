@@ -1,6 +1,6 @@
 import { Config } from "../lib/interfaces";
 export const config: Config = {
-    
+
   title: "Pohanka",
   company_logo: "pohanka.png",
   logo_placements: ["Left Chest", "Left Sleeve", "Right Sleeve", "Yoke", "Front Center"],
