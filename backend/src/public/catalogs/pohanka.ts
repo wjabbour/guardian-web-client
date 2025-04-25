@@ -38,7 +38,7 @@ export const PohankaCatalog: CatalogItem[] = [
   },
   {
     code: "ST350",
-    name: "Sport-Tek® Competitor™ Tee",
+    name: "Sport-Tek Competitor Tee",
     fullname: "Sport-Tek® PosiCharge® Competitor™ Tee",
     colors: ["Black", "Iron Grey"],
     type: "mens",
@@ -55,7 +55,7 @@ export const PohankaCatalog: CatalogItem[] = [
   },
   {
     code: "C112",
-    name: "Port Authority® Trucker Cap",
+    name: "Port Authority Trucker Cap",
     fullname: "Port Authority® Snapback Trucker Cap",
     colors: ["Black White"],
     type: "mens",
