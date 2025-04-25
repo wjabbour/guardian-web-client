@@ -58,7 +58,7 @@ export const PohankaCatalog: CatalogItem[] = [
     name: "Port Authority® Trucker Cap",
     fullname: "Port Authority® Snapback Trucker Cap",
     colors: ["Black White"],
-    type: "hat",
+    type: "mens",
     default_color: "Black White",
     sizes: {
       OSFA: 0.00,
