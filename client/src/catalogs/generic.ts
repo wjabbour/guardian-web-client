@@ -249,4 +249,4 @@ export const GenericCatalog: CatalogItem[] = [
           500: 0.0,
         },
       },
-      {
+    ];

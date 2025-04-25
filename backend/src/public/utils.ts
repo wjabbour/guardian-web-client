@@ -132,6 +132,8 @@ const STORES = {
   "Hennessy Porsche, 990 Mansell Rd, Roswell, GA 30076": "HENPRO",
   
   "Guardian Products, 5575 Spalding Drive, Peachtree Corners, GA 30092": "GUAPRO",
+
+  "Pohanka Hyundai, 2015 N Salisbury Blvd, Salisbury, MD 21801": "POHHSA",
 };
 
 export function getStoreCode(store) {

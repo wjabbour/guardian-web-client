@@ -1,0 +1,40 @@
+import { Config } from "../lib/interfaces";
+export const config: Config = {
+    
+  title: "Pohanka",
+  company_logo: "pohanka.png",
+  logo_placements: ["Left Chest", "Left Sleeve", "Right Sleeve", "Yoke", "Front Center"],
+  show_modification_thumbnail: true,
+  minimum_apparel_order: true,
+  render_logo_preview: true,
+  embroideries: {
+    hat: [
+      "Pohanka",
+       ],
+    mens: [
+      "Pohanka",
+       ],
+    womens: [
+      "Pohanka",
+       ],
+    accessory: [],
+    customs: [],
+    office: [],
+    service: [],
+    sales: [],
+    detail: [],
+    bodyshop: [],
+    parts: [],
+  },
+  stores: [
+    "Pohanka Hyundai , 2015 N Salisbury, Salisbury, MD 21801",
+    ],
+  bypass_codes: ["POHANK"],
+  server_hostname: "https://mxfj3q6m01.execute-api.us-east-1.amazonaws.com",
+  account_reps: [
+    { name: "Dennis Mayweather", phone: "678-287-1625" },
+    ],
+  route_prefix: "/pohanka",
+  paypal_not_supported: true,
+  password: "PohankA",
+};
