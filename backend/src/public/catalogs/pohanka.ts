@@ -1,6 +1,34 @@
 import { CatalogItem } from "../interfaces";
 export const PohankaCatalog: CatalogItem[] = [
   {
+    code: "600088V",
+    name: "Seat Covers",
+    fullname: "No-Slip Plastic Seat Covers (500/roll)",
+    colors: ["Plastic"],
+    type: "service",
+    default_color: "Plastic",
+    discount: [
+      { quantity: 500, price: 0.00 },      
+    ],
+    sizes: {
+      1: 0.00,
+    },
+  }, 
+  {
+    code: "3088",
+    name: "Floor Mats",
+    fullname: "Floor Mats/Coated Paper (500/bx)",
+    colors: ["White"],
+    type: "service",
+    default_color: "White",
+    discount: [
+      { quantity: 500, price: 0.00 },      
+    ],
+    sizes: {
+      1: 0.00,      
+    },
+  },
+  {
     code: "K110",
     name: "Port Authority UV Polo",
     fullname: "Port Authority® Dry Zone® UV Micro-Mesh Polo",
