@@ -76,7 +76,7 @@ export const LeithCatalog: CatalogItem[] = [
   },
   {
     code: "ST657",
-    name: "Sport-Tek Long Sleeve Polo",
+    name: "Sport-Tek LS Polo",
     fullname: "Sport-Tek® Long Sleeve Micropique Polo",
     colors: ["Black", "Deep Red", "Forest Green", "Iron Grey", "Maroon", "True Navy", "True Red", "True Royal", "White"],
     type: "mens",
