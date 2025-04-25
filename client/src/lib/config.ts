@@ -6,6 +6,7 @@ import { config as GuardianConfig } from "../configs/guardian";
 import { config as CannonConfig } from "../configs/cannon";
 import { config as HennessyConfig } from "../configs/hennessy";
 import { config as LeithConfig } from "../configs/leith";
+import { config as PohankaConfig } from "../configs/pohanka";
 import { Config } from "./interfaces";
 
 const DEFAULT_CONFIG = {
@@ -24,6 +25,7 @@ const allConfigs: Config[] = [
   CannonConfig,
   LeithConfig,
   HennessyConfig,
+  PohankaConfig,
 ];
 
 export function getRoutePrefix(password: string): string | undefined {
@@ -54,6 +56,8 @@ export function getConfigValue(val: keyof Config) {
     return LeithConfig[val];
   } else if (url.includes("hennessy")) {
     return HennessyConfig[val];
+  } else if (url.includes("pohanka")) {
+    return PohankaConfig[val];
   } else {
     // when the user is on gpc81.com landing page we need to display a string in the browser tab
     return DEFAULT_CONFIG[val];
