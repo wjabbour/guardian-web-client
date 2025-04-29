@@ -42,7 +42,10 @@ export function getConfigValue(configProperty: string): any {
 }
 
 export const COMPANIES: { [index: string]: string } = {
-  "http://localhost:3000": "Premier",
+  "http://localhost:3000": "Stivers",
+  "https://gpstivers.com": "Stivers",
+  "https://newcustomer.gpstivers.com": "Stivers",
+  "https://gptameron.com": "Tameron",
   "https://gp-premier.com": "Premier",
   "https://cannonemployeestore.com": "Cannon",
 };
