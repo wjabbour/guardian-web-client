@@ -57,19 +57,14 @@ export const config: Config = {
     "Stivers Ford South Atlanta, 4355 Jonesboro Rd, Union City, GA 30291",
     "Stivers Ford Troy, 121 US-231, Troy, AL 36081",    
   ],
-  bypass_codes: [
-    "STIFMO",
-    "STIFBI",
-    "STIHCO",
-    "STICPR",
-    "STISDE",
-    "STICCO",
-    "STIFSO",
-    "STIFTR",
-  ],
+  bypass_codes: ["STIVER"],
+
   server_hostname: "https://mxfj3q6m01.execute-api.us-east-1.amazonaws.com",
   account_reps: [
     { name: "Louis Budbill", phone: "678-287-1659" },
     { name: "Glenn Rodney", phone: "678-287-1608" },
   ],
+  route_prefix: "/stivers",
+  paypal_not_supported: true,
+  password: "StiveR",
 };

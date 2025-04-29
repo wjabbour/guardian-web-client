@@ -1,4 +1,5 @@
 import { Config } from "../lib/interfaces";
+
 export const config: Config = {
 
   title: "Pohanka",

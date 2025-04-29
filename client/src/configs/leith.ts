@@ -1,3 +1,5 @@
+import { Config } from "../lib/interfaces";
+
 export const config = {
     title: "Leith",
     company_logo: "leith.png",

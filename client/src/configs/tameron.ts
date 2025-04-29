@@ -20,18 +20,14 @@ export const config = {
     "Tameron Kia, 10611 Boney Ave D, Iberville, MS 39540",
     "Tameron Kia Westbank, 1884 Westbank Expressway Harvey, LA 70058",
   ],
-  bypass_codes: [
-    "TAMHDA",
-    "TAMBDA",
-    "TAMCDA",
-    "TAMSMO",
-    "TAMNMO",
-    "TAMKDI",
-    "TAMKWE",
-  ],
+  bypass_codes: ["TAMERO"],
+
   server_hostname: "https://mxfj3q6m01.execute-api.us-east-1.amazonaws.com",
   account_reps: [
     { name: "Louis Budbill", phone: "678-287-1659" },
     { name: "Glenn Rodney", phone: "678-287-1608" },
   ],
+  route_prefix: "/tameron",
+  paypal_not_supported: true,
+  password: "TameroN",
 };
