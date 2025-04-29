@@ -66,5 +66,5 @@ export const config: Config = {
   ],
   route_prefix: "/stivers",
   paypal_not_supported: true,
-  password: "StiveR",
+  password: "StiverS",
 };
