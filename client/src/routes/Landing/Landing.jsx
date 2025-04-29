@@ -42,7 +42,7 @@ export default function Landing() {
         )}
         {types["customs"] && (
           <ClothingIcon
-            img={"/images/customs.jpg"}                                 
+            img={"/images/customsguar.jpg"}                                 
             link={"/catalog/customs"}
             no_space={true}
           />      
