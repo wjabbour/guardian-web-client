@@ -1,6 +1,6 @@
 import { Config } from "../interfaces";
 
-export const standardConfig: Config = {
+export const leithConfig: Config = {
   email_recipients: [
     "lbudbill@gpcorp.com",
     "lbudbell@comcast.net",

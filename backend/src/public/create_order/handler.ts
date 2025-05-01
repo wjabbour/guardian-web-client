@@ -15,11 +15,10 @@ import {
 } from "@aws-sdk/client-secrets-manager";
 import { Catalog } from "../catalog";
 import { dynamoClient } from "../dynamoClient";
-import { getConfigValue } from "../utils";
 
 const sm = new SecretsManagerClient({ region: "us-east-1" });
 const command = new GetSecretValueCommand({
-  SecretId: getConfigValue("secretName"),
+  SecretId: "paypal_credential",
 });
 
 export const handler = async (
