@@ -205,7 +205,7 @@ export function getCatalogItemDescription(item_code, company_name) {
   return item.fullname;
 }
 
-function createOrderCsv(orders) {
+function createOrderCsv(orders): string {
   let csv = "";
 
   function save(obj) {
@@ -253,7 +253,7 @@ function createOrderCsv(orders) {
   return csv;
 }
 
-function constructEmail(recipient: string, companyName: string, csv: any) {
+function constructEmail(recipient: string, companyName: string, csv: string) {
   const date = dayjs();
   const date_str = date.format("MM-DD-YYYY");
   const buffer = Buffer.from(csv);
@@ -285,7 +285,7 @@ export async function sendEmail(
 ) {
   logger.info("Creating orders csv");
   const csv = createOrderCsv(orders);
-  logger.info("Created orders csv", csv);
+  logger.info(`Created orders csv: ${csv}`);
   const ses = new SESClient({});
   const recipients: string[] = getConfigValue("email_recipients", companyName);
 
