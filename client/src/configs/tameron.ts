@@ -1,3 +1,5 @@
+import { Config } from "../lib/interfaces";
+
 export const config = {
   title: "Tameron",
   company_logo: "tameron.png",
