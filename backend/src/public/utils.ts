@@ -9,6 +9,7 @@ import { leithConfig } from "./configs/leith";
 import { pohankaConfig } from "./configs/pohanka";
 import { premierConfig } from "./configs/premier";
 import { stiversConfig } from "./configs/stivers";
+import { tameronConfig } from "./configs/tameron";
 
 export const logger = pino();
 
@@ -52,7 +53,9 @@ export function getConfigValue(configProperty: string, config: string): any {
     case "Premier":
       return premierConfig[configProperty];
     case "Stivers":
-      return stiversConfig[configProperty];    
+      return stiversConfig[configProperty];
+    case "Tameron":
+      return tameronConfig[configProperty];
   }
 }
 
