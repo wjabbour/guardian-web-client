@@ -31,5 +31,7 @@ export const Catalog = function (): CatalogItem[] {
     return LeithCatalog;
   } else if (url.includes("pohanka")) {
     return PohankaCatalog;
+  } else if (url.includes("tameron")) {
+    return TameronCatalog;
   }
 };
