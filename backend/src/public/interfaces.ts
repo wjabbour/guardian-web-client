@@ -5,7 +5,18 @@ export interface CatalogItem {
   colors: string[];
   sizes: {};
   default_color: string;
-  type: "mens" | "womens" | "hat" | "accessory" | "customs" | "office"| "service"| "sales"| "detail"| "bodyshop"| "parts";
+  type:
+    | "mens"
+    | "womens"
+    | "hat"
+    | "accessory"
+    | "customs"
+    | "office"
+    | "service"
+    | "sales"
+    | "detail"
+    | "bodyshop"
+    | "parts";
   halfColors?: string[]; // C112 is capable of being two-colored. We need this field to present specially colored divs for the color selector for those colors
   // some items are only purchasble by Service and Parts counter employees only
   restricted?: boolean;
@@ -35,5 +46,4 @@ interface Order {
 
 export interface Config {
   email_recipients: string[]; // determines who receives the order emails
-  secretName: string; // the name of the secret to fetch from Secrets Manager
 }

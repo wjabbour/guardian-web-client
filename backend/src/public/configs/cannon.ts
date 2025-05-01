@@ -5,5 +5,4 @@ export const cannonConfig: Config = {
     "lbudbell@comcast.net",
     "doubleujabbour@gmail.com",
   ],
-  secretName: "cannon-website",
 };
