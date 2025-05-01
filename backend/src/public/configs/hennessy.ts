@@ -4,6 +4,7 @@ export const hennessyConfig: Config = {
   email_recipients: [
     "lbudbill@gpcorp.com",
     "lbudbell@comcast.net",
-    "doubleujabbour@gmail.com",
+    "asarazua@gpcorp.com",
+    "zwarner@hennessyauto.com",
   ],
 };
