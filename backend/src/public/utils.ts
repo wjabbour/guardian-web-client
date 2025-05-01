@@ -17,7 +17,7 @@ const ALLOWED_ORIGINS = [
   "http://localhost:3000",
   "https://newcustomer.gpstivers.com",
   "https://gpstivers.com",
- 
+  "https://gptameron.com",
   "https://gp-premier.com",
   "https://cannonemployeestore.com",
   "https://gpc81.com",
