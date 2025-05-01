@@ -1,4 +1,3 @@
-import { Config } from "../lib/interfaces";
 
 export const config = {
   title: "Tameron",
