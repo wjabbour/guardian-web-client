@@ -21,10 +21,6 @@ module "retrieve_orders" {
       source_arn = "${aws_api_gateway_rest_api.this.execution_arn}/*"
     }
   }
-  
-  environment_variables = {
-    DEPLOYMENT = var.deployment
-  }
 }
 
 data "aws_iam_policy_document" "retrieve_orders" {
