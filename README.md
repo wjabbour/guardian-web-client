@@ -328,7 +328,7 @@ gpc81.com/hennessy -> hennessy landing page
 gpc81.com/stivers -> stivers landing page
 ```
 
-To make your website accessible from gpc81, you will need to set two properties on that websites config in {project_root}/client/src/configs`.
+To make your website accessible from gpc81, you will need to set two properties on that websites config in `{project_root}/client/src/configs`.
 
 1. `route_prefix` - this should be a string, prefixed with a forward slash. For example, `/test`, `/cannon`, `/my-new-site`. Two configs must not share the same value for `route_prefix`.
 2. `password` - this is the password that the user must enter on gpc81 to be navigated to this website. Two configs must not share the same value for `password`.
@@ -405,6 +405,56 @@ Move back to the project root and `cd` into the backend directory and run `npm r
 Done!
 
 Be sure to save your changes in git using the instructions above.
+
+## Local Development
+When running locally, you may want to switch between gpc81 and non-gpc81, depending on which website you'd like to test (e.g. if a website is only used by customers by going to gpc81.com (Hennessy) you'll want to use the gpc81 way, if the website is only used by customers by navigating to that domain directly (Cannon) you'll want to use the non-gpc81 way)
+
+gpc81 way:
+
+`client\src\hooks\useNextGenRouting.js`
+```
+export function useNextGenRouting() {
+  return (
+    window.location.href.includes("gpc81") ||
+    window.location.href.includes("localhost")
+  );
+}
+```
+
+`client\src\lib\utils.ts`
+```
+export function getDomainAwarePath(destination) {
+  const prefix = getConfigValue("route_prefix");
+  const url = window.location.href;
+  const shouldPrefixRoute = url.includes("gpc81") || url.includes("localhost");
+
+  return shouldPrefixRoute ? prefix + destination : destination;
+}
+```
+
+non-gpc81 way:
+
+`client\src\hooks\useNextGenRouting.js`
+```
+export function useNextGenRouting() {
+  return (
+    window.location.href.includes("gpc81")
+  );
+}
+```
+
+`client\src\lib\utils.ts`
+```
+export function getDomainAwarePath(destination) {
+  const prefix = getConfigValue("route_prefix");
+  const url = window.location.href;
+  const shouldPrefixRoute = url.includes("gpc81");
+
+  return shouldPrefixRoute ? prefix + destination : destination;
+}
+```
+
+You may need to refresh your browser and navigate to localhost:3000 for the changes to fully take effect.
 
 # Contributor
 
