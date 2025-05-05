@@ -15,11 +15,11 @@ export const Catalog = function (): CatalogItem[] {
     return HennessyCatalog;
   } else if (url.includes("newcustomer")) {
     return NewCustomerCatalog;
-  } else if (url.includes("gpstivers")) {
+  } else if (url.includes("stivers")) {
     return StiversCatalog;
-  } else if (url.includes("gptameron")) {
+  } else if (url.includes("tameron")) {
     return TameronCatalog;  
-  } else if (url.includes("gp-premier")) {
+  } else if (url.includes("premier")) {
     return PremierCatalog;
   } else if (url.includes("guardian")) {
     return GuardianCatalog;

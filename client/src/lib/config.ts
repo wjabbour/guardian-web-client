@@ -42,11 +42,11 @@ export function getConfigValue(val: keyof Config) {
     return HennessyConfig[val];
   } else if (url.includes("newcustomer")) {
     return NewCustomerConfig[val];
-  } else if (url.includes("gpstivers")) {
+  } else if (url.includes("stivers")) {
     return StiversConfig[val];
-  } else if (url.includes("gptameron")) {
+  } else if (url.includes("tameron")) {
     return TameronConfig[val];
-  } else if (url.includes("gp-premier")) {
+  } else if (url.includes("premier")) {
     return PremierConfig[val];
   } else if (url.includes("guardian")) {
     return GuardianConfig[val];
