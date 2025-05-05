@@ -46,7 +46,7 @@ export const handler = async (
       logger.warn({ message: "Unrecognized store" });
       return {
         statusCode: 400,
-        body: JSON.stringify({ message: "Please select a store" }),
+        body: JSON.stringify({ message: "Unrecognized store. Please contact your account representative." }),
         headers: addCors(event.headers?.origin),
       };
     }
