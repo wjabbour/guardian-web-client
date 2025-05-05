@@ -292,7 +292,13 @@ export async function sendEmail(
   const ses = new SESClient({});
   const recipients: string[] = getConfigValue("email_recipients", companyName);
 
-  if (recipient) {
+  /*
+    The Cannon AWS account has production SES access and is able to send
+    emails to unverified recipients. I am in the process of requesting production
+    access in the guardian account as well, once approved we can remove 
+    the companyName === 'Cannon' piece of this evaluation
+  */
+  if (companyName === 'Cannon' && recipient) {
     recipients.push(recipient);
   }
 
