@@ -140,7 +140,7 @@ Be sure to put your domain name in place of `example.com`.
 
 ### Setup Certificates
 
-Now we need to create a HTTPS certificate for the website. Type Certificate Manager in the search bar in your AWS console. Click "Request certificate". Request a public certificate. Enter your fully qualified domain name (e.g. `example.com`). Choose `DNS validation - recommended` as your validation method. Keep other all settings the same and click `Request`. 
+Now we need to create a HTTPS certificate for the website. Type Certificate Manager in the search bar in your AWS console. Click "Request certificate". Request a public certificate. Enter your fully qualified domain name (e.g. `example.com`). Choose `DNS validation - recommended` as your validation method. Keep other all settings the same and click `Request`.
 
 We have now requested a certificate from AWS. To receive that certificate, we need to prove that we own `example.com`. Navigate to that certificate you requested (you may need to refresh page to see it). Click `Create records in Route 53`. From here, the ownership verification process may take a few minutes, but is fully automated. Refresh the page every few minutes until you see the status of the certificate change from "Pending Validation" to "Issued". Once the certificate has been issued, this step is complete.
 
@@ -191,7 +191,7 @@ then you need to update it like so:
 
 `your_domain` needs to be the value of your domain, e.g. `example.com`. The `cloudfront_distribution_id` needs to be the ID that you took note of earlier. You can always go back and view your distribution ID by going to CloudFront in AWS.
 
-## Configure the client
+## Client Config
 
 Each site has their own stores, store codes, embroideries, apparel, etc. The configuration for each site is stored in a separate config file in `{project_root}/client/src/configs`.
 
@@ -215,13 +215,39 @@ else if (url.includes("gp-honda.com")) {
 }
 ```
 
-### Updating the stores
+### stores
 
-The list of stores for a domain populates the options of the select box on the checkout screen. This allows the user to choose which store address the order should be shipped to.
+### Client
 
-In the config file, you will find a property named `stores`.
+```
+e.g.
+
+stores: ["Pohanka Hyundai , 2015 N Salisbury, Salisbury, MD 21801"],
+```
+
+The list of stores populates the options of the select box on the checkout screen. This allows the user to choose which address the order should be shipped to.
+
+### Backend
+
+The backend configuration for stores is implemented differently. There is a single constant named `STORES` in this file: `backend\src\public\utils.ts`. The key (the string on the left side of each colon) of this map is the store address and the value (the string on the right side of each colon) is the store code. Based on which store address the user chooses during checkout, the corresponding store code will be associated with the order and inserted into the order data.
+
+For example,
+
+```
+const STORES = {
+  "100 A Street": "123",
+  "200 B Lane": "456"
+}
+```
+
+If the user were to select "100 A Street" as the store address, then the server will determine that the store code for this order should be "123".
+
+You must always ensure that the store strings in the client configs and in the `STORES` constant match exactly, else the user may not be able to select some stores.
+
+For example, using the same `STORES` as the above example, if the site administrator had accidentally configured the client's store address to be "100, A Street" then an error will occur, because the backend doesn't have such an address in `STORES`.
 
 ### Updating Embroideries
+
 In the config file, you will find a property named `embroideries`. Let's talk about what these values mean. Consider the following `embroideries` object.
 
 ```
@@ -239,7 +265,6 @@ These values are used to determine two things:
 2. The logos displayed on the catalog page when the user selects a specific group of item (accessories, mens, womens).
 
 With the values above, if a user were to click on "Men's Apparel" then the catalog page would display the Quicklane logo picture. If a user were then to choose an apparel from the catalog screen and thus be directed to the modification page, when they click the `Logo` dropdown they would only see Quicklane as an option. The same logic follows for womens, accessory, and hat.
-
 
 ### Updating other config values
 
@@ -319,9 +344,10 @@ For example, if you have item `A` which is available in colors `['Lime Green']` 
 
 ## gpc81
 
-Before April 2025, all websites were deployed to separate domains. But going forward, we would like to use gpc81.com as the base domain and have all other sites be accessible from this domain via path parameters. 
+Before April 2025, all websites were deployed to separate domains. But going forward, we would like to use gpc81.com as the base domain and have all other sites be accessible from this domain via path parameters.
 
 e.g.
+
 ```
 gpc81.com -> main landing page
 gpc81.com/hennessy -> hennessy landing page
@@ -334,27 +360,6 @@ To make your website accessible from gpc81, you will need to set two properties 
 2. `password` - this is the password that the user must enter on gpc81 to be navigated to this website. Two configs must not share the same value for `password`.
 
 ## Configure the backend
-
-### Updating stores and store codes
-
-We need to add the `stores` and `store codes` here. Open `{project_root}/backend/src/utils.ts`. Take a look at `STORES`. If you have a new site and it has one store `My Store, 123 Street State Zip` and the store code is `ABC` and `STORES` currently looks like this:
-
-```
-const STORES = {
-  'Stivers Ford Montgomery, 4000 Eastern Blvd Montgomery, AL, 36116': "STIFMO",
-  'Stivers Ford Montgomery, 500 Palisades Blvd, Birmingham, AL, 35209': "STIFBI"
-}
-```
-
-then you should update it to look like this
-
-```
-const STORES = {
-  'Stivers Ford Montgomery, 4000 Eastern Blvd Montgomery, AL, 36116': "STIFMO",
-  'Stivers Ford Montgomery, 500 Palisades Blvd, Birmingham, AL, 35209': "STIFBI",
-  'My Store, 123 Street State Zip': "ABC"
-}
-```
 
 ### Updating the catalog
 
@@ -407,11 +412,13 @@ Done!
 Be sure to save your changes in git using the instructions above.
 
 ## Local Development
+
 When running locally, you may want to switch between gpc81 and non-gpc81, depending on which website you'd like to test (e.g. if a website is only used by customers by going to gpc81.com (Hennessy) you'll want to use the gpc81 way, if the website is only used by customers by navigating to that domain directly (Cannon) you'll want to use the non-gpc81 way)
 
 gpc81 way:
 
 `client\src\hooks\useNextGenRouting.js`
+
 ```
 export function useNextGenRouting() {
   return (
@@ -422,6 +429,7 @@ export function useNextGenRouting() {
 ```
 
 `client\src\lib\utils.ts`
+
 ```
 export function getDomainAwarePath(destination) {
   const prefix = getConfigValue("route_prefix");
@@ -435,6 +443,7 @@ export function getDomainAwarePath(destination) {
 non-gpc81 way:
 
 `client\src\hooks\useNextGenRouting.js`
+
 ```
 export function useNextGenRouting() {
   return (
@@ -444,6 +453,7 @@ export function useNextGenRouting() {
 ```
 
 `client\src\lib\utils.ts`
+
 ```
 export function getDomainAwarePath(destination) {
   const prefix = getConfigValue("route_prefix");

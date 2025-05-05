@@ -133,7 +133,7 @@ const STORES = {
   "Leith Corporate Headquarters, 8005 Capital Blvd, Raleigh, NC 27616":
     "LEICRA",
   "Leith Ford, PO Box 1809, Wendell, NC 27591": "LEIFWE",
-  "Leith Honda, 3940 Capital Hills Drive, Raleigh, NC 27616": "LEIHRA",
+  "Leith Honda, 3940 Capital Hills Drive, NC 27606": "LEIHRA",
   "Leith Lincoln, 2350 Capital Summit Ct, Raleigh, NC 27616": "LEILRA",
   "Leith Nissan, 2100 Auto Park Drive, Cary, NC 27511": "LEINCA",
   "Leith Nissan, 2000 Auto Park Drive, Cary, NC 27511": "LEITCA",
@@ -161,7 +161,7 @@ const STORES = {
   "Guardian Products, 5575 Spalding Drive, Peachtree Corners, GA 30092":
     "GUAPRO",
 
-  "Pohanka Hyundai, 2015 N Salisbury Blvd, Salisbury, MD 21801": "POHHSA",
+  "Pohanka Hyundai , 2015 N Salisbury, Salisbury, MD 21801": "POHHSA",
 };
 
 export function getStoreCode(store) {
@@ -298,7 +298,7 @@ export async function sendEmail(
     access in the guardian account as well, once approved we can remove 
     the companyName === 'Cannon' piece of this evaluation
   */
-  if (companyName === 'Cannon' && recipient) {
+  if (companyName === "Cannon" && recipient) {
     recipients.push(recipient);
   }
 
