@@ -35,13 +35,13 @@ class Dynamo {
     });
   }
 
-  async getOrder(email: string, created_at: string) {
+  async getOrder(email: string, created_at: string, tableName: string) {
     const command = new GetCommand({
       Key: {
         email,
         created_at,
       },
-      TableName: "archived_orders",
+      TableName: tableName,
     });
 
     const response = await this.documentClient.send(command);

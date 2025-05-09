@@ -106,7 +106,11 @@ export const handler = async (
         "archived_orders"
       );
 
-      const order = await dynamoClient.getOrder(email, created_at);
+      const order = await dynamoClient.getOrder(
+        email,
+        created_at,
+        "archived_orders"
+      );
       await sendEmail([order], "Tameron", email);
       return {
         statusCode: 200,
@@ -134,7 +138,11 @@ export const handler = async (
           "archived_orders"
         );
 
-        const order = await dynamoClient.getOrder(email, created_at);
+        const order = await dynamoClient.getOrder(
+          email,
+          created_at,
+          "archived_orders"
+        );
         await sendEmail([order], "Cannon", email);
         return {
           statusCode: 200,
@@ -159,7 +167,7 @@ export const handler = async (
         "orders"
       );
 
-      const order = await dynamoClient.getOrder(email, created_at);
+      const order = await dynamoClient.getOrder(email, created_at, "orders");
       // always send an email if bypassPaypal
       await sendEmail([order], company_name, email);
 
