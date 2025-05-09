@@ -38,6 +38,7 @@ export const handler = async (
       qs.stringify(form_data),
       { headers: retrieve_access_token_headers }
     );
+
     const access_token = token_response.data.access_token;
     logger.info({ message: "Retrieved access token", access_token });
 
@@ -55,23 +56,21 @@ export const handler = async (
         statusCode: 400,
       };
     }
+
     logger.info({ message: "Determined company name", company_name });
 
     const { email, created_at } = await dynamoClient.setPaid(order_id, txId);
     logger.info({ message: "Set the order as paid in the database" });
     logger.info(`Retrieved the following order keys: ${email}, ${created_at}`);
 
-    // send cannon orders immediately
-    if (email && created_at && company_name === "Cannon") {
-      logger.info("Cannon order, sending immediately");
-      await dynamoClient.archiveCannonOrder(created_at, email);
-      const order = await dynamoClient.getOrder(
-        email,
-        created_at,
-        "archived_orders"
-      );
-      await sendEmail([order], "Cannon", email);
-    }
+    await dynamoClient.archiveOrder(created_at, email);
+    const order = await dynamoClient.getOrder(
+      email,
+      created_at,
+      "archived_orders"
+    );
+
+    await sendEmail([order], company_name, email);
 
     return {
       statusCode: 200,

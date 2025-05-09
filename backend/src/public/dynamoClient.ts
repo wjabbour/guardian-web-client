@@ -105,7 +105,7 @@ class Dynamo {
     }
   }
 
-  async archiveCannonOrder(created_at: string, email: string) {
+  async archiveOrder(created_at: string, email: string) {
     const command = new GetCommand({
       Key: {
         created_at,
