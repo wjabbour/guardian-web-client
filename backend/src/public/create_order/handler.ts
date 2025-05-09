@@ -41,12 +41,16 @@ export const handler = async (
     const customer_po = body.customer_po || "";
     const last_name = body.last_name;
     const store = getStoreCode(body.store);
+    logger.info({ message: "Determined store code", store });
 
     if (!store) {
       logger.warn({ message: "Unrecognized store" });
       return {
         statusCode: 400,
-        body: JSON.stringify({ message: "Unrecognized store. Please contact your account representative." }),
+        body: JSON.stringify({
+          message:
+            "Unrecognized store. Please contact your account representative.",
+        }),
         headers: addCors(event.headers?.origin),
       };
     }
@@ -57,11 +61,12 @@ export const handler = async (
       logger.warn({ message: "Unrecognized company name" });
       return {
         statusCode: 400,
+        body: JSON.stringify({
+          message:
+            "Unrecognized company name. Please contact your account representative.",
+        }),
       };
     }
-    logger.info({ message: "Determined company name", company_name });
-
-    logger.info({ message: "Determined store code", store });
 
     const cart = construct_cart(body.cart, customer_po, company_name);
     logger.info({ message: "Constructed cart", cart });
