@@ -88,8 +88,8 @@ export const handler = async (
           headers: addCors(event.headers?.origin),
         };
       }
-      logger.info({ message: "Tameron order, sending immediately" });
 
+      logger.info({ message: "Tameron order, sending immediately" });
       const created_at = await dynamoClient.createOrder(
         {
           email,
@@ -135,7 +135,7 @@ export const handler = async (
         );
 
         const order = await dynamoClient.getOrder(email, created_at);
-        await sendEmail([order], "Cannon");
+        await sendEmail([order], "Cannon", email);
         return {
           statusCode: 200,
           headers: addCors(event.headers?.origin),
@@ -143,7 +143,7 @@ export const handler = async (
       }
 
       // company is not cannon but is bypassPaypal
-      await dynamoClient.createOrder(
+      const created_at = await dynamoClient.createOrder(
         {
           email,
           order: cart,
@@ -158,6 +158,10 @@ export const handler = async (
         },
         "orders"
       );
+
+      const order = await dynamoClient.getOrder(email, created_at);
+      // always send an email if bypassPaypal
+      await sendEmail([order], company_name, email);
 
       return {
         statusCode: 200,
