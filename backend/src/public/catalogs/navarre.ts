@@ -266,7 +266,7 @@ export const NavarreCatalog: CatalogItem[] = [
     fullname: "Kleer-Back Stock Stickers Versa #400 (100/pk)",
     colors: ["Blue", "Green", "Orange", "Red", "White", "Yellow"],
     type: "sales",
-    default_color: "White",
+    default_color: "Blue",
     discount: [
       { quantity: 1, price: 16.95 },      
     ],
@@ -280,7 +280,7 @@ export const NavarreCatalog: CatalogItem[] = [
     fullname: "Key Tag Versa #200 (250/box)",
     colors: ["Blue", "Gray", "Green", "Lilac", "Lime Green", "Orange", "Red", "Tan", "White", "Yellow"],
     type: "sales",
-    default_color: "White",
+    default_color: "Blue",
     discount: [
       { quantity: 1, price: 35.95 },      
     ],
@@ -294,7 +294,7 @@ export const NavarreCatalog: CatalogItem[] = [
     fullname: "Combo Key Tags - Numbered (125/box)",
     colors: ["Beige", "Blue", "Green", "Grey", "Lilac", "Orange", "Red", "White", "Yellow"],
     type: "sales",
-    default_color: "White",
+    default_color: "Beige",
     discount: [
       { quantity: 1, price: 65.00 },      
     ],
@@ -361,7 +361,7 @@ export const NavarreCatalog: CatalogItem[] = [
   },
   {
     code: "7292",
-    name: "Inspection Frm - GM",
+    name: "Inspection Form - GM",
     fullname: "Multi-Point Inspection Form (GM) 3 Part (250/pk)",
     colors: ["White"],
     type: "service",
