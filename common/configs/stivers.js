@@ -1,0 +1,71 @@
+export const config = {
+  title: "Stivers",
+  company_logo: "stivers.png",
+  logo_placements: ["Right Sleeve", "Left Chest"],
+  show_modification_thumbnail: false,
+  minimum_apparel_order: false,
+  render_logo_preview: true,
+  embroideries: {
+    hat: [
+      "Stivers",
+      "Quicklane",
+      "Ford",
+      "Hyundai",
+      "Chrysler",
+      "Dodge",
+      "Jeep",
+      "Ram",
+    ],
+    mens: [
+      "Stivers",
+      "Quicklane",
+      "Subaru",
+      "Stivers Ford South",
+      "Stivers Ford Birmingham",
+      "Stivers Montgomery",
+      "Stivers Prattville",
+    ],
+    womens: [
+      "Stivers",
+      "Quicklane",
+      "Subaru",
+      "Stivers Ford South",
+      "Stivers Ford Birmingham",
+      "Stivers Montgomery",
+      "Stivers Prattville",
+    ],
+    accessory: [
+      "Ford",
+      "Hyundai",
+      "Chrysler",
+      "Dodge",
+      "Jeep",
+      "Ram",
+      "Subaru",
+    ],
+    customs: [],
+  },
+  stores: {
+    "Stivers Ford Montgomery, 4000 Eastern Blvd Montgomery, AL, 36116":
+      "STIFMO",
+    "Stivers Ford Montgomery, 500 Palisades Blvd, Birmingham, AL, 35209":
+      "STIFBI",
+    "Stivers Hyundai, 9950 Farrow Rd, Columbia, SC, 29203": "STIHCO",
+    "Stivers CDJR, 2209 Cobbs Ford Rd, Prattville, AL 36066": "STICPR",
+    "Stivers Decatur Subaru, 1950 Orion Dr, Decatur, GA 30033": "STISDE",
+    "Stivers Chevrolet, 111 Newland Road, Columbia, SC 29229": "STICCO",
+    "Stivers Ford South Atlanta, 4355 Jonesboro Rd, Union City, GA 30291":
+      "STIFSO",
+    "Stivers Ford Troy, 121 US-231, Troy, AL 36081": "STIFTR",
+  },
+  bypass_codes: ["STIVER"],
+
+  server_hostname: "https://mxfj3q6m01.execute-api.us-east-1.amazonaws.com",
+  account_reps: [
+    { name: "Louis Budbill", phone: "678-287-1659" },
+    { name: "Glenn Rodney", phone: "678-287-1608" },
+  ],
+  route_prefix: "/stivers",
+  paypal_not_supported: true,
+  password: "StiverS",
+};

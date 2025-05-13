@@ -3,7 +3,7 @@ import { config as StiversConfig } from "../configs/stivers";
 import { config as TameronConfig } from "../configs/tameron";
 import { config as NewCustomerConfig } from "../configs/newcustomer";
 import { config as GuardianConfig } from "../configs/guardian";
-import { config as CannonConfig } from "../configs/cannon";
+import { CannonConfig } from "guardian-common";
 import { config as HennessyConfig } from "../configs/hennessy";
 import { config as LeithConfig } from "../configs/leith";
 import { config as PohankaConfig } from "../configs/pohanka";
@@ -30,7 +30,7 @@ const allConfigs: Config[] = [
 
 export function getRoutePrefix(password: string): string | undefined {
   const config = allConfigs.find((config) => {
-    return (config.password === password);
+    return config.password === password;
   });
 
   return config ? config.route_prefix : undefined;

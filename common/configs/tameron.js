@@ -1,0 +1,33 @@
+export const config = {
+  title: "Tameron",
+  company_logo: "tameron.png",
+  logo_placements: ["Right Sleeve", "Front"],
+  show_modification_thumbnail: true,
+  minimum_apparel_order: true,
+  render_logo_preview: true,
+  embroideries: {
+    mens: ["Tameron"],
+    womens: ["Tameron"],
+    hat: ["Tameron"],
+    customs: [],
+  },
+  stores: {
+    "Tameron Honda, 9871 Justina Ave Daphne, AL 36526": "TAMHDA",
+    "Tameron Buick GMC, 27161 US - 98 Daphne, AL 36526": "TAMBDA",
+    "Tameron CDJR, 27161 US - 98 Daphne, AL 36526": "TAMCDA",
+    "Tameron Subaru, 1431 I-65 Service Road Mobile, AL 36606": "TAMSMO",
+    "Tameron Nissan, 1015 E. I65 Service Road South Mobile, AL 36606": "TAMNMO",
+    "Tameron Kia, 10611 Boney Ave D, Iberville, MS 39540": "TAMKDI",
+    "Tameron Kia Westbank, 1884 Westbank Expressway Harvey, LA 70058": "TAMKWE",
+  },
+  bypass_codes: ["TAMERO"],
+
+  server_hostname: "https://mxfj3q6m01.execute-api.us-east-1.amazonaws.com",
+  account_reps: [
+    { name: "Louis Budbill", phone: "678-287-1659" },
+    { name: "Glenn Rodney", phone: "678-287-1608" },
+  ],
+  route_prefix: "/tameron",
+  paypal_not_supported: true,
+  password: "TameroN",
+};
