@@ -76,14 +76,8 @@ export default function BasicTable() {
           <TableHead>
             <TableRow>
               <TableCell />
-              <TableCell align="center">Email</TableCell>
-              <TableCell align="center">First Name</TableCell>
-              <TableCell align="center">Last Name</TableCell>
               <TableCell align="center">Order Date</TableCell>
-              <TableCell align="center">Order Preview</TableCell>
-              <TableCell align="center">Items Purchased</TableCell>
-              <TableCell align="center">Store</TableCell>
-              <TableCell align="center">Transaction ID</TableCell>
+              <TableCell align="center">Order Name</TableCell>
             </TableRow>
           </TableHead>
           <TableBody>{rows()}</TableBody>

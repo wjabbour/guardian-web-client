@@ -62,7 +62,6 @@ export default function Row({ order, editClick, isAdmin }) {
     if (!isAdmin) return;
   }
 
-
   return (
     <Fragment>
       <TableRow sx={{ "& > *": { borderBottom: "unset" } }}>
@@ -75,18 +74,10 @@ export default function Row({ order, editClick, isAdmin }) {
             {open ? <KeyboardArrowUpIcon /> : <KeyboardArrowDownIcon />}
           </IconButton>
         </TableCell>
-        <TableCell align="center">{order.email}</TableCell>
-        <TableCell align="center">{order.first_name}</TableCell>
-        <TableCell align="center">{order.last_name}</TableCell>
         <TableCell align="center">
           {moment(parseInt(order.created_at)).format("MMMM DD, YYYY")}
         </TableCell>
-        <TableCell align="center">{`${cart[0].quantity} x ${cart[0].color} ${
-          cart[0].description || cart[0].code
-        }`}</TableCell>
-        <TableCell align="center">{cart.length}</TableCell>
-        <TableCell align="center">{order.store}</TableCell>
-        <TableCell align="center">{order.transaction_id || "N/A"}</TableCell>
+        <TableCell align="center">{`${order.first_name} ${order.last_name}`}</TableCell>
       </TableRow>
       <TableRow style={{ backgroundColor: "#fdf1bb" }}>
         <TableCell style={{ paddingBottom: 0, paddingTop: 0 }} colSpan={9}>
