@@ -8,6 +8,7 @@ import { GuardianCatalog } from "../catalogs/guardian";
 import { HennessyCatalog } from "../catalogs/hennessy";
 import { LeithCatalog } from "../catalogs/leith";
 import { PohankaCatalog } from "../catalogs/pohanka";
+import { NavarreCatalog } from "../catalogs/navarre";
 
 export const Catalog = function (): CatalogItem[] {
   const url = window.location.href;
@@ -30,6 +31,8 @@ export const Catalog = function (): CatalogItem[] {
   } else if (url.includes("leith")) {
     return LeithCatalog;
   } else if (url.includes("pohanka")) {
-    return PohankaCatalog;  
+    return PohankaCatalog; 
+  } else if (url.includes("navarre")) {
+    return NavarreCatalog;  
   }
 };

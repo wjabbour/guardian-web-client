@@ -1,0 +1,96 @@
+import { CatalogItem } from "../lib/interfaces";
+export const NavarreCatalog: CatalogItem[] = [
+    {
+        code: "600088V",
+        name: "Seat Covers",
+        fullname: "No-Slip Plastic Seat Covers (500/roll)",
+        colors: ["Plastic"],
+        type: "service",
+        default_color: "Plastic",
+        discount: [
+          { quantity: 500, price: 0.00 },      
+        ],
+        sizes: {
+          1: 0.00,
+        },
+      }, 
+      {
+        code: "3088",
+        name: "Floor Mats",
+        fullname: "Floor Mats/Coated Paper (500/bx)",
+        colors: ["White"],
+        type: "service",
+        default_color: "White",
+        discount: [
+          { quantity: 500, price: 0.00 },      
+        ],
+        sizes: {
+          1: 0.00,      
+        },
+      },
+      {
+        code: "K110",
+        name: "Port Authority UV Polo",
+        fullname: "Port Authority® Dry Zone® UV Micro-Mesh Polo",
+        colors: ["Deep Black", "Graphite", "True Royal"],
+        type: "mens",
+        default_color: "Deep Black",
+        sizes: {
+          Small: 8.24,
+          Medium: 8.24,
+          Large: 8.24,
+          XLarge: 8.24,
+          "2XLarge": 9.21,
+          "3XLarge": 11.15,
+          "4XLarge": 12.12,
+          "5XLarge": 14.06,
+          "6XLarge": 15.03,
+        },
+      },
+      {
+        code: "LK110",
+        name: "Port Authority UV Polo",
+        fullname: "Port Authority® Women's Dry Zone® UV Micro-Mesh Polo",
+        colors: ["Deep Black", "Graphite", "True Royal"],
+        type: "womens",
+        default_color: "Deep Black",
+        sizes: {
+          Small: 8.24,
+          Medium: 8.24,
+          Large: 8.24,
+          XLarge: 8.24,
+          "2XLarge": 9.21,
+          "3XLarge": 11.15,
+          "4XLarge": 12.12,
+        },
+      },
+      {
+        code: "ST350",
+        name: "Sport-Tek Competitor Tee",
+        fullname: "Sport-Tek® PosiCharge® Competitor™ Tee",
+        colors: ["Black", "Iron Grey"],
+        type: "mens",
+        default_color: "Black",
+        sizes: {
+          Small: 0.00,
+          Medium: 0.00,
+          Large: 0.00,
+          XLarge: 0.00,
+          "2XLarge": 0.00,
+          "3XLarge": 0.00,
+          "4XLarge": 0.00,
+        },
+      },
+      {
+        code: "C112",
+        name: "Port Authority Trucker Cap",
+        fullname: "Port Authority® Snapback Trucker Cap",
+        colors: ["Black White"],
+        type: "mens",
+        default_color: "Black White",
+        sizes: {
+          OSFA: 0.00,
+         },
+      },   
+    ];
+    

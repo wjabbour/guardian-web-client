@@ -10,6 +10,7 @@ import { pohankaConfig } from "./configs/pohanka";
 import { premierConfig } from "./configs/premier";
 import { stiversConfig } from "./configs/stivers";
 import { tameronConfig } from "./configs/tameron";
+import { NavarreConfig } from "./configs/navarre";
 
 export const logger = pino();
 
@@ -56,6 +57,8 @@ export function getConfigValue(configProperty: string, config: string): any {
       return stiversConfig[configProperty];
     case "Tameron":
       return tameronConfig[configProperty];
+    case "Navarre":
+      return NavarreConfig[configProperty];
   }
 }
 
@@ -162,6 +165,16 @@ const STORES = {
     "GUAPRO",
 
   "Pohanka Hyundai , 2015 N Salisbury, Salisbury, MD 21801": "POHHSA",
+
+  "Navarre Chevrolet, 1300 East College St, Lake Charles, LA 70607": "NAVCLA",
+  "Navarre Chevrolet of Sulphur, 1620 Beglis Parkway, Sulphur, LA 70663": "NAVCSU",
+  "Navarre Hyundai of Lake Charles, 1310 East College St, Lake Charles, LA 70607": "NAVHLK",
+  "Navarre Buick GMC, 3690 Gerstner Memorial Drive, Lake Charles, LA 70607": "NAVBLA",
+  "Navarre Honda, 1320 East College St, Lake Charles, LA 70607": "NAVHLA",
+  "Navarre Cadillac, 1300 East College St, Lake Charles, LA 70607": "NAVCLK",
+  "Navarre Chevrolet Inc., 4441 Jackson St EXT, Alexandria, LA 71303": "VAUMAX",
+  "Navarre Jeep Ram Dodge Chrysler, 299 S Cities Service Hwy, Sulphur, LA 70663": "NAVCSL",
+  "Navarre Nissan, 1700 Siebarth Dr, Lake Charles, LA 70615": "NAVNLA",
 };
 
 export function getStoreCode(store) {
