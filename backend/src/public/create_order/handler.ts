@@ -2,7 +2,6 @@ import { APIGatewayProxyResult, APIGatewayEvent } from "aws-lambda";
 import {
   logger,
   addCors,
-  getStoreCode,
   getCatalogItemDescription,
   sendEmail,
   getCatalogItem,
@@ -15,6 +14,7 @@ import {
 } from "@aws-sdk/client-secrets-manager";
 import { Catalog } from "../catalog";
 import { dynamoClient } from "../dynamoClient";
+import { getStoreCode } from "guardian-common";
 
 const sm = new SecretsManagerClient({ region: "us-east-1" });
 const command = new GetSecretValueCommand({
@@ -40,20 +40,6 @@ export const handler = async (
     const first_name = body.first_name;
     const customer_po = body.customer_po || "";
     const last_name = body.last_name;
-    const store = getStoreCode(body.store);
-    logger.info({ message: "Determined store code", store });
-
-    if (!store) {
-      logger.warn({ message: "Unrecognized store" });
-      return {
-        statusCode: 400,
-        body: JSON.stringify({
-          message:
-            "Unrecognized store. Please contact your account representative.",
-        }),
-        headers: addCors(event.headers?.origin),
-      };
-    }
 
     const company_name = body.companyName;
 
@@ -65,6 +51,21 @@ export const handler = async (
           message:
             "Unrecognized company name. Please contact your account representative.",
         }),
+      };
+    }
+
+    const store = getStoreCode(company_name, body.store);
+    logger.info({ message: "Determined store code", store });
+
+    if (!store) {
+      logger.warn({ message: "Unrecognized store" });
+      return {
+        statusCode: 400,
+        body: JSON.stringify({
+          message:
+            "Unrecognized store. Please contact your account representative.",
+        }),
+        headers: addCors(event.headers?.origin),
       };
     }
 
