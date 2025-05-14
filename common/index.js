@@ -8,16 +8,6 @@ import { config as PremierConfig } from "./configs/premier";
 import { config as StiversConfig } from "./configs/stivers";
 import { config as TameronConfig } from "./configs/tameron";
 
-export function getStore(store_code) {
-  const keys = Object.keys(STORES);
-
-  for (let i = 0; i < keys.length; i++) {
-    if (STORES[keys[i]] === store_code) {
-      return keys[i];
-    }
-  }
-}
-
 const DEFAULT_CONFIG = {
   title: "Guardian",
 };
@@ -37,10 +27,16 @@ const allConfigs = [
   PohankaConfig,
 ];
 
-export function getStoreCode(companyName, storeCode) {
-  const config = allConfigs.find(
-    (config) => config.title === companyName
-  );
+export function getStoreCode(companyName, storeAddress) {
+  const config = allConfigs.find((config) => config.title === companyName);
+
+  for (const [address, code] of Object.entries(config.stores)) {
+    if (address === storeAddress) return code;
+  }
+}
+
+export function getStore(companyName, storeCode) {
+  const config = allConfigs.find((config) => config.title === companyName);
 
   for (const [address, code] of Object.entries(config.stores)) {
     if (code === storeCode) return address;
@@ -82,5 +78,3 @@ export function getConfigValue(val) {
     return DEFAULT_CONFIG[val];
   }
 }
-
-export { CannonConfig };

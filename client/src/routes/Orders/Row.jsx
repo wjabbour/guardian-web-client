@@ -14,7 +14,7 @@ import { SvgIcon } from "@mui/material";
 import Collapse from "@mui/material/Collapse";
 import TextField from "@mui/material/TextField";
 import { update_historical_order } from "../../lib/http";
-import { getStoreCode } from "guardian-common";
+import { getStore } from "guardian-common";
 
 export default function Row({ order, editClick, isAdmin }) {
   const cart = [];
@@ -81,7 +81,7 @@ export default function Row({ order, editClick, isAdmin }) {
         </TableCell>
         <TableCell align="center">{`${order.first_name} ${order.last_name}`}</TableCell>
         <TableCell align="center">{`${
-          getStoreCode(order.company_name, order.store).split(",")?.[0] ??
+          getStore(order.company_name, order.store).split(",")?.[0] ??
           order.company_name
         }`}</TableCell>
       </TableRow>
