@@ -7,6 +7,7 @@ import { config as PohankaConfig } from "./configs/pohanka";
 import { config as PremierConfig } from "./configs/premier";
 import { config as StiversConfig } from "./configs/stivers";
 import { config as TameronConfig } from "./configs/tameron";
+import { config as NavarreConfig } from "./configs/navarre";
 
 const DEFAULT_CONFIG = {
   title: "Guardian",
@@ -25,6 +26,7 @@ const allConfigs = [
   LeithConfig,
   HennessyConfig,
   PohankaConfig,
+  NavarreConfig,
 ];
 
 export function getStoreCode(companyName, storeAddress) {
@@ -73,6 +75,8 @@ export function getConfigValue(val) {
     return HennessyConfig[val];
   } else if (url.includes("pohanka")) {
     return PohankaConfig[val];
+  } else if (url.includes("navarre")) {
+    return NavarreConfig[val];
   } else {
     // when the user is on gpc81.com landing page we need to display a string in the browser tab
     return DEFAULT_CONFIG[val];
