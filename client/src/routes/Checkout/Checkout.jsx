@@ -265,7 +265,7 @@ export default function Checkout() {
               <MenuItem value="">
                 <em>None</em>
               </MenuItem>
-              {getConfigValue("stores").map((store) => {
+              {Object.keys(getConfigValue("stores")).map((store) => {
                 return <MenuItem value={store}>{store}</MenuItem>;
               })}
             </Select>
