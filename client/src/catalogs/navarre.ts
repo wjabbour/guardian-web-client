@@ -107,7 +107,7 @@ export const NavarreCatalog: CatalogItem[] = [
     },
   },
   {
-    code: "Navarre Collision",
+    code: "NAVARRE-COLLISION",
     name: "Full Color Sticker",
     fullname: "2 x 2 Navarre Collision Full Color Sticker",
     colors: ["Full Color"],
