@@ -1,4 +1,4 @@
-import CannonConfig from "./configs/cannon";
+import { config as CannonConfig } from "./configs/cannon";
 
 export function getStoreCode(store) {
   return STORES[store];
