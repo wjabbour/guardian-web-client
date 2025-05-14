@@ -8,7 +8,7 @@ import Footer from "../components/Footer/Footer";
 import { useState, createContext } from "react";
 import PasswordEntryDialog from "../components/PasswordEntryDialog";
 import { useNextGenRouting } from "../hooks/useNextGenRouting";
-import { getRoutePrefix } from "../lib/config";
+import { getRoutePrefix } from "guardian-common";
 
 export const UserContext = createContext({ isLoggedIn: false });
 const CartContext = createContext({});

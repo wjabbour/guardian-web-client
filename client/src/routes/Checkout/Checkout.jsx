@@ -6,7 +6,7 @@ import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
-import { getConfigValue } from "../../lib/config";
+import { getConfigValue } from "guardian-common";
 import {
   calculate_item_count,
   calculate_item_price,

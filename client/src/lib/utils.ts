@@ -1,4 +1,4 @@
-import { getConfigValue } from "./config";
+import { getConfigValue } from "guardian-common";
 
 export function getDomainAwarePath(destination) {
   const prefix = getConfigValue("route_prefix");

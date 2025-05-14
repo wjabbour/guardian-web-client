@@ -1,6 +1,6 @@
 import styles from "./Navbar.module.scss";
 import { useNavigate } from "react-router-dom";
-import { getConfigValue } from "../../lib/config";
+import { getConfigValue } from "guardian-common";
 import { getDomainAwarePath } from "../../lib/utils";
 
 export default function Navbar(props) {

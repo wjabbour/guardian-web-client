@@ -1,5 +1,5 @@
 import styles from "./Thumbnail.module.scss";
-import { getConfigValue } from "../../lib/config";
+import { getConfigValue } from "guardian-common";
 
 export default function Thumbnail({ img }) {
   // if there is no embroidery selected, we shouldnt show a thumbnail

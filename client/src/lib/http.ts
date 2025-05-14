@@ -1,5 +1,5 @@
 import axios from "axios";
-import { getConfigValue } from "./config";
+import { getConfigValue } from "guardian-common";
 
 function handleError(e, error_message?) {
   const message =

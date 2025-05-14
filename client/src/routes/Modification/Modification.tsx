@@ -11,7 +11,7 @@ import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 import Alert from "@mui/material/Alert";
 import { getDomainAwarePath, getEmbroidery } from "../../lib/utils";
-import { getConfigValue } from "../../lib/config";
+import { getConfigValue } from "guardian-common";
 import Thumbnail from "./Thumbnail";
 import ColorSelector from "./ColorSelector";
 import QuantitySelector from "./QuantitySelector";
