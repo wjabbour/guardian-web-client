@@ -128,7 +128,7 @@ export const NavarreCatalog: CatalogItem[] = [
   {
     code: "NAVCLA-31SD-504429A",
     name: "CARS Decal",
-    fullname: "CARS Decal - 4.5 x 1.11",
+    fullname: "CARS Decal - 4.5 in. x 1.11 in.",
     colors: ["White"],
     type: "customs",
     default_color: "White",
@@ -146,7 +146,7 @@ export const NavarreCatalog: CatalogItem[] = [
   {
     code: "NAVCLA-31SD-504428A",
     name: "TRUCKS Decal",
-    fullname: "TRUCKS Decal - 6 x 1.48",
+    fullname: "TRUCKS Decal - 6 in. x 1.48 in.",
     colors: ["White"],
     type: "customs",
     default_color: "White",
@@ -375,7 +375,7 @@ export const NavarreCatalog: CatalogItem[] = [
   },
   {
     code: "7293",
-    name: "Inspection Frm- CHRYSLER",
+    name: "Inspection Form CHRYSLER",
     fullname: "Multi-Point Inspection Form (Chrysler) 3 Part (250/pk)",
     colors: ["White"],
     type: "service",
