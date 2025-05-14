@@ -92,12 +92,16 @@ export default function Row({ order, editClick, isAdmin }) {
               <Table style={{ marginBottom: "35px" }}>
                 <TableHead>
                   <TableCell />
-                  <TableCell style={{ fontWeight: "bold" }}>Code</TableCell>
+                  <TableCell style={{ fontWeight: "bold" }}>
+                    Item Code
+                  </TableCell>
+                  <TableCell style={{ fontWeight: "bold" }}>Quantity</TableCell>
+                  <TableCell style={{ fontWeight: "bold" }}>Price</TableCell>
                   <TableCell style={{ fontWeight: "bold" }}>
                     Description
                   </TableCell>
                   <TableCell style={{ fontWeight: "bold" }}>Color</TableCell>
-                  <TableCell style={{ fontWeight: "bold" }}>Quantity</TableCell>
+
                   <TableCell style={{ fontWeight: "bold" }}>
                     Embroidery
                   </TableCell>
@@ -122,9 +126,11 @@ export default function Row({ order, editClick, isAdmin }) {
                         </SvgIcon>
                       </TableCell>
                       <TableCell>{row.code}</TableCell>
+                      <TableCell>{row.quantity}</TableCell>
+                      <TableCell>{`$${row.price ?? 0.0}`}</TableCell>
                       <TableCell>{row.description}</TableCell>
                       <TableCell>{row.color}</TableCell>
-                      <TableCell>{row.quantity}</TableCell>
+
                       <TableCell>{row.embroidery}</TableCell>
                       <TableCell>{row.size}</TableCell>
                       {edit && isAdmin && last_clicked_idx === i && (
