@@ -14,6 +14,7 @@ import { SvgIcon } from "@mui/material";
 import Collapse from "@mui/material/Collapse";
 import TextField from "@mui/material/TextField";
 import { update_historical_order } from "../../lib/http";
+import { getStoreCode } from "guardian-common";
 
 export default function Row({ order, editClick, isAdmin }) {
   const cart = [];
@@ -62,6 +63,7 @@ export default function Row({ order, editClick, isAdmin }) {
     if (!isAdmin) return;
   }
 
+  console.log(order);
   return (
     <Fragment>
       <TableRow sx={{ "& > *": { borderBottom: "unset" } }}>
@@ -78,6 +80,10 @@ export default function Row({ order, editClick, isAdmin }) {
           {moment(parseInt(order.created_at)).format("MMMM DD, YYYY")}
         </TableCell>
         <TableCell align="center">{`${order.first_name} ${order.last_name}`}</TableCell>
+        <TableCell align="center">{`${
+          getStoreCode(order.company_name, order.store).split(",")?.[0] ??
+          order.company_name
+        }`}</TableCell>
       </TableRow>
       <TableRow style={{ backgroundColor: "#fdf1bb" }}>
         <TableCell style={{ paddingBottom: 0, paddingTop: 0 }} colSpan={9}>

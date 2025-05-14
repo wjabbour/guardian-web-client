@@ -8,10 +8,6 @@ import { config as PremierConfig } from "./configs/premier";
 import { config as StiversConfig } from "./configs/stivers";
 import { config as TameronConfig } from "./configs/tameron";
 
-export function getStoreCode(store) {
-  return STORES[store];
-}
-
 export function getStore(store_code) {
   const keys = Object.keys(STORES);
 
@@ -40,6 +36,16 @@ const allConfigs = [
   HennessyConfig,
   PohankaConfig,
 ];
+
+export function getStoreCode(companyName, storeCode) {
+  const config = allConfigs.find(
+    (config) => config.title === companyName
+  );
+
+  for (const [address, code] of Object.entries(config.stores)) {
+    if (code === storeCode) return address;
+  }
+}
 
 export function getRoutePrefix(password) {
   const config = allConfigs.find((config) => {
