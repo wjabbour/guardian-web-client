@@ -43,7 +43,3 @@ interface Order {
   email: string;
   order_id: string; // this is the id from Paypal. We need this during capture to find the order to set paid=true
 }
-
-export interface Config {
-  email_recipients: string[]; // determines who receives the order emails
-}

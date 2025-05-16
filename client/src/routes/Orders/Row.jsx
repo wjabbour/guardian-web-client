@@ -14,6 +14,7 @@ import { SvgIcon } from "@mui/material";
 import Collapse from "@mui/material/Collapse";
 import TextField from "@mui/material/TextField";
 import { update_historical_order } from "../../lib/http";
+import { getStore } from "guardian-common";
 
 export default function Row({ order, editClick, isAdmin }) {
   const cart = [];
@@ -62,6 +63,7 @@ export default function Row({ order, editClick, isAdmin }) {
     if (!isAdmin) return;
   }
 
+  console.log(order);
   return (
     <Fragment>
       <TableRow sx={{ "& > *": { borderBottom: "unset" } }}>
@@ -78,6 +80,10 @@ export default function Row({ order, editClick, isAdmin }) {
           {moment(parseInt(order.created_at)).format("MMMM DD, YYYY")}
         </TableCell>
         <TableCell align="center">{`${order.first_name} ${order.last_name}`}</TableCell>
+        <TableCell align="center">{`${
+          getStore(order.company_name, order.store).split(",")?.[0] ??
+          order.company_name
+        }`}</TableCell>
       </TableRow>
       <TableRow style={{ backgroundColor: "#fdf1bb" }}>
         <TableCell style={{ paddingBottom: 0, paddingTop: 0 }} colSpan={9}>
@@ -86,16 +92,19 @@ export default function Row({ order, editClick, isAdmin }) {
               <Table style={{ marginBottom: "35px" }}>
                 <TableHead>
                   <TableCell />
-                  <TableCell style={{ fontWeight: "bold" }}>Code</TableCell>
+                  <TableCell style={{ fontWeight: "bold" }}>
+                    Item Code
+                  </TableCell>
+                  <TableCell style={{ fontWeight: "bold" }}>Quantity</TableCell>
+                  <TableCell style={{ fontWeight: "bold" }}>Price</TableCell>
                   <TableCell style={{ fontWeight: "bold" }}>
                     Description
                   </TableCell>
+                  <TableCell style={{ fontWeight: "bold" }}>Size</TableCell>
                   <TableCell style={{ fontWeight: "bold" }}>Color</TableCell>
-                  <TableCell style={{ fontWeight: "bold" }}>Quantity</TableCell>
                   <TableCell style={{ fontWeight: "bold" }}>
                     Embroidery
                   </TableCell>
-                  <TableCell style={{ fontWeight: "bold" }}>Size</TableCell>
                   <TableCell style={{ fontWeight: "bold" }}>
                     Customer PO
                   </TableCell>
@@ -116,11 +125,14 @@ export default function Row({ order, editClick, isAdmin }) {
                         </SvgIcon>
                       </TableCell>
                       <TableCell>{row.code}</TableCell>
-                      <TableCell>{row.description}</TableCell>
-                      <TableCell>{row.color}</TableCell>
                       <TableCell>{row.quantity}</TableCell>
-                      <TableCell>{row.embroidery}</TableCell>
+                      <TableCell>{`$${row.price ?? 0.0}`}</TableCell>
+                      <TableCell>{row.description}</TableCell>
                       <TableCell>{row.size}</TableCell>
+                      <TableCell>{row.color}</TableCell>
+
+                      <TableCell>{row.embroidery}</TableCell>
+
                       {edit && isAdmin && last_clicked_idx === i && (
                         <Fragment>
                           <TableCell>

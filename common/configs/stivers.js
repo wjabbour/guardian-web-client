@@ -1,6 +1,4 @@
-import { Config } from "../lib/interfaces";
-
-export const config: Config = {
+export const config = {
   title: "Stivers",
   company_logo: "stivers.png",
   logo_placements: ["Right Sleeve", "Left Chest"],
@@ -47,16 +45,24 @@ export const config: Config = {
     ],
     customs: [],
   },
-  stores: [
-    "Stivers Ford Montgomery, 4000 Eastern Blvd Montgomery, AL, 36116",
-    "Stivers Ford Montgomery, 500 Palisades Blvd, Birmingham, AL, 35209",
-    "Stivers Hyundai, 9950 Farrow Rd, Columbia, SC, 29203",
-    "Stivers CDJR, 2209 Cobbs Ford Rd, Prattville, AL 36066",
-    "Stivers Decatur Subaru, 1950 Orion Dr, Decatur, GA 30033",
-    "Stivers Chevrolet, 111 Newland Road, Columbia, SC 29229",
-    "Stivers Ford South Atlanta, 4355 Jonesboro Rd, Union City, GA 30291",
-    "Stivers Ford Troy, 121 US-231, Troy, AL 36081",    
+  email_recipients: [
+    "lbudbill@gpcorp.com",
+    "lbudbell@comcast.net",
+    "doubleujabbour@gmail.com",
   ],
+  stores: {
+    "Stivers Ford Montgomery, 4000 Eastern Blvd Montgomery, AL, 36116":
+      "STIFMO",
+    "Stivers Ford Montgomery, 500 Palisades Blvd, Birmingham, AL, 35209":
+      "STIFBI",
+    "Stivers Hyundai, 9950 Farrow Rd, Columbia, SC, 29203": "STIHCO",
+    "Stivers CDJR, 2209 Cobbs Ford Rd, Prattville, AL 36066": "STICPR",
+    "Stivers Decatur Subaru, 1950 Orion Dr, Decatur, GA 30033": "STISDE",
+    "Stivers Chevrolet, 111 Newland Road, Columbia, SC 29229": "STICCO",
+    "Stivers Ford South Atlanta, 4355 Jonesboro Rd, Union City, GA 30291":
+      "STIFSO",
+    "Stivers Ford Troy, 121 US-231, Troy, AL 36081": "STIFTR",
+  },
   bypass_codes: ["STIVER"],
 
   server_hostname: "https://mxfj3q6m01.execute-api.us-east-1.amazonaws.com",

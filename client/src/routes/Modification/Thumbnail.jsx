@@ -1,9 +1,9 @@
 import styles from "./Thumbnail.module.scss";
-import { getConfigValue } from "../../lib/config";
+import { getWebConfigValue } from "guardian-common";
 
 export default function Thumbnail({ img }) {
   // if there is no embroidery selected, we shouldnt show a thumbnail
-  const show = img !== "" && getConfigValue("show_modification_thumbnail");
+  const show = img !== "" && getWebConfigValue("show_modification_thumbnail");
 
   function getImagePath(logo_name) {
     return `/images/${logo_name.toLowerCase().split(" ").join("_")}.png`;

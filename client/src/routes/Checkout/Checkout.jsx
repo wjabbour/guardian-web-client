@@ -6,7 +6,7 @@ import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
-import { getConfigValue } from "../../lib/config";
+import { getWebConfigValue } from "guardian-common";
 import {
   calculate_item_count,
   calculate_item_price,
@@ -47,7 +47,7 @@ export default function Checkout() {
   const [snackbarText, setSnackbarText] = useState("");
   const [errorSnackbarOpen, setErrorSnackbarOpen] = useState(false);
   const [errorSnackbarText, setErrorSnackbarText] = useState("");
-  const isPayPalSupported = getConfigValue("paypal_not_supported") !== true;
+  const isPayPalSupported = getWebConfigValue("paypal_not_supported") !== true;
   /*
     a bit hacky, if someone places an order on tameron and they have at least
     one apparel item, then we want to ensure that they order at least 12 total apparel (but we should
@@ -186,7 +186,7 @@ export default function Checkout() {
   const handle_code = (event) => {
     set_code(event.target.value.toUpperCase());
     if (
-      getConfigValue("bypass_codes").includes(event.target.value.toUpperCase())
+      getWebConfigValue("bypass_codes").includes(event.target.value.toUpperCase())
     ) {
       set_bypass_paypal(true);
     }
@@ -265,7 +265,7 @@ export default function Checkout() {
               <MenuItem value="">
                 <em>None</em>
               </MenuItem>
-              {getConfigValue("stores").map((store) => {
+              {Object.keys(getWebConfigValue("stores")).map((store) => {
                 return <MenuItem value={store}>{store}</MenuItem>;
               })}
             </Select>

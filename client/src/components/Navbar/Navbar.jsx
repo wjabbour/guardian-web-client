@@ -1,6 +1,6 @@
 import styles from "./Navbar.module.scss";
 import { useNavigate } from "react-router-dom";
-import { getConfigValue } from "../../lib/config";
+import { getWebConfigValue } from "guardian-common";
 import { getDomainAwarePath } from "../../lib/utils";
 
 export default function Navbar(props) {
@@ -32,7 +32,7 @@ export default function Navbar(props) {
       <div className={styles.stivers}>
         <img
           className={styles.logo}
-          src={`/images/${getConfigValue("company_logo")}`}
+          src={`/images/${getWebConfigValue("company_logo")}`}
           onClick={() => navigate(getDomainAwarePath("/"))}
         ></img>
       </div>

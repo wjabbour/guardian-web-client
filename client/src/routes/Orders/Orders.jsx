@@ -78,6 +78,7 @@ export default function BasicTable() {
               <TableCell />
               <TableCell align="center">Order Date</TableCell>
               <TableCell align="center">Order Name</TableCell>
+              <TableCell align="center">Store</TableCell>
             </TableRow>
           </TableHead>
           <TableBody>{rows()}</TableBody>

@@ -1,6 +1,4 @@
-import { Config } from "../lib/interfaces";
-
-export const config: Config = {
+export const config = {
   title: "Pohanka",
   company_logo: "pohanka.png",
   logo_placements: [
@@ -26,7 +24,15 @@ export const config: Config = {
     bodyshop: [],
     parts: [],
   },
-  stores: ["Pohanka Hyundai , 2015 N Salisbury, Salisbury, MD 21801"],
+  email_recipients: [
+    "lbudbill@gpcorp.com",
+    "lbudbell@comcast.net",
+    "dmayweather@gpcorp.com",
+    "doubleujabbour@gmail.com",
+  ],
+  stores: {
+    "Pohanka Hyundai , 2015 N Salisbury, Salisbury, MD 21801": "POHHSA",
+  },
   bypass_codes: ["POHANK"],
   server_hostname: "https://mxfj3q6m01.execute-api.us-east-1.amazonaws.com",
   account_reps: [{ name: "Dennis Mayweather", phone: "678-287-1625" }],
