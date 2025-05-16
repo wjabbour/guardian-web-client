@@ -10,6 +10,7 @@ import { pohankaConfig } from "./configs/pohanka";
 import { premierConfig } from "./configs/premier";
 import { stiversConfig } from "./configs/stivers";
 import { tameronConfig } from "./configs/tameron";
+import { NavarreConfig } from "./configs/navarre";
 import { getStore } from "guardian-common";
 
 export const logger = pino();
