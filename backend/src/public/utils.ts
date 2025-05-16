@@ -57,6 +57,8 @@ export function getConfigValue(configProperty: string, config: string): any {
       return stiversConfig[configProperty];
     case "Tameron":
       return tameronConfig[configProperty];
+    case "Navarre":
+      return NavarreConfig[configProperty];
   }
 }
 

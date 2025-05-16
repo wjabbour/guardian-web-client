@@ -7,6 +7,7 @@ import { LeithCatalog } from "./catalogs/leith";
 import { CatalogItem } from "./interfaces";
 import { HennessyCatalog } from "./catalogs/hennessy";
 import { PohankaCatalog } from "./catalogs/pohanka";
+import { NavarreCatalog } from "./catalogs/navarre";
 
 export const Catalog = function (companyName: string): CatalogItem[] {
   if (companyName === "Tameron") {
@@ -25,6 +26,8 @@ export const Catalog = function (companyName: string): CatalogItem[] {
     return LeithCatalog;
   } else if (companyName === "Pohanka") {
     return PohankaCatalog;
+  } else if (companyName === "Navarre") {
+    return NavarreCatalog;
 
   }
 };

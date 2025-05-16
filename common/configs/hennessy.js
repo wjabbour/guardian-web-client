@@ -16,6 +16,7 @@ export const config = {
       "Porsche",
       "Porsche Atlanta NW",
       "Porsche North Atl",
+      "Hennessy Vehicle Buying",
     ],
     mens: [
       "Cadillac",
@@ -27,6 +28,7 @@ export const config = {
       "Porsche",
       "Porsche Atlanta NW",
       "Porsche North Atl",
+      "Hennessy Vehicle Buying",
     ],
     womens: [
       "Cadillac",
@@ -38,6 +40,7 @@ export const config = {
       "Porsche",
       "Porsche Atlanta NW",
       "Porsche North Atl",
+      "Hennessy Vehicle Buying",
     ],
     accessory: [
       "Cadillac",
@@ -49,6 +52,7 @@ export const config = {
       "Porsche",
       "Porsche Atlanta NW",
       "Porsche North Atl",
+      "Hennessy Vehicle Buying",
     ],
     customs: [],
     office: [],
