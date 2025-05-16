@@ -1,5 +1,3 @@
-import { Config } from "../lib/interfaces";
-
 export const config = {
   title: "Navarre",
   company_logo: "navarre.png",
