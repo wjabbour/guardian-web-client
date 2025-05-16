@@ -1,5 +1,5 @@
 import axios from "axios";
-import { getConfigValue } from "guardian-common";
+import { getWebConfigValue } from "guardian-common";
 
 function handleError(e, error_message?) {
   const message =
@@ -14,11 +14,11 @@ function handleError(e, error_message?) {
 }
 
 export async function create_order(order) {
-  const body = { ...order, companyName: getConfigValue("title") };
+  const body = { ...order, companyName: getWebConfigValue("title") };
 
   try {
     const response = await axios.post(
-      `${getConfigValue("server_hostname")}/v1/create-order`,
+      `${getWebConfigValue("server_hostname")}/v1/create-order`,
       body
     );
     return { success: { data: response.data }, error: null };
@@ -28,10 +28,10 @@ export async function create_order(order) {
 }
 
 export async function retrieve_orders() {
-  const body = { companyName: getConfigValue("title") };
+  const body = { companyName: getWebConfigValue("title") };
   try {
     const response = await axios.post(
-      `${getConfigValue("server_hostname")}/v1/retrieve-orders`,
+      `${getWebConfigValue("server_hostname")}/v1/retrieve-orders`,
       body
     );
     return { success: { data: response.data }, error: null };
@@ -41,11 +41,11 @@ export async function retrieve_orders() {
 }
 
 export async function capture_order(order_id) {
-  const body = { order_id, companyName: getConfigValue("title") };
+  const body = { order_id, companyName: getWebConfigValue("title") };
 
   try {
     const response = await axios.post(
-      `${getConfigValue("server_hostname")}/v1/capture-order`,
+      `${getWebConfigValue("server_hostname")}/v1/capture-order`,
       body
     );
     return { success: { data: response.data }, error: null };
@@ -59,7 +59,7 @@ export async function update_historical_order(email, created_at, cart) {
 
   try {
     const response = await axios.post(
-      `${getConfigValue("server_hostname")}/v1/update-historical-order`,
+      `${getWebConfigValue("server_hostname")}/v1/update-historical-order`,
       body
     );
     return { success: { data: response.data }, error: null };

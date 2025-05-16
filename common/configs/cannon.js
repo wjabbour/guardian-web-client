@@ -14,6 +14,11 @@ export const config = {
     office: [],
     service: [],
   },
+  email_recipients: [
+    "lbudbill@gpcorp.com",
+    "lbudbell@comcast.net",
+    "doubleujabbour@gmail.com",
+  ],
   stores: {
     "Cannon Ford of Cleveland": "CANFCL",
     "Cannon Ford of Starkville": "CANLST",

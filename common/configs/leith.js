@@ -11,6 +11,11 @@ export const config = {
     hat: [],
     customs: [],
   },
+  email_recipients: [
+    "lbudbill@gpcorp.com",
+    "lbudbell@comcast.net",
+    "doubleujabbour@gmail.com",
+  ],
   stores: {
     "Leith Acura, 2300 Capital Summit Court, Raleigh, NC 27616": "10118LEIARA",
     "Chris Leith Automotive, PO Box 1707, Wake Forest, NC 27588": "CHRIWA",
@@ -32,7 +37,6 @@ export const config = {
     "Leith Chrysler Jeep, 5500 Capital Blvd, Raleigh, NC 27619": "LETCRA",
   },
   bypass_codes: ["LEITH"],
-
   server_hostname: "https://mxfj3q6m01.execute-api.us-east-1.amazonaws.com",
   account_reps: [
     { name: "Bob Sugden", phone: "678-287-1662" },

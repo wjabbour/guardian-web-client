@@ -11,7 +11,7 @@ import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 import Alert from "@mui/material/Alert";
 import { getDomainAwarePath, getEmbroidery } from "../../lib/utils";
-import { getConfigValue } from "guardian-common";
+import { getWebConfigValue } from "guardian-common";
 import Thumbnail from "./Thumbnail";
 import ColorSelector from "./ColorSelector";
 import QuantitySelector from "./QuantitySelector";
@@ -46,7 +46,7 @@ export default function Modification() {
   const [price] = useState(item.sizes[selected_size]);
   const [embroidery, setEmbroidery] = useState("");
   const [placement, setPlacement] = useState("Left Chest");
-  const logo_placements = getConfigValue("logo_placements") as string[];
+  const logo_placements = getWebConfigValue("logo_placements") as string[];
   const [customsOrder, setCustomsOrder] = useState({});
 
   const handleChange = (event) => {

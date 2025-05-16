@@ -100,12 +100,11 @@ export default function Row({ order, editClick, isAdmin }) {
                   <TableCell style={{ fontWeight: "bold" }}>
                     Description
                   </TableCell>
+                  <TableCell style={{ fontWeight: "bold" }}>Size</TableCell>
                   <TableCell style={{ fontWeight: "bold" }}>Color</TableCell>
-
                   <TableCell style={{ fontWeight: "bold" }}>
                     Embroidery
                   </TableCell>
-                  <TableCell style={{ fontWeight: "bold" }}>Size</TableCell>
                   <TableCell style={{ fontWeight: "bold" }}>
                     Customer PO
                   </TableCell>
@@ -129,10 +128,11 @@ export default function Row({ order, editClick, isAdmin }) {
                       <TableCell>{row.quantity}</TableCell>
                       <TableCell>{`$${row.price ?? 0.0}`}</TableCell>
                       <TableCell>{row.description}</TableCell>
+                      <TableCell>{row.size}</TableCell>
                       <TableCell>{row.color}</TableCell>
 
                       <TableCell>{row.embroidery}</TableCell>
-                      <TableCell>{row.size}</TableCell>
+
                       {edit && isAdmin && last_clicked_idx === i && (
                         <Fragment>
                           <TableCell>

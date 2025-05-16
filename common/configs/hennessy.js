@@ -62,6 +62,7 @@ export const config = {
     bodyshop: [],
     parts: [],
   },
+  email_recipients: ["lbudbill@gpcorp.com", "lbudbell@comcast.net"],
   stores: {
     "Hennessy Jaguar Land Rover, 3040 Piedmont Rd NE, Atlanta, GA 30305":
       "HENCAT",

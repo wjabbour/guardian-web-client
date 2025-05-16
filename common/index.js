@@ -53,7 +53,7 @@ export function getRoutePrefix(password) {
   return config ? config.route_prefix : undefined;
 }
 
-export function getConfigValue(val) {
+export function getWebConfigValue(val) {
   const url = window.location.href;
   if (url.includes("localhost:3000")) {
     return HennessyConfig[val];
@@ -80,5 +80,28 @@ export function getConfigValue(val) {
   } else {
     // when the user is on gpc81.com landing page we need to display a string in the browser tab
     return DEFAULT_CONFIG[val];
+  }
+}
+
+export function getConfigValue(val, config) {
+  switch (config) {
+    case "Cannon":
+      return CannonConfig[val];
+    case "Guardian":
+      return GuardianConfig[val];
+    case "Hennessy":
+      return HennessyConfig[val];
+    case "Leith":
+      return LeithConfig[val];
+    case "Pohanka":
+      return PohankaConfig[val];
+    case "Premier":
+      return PremierConfig[val];
+    case "Stivers":
+      return StiversConfig[val];
+    case "Tameron":
+      return TameronConfig[val];
+    case "Navarre":
+      return NavarreConfig[val];
   }
 }

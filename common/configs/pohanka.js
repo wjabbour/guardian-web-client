@@ -24,6 +24,11 @@ export const config = {
     bodyshop: [],
     parts: [],
   },
+  email_recipients: [
+    "lbudbill@gpcorp.com",
+    "lbudbell@comcast.net",
+    "doubleujabbour@gmail.com",
+  ],
   stores: {
     "Pohanka Hyundai , 2015 N Salisbury, Salisbury, MD 21801": "POHHSA",
   },

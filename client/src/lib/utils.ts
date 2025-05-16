@@ -1,7 +1,7 @@
-import { getConfigValue } from "guardian-common";
+import { getWebConfigValue } from "guardian-common";
 
 export function getDomainAwarePath(destination) {
-  const prefix = getConfigValue("route_prefix");
+  const prefix = getWebConfigValue("route_prefix");
   const url = window.location.href;
   const shouldPrefixRoute = url.includes("gpc81") || url.includes("localhost");
 
@@ -29,5 +29,5 @@ export function calculate_item_price(cart) {
 }
 
 export function getEmbroidery(type) {
-  return getConfigValue("embroideries")[type];
+  return getWebConfigValue("embroideries")[type];
 }

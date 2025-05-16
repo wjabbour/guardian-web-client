@@ -2,16 +2,7 @@ import pino from "pino";
 import { Catalog } from "./catalog";
 import dayjs from "dayjs";
 import { SendRawEmailCommand, SESClient } from "@aws-sdk/client-ses";
-import { cannonConfig } from "./configs/cannon";
-import { guardianConfig } from "./configs/guardian";
-import { hennessyConfig } from "./configs/hennessy";
-import { leithConfig } from "./configs/leith";
-import { pohankaConfig } from "./configs/pohanka";
-import { premierConfig } from "./configs/premier";
-import { stiversConfig } from "./configs/stivers";
-import { tameronConfig } from "./configs/tameron";
-import { NavarreConfig } from "./configs/navarre";
-import { getStore } from "guardian-common";
+import { getStore, getConfigValue } from "guardian-common";
 
 export const logger = pino();
 
@@ -38,29 +29,6 @@ export function addCors(origin, map?) {
   }
 
   return headers;
-}
-
-export function getConfigValue(configProperty: string, config: string): any {
-  switch (config) {
-    case "Cannon":
-      return cannonConfig[configProperty];
-    case "Guardian":
-      return guardianConfig[configProperty];
-    case "Hennessy":
-      return hennessyConfig[configProperty];
-    case "Leith":
-      return leithConfig[configProperty];
-    case "Pohanka":
-      return pohankaConfig[configProperty];
-    case "Premier":
-      return premierConfig[configProperty];
-    case "Stivers":
-      return stiversConfig[configProperty];
-    case "Tameron":
-      return tameronConfig[configProperty];
-    case "Navarre":
-      return NavarreConfig[configProperty];
-  }
 }
 
 export const COMPANIES: { [index: string]: string } = {

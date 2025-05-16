@@ -11,6 +11,11 @@ export const config = {
     hat: ["Tameron"],
     customs: [],
   },
+  email_recipients: [
+    "lbudbill@gpcorp.com",
+    "lbudbell@comcast.net",
+    "doubleujabbour@gmail.com",
+  ],
   stores: {
     "Tameron Honda, 9871 Justina Ave Daphne, AL 36526": "TAMHDA",
     "Tameron Buick GMC, 27161 US - 98 Daphne, AL 36526": "TAMBDA",
@@ -21,7 +26,6 @@ export const config = {
     "Tameron Kia Westbank, 1884 Westbank Expressway Harvey, LA 70058": "TAMKWE",
   },
   bypass_codes: ["TAMERO"],
-
   server_hostname: "https://mxfj3q6m01.execute-api.us-east-1.amazonaws.com",
   account_reps: [
     { name: "Louis Budbill", phone: "678-287-1659" },

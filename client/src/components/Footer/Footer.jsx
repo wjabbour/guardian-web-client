@@ -1,7 +1,7 @@
-import { getConfigValue } from "guardian-common";
+import { getWebConfigValue } from "guardian-common";
 
 export default function Footer() {
-  const accountReps = getConfigValue("account_reps");
+  const accountReps = getWebConfigValue("account_reps");
   const accountRepString = accountReps
     .map((rep) => {
       return `${rep.name} (${rep.phone})`;

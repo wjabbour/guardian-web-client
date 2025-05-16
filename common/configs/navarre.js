@@ -39,6 +39,11 @@ export const config = {
     bodyshop: [],
     parts: [],
   },
+  email_recipients: [
+    "lbudbill@gpcorp.com",
+    "lbudbell@comcast.net",
+    "doubleujabbour@gmail.com",
+  ],
   stores: {
     "Navarre Chevrolet, 1300 East College St, Lake Charles, LA 70607": "NAVCLA",
     "Navarre Chevrolet of Sulphur, 1620 Beglis Parkway, Sulphur, LA 70663":
