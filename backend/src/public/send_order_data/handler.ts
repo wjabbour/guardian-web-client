@@ -1,23 +1,18 @@
 import { APIGatewayProxyResult } from "aws-lambda";
-import { logger, sendEmail } from "../utils";
+import { logger } from "../utils";
 import { Dynamo } from "./dynamo";
 
 const dynamo = new Dynamo();
 
 export const handler = async (): Promise<APIGatewayProxyResult> => {
   try {
-    const paidOrders = await dynamo.getPaidOrders();
-    logger.info({ message: "Retrieved paid orders for the week", paidOrders });
+    /*
+      This used to be responsible for sending Louis the order email, but now he wants
+      to receive the order emails immediately, instead of getting a batch at the end of the week.
 
-    if (paidOrders.length === 0) {
-      logger.info({ message: "No orders this week" });
-      return {
-        statusCode: 200,
-      };
-    }
-
-    // TODO: fix this
-    await sendEmail(paidOrders, "");
+      We need to move the logic of archiving and deleting paid orders to the capture and create order APIs and remove this 
+      job
+    */
     await dynamo.archivePaidOrders();
     await dynamo.deleteOldUnpaidOrders();
     logger.info("deleted old unpaid orders");

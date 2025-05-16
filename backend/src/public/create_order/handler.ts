@@ -122,36 +122,6 @@ export const handler = async (
     if (body.bypassPaypal) {
       logger.info({ message: "Bypassing PayPal" });
 
-      if (company_name === "Cannon") {
-        const created_at = await dynamoClient.createOrder(
-          {
-            email,
-            order: cart,
-            first_name,
-            last_name,
-            store,
-            company_name,
-            customer_po,
-            bypass: 1,
-            order_id: "-1",
-            paid: 1,
-          },
-          "archived_orders"
-        );
-
-        const order = await dynamoClient.getOrder(
-          email,
-          created_at,
-          "archived_orders"
-        );
-        await sendEmail([order], "Cannon", email);
-        return {
-          statusCode: 200,
-          headers: addCors(event.headers?.origin),
-        };
-      }
-
-      // company is not cannon but is bypassPaypal
       const created_at = await dynamoClient.createOrder(
         {
           email,
@@ -159,19 +129,21 @@ export const handler = async (
           first_name,
           last_name,
           store,
-          customer_po,
           company_name,
+          customer_po,
           bypass: 1,
           order_id: "-1",
           paid: 1,
         },
-        "orders"
+        "archived_orders"
       );
 
-      const order = await dynamoClient.getOrder(email, created_at, "orders");
-      // always send an email if bypassPaypal
+      const order = await dynamoClient.getOrder(
+        email,
+        created_at,
+        "archived_orders"
+      );
       await sendEmail([order], company_name, email);
-
       return {
         statusCode: 200,
         headers: addCors(event.headers?.origin),
