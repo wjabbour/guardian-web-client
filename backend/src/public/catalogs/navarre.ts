@@ -176,9 +176,9 @@ export const NavarreCatalog: CatalogItem[] = [
     },
   },
   {
-    code: "908",
-    name: "Tri-Band Pen",
-    fullname: "Tri-Band Pen w/white imprint",
+     code: "996",
+    name: "Satin Stylus Pen",
+    fullname: "Black Satin Stylus Pen w/white imprint",
     colors: ["Black"],
     type: "accessory",
     default_color: "Black",
