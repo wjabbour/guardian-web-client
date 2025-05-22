@@ -295,4 +295,18 @@ export const GuardianCatalog: CatalogItem[] = [
         2500: 0.0,
     },
   }, 
+  {
+  code: "HENFAT31DD",
+  name: "Die Cut Decal",
+  fullname: "Decal Thermo Die Cut",
+  colors: ["500", "1000", "1500", "2500"],
+  type: "customs",
+  default_color: "500",
+  sizes: {
+    500: 32.99,
+    1000: 58.99,
+    1500: 65.99,
+    2500: 71.99,    
+    },
+  },  
 ];
