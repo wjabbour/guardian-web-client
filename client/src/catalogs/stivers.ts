@@ -16,7 +16,7 @@ export const StiversCatalog: CatalogItem[] = [
       "White White",
     ],
     type: "mens",
-    default_color: "Black Black",
+    default_color: "Blk Blk",
     sizes: {
       S_M: 30.00,
       M_L: 30.00,

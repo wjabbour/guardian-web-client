@@ -2,7 +2,7 @@ export const config = {
   title: "Stivers",
   company_logo: "stivers.png",
   logo_placements: ["Right Sleeve", "Left Chest", "Front Center"],
-  show_modification_thumbnail: false,
+  show_modification_thumbnail: true,
   minimum_apparel_order: false,
   render_logo_preview: true,
   embroideries: {
