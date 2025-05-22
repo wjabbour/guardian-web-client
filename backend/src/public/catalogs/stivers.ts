@@ -15,7 +15,7 @@ export const StiversCatalog: CatalogItem[] = [
       "Team Red White",
       "White White",
     ],
-    type: "hat",
+    type: "mens",
     default_color: "Black Black",
     sizes: {
       S_M: 30.00,
@@ -42,7 +42,7 @@ export const StiversCatalog: CatalogItem[] = [
       "White Black Black",
       "White True Navy"
     ],
-    type: "hat",
+    type: "mens",
     default_color: "Blk Blk",
     sizes: {
       OSFA: 9.00     
@@ -67,7 +67,7 @@ export const StiversCatalog: CatalogItem[] = [
       "True Pink White",
       "Woodland Camo",      
     ],
-    type: "hat",
+    type: "mens",
     default_color: "Black",
     sizes: {
       OSFA: 6.60     
