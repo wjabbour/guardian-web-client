@@ -300,8 +300,8 @@ export const GuardianCatalog: CatalogItem[] = [
   name: "Die Cut Decal",
   fullname: "Decal Thermo Die Cut",
   colors: ["Qty 500", "Qty 1000", "Qty 1500", "Qty 2500"],
-  type: "customs",
-  default_color: "500",
+  type: "mens",
+  default_color: "Qty 500",
   sizes: {
     32.99: 32.99,
     58.99: 58.99,
