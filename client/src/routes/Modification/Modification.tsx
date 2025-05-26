@@ -116,7 +116,6 @@ export default function Modification() {
       ...cart,
     };
 
-    console.log(customsOrder);
     if (item.type === "customs") {
       // check customs order not empty
 
@@ -146,7 +145,6 @@ export default function Modification() {
       });
 
       for (const [key, value] of Object.entries(items)) {
-        console.log(key, value);
         addCustomsToCart(value, key, new_cart);
       }
 
@@ -207,6 +205,7 @@ export default function Modification() {
           const key = `${item.code},${Object.keys(item.sizes)[i - 1]},${
             colors[j]
           },${embroidery}`;
+
           if (new_cart[key]) {
             new_cart[key].quantity += cart_item.quantity;
           } else {
@@ -228,13 +227,12 @@ export default function Modification() {
     }
   }
 
-  function addCustomsToCart(quantity, color, new_cart) {
-    console.log("here");
+  function addCustomsToCart(quantity, color, cart) {
     const key = `${item.code},${color}`;
     const cart_item = {
       type: item.type,
       name: item.fullname,
-      price: 0,
+      price: item.sizes[quantity],
       quantity: Number(quantity),
       size: "default",
       color: color,
@@ -243,36 +241,27 @@ export default function Modification() {
       embroidery,
     };
 
-    if (new_cart[key]) {
-      new_cart[key].quantity += cart_item.quantity;
-      new_cart[key].price = cart_item.price;
+    if (cart[key]) {
+      cart[key].quantity += cart_item.quantity;
+      cart[key].price = getPriceWithDiscount(cart[key].quantity, price);
     } else {
-      new_cart[key] = cart_item;
+      cart[key] = cart_item;
     }
   }
 
-  function getPriceWithDiscount(cart_quantity, new_cart_item_quantity) {
-    if (!item.discount) {
-      return item.sizes["default"];
-    }
+  function getPriceWithDiscount(cartQuantity: number, fallbackPrice: number) {
+    const sortedSizes = Object.keys(item.sizes).sort(
+      (a, b) => Number(a) - Number(b)
+    );
 
-    /*
-      this is currently the case for all items with discounts (all items with a discount property
-      also have only one size, default)
-
-      but im adding this check so we dont accidentally apply this logic to future items which may require
-      discounts but have multiple sizes
-    */
-    const total_quantity = cart_quantity + new_cart_item_quantity;
-    if (Object.keys(item.sizes).length === 1) {
-      let basePrice = item.sizes["default"];
-      for (let i = 0; i < item.discount.length; i++) {
-        if (total_quantity >= item.discount[i].quantity)
-          basePrice = item.discount[i].price;
+    let price = fallbackPrice;
+    for (const size of sortedSizes) {
+      if (cartQuantity >= Number(size)) {
+        price = item.sizes[size];
       }
-
-      return basePrice;
     }
+
+    return price;
   }
 
   return (
