@@ -357,7 +357,7 @@ export const HennessyCatalog: CatalogItem[] = [
     colors: ["Black"],
     type: "customs",
     default_color: "Black",
-    supportedStores: ["HENCAT"],
+    supportedStores: ["HENFAT"],
     discount: [
       { quantity: 500, price: 3.59 },
       { quantity: 1000, price: 3.19 },
