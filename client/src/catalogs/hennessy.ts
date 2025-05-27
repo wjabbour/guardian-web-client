@@ -340,7 +340,7 @@ export const HennessyCatalog: CatalogItem[] = [
     colors: ["Black", "Silver", "White"],
     type: "customs",
     default_color: "Black",
-    supportedStores: ["HENCAT"],
+    supportedStores: ["HENFAT"],
     discount: [
       { quantity: 1000, price: 0.75 },
       { quantity: 2500, price: 0.65 },
@@ -357,6 +357,7 @@ export const HennessyCatalog: CatalogItem[] = [
     colors: ["Black"],
     type: "customs",
     default_color: "Black",
+    supportedStores: ["HENCAT"],
     discount: [
       { quantity: 500, price: 3.59 },
       { quantity: 1000, price: 3.19 },
@@ -373,6 +374,7 @@ export const HennessyCatalog: CatalogItem[] = [
     colors: ["White"],
     type: "customs",
     default_color: "White",
+    supportedStores: ["HENFAT"],
     discount: [
       { quantity: 1000, price: 3.59 },
       { quantity: 2500, price: 3.19 },
@@ -389,6 +391,7 @@ export const HennessyCatalog: CatalogItem[] = [
     colors: ["Metal"],
     type: "customs",
     default_color: "Metal",
+    supportedStores: ["HENFAT"],
     discount: [
       { quantity: 1000, price: 3.69 },
       { quantity: 2500, price: 3.09 },
@@ -404,7 +407,7 @@ export const HennessyCatalog: CatalogItem[] = [
     fullname: "VIP OFFER Hang Tag",
     colors: ["White"],
     type: "service",
-    default_color: "White",
+    default_color: "White",    
     discount: [
       { quantity: 500, price: 0.89 },
       { quantity: 1000, price: 0.69 },
@@ -437,6 +440,7 @@ export const HennessyCatalog: CatalogItem[] = [
     colors: ["Black"],
     type: "customs",
     default_color: "Black",
+    supportedStores: ["HENFAT"],
     discount: [
       { quantity: 1000, price: 0.89 },
       { quantity: 2500, price: 0.79 },
