@@ -84,6 +84,7 @@ export function getWebConfigValue(val) {
 }
 
 export function getConfigValue(val, config) {
+  console.log(val, config)
   switch (config) {
     case "Cannon":
       return CannonConfig[val];

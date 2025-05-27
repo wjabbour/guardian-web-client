@@ -8,6 +8,7 @@ import Modification, {
 } from "./routes/Modification/Modification";
 import Orders from "./routes/Orders/Orders";
 import Checkout from "./routes/Checkout/Checkout";
+import StoreSelection from "./routes/StoreSelection/StoreSelection";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Success from "./routes/Success/Success";
 import { Helmet } from "react-helmet";
@@ -27,10 +28,12 @@ function App() {
             path: "/",
             element: <Landing />,
           },
+          { path: "/catalog/:storeCode/:type", element: <Catalog /> },
           { path: "/catalog/:type", element: <Catalog /> },
           { path: "/checkout", element: <Checkout /> },
           { path: "/success", element: <Success /> },
           { path: "/orders", element: <Orders /> },
+          { path: "/stores", element: <StoreSelection /> },
           {
             path: "/item/:id",
             loader: modificationLoader,
@@ -53,10 +56,15 @@ function App() {
             path: "/:storeName",
             element: <Landing />,
           },
+          {
+            path: "/:storeName/catalog/:storeCode/:type",
+            element: <Catalog />,
+          },
           { path: "/:storeName/catalog/:type", element: <Catalog /> },
           { path: "/:storeName/checkout", element: <Checkout /> },
           { path: "/:storeName/success", element: <Success /> },
           { path: "/:storeName/orders", element: <Orders /> },
+          { path: "/:storeName/stores", element: <StoreSelection /> },
           {
             path: "/:storeName/item/:id",
             loader: modificationLoader,

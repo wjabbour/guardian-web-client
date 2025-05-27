@@ -25,6 +25,11 @@ export interface CatalogItem {
     quantity reaches specific thresholds
   */
   discount?: Discount[];
+  /** 
+   * An array of addresses of the stores which are able to order this particular item. If a store is not in this array, then this item
+   * wont be shown when viewing the customs items for that store.
+   */
+  supportedStores?: string[];
 }
 
 interface Discount {

@@ -7,13 +7,11 @@ export const HennessyCatalog: CatalogItem[] = [
     colors: ["Plastic"],
     type: "service",
     default_color: "Plastic",
-    discount: [
-      { quantity: 500, price: 73.50 },      
-    ],
+    discount: [{ quantity: 500, price: 73.5 }],
     sizes: {
-      1: 73.50,
+      1: 73.5,
     },
-  }, 
+  },
   {
     code: "3088",
     name: "Floor Mats",
@@ -21,11 +19,9 @@ export const HennessyCatalog: CatalogItem[] = [
     colors: ["White"],
     type: "service",
     default_color: "White",
-    discount: [
-      { quantity: 500, price: 72.97 },      
-    ],
+    discount: [{ quantity: 500, price: 72.97 }],
     sizes: {
-      1: 72.97,      
+      1: 72.97,
     },
   },
   {
@@ -35,11 +31,9 @@ export const HennessyCatalog: CatalogItem[] = [
     colors: ["White"],
     type: "sales",
     default_color: "White",
-    discount: [
-      { quantity: 1, price: 135.00 },      
-    ],
+    discount: [{ quantity: 1, price: 135.0 }],
     sizes: {
-      default: 135.00,      
+      default: 135.0,
     },
   },
   {
@@ -49,68 +43,99 @@ export const HennessyCatalog: CatalogItem[] = [
     colors: ["White"],
     type: "sales",
     default_color: "White",
-    discount: [
-      { quantity: 1, price: 74.95 },      
-    ],
+    discount: [{ quantity: 1, price: 74.95 }],
     sizes: {
-      default: 74.95,      
+      default: 74.95,
     },
   },
   {
     code: "3198WB",
     name: "Oval Year Stickers",
     fullname: "Oval Year Stickers (Blue/White)  (12/pk)",
-    colors: ["YR 07","YR 08","YR 09","YR 10","YR 11","YR 12","YR 13","YR 13","YR 14","YR 15","YR 16", "YR 17", "YR 18",
-    "YR 19", "YR 20", "YR 21", "YR 22", "YR 23", "YR 24", "YR 25", "YR 26"],
+    colors: [
+      "YR 07",
+      "YR 08",
+      "YR 09",
+      "YR 10",
+      "YR 11",
+      "YR 12",
+      "YR 13",
+      "YR 13",
+      "YR 14",
+      "YR 15",
+      "YR 16",
+      "YR 17",
+      "YR 18",
+      "YR 19",
+      "YR 20",
+      "YR 21",
+      "YR 22",
+      "YR 23",
+      "YR 24",
+      "YR 25",
+      "YR 26",
+    ],
     type: "sales",
     default_color: "YR 07",
-    discount: [
-      { quantity: 1, price: 10.99 },      
-    ],
+    discount: [{ quantity: 1, price: 10.99 }],
     sizes: {
-      1: 10.99,    
+      1: 10.99,
     },
   },
   {
     code: "GP955",
     name: "Grease Markers",
     fullname: "Grease Marker (1 each)",
-    colors: ["Blue", "Green", "Pink", "Orange", "Purple", "Red", "White", "Yellow"],
+    colors: [
+      "Blue",
+      "Green",
+      "Pink",
+      "Orange",
+      "Purple",
+      "Red",
+      "White",
+      "Yellow",
+    ],
     type: "sales",
     default_color: "Blue",
-    discount: [
-      { quantity: 1, price: 10.69 },      
-    ],
+    discount: [{ quantity: 1, price: 10.69 }],
     sizes: {
-      1: 10.69,      
+      1: 10.69,
     },
   },
-  {   
+  {
     code: "GP200",
     name: "Key Tags",
     fullname: "Versa-Tags Key Tag #200 (250/bx)",
-    colors: ["Blue", "Gray", "Green", "Lilac", "Lime Green", "Orange", "Red", "Tan", "White", "Yellow"],
+    colors: [
+      "Blue",
+      "Gray",
+      "Green",
+      "Lilac",
+      "Lime Green",
+      "Orange",
+      "Red",
+      "Tan",
+      "White",
+      "Yellow",
+    ],
     type: "sales",
     default_color: "Blue",
-    discount: [
-      { quantity: 1, price: 36.95 },      
-    ],
+    discount: [{ quantity: 1, price: 36.95 }],
     sizes: {
-      1: 36.95,      
+      1: 36.95,
     },
   },
-  {   
+  {
     code: "GP790",
     name: "Not for Sale Sticker",
     fullname: "Sticker - Vehicle Not for Sale (100/pk)",
     colors: ["Yellow"],
     type: "sales",
     default_color: "Yellow",
-    discount: [
-      { quantity: 1, price: 27.95 },      
-    ],
+    discount: [{ quantity: 1, price: 27.95 }],
     sizes: {
-      1: 27.95,      
+      1: 27.95,
     },
   },
   {
@@ -166,7 +191,7 @@ export const HennessyCatalog: CatalogItem[] = [
       "6XLarge": 39.99,
     },
   },
-  {    
+  {
     code: "L608",
     name: "Port Authority® Shirt",
     fullname: "Port Authority® Women's Long Sleeve Shirt",
@@ -185,7 +210,7 @@ export const HennessyCatalog: CatalogItem[] = [
       "6XLarge": 39.99,
     },
   },
-  {    
+  {
     code: "OG101",
     name: "OGIO® - Caliber2.0 Polo",
     fullname: "OGIO® - Caliber2.0 Polo",
@@ -220,7 +245,7 @@ export const HennessyCatalog: CatalogItem[] = [
     },
   },
   {
-        code: "ST350",
+    code: "ST350",
     name: "Sport-Tek PosiCharge Tee",
     fullname: "Sport-Tek PosiCharge Competitor Tee",
     colors: ["Black"],
@@ -233,7 +258,7 @@ export const HennessyCatalog: CatalogItem[] = [
       XLarge: 10.99,
       "2XLarge": 11.99,
       "3XLarge": 12.99,
-      "4XLarge": 13.99,      
+      "4XLarge": 13.99,
     },
   },
   {
@@ -269,7 +294,7 @@ export const HennessyCatalog: CatalogItem[] = [
       XLarge: 49.99,
       "2XLarge": 50.99,
       "3XLarge": 51.99,
-      "4XLarge": 52.99,      
+      "4XLarge": 52.99,
     },
   },
   {
@@ -315,9 +340,10 @@ export const HennessyCatalog: CatalogItem[] = [
     colors: ["Black", "Silver", "White"],
     type: "customs",
     default_color: "Black",
+    supportedStores: ["HENCAT"],
     discount: [
-      { quantity: 1000, price: .75 },
-      { quantity: 2500, price: .65 },
+      { quantity: 1000, price: 0.75 },
+      { quantity: 2500, price: 0.65 },
     ],
     sizes: {
       1000: 0.0,
@@ -380,8 +406,8 @@ export const HennessyCatalog: CatalogItem[] = [
     type: "service",
     default_color: "White",
     discount: [
-      { quantity: 500, price: .89 },
-      { quantity: 1000, price: .69 },
+      { quantity: 500, price: 0.89 },
+      { quantity: 1000, price: 0.69 },
     ],
     sizes: {
       1000: 0.0,
@@ -396,8 +422,8 @@ export const HennessyCatalog: CatalogItem[] = [
     type: "service",
     default_color: "White",
     discount: [
-      { quantity: 500, price: .89 },
-      { quantity: 1000, price: .69 },
+      { quantity: 500, price: 0.89 },
+      { quantity: 1000, price: 0.69 },
     ],
     sizes: {
       1000: 0.0,
@@ -412,9 +438,9 @@ export const HennessyCatalog: CatalogItem[] = [
     type: "customs",
     default_color: "Black",
     discount: [
-      { quantity: 1000, price: .89 },
-      { quantity: 2500, price: .79 },
-      { quantity: 5000, price: .69 },
+      { quantity: 1000, price: 0.89 },
+      { quantity: 2500, price: 0.79 },
+      { quantity: 5000, price: 0.69 },
     ],
     sizes: {
       1000: 0.0,
@@ -430,12 +456,12 @@ export const HennessyCatalog: CatalogItem[] = [
     type: "service",
     default_color: "White",
     discount: [
-      { quantity: 5000, price: .21 },
-      { quantity: 10000, price: .19},
-     ],
+      { quantity: 5000, price: 0.21 },
+      { quantity: 10000, price: 0.19 },
+    ],
     sizes: {
       5000: 0.0,
-      10000: 0.0,     
+      10000: 0.0,
     },
   },
   {
@@ -445,11 +471,9 @@ export const HennessyCatalog: CatalogItem[] = [
     colors: ["Metal"],
     type: "accessory",
     default_color: "Metal",
-    discount: [
-      { quantity: 500, price: 3.59 },     
-     ],
+    discount: [{ quantity: 500, price: 3.59 }],
     sizes: {
-      1: 0.0,         
+      1: 0.0,
     },
   },
   {
@@ -459,11 +483,9 @@ export const HennessyCatalog: CatalogItem[] = [
     colors: ["Royal"],
     type: "accessory",
     default_color: "Royal",
-    discount: [
-      { quantity: 360, price: 2.89 },     
-     ],
+    discount: [{ quantity: 360, price: 2.89 }],
     sizes: {
-      1: 0.0,         
+      1: 0.0,
     },
   },
   {
@@ -473,11 +495,9 @@ export const HennessyCatalog: CatalogItem[] = [
     colors: ["Black"],
     type: "accessory",
     default_color: "Black",
-    discount: [
-      { quantity: 1000, price: 1.69 },     
-     ],
+    discount: [{ quantity: 1000, price: 1.69 }],
     sizes: {
-      1: 0.0,         
+      1: 0.0,
     },
   },
   {
@@ -487,11 +507,9 @@ export const HennessyCatalog: CatalogItem[] = [
     colors: ["Black"],
     type: "accessory",
     default_color: "Black",
-    discount: [
-      { quantity: 1000, price: 1.69 },     
-     ],
+    discount: [{ quantity: 1000, price: 1.69 }],
     sizes: {
-      1: 0.0,         
+      1: 0.0,
     },
   },
   {
@@ -501,11 +519,9 @@ export const HennessyCatalog: CatalogItem[] = [
     colors: ["Black"],
     type: "accessory",
     default_color: "Black",
-    discount: [
-      { quantity: 100, price: 2.29 },     
-     ],
+    discount: [{ quantity: 100, price: 2.29 }],
     sizes: {
-      1: 0.0,         
+      1: 0.0,
     },
   },
-  ];
+];
