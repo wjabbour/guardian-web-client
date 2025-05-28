@@ -339,10 +339,7 @@ export const catalog = [
     colors: ["Black", "Silver", "White"],
     type: "customs",
     default_color: "Black",
-<<<<<<< HEAD:client/src/catalogs/hennessy.ts
-=======
     supportedStores: ["HENFAT"],
->>>>>>> main:common/catalogs/hennessy.js
     sizes: {
       1000: 0.75,
       2500: 0.65,
@@ -394,13 +391,6 @@ export const catalog = [
     colors: ["White"],
     type: "service",
     default_color: "White",
-<<<<<<< HEAD:client/src/catalogs/hennessy.ts
-    discount: [
-      { quantity: 500, price: 0.89 },
-      { quantity: 1000, price: 0.69 },
-    ],
-=======
->>>>>>> main:common/catalogs/hennessy.js
     sizes: {
       500: 0.89,
       1000: 0.69,
@@ -413,13 +403,6 @@ export const catalog = [
     colors: ["White"],
     type: "service",
     default_color: "White",
-<<<<<<< HEAD:client/src/catalogs/hennessy.ts
-    discount: [
-      { quantity: 500, price: 0.89 },
-      { quantity: 1000, price: 0.69 },
-    ],
-=======
->>>>>>> main:common/catalogs/hennessy.js
     sizes: {
       1000: 0.89,
       2500: 0.69,
@@ -432,15 +415,7 @@ export const catalog = [
     colors: ["Black"],
     type: "customs",
     default_color: "Black",
-<<<<<<< HEAD:client/src/catalogs/hennessy.ts
-    discount: [
-      { quantity: 1000, price: 0.89 },
-      { quantity: 2500, price: 0.79 },
-      { quantity: 5000, price: 0.69 },
-    ],
-=======
     supportedStores: ["HENFAT"],
->>>>>>> main:common/catalogs/hennessy.js
     sizes: {
       1000: 0.89,
       2500: 0.79,
@@ -454,19 +429,9 @@ export const catalog = [
     colors: ["White"],
     type: "service",
     default_color: "White",
-<<<<<<< HEAD:client/src/catalogs/hennessy.ts
-    discount: [
-      { quantity: 5000, price: 0.21 },
-      { quantity: 10000, price: 0.19 },
-    ],
-    sizes: {
-      5000: 0.0,
-      10000: 0.0,
-=======
     sizes: {
       5000: 0.21,
       10000: 0.19,
->>>>>>> main:common/catalogs/hennessy.js
     },
   },
   {
@@ -476,14 +441,8 @@ export const catalog = [
     colors: ["Metal"],
     type: "accessory",
     default_color: "Metal",
-<<<<<<< HEAD:client/src/catalogs/hennessy.ts
-    discount: [{ quantity: 500, price: 3.59 }],
-    sizes: {
-      1: 0.0,
-=======
     sizes: {
       500: 3.59,
->>>>>>> main:common/catalogs/hennessy.js
     },
   },
   {
@@ -493,14 +452,8 @@ export const catalog = [
     colors: ["Royal"],
     type: "accessory",
     default_color: "Royal",
-<<<<<<< HEAD:client/src/catalogs/hennessy.ts
-    discount: [{ quantity: 360, price: 2.89 }],
-    sizes: {
-      1: 0.0,
-=======
     sizes: {
       360: 2.89,
->>>>>>> main:common/catalogs/hennessy.js
     },
   },
   {
@@ -510,14 +463,8 @@ export const catalog = [
     colors: ["Black"],
     type: "accessory",
     default_color: "Black",
-<<<<<<< HEAD:client/src/catalogs/hennessy.ts
-    discount: [{ quantity: 1000, price: 1.69 }],
-    sizes: {
-      1: 0.0,
-=======
     sizes: {
       1000: 1.69,
->>>>>>> main:common/catalogs/hennessy.js
     },
   },
   {
@@ -527,14 +474,8 @@ export const catalog = [
     colors: ["Black"],
     type: "accessory",
     default_color: "Black",
-<<<<<<< HEAD:client/src/catalogs/hennessy.ts
-    discount: [{ quantity: 1000, price: 1.69 }],
-    sizes: {
-      1: 0.0,
-=======
     sizes: {
       1000: 1.69,
->>>>>>> main:common/catalogs/hennessy.js
     },
   },
   {
@@ -544,14 +485,8 @@ export const catalog = [
     colors: ["Black"],
     type: "accessory",
     default_color: "Black",
-<<<<<<< HEAD:client/src/catalogs/hennessy.ts
-    discount: [{ quantity: 100, price: 2.29 }],
-    sizes: {
-      1: 0.0,
-=======
     sizes: {
       100: 2.29,
->>>>>>> main:common/catalogs/hennessy.js
     },
   },
 ];
