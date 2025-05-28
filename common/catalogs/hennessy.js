@@ -406,7 +406,7 @@ export const catalog = [
     fullname: "VIP OFFER Hang Tag",
     colors: ["White"],
     type: "service",
-    default_color: "White",    
+    default_color: "White",
     discount: [
       { quantity: 500, price: 0.89 },
       { quantity: 1000, price: 0.69 },
