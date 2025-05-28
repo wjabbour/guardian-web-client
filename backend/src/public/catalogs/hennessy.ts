@@ -1,4 +1,5 @@
-export const catalog = [
+import { CatalogItem } from "../interfaces";
+export const HennessyCatalog: CatalogItem[] = [
   {
     code: "600088V",
     name: "Seat Covers",
@@ -527,4 +528,4 @@ export const catalog = [
       1: 0.0,
     },
   },
-];
+  ];
