@@ -387,7 +387,7 @@ export const catalog = [
   },
     {
     code: "HENPRO-FOB-414917C",
-    name: "Leather Key Fob",
+    name: "Leather Key Fob (red stitch)",
     fullname: "Metal & Black Leather Fob w/black/872 gold imprint",
     colors: ["Black"],
     type: "accessory",
@@ -401,7 +401,35 @@ export const catalog = [
   },
   {
     code: "HENPRO-FOB-415104C",
-    name: "Leather Key Fob",
+    name: "Leather Key Fob (white stitch)",
+    fullname: "Metal & Black Leather Fob w/black/186 red/872 gold imprint",
+    colors: ["Black"],
+    type: "accessory",
+    default_color: "Black",
+    discount: [
+      { quantity: 500, price: 3.99 },     
+    ],
+    sizes: {
+      500: 3.99,     
+    },
+  },
+  {
+    code: "HENPMA-FOB-497832C",
+    name: "Leather Key Fob (red stitch)",
+    fullname: "Metal & Black Leather Fob w/black/186 red/872 gold imprint",
+    colors: ["Black"],
+    type: "accessory",
+    default_color: "Black",
+    discount: [
+      { quantity: 500, price: 3.99 },     
+    ],
+    sizes: {
+      500: 3.99,     
+    },
+  },
+  {
+    code: "HENPMA-FOB-498046C",
+    name: "Leather Key Fob (white stitch)",
     fullname: "Metal & Black Leather Fob w/black/186 red/872 gold imprint",
     colors: ["Black"],
     type: "accessory",
@@ -473,7 +501,31 @@ export const catalog = [
     },
   },
   {
+    code: "HENPMA-33P-497831A",
+    name: "Test Drive Plate",
+    fullname: "TEST DRIVE - Plastic Plate w/black imprint",
+    colors: ["Black"],
+    type: "customs",
+    default_color: "Black",
+    supportedStores: ["HENPMA"],
+    sizes: {
+      1000: 0.99,      
+    },
+  },
+  {
     code: "HENPRO-34MLF-426579A",
+    name: "Black Metal Frame",
+    fullname: "Black Metal Frame w/white imprint",
+    colors: ["Black"],
+    type: "customs",
+    default_color: "Black",
+    supportedStores: ["HENPRO"],
+    sizes: {
+      1000: 0.0279,      
+    },
+  },
+  {
+    code: "HENPMA-34MLF-497830A",
     name: "Black Metal Frame",
     fullname: "Black Metal Frame w/white imprint",
     colors: ["Black"],
