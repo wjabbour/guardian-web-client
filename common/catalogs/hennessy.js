@@ -531,7 +531,7 @@ export const catalog = [
     colors: ["Black"],
     type: "customs",
     default_color: "Black",
-    supportedStores: ["HENPRO"],
+    supportedStores: ["HENPMA"],
     sizes: {
       1000: 0.0279,      
     },
