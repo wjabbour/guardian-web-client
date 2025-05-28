@@ -385,25 +385,7 @@ export const catalog = [
       "4XLarge": 130.00,     
     },
   },
-  {
-    code: "HENFAT-FOB-505249",
-    name: "Laser Engraved Keychain",
-    fullname: "Blue Banner Keychain w/Laser Engraved Imprint",
-    colors: ["Metal"],
-    type: "accessory",
-    default_color: "Metal",
-    discount: [
-      { quantity: 500, price: 2.39 },
-      { quantity: 1000, price: 2.19 },
-      { quantity: 2500, price: 1.99 },
-    ],
-    sizes: {
-      500: 0.0,
-      1000: 0.0,
-      2500: 0.0,
-    },
-  },
-  {
+    {
     code: "HENPRO-FOB-414917C",
     name: "Leather Key Fob",
     fullname: "Metal & Black Leather Fob w/black/872 gold imprint",
@@ -442,6 +424,35 @@ export const catalog = [
       { quantity: 500, price: 3.99 },
       { quantity: 1000, price: 3.29 },
       { quantity: 2500, price: 2.99 },
+    ],
+    sizes: {
+      500: 0.0,
+      1000: 0.0,
+      2500: 0.0,
+    },
+  },
+  {
+    code: "HENFAT-FOB-506092",
+    name: "Laser Engraved Keychain",
+    fullname: "Chrome Keychain w/laser engraved imprint",
+    colors: ["Metal"],
+    type: "accessory",
+    default_color: "Metal",
+    sizes: {
+      500: 3.59,
+    },
+  },
+  {
+    code: "HENFAT-FOB-505249",
+    name: "Laser Engraved Keychain",
+    fullname: "Blue Banner Keychain w/Laser Engraved Imprint",
+    colors: ["Metal"],
+    type: "accessory",
+    default_color: "Metal",
+    discount: [
+      { quantity: 500, price: 2.39 },
+      { quantity: 1000, price: 2.19 },
+      { quantity: 2500, price: 1.99 },
     ],
     sizes: {
       500: 0.0,
@@ -576,17 +587,6 @@ export const catalog = [
     },
   },
   {
-    code: "HENFAT-FOB-506092",
-    name: "Laser Engraved Keychain",
-    fullname: "Chrome Keychain w/laser engraved imprint",
-    colors: ["Metal"],
-    type: "accessory",
-    default_color: "Metal",
-    sizes: {
-      500: 3.59,
-    },
-  },
-  {
     code: "HENFAT-MUG-505968",
     name: "15oz. Mug w/imprint",
     fullname: "Royal 15oz. Ember Mug w/silver imprint",
@@ -598,9 +598,9 @@ export const catalog = [
     },
   },
   {
-    code: "HENFAT-TOTE-493101",
-    name: "Vinyl Tote w/imprint",
-    fullname: "Vinyl Tote w/full color imprint",
+    code: "HENFAT-MUG-492907",
+    name: "15oz. Mug w/imprint",
+    fullname: "Black 15oz. Mug w/laser engraved imprint",
     colors: ["Black"],
     type: "accessory",
     default_color: "Black",
@@ -609,9 +609,9 @@ export const catalog = [
     },
   },
   {
-    code: "HENFAT-MUG-492907",
-    name: "15oz. Mug w/imprint",
-    fullname: "Black 15oz. Mug w/laser engraved imprint",
+    code: "HENFAT-TOTE-493101",
+    name: "Vinyl Tote w/imprint",
+    fullname: "Vinyl Tote w/full color imprint",
     colors: ["Black"],
     type: "accessory",
     default_color: "Black",
