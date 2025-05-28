@@ -7,6 +7,11 @@ export default function QuantitySelector({
   customsOrder,
   setCustomsOrder,
 }) {
+  // check if the keys of the sizes are numbers vs strings
+  const shouldUseQuantityBasedOrdering = !isNaN(
+    Number(Object.keys(item.sizes)[0])
+  );
+
   function ColorHeaders() {
     return (
       <thead>
@@ -31,7 +36,7 @@ export default function QuantitySelector({
               {item.colors.map((color) => {
                 return (
                   <td className="p-[2px]">
-                    {item.type === "customs" && (
+                    {shouldUseQuantityBasedOrdering && (
                       <Checkbox
                         checked={clone[size]?.includes(color)}
                         onChange={() => {
@@ -53,7 +58,12 @@ export default function QuantitySelector({
                         }}
                       />
                     )}
-                    {item.type !== "customs" && <input className="border-2 border-solid border-gray-600 rounded-md p-1" type="text"></input>}
+                    {!shouldUseQuantityBasedOrdering && (
+                      <input
+                        className="border-2 border-solid border-gray-600 rounded-md p-1"
+                        type="text"
+                      ></input>
+                    )}
                   </td>
                 );
               })}

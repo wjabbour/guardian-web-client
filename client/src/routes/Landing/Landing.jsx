@@ -1,9 +1,9 @@
 import styles from "./Landing.module.scss";
 import ClothingIcon from "../../components/ClothingIcon/ClothingIcon";
-import { Catalog } from "../../lib/catalog";
+import { getWebCatalog } from "guardian-common";
 
 export default function Landing() {
-  const catalog = Catalog();
+  const catalog = getWebCatalog();
   const types = {};
   catalog.forEach((item) => {
     types[item.type] = 1;
@@ -43,7 +43,7 @@ export default function Landing() {
         {types["customs"] && (
           <ClothingIcon
             img={"/images/customsguar.jpg"}                                 
-            link={"/catalog/customs"}
+            link={"/stores"}
             no_space={true}
           />      
         )}

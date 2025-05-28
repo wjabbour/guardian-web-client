@@ -12,7 +12,6 @@ import {
   SecretsManagerClient,
   GetSecretValueCommand,
 } from "@aws-sdk/client-secrets-manager";
-import { Catalog } from "../catalog";
 import { dynamoClient } from "../dynamoClient";
 import { getStoreCode } from "guardian-common";
 
@@ -72,7 +71,7 @@ export const handler = async (
     const cart = construct_cart(body.cart, customer_po, company_name);
     logger.info({ message: "Constructed cart", cart });
 
-    const price = calculate_price(cart, company_name);
+    const price = calculate_price(cart);
     logger.info({ message: "Calculated cart price", price });
 
     /*
@@ -244,15 +243,10 @@ function getPriceWithDiscount(item, size, quantity) {
   }
 }
 
-function calculate_price(cart, company_name) {
+function calculate_price(cart) {
   let price = 0;
 
   cart.forEach((item) => {
-    logger.info({ message: "Determining price for item", item });
-    const catalog_item = Catalog(company_name).find(
-      (i) => item.code === i.code
-    );
-    logger.info({ message: "Retrieved catalog item", catalog_item });
     price += item.price * item.quantity;
     logger.info({ message: "Updated price", price, quantity: item.quantity });
   });

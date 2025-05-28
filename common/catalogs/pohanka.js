@@ -1,5 +1,4 @@
-import { CatalogItem } from "../interfaces";
-export const PohankaCatalog: CatalogItem[] = [
+export const catalog = [
   {
     code: "600088V",
     name: "Seat Covers",
@@ -7,13 +6,11 @@ export const PohankaCatalog: CatalogItem[] = [
     colors: ["Plastic"],
     type: "service",
     default_color: "Plastic",
-    discount: [
-      { quantity: 500, price: 0.00 },      
-    ],
+    discount: [{ quantity: 500, price: 0.0 }],
     sizes: {
-      1: 0.00,
+      1: 0.0,
     },
-  }, 
+  },
   {
     code: "3088",
     name: "Floor Mats",
@@ -21,11 +18,9 @@ export const PohankaCatalog: CatalogItem[] = [
     colors: ["White"],
     type: "service",
     default_color: "White",
-    discount: [
-      { quantity: 500, price: 0.00 },      
-    ],
+    discount: [{ quantity: 500, price: 0.0 }],
     sizes: {
-      1: 0.00,      
+      1: 0.0,
     },
   },
   {
@@ -72,13 +67,13 @@ export const PohankaCatalog: CatalogItem[] = [
     type: "mens",
     default_color: "Black",
     sizes: {
-      Small: 0.00,
-      Medium: 0.00,
-      Large: 0.00,
-      XLarge: 0.00,
-      "2XLarge": 0.00,
-      "3XLarge": 0.00,
-      "4XLarge": 0.00,
+      Small: 0.0,
+      Medium: 0.0,
+      Large: 0.0,
+      XLarge: 0.0,
+      "2XLarge": 0.0,
+      "3XLarge": 0.0,
+      "4XLarge": 0.0,
     },
   },
   {
@@ -89,7 +84,7 @@ export const PohankaCatalog: CatalogItem[] = [
     type: "mens",
     default_color: "Black White",
     sizes: {
-      OSFA: 0.00,
-     },
-  },   
+      OSFA: 0.0,
+    },
+  },
 ];

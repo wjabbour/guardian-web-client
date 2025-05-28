@@ -1,5 +1,4 @@
-import { CatalogItem } from "../lib/interfaces";
-export const PremierCatalog: CatalogItem[] = [
+export const catalog = [
   {
     code: "ST650",
     name: "Sport-Tek® Polo Shirt",

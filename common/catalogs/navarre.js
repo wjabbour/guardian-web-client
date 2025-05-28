@@ -1,5 +1,4 @@
-import { CatalogItem } from "../interfaces";
-export const NavarreCatalog: CatalogItem[] = [
+export const catalog = [
   {
     code: "NAVCLA-33MRE-495605A",
     name: "Aluminum Embossed Plate",
@@ -7,19 +6,12 @@ export const NavarreCatalog: CatalogItem[] = [
     colors: ["Black"],
     type: "customs",
     default_color: "Black",
-    discount: [
-      { quantity: 500, price: 2.87 },
-      { quantity: 1000, price: 2.60 },
-      { quantity: 2500, price: 2.36 },
-      { quantity: 5000, price: 2.24 },
-      { quantity: 10000, price: 2.02 },
-    ],
     sizes: {
-      500: 0.0,
-      1000: 0.0,
-      2500: 0.0,
-      5000: 0.0,
-      10000: 0.0,
+      500: 2.87,
+      1000: 2.6,
+      2500: 2.36,
+      5000: 2.24,
+      10000: 2.02,
     },
   },
   {
@@ -29,19 +21,12 @@ export const NavarreCatalog: CatalogItem[] = [
     colors: ["Black"],
     type: "customs",
     default_color: "Black",
-    discount: [
-      { quantity: 500, price: 2.87 },
-      { quantity: 1000, price: 2.60 },
-      { quantity: 2500, price: 2.36 },
-      { quantity: 5000, price: 2.24 },
-      { quantity: 10000, price: 2.02 },
-    ],
     sizes: {
-      500: 0.0,
-      1000: 0.0,
-      2500: 0.0,
-      5000: 0.0,
-      10000: 0.0,
+      500: 2.87,
+      1000: 2.6,
+      2500: 2.36,
+      5000: 2.24,
+      10000: 2.02,
     },
   },
   {
@@ -51,19 +36,12 @@ export const NavarreCatalog: CatalogItem[] = [
     colors: ["Black"],
     type: "customs",
     default_color: "Black",
-    discount: [
-      { quantity: 500, price: 2.87 },
-      { quantity: 1000, price: 2.60 },
-      { quantity: 2500, price: 2.36 },
-      { quantity: 5000, price: 2.24 },
-      { quantity: 10000, price: 2.02 },
-    ],
     sizes: {
-      500: 0.0,
-      1000: 0.0,
-      2500: 0.0,
-      5000: 0.0,
-      10000: 0.0,
+      500: 2.87,
+      1000: 2.6,
+      2500: 2.36,
+      5000: 2.24,
+      10000: 2.02,
     },
   },
   {
@@ -73,17 +51,11 @@ export const NavarreCatalog: CatalogItem[] = [
     colors: ["Chrome Faced"],
     type: "customs",
     default_color: "Chrome Faced",
-    discount: [
-      { quantity: 1000, price: 1.50 },
-      { quantity: 2500, price: 1.30 },
-      { quantity: 5000, price: 1.25 },
-      { quantity: 10000, price: 1.14 },
-    ],
-    sizes: {      
-      1000: 0.0,
-      2500: 0.0,
-      5000: 0.0,
-      10000: 0.0,
+    sizes: {
+      1000: 1.5,
+      2500: 1.3,
+      5000: 1.25,
+      10000: 1.14,
     },
   },
   {
@@ -93,17 +65,11 @@ export const NavarreCatalog: CatalogItem[] = [
     colors: ["Black"],
     type: "customs",
     default_color: "Black",
-    discount: [
-      { quantity: 1000, price: .95 },
-      { quantity: 2500, price: .90 },
-      { quantity: 5000, price: .80 },
-      { quantity: 10000, price:.65 },      
-    ],
-    sizes: {      
-      1000: 0.0,
-      2500: 0.0,
-      5000: 0.0,
-      10000: 0.0,
+    sizes: {
+      1000: 0.95,
+      2500: 0.9,
+      5000: 0.8,
+      10000: 0.65,
     },
   },
   {
@@ -113,15 +79,10 @@ export const NavarreCatalog: CatalogItem[] = [
     colors: ["Full Color"],
     type: "customs",
     default_color: "Full Color",
-    discount: [
-      { quantity: 1000, price: 1.50 },
-      { quantity: 2500, price: .51 },
-      { quantity: 5000, price: .49 },      
-    ],
-    sizes: {      
-      1000: 0.0,
-      2500: 0.0,
-      5000: 0.0,
+    sizes: {
+      1000: 1.5,
+      2500: 0.51,
+      5000: 0.49,
       10000: 0.0,
     },
   },
@@ -132,13 +93,9 @@ export const NavarreCatalog: CatalogItem[] = [
     colors: ["White"],
     type: "customs",
     default_color: "White",
-    discount: [
-      { quantity: 2500, price: 1.13 },      
-      { quantity: 5000, price: 1.00 },      
-    ],
-    sizes: {      
-      1000: 0.0,
-      2500: 0.0,
+    sizes: {
+      1000: 1.13,
+      2500: 1.0,
       5000: 0.0,
       10000: 0.0,
     },
@@ -150,13 +107,9 @@ export const NavarreCatalog: CatalogItem[] = [
     colors: ["White"],
     type: "customs",
     default_color: "White",
-    discount: [
-      { quantity: 2500, price: 1.34 },      
-      { quantity: 5000, price: 1.15 },      
-    ],
-    sizes: {      
-      1000: 0.0,
-      2500: 0.0,
+    sizes: {
+      1000: 1.34,
+      2500: 1.15,
       5000: 0.0,
       10000: 0.0,
     },
@@ -168,31 +121,22 @@ export const NavarreCatalog: CatalogItem[] = [
     colors: ["Metal"],
     type: "accessory",
     default_color: "Metal",
-    discount: [
-      { quantity: 1000, price: 1.95 },      
-    ],
     sizes: {
-      1: 0.0,      
+      1000: 1.95,
     },
   },
   {
-     code: "996",
+    code: "996",
     name: "Satin Stylus Pen",
     fullname: "Black Satin Stylus Pen w/white imprint",
     colors: ["Black"],
     type: "accessory",
     default_color: "Black",
-    discount: [
-      { quantity: 500, price: 1.05 },      
-      { quantity: 1000, price: 1.91 },
-      { quantity: 2500, price: .79 }, 
-      { quantity: 5000, price: .69 },       
-    ],
-    sizes: {      
-      500: 0.0,
-      1000: 0.0,
-      2500: 0.0,
-      5000: 0.0,
+    sizes: {
+      500: 1.05,
+      1000: 1.91,
+      2500: 0.79,
+      5000: 0.69,
     },
   },
   {
@@ -202,13 +146,10 @@ export const NavarreCatalog: CatalogItem[] = [
     colors: ["Plastic"],
     type: "service",
     default_color: "Plastic",
-    discount: [
-      { quantity: 500, price: 65.00 },      
-    ],
     sizes: {
-      1: 0.00,
+      500: 65.0,
     },
-  }, 
+  },
   {
     code: "3088",
     name: "Floor Mats",
@@ -216,11 +157,8 @@ export const NavarreCatalog: CatalogItem[] = [
     colors: ["White"],
     type: "service",
     default_color: "White",
-    discount: [
-      { quantity: 500, price: 60.00 },      
-    ],
     sizes: {
-      1: 0.00,      
+      500: 60.0,
     },
   },
   {
@@ -230,11 +168,8 @@ export const NavarreCatalog: CatalogItem[] = [
     colors: ["Metal"],
     type: "service",
     default_color: "Metal",
-    discount: [
-      { quantity: 250, price: 13.95 },      
-    ],
     sizes: {
-      1: 0.00,      
+      250: 13.95,
     },
   },
   {
@@ -255,9 +190,8 @@ export const NavarreCatalog: CatalogItem[] = [
     ],
     type: "service",
     default_color: "1000",
-    discount: [{ quantity: 1, price: 65.00 }],
     sizes: {
-      1: 0.0,
+      1: 65.0,
     },
   },
   {
@@ -267,54 +201,82 @@ export const NavarreCatalog: CatalogItem[] = [
     colors: ["Blue", "Green", "Orange", "Red", "White", "Yellow"],
     type: "sales",
     default_color: "Blue",
-    discount: [
-      { quantity: 1, price: 16.95 },      
-    ],
     sizes: {
-      1: 0.0,      
+      1: 16.95,
     },
   },
   {
     code: "GP200",
     name: "Key Tags",
     fullname: "Key Tag Versa #200 (250/box)",
-    colors: ["Blue", "Gray", "Green", "Lilac", "Lime Green", "Orange", "Red", "Tan", "White", "Yellow"],
+    colors: [
+      "Blue",
+      "Gray",
+      "Green",
+      "Lilac",
+      "Lime Green",
+      "Orange",
+      "Red",
+      "Tan",
+      "White",
+      "Yellow",
+    ],
     type: "sales",
     default_color: "Blue",
-    discount: [
-      { quantity: 1, price: 35.95 },      
-    ],
     sizes: {
-      1: 0.0,      
+      1: 35.95,
     },
   },
   {
     code: "226",
     name: "Combo Key Tags",
     fullname: "Combo Key Tags - Numbered (125/box)",
-    colors: ["Beige", "Blue", "Green", "Grey", "Lilac", "Orange", "Red", "White", "Yellow"],
+    colors: [
+      "Beige",
+      "Blue",
+      "Green",
+      "Grey",
+      "Lilac",
+      "Orange",
+      "Red",
+      "White",
+      "Yellow",
+    ],
     type: "sales",
     default_color: "Beige",
-    discount: [
-      { quantity: 1, price: 65.00 },      
-    ],
     sizes: {
-      1: 0.0,      
+      1: 65.0,
     },
   },
   {
     code: "3198BY",
     name: "Oval Year Stickers",
     fullname: "Oval Year Stickers (Black/Yellow)  (12/pk)",
-    colors: ["BY_08","BY_09","BY_10","BY_11","BY_12","BY_13","BY_14","BY_15","BY_16","BY_17","BY_18",
-      "BY_19","BY_20","BY_21","BY_22","BY_23","BY_24","BY_25","BY_26"],
+    colors: [
+      "BY_08",
+      "BY_09",
+      "BY_10",
+      "BY_11",
+      "BY_12",
+      "BY_13",
+      "BY_14",
+      "BY_15",
+      "BY_16",
+      "BY_17",
+      "BY_18",
+      "BY_19",
+      "BY_20",
+      "BY_21",
+      "BY_22",
+      "BY_23",
+      "BY_24",
+      "BY_25",
+      "BY_26",
+    ],
     type: "sales",
     default_color: "BY 08",
-    discount: [
-      { quantity: 1, price: 10.99 },      
-    ],
     sizes: {
-      1: 10.99,    
+      1: 10.99,
     },
   },
   {
@@ -324,11 +286,8 @@ export const NavarreCatalog: CatalogItem[] = [
     colors: ["White"],
     type: "service",
     default_color: "White",
-    discount: [
-      { quantity: 500, price: 99.99 },      
-    ],
     sizes: {
-      1: 0.00,      
+      500: 99.99,
     },
   },
   {
@@ -338,11 +297,8 @@ export const NavarreCatalog: CatalogItem[] = [
     colors: ["White"],
     type: "service",
     default_color: "White",
-    discount: [
-      { quantity: 250, price: 34.14 },      
-    ],
     sizes: {
-      1: 0.00,      
+      250: 34.14,
     },
   },
   {
@@ -352,11 +308,8 @@ export const NavarreCatalog: CatalogItem[] = [
     colors: ["White"],
     type: "service",
     default_color: "White",
-    discount: [
-      { quantity: 250, price: 34.14 },      
-    ],
     sizes: {
-      1: 0.00,      
+      250: 34.14,
     },
   },
   {
@@ -366,11 +319,8 @@ export const NavarreCatalog: CatalogItem[] = [
     colors: ["White"],
     type: "service",
     default_color: "White",
-    discount: [
-      { quantity: 250, price: 34.14 },      
-    ],
     sizes: {
-      1: 0.00,      
+      250: 34.14,
     },
   },
   {
@@ -380,25 +330,30 @@ export const NavarreCatalog: CatalogItem[] = [
     colors: ["White"],
     type: "service",
     default_color: "White",
-    discount: [
-      { quantity: 250, price: 34.14 },      
-    ],
     sizes: {
-      1: 0.00,      
+      250: 34.14,
     },
   },
   {
     code: "GP546",
     name: "Deal Jackets",
     fullname: "Deal Jackets (500/box)",
-    colors: ["Blue", "Buff", "Fuchsia", "Green", "Grey", "Lavender", "Pink", "Salmon", "White", "Yellow"],
+    colors: [
+      "Blue",
+      "Buff",
+      "Fuchsia",
+      "Green",
+      "Grey",
+      "Lavender",
+      "Pink",
+      "Salmon",
+      "White",
+      "Yellow",
+    ],
     type: "sales",
     default_color: "Blue",
-    discount: [
-      { quantity: 1, price: 115.00 },      
-    ],
     sizes: {
-      1: 0.0,      
+      1: 115.0,
     },
   },
   {
@@ -440,11 +395,17 @@ export const NavarreCatalog: CatalogItem[] = [
       "4XLT": 58.99,
     },
   },
-  {    
+  {
     code: "J317",
     name: "Port Authority® Jacket",
     fullname: "Port Authority® Core Soft Shell Jacket",
-    colors: [ "Battleship Grey", "Black", "Black Charcoal Heather", "Deep Smoke", "Pearl Grey Heather"],
+    colors: [
+      "Battleship Grey",
+      "Black",
+      "Black Charcoal Heather",
+      "Deep Smoke",
+      "Pearl Grey Heather",
+    ],
     type: "mens",
     default_color: "Black",
     sizes: {
@@ -463,7 +424,13 @@ export const NavarreCatalog: CatalogItem[] = [
     code: "L317",
     name: "Port Authority® Jacket",
     fullname: "Port Authority® Women's Core Soft Shell Jacket",
-    colors: ["Battleship Grey", "Black", "Black Charcoal Heather", "Deep Smoke", "Pearl Grey Heather"],
+    colors: [
+      "Battleship Grey",
+      "Black",
+      "Black Charcoal Heather",
+      "Deep Smoke",
+      "Pearl Grey Heather",
+    ],
     type: "womens",
     default_color: "Black",
     sizes: {
@@ -473,7 +440,7 @@ export const NavarreCatalog: CatalogItem[] = [
       XLarge: 46.99,
       "2XLarge": 48.99,
       "3XLarge": 51.99,
-      "4XLarge": 53.99,      
+      "4XLarge": 53.99,
     },
   },
   {
@@ -553,8 +520,8 @@ export const NavarreCatalog: CatalogItem[] = [
     default_color: "Black",
     sizes: {
       OSFA: 10.49,
-     },
-  },   
+    },
+  },
   {
     code: "C112",
     name: "Port Authority Trucker Cap",
@@ -564,6 +531,6 @@ export const NavarreCatalog: CatalogItem[] = [
     default_color: "Black",
     sizes: {
       OSFA: 13.25,
-     },
-  },   
+    },
+  },
 ];

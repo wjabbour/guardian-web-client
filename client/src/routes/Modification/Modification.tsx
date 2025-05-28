@@ -1,5 +1,5 @@
 import styles from "./Modification.module.scss";
-import { Catalog } from "../../lib/catalog";
+import { getWebCatalog } from "guardian-common";
 import { useLoaderData, useOutletContext, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import Snackbar from "@mui/material/Snackbar";
@@ -18,7 +18,7 @@ import QuantitySelector from "./QuantitySelector";
 import { CartItem } from "../../lib/interfaces";
 
 export async function loader({ params }) {
-  return Catalog().find((i) => i.code === params.id);
+  return getWebCatalog().find((i) => i.code === params.id);
 }
 
 export default function Modification() {
@@ -116,9 +116,13 @@ export default function Modification() {
       ...cart,
     };
 
-    if (item.type === "customs") {
-      // check customs order not empty
+    // check if the keys of the sizes are numbers vs strings
+    const shouldUseQuantityBasedOrdering = !isNaN(
+      Number(Object.keys(item.sizes)[0])
+    );
 
+    if (shouldUseQuantityBasedOrdering) {
+      // check order not empty
       const noCustoms =
         Object.keys(customsOrder).length === 0
           ? true

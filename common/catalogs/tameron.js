@@ -1,5 +1,4 @@
-import { CatalogItem } from "../lib/interfaces";
-export const TameronCatalog: CatalogItem[] = [
+export const catalog = [
   {
     code: "TAMHDA-33P3D-444019A",
     name: "Hard Front Plates",
@@ -7,10 +6,6 @@ export const TameronCatalog: CatalogItem[] = [
     colors: ["Black"],
     type: "customs",
     default_color: "Black",
-    discount: [
-      { quantity: 1000, price: 0.0 },
-      { quantity: 2500, price: 0.0 },
-    ],
     sizes: {
       1000: 0.0,
       2500: 0.0,
@@ -23,10 +18,6 @@ export const TameronCatalog: CatalogItem[] = [
     colors: ["Black"],
     type: "customs",
     default_color: "Black",
-    discount: [
-      { quantity: 1000, price: 0.0 },
-      { quantity: 2500, price: 0.0 },
-    ],
     sizes: {
       1000: 0.0,
       2500: 0.0,
@@ -39,10 +30,6 @@ export const TameronCatalog: CatalogItem[] = [
     colors: ["Black", "White"],
     type: "customs",
     default_color: "Black",
-    discount: [
-      { quantity: 1000, price: 0.0 },
-      { quantity: 2500, price: 0.0 },
-    ],
     sizes: {
       1000: 0.0,
       2500: 0.0,
@@ -55,10 +42,6 @@ export const TameronCatalog: CatalogItem[] = [
     colors: ["Black"],
     type: "customs",
     default_color: "Black",
-    discount: [
-      { quantity: 1000, price: 0.0 },
-      { quantity: 2500, price: 0.0 },
-    ],
     sizes: {
       1000: 0.0,
       2500: 0.0,

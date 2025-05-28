@@ -1,5 +1,4 @@
-import { CatalogItem } from "../lib/interfaces";
-export const NewCustomerCatalog: CatalogItem[] = [
+export const catalog = [
   {
     code: "J317",
     name: "Port Authority® Jacket",
@@ -90,7 +89,19 @@ export const NewCustomerCatalog: CatalogItem[] = [
     code: "LOG101",
     name: "OGIO® - Jewel Polo",
     fullname: "OGIO® - Jewel Polo",
-    colors: ["Blacktop", "Blue Mist", "Bright White", "Diesel Grey", "Electric Blue", "Gridiron Green", "Navy", "Pink Crush", "Rogue Grey", "Signal Red", "Spar Blue"],
+    colors: [
+      "Blacktop",
+      "Blue Mist",
+      "Bright White",
+      "Diesel Grey",
+      "Electric Blue",
+      "Gridiron Green",
+      "Navy",
+      "Pink Crush",
+      "Rogue Grey",
+      "Signal Red",
+      "Spar Blue",
+    ],
     type: "womens",
     default_color: "Blacktop",
     sizes: {
@@ -270,23 +281,16 @@ export const NewCustomerCatalog: CatalogItem[] = [
     code: "5470",
     name: "A/P Voucher Jacket",
     fullname: "9 in. x 12 in. A/P Voucher Jacket (DSA-540)",
-    colors: [
-      "Blue",
-      "Buff",      
-      "Green",      
-      "Lavender",
-      "Pink",      
-      "White",      
-    ],
+    colors: ["Blue", "Buff", "Green", "Lavender", "Pink", "White"],
     type: "office",
     default_color: "Buff",
     discount: [
       { quantity: 100, price: 0.0 },
-      { quantity: 500, price: 0.0 },      
+      { quantity: 500, price: 0.0 },
     ],
     sizes: {
       100: 0.0,
-      500: 0.0,      
+      500: 0.0,
     },
   },
   {

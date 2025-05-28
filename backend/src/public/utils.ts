@@ -1,8 +1,8 @@
 import pino from "pino";
-import { Catalog } from "./catalog";
 import dayjs from "dayjs";
 import { SendRawEmailCommand, SESClient } from "@aws-sdk/client-ses";
 import { getStore, getConfigValue } from "guardian-common";
+import { getCatalog } from "guardian-common";
 
 export const logger = pino();
 
@@ -41,13 +41,13 @@ export const COMPANIES: { [index: string]: string } = {
 };
 
 export function getCatalogItem(item_code, size, company_name) {
-  return Catalog(company_name).find((i) => {
+  return getCatalog(company_name).find((i) => {
     return i.code === item_code;
   });
 }
 
 export function getCatalogItemPrice(item_code, size, company_name) {
-  const item = Catalog(company_name).find((i) => {
+  const item = getCatalog(company_name).find((i) => {
     return i.code === item_code;
   });
   return item.sizes[size];
@@ -57,7 +57,7 @@ export function getCatalogItemDescription(item_code, company_name) {
   logger.info(
     `Getting item description from catalog for item code ${item_code}`
   );
-  const item = Catalog(company_name).find((i) => {
+  const item = getCatalog(company_name).find((i) => {
     return i.code === item_code;
   });
 
