@@ -255,11 +255,6 @@ export const catalog = [
     colors: ["Metal"],
     type: "customs",
     default_color: "Metal",
-    discount: [
-      { quantity: 500, price: 0.0 },
-      { quantity: 1000, price: 0.0 },
-      { quantity: 2500, price: 0.0 },
-    ],
     sizes: {
       500: 0.0,
       1000: 0.0,
@@ -273,11 +268,6 @@ export const catalog = [
     colors: ["White"],
     type: "customs",
     default_color: "White",
-    discount: [
-      { quantity: 500, price: 0.0 },
-      { quantity: 1000, price: 0.0 },
-      { quantity: 2500, price: 0.0 },
-    ],
     sizes: {
       500: 0.0,
       1000: 0.0,
@@ -291,11 +281,6 @@ export const catalog = [
     colors: ["White"],
     type: "customs",
     default_color: "White",
-    discount: [
-      { quantity: 500, price: 0.0 },
-      { quantity: 1000, price: 0.0 },
-      { quantity: 2500, price: 0.0 },
-    ],
     sizes: {
       500: 0.0,
       1000: 0.0,

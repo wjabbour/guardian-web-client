@@ -6,7 +6,6 @@ export const catalog = [
     colors: ["White"],
     type: "customs",
     default_color: "White",
-    discount: [{ quantity: 5000, price: 0.0 }],
     sizes: {
       5000: 0.0,
     },
@@ -18,7 +17,6 @@ export const catalog = [
     colors: ["White"],
     type: "customs",
     default_color: "White",
-    discount: [{ quantity: 5000, price: 0.0 }],
     sizes: {
       5000: 0.0,
     },
@@ -30,11 +28,6 @@ export const catalog = [
     colors: ["Black", "Red", "Silver", "White"],
     type: "customs",
     default_color: "Black",
-    discount: [
-      { quantity: 500, price: 0.0 },
-      { quantity: 1000, price: 0.0 },
-      { quantity: 1250, price: 0.0 },
-    ],
     sizes: {
       500: 0.0,
       1000: 0.0,
@@ -59,10 +52,6 @@ export const catalog = [
     ],
     type: "office",
     default_color: "Buff",
-    discount: [
-      { quantity: 500, price: 0.0 },
-      { quantity: 1000, price: 0.0 },
-    ],
     sizes: {
       500: 0.0,
       1000: 0.0,
@@ -86,9 +75,8 @@ export const catalog = [
     ],
     type: "office",
     default_color: "Number 0",
-    discount: [{ quantity: 500, price: 8.99 }],
     sizes: {
-      500: 0.0,
+      500: 0.017,
     },
   },
   {
@@ -98,10 +86,6 @@ export const catalog = [
     colors: ["Blue", "Buff", "Green", "Lavender", "Pink", "White"],
     type: "office",
     default_color: "Buff",
-    discount: [
-      { quantity: 100, price: 0.0 },
-      { quantity: 500, price: 0.0 },
-    ],
     sizes: {
       100: 0.0,
       500: 0.0,
@@ -114,9 +98,8 @@ export const catalog = [
     colors: ["Plastic"],
     type: "service",
     default_color: "Plastic",
-    discount: [{ quantity: 500, price: 73.5 }],
     sizes: {
-      default: 0.0,
+      500: 0.147,
     },
   },
   {

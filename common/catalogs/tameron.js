@@ -6,10 +6,6 @@ export const catalog = [
     colors: ["Black"],
     type: "customs",
     default_color: "Black",
-    discount: [
-      { quantity: 1000, price: 0.0 },
-      { quantity: 2500, price: 0.0 },
-    ],
     sizes: {
       1000: 0.0,
       2500: 0.0,
@@ -22,10 +18,6 @@ export const catalog = [
     colors: ["Black"],
     type: "customs",
     default_color: "Black",
-    discount: [
-      { quantity: 1000, price: 0.0 },
-      { quantity: 2500, price: 0.0 },
-    ],
     sizes: {
       1000: 0.0,
       2500: 0.0,
@@ -38,10 +30,6 @@ export const catalog = [
     colors: ["Black", "White"],
     type: "customs",
     default_color: "Black",
-    discount: [
-      { quantity: 1000, price: 0.0 },
-      { quantity: 2500, price: 0.0 },
-    ],
     sizes: {
       1000: 0.0,
       2500: 0.0,
@@ -54,10 +42,6 @@ export const catalog = [
     colors: ["Black"],
     type: "customs",
     default_color: "Black",
-    discount: [
-      { quantity: 1000, price: 0.0 },
-      { quantity: 2500, price: 0.0 },
-    ],
     sizes: {
       1000: 0.0,
       2500: 0.0,

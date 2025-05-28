@@ -340,13 +340,9 @@ export const catalog = [
     type: "customs",
     default_color: "Black",
     supportedStores: ["HENFAT"],
-    discount: [
-      { quantity: 1000, price: 0.75 },
-      { quantity: 2500, price: 0.65 },
-    ],
     sizes: {
-      1000: 0.0,
-      2500: 0.0,
+      1000: 0.75,
+      2500: 0.65,
     },
   },
   {
@@ -357,13 +353,9 @@ export const catalog = [
     type: "customs",
     default_color: "Black",
     supportedStores: ["HENFAT"],
-    discount: [
-      { quantity: 500, price: 3.59 },
-      { quantity: 1000, price: 3.19 },
-    ],
     sizes: {
-      1000: 0.0,
-      2500: 0.0,
+      500: 3.59,
+      1000: 3.19,
     },
   },
   {
@@ -374,13 +366,9 @@ export const catalog = [
     type: "customs",
     default_color: "White",
     supportedStores: ["HENFAT"],
-    discount: [
-      { quantity: 1000, price: 3.59 },
-      { quantity: 2500, price: 3.19 },
-    ],
     sizes: {
-      1000: 0.0,
-      2500: 0.0,
+      1000: 3.59,
+      2500: 3.19,
     },
   },
   {
@@ -391,13 +379,9 @@ export const catalog = [
     type: "customs",
     default_color: "Metal",
     supportedStores: ["HENFAT"],
-    discount: [
-      { quantity: 1000, price: 3.69 },
-      { quantity: 2500, price: 3.09 },
-    ],
     sizes: {
-      1000: 0.0,
-      2500: 0.0,
+      1000: 3.69,
+      2500: 3.09,
     },
   },
   {
@@ -407,13 +391,9 @@ export const catalog = [
     colors: ["White"],
     type: "service",
     default_color: "White",
-    discount: [
-      { quantity: 500, price: 0.89 },
-      { quantity: 1000, price: 0.69 },
-    ],
     sizes: {
-      1000: 0.0,
-      2500: 0.0,
+      500: 0.89,
+      1000: 0.69,
     },
   },
   {
@@ -423,13 +403,9 @@ export const catalog = [
     colors: ["White"],
     type: "service",
     default_color: "White",
-    discount: [
-      { quantity: 500, price: 0.89 },
-      { quantity: 1000, price: 0.69 },
-    ],
     sizes: {
-      1000: 0.0,
-      2500: 0.0,
+      1000: 0.89,
+      2500: 0.69,
     },
   },
   {
@@ -440,15 +416,10 @@ export const catalog = [
     type: "customs",
     default_color: "Black",
     supportedStores: ["HENFAT"],
-    discount: [
-      { quantity: 1000, price: 0.89 },
-      { quantity: 2500, price: 0.79 },
-      { quantity: 5000, price: 0.69 },
-    ],
     sizes: {
-      1000: 0.0,
-      2500: 0.0,
-      5000: 0.0,
+      1000: 0.89,
+      2500: 0.79,
+      5000: 0.69,
     },
   },
   {
@@ -458,13 +429,9 @@ export const catalog = [
     colors: ["White"],
     type: "service",
     default_color: "White",
-    discount: [
-      { quantity: 5000, price: 0.21 },
-      { quantity: 10000, price: 0.19 },
-    ],
     sizes: {
-      5000: 0.0,
-      10000: 0.0,
+      5000: 0.21,
+      10000: 0.19,
     },
   },
   {
@@ -474,9 +441,8 @@ export const catalog = [
     colors: ["Metal"],
     type: "accessory",
     default_color: "Metal",
-    discount: [{ quantity: 500, price: 3.59 }],
     sizes: {
-      1: 0.0,
+      500: 3.59,
     },
   },
   {
@@ -486,9 +452,8 @@ export const catalog = [
     colors: ["Royal"],
     type: "accessory",
     default_color: "Royal",
-    discount: [{ quantity: 360, price: 2.89 }],
     sizes: {
-      1: 0.0,
+      360: 2.89,
     },
   },
   {
@@ -498,9 +463,8 @@ export const catalog = [
     colors: ["Black"],
     type: "accessory",
     default_color: "Black",
-    discount: [{ quantity: 1000, price: 1.69 }],
     sizes: {
-      1: 0.0,
+      1000: 1.69,
     },
   },
   {
@@ -510,9 +474,8 @@ export const catalog = [
     colors: ["Black"],
     type: "accessory",
     default_color: "Black",
-    discount: [{ quantity: 1000, price: 1.69 }],
     sizes: {
-      1: 0.0,
+      1000: 1.69,
     },
   },
   {
@@ -522,9 +485,8 @@ export const catalog = [
     colors: ["Black"],
     type: "accessory",
     default_color: "Black",
-    discount: [{ quantity: 100, price: 2.29 }],
     sizes: {
-      1: 0.0,
+      100: 2.29,
     },
   },
 ];

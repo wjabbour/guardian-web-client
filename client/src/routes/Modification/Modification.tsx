@@ -116,10 +116,13 @@ export default function Modification() {
       ...cart,
     };
 
-    console.log(customsOrder);
-    if (item.type === "customs") {
-      // check customs order not empty
+    // check if the keys of the sizes are numbers vs strings
+    const shouldUseQuantityBasedOrdering = !isNaN(
+      Number(Object.keys(item.sizes)[0])
+    );
 
+    if (shouldUseQuantityBasedOrdering) {
+      // check order not empty
       const noCustoms =
         Object.keys(customsOrder).length === 0
           ? true
@@ -146,7 +149,6 @@ export default function Modification() {
       });
 
       for (const [key, value] of Object.entries(items)) {
-        console.log(key, value);
         addCustomsToCart(value, key, new_cart);
       }
 
@@ -248,30 +250,6 @@ export default function Modification() {
       new_cart[key].price = cart_item.price;
     } else {
       new_cart[key] = cart_item;
-    }
-  }
-
-  function getPriceWithDiscount(cart_quantity, new_cart_item_quantity) {
-    if (!item.discount) {
-      return item.sizes["default"];
-    }
-
-    /*
-      this is currently the case for all items with discounts (all items with a discount property
-      also have only one size, default)
-
-      but im adding this check so we dont accidentally apply this logic to future items which may require
-      discounts but have multiple sizes
-    */
-    const total_quantity = cart_quantity + new_cart_item_quantity;
-    if (Object.keys(item.sizes).length === 1) {
-      let basePrice = item.sizes["default"];
-      for (let i = 0; i < item.discount.length; i++) {
-        if (total_quantity >= item.discount[i].quantity)
-          basePrice = item.discount[i].price;
-      }
-
-      return basePrice;
     }
   }
 
