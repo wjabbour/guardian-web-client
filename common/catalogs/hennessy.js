@@ -387,7 +387,7 @@ export const catalog = [
   },
     {
     code: "HENPRO-FOB-414917C",
-    name: "Leather Key Fob (red stitch)",
+    name: "Leather Key Fob (red stitch) - Porsche N ATL",
     fullname: "Metal & Black Leather Fob w/black/186 red/872 gold imprint",
     colors: ["Black"],
     type: "accessory",
@@ -401,7 +401,7 @@ export const catalog = [
   },
   {
     code: "HENPRO-FOB-415104C",
-    name: "Leather Key Fob (white stitch)",
+    name: "Leather Key Fob (white stitch)- Porsche N ATL",
     fullname: "Metal & Black Leather Fob w/black/186 red/872 gold imprint",
     colors: ["Black"],
     type: "accessory",
@@ -415,7 +415,7 @@ export const catalog = [
   },
   {
     code: "HENPMA-FOB-497832C",
-    name: "Leather Key Fob (red stitch)",
+    name: "Leather Key Fob (red stitch) - Porsche Marietta",
     fullname: "Metal & Black Leather Fob w/black/186 red/872 gold imprint",
     colors: ["Black"],
     type: "accessory",
@@ -429,7 +429,7 @@ export const catalog = [
   },
   {
     code: "HENPMA-FOB-498046C",
-    name: "Leather Key Fob (white stitch)",
+    name: "Leather Key Fob (white stitch) - Porsche Marietta",
     fullname: "Metal & Black Leather Fob w/black/186 red/872 gold imprint",
     colors: ["Black"],
     type: "accessory",
