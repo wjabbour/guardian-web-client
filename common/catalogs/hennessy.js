@@ -268,7 +268,7 @@ export const catalog = [
     code: "NKBV6042",
     name: "Nike® Essential Polo",
     fullname: "Nike® Dry Essential Solid Polo",
-    colors: ["Black", "Game Royal", "Midnight Navy","Univesity Blue", "University Red", "White"],
+    colors: ["Black", "Game Royal", "Midnight Navy","University Blue", "University Red", "White"],
     type: "mens",
     default_color: "Black",
     sizes: {
