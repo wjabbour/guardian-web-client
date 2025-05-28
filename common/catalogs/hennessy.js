@@ -387,11 +387,12 @@ export const catalog = [
   },
     {
     code: "HENPRO-FOB-414917C",
-    name: "Leather Key Fob (red stitch)",
-    fullname: "Metal & Black Leather Fob w/black/872 gold imprint",
+    name: "Leather Key Fob - red stitch",
+    fullname: "Metal & Black Leather Fob w/black/186 red/872 gold imprint",
     colors: ["Black"],
-    type: "accessory",
+    type: "custom",
     default_color: "Black",
+    supportedStores: ["HENPRO"],    
     discount: [
       { quantity: 500, price: 3.99 },     
     ],
@@ -401,11 +402,12 @@ export const catalog = [
   },
   {
     code: "HENPRO-FOB-415104C",
-    name: "Leather Key Fob (white stitch)",
+    name: "Leather Key Fob - white stitch",
     fullname: "Metal & Black Leather Fob w/black/186 red/872 gold imprint",
     colors: ["Black"],
-    type: "accessory",
+    type: "custom",
     default_color: "Black",
+    supportedStores: ["HENPRO"],
     discount: [
       { quantity: 500, price: 3.99 },     
     ],
@@ -415,11 +417,12 @@ export const catalog = [
   },
   {
     code: "HENPMA-FOB-497832C",
-    name: "Leather Key Fob (red stitch)",
+    name: "Leather Key Fob -red stitch",
     fullname: "Metal & Black Leather Fob w/black/186 red/872 gold imprint",
     colors: ["Black"],
-    type: "accessory",
+    type: "custom",
     default_color: "Black",
+    supportedStores: ["HENPMA"],
     discount: [
       { quantity: 500, price: 3.99 },     
     ],
@@ -429,11 +432,12 @@ export const catalog = [
   },
   {
     code: "HENPMA-FOB-498046C",
-    name: "Leather Key Fob (white stitch)",
+    name: "Leather Key Fob - white stitch",
     fullname: "Metal & Black Leather Fob w/black/186 red/872 gold imprint",
     colors: ["Black"],
     type: "accessory",
     default_color: "Black",
+    supportedStores: ["HENPMA"],
     discount: [
       { quantity: 500, price: 3.99 },     
     ],
