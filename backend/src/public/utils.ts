@@ -40,12 +40,6 @@ export const COMPANIES: { [index: string]: string } = {
   "https://cannonemployeestore.com": "Cannon",
 };
 
-export function getCatalogItem(item_code, size, company_name) {
-  return getCatalog(company_name).find((i) => {
-    return i.code === item_code;
-  });
-}
-
 export function getCatalogItemPrice(item_code, size, company_name) {
   const item = getCatalog(company_name).find((i) => {
     return i.code === item_code;

@@ -4,7 +4,6 @@ import {
   addCors,
   getCatalogItemDescription,
   sendEmail,
-  getCatalogItem,
 } from "../utils";
 import axios from "axios";
 import qs from "qs";
@@ -194,6 +193,8 @@ function construct_cart(cart: any, customer_po: string, company_name: string) {
     obj["code"] = cart_item["code"];
     obj["size"] = cart_item["size"];
     obj["color"] = cart_item["color"];
+    obj["price"] = cart_item["price"];
+
     if (cart_item["embroidery"]) obj["embroidery"] = cart_item["embroidery"];
     if (cart_item["placement"]) obj["placement"] = cart_item["placement"];
     obj["description"] = getCatalogItemDescription(
@@ -201,46 +202,11 @@ function construct_cart(cart: any, customer_po: string, company_name: string) {
       company_name
     );
 
-    const catalog_item = getCatalogItem(
-      cart_item["code"],
-      cart_item["size"],
-      company_name
-    );
-
-    obj["price"] = getPriceWithDiscount(
-      catalog_item,
-      obj["size"],
-      obj["quantity"]
-    );
-
     obj["customer_po"] = customer_po;
     massaged_cart.push(obj);
   });
 
   return massaged_cart;
-}
-
-function getPriceWithDiscount(item, size, quantity) {
-  if (!item.discount) {
-    return item.sizes[size];
-  }
-
-  /*
-    this is currently the case for all items with discounts (all items with a discount property
-    also have only one size, default)
-
-    but im adding this check so we dont accidentally apply this logic to future items which may require
-    discounts but have multiple sizes
-  */
-  if (Object.keys(item.sizes).length === 1) {
-    let basePrice = item.sizes["default"];
-    for (let i = 0; i < item.discount.length; i++) {
-      if (quantity >= item.discount[i].quantity)
-        basePrice = item.discount[i].price;
-    }
-
-    return basePrice;
-  }
 }
 
 function calculate_price(cart) {
