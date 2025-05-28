@@ -2,11 +2,11 @@ import styles from "./Catalog.module.scss";
 import ClothingIcon from "../../components/ClothingIcon/ClothingIcon";
 import { useState, useEffect } from "react";
 import { useNavigate, useLocation, useParams } from "react-router-dom";
-import { Catalog } from "../../lib/catalog";
 import { SvgIcon } from "@mui/material";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import LogoPreview from "./LogoPreview";
 import { getDomainAwarePath } from "../../lib/utils";
+import { getWebCatalog } from "guardian-common";
 
 export default function ClothingCatalog() {
   const navigate = useNavigate();
@@ -42,7 +42,7 @@ export default function ClothingCatalog() {
   }, []);
 
   useEffect(() => {
-    setCatalog(Catalog().filter((item) => item.type === catalogType));
+    setCatalog(getWebCatalog().filter((item) => item.type === catalogType));
   }, [catalogType]);
 
   return (

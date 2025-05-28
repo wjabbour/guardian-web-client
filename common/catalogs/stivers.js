@@ -1,5 +1,4 @@
-import { CatalogItem } from "../interfaces";
-export const StiversCatalog: CatalogItem[] = [
+export const catalog = [
   {
     code: "NKFB6448",
     name: "Nike Mesh Back Cap",
@@ -18,9 +17,9 @@ export const StiversCatalog: CatalogItem[] = [
     type: "mens",
     default_color: "Blk Blk",
     sizes: {
-      S_M: 30.00,
-      M_L: 30.00,
-      L_XL: 30.00,
+      S_M: 30.0,
+      M_L: 30.0,
+      L_XL: 30.0,
     },
   },
   {
@@ -40,12 +39,12 @@ export const StiversCatalog: CatalogItem[] = [
       "True Red White",
       "True Royal White",
       "White Black Black",
-      "White True Navy"
+      "White True Navy",
     ],
     type: "mens",
     default_color: "Blk Blk",
     sizes: {
-      OSFA: 9.00     
+      OSFA: 9.0,
     },
   },
   {
@@ -63,14 +62,14 @@ export const StiversCatalog: CatalogItem[] = [
       "Olive Drab Green",
       "Patriot Blue",
       "Patriot Blue White",
-      "True Navy",     
+      "True Navy",
       "True Pink White",
-      "Woodland Camo",      
+      "Woodland Camo",
     ],
     type: "mens",
     default_color: "Black",
     sizes: {
-      OSFA: 6.60     
+      OSFA: 6.6,
     },
   },
   {
@@ -115,7 +114,7 @@ export const StiversCatalog: CatalogItem[] = [
     code: "PC55",
     name: "Port & Company Blend Tee",
     fullname: "Port & Company Core Blend Tee",
-    colors: [ "Charcoal", "Jet Black", "Navy"],
+    colors: ["Charcoal", "Jet Black", "Navy"],
     type: "mens",
     default_color: "Jet Black",
     sizes: {
@@ -163,7 +162,7 @@ export const StiversCatalog: CatalogItem[] = [
       XLarge: 10.99,
       "2XLarge": 12.99,
       "3XLarge": 13.99,
-      "4XLarge": 14.99,      
+      "4XLarge": 14.99,
     },
   },
   {

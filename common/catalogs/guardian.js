@@ -1,5 +1,4 @@
-import { CatalogItem } from "../interfaces";
-export const GuardianCatalog: CatalogItem[] = [
+export const catalog = [
   {
     code: "J317",
     name: "Port Authority® Jacket",
@@ -23,7 +22,7 @@ export const GuardianCatalog: CatalogItem[] = [
     code: "L317",
     name: "Port Authority® Jacket",
     fullname: "Port Authority® Ladies Core Soft Shell Jacket",
-    colors: ["Battleship Grey", "Black"],      
+    colors: ["Battleship Grey", "Black"],
     type: "womens",
     default_color: "Black",
     sizes: {
@@ -33,43 +32,43 @@ export const GuardianCatalog: CatalogItem[] = [
       XLarge: 41.99,
       "2XLarge": 42.99,
       "3XLarge": 43.99,
-      "4XLarge": 44.99,      
+      "4XLarge": 44.99,
     },
   },
   {
     code: "ST650",
     name: "Sport-Tek® Polo Shirt",
     fullname: "Sport-Tek® Micropique Polo",
-    colors: ["Black", "Grey Concrete", "Iron Grey", "True Red"],     
+    colors: ["Black", "Grey Concrete", "Iron Grey", "True Red"],
     type: "mens",
     default_color: "Black",
     sizes: {
-      Small: 25.00,
-      Medium: 25.00,
-      Large: 25.00,
-      XLarge: 25.00,
-      "2XLarge": 26.00,
-      "3XLarge": 27.00,
-      "4XLarge": 28.00,
-      "5XLarge": 29.00,
-      "6XLarge": 30.00,
+      Small: 25.0,
+      Medium: 25.0,
+      Large: 25.0,
+      XLarge: 25.0,
+      "2XLarge": 26.0,
+      "3XLarge": 27.0,
+      "4XLarge": 28.0,
+      "5XLarge": 29.0,
+      "6XLarge": 30.0,
     },
   },
   {
     code: "LST650",
     name: "Sport-Tek® Polo Shirt",
     fullname: "Sport-Tek® Womens Micropique Polo",
-    colors: ["Black", "Grey Concrete", "Iron Grey", "True Red"],      
+    colors: ["Black", "Grey Concrete", "Iron Grey", "True Red"],
     type: "womens",
     default_color: "Black",
     sizes: {
-      Small: 25.00,
-      Medium: 25.00,
-      Large: 25.00,
-      XLarge: 25.00,
-      "2XLarge": 26.00,
-      "3XLarge": 27.00,
-      "4XLarge": 28.00,
+      Small: 25.0,
+      Medium: 25.0,
+      Large: 25.0,
+      XLarge: 25.0,
+      "2XLarge": 26.0,
+      "3XLarge": 27.0,
+      "4XLarge": 28.0,
     },
   },
   {
@@ -113,7 +112,7 @@ export const GuardianCatalog: CatalogItem[] = [
     code: "K805",
     name: "Port Authority® 1/4-Zip Pullover",
     fullname: "Port Authority® 1/4-Zip Pullover",
-    colors: ["Black","Iron Grey"],
+    colors: ["Black", "Iron Grey"],
     type: "mens",
     default_color: "Black",
     sizes: {
@@ -142,7 +141,7 @@ export const GuardianCatalog: CatalogItem[] = [
       "3XLarge": 34.99,
       "4XLarge": 35.99,
     },
-  },  
+  },
   {
     code: "600088V",
     name: "Seat Covers",
@@ -150,25 +149,32 @@ export const GuardianCatalog: CatalogItem[] = [
     colors: ["Plastic"],
     type: "service",
     default_color: "Plastic",
-    discount: [
-      { quantity: 1, price: 59.99 },      
-    ],
+    discount: [{ quantity: 1, price: 59.99 }],
     sizes: {
-      default: 0.00,
+      default: 0.0,
     },
-  }, 
+  },
   {
     code: "GP200",
     name: "Key Tags",
     fullname: "Key Tag Versa #200 (250/box)",
-    colors: ["Blue", "Gray", "Green", "Lilac", "Lime Green", "Orange", "Red", "Tan", "White", "Yellow"],
+    colors: [
+      "Blue",
+      "Gray",
+      "Green",
+      "Lilac",
+      "Lime Green",
+      "Orange",
+      "Red",
+      "Tan",
+      "White",
+      "Yellow",
+    ],
     type: "sales",
     default_color: "White",
-    discount: [
-      { quantity: 1, price: 19.99 },      
-    ],
+    discount: [{ quantity: 1, price: 19.99 }],
     sizes: {
-      1: 0.0,      
+      1: 0.0,
     },
   },
   {
@@ -178,11 +184,9 @@ export const GuardianCatalog: CatalogItem[] = [
     colors: ["Blue", "Green", "Orange", "Red", "White", "Yellow"],
     type: "sales",
     default_color: "White",
-    discount: [
-      { quantity: 1, price: 9.99 },      
-    ],
+    discount: [{ quantity: 1, price: 9.99 }],
     sizes: {
-      1: 0.0,      
+      1: 0.0,
     },
   },
   {
@@ -192,11 +196,9 @@ export const GuardianCatalog: CatalogItem[] = [
     colors: ["White"],
     type: "service",
     default_color: "White",
-    discount: [
-      { quantity: 1, price: 59.99 },      
-    ],
+    discount: [{ quantity: 1, price: 59.99 }],
     sizes: {
-      1: 0.0,      
+      1: 0.0,
     },
   },
   {
@@ -206,25 +208,32 @@ export const GuardianCatalog: CatalogItem[] = [
     colors: ["Plastic"],
     type: "service",
     default_color: "Plastic",
-    discount: [
-      { quantity: 1, price: 59.99 },      
-    ],
+    discount: [{ quantity: 1, price: 59.99 }],
     sizes: {
-      1: 0.0,      
+      1: 0.0,
     },
   },
   {
     code: "SDNRG",
     name: "Service Numbers",
     fullname: "Service Dispatch Numbers (1000/bx)",
-    colors: ["_0000", "1000", "2000", "3000", "4000", "5000", "6000", "7000", "8000", "9000"],
+    colors: [
+      "_0000",
+      "1000",
+      "2000",
+      "3000",
+      "4000",
+      "5000",
+      "6000",
+      "7000",
+      "8000",
+      "9000",
+    ],
     type: "service",
     default_color: "1000",
-    discount: [
-      { quantity: 1, price: 84.99 },      
-    ],
+    discount: [{ quantity: 1, price: 84.99 }],
     sizes: {
-      1: 0.0,      
+      1: 0.0,
     },
   },
   {
@@ -234,11 +243,9 @@ export const GuardianCatalog: CatalogItem[] = [
     colors: ["Yellow"],
     type: "sales",
     default_color: "Yellow",
-    discount: [
-      { quantity: 1, price: 26.14 },      
-    ],
+    discount: [{ quantity: 1, price: 26.14 }],
     sizes: {
-      1: 0.0,      
+      1: 0.0,
     },
   },
   {
@@ -267,14 +274,14 @@ export const GuardianCatalog: CatalogItem[] = [
     type: "customs",
     default_color: "White",
     discount: [
-        { quantity: 500, price: 0.0 },
-        { quantity: 1000, price: 0.0 },
-        { quantity: 2500, price: 0.0 },
-      ],
-      sizes: {
-        500: 0.0,
-        1000: 0.0,
-        2500: 0.0,
+      { quantity: 500, price: 0.0 },
+      { quantity: 1000, price: 0.0 },
+      { quantity: 2500, price: 0.0 },
+    ],
+    sizes: {
+      500: 0.0,
+      1000: 0.0,
+      2500: 0.0,
     },
   },
   {
@@ -285,14 +292,14 @@ export const GuardianCatalog: CatalogItem[] = [
     type: "customs",
     default_color: "White",
     discount: [
-        { quantity: 500, price: 0.0 },
-        { quantity: 1000, price: 0.0 },
-        { quantity: 2500, price: 0.0 },
-      ],
-      sizes: {
-        500: 0.0,
-        1000: 0.0,
-        2500: 0.0,
+      { quantity: 500, price: 0.0 },
+      { quantity: 1000, price: 0.0 },
+      { quantity: 2500, price: 0.0 },
+    ],
+    sizes: {
+      500: 0.0,
+      1000: 0.0,
+      2500: 0.0,
     },
-  }, 
+  },
 ];

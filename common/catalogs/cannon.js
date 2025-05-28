@@ -1,6 +1,4 @@
-import { CatalogItem } from "../lib/interfaces";
-
-export const CannonCatalog: CatalogItem[] = [
+export const catalog = [
   {
     code: "CANNJA-33P-403490A",
     name: "Plastic Plates",
@@ -74,37 +72,39 @@ export const CannonCatalog: CatalogItem[] = [
     code: "310",
     name: "File Number Labels",
     fullname: "File Right Number Labels (500/box)",
-    colors: ["Number 0","Number 1","Number 2","Number 3","Number 4","Number 5","Number 6","Number 7","Number 8","Number 9"],       
+    colors: [
+      "Number 0",
+      "Number 1",
+      "Number 2",
+      "Number 3",
+      "Number 4",
+      "Number 5",
+      "Number 6",
+      "Number 7",
+      "Number 8",
+      "Number 9",
+    ],
     type: "office",
     default_color: "Number 0",
-    discount: [
-      { quantity: 500, price: 8.99 },          
-    ],
+    discount: [{ quantity: 500, price: 8.99 }],
     sizes: {
-      500: 0.0,      
+      500: 0.0,
     },
   },
   {
     code: "5470",
     name: "A/P Voucher Jacket",
     fullname: "9 in. x 12 in. A/P Voucher Jacket (DSA-540)",
-    colors: [
-      "Blue",
-      "Buff",      
-      "Green",      
-      "Lavender",
-      "Pink",      
-      "White",      
-    ],
+    colors: ["Blue", "Buff", "Green", "Lavender", "Pink", "White"],
     type: "office",
     default_color: "Buff",
     discount: [
       { quantity: 100, price: 0.0 },
-      { quantity: 500, price: 0.0 },      
+      { quantity: 500, price: 0.0 },
     ],
     sizes: {
       100: 0.0,
-      500: 0.0,      
+      500: 0.0,
     },
   },
   {
@@ -114,13 +114,11 @@ export const CannonCatalog: CatalogItem[] = [
     colors: ["Plastic"],
     type: "service",
     default_color: "Plastic",
-    discount: [
-      { quantity: 500, price: 73.50 },      
-    ],
+    discount: [{ quantity: 500, price: 73.5 }],
     sizes: {
-      default: 0.00,
+      default: 0.0,
     },
-  }, 
+  },
   {
     code: "TM1MY394",
     name: "Cuffed Beanie",

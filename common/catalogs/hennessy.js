@@ -1,5 +1,4 @@
-import { CatalogItem } from "../lib/interfaces";
-export const HennessyCatalog: CatalogItem[] = [
+export const catalog = [
   {
     code: "600088V",
     name: "Seat Covers",

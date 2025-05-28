@@ -8,6 +8,16 @@ import { config as PremierConfig } from "./configs/premier";
 import { config as StiversConfig } from "./configs/stivers";
 import { config as TameronConfig } from "./configs/tameron";
 import { config as NavarreConfig } from "./configs/navarre";
+import { catalog as CannonCatalog } from "./catalogs/cannon";
+import { catalog as GuardianCatalog } from "./catalogs/guardian";
+import { catalog as HennessyCatalog } from "./catalogs/hennessy";
+import { catalog as LeithCatalog } from "./catalogs/leith";
+import { catalog as NewCustomerCatalog } from "./catalogs/newcustomer";
+import { catalog as PohankaCatalog } from "./catalogs/pohanka";
+import { catalog as PremierCatalog } from "./catalogs/premier";
+import { catalog as StiversCatalog } from "./catalogs/stivers";
+import { catalog as TameronCatalog } from "./catalogs/tameron";
+import { catalog as NavarreCatalog } from "./catalogs/navarre";
 
 const DEFAULT_CONFIG = {
   title: "Guardian",
@@ -53,6 +63,57 @@ export function getRoutePrefix(password) {
   return config ? config.route_prefix : undefined;
 }
 
+// TODO: consolidate web and server config and catalog retrieval functions
+export function getWebCatalog() {
+  const url = window.location.href;
+  if (url.includes("localhost:3000")) {
+    return HennessyCatalog;
+  } else if (url.includes("newcustomer")) {
+    return NewCustomerCatalog;
+  } else if (url.includes("stivers")) {
+    return StiversCatalog;
+  } else if (url.includes("tameron")) {
+    return TameronCatalog;
+  } else if (url.includes("premier")) {
+    return PremierCatalog;
+  } else if (url.includes("guardian")) {
+    return GuardianCatalog;
+  } else if (url.includes("cannon")) {
+    return CannonCatalog;
+  } else if (url.includes("leith")) {
+    return LeithCatalog;
+  } else if (url.includes("hennessy")) {
+    return HennessyCatalog;
+  } else if (url.includes("pohanka")) {
+    return PohankaCatalog;
+  } else if (url.includes("navarre")) {
+    return NavarreCatalog;
+  }
+}
+
+export function getCatalog(companyName) {
+  switch (companyName) {
+    case "Cannon":
+      return CannonCatalog;
+    case "Guardian":
+      return GuardianCatalog;
+    case "Hennessy":
+      return HennessyCatalog;
+    case "Leith":
+      return LeithCatalog;
+    case "Pohanka":
+      return PohankaCatalog;
+    case "Premier":
+      return PremierCatalog;
+    case "Stivers":
+      return StiversCatalog;
+    case "Tameron":
+      return TameronCatalog;
+    case "Navarre":
+      return NavarreCatalog;
+  }
+}
+
 export function getWebConfigValue(val) {
   const url = window.location.href;
   if (url.includes("localhost:3000")) {
@@ -84,7 +145,7 @@ export function getWebConfigValue(val) {
 }
 
 export function getConfigValue(val, config) {
-  console.log(val, config)
+  console.log(val, config);
   switch (config) {
     case "Cannon":
       return CannonConfig[val];

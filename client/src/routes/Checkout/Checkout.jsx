@@ -23,7 +23,7 @@ import { SvgIcon } from "@mui/material";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import { LoadingButton } from "@mui/lab";
 import CartItems from "./CartItems";
-import { Catalog } from "../../lib/catalog";
+import { getWebCatalog } from "guardian-common";
 
 export default function Checkout() {
   const paypalRef = useRef(null);
@@ -59,7 +59,7 @@ export default function Checkout() {
     window.location.hostname.includes("tameron") ||
     window.location.pathname.includes("tameron")
       ? Object.values(cart).reduce((acc, curr) => {
-          const item = Catalog().find((i) => i.code === curr.code);
+          const item = getWebCatalog().find((i) => i.code === curr.code);
           if (["mens", "womens"].includes(item.type)) acc += curr.quantity;
           return acc;
         }, 0)
@@ -186,7 +186,9 @@ export default function Checkout() {
   const handle_code = (event) => {
     set_code(event.target.value.toUpperCase());
     if (
-      getWebConfigValue("bypass_codes").includes(event.target.value.toUpperCase())
+      getWebConfigValue("bypass_codes").includes(
+        event.target.value.toUpperCase()
+      )
     ) {
       set_bypass_paypal(true);
     }

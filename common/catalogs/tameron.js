@@ -1,5 +1,4 @@
-import { CatalogItem } from "../lib/interfaces";
-export const TameronCatalog: CatalogItem[] = [
+export const catalog = [
   {
     code: "TAMHDA-33P3D-444019A",
     name: "Hard Front Plates",

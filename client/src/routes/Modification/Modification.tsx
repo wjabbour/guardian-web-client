@@ -1,5 +1,5 @@
 import styles from "./Modification.module.scss";
-import { Catalog } from "../../lib/catalog";
+import { getWebCatalog } from "guardian-common";
 import { useLoaderData, useOutletContext, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import Snackbar from "@mui/material/Snackbar";
@@ -18,7 +18,7 @@ import QuantitySelector from "./QuantitySelector";
 import { CartItem } from "../../lib/interfaces";
 
 export async function loader({ params }) {
-  return Catalog().find((i) => i.code === params.id);
+  return getWebCatalog().find((i) => i.code === params.id);
 }
 
 export default function Modification() {
