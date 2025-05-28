@@ -414,7 +414,7 @@ export const catalog = [
       { quantity: 500, price: 3.99 },     
     ],
     sizes: {
-      500: 0.0,     
+      500: 3.99,     
     },
   },
   {
@@ -428,7 +428,7 @@ export const catalog = [
       { quantity: 500, price: 3.99 },     
     ],
     sizes: {
-      500: 0.0,     
+      500: 3.99,     
     },
   },
   {
@@ -621,7 +621,7 @@ export const catalog = [
   },
   {
     code: "HENPMA-TOTE-2ML8410",
-    name: "Matte Tote w/imprint",
+    name: "Matte Tote 8 x 10 x 4",
     fullname: "White Matte Laminated Euro Tote w/black imprint (8x10x4)",
     colors: ["White"],
     type: "accessory",
@@ -632,7 +632,7 @@ export const catalog = [
   },
   {
     code: "HENPMA-TOTE-2L13510",
-    name: "Laminated Tote 13x10x5",
+    name: "Laminated Tote 13 x 10 x 5",
     fullname: "White Gloss Laminated Euro Tote w/black imprint (13x10x5)",
     colors: ["White"],
     type: "accessory",
@@ -643,7 +643,7 @@ export const catalog = [
   },
   {
     code: "HENPMA-TOTE-2L16612",
-    name: "Laminated Tote 16x12x6",
+    name: "Laminated Tote 16 x 12 x 6",
     fullname: "White Gloss Laminated Euro Tote w/black imprint (16x12x6)",
     colors: ["White"],
     type: "accessory",
