@@ -6,6 +6,7 @@ export const catalog = [
     colors: ["Black"],
     type: "customs",
     default_color: "Black",
+    supportedStores: ["NAVCLA","NAVCSU","NAVHLK","NAVBLA","NAVHLA","NAVCLK","VAUMAX","NAVCSL","NAVNLA"],
     sizes: {
       500: 2.87,
       1000: 2.6,
@@ -21,6 +22,7 @@ export const catalog = [
     colors: ["Black"],
     type: "customs",
     default_color: "Black",
+    supportedStores: ["NAVCLA","NAVCSU","NAVHLK","NAVBLA","NAVHLA","NAVCLK","VAUMAX","NAVCSL","NAVNLA"],
     sizes: {
       500: 2.87,
       1000: 2.6,
@@ -36,6 +38,7 @@ export const catalog = [
     colors: ["Black"],
     type: "customs",
     default_color: "Black",
+    supportedStores: ["NAVCLA","NAVCSU","NAVHLK","NAVBLA","NAVHLA","NAVCLK","VAUMAX","NAVCSL","NAVNLA"],
     sizes: {
       500: 2.87,
       1000: 2.6,
@@ -51,6 +54,7 @@ export const catalog = [
     colors: ["Chrome Faced"],
     type: "customs",
     default_color: "Chrome Faced",
+    supportedStores: ["NAVCLA","NAVCSU","NAVHLK","NAVBLA","NAVHLA","NAVCLK","VAUMAX","NAVCSL","NAVNLA"],
     sizes: {
       1000: 1.5,
       2500: 1.3,
@@ -65,6 +69,7 @@ export const catalog = [
     colors: ["Black"],
     type: "customs",
     default_color: "Black",
+    supportedStores: ["NAVCLA","NAVCSU","NAVHLK","NAVBLA","NAVHLA","NAVCLK","VAUMAX","NAVCSL","NAVNLA"],
     sizes: {
       1000: 0.95,
       2500: 0.9,
@@ -79,6 +84,7 @@ export const catalog = [
     colors: ["Full Color"],
     type: "customs",
     default_color: "Full Color",
+    supportedStores: ["NAVCLA","NAVCSU","NAVHLK","NAVBLA","NAVHLA","NAVCLK","VAUMAX","NAVCSL","NAVNLA"],
     sizes: {
       1000: 1.5,
       2500: 0.51,
@@ -93,6 +99,7 @@ export const catalog = [
     colors: ["White"],
     type: "customs",
     default_color: "White",
+    supportedStores: ["NAVCLA","NAVCSU","NAVHLK","NAVBLA","NAVHLA","NAVCLK","VAUMAX","NAVCSL","NAVNLA"],
     sizes: {
       1000: 1.13,
       2500: 1.0,
@@ -107,6 +114,7 @@ export const catalog = [
     colors: ["White"],
     type: "customs",
     default_color: "White",
+    supportedStores: ["NAVCLA","NAVCSU","NAVHLK","NAVBLA","NAVHLA","NAVCLK","VAUMAX","NAVCSL","NAVNLA"],
     sizes: {
       1000: 1.34,
       2500: 1.15,

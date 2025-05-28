@@ -15,8 +15,7 @@ export const config = {
     "lbudbill@gpcorp.com",
     "lbudbell@comcast.net",
     "bsugden@gpcorp.com",
-    "doubleujabbour@gmail.com",
-    ""
+    "doubleujabbour@gmail.com",    
   ],
   stores: {
     "Leith Acura, 2300 Capital Summit Court, Raleigh, NC 27616": "10118LEIARA",
