@@ -63,7 +63,7 @@ export const config = {
       "STIFSO",
     "Stivers Ford Troy, 121 US-231, Troy, AL 36081": "STIFTR",
   },
-  bypass_codes: ["STIVER"],
+  bypass_codes: ["EMPLOYEE", "MANAGER"],
 
   server_hostname: "https://mxfj3q6m01.execute-api.us-east-1.amazonaws.com",
   account_reps: [
