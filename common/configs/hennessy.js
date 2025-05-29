@@ -1,7 +1,7 @@
 export const config = {
   title: "Hennessy",
   company_logo: "hennessy.png",
-  logo_placements: ["Left Chest", "Right Sleeve"],
+  logo_placements: ["Left Chest", "Right Sleeve","Front Center"],
   show_modification_thumbnail: true,
   minimum_apparel_order: true,
   render_logo_preview: true,

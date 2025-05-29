@@ -217,7 +217,7 @@ export const catalog = [
   },
   {
     code: "S659",
-    name: "Port Authority® Oxford Shirt",
+    name: "Port Authority® Shirt",
     fullname: "Port Authority® Short Sleeve SuperPro™ Oxford Shirt",
     colors: ["Black", "Navy","Oxford Blue","White"],
     type: "mens",
@@ -430,7 +430,7 @@ export const catalog = [
   },
   {
     code: "PC90H",
-    name: "Pullover Hooded Sweatshirt",
+    name: "Hooded Sweatshirt",
     fullname: "Port & Company® Essential Fleece Pullover Hooded Sweatshirt",
     colors: ["Athletic Heather","Cardinal","Charcoal",
       "Drk Hthr Gry","Jet Black","Navy","Red","Royal","White"],
