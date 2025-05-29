@@ -18,9 +18,9 @@ export const catalog = [
     colors: ["White"],
     type: "service",
     default_color: "White",
-    discount: [{ quantity: 500, price: 72.97 }],
+    discount: [{ quantity: 500, price: 76.44 }],
     sizes: {
-      1: 72.97,
+      1: 76.44,
     },
   },
   {
@@ -385,7 +385,7 @@ export const catalog = [
       "4XLarge": 130.00,     
     },
   },
-    {
+  {
     code: "HENPRO-FOB-414917C",
     name: "Leather Key Fob (red stitch) - Porsche N ATL",
     fullname: "Metal & Black Leather Fob w/black/186 red/872 gold imprint",
@@ -401,7 +401,7 @@ export const catalog = [
   },
   {
     code: "HENPRO-FOB-415104C",
-    name: "Leather Key Fob (white stitch)- Porsche N ATL",
+    name: "Leather Key Fob (white stitch) - Porsche N ATL",
     fullname: "Metal & Black Leather Fob w/black/186 red/872 gold imprint",
     colors: ["Black"],
     type: "accessory",
@@ -434,6 +434,33 @@ export const catalog = [
     colors: ["Black"],
     type: "accessory",
     default_color: "Black",    
+    discount: [
+      { quantity: 500, price: 3.99 },     
+    ],
+    sizes: {
+      500: 3.99,     
+    },
+  },
+  {
+    code: "HENLAT-GPLLKR-456506L",
+    name: "Leather Key Fob - Lexus ATL",
+    fullname: "Black Laser Engraved Leather Fob w/debossed leather imprint",
+    colors: ["Black"],
+    type: "accessory",
+    default_color: "Black",    
+    discount: [
+      { quantity: 500, price: 3.19 },     
+    ],
+    sizes: {
+      500: 3.19,     
+    },
+  },
+  { code: "HENLAT-FOB-50162A",
+    name: "Leather Key Fob - Lexus ATL",
+    fullname: "Metal & Black Leather Fob w/black color fill",
+    colors: ["Black"],
+    type: "accessory",
+    default_color: "Black",      
     discount: [
       { quantity: 500, price: 3.99 },     
     ],
@@ -486,6 +513,54 @@ export const catalog = [
       500: 0.0,
       1000: 0.0,
       2500: 0.0,
+    },
+  },
+  {
+    code: "HENLAT-34MLF-379167A",
+    name: "Zinc Metal Frame",
+    fullname: "Zinc Metal Frame w/glossy black imprint",
+    colors: ["Metal"],
+    type: "customs",
+    default_color: "Metal",
+    supportedStores: ["HENLAT"],
+    sizes: {
+      1000: 0.99,      
+    },
+  },
+   {
+    code: "HENLAT-G24-367503A",
+    name: "Poly Coated Plate",
+    fullname: "Poly Coated Plate w/black imprint",
+    colors: ["Black"],
+    type: "customs",
+    default_color: "Black",
+    supportedStores: ["HENLAT"],
+    sizes: {
+      2500: 0.79,      
+    },
+  },
+   {
+    code: "HENLAT-33GT-497684Z",
+    name: "Plastic Plate",
+    fullname: "Plastic plate w/full color imprint",
+    colors: ["Black"],
+    type: "customs",
+    default_color: "Black",
+    supportedStores: ["HENLAT"],
+    sizes: {
+      250: 1.89,      
+    },
+  },
+   {
+    code: "HENLAT-33P-391710A",
+    name: "Plastic Plate",
+    fullname: "Plastic plate w/black imprint",
+    colors: ["Black"],
+    type: "customs",
+    default_color: "Black",
+    supportedStores: ["HENLAT"],
+    sizes: {
+      1000: 0.99,      
     },
   },
   {
