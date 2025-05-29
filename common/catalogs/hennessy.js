@@ -160,6 +160,17 @@ export const catalog = [
     },
   },
   {
+    code: "VT400",
+    name: "Stock Stickers",
+    fullname: "Kleer-Back Stock Stickers Versa #400 (100/pk)",
+    colors: ["Blue", "Green", "Orange", "Red", "White", "Yellow"],
+    type: "sales",
+    default_color: "Blue",
+    sizes: {
+      1: 17.95,
+    },
+  },
+  {
     code: "BB18002",
     name: "Brooks Brothers® Shirt",
     fullname: "Brooks Brothers® Wrinkle-Free Nailhead Shirt",
@@ -388,7 +399,7 @@ export const catalog = [
   {
     code: "HENPRO-FOB-414917C",
     name: "Leather Key Fob (red stitch) - Porsche N ATL",
-    fullname: "Metal & Black Leather Fob w/black/186 red/872 gold imprint",
+    fullname: "Metal & Black Leather Fob w/black, 186 red & 872 gold imprint",
     colors: ["Black"],
     type: "accessory",
     default_color: "Black",      
@@ -402,7 +413,7 @@ export const catalog = [
   {
     code: "HENPRO-FOB-415104C",
     name: "Leather Key Fob (white stitch) - Porsche N ATL",
-    fullname: "Metal & Black Leather Fob w/black/186 red/872 gold imprint",
+    fullname: "Metal & Black Leather Fob w/black, 186 red & 872 gold imprint",
     colors: ["Black"],
     type: "accessory",
     default_color: "Black",    
@@ -416,7 +427,7 @@ export const catalog = [
   {
     code: "HENPMA-FOB-497832C",
     name: "Leather Key Fob (red stitch) - Porsche Marietta",
-    fullname: "Metal & Black Leather Fob w/black/186 red/872 gold imprint",
+    fullname: "Metal & Black Leather Fob w/black, 186 red & 872 gold imprint",
     colors: ["Black"],
     type: "accessory",
     default_color: "Black",
@@ -430,7 +441,7 @@ export const catalog = [
   {
     code: "HENPMA-FOB-498046C",
     name: "Leather Key Fob (white stitch) - Porsche Marietta",
-    fullname: "Metal & Black Leather Fob w/black/186 red/872 gold imprint",
+    fullname: "Metal & Black Leather Fob w/black, 186 red & 872 gold imprint",
     colors: ["Black"],
     type: "accessory",
     default_color: "Black",    
@@ -466,6 +477,34 @@ export const catalog = [
     ],
     sizes: {
       500: 3.99,     
+    },
+  },
+  {
+    code: "HENLDU-GPLLKR-473091L",
+    name: "Leather Key Fob - Lexus Gwinnett",
+    fullname: "Black Laser Engraved Leather Fob w/debossed leather imprint",
+    colors: ["Black"],
+    type: "accessory",
+    default_color: "Black",    
+    discount: [
+      { quantity: 1000, price: 3.19 },     
+    ],
+    sizes: {
+      1000: 3.19,     
+    },
+  },
+  {
+    code: "HENLDU-G1640-427215L",
+    name: "Leather Key Fob - Lexus Gwinnett",
+    fullname: "Black Laser Engraved Leather Fob",
+    colors: ["Black"],
+    type: "accessory",
+    default_color: "Black",    
+    discount: [
+      { quantity: 1000, price: 3.19 },     
+    ],
+    sizes: {
+      1000: 3.19,     
     },
   },
   {
@@ -661,6 +700,55 @@ export const catalog = [
     sizes: {
       1000: 3.69,
       2500: 3.09,
+    },
+  },
+  {
+    code: "HENLDU-33P3DS-379346A",
+    name: "3D Plastic Plate",
+    fullname: "Black 3D Plastic Plate w/matte silver imprint",
+    colors: ["Black"],
+    type: "customs",
+    default_color: "Black",
+    supportedStores: ["HENLDU"],
+    sizes: {
+      200: 2.39,      
+    },
+  },
+  {
+    code: "HENLDU-34MLF-366502A",
+    name: "Zinc Metal Frame",
+    fullname: "Zinc Metal Frame w/black imprint",
+    colors: ["Metal"],
+    type: "customs",
+    default_color: "Metal",
+    supportedStores: ["HENLDU"],
+    sizes: {      
+      2500: 3.35,
+    },
+  },
+  {
+    code: "HENLDU-33P-497607A",
+    name: "Certified Tag",
+    fullname: "Lexus Certified Tag",
+    colors: ["Black"],
+    type: "customs",
+    default_color: "Black",
+    supportedStores: ["HENLDU"],
+    sizes: {
+      1000: 3.69,
+      2500: 3.09,
+    },
+  },
+  {
+    code: "HENLDU-33G24-373661B",
+    name: "Poly Coated Plate",
+    fullname: "White Poly Coated Plate w/black & 36 metallic imprint",
+    colors: ["White"],
+    type: "customs",
+    default_color: "White",
+    supportedStores: ["HENLDU"],
+    sizes: {     
+      2500: .89,
     },
   },
   {
