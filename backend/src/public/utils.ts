@@ -17,7 +17,7 @@ const ALLOWED_ORIGINS = [
   "https://gpc81.com",
 ];
 
-export function addCors(origin, map?) {
+export function addCors(origin) {
   const headers = {};
 
   if (!origin) return headers;
