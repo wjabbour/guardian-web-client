@@ -24,11 +24,12 @@ If you're deploying a new site, you will need to do a few things:
 
    **e.g.**
 
-    ```
-    else if (url.includes("gp-honda.com")) {
-      return HondaConfig[val];
-    }
-    ```
+   ```
+   else if (url.includes("gp-honda.com")) {
+     return HondaConfig[val];
+   }
+   ```
+
 5. Update the `allConfigs` array in `{project_root}/common/index.js`.
 
 ## Config Options
@@ -45,11 +46,89 @@ Determines which picture will be rendered in the top navigation bar. The value f
 
 ### logo_placements
 
-Determines the values for the `Logo` dropdown on item pages.
+Determines the values for the `Logo Placement` dropdown on item pages.
 
 ### show_image_preview
 
 When a logo is selected from the `Logo` dropdown, if `show_image_preview` is `true` then the chosen logo will be rendered on the item page.
+
+### embroideries
+
+Determines the values for the `Logo` dropdown on item pages per item category.
+
+**e.g.**
+
+```
+hat: [
+      "Cadillac"
+    ],
+    mens: [
+      "Hennessy Ford",
+    ],
+```
+
+If a user were to view an item page for any item with `type` equal to `hat` then the `Logo` select would have only one option: `Cadillac`. If a user were to view an item page for any time with `type` equal to `mens` then the `Logo` select would have only one option: `Hennessy Ford`. **Note:** These must correspond to a file in `{project_root}/client/public/images` - `cadillac.jpg` and `hennessy_ford.jpg`.
+
+### email_recipients
+
+Determines which email addresses will receive an order email once an order is successfully placed and paid for. **Note:** The email associated with the order will always receive an order email, even if they're not in this array.
+
+### stores
+
+Determines the values for the `Store` dropdown on the checkout page. Ensure that each key and value is unique per config - two configs can have the same keys and values.
+
+**e.g.** for a single config, don't do this:
+
+```
+stores: {
+  'A': 1,
+  'B': 1
+}
+```
+
+or this:
+
+```
+stores: {
+  'A': 5,
+  'A': 6
+}
+```
+
+### bypass_codes
+
+Determines the possible codes that a user can enter into the `Code` text input on the checkout page. If the text that the user enters matches one of the codes (both the user's input and all of the codes are lowercased when performing the comparison so casing is not important) then:
+
+1) if PayPal is enabled for the site, the PayPal checkout requirement will be bypassed and a checkout button will appear allowing the user to place the order.
+2) if PayPal is not enabled for the site, the disabled checkout button will become enabled allowing the user to place the order.
+
+### server_hostname
+
+Determines which server the client will make API calls to. This value should always be `https://mxfj3q6m01.execute-api.us-east-1.amazonaws.com` except for Cannon.
+
+### account_reps
+
+Determines the account rep information displayed on the client's footer.
+
+### route_prefix
+
+**Note:** One of the required properties to make the website accessible from gpc81.
+
+Enables navigation for gpc81 sites.
+
+`route_prefix` is a string prefixed with a forward slash. For example, `/test`, `/cannon`, `/my-new-site`. Two configs must not share the same value for `route_prefix`.
+
+### password
+
+**Note:** One of the required properties to make the website accessible from gpc81.
+
+Enables navigation for gpc81 sites.
+
+`route_prefix` is a string prefixed with a forward slash. For example, `/test`, `/cannon`, `/my-new-site`. Two configs must not share the same value for `route_prefix`.
+
+### paypal_not_supported
+
+Determines whether the PayPal checkout flow should be displayed on the checkout page.
 
 ## gpc81
 
@@ -63,9 +142,6 @@ gpc81.com/hennessy -> hennessy landing page
 gpc81.com/stivers -> stivers landing page
 ```
 
-To make your website accessible from gpc81, you will need to set two properties on that website's config in `{project_root}/client/src/configs`.
-
-1. `route_prefix` - this should be a string, prefixed with a forward slash. For example, `/test`, `/cannon`, `/my-new-site`. Two configs must not share the same value for `route_prefix`.
 2. `password` - this is the password that the user must enter on gpc81 to be navigated to this website. Two configs must not share the same value for `password`.
 
 ## Local Development
