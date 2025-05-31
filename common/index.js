@@ -91,6 +91,11 @@ export function getWebCatalog() {
   }
 }
 
+/*
+  the values should exactly match one of the configs' value for title
+
+  e.g. a config must have title: "Cannon", "Guardian", etc
+*/
 export function getCatalog(companyName) {
   switch (companyName) {
     case "Cannon":

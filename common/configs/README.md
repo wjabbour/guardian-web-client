@@ -2,23 +2,34 @@
 
 If you're deploying a new site, you will need to do a few things:
 
-1. add a config file to `{project_root}/client/src/configs`. The name of the config file needs to be unique and should be based on the domain name the site will be deployed to, but does not need to match exactly.
-   <br><br>
-   <bold>e.g.</bold> If you're deploying a site to `gp-honda.com` then you might choose to name the config file `honda.ts` or `gp-honda.ts`.
+1. Add a config file to `{project_root}/common/configs`. The name of the config file needs to be unique and should be based on the domain name the site will be deployed to, but does not need to match exactly.
 
-2. Import the new config into `{project_root}/client/src/lib/config.ts`
-   <br><br>
-   <bold>e.g.</bold> `import { config as HondaConfig } from "../configs/honda";`
+   **e.g.** If you're deploying a site to `gp-honda.com` then you might choose to name the config file `honda.js` or `gp-honda.js`.
 
-3. add a new `if else` statement to `{project_root}/client/src/lib/config.ts`
-   <br><br>
-   <bold>e.g.</bold>
+2. Import the new config into `{project_root}/common/index.js`
 
-```
-else if (url.includes("gp-honda.com")) {
-  return HondaConfig[val];
-}
-```
+   **e.g.** `import { config as HondaConfig } from "../configs/honda";`
+
+3. Add a new case statement to the switch in the `getConfigValue` function in `{project_root}/common/index.js`.
+
+   **e.g.**
+
+   ```
+   case "Honda" {
+     return HondaConfig[val];
+   }
+   ```
+
+4. Add an `if else` statement in the `getWebConfigValue` function in `{project_root}/common/index.js`.
+
+   **e.g.**
+
+    ```
+    else if (url.includes("gp-honda.com")) {
+      return HondaConfig[val];
+    }
+    ```
+5. Update the `allConfigs` array in `{project_root}/common/index.js`.
 
 ### stores
 
@@ -91,7 +102,6 @@ To make your website accessible from gpc81, you will need to set two properties 
 
 1. `route_prefix` - this should be a string, prefixed with a forward slash. For example, `/test`, `/cannon`, `/my-new-site`. Two configs must not share the same value for `route_prefix`.
 2. `password` - this is the password that the user must enter on gpc81 to be navigated to this website. Two configs must not share the same value for `password`.
-
 
 ## Configure the backend
 
