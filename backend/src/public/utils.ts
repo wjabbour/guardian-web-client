@@ -13,15 +13,6 @@ export function addCors() {
   return headers;
 }
 
-export const COMPANIES: { [index: string]: string } = {
-  "http://localhost:3000": "Stivers",
-  "https://gpstivers.com": "Stivers",
-  "https://newcustomer.gpstivers.com": "Stivers",
-  "https://gptameron.com": "Tameron",
-  "https://gp-premier.com": "Premier",
-  "https://cannonemployeestore.com": "Cannon",
-};
-
 export function getCatalogItemPrice(item_code, size, company_name) {
   const item = getCatalog(company_name).find((i) => {
     return i.code === item_code;
