@@ -55,6 +55,7 @@ export function getStore(companyName, storeCode) {
   }
 }
 
+// determines where to direct the user after they have successfully entered a password on gpc81
 export function getRoutePrefix(password) {
   const config = allConfigs.find((config) => {
     return config.password === password;

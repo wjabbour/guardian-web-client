@@ -31,9 +31,9 @@ If you're deploying a new site, you will need to do a few things:
     ```
 5. Update the `allConfigs` array in `{project_root}/common/index.js`.
 
-### stores
+### Options
 
-### Client
+All configs support exactly the same set of configuration options, e.g. stores, embroideries, etc. The sites functionality and UI changes depending on the values you set for each option. This section details what each config value does.
 
 ```
 e.g.
