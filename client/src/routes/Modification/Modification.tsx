@@ -39,10 +39,6 @@ export default function Modification() {
   const sizes = Object.keys(item.sizes);
   const colors = item.colors;
   const [selected_size] = useState(sizes[0]);
-  const [selected_customs_white_quantity, set_selected_customs_white_quantity] =
-    useState(null);
-  const [selected_customs_black_quantity, set_selected_customs_black_quantity] =
-    useState(null);
   const [price] = useState(item.sizes[selected_size]);
   const [embroidery, setEmbroidery] = useState("");
   const [placement, setPlacement] = useState("Left Chest");
@@ -223,8 +219,6 @@ export default function Modification() {
     if (!any_input_has_value || invalid_input) {
     } else {
       setEmbroidery("");
-      set_selected_customs_black_quantity(null);
-      set_selected_customs_white_quantity(null);
       set_cart(new_cart);
       sessionStorage.setItem("cart", JSON.stringify(new_cart));
       setSnackbarOpen(true);
