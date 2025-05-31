@@ -2,9 +2,7 @@ export const config = {
   title: "New Customer",
   company_logo: "hennessy.png",
   logo_placements: ["Left Chest", "Right Sleeve"],
-  show_modification_thumbnail: true,
-  minimum_apparel_order: true,
-  render_logo_preview: true,
+  show_image_preview: true,
   embroideries: {
     hat: [
       "Cadillac",

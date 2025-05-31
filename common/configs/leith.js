@@ -2,9 +2,7 @@ export const config = {
   title: "Leith",
   company_logo: "leith.png",
   logo_placements: ["Left Chest", "Yoke"],
-  show_modification_thumbnail: true,
-  minimum_apparel_order: true,
-  render_logo_preview: true,
+  show_image_preview: true,
   embroideries: {
     mens: ["honda"],
     womens: ["honda"],

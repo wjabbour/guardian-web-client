@@ -2,9 +2,7 @@ export const config = {
   title: "Guardian",
   company_logo: "guardian.png",
   logo_placements: ["Left Chest", "Left Sleeve", "Right Sleeve", "Yoke"],
-  show_modification_thumbnail: true,
-  minimum_apparel_order: true,
-  render_logo_preview: true,
+  show_image_preview: true,
   embroideries: {
     hat: ["Guardian"],
     mens: ["Guardian"],

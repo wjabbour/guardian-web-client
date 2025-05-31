@@ -31,60 +31,25 @@ If you're deploying a new site, you will need to do a few things:
     ```
 5. Update the `allConfigs` array in `{project_root}/common/index.js`.
 
-### Options
+## Config Options
 
 All configs support exactly the same set of configuration options, e.g. stores, embroideries, etc. The sites functionality and UI changes depending on the values you set for each option. This section details what each config value does.
 
-```
-e.g.
+### title
 
-stores: ["Pohanka Hyundai , 2015 N Salisbury, Salisbury, MD 21801"],
-```
+`title` has two jobs; one is very important and one is not very important. The unimportant job is that it sets the text in the browser tab. The important job is that it allows the backend and client to use the correct config. Therefore, it's very important that `title` is unique amongst all of the configs - no two configs should have the same value for `title`.
 
-The list of stores populates the options of the select box on the checkout screen. This allows the user to choose which address the order should be shipped to.
+### company_logo
 
-### Backend
+Determines which picture will be rendered in the top navigation bar. The value for `company_logo` should correspond to a file in `{project_root}/client/public/images`.
 
-The backend configuration for stores is implemented differently. There is a single constant named `STORES` in this file: `backend\src\public\utils.ts`. The key (the string on the left side of each colon) of this map is the store address and the value (the string on the right side of each colon) is the store code. Based on which store address the user chooses during checkout, the corresponding store code will be associated with the order and inserted into the order data.
+### logo_placements
 
-For example,
+Determines the values for the `Logo` dropdown on item pages.
 
-```
-const STORES = {
-  "100 A Street": "123",
-  "200 B Lane": "456"
-}
-```
+### show_image_preview
 
-If the user were to select "100 A Street" as the store address, then the server will determine that the store code for this order should be "123".
-
-You must always ensure that the store strings in the client configs and in the `STORES` constant match exactly, else the user may not be able to select some stores.
-
-For example, using the same `STORES` as the above example, if the site administrator had accidentally configured the client's store address to be "100, A Street" then an error will occur, because the backend doesn't have such an address in `STORES`.
-
-### Updating Embroideries
-
-In the config file, you will find a property named `embroideries`. Let's talk about what these values mean. Consider the following `embroideries` object.
-
-```
-embroideries: {
-  hat: ['Stivers'],
-  mens: ['Quicklane'],
-  womens: ['Subaru'],
-  accessory: ['Ford', 'Hyundai']
-}
-```
-
-These values are used to determine two things:
-
-1. The available options in the `Logo` dropdown on the item modification page.
-2. The logos displayed on the catalog page when the user selects a specific group of item (accessories, mens, womens).
-
-With the values above, if a user were to click on "Men's Apparel" then the catalog page would display the Quicklane logo picture. If a user were then to choose an apparel from the catalog screen and thus be directed to the modification page, when they click the `Logo` dropdown they would only see Quicklane as an option. The same logic follows for womens, accessory, and hat.
-
-### Updating other config values
-
-The other config values are updated in the same way.
+When a logo is selected from the `Logo` dropdown, if `show_image_preview` is `true` then the chosen logo will be rendered on the item page.
 
 ## gpc81
 
@@ -98,16 +63,10 @@ gpc81.com/hennessy -> hennessy landing page
 gpc81.com/stivers -> stivers landing page
 ```
 
-To make your website accessible from gpc81, you will need to set two properties on that websites config in `{project_root}/client/src/configs`.
+To make your website accessible from gpc81, you will need to set two properties on that website's config in `{project_root}/client/src/configs`.
 
 1. `route_prefix` - this should be a string, prefixed with a forward slash. For example, `/test`, `/cannon`, `/my-new-site`. Two configs must not share the same value for `route_prefix`.
 2. `password` - this is the password that the user must enter on gpc81 to be navigated to this website. Two configs must not share the same value for `password`.
-
-## Configure the backend
-
-### Updating CORS
-
-In `{project_root}/backend/src/utils.ts` there is an array named `ALLOWED_ORIGINS`. add the full URL of the new site to this array. e.g. `https://{your_url}`
 
 ## Local Development
 

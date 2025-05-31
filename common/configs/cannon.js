@@ -2,9 +2,7 @@ export const config = {
   title: "Cannon",
   company_logo: "cannon_logo.png",
   logo_placements: [],
-  show_modification_thumbnail: false,
-  minimum_apparel_order: false,
-  render_logo_preview: false,
+  show_image_preview: false,
   embroideries: {
     hat: [],
     mens: [],

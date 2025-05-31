@@ -8,9 +8,7 @@ export const config = {
     "Yoke",
     "Front Center",
   ],
-  show_modification_thumbnail: true,
-  minimum_apparel_order: true,
-  render_logo_preview: true,
+  show_image_preview: true,
   embroideries: {
     hat: ["Pohanka"],
     mens: ["Pohanka"],
