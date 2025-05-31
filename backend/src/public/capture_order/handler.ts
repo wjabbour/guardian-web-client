@@ -75,14 +75,14 @@ export const handler = async (
     return {
       statusCode: 200,
       body: JSON.stringify({ order_id }),
-      headers: addCors(event.headers?.origin),
+      headers: addCors(),
     };
   } catch (e) {
     logger.error(e);
     return {
       statusCode: 500,
       body: JSON.stringify({ message: "Failed to create order" }),
-      headers: addCors(event.headers?.origin),
+      headers: addCors(),
     };
   }
 };

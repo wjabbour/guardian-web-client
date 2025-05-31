@@ -6,27 +6,9 @@ import { getCatalog } from "guardian-common";
 
 export const logger = pino();
 
-// TODO: these should live in configs so that only cannon server allows cannon origin, etc
-const ALLOWED_ORIGINS = [
-  "http://localhost:3000",
-  "https://newcustomer.gpstivers.com",
-  "https://gpstivers.com",
-  "https://gptameron.com",
-  "https://gp-premier.com",
-  "https://cannonemployeestore.com",
-  "https://gpc81.com",
-];
-
-export function addCors(origin) {
+export function addCors() {
   const headers = {};
-
-  if (!origin) return headers;
-
-  for (let i = 0; i < ALLOWED_ORIGINS.length; i++) {
-    if (origin.includes(ALLOWED_ORIGINS[i])) {
-      headers["Access-Control-Allow-Origin"] = ALLOWED_ORIGINS[i];
-    }
-  }
+  headers["Access-Control-Allow-Origin"] = "*";
 
   return headers;
 }

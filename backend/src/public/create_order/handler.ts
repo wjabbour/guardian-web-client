@@ -30,7 +30,7 @@ export const handler = async (
       return {
         statusCode: 400,
         body: JSON.stringify({ message: "Please use a valid email" }),
-        headers: addCors(event.headers?.origin),
+        headers: addCors(),
       };
     }
 
@@ -63,7 +63,7 @@ export const handler = async (
           message:
             "Unrecognized store. Please contact your account representative.",
         }),
-        headers: addCors(event.headers?.origin),
+        headers: addCors(),
       };
     }
 
@@ -84,7 +84,7 @@ export const handler = async (
         return {
           statusCode: 400,
           body: JSON.stringify({ message: "Must enter code to place order" }),
-          headers: addCors(event.headers?.origin),
+          headers: addCors(),
         };
       }
 
@@ -113,7 +113,7 @@ export const handler = async (
       await sendEmail([order], "Tameron", email);
       return {
         statusCode: 200,
-        headers: addCors(event.headers?.origin),
+        headers: addCors(),
       };
     }
 
@@ -144,7 +144,7 @@ export const handler = async (
       await sendEmail([order], company_name, email);
       return {
         statusCode: 200,
-        headers: addCors(event.headers?.origin),
+        headers: addCors(),
       };
     }
 
@@ -171,14 +171,14 @@ export const handler = async (
     return {
       statusCode: 200,
       body: JSON.stringify({ order_id }),
-      headers: addCors(event.headers?.origin),
+      headers: addCors(),
     };
   } catch (e) {
     logger.error(e);
     return {
       statusCode: 500,
       body: JSON.stringify({ message: "Failed to create order" }),
-      headers: addCors(event.headers?.origin),
+      headers: addCors(),
     };
   }
 };

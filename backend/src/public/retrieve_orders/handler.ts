@@ -24,7 +24,7 @@ export const handler = async (event): Promise<APIGatewayProxyResult> => {
     return {
       statusCode: 200,
       body: JSON.stringify({ orders: [...currentOrders, ...archivedOrders] }),
-      headers: addCors(event.headers?.origin),
+      headers: addCors(),
     };
   } catch (e) {
     logger.error(e);
