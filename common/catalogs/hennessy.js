@@ -661,6 +661,20 @@ export const catalog = [
     },
   },
   {
+    code: "HENADU-GPLLKR-497621L",
+    name: "Leather Key Fob (green stitch) - Land Rover Gwinnett",
+    fullname: "Black Laser Engraved Leather Fob",
+    colors: ["Black"],
+    type: "accessory",
+    default_color: "Black",    
+    discount: [
+      { quantity: 250, price: 3.49 },     
+    ],
+    sizes: {
+      250: 3.49,     
+    },
+  },
+  {
     code: "CG1640",
     name: "Laser Engraved Keychain",
     fullname: "Brushed Zinc/Leather Key Tag w/Laser Engraved Imprint",
@@ -892,6 +906,18 @@ export const catalog = [
     },
   },
   {
+    code: "HENLDU-33P-497607A",
+    name: "Certified Tag",
+    fullname: "Lexus Certified Tag",
+    colors: ["Black"],
+    type: "customs",
+    default_color: "Black",
+    supportedStores: ["HENLDU"],
+    sizes: {
+      1000: .79,      
+    },
+  },
+  {
     code: "HENLDU-33G24-373661B",
     name: "Poly Coated Plate",
     fullname: "White Poly Coated Plate w/black & 36 metallic imprint",
@@ -942,6 +968,18 @@ export const catalog = [
     },
   },
   {
+    code: "HENADU-G24-385877A",
+    name: "Poly Coated Plate",
+    fullname: "Poly Coated Cardboard w/dark green imprint",
+    colors: ["Dk Green"],
+    type: "customs",
+    default_color: "Dk Green",
+    supportedStores: ["HENADU"],
+    sizes: {
+      500: 0.99,      
+    },
+  },
+  {
     code: "HENHWO-31DD-343372",
     name: "Die Cut Decal",
     fullname: "Black & 285 Blue Die Cut Decal (screened on clear)",
@@ -976,6 +1014,19 @@ export const catalog = [
     supportedStores: ["HENHWO"],
     sizes: {
       2500: 3.35,
+      
+    },
+  },
+  {
+    code: "HENADU-34CF-437447A",
+    name: "Chrome Plated Frame",
+    fullname: "Chrome Plated Frame w/black imprint",
+    colors: ["Chrome Plated"],
+    type: "customs",
+    default_color: "Chrome Plated",
+    supportedStores: ["HENADU"],
+    sizes: {
+      500: 1.49,
       
     },
   },
