@@ -12,8 +12,10 @@ export default function ClothingCatalog() {
   const navigate = useNavigate();
   const location = useLocation();
   const params = useParams();
-  const [catalog, setCatalog] = useState([]);
-  const [catalogType, setCatalogType] = useState("mens");
+  const [catalogType, setCatalogType] = useState("customs");
+  const [catalog, setCatalog] = useState(
+    getWebCatalog().filter((item) => item.type === catalogType)
+  );
 
   useEffect(() => {
     if (location.pathname.includes("/mens")) {
@@ -42,7 +44,10 @@ export default function ClothingCatalog() {
   }, []);
 
   useEffect(() => {
-    setCatalog(getWebCatalog().filter((item) => item.type === catalogType));
+    const newCatalog = getWebCatalog().filter(
+      (item) => item.type === catalogType
+    );
+    setCatalog(newCatalog);
   }, [catalogType]);
 
   return (
