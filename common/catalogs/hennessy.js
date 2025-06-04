@@ -206,6 +206,39 @@ export const catalog = [
     },
   },
   {
+    code: "112",
+    name: "Richardson Trucker Cap",
+    fullname: "Richardson Snapback Trucker Cap (addt'l logos cost extra)",
+    colors: ["Amber Gold","Black","Charcoal","Loden","Maroon","Navy","White"],
+    type: "mens",
+    default_color: "Black",
+    sizes: {
+      OSFA: 21.99,
+    },
+  },
+  {
+    code: "NE205",
+    name: "New Era® Trucker Cap",
+    fullname: "New Era® Snapback Trucker Cap (addt'l logos cost extra)",
+    colors: ["Black","Graphite","Grey","Deep Navywt"],
+    type: "mens",
+    default_color: "Black",
+    sizes: {
+      OSFA: 26.99,
+    },
+  },
+  {
+    code: "STC39",
+    name: "Sport-Tek® Trucker Cap",
+    fullname: "Sport-Tek® YP Classics® Retro Trucker Cap (addt'l logos cost extra)",
+    colors: ["Black","Graphite","True Navy True Navy","True Navy White","White"],
+    type: "mens",
+    default_color: "Black",
+    sizes: {
+      OSFA: 21.99,
+    },
+  },
+  {
     code: "BB18002",
     name: "Brooks Brothers® Shirt",
     fullname: "Brooks Brothers® Wrinkle-Free Nailhead Shirt",
@@ -334,18 +367,50 @@ export const catalog = [
   {
     code: "NKDC1963",
     name: "Nike® Dri-FIT Polo Shirt",
-    fullname: "Nike® Dri-FIT Polo",
+    fullname: "Nike® Dri-FIT Polo (addt'l logos cost extra)",
     colors: ["Anthracite", "Black", "Cool Grey", "Navy","White"],
     type: "mens",
     default_color: "Black",
     sizes: {
-      Small: 47.98,
-      Medium: 47.98,
-      Large: 47.98,
-      XLarge: 47.98,
-      "2XLarge": 49.98,
-      "3XLarge": 51.98,
-      "4XLarge": 53.98,     
+      Small: 39.99,
+      Medium: 39.99,
+      Large: 39.99,
+      XLarge: 39.99,
+      "2XLarge": 41.99,
+      "3XLarge": 43.99,
+      "4XLarge": 45.99,     
+    },
+  },  
+  {
+    code: "NKDC1991",
+    name: "Ladies Nike® Polo",
+    fullname: "Ladies Nike® Micro Pique Polo (addt'l logos cost extra)",
+    colors: ["Anthracite", "Black", "Cool Grey", "Navy","White"],
+    type: "womens",
+    default_color: "Black",
+    sizes: {
+       Small: 39.99,
+      Medium: 39.99,
+      Large: 39.99,
+      XLarge: 39.99,
+      "2XLarge": 41.99,     
+    },
+  },  
+  {
+    code: "NKAH6266",
+    name: "Nike Textured Polo",
+    fullname: "Nike Dri-FIT Hex Textured Polo",
+    colors: ["Black","Court Blue","Dark Grey","Game Royal","Gym Red","White"],
+    type: "mens",
+    default_color: "Black",
+    sizes: {
+      Small: 67.00,
+      Medium: 67.00,
+      Large: 67.00,
+      XLarge: 67.00,
+      "2XLarge": 69.00, 
+      "3XLarge": 71.00,
+      "4XLarge": 73.00,  
     },
   },  
   {
@@ -397,6 +462,26 @@ export const catalog = [
       "2XLarge": 33.99,
       "3XLarge": 34.99,
       "4XLarge": 35.99,
+    },
+  },
+  {
+    code: "K110",
+    name: "Port Authority UV Polo",
+    fullname: "Port Authority® Dry Zone® UV Micro-Mesh Polo",
+    colors: ["Carolina Blue","Coastal Blue","Deep Black","Graphite",
+    "Gusty Grey","Rich Red","River Blue Navy","True Royal","White"],
+    type: "mens",
+    default_color: "Deep Black",
+    sizes: {
+      Small: 24.99,
+      Medium: 24.99,
+      Large: 24.99,
+      XLarge: 24.99,
+      "2XLarge": 26.99,
+      "3XLarge": 28.99,
+      "4XLarge": 30.99,
+      "5XLarge": 32.99,
+      "6XLarge": 34.99,
     },
   },
   {
@@ -699,6 +784,20 @@ export const catalog = [
     },
   },
   {
+    code: "HENCDU-G1640-475097LL",
+    name: "Leather Key Fob - Cadillac Duluth",
+    fullname: "Black Laser Engraved Leather Fob",
+    colors: ["Black"],
+    type: "accessory",
+    default_color: "Black",    
+    discount: [
+      { quantity: 300, price: 3.29 },     
+    ],
+    sizes: {
+      300: 3.29,     
+    },
+  },
+  {
     code: "CG1640",
     name: "Laser Engraved Keychain",
     fullname: "Brushed Zinc/Leather Key Tag w/Laser Engraved Imprint",
@@ -767,6 +866,18 @@ export const catalog = [
     supportedStores: ["HENLAT"],
     sizes: {
       2500: 0.79,      
+    },
+  },
+  {
+    code: "HENLAL-G24-373653SA",
+    name: "Poly Coated Plate",
+    fullname: "Poly Coated Plate w/black imprint",
+    colors: ["Black"],
+    type: "customs",
+    default_color: "Black",
+    supportedStores: ["HENLAL"],
+    sizes: {
+      1000: 0.79,      
     },
   },
    {
@@ -918,6 +1029,18 @@ export const catalog = [
     },
   },
   {
+    code: "HENCDU-34MLF-485630A",
+    name: "Black Metal Frame",
+    fullname: "Black Metal Frame w/white imprint",
+    colors: ["Black"],
+    type: "customs",
+    default_color: "Black",
+    supportedStores: ["HENCDU"],
+    sizes: {      
+      250: 3.59,
+    },
+  },
+  {
     code: "HENLDU-33P-497607A",
     name: "Certified Tag",
     fullname: "Lexus Certified Tag",
@@ -951,6 +1074,18 @@ export const catalog = [
     supportedStores: ["HENLDU"],
     sizes: {     
       2500: .89,
+    },
+  },
+  {
+    code: "HENCDU-G24-365677B",
+    name: "Drive Out Tag",
+    fullname: "White Poly Coated Plate w/black & 36 metallic gold imprint",
+    colors: ["White"],
+    type: "customs",
+    default_color: "White",
+    supportedStores: ["HENCDU"],
+    sizes: {     
+      500: 1.39,
     },
   },
   {
@@ -1029,6 +1164,19 @@ export const catalog = [
     },
   },
   {
+    code: "HENCDU-33P-370807A",
+    name: "Hennessy Cadillac Tag",
+    fullname: "Poly Coated Cardboard w/cool gray 11 imprint",
+    colors: ["White"],
+    type: "customs",
+    default_color: "White",
+    supportedStores: ["HENCDU"],
+    sizes: {
+      300: 1.39,
+      
+    },
+  },
+  {
     code: "HENHWO-34CP-377796A",
     name: "Chrome Plated Frame",
     fullname: "Chrome Plated Frame w/black imprint",
@@ -1051,6 +1199,32 @@ export const catalog = [
     supportedStores: ["HENADU"],
     sizes: {
       500: 1.49,
+      
+    },
+  },
+  {
+    code: "HENLAL-34CF-459349A",
+    name: "Chrome Faced Frame",
+    fullname: "Chrome Faced Frame w/black imprint",
+    colors: ["Chrome Faced"],
+    type: "customs",
+    default_color: "Chrome Faced",
+    supportedStores: ["HENLAL"],
+    sizes: {
+      1000: 1.39,
+      
+    },
+  },
+  {
+    code: "HENCDU-34CF-370808A",
+    name: "Chrome Faced Frame",
+    fullname: "Chrome Faced Frame w/black imprint",
+    colors: ["Chrome"],
+    type: "customs",
+    default_color: "Chrome",
+    supportedStores: ["HENCDU"],
+    sizes: {
+      300: 1.39,
       
     },
   },
@@ -1080,6 +1254,39 @@ export const catalog = [
     },
   },
   {
+    code: "HENCDU-STKR-506185Z",
+    name: "Caution Sticker - Cadillac Duluth",
+    fullname: "40 Mineral Orange Vinyl Sticker w/black imprint",
+    colors: ["Orange"],
+    type: "service",
+    default_color: "Orange",
+    sizes: {
+      1500: 0.89,      
+    },
+  },
+  {
+    code: "HENCDU-CERT-481428Z",
+    name: "SVC Certificate - Cadillac Duluth",
+    fullname: "Free Service Certificate",
+    colors: ["Black"],
+    type: "service",
+    default_color: "Black",
+    sizes: {
+      500: .39,      
+    },
+  },
+  {
+    code: "HENCDU-PEN-495480A",
+    name: "Blue Maxiglide Pen - Cadillac Duluth",
+    fullname: "Blue Maxiglide Pure Pen w/white imprint (#582)",
+    colors: ["Blue"],
+    type: "accessory",
+    default_color: "Blue",
+    sizes: {
+      500: .79,
+    },
+  },
+  {
     code: "HENFAT-MUG-505968",
     name: "15oz. Mug w/imprint",
     fullname: "Royal 15oz. Ember Mug w/silver imprint",
@@ -1099,6 +1306,28 @@ export const catalog = [
     default_color: "Black",
     sizes: {
       1000: 1.69,
+    },
+  },
+  {
+    code: "HENCDU-KOOZIE-508516A",
+    name: "Black Kan-Tastic - Cadillac Duluth",
+    fullname: "Black Kan-Tastic w/white imprint (#34)",
+    colors: ["Black"],
+    type: "accessory",
+    default_color: "Black",
+    sizes: {
+      250: .99,
+    },
+  },
+  {
+    code: "HENCDU-BOTTLE-508517A",
+    name: "Black 24oz Bottle - Cadillac Duluth",
+    fullname: "Black 24oz Stainless Steel Bottle w/white imprint (#50240)",
+    colors: ["Black"],
+    type: "accessory",
+    default_color: "Black",
+    sizes: {
+      96: 17.99,
     },
   },
   {

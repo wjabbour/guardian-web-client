@@ -6,6 +6,7 @@ export const config = {
   embroideries: {
     hat: [
       "Cadillac",
+      "Cadillac Cursive",
       "Hennessy Ford",
       "Hennessy Ford Lincoln",
       "Hennessy Honda",
@@ -18,6 +19,7 @@ export const config = {
     ],
     mens: [
       "Cadillac",
+      "Cadillac Cursive",
       "Hennessy Ford",
       "Hennessy Ford Lincoln",
       "Hennessy Honda",
@@ -30,6 +32,7 @@ export const config = {
     ],
     womens: [
       "Cadillac",
+      "Cadillac Cursive",
       "Hennessy Ford",
       "Hennessy Ford Lincoln",
       "Hennessy Honda",
@@ -42,6 +45,7 @@ export const config = {
     ],
     accessory: [
       "Cadillac",
+      "Cadillac Cursive",
       "Hennessy Ford",
       "Hennessy Ford Lincoln",
       "Hennessy Honda",
