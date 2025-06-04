@@ -50,7 +50,7 @@ export const catalog = [
   {
     code: "3198WB",
     name: "Oval Year Stickers",
-    fullname: "Oval Year Stickers (Blue/White)  (12/pk)",
+    fullname: "Oval Year Stickers - Blue/White (12/pk)",
     colors: [
       "YR 07",
       "YR 08",
@@ -76,6 +76,30 @@ export const catalog = [
     ],
     type: "sales",
     default_color: "YR 07",
+    discount: [{ quantity: 1, price: 10.99 }],
+    sizes: {
+      1: 10.99,
+    },
+  },
+  {
+    code: "3198SB",
+    name: "Oval Year Stickers",
+    fullname: "Oval Year Stickers - Silver/Black (12/pk)",
+    colors: [
+      "YR 2016",
+      "YR 2017",
+      "YR 2018",
+      "YR 2019",
+      "YR 2020",
+      "YR 2021",
+      "YR 2022",
+      "YR 2023",
+      "YR 2024",
+      "YR 2025",
+      "YR 2026",      
+    ],
+    type: "sales",
+    default_color: "YR 2016",
     discount: [{ quantity: 1, price: 10.99 }],
     sizes: {
       1: 10.99,
@@ -233,26 +257,6 @@ export const catalog = [
     },
   },
   {
-    code: "PC61",
-    name: "Port & Company® Tee",
-    fullname: "Port & Company® Essential Tee",
-    colors: ["Athletic Heather","Cardinal","Charcoal","Jet Black",
-      "Medium Grey","Navy","Red","Royal","White"],
-    type: "mens",
-    default_color: "Jet Black",
-    sizes: {
-      Small: 14.99,
-      Medium: 14.99,
-      Large: 14.99,
-      XLarge: 14.99,
-      "2XLarge": 16.99,
-      "3XLarge": 18.99,
-      "4XLarge": 20.99,
-      "5XLarge": 22.99,
-      "6XLarge": 24.99,
-    },
-  },
-  {
     code: "S608",
     name: "Port Authority® Shirt",
     fullname: "Port Authority® Long Sleeve Easy Care Shirt",
@@ -288,6 +292,26 @@ export const catalog = [
       "4XLarge": 37.99,
       "5XLarge": 38.99,
       "6XLarge": 39.99,
+    },
+  },
+  {
+    code: "PC61",
+    name: "Port & Company® Tee",
+    fullname: "Port & Company® Essential Tee",
+    colors: ["Athletic Heather","Cardinal","Charcoal","Jet Black",
+      "Medium Grey","Navy","Red","Royal","White"],
+    type: "mens",
+    default_color: "Jet Black",
+    sizes: {
+      Small: 14.99,
+      Medium: 14.99,
+      Large: 14.99,
+      XLarge: 14.99,
+      "2XLarge": 16.99,
+      "3XLarge": 18.99,
+      "4XLarge": 20.99,
+      "5XLarge": 22.99,
+      "6XLarge": 24.99,
     },
   },
   {
@@ -661,6 +685,20 @@ export const catalog = [
     },
   },
   {
+    code: "HENADU-GPLLKR-497621L",
+    name: "Leather Key Fob (green stitch) - Land Rover Gwinnett",
+    fullname: "Black Laser Engraved Leather Fob",
+    colors: ["Black"],
+    type: "accessory",
+    default_color: "Black",    
+    discount: [
+      { quantity: 250, price: 3.49 },     
+    ],
+    sizes: {
+      250: 3.49,     
+    },
+  },
+  {
     code: "CG1640",
     name: "Laser Engraved Keychain",
     fullname: "Brushed Zinc/Leather Key Tag w/Laser Engraved Imprint",
@@ -892,6 +930,18 @@ export const catalog = [
     },
   },
   {
+    code: "HENADU-33P-492576A",
+    name: "Land Rover Tag",
+    fullname: "Land Rover Black Tag",
+    colors: ["Black"],
+    type: "customs",
+    default_color: "Black",
+    supportedStores: ["HENADU"],
+    sizes: {
+      500: 1.29,      
+    },
+  },
+  {
     code: "HENLDU-33G24-373661B",
     name: "Poly Coated Plate",
     fullname: "White Poly Coated Plate w/black & 36 metallic imprint",
@@ -942,6 +992,18 @@ export const catalog = [
     },
   },
   {
+    code: "HENADU-G24-385877A",
+    name: "Poly Coated Plate",
+    fullname: "Poly Coated Cardboard w/dark green imprint",
+    colors: ["Dk Green"],
+    type: "customs",
+    default_color: "Dk Green",
+    supportedStores: ["HENADU"],
+    sizes: {
+      500: 0.99,      
+    },
+  },
+  {
     code: "HENHWO-31DD-343372",
     name: "Die Cut Decal",
     fullname: "Black & 285 Blue Die Cut Decal (screened on clear)",
@@ -976,6 +1038,19 @@ export const catalog = [
     supportedStores: ["HENHWO"],
     sizes: {
       2500: 3.35,
+      
+    },
+  },
+  {
+    code: "HENADU-34CF-437447A",
+    name: "Chrome Faced Frame",
+    fullname: "Chrome Faced Frame w/black imprint",
+    colors: ["Chrome"],
+    type: "customs",
+    default_color: "Chrome",
+    supportedStores: ["HENADU"],
+    sizes: {
+      500: 1.49,
       
     },
   },
