@@ -12,7 +12,7 @@ export default function ClothingCatalog() {
   const navigate = useNavigate();
   const location = useLocation();
   const params = useParams();
-  const [catalogType, setCatalogType] = useState("customs");
+  const [catalogType, setCatalogType] = useState("mens");
   const [catalog, setCatalog] = useState(
     getWebCatalog().filter((item) => item.type === catalogType)
   );
@@ -47,6 +47,7 @@ export default function ClothingCatalog() {
     const newCatalog = getWebCatalog().filter(
       (item) => item.type === catalogType
     );
+
     setCatalog(newCatalog);
   }, [catalogType]);
 
@@ -80,7 +81,7 @@ export default function ClothingCatalog() {
               onClick={() => {
                 navigate(getDomainAwarePath(`/item/${item.code}`));
               }}
-              key={item.name}
+              key={item.key}
             >
               <ClothingIcon
                 img={`/images/${item.code}.jpg`}
