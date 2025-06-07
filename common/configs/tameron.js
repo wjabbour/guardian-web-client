@@ -11,11 +11,7 @@ export const config = {
     hat: ["Tameron"],
     customs: [],
   },
-  email_recipients: [
-    "lbudbill@gpcorp.com",
-    "lbudbell@comcast.net",
-    "doubleujabbour@gmail.com",
-  ],
+  email_recipients: ["lbudbill@gpcorp.com", "lbudbell@comcast.net"],
   stores: {
     "Tameron Honda, 9871 Justina Ave Daphne, AL 36526": "TAMHDA",
     "Tameron Buick GMC, 27161 US - 98 Daphne, AL 36526": "TAMBDA",

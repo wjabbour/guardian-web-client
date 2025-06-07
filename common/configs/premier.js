@@ -24,11 +24,7 @@ export const config = {
     ],
     customs: [],
   },
-  email_recipients: [
-    "lbudbill@gpcorp.com",
-    "lbudbell@comcast.net",
-    "doubleujabbour@gmail.com",
-  ],
+  email_recipients: ["lbudbill@gpcorp.com", "lbudbell@comcast.net"],
   stores: {
     "Premier Honda, 11801 E I-10 Service Rd, New Orleans, LA 70128": "PREHNE",
     "Toyota of New Orleans, 13150 I-10 Service Rd, New Orleans, LA 70128":

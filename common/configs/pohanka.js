@@ -26,7 +26,6 @@ export const config = {
     "lbudbill@gpcorp.com",
     "lbudbell@comcast.net",
     "dmayweather@gpcorp.com",
-    "doubleujabbour@gmail.com",
   ],
   stores: {
     "Pohanka Hyundai , 2015 N Salisbury, Salisbury, MD 21801": "POHHSA",

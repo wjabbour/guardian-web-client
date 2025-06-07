@@ -16,11 +16,7 @@ export const config = {
     bodyshop: [],
     parts: [],
   },
-  email_recipients: [
-    "lbudbill@gpcorp.com",
-    "lbudbell@comcast.net",
-    "doubleujabbour@gmail.com",
-  ],
+  email_recipients: ["lbudbill@gpcorp.com", "lbudbell@comcast.net"],
   stores: {
     "Guardian Products, 5575 Spalding Drive, Peachtree Corners, GA 30092":
       "GUAPRO",

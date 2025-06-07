@@ -45,11 +45,7 @@ export const config = {
     ],
     customs: [],
   },
-  email_recipients: [
-    "lbudbill@gpcorp.com",
-    "lbudbell@comcast.net",
-    "doubleujabbour@gmail.com",
-  ],
+  email_recipients: ["lbudbill@gpcorp.com", "lbudbell@comcast.net"],
   stores: {
     "Stivers Ford Montgomery, 4000 Eastern Blvd Montgomery, AL, 36116":
       "STIFMO",

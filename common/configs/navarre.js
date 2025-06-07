@@ -41,7 +41,6 @@ export const config = {
     "lbudbill@gpcorp.com",
     "lbudbell@comcast.net",
     "rgreenberg@gpcorp.com",
-    "doubleujabbour@gmail.com",
   ],
   stores: {
     "Navarre Chevrolet, 1300 East College St, Lake Charles, LA 70607": "NAVCLA",
