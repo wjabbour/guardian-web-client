@@ -143,6 +143,30 @@ export const catalog = [
     },
   },
   {
+    code: "3088",
+    name: "Floor Mats",
+    fullname: "Floor Mats/Coated Paper (500/bx)",
+    colors: ["White"],
+    type: "service",
+    default_color: "White",
+    discount: [{ quantity: 1, price: 59.99 }],
+    sizes: {
+      1: 0.0,
+    },
+  },
+   {
+    code: "55010",
+    name: "Steering Wheel Covers",
+    fullname: "Steering Wheel Covers (500/bx)",
+    colors: ["Plastic"],
+    type: "service",
+    default_color: "Plastic",
+    discount: [{ quantity: 1, price: 59.99 }],
+    sizes: {
+      1: 0.0,
+    },
+  },
+  {
     code: "600088V",
     name: "Seat Covers",
     fullname: "No-Slip Plastic Seat Covers (500/roll)",
@@ -178,6 +202,18 @@ export const catalog = [
     },
   },
   {
+    code: "GP790",
+    name: "Sticker",
+    fullname: "Sticker - Vehicle Not for Sale (100/pk)",
+    colors: ["Yellow"],
+    type: "sales",
+    default_color: "Yellow",
+    discount: [{ quantity: 1, price: 26.14 }],
+    sizes: {
+      1: 0.0,
+    },
+  },
+  {
     code: "VT400",
     name: "Stock Stickers",
     fullname: "Kleer-Back Stock Stickers Versa #400 (100/pk)",
@@ -188,31 +224,7 @@ export const catalog = [
     sizes: {
       1: 0.0,
     },
-  },
-  {
-    code: "3088",
-    name: "Floor Mats",
-    fullname: "Floor Mats/Coated Paper (500/bx)",
-    colors: ["White"],
-    type: "service",
-    default_color: "White",
-    discount: [{ quantity: 1, price: 59.99 }],
-    sizes: {
-      1: 0.0,
-    },
-  },
-  {
-    code: "55010",
-    name: "Steering Wheel Covers",
-    fullname: "Steering Wheel Covers (500/bx)",
-    colors: ["Plastic"],
-    type: "service",
-    default_color: "Plastic",
-    discount: [{ quantity: 1, price: 59.99 }],
-    sizes: {
-      1: 0.0,
-    },
-  },
+  }, 
   {
     code: "SDNRG",
     name: "Service Numbers",
@@ -235,19 +247,7 @@ export const catalog = [
     sizes: {
       1: 0.0,
     },
-  },
-  {
-    code: "GP790",
-    name: "Sticker",
-    fullname: "Sticker - Vehicle Not for Sale (100/pk)",
-    colors: ["Yellow"],
-    type: "sales",
-    default_color: "Yellow",
-    discount: [{ quantity: 1, price: 26.14 }],
-    sizes: {
-      1: 0.0,
-    },
-  },
+  },  
   {
     code: "GUARDFRM",
     name: "Zinc Metal Frames",

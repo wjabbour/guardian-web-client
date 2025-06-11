@@ -845,6 +845,20 @@ export const catalog = [
     },
   },
   {
+    code: "HENMMO-FOB-502271L",
+    name: "Matte Black Keychain - Southlake Mazda Buick GMC",
+    fullname: "Matte Black Keychain w/frost effect engraving (#CG-1070)",
+    colors: ["Metal"],
+    type: "accessory",
+    default_color: "Metal",
+    discount: [
+      { quantity: 500, price: 3.99 },      
+    ],
+    sizes: {
+      500: 0.0,      
+    },
+  },
+  {
     code: "HENLAT-34MLF-379167A",
     name: "Zinc Metal Frame",
     fullname: "Zinc Metal Frame w/glossy black imprint",
@@ -955,7 +969,7 @@ export const catalog = [
   {
     code: "HENFAT31DD",
     name: "Die Cut Decal",
-    fullname: "Decal Thermo Die Cut",
+    fullname: "Decal Thermo Die Cut Decal",
     colors: ["Black", "Silver", "White"],
     type: "customs",
     default_color: "Black",
@@ -963,6 +977,18 @@ export const catalog = [
     sizes: {
       1000: 0.75,
       2500: 0.65,
+    },
+  },
+  {
+    code: "HENMMO-31DD-504444A",
+    name: "Die Cut Decal",
+    fullname: "Black Vinyl Die Cut Decal",
+    colors: ["Black"],
+    type: "customs",
+    default_color: "Black",
+    supportedStores: ["HENMMO"],
+    sizes: {
+      500: 0.89,      
     },
   },
   {
@@ -1203,6 +1229,32 @@ export const catalog = [
     },
   },
   {
+    code: "HENMMO-34CF-503744A",
+    name: "Chrome Faced Frame",
+    fullname: "Chrome Faced Frame w/black imprint",
+    colors: ["Chrome"],
+    type: "customs",
+    default_color: "Chrome",
+    supportedStores: ["HENMMO"],
+    sizes: {
+      500: 1.39,
+      
+    },
+  },
+  {
+    code: "HENMMO-34CF-503933A",
+    name: "Chrome Faced Frame",
+    fullname: "Chrome Faced Frame w/black imprint",
+    colors: ["Chrome"],
+    type: "customs",
+    default_color: "Chrome",
+    supportedStores: ["HENMMO"],
+    sizes: {
+      500: 1.39,
+      
+    },
+  },
+  {
     code: "HENLAL-34CF-459349A",
     name: "Chrome Faced Frame",
     fullname: "Chrome Faced Frame w/black imprint",
@@ -1225,6 +1277,19 @@ export const catalog = [
     supportedStores: ["HENCDU"],
     sizes: {
       300: 1.39,
+      
+    },
+  },
+  {
+    code: "HENMMO-THC-477566A",
+    name: "Domecal Hitch Cover",
+    fullname: "Domecal Hitch Cover",
+    colors: ["Black"],
+    type: "customs",
+    default_color: "Black",
+    supportedStores: ["HENMMO"],
+    sizes: {
+      250: 4.49,
       
     },
   },
