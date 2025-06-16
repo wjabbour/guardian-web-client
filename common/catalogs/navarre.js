@@ -9,7 +9,7 @@ export const catalog = [
     supportedStores: ["NAVCLA","NAVCSU","NAVHLK","NAVBLA","NAVHLA","NAVCLK","VAUMAX","NAVCSL","NAVNLA"],
     sizes: {
       500: 2.87,
-      1000: 2.6,
+      1000: 2.60,
       2500: 2.36,
       5000: 2.24,
       10000: 2.02,
@@ -25,7 +25,7 @@ export const catalog = [
     supportedStores: ["NAVCLA","NAVCSU","NAVHLK","NAVBLA","NAVHLA","NAVCLK","VAUMAX","NAVCSL","NAVNLA"],
     sizes: {
       500: 2.87,
-      1000: 2.6,
+      1000: 2.60,
       2500: 2.36,
       5000: 2.24,
       10000: 2.02,
@@ -41,7 +41,7 @@ export const catalog = [
     supportedStores: ["NAVCLA","NAVCSU","NAVHLK","NAVBLA","NAVHLA","NAVCLK","VAUMAX","NAVCSL","NAVNLA"],
     sizes: {
       500: 2.87,
-      1000: 2.6,
+      1000: 2.60,
       2500: 2.36,
       5000: 2.24,
       10000: 2.02,
@@ -54,10 +54,10 @@ export const catalog = [
     colors: ["Chrome Faced"],
     type: "customs",
     default_color: "Chrome Faced",
-    supportedStores: ["NAVCLA","NAVCSU","NAVHLK","NAVBLA","NAVHLA","NAVCLK","VAUMAX","NAVCSL","NAVNLA"],
+    supportedStores: ["NAVHLK"],
     sizes: {
-      1000: 1.5,
-      2500: 1.3,
+      1000: 1.50,
+      2500: 1.30,
       5000: 1.25,
       10000: 1.14,
     },
@@ -69,11 +69,11 @@ export const catalog = [
     colors: ["Black"],
     type: "customs",
     default_color: "Black",
-    supportedStores: ["NAVCLA","NAVCSU","NAVHLK","NAVBLA","NAVHLA","NAVCLK","VAUMAX","NAVCSL","NAVNLA"],
+    supportedStores: ["NAVHLK"],
     sizes: {
       1000: 0.95,
-      2500: 0.9,
-      5000: 0.8,
+      2500: 0.90,
+      5000: 0.80,
       10000: 0.65,
     },
   },
@@ -86,10 +86,9 @@ export const catalog = [
     default_color: "Full Color",
     supportedStores: ["NAVCLA","NAVCSU","NAVHLK","NAVBLA","NAVHLA","NAVCLK","VAUMAX","NAVCSL","NAVNLA"],
     sizes: {
-      1000: 1.5,
+      1000: .54,
       2500: 0.51,
-      5000: 0.49,
-      10000: 0.0,
+      5000: .49,      
     },
   },
   {
@@ -101,10 +100,8 @@ export const catalog = [
     default_color: "White",
     supportedStores: ["NAVCLA","NAVCSU","NAVHLK","NAVBLA","NAVHLA","NAVCLK","VAUMAX","NAVCSL","NAVNLA"],
     sizes: {
-      1000: 1.13,
-      2500: 1.0,
-      5000: 0.0,
-      10000: 0.0,
+      2500: 1.13,      
+      5000: 1.00, 
     },
   },
   {
@@ -116,10 +113,8 @@ export const catalog = [
     default_color: "White",
     supportedStores: ["NAVCLA","NAVCSU","NAVHLK","NAVBLA","NAVHLA","NAVCLK","VAUMAX","NAVCSL","NAVNLA"],
     sizes: {
-      1000: 1.34,
-      2500: 1.15,
-      5000: 0.0,
-      10000: 0.0,
+      2500: 1.34,      
+      5000: 1.15,      
     },
   },
   {
@@ -155,7 +150,7 @@ export const catalog = [
     type: "service",
     default_color: "Plastic",
     sizes: {
-      500: 65.0,
+      500: 65.00,
     },
   },
   {
@@ -166,7 +161,7 @@ export const catalog = [
     type: "service",
     default_color: "White",
     sizes: {
-      500: 60.0,
+      500: 60.00,
     },
   },
   {
@@ -253,7 +248,7 @@ export const catalog = [
     type: "sales",
     default_color: "Beige",
     sizes: {
-      1: 65.0,
+      1: 65.00,
     },
   },
   {
@@ -361,7 +356,7 @@ export const catalog = [
     type: "sales",
     default_color: "Blue",
     sizes: {
-      1: 115.0,
+      1: 115.00,
     },
   },
   {
