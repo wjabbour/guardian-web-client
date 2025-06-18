@@ -86,9 +86,9 @@ export const catalog = [
     default_color: "Full Color",
     supportedStores: ["NAVCLA","NAVCSU","NAVHLK","NAVBLA","NAVHLA","NAVCLK","VAUMAX","NAVCSL","NAVNLA"],
     sizes: {
-      1000: .54,
+      1000: 0.54,
       2500: 0.51,
-      5000: .49,      
+      5000: 0.49,      
     },
   },
   {
@@ -194,7 +194,7 @@ export const catalog = [
     type: "service",
     default_color: "1000",
     sizes: {
-      1: 65.0,
+      1: 65.00,
     },
   },
   {
