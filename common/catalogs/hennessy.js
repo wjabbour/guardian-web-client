@@ -431,6 +431,22 @@ export const catalog = [
     },
   },
   {
+    code: "TM1MY399",
+    name: "TravisMathew Polo",
+    fullname: "TravisMathew Bayfront Solid Polo",
+    colors: ["Black"],
+    type: "mens",
+    default_color: "Black",
+    sizes: {
+      Small: 96.49,
+      Medium: 96.49,
+      Large: 96.49,
+      XLarge: 96.49,
+      "2XLarge": 98.49,
+      "3XLarge": 100.49,          
+    },
+  },
+  {
     code: "OG101",
     name: "OGIO® - Caliber2.0 Polo",
     fullname: "OGIO® - Caliber2.0 Polo",
@@ -462,6 +478,21 @@ export const catalog = [
       "2XLarge": 33.99,
       "3XLarge": 34.99,
       "4XLarge": 35.99,
+    },
+  },
+  {
+    code: "TM1WW003",
+    name: "TravisMathew 1/4-Zip",
+    fullname: "TravisMathew Women's Crestview 1/4-Zip",
+    colors: ["Black"],
+    type: "womens",
+    default_color: "Black",
+    sizes: {
+      Small: 80.73,
+      Medium: 80.73,
+      Large: 80.73,
+      XLarge: 80.73,
+      "2XLarge": 82.73,      
     },
   },
   {
@@ -659,6 +690,42 @@ export const catalog = [
     },
   },
   {
+    code: "J335",
+    name: "Port Authority® Jacket",
+    fullname: "Port Authority® Hooded Core Soft Shell Jacket",
+    colors: ["Black"],
+    type: "mens",
+    default_color: "Black",
+    sizes: {
+      XSmall: 58.04,
+      Small: 58.04,
+      Medium: 58.04,
+      Large: 58.04,
+      XLarge: 58.04,
+      "2XLarge": 60.04,
+      "3XLarge": 62.04,
+      "4XLarge": 64.04,     
+    },
+  },
+  {
+    code: "L335",
+    name: "Port Authority® Jacket",
+    fullname: "Port Authority® Women's Hooded Core Soft Shell Jacket",
+    colors: ["Black"],
+    type: "womens",
+    default_color: "Black",
+    sizes: {
+      XSmall: 58.04,
+      Small: 58.04,
+      Medium: 58.04,
+      Large: 58.04,
+      XLarge: 58.04,
+      "2XLarge": 60.04,
+      "3XLarge": 62.04,
+      "4XLarge": 64.04,     
+    },
+  },
+  {
     code: "HENPRO-FOB-414917C",
     name: "Leather Key Fob (red stitch) - Porsche N ATL",
     fullname: "Metal & Black Leather Fob w/black, 186 red & 872 gold imprint",
@@ -845,6 +912,20 @@ export const catalog = [
     },
   },
   {
+    code: "HENMMO-FOB-502271L",
+    name: "Matte Black Keychain - Southlake Mazda Buick GMC",
+    fullname: "Matte Black Keychain w/frost effect engraving (#CG-1070)",
+    colors: ["Metal"],
+    type: "accessory",
+    default_color: "Metal",
+    discount: [
+      { quantity: 500, price: 3.99 },      
+    ],
+    sizes: {
+      500: 0.0,      
+    },
+  },
+  {
     code: "HENLAT-34MLF-379167A",
     name: "Zinc Metal Frame",
     fullname: "Zinc Metal Frame w/glossy black imprint",
@@ -955,7 +1036,7 @@ export const catalog = [
   {
     code: "HENFAT31DD",
     name: "Die Cut Decal",
-    fullname: "Decal Thermo Die Cut",
+    fullname: "Decal Thermo Die Cut Decal",
     colors: ["Black", "Silver", "White"],
     type: "customs",
     default_color: "Black",
@@ -963,6 +1044,18 @@ export const catalog = [
     sizes: {
       1000: 0.75,
       2500: 0.65,
+    },
+  },
+  {
+    code: "HENMMO-31DD-504444A",
+    name: "Die Cut Decal",
+    fullname: "Black Vinyl Die Cut Decal",
+    colors: ["Black"],
+    type: "customs",
+    default_color: "Black",
+    supportedStores: ["HENMMO"],
+    sizes: {
+      500: 0.89,      
     },
   },
   {
@@ -1203,6 +1296,32 @@ export const catalog = [
     },
   },
   {
+    code: "HENMMO-34CF-503744A",
+    name: "Chrome Faced Frame",
+    fullname: "Chrome Faced Frame w/black imprint",
+    colors: ["Chrome"],
+    type: "customs",
+    default_color: "Chrome",
+    supportedStores: ["HENMMO"],
+    sizes: {
+      500: 1.39,
+      
+    },
+  },
+  {
+    code: "HENMMO-34CF-503933A",
+    name: "Chrome Faced Frame",
+    fullname: "Chrome Faced Frame w/black imprint",
+    colors: ["Chrome"],
+    type: "customs",
+    default_color: "Chrome",
+    supportedStores: ["HENMMO"],
+    sizes: {
+      500: 1.39,
+      
+    },
+  },
+  {
     code: "HENLAL-34CF-459349A",
     name: "Chrome Faced Frame",
     fullname: "Chrome Faced Frame w/black imprint",
@@ -1225,6 +1344,19 @@ export const catalog = [
     supportedStores: ["HENCDU"],
     sizes: {
       300: 1.39,
+      
+    },
+  },
+  {
+    code: "HENMMO-THC-477566A",
+    name: "Domecal Hitch Cover",
+    fullname: "Domecal Hitch Cover",
+    colors: ["Black"],
+    type: "customs",
+    default_color: "Black",
+    supportedStores: ["HENMMO"],
+    sizes: {
+      250: 4.49,
       
     },
   },
