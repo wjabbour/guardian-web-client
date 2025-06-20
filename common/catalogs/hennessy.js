@@ -915,9 +915,9 @@ export const catalog = [
     code: "HENMMO-FOB-502271L",
     name: "Matte Black Keychain - Southlake Mazda Buick GMC",
     fullname: "Matte Black Keychain w/frost effect engraving (#CG-1070)",
-    colors: ["Metal"],
+    colors: ["Black"],
     type: "accessory",
-    default_color: "Metal",
+    default_color: "Black",
     discount: [
       { quantity: 500, price: 3.99 },      
     ],

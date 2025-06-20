@@ -8,6 +8,7 @@ import { config as PremierConfig } from "./configs/premier";
 import { config as StiversConfig } from "./configs/stivers";
 import { config as TameronConfig } from "./configs/tameron";
 import { config as NavarreConfig } from "./configs/navarre";
+import { config as HoffmanConfig } from "./configs/hoffman";
 import { catalog as CannonCatalog } from "./catalogs/cannon";
 import { catalog as GuardianCatalog } from "./catalogs/guardian";
 import { catalog as HennessyCatalog } from "./catalogs/hennessy";
@@ -18,6 +19,7 @@ import { catalog as PremierCatalog } from "./catalogs/premier";
 import { catalog as StiversCatalog } from "./catalogs/stivers";
 import { catalog as TameronCatalog } from "./catalogs/tameron";
 import { catalog as NavarreCatalog } from "./catalogs/navarre";
+import { catalog as HoffmanCatalog } from "./catalogs/hoffman";
 
 const DEFAULT_CONFIG = {
   title: "Guardian",
@@ -37,6 +39,7 @@ const allConfigs = [
   HennessyConfig,
   PohankaConfig,
   NavarreConfig,
+  HoffmanConfig,
 ];
 
 export function getStoreCode(companyName, storeAddress) {
@@ -89,6 +92,8 @@ export function getWebCatalog() {
     return PohankaCatalog;
   } else if (url.includes("navarre")) {
     return NavarreCatalog;
+  } else if (url.includes("hoffman")) {
+    return HoffmanCatalog;  
   }
 }
 
@@ -117,6 +122,8 @@ export function getCatalog(companyName) {
       return TameronCatalog;
     case "Navarre":
       return NavarreCatalog;
+    case "Hoffman":
+      return HoffmanCatalog;  
   }
 }
 
@@ -144,6 +151,8 @@ export function getWebConfigValue(val) {
     return PohankaConfig[val];
   } else if (url.includes("navarre")) {
     return NavarreConfig[val];
+  } else if (url.includes("hoffman")) {
+    return HoffmanConfig[val];
   } else {
     // when the user is on gpc81.com landing page we need to display a string in the browser tab
     return DEFAULT_CONFIG[val];
@@ -171,5 +180,7 @@ export function getConfigValue(val, config) {
       return TameronConfig[val];
     case "Navarre":
       return NavarreConfig[val];
+    case "Hoffman":
+      return HoffmanConfig[val];  
   }
 }

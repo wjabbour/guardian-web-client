@@ -337,7 +337,7 @@ export const catalog = [
     code: "30RW",
     name: "7.5 in. Numbers - Red/Wht",
     fullname: "7.5 in. Numbers - Red/White (12/pk)",
-    colors: ["RW0","RW1","RW2","RW3","RW4","RW5","RW6","RW7","RW8","RW9","RWS","RWGD","RWP"],
+    colors: ["RW0","RW1","RW2","RW3","RW4","RW5","RW6","RW7","RW8","RW9","RWS","RWD","RWP"],
     type: "sales",
     default_color: "RW0",
     discount: [{ quantity: 12, price: 0.00 }],

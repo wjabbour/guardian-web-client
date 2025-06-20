@@ -219,8 +219,8 @@ Move back to the project root and `cd` into the backend directory and run `npm r
 
 # Contributors
 
-Shannel Williams <br>
-shannel@gpcorp.com <br>
+Shanell Williams <br>
+swilliams@gpcorp.com <br>
 Turner Jabbour <br>
 901-736-5273 <br>
 doubleujabbour@gmail.com <br>
