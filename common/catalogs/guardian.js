@@ -552,7 +552,7 @@ export const catalog = [
   {
     code: "PENLIN",
     name: "Triangle Pennants (100 FT)",
-    fullname: "Triangle Pennants 48 - 12 in. x 18 in",
+    fullname: "Triangle Pennants 48 - 12 in. x 18 in.",
     colors: ["Assorted","RWB"],
     type: "sales",
     default_color: "Assorted",
@@ -613,6 +613,18 @@ export const catalog = [
     code: "HANG-SG",
     name: "Hang Tag - Was Now",
     fullname: "Stock Hang Tags - Was Now - 9in x 12in (50/pk)",
+    colors: ["Flourg","Flourp","Flourr","Floury"],
+    type: "sales",
+    default_color: "Flourg",
+    discount: [{ quantity: 50, price: 0.00 }],
+    sizes: {
+      50: 0.00,
+    },
+  },
+  {
+    code: "HANG-MH",
+    name: "Hang Tag - Sale",
+    fullname: "Stock Hang Tags - Sale - 9in x 12in (50/pk)",
     colors: ["Flourg","Flourp","Flourr","Floury"],
     type: "sales",
     default_color: "Flourg",
@@ -980,7 +992,56 @@ export const catalog = [
     sizes: {
       1: 0.0,
     },
-  },  
+  }, 
+  {
+    code: "SDNC",
+    name: "Service Numbers",
+    fullname: "Mirror Hang Service Numbers (1000/bx)",
+    colors: ["Blue","Green","Grey","Lime","Orange","Pink","Purple","Red","Tan","White","Yellow"],  
+    type: "service",
+    default_color: "Blue",
+    discount: [{ quantity: 1, price: 0.00 }],
+    sizes: {
+      1: 0.0,
+    },
+  }, 
+  {
+    code: "SDN0000",
+    name: "Service Numbers",
+    fullname: "Mirror Hang Service Numbers (1000/bx)",
+    colors: ["_0000","1000","2000","3000","4000","5000",
+      "6000","7000","8000", "9000"],  
+    type: "service",
+    default_color: "1000",
+    discount: [{ quantity: 1, price: 0.00 }],
+    sizes: {
+      1: 0.0,
+    },
+  }, 
+  {
+    code: "SDN999",
+    name: "Service Numbers",
+    fullname: "Mirror Hang Service Numbers (000-999) (1000/bx)",
+    colors: ["White"],  
+    type: "service",
+    default_color: "White",
+    discount: [{ quantity: 1, price: 0.00 }],
+    sizes: {
+      1: 0.0,
+    },
+  },
+  {
+    code: "230",
+    name: "Colored Dispatch Numbers",
+    fullname: "Colored Dispatch Numbers (1000/pk)",
+    colors: ["Blue","Green","Red","White","Yellow"],  
+    type: "service",
+    default_color: "Blue",
+    discount: [{ quantity: 1, price: 0.00 }],
+    sizes: {
+      1: 0.0,
+    },
+  },   
   {
     code: "BGVinyl",
     name: "Vinyl Sheet",
@@ -1096,6 +1157,61 @@ export const catalog = [
     default_color: "White",
     sizes: {
       250: 0.00,
+    },
+  },
+  {
+    code: "TICKETHOLDER",
+    name: "Work Ticket Holders",
+    fullname: "Neon Stitched Work Ticket Holders",
+    colors: ["Black","Blue","Green","Orange","Pink","Red","Yellow"],
+    type: "service",
+    default_color: "Black",
+    sizes: {
+      1: 0.00,
+    },
+  },
+  {
+    code: "7320",
+    name: "Night Drop Box",
+    fullname: "Self-Contained Night Drop Box",
+    colors: ["Black"],
+    type: "service",
+    default_color: "Black",
+    sizes: {
+      1: 0.00,
+    },
+  },
+  {
+    code: "7321",
+    name: "Night Drop Box Posts",
+    fullname: "24in. Surface Mount Post for Drop Box",
+    colors: ["Black"],
+    type: "service",
+    default_color: "Black",
+    sizes: {
+      1: 0.00,
+    },
+  },
+  {
+    code: "7322",
+    name: "Night Drop Box Posts",
+    fullname: "36in. In Ground Mount Post for Drop Box",
+    colors: ["Black"],
+    type: "service",
+    default_color: "Black",
+    sizes: {
+      1: 0.00,
+    },
+  },
+  {
+    code: "GCAPS",
+    name: "Control Caps",
+    fullname: "Magnetic Control Caps 10in. x 10in. x 5 in.",
+    colors: ["Slogans","Black","Blue","Green","Grey","Orange","Purple","Red","Tan","White","Yellow"],
+    type: "service",
+    default_color: "Slogans",
+    sizes: {
+      1: 0.00,
     },
   },
   {
