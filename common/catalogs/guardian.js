@@ -634,6 +634,18 @@ export const catalog = [
     },
   },
   {
+    code: "HANG-LD",
+    name: "Hang Tag - Like New",
+    fullname: "Stock Hang Tags - Like New - 9in x 12in (50/pk)",
+    colors: ["Flourg","Flourp","Flourr","Floury"],
+    type: "sales",
+    default_color: "Flourg",
+    discount: [{ quantity: 50, price: 0.00 }],
+    sizes: {
+      50: 0.00,
+    },
+  },
+  {
     code: "3196",
     name: "Certified Ovals",
     fullname: "Certified Ovals (12/pk)",
