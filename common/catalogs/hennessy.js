@@ -49,7 +49,7 @@ export const catalog = [
   },
   {
     code: "3198WB",
-    name: "Oval Year Stickers",
+    name: "Oval Year Stickers - Blue",
     fullname: "Oval Year Stickers - Blue/White (12/pk)",
     colors: [
       "YR 07",
@@ -83,7 +83,7 @@ export const catalog = [
   },
   {
     code: "3198SB",
-    name: "Oval Year Stickers",
+    name: "Oval Year Stickers - Silver",
     fullname: "Oval Year Stickers - Silver/Black (12/pk)",
     colors: [
       "YR 2016",
