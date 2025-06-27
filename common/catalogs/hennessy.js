@@ -485,7 +485,7 @@ export const catalog = [
     name: "TravisMathew Performance Polo",
     fullname: "TravisMathew Coto Performance Polo",
     colors: ["Beryl Grn Hthr","Black","Blue Nights","Brilliant Blue Hthr","Federal Blue",
-    "Quiet Shade Gry Hthr","Quiet Shade Gry Blk","Vintage Indigo Blk","White"],
+    "Quiet Shade Grey Hthr","Quiet Shade Gry Blk","Vintage Indigo Blk","White"],
     type: "mens",
     default_color: "Black",
     sizes: {
