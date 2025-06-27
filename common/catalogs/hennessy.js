@@ -385,7 +385,7 @@ export const catalog = [
     code: "NKDC1963",
     name: "Nike® Dri-FIT Polo Shirt",
     fullname: "Nike® Dri-FIT Polo (addt'l logos cost extra)",
-    colors: ["Anthracite", "Black", "Cool Grey", "Navy","White"],
+    colors: ["Anthracite", "Black", "Cool Grey", "Navy", "University Red","White"],
     type: "mens",
     default_color: "Black",
     sizes: {

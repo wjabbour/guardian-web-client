@@ -54,6 +54,7 @@ export const catalog = [
     colors: [
       "Black",
       "Black Grey Steel",
+      "Black Tan",
       "Black White",
       "Flame Red White",
       "Grey Steel",
