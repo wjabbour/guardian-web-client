@@ -1115,9 +1115,9 @@ export const catalog = [
     code: "HANG-BB",
     name: "Hang Tag - As Advertised",
     fullname: "Stock Hang Tags - As Advertised - 9in x 12in (50/pk)",
-    colors: ["Flourg","Flourp","Flourr","Floury"],
+    colors: ["Fluorg","Fluorp","Fluorr","Fluory"],
     type: "sales",
-    default_color: "Flourg",
+    default_color: "Fluorg",
     discount: [{ quantity: 50, price: 0.00 }],
     sizes: {
       50: 0.00,
@@ -1185,11 +1185,11 @@ export const catalog = [
   },
   {
     code: "HANG-LD",
-    name: "Hang Tag - Like New",
-    fullname: "Stock Hang Tags - Like New - 9in x 12in (50/pk)",
+    name: "Hang Tag - Per Month",
+    fullname: "Stock Hang Tags - Per Month - 9in x 12in (50/pk)",
     colors: ["Fluorg","Fluorp","Fluorr","Fluory"],
     type: "sales",
-    default_color: "Flourg",
+    default_color: "Fluorg",
     discount: [{ quantity: 50, price: 0.00 }],
     sizes: {
       50: 0.00,
@@ -1201,7 +1201,7 @@ export const catalog = [
     fullname: "Stock Hang Tags - List Price - 9in x 12in (50/pk)",
     colors: ["Fluorg","Fluorp","Fluorr","Fluory"],
     type: "sales",
-    default_color: "Flourg",
+    default_color: "Fluorg",
     discount: [{ quantity: 50, price: 0.00 }],
     sizes: {
       50: 0.00,
@@ -1213,7 +1213,7 @@ export const catalog = [
     fullname: "Stock Hang Tags - Special - 9in x 12in (50/pk)",
     colors: ["Fluorg","Fluorp","Fluorr","Fluory"],
     type: "sales",
-    default_color: "Flourg",
+    default_color: "Fluorg",
     discount: [{ quantity: 50, price: 0.00 }],
     sizes: {
       50: 0.00,
@@ -1225,7 +1225,7 @@ export const catalog = [
     fullname: "Stock Hang Tags - Rebate - 9in x 12in (50/pk)",
     colors: ["Fluorg","Fluorp","Fluorr","Fluory"],
     type: "sales",
-    default_color: "Flourg",
+    default_color: "Fluorg",
     discount: [{ quantity: 50, price: 0.00 }],
     sizes: {
       50: 0.00,
@@ -1237,7 +1237,7 @@ export const catalog = [
     fullname: "Stock Hang Tags - Reduced - 9in x 12in (50/pk)",
     colors: ["Fluorg","Fluorp","Fluorr","Fluory"],
     type: "sales",
-    default_color: "Flourg",
+    default_color: "Fluorg",
     discount: [{ quantity: 50, price: 0.00 }],
     sizes: {
       50: 0.00,
