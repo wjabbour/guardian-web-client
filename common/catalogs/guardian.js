@@ -1042,13 +1042,13 @@ export const catalog = [
   {
     code: "CB55",
     name: "5.5 in. Rubber Balloons",
-    fullname: "5.5 in. Rubber Chloroprene Balloons",
+    fullname: "5.5 in. Rubber Chloroprene Balloons (1 ea)",
     colors: ["Blue","Green","Orange","Purple","Red","White","Yellow"],
     type: "sales",
     default_color: "Blue",
-    discount: [{ quantity: 10, price: 0.00 }],
+    discount: [{ quantity: 1, price: 0.00 }],
     sizes: {
-      10: 0.00,
+      1: 0.00,
     },
   },
   {

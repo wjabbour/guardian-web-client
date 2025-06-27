@@ -7,6 +7,7 @@ export const config = {
     hat: [
       "Cadillac",
       "Cadillac Cursive",
+      "Hennessy Automobile",
       "Hennessy Ford",
       "Hennessy Ford Lincoln",
       "Hennessy Honda",
@@ -21,7 +22,8 @@ export const config = {
       "Hennessy Vehicle Buying",
     ],
     mens: [
-      "Cadillac",      
+      "Cadillac", 
+      "Hennessy Automobile",     
       "Hennessy Ford Lincoln",
       "Hennessy Honda",
       "Hennessy Lexus",
@@ -34,7 +36,8 @@ export const config = {
       "Hennessy Vehicle Buying",
     ],
     womens: [
-      "Cadillac",    
+      "Cadillac",  
+      "Hennessy Automobile",  
       "Hennessy Ford Lincoln",
       "Hennessy Honda",
       "Hennessy Lexus",
@@ -49,6 +52,7 @@ export const config = {
     accessory: [
       "Cadillac",
       "Cadillac Cursive",
+      "Hennessy Automobile",
       "Hennessy Ford",
       "Hennessy Ford Lincoln",
       "Hennessy Honda",
