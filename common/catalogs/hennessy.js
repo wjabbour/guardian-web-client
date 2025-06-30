@@ -859,6 +859,19 @@ export const catalog = [
       500: 3.99,     
     },
   },
+   { code: "HENLAL-FOB-509389L",
+    name: "Leather Key Fob - Land Rover - N ATL",
+    fullname: "Black Leather Fob with Laser engraved imprint",
+    colors: ["Black"],
+    type: "accessory",
+    default_color: "Black",      
+    discount: [
+      { quantity: 500, price: 3.99 },     
+    ],
+    sizes: {
+      500: 3.99,     
+    },
+  },
   {
     code: "HENLDU-GPLLKR-473091L",
     name: "Leather Key Fob - Lexus Gwinnett",
