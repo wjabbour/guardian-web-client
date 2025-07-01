@@ -659,7 +659,7 @@ export const catalog = [
   {
     code: "GP546",
     name: "Deal Jackets",
-    fullname: "Deal Jackets (500/box)",
+    fullname: "Deal Jackets - Plain",
     colors: [
       "Blue",
       "Buff",
@@ -674,8 +674,10 @@ export const catalog = [
     ],
     type: "sales",
     default_color: "Blue",
-    discount: [{ quantity: 500, price: 0.00 }],
+    discount: [{ quantity: 100, price: 0.00 },
+               { quantity: 500, price: 0.00 }],
     sizes: {
+      100: 0.00,
       500: 0.00,
     },
   },
@@ -1112,6 +1114,30 @@ export const catalog = [
     },
   },
   {
+    code: "HANG-RDBK-TF",
+    name: "Hang Tag - Red Tag Special",
+    fullname: "Stock Hang Tags - Red Tag Special - 9in x 12in (50/pk)",
+    colors: ["Fluorr"],
+    type: "sales",
+    default_color: "Fluorr",
+    discount: [{ quantity: 50, price: 0.00 }],
+    sizes: {
+      50: 0.00,
+    },
+  },
+  {
+    code: "HANG-RDBK-TG",
+    name: "Hang Tag - Red Tag Sale",
+    fullname: "Stock Hang Tags - Red Tag Sale - 9in x 12in (50/pk)",
+    colors: ["Fluorr"],
+    type: "sales",
+    default_color: "Fluorr",
+    discount: [{ quantity: 50, price: 0.00 }],
+    sizes: {
+      50: 0.00,
+    },
+  },
+  {
     code: "HANG-BB",
     name: "Hang Tag - As Advertised",
     fullname: "Stock Hang Tags - As Advertised - 9in x 12in (50/pk)",
@@ -1220,6 +1246,30 @@ export const catalog = [
     },
   },
   {
+    code: "HANG-TA",
+    name: "Hang Tag - Blank w/outline",
+    fullname: "Stock Hang Tags - Blank with outline - 9in x 12in (50/pk)",
+    colors: ["Fluorg","Fluorp","Fluorr","Fluory"],
+    type: "sales",
+    default_color: "Fluorg",
+    discount: [{ quantity: 50, price: 0.00 }],
+    sizes: {
+      50: 0.00,
+    },
+  },
+  {
+    code: "HANG-TE",
+    name: "Hang Tag - Blank",
+    fullname: "Stock Hang Tags - Blank - 9in x 12in (50/pk)",
+    colors: ["Fluorg","Fluorp","Fluorr","Fluory"],
+    type: "sales",
+    default_color: "Fluorg",
+    discount: [{ quantity: 50, price: 0.00 }],
+    sizes: {
+      50: 0.00,
+    },
+  },
+  {
     code: "HANG-ME",
     name: "Hang Tag - Rebate",
     fullname: "Stock Hang Tags - Rebate - 9in x 12in (50/pk)",
@@ -1241,6 +1291,31 @@ export const catalog = [
     discount: [{ quantity: 50, price: 0.00 }],
     sizes: {
       50: 0.00,
+    },
+  },
+  {
+    code: "ALPLBL",
+    name: "ABC Filing Labels",
+    fullname: "Alphabetic File Right Labels (270/sheet)",
+    colors: ["A","B","C","D","E","F","G","H","I","J","K","L","M",
+      "N","O","P","Q","R","S","T","U","V","W","X","Y","Z","Mc"],
+    type: "sales",
+    default_color: "A",
+    discount: [{ quantity: 1, price: 0.00 }],
+    sizes: {
+      1: 0.00,
+    },
+  },
+  {
+    code: "MONLBL",
+    name: "Month Filing Labels",
+    fullname: "File Right Month Labels (270/sheet)",
+    colors: ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],
+    type: "sales",
+    default_color: "Jan",
+    discount: [{ quantity: 1, price: 0.00 }],
+    sizes: {
+      1: 0.00,
     },
   },
   {
@@ -1830,7 +1905,7 @@ export const catalog = [
     fullname: "File Right Number Labels (500/box)",
     colors: ["Number 0","Number 1","Number 2","Number 3","Number 4",
       "Number 5","Number 6","Number 7","Number 8","Number 9"],
-    type: "office",
+    type: "sales",
     default_color: "Number 0",
     sizes: {
       500: 0.00,
@@ -1841,10 +1916,11 @@ export const catalog = [
     name: "A/P Voucher Jacket",
     fullname: "9 in. x 12 in. A/P Voucher Jacket (DSA-540)",
     colors: ["Blue", "Buff", "Green", "Lavender", "Pink", "White"],
-    type: "office",
+    type: "sales",
     default_color: "Buff",
     sizes: {
       100: 0.0,
+      500: 0.0,
     },
   },
   {
@@ -1854,6 +1930,7 @@ export const catalog = [
     colors: ["Metal"],
     type: "customs",
     default_color: "Metal",
+    supportedStores: ["GUAPRO"],
     sizes: {
       500: 0.0,
       1000: 0.0,
@@ -1867,6 +1944,7 @@ export const catalog = [
     colors: ["White"],
     type: "customs",
     default_color: "White",
+    supportedStores: ["GUAPRO"],
     sizes: {
       500: 0.0,
       1000: 0.0,
@@ -1880,6 +1958,7 @@ export const catalog = [
     colors: ["White"],
     type: "customs",
     default_color: "White",
+    supportedStores: ["GUAPRO"],
     sizes: {
       500: 0.0,
       1000: 0.0,
