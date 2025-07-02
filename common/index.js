@@ -9,6 +9,7 @@ import { config as StiversConfig } from "./configs/stivers";
 import { config as TameronConfig } from "./configs/tameron";
 import { config as NavarreConfig } from "./configs/navarre";
 import { config as HoffmanConfig } from "./configs/hoffman";
+import { config as TommycarConfig } from "./configs/tommycar";
 import { catalog as CannonCatalog } from "./catalogs/cannon";
 import { catalog as GuardianCatalog } from "./catalogs/guardian";
 import { catalog as HennessyCatalog } from "./catalogs/hennessy";
@@ -20,6 +21,7 @@ import { catalog as StiversCatalog } from "./catalogs/stivers";
 import { catalog as TameronCatalog } from "./catalogs/tameron";
 import { catalog as NavarreCatalog } from "./catalogs/navarre";
 import { catalog as HoffmanCatalog } from "./catalogs/hoffman";
+import { catalog as TommycarCatalog } from "./catalogs/tommycar";
 
 const DEFAULT_CONFIG = {
   title: "Guardian",
@@ -40,6 +42,7 @@ const allConfigs = [
   PohankaConfig,
   NavarreConfig,
   HoffmanConfig,
+  TommycarConfig,
 ];
 
 export function getStoreCode(companyName, storeAddress) {
@@ -93,7 +96,9 @@ export function getWebCatalog() {
   } else if (url.includes("navarre")) {
     return NavarreCatalog;
   } else if (url.includes("hoffman")) {
-    return HoffmanCatalog;  
+    return HoffmanCatalog;
+  } else if (url.includes("tommycar")) {
+    return TommycarCatalog;    
   }
 }
 
@@ -123,7 +128,9 @@ export function getCatalog(companyName) {
     case "Navarre":
       return NavarreCatalog;
     case "Hoffman":
-      return HoffmanCatalog;  
+      return HoffmanCatalog;
+    case "Tommycar":
+      return TommycarCatalog;   
   }
 }
 
@@ -153,6 +160,8 @@ export function getWebConfigValue(val) {
     return NavarreConfig[val];
   } else if (url.includes("hoffman")) {
     return HoffmanConfig[val];
+  } else if (url.includes("tommycar")) {
+    return TommycarConfig[val];
   } else {
     // when the user is on gpc81.com landing page we need to display a string in the browser tab
     return DEFAULT_CONFIG[val];
@@ -181,6 +190,8 @@ export function getConfigValue(val, config) {
     case "Navarre":
       return NavarreConfig[val];
     case "Hoffman":
-      return HoffmanConfig[val];  
+      return HoffmanConfig[val]; 
+    case "Tommycar":
+      return TommycarConfig[val]; 
   }
 }

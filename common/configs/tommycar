@@ -1,0 +1,31 @@
+export const config = {
+  title: "TommyCar",
+  company_logo: "tommycar.png",
+  logo_placements: ["Left Chest"],
+  show_modification_thumbnail: true,
+  minimum_apparel_order: true,
+  render_logo_preview: true,
+  embroideries: {
+    mens: ["Tommycar"],
+    womens: ["Tommycar"],
+    hat: ["Tommycar"],
+    customs: [],
+  },
+  email_recipients: ["lbudbill@gpcorp.com", "lbudbell@comcast.net","hpeck@gpcorp.com","lfernandes@tommycarmgt.com"],
+  stores: {
+    "Genesis of Northampton, 347 King Street, Northampton, MA 01060": "GENGNO",
+    "Country Nissan, 40 Russell Street, Hadley, MA 01035": "COUNHA",
+    "Country Hyundai, 347 King Street, Northampton, MA 01060": "COUHGR",
+    "Northampton Volkswagen, 361 King Street, Northampton, MA 01060": "NORVNO",
+    "Volvo Cars of Pioneer Valley, 48 Damon Road, Northampton, MA 01060": "VOLCNO",
+ },
+  bypass_codes: ["BUYER"],
+  server_hostname: "https://mxfj3q6m01.execute-api.us-east-1.amazonaws.com",
+  account_reps: [
+    { name: "Hunter Peck", phone: "678-287-1642"},
+    { name: "Louis Budbill", phone: "678-287-1659"},   
+  ],
+  route_prefix: "/tommycar",
+  paypal_not_supported: true,
+  password: "TommycaR",
+};

@@ -682,6 +682,18 @@ export const catalog = [
     },
   },
   {
+    code: "5470",
+    name: "A/P Voucher Jacket",
+    fullname: "9 in. x 12 in. A/P Voucher Jacket (DSA-540)",
+    colors: ["Blue", "Buff", "Green", "Lavender", "Pink", "White"],
+    type: "sales",
+    default_color: "Buff",
+    sizes: {
+      100: 0.0,
+      500: 0.0,
+    },
+  },
+  {
     code: "GP200",
     name: "Key Tags",
     fullname: "Key Tag Versa #200 (250/box)",
@@ -1114,7 +1126,7 @@ export const catalog = [
     },
   },
   {
-    code: "HANG-RDBK-TF",
+    code: "HANG-HT-RDBK-TF",
     name: "Hang Tag - Red Tag Special",
     fullname: "Stock Hang Tags - Red Tag Special - 9in x 12in (50/pk)",
     colors: ["Fluorr"],
@@ -1126,7 +1138,7 @@ export const catalog = [
     },
   },
   {
-    code: "HANG-RDBK-TG",
+    code: "HANG-HT-RDBK-TG",
     name: "Hang Tag - Red Tag Sale",
     fullname: "Stock Hang Tags - Red Tag Sale - 9in x 12in (50/pk)",
     colors: ["Fluorr"],
@@ -1291,6 +1303,18 @@ export const catalog = [
     discount: [{ quantity: 50, price: 0.00 }],
     sizes: {
       50: 0.00,
+    },
+  },
+  {
+    code: "310",
+    name: "File Number Labels",
+    fullname: "File Right Number Labels (500/box)",
+    colors: ["Number 0","Number 1","Number 2","Number 3","Number 4",
+      "Number 5","Number 6","Number 7","Number 8","Number 9"],
+    type: "sales",
+    default_color: "Number 0",
+    sizes: {
+      500: 0.00,
     },
   },
   {
@@ -1897,30 +1921,6 @@ export const catalog = [
     default_color: "Slogans",
     sizes: {
       1: 0.00,
-    },
-  },
-  {
-    code: "310",
-    name: "File Number Labels",
-    fullname: "File Right Number Labels (500/box)",
-    colors: ["Number 0","Number 1","Number 2","Number 3","Number 4",
-      "Number 5","Number 6","Number 7","Number 8","Number 9"],
-    type: "sales",
-    default_color: "Number 0",
-    sizes: {
-      500: 0.00,
-    },
-  },
-  {
-    code: "5470",
-    name: "A/P Voucher Jacket",
-    fullname: "9 in. x 12 in. A/P Voucher Jacket (DSA-540)",
-    colors: ["Blue", "Buff", "Green", "Lavender", "Pink", "White"],
-    type: "sales",
-    default_color: "Buff",
-    sizes: {
-      100: 0.0,
-      500: 0.0,
     },
   },
   {
