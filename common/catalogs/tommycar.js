@@ -7,7 +7,13 @@ export const catalog = [
     type: "mens",
     default_color: "Black",
     sizes: {
-      OSFA: 0.00,
+       Small: 0.00,
+      Medium: 0.00,
+      Large: 0.00,
+      XLarge: 0.00,
+      "2XLarge": 0.00,
+      "3XLarge": 0.00,
+      "4XLarge": 0.00,
     },
   },
   {
@@ -18,7 +24,12 @@ export const catalog = [
     type: "womens",
     default_color: "Black",
     sizes: {
-      OSFA: 0.00,
+      Small: 0.00,
+      Medium: 0.00,
+      Large: 0.00,
+      XLarge: 0.00,
+      "2XLarge": 0.00,
+      "3XLarge": 0.00,     
     },
   },
   {
