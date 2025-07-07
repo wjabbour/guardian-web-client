@@ -5,10 +5,9 @@ export const config = {
   show_image_preview: true,  
   embroideries: {
     mens: ["Tommycar"],
-    womens: ["Tommycar"],
-    hat: ["Tommycar"],
-    service: ["Tommycar"],
-    sales: ["Tommycar"],  
+    womens: ["Tommycar"],    
+    service: [],
+    sales: [],  
     customs: [],
   },
   email_recipients: ["lbudbill@gpcorp.com", "lbudbell@comcast.net","hpeck@gpcorp.com","lfernandes@tommycarmgt.com"],
