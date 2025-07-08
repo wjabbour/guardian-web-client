@@ -67,6 +67,6 @@ export const config = {
     { name: "Glenn Rodney", phone: "678-287-1608" },
   ],
   route_prefix: "/stivers",
-  paypal_not_supported: true,
+  paypal_not_supported: false,
   password: "StiverS",
 };
