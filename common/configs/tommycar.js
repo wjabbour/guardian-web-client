@@ -1,5 +1,5 @@
 export const config = {
-  title: "TommyCar",
+  title: "Tommycar",
   company_logo: "tommycar.png",
   logo_placements: ["Left Chest"],
   show_image_preview: true,  

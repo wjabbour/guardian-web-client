@@ -129,7 +129,7 @@ export function getCatalog(companyName) {
       return NavarreCatalog;
     case "Hoffman":
       return HoffmanCatalog;
-    case "TommyCar":
+    case "Tommycar":
       return TommycarCatalog;   
   }
 }
@@ -191,7 +191,7 @@ export function getConfigValue(val, config) {
       return NavarreConfig[val];
     case "Hoffman":
       return HoffmanConfig[val]; 
-    case "TommyCar":
+    case "Tommycar":
       return TommycarConfig[val]; 
   }
 }
