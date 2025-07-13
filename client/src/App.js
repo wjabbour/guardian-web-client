@@ -10,7 +10,7 @@ import Orders from "./routes/Orders/Orders";
 import Checkout from "./routes/Checkout/Checkout";
 import StoreSelection from "./routes/StoreSelection/StoreSelection";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Success from "./routes/Success/success";
+import Success from "./routes/Success/Success";
 import { Helmet } from "react-helmet";
 import { getWebConfigValue } from "guardian-common";
 import { useNextGenRouting } from "./hooks/useNextGenRouting";
