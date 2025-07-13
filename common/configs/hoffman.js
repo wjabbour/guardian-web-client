@@ -1,7 +1,13 @@
 export const config = {
   title: "Hoffman",
   company_logo: "hoffman.png",
-  logo_placements: ["Left Chest", "Right Sleeve", "Left Sleeve", "Yoke","Front Center"],
+  logo_placements: [
+    "Left Chest",
+    "Right Sleeve",
+    "Left Sleeve",
+    "Yoke",
+    "Front Center",
+  ],
   show_image_preview: true,
   embroideries: {
     hat: [
@@ -16,8 +22,8 @@ export const config = {
       "Lexus",
       "Hoffman Motorsports",
       "Nissan",
-      "Porsche With Shield",     
-      "Toyota", 
+      "Porsche With Shield",
+      "Toyota",
     ],
     mens: [
       "Audi",
@@ -31,9 +37,8 @@ export const config = {
       "Lexus",
       "Hoffman Motorsports",
       "Nissan",
-      "Porsche With Shield",     
-      "Toyota", 
-    
+      "Porsche With Shield",
+      "Toyota",
     ],
     womens: [
       "Audi",
@@ -47,13 +52,10 @@ export const config = {
       "Lexus",
       "Hoffman Motorsports",
       "Nissan",
-      "Porsche With Shield",     
-      "Toyota",  
-     
+      "Porsche With Shield",
+      "Toyota",
     ],
-    accessory: [
-   
-    ],
+    accessory: [],
     customs: [],
     office: [],
     sales: [],
@@ -62,17 +64,22 @@ export const config = {
     bodyshop: [],
     parts: [],
   },
-  email_recipients: ["lbudbill@gpcorp.com", "lbudbell@comcast.net", "bsugden@gpcorp.com"],
+  email_recipients: [
+    "lbudbill@gpcorp.com",
+    "lbudbell@comcast.net",
+    "bsugden@gpcorp.com",
+  ],
 
-  stores: {    
-    "Hoffman APA, 600 Connecticut Blvd, East Hartford, CT 06108": "HOFAPA",       
-  },
+  stores: [
+    {
+      name: "Hoffman APA",
+      address: "600 Connecticut Blvd, East Hartford, CT 06108",
+      code: "HOFAPA",
+    },
+  ],
   bypass_codes: ["BRONX"],
   server_hostname: "https://mxfj3q6m01.execute-api.us-east-1.amazonaws.com",
-  account_reps: [
-    { name: "", phone: "" },
-   
-  ],
+  account_reps: [{ name: "", phone: "" }],
   route_prefix: "/hoffman",
   paypal_not_supported: true,
   password: "HoffmaN",

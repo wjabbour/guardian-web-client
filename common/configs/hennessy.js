@@ -1,7 +1,7 @@
 export const config = {
   title: "Hennessy",
   company_logo: "hennessy.png",
-  logo_placements: ["Left Chest", "Right Sleeve","Front Center"],
+  logo_placements: ["Left Chest", "Right Sleeve", "Front Center"],
   show_image_preview: true,
   embroideries: {
     hat: [
@@ -22,29 +22,29 @@ export const config = {
       "Hennessy Vehicle Buying",
     ],
     mens: [
-      "Cadillac", 
-      "Hennessy Automobile",     
+      "Cadillac",
+      "Hennessy Automobile",
       "Hennessy Ford Lincoln",
       "Hennessy Honda",
       "Hennessy Lexus",
       "Hennessy Mazda",
       "Hennessy Mazda GMC",
-      "Hennessy Porsche", 
-      "JLR",     
+      "Hennessy Porsche",
+      "JLR",
       "Porsche Atlanta NW",
       "Porsche North Atl",
       "Hennessy Vehicle Buying",
     ],
     womens: [
-      "Cadillac",  
-      "Hennessy Automobile",  
+      "Cadillac",
+      "Hennessy Automobile",
       "Hennessy Ford Lincoln",
       "Hennessy Honda",
       "Hennessy Lexus",
       "Hennessy Mazda",
       "Hennessy Mazda GMC",
-      "Hennessy Porsche", 
-      "JLR",     
+      "Hennessy Porsche",
+      "JLR",
       "Porsche Atlanta NW",
       "Porsche North Atl",
       "Hennessy Vehicle Buying",
@@ -74,23 +74,64 @@ export const config = {
     bodyshop: [],
     parts: [],
   },
-  email_recipients: ["lbudbill@gpcorp.com", "lbudbell@comcast.net", "zwarner@hennessyauto.com", "asarazua@gpcorp.com"],
-
-  stores: {    
-    "Hennessy Cadillac Duluth, 3377 Satellite Blvd, Duluth, GA 30096": "HENCDU",
-    "Hennessy Ford Lincoln Atlanta, 5675 Peachtree Industrial Blvd, Atlanta, GA 30341":
-      "HENFAT",
-    "Hennessy Honda Woodstock, 8931 Highway 92, Woodstock, GA 30189": "HENHWO",    
-    "Hennessy Land Rover, 1505 Mansell Rd, Alpharetta, GA 30004": "HENLAL",
-    "Hennessy Land Rover Gwinnett, 3423 Old Norcross Rd, Duluth, GA 30096": "HENADU",
-    "Hennessy Lexus Atlanta, 5955 Peachtree Industrial Blvd, Atlanta, GA 30341":
-      "HENLAT",
-    "Hennessy Lexus Duluth, 3383 Satellite Blvd, Duluth, GA 30096": "HENLDU",
-    "Hennessy Mazda Buick GMC, 7261 Jonesboro Rd, Morrow, GA 30260": "HENMMO",
-    "Hennessy Porsche Marietta, 2501 Windy Hill Rd SE, Marietta, GA 30067":
-      "HENPMA",
-    "Hennessy Porsche Roswell, 990 Mansell Rd, Roswell, GA 30076": "HENPRO",    
-  },
+  email_recipients: [
+    "lbudbill@gpcorp.com",
+    "lbudbell@comcast.net",
+    "zwarner@hennessyauto.com",
+    "asarazua@gpcorp.com",
+  ],
+  stores: [
+    {
+      name: "Hennessy Cadillac Duluth",
+      address: "3377 Satellite Blvd, Duluth, GA 30096",
+      code: "HENCDU",
+    },
+    {
+      name: "Hennessy Ford Lincoln Atlanta",
+      address: "5675 Peachtree Industrial Blvd, Atlanta, GA 30341",
+      code: "HENFAT",
+    },
+    {
+      name: "Hennessy Honda Woodstock",
+      address: "8931 Highway 92, Woodstock, GA 30189",
+      code: "HENHWO",
+    },
+    {
+      name: "Hennessy Land Rover",
+      address: "1505 Mansell Rd, Alpharetta, GA 30004",
+      code: "HENLAL",
+    },
+    {
+      name: "Hennessy Land Rover Gwinnett",
+      address: "3423 Old Norcross Rd, Duluth, GA 30096",
+      code: "HENADU",
+    },
+    {
+      name: "Hennessy Lexus Atlanta",
+      address: "5955 Peachtree Industrial Blvd, Atlanta, GA 30341",
+      code: "HENLAT",
+    },
+    {
+      name: "Hennessy Lexus Duluth",
+      address: "3383 Satellite Blvd, Duluth, GA 30096",
+      code: "HENLDU",
+    },
+    {
+      name: "Hennessy Mazda Buick GMC",
+      address: "7261 Jonesboro Rd, Morrow, GA 30260",
+      code: "HENMMO",
+    },
+    {
+      name: "Hennessy Porsche Marietta",
+      address: "2501 Windy Hill Rd SE, Marietta, GA 30067",
+      code: "HENPMA",
+    },
+    {
+      name: "Hennessy Porsche Roswell",
+      address: "990 Mansell Rd, Roswell, GA 30076",
+      code: "HENPRO",
+    },
+  ],
   bypass_codes: ["HENNES"],
   server_hostname: "https://mxfj3q6m01.execute-api.us-east-1.amazonaws.com",
   account_reps: [

@@ -17,10 +17,13 @@ export const config = {
     parts: [],
   },
   email_recipients: ["lbudbill@gpcorp.com", "lbudbell@comcast.net"],
-  stores: {
-    "Guardian Products, 5575 Spalding Drive, Peachtree Corners, GA 30092":
-      "GUAPRO",
-  },
+  stores: [
+    {
+      name: "Guardian Products",
+      address: "5575 Spalding Drive, Peachtree Corners, GA 30092",
+      code: "GUAPRO",
+    },
+  ],
   bypass_codes: ["GUARDI"],
   server_hostname: "https://mxfj3q6m01.execute-api.us-east-1.amazonaws.com",
   account_reps: [{ name: "Louis Budbill", phone: "678-287-1659" }],

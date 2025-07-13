@@ -51,9 +51,13 @@ export const config = {
     customs: [],
     office: [],
   },
-  stores: {
-    "Pohanka Hyundai , 2015 N Salisbury, Salisbury, MD 21801": "POHHSA",
-  },
+  stores: [
+    {
+      name: "Pohanka Hyundai",
+      address: "2015 N Salisbury, Salisbury, MD 21801",
+      code: "POHHSA",
+    },
+  ],
   bypass_codes: [],
   server_hostname: "https://mxfj3q6m01.execute-api.us-east-1.amazonaws.com",
   account_reps: [

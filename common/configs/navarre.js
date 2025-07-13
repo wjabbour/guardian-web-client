@@ -42,22 +42,53 @@ export const config = {
     "lbudbell@comcast.net",
     "rgreenberg@gpcorp.com",
   ],
-  stores: {
-    "Navarre Chevrolet, 1300 East College St, Lake Charles, LA 70607": "NAVCLA",
-    "Navarre Chevrolet of Sulphur, 1620 Beglis Parkway, Sulphur, LA 70663":
-      "NAVCSU",
-    "Navarre Hyundai of Lake Charles, 1310 East College St, Lake Charles, LA 70607":
-      "NAVHLK",
-    "Navarre Buick GMC, 3690 Gerstner Memorial Drive, Lake Charles, LA 70607":
-      "NAVBLA",
-    "Navarre Honda, 1320 East College St, Lake Charles, LA 70607": "NAVHLA",
-    "Navarre Cadillac, 1300 East College St, Lake Charles, LA 70607": "NAVCLK",
-    "Navarre Chevrolet Inc., 4441 Jackson St EXT, Alexandria, LA 71303":
-      "VAUMAX",
-    "Navarre Jeep Ram Dodge Chrysler, 299 S Cities Service Hwy, Sulphur, LA 70663":
-      "NAVCSL",
-    "Navarre Nissan, 1700 Siebarth Dr, Lake Charles, LA 70615": "NAVNLA",
-  },
+  stores: [
+    {
+      name: "Navarre Chevrolet",
+      address: "1300 East College St, Lake Charles, LA 70607",
+      code: "NAVCLA",
+    },
+    {
+      name: "Navarre Chevrolet of Sulphur",
+      address: "1620 Beglis Parkway, Sulphur, LA 70663",
+      code: "NAVCSU",
+    },
+    {
+      name: "Navarre Hyundai of Lake Charles",
+      address: "1310 East College St, Lake Charles, LA 70607",
+      code: "NAVHLK",
+    },
+    {
+      name: "Navarre Buick GMC",
+      address: "3690 Gerstner Memorial Drive, Lake Charles, LA 70607",
+      code: "NAVBLA",
+    },
+    {
+      name: "Navarre Honda",
+      address: "1320 East College St, Lake Charles, LA 70607",
+      code: "NAVHLA",
+    },
+    {
+      name: "Navarre Cadillac",
+      address: "1300 East College St, Lake Charles, LA 70607",
+      code: "NAVCLK",
+    },
+    {
+      name: "Navarre Chevrolet Inc.",
+      address: "4441 Jackson St EXT, Alexandria, LA 71303",
+      code: "VAUMAX",
+    },
+    {
+      name: "Navarre Jeep Ram Dodge Chrysler",
+      address: "299 S Cities Service Hwy, Sulphur, LA 70663",
+      code: "NAVCSL",
+    },
+    {
+      name: "Navarre Nissan",
+      address: "1700 Siebarth Dr, Lake Charles, LA 70615",
+      code: "NAVNLA",
+    },
+  ],
   bypass_codes: ["NAVARR"],
   server_hostname: "https://mxfj3q6m01.execute-api.us-east-1.amazonaws.com",
   account_reps: [{ name: "Richard Greenberg", phone: "678-287-1635" }],

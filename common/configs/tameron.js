@@ -12,15 +12,43 @@ export const config = {
     customs: [],
   },
   email_recipients: ["lbudbill@gpcorp.com", "lbudbell@comcast.net"],
-  stores: {
-    "Tameron Honda, 9871 Justina Ave Daphne, AL 36526": "TAMHDA",
-    "Tameron Buick GMC, 27161 US - 98 Daphne, AL 36526": "TAMBDA",
-    "Tameron CDJR, 27161 US - 98 Daphne, AL 36526": "TAMCDA",
-    "Tameron Subaru, 1431 I-65 Service Road Mobile, AL 36606": "TAMSMO",
-    "Tameron Nissan, 1015 E. I65 Service Road South Mobile, AL 36606": "TAMNMO",
-    "Tameron Kia, 10611 Boney Ave D, Iberville, MS 39540": "TAMKDI",
-    "Tameron Kia Westbank, 1884 Westbank Expressway Harvey, LA 70058": "TAMKWE",
-  },
+  stores: [
+    {
+      name: "Tameron Honda",
+      address: "9871 Justina Ave Daphne, AL 36526",
+      code: "TAMHDA",
+    },
+    {
+      name: "Tameron Buick GMC",
+      address: "27161 US - 98 Daphne, AL 36526",
+      code: "TAMBDA",
+    },
+    {
+      name: "Tameron CDJR",
+      address: "27161 US - 98 Daphne, AL 36526",
+      code: "TAMCDA",
+    },
+    {
+      name: "Tameron Subaru",
+      address: "1431 I-65 Service Road Mobile, AL 36606",
+      code: "TAMSMO",
+    },
+    {
+      name: "Tameron Nissan",
+      address: "1015 E. I65 Service Road South Mobile, AL 36606",
+      code: "TAMNMO",
+    },
+    {
+      name: "Tameron Kia",
+      address: "10611 Boney Ave D, Iberville, MS 39540",
+      code: "TAMKDI",
+    },
+    {
+      name: "Tameron Kia Westbank",
+      address: "1884 Westbank Expressway Harvey, LA 70058",
+      code: "TAMKWE",
+    },
+  ],
   bypass_codes: ["TAMERO"],
   server_hostname: "https://mxfj3q6m01.execute-api.us-east-1.amazonaws.com",
   account_reps: [
