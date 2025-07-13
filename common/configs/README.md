@@ -86,7 +86,7 @@ Each store option looks like this:
 }
 ```
 
-Each entry in the `stores` array creates an option on the `Store` dropdown on the checkout page. The name of the option is the concatentation of the store `name` + the store `address`. The `code` should be globally unique amongst all stores. `password` is optional, but if supplied will cause a password modal to pop up when a user tries to navigate to a store from the customs catalog.
+Each entry in the `stores` array creates an option on the `Store` dropdown on the checkout page. The name of the option is the concatenation of the store `name` + the store `address`. The `code` should be globally unique amongst all stores. `password` is optional, but if supplied will cause a password modal to pop up when a user tries to navigate to a store from the customs catalog.
 
 
 ### bypass_codes
