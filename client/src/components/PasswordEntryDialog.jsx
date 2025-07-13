@@ -4,8 +4,6 @@ import TextField from "@mui/material/TextField";
 import { useState, useEffect } from "react";
 import Box from "@mui/material/Box";
 
-const ADMIN_PASSWORD = "Louis123";
-
 export default function PasswordEntryDialog({
   isModalOpen,
   setIsModalOpen,
