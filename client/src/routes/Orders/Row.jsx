@@ -81,8 +81,7 @@ export default function Row({ order, editClick, isAdmin }) {
         </TableCell>
         <TableCell align="center">{`${order.first_name} ${order.last_name}`}</TableCell>
         <TableCell align="center">{`${
-          getStore(order.company_name, order.store).split(",")?.[0] ??
-          order.company_name
+          getStore(order.company_name, order.store) ?? order.company_name
         }`}</TableCell>
       </TableRow>
       <TableRow style={{ backgroundColor: "#fdf1bb" }}>

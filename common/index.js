@@ -48,16 +48,16 @@ const allConfigs = [
 export function getStoreCode(companyName, storeAddress) {
   const config = allConfigs.find((config) => config.title === companyName);
 
-  for (const [address, code] of Object.entries(config.stores)) {
-    if (address === storeAddress) return code;
+  for (const store of config.stores) {
+    if (storeAddress === store.address) return store.code;
   }
 }
 
 export function getStore(companyName, storeCode) {
   const config = allConfigs.find((config) => config.title === companyName);
 
-  for (const [address, code] of Object.entries(config.stores)) {
-    if (code === storeCode) return address;
+  for (const store of config.stores) {
+    if (storeCode === store.code) return store.name;
   }
 }
 
@@ -98,7 +98,7 @@ export function getWebCatalog() {
   } else if (url.includes("hoffman")) {
     return HoffmanCatalog;
   } else if (url.includes("tommycar")) {
-    return TommycarCatalog;    
+    return TommycarCatalog;
   }
 }
 
@@ -130,7 +130,7 @@ export function getCatalog(companyName) {
     case "Hoffman":
       return HoffmanCatalog;
     case "Tommycar":
-      return TommycarCatalog;   
+      return TommycarCatalog;
   }
 }
 
@@ -190,8 +190,8 @@ export function getConfigValue(val, config) {
     case "Navarre":
       return NavarreConfig[val];
     case "Hoffman":
-      return HoffmanConfig[val]; 
+      return HoffmanConfig[val];
     case "Tommycar":
-      return TommycarConfig[val]; 
+      return TommycarConfig[val];
   }
 }

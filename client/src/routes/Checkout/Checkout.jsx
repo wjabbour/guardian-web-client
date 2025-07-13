@@ -207,7 +207,6 @@ export default function Checkout() {
     setErrorSnackbarOpen(false);
   }
 
-  console.log(cart);
   return (
     <div className="flex justify-center p-[75px]">
       <div
@@ -267,8 +266,9 @@ export default function Checkout() {
               <MenuItem value="">
                 <em>None</em>
               </MenuItem>
-              {Object.keys(getWebConfigValue("stores")).map((store) => {
-                return <MenuItem value={store}>{store}</MenuItem>;
+              {getWebConfigValue("stores").map((store) => {
+                const storeInfo = `${store.name}, ${store.address}`;
+                return <MenuItem value={storeInfo}>{storeInfo}</MenuItem>;
               })}
             </Select>
           </FormControl>
