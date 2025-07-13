@@ -75,25 +75,19 @@ Determines which email addresses will receive an order email once an order is su
 
 ### stores
 
-Determines the values for the `Store` dropdown on the checkout page. Ensure that each key and value is unique per config - two configs can have the same keys and values.
-
-**e.g.** for a single config, don't do this:
+Each store option looks like this:
 
 ```
-stores: {
-  'A': 1,
-  'B': 1
+{
+  code: "ABC123",
+  name: "Test Store",
+  address: "123 Highway",
+  password: "secret"
 }
 ```
 
-or this:
+Each entry in the `stores` array creates an option on the `Store` dropdown on the checkout page. The name of the option is the concatentation of the store `name` + the store `address`. The `code` should be globally unique amongst all stores. `password` is optional, but if supplied will cause a password modal to pop up when a user tries to navigate to a store from the customs catalog.
 
-```
-stores: {
-  'A': 5,
-  'A': 6
-}
-```
 
 ### bypass_codes
 
