@@ -100,9 +100,15 @@ export const config = {
       password: "HennessY",
     },
     {
-      name: "Hennessy Land Rover",
+      name: "Hennessy Land Rover North Atlanta",
       address: "1505 Mansell Rd, Alpharetta, GA 30004",
       code: "HENLAL",
+      password: "HennessY",
+    },
+    {
+      name: "Hennessy Land Rover Buckhead",
+      address: "3040 Piedmont Rd NE, Atlanta, GA 30305",
+      code: "HENCAT",
       password: "HennessY",
     },
     {
@@ -124,7 +130,7 @@ export const config = {
       password: "HennessY",
     },
     {
-      name: "Hennessy Mazda Buick GMC",
+      name: "Hennessy Mazda GMC",
       address: "7261 Jonesboro Rd, Morrow, GA 30260",
       code: "HENMMO",
       password: "HennessY",
