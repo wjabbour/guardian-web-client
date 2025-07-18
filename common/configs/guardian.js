@@ -23,6 +23,16 @@ export const config = {
       address: "5575 Spalding Drive, Peachtree Corners, GA 30092",
       code: "GUAPRO",
     },
+    {
+      name: "Guardian Warehouse 1",
+      address: "5575 Spalding Drive, Peachtree Corners, GA 30092",
+      code: "GUAPR1",
+    },
+    {
+      name: "Guardian Warehouse 2",
+      address: "5575 Spalding Drive, Peachtree Corners, GA 30092",
+      code: "GUAPR2",
+    },
   ],
   bypass_codes: ["GUARDI"],
   server_hostname: "https://mxfj3q6m01.execute-api.us-east-1.amazonaws.com",

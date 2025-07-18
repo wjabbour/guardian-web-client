@@ -223,6 +223,21 @@ export const catalog = [
     },
   }, 
   {
+    code: "286772",
+    name: "Nike® Dri-FIT Classic Polo",
+    fullname: "Nike® Women's Dri-FIT Classic Polo",
+    colors: ["Black","Light Blue","White"],
+    type: "womens",
+    default_color: "Black",
+    sizes: {
+      Small: 49.99,
+      Medium: 49.99,
+      Large: 49.99,
+      XLarge: 49.99,
+      "2XLarge": 50.99,          
+    },
+  },  
+  {
     code: "883681",
     name: "Nike® Dri-FIT Legacy Polo",
     fullname: "Nike® Dri-FIT Legacy Polo (addt'l logos cost extra)",
@@ -1930,7 +1945,7 @@ export const catalog = [
     colors: ["Metal"],
     type: "customs",
     default_color: "Metal",
-    supportedStores: ["GUAPRO"],
+    supportedStores: ["GUAPR1","GUAPR2"],
     sizes: {
       500: 0.0,
       1000: 0.0,
@@ -1944,7 +1959,7 @@ export const catalog = [
     colors: ["White"],
     type: "customs",
     default_color: "White",
-    supportedStores: ["GUAPRO"],
+    supportedStores: ["GUAPR1","GUAPR2"],
     sizes: {
       500: 0.0,
       1000: 0.0,
@@ -1958,7 +1973,7 @@ export const catalog = [
     colors: ["White"],
     type: "customs",
     default_color: "White",
-    supportedStores: ["GUAPRO"],
+    supportedStores: ["GUAPR1","GUAPR2"],
     sizes: {
       500: 0.0,
       1000: 0.0,

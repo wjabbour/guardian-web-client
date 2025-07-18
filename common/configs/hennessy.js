@@ -100,7 +100,7 @@ export const config = {
       password: "HennessY",
     },
     {
-      name: "Hennessy Land Rover North Atlanta",
+      name: "Hennessy Land Rover N ATL",
       address: "1505 Mansell Rd, Alpharetta, GA 30004",
       code: "HENLAL",
       password: "HennessY",

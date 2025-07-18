@@ -1016,7 +1016,7 @@ export const catalog = [
       1000: 0.99,      
     },
   },
-   {
+  {
     code: "HENLAT-G24-367503A",
     name: "Poly Coated Plate",
     fullname: "Poly Coated Plate w/black imprint",
