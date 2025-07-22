@@ -62,8 +62,5 @@ export default function CartItems() {
         );
       })}
     </div>
-    // {Object.values(cart).map((item) => {
-
-    // })}
   );
 }
