@@ -267,7 +267,9 @@ export default function Checkout() {
                 <em>None</em>
               </MenuItem>
               {getWebConfigValue("stores").map((store) => {
-                const storeInfo = `${store.name}, ${store.address}`;
+                let storeInfo = store.name;
+                storeInfo += store.address ? `, ${store.address}` : "";
+
                 return <MenuItem value={storeInfo}>{storeInfo}</MenuItem>;
               })}
             </Select>
