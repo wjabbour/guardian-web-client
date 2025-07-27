@@ -9,6 +9,7 @@ A catalog is an array of items that will appear in the website. An item looks li
     fullname: "Port Authority® Core Soft Shell Jacket",
     colors: ["Black"],
     type: "mens",
+    sub_category: "tshirt",
     default_color: "Black",
     sizes: {
       Small: 37.99,
@@ -28,7 +29,8 @@ A catalog is an array of items that will appear in the website. An item looks li
 - `name`: a short name of the item, should be two to three small words
 - `fullname`: a potentially longer name for the item, can be a few words long
 - `colors`: decides which colors the item is available in, needs a corresponding image
-- `type`: the category of the item - mens, womens, accessory, customs, service, office
+- `type`: the category of the item - mens, womens, accessory, customs, service, office. Used to determine which embroideries/logos are available on the modification page
+- `sub_category`: the sub-category of an item. Used to determine which embroideries/logos are available on the modification page
 - `default_color`: this will determine which picture is shown when initially viewing the item on the modification page (`/item/${code}`), e.g. if `default_color` is red, then the picture that will be shown is `${code}_red.jpg`.
 - `sizes`: a map of size/quantity to price.
 

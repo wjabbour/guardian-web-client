@@ -60,14 +60,18 @@ Determines the values for the `Logo` dropdown on item pages per item category.
 
 ```
 hat: [
-      "Cadillac"
-    ],
-    mens: [
-      "Hennessy Ford",
-    ],
+  "Cadillac"
+],
+mens: [
+  "Hennessy Ford",
+],
 ```
 
-If a user were to view an item page for any item with `type` equal to `hat` then the `Logo` select would have only one option: `Cadillac`. If a user were to view an item page for any time with `type` equal to `mens` then the `Logo` select would have only one option: `Hennessy Ford`. **Note:** These must correspond to a file in `{project_root}/client/public/images` - `cadillac.jpg` and `hennessy_ford.jpg`.
+If a user were to view an item page for any item with `type` or `sub_category` equal to `hat` then the `Logo` select would have only one option: `Cadillac`. If a user were to view an item page for any item with `type` equal to `mens` then the `Logo` select would have only one option: `Hennessy Ford`. 
+
+**Note:** `sub_category` takes precedence over `type`. Therefore, if an item has a `type` of `mens` and a `sub_category` of `tshirt`, then the application will first attempt to set the Logo dropdown options to the values contained in the `tshirt` array, falling back to `mens` if none exists for that item.
+
+**Note:** These must correspond to a file in `{project_root}/client/public/images` - `cadillac.jpg` and `hennessy_ford.jpg`.
 
 ### email_recipients
 
@@ -88,13 +92,12 @@ Each store option looks like this:
 
 Each entry in the `stores` array creates an option on the `Store` dropdown on the checkout page. The name of the option is the concatenation of the store `name` + the store `address`. The `code` should be globally unique amongst all stores. `password` is optional, but if supplied will cause a password modal to pop up when a user tries to navigate to a store from the customs catalog.
 
-
 ### bypass_codes
 
 Determines the possible codes that a user can enter into the `Code` text input on the checkout page. If the text that the user enters matches one of the codes (both the user's input and all of the codes are lowercased when performing the comparison so casing is not important) then:
 
-1) if PayPal is enabled for the site, the PayPal checkout requirement will be bypassed and a checkout button will appear allowing the user to place the order.
-2) if PayPal is not enabled for the site, the disabled checkout button will become enabled allowing the user to place the order.
+1. if PayPal is enabled for the site, the PayPal checkout requirement will be bypassed and a checkout button will appear allowing the user to place the order.
+2. if PayPal is not enabled for the site, the disabled checkout button will become enabled allowing the user to place the order.
 
 ### server_hostname
 

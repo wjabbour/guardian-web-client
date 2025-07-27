@@ -30,9 +30,9 @@ export const catalog = [
     colors: ["White"],
     type: "sales",
     default_color: "White",
-    discount: [{ quantity: 1, price: 135.00 }],
+    discount: [{ quantity: 1, price: 135.0 }],
     sizes: {
-      default: 135.00,
+      default: 135.0,
     },
   },
   {
@@ -96,7 +96,7 @@ export const catalog = [
       "YR 2023",
       "YR 2024",
       "YR 2025",
-      "YR 2026",      
+      "YR 2026",
     ],
     type: "sales",
     default_color: "YR 2016",
@@ -198,7 +198,7 @@ export const catalog = [
     code: "CP91L",
     name: "Port & Company Beanie",
     fullname: "Port & Company® Fleece-Lined Beanie Cap",
-    colors: ["Athletic Red", "Athletic Royal", "Black","Navy"],
+    colors: ["Athletic Red", "Athletic Royal", "Black", "Navy"],
     type: "mens",
     default_color: "Black",
     sizes: {
@@ -209,7 +209,15 @@ export const catalog = [
     code: "112",
     name: "Richardson Trucker Cap",
     fullname: "Richardson Snapback Trucker Cap (addt'l logos cost extra)",
-    colors: ["Amber Gold","Black","Charcoal","Loden","Maroon","Navy","White"],
+    colors: [
+      "Amber Gold",
+      "Black",
+      "Charcoal",
+      "Loden",
+      "Maroon",
+      "Navy",
+      "White",
+    ],
     type: "mens",
     default_color: "Black",
     sizes: {
@@ -220,7 +228,7 @@ export const catalog = [
     code: "NE205",
     name: "New Era® Trucker Cap",
     fullname: "New Era® Snapback Trucker Cap (addt'l logos cost extra)",
-    colors: ["Black","Graphite","Grey","Deep Navywt"],
+    colors: ["Black", "Graphite", "Grey", "Deep Navywt"],
     type: "mens",
     default_color: "Black",
     sizes: {
@@ -230,8 +238,15 @@ export const catalog = [
   {
     code: "STC39",
     name: "Sport-Tek® Trucker Cap",
-    fullname: "Sport-Tek® YP Classics® Retro Trucker Cap (addt'l logos cost extra)",
-    colors: ["Black","Graphite","True Navy True Navy","True Navy White","White"],
+    fullname:
+      "Sport-Tek® YP Classics® Retro Trucker Cap (addt'l logos cost extra)",
+    colors: [
+      "Black",
+      "Graphite",
+      "True Navy True Navy",
+      "True Navy White",
+      "White",
+    ],
     type: "mens",
     default_color: "Black",
     sizes: {
@@ -242,7 +257,7 @@ export const catalog = [
     code: "BB18000",
     name: "Brooks Brothers® Shirt",
     fullname: "Brooks Brothers® Wrinkle-Free Stretch Pinpoint Shirt",
-    colors: ["Cobalt Blue", "Deep Black","Newport Blue","White"],
+    colors: ["Cobalt Blue", "Deep Black", "Newport Blue", "White"],
     type: "mens",
     default_color: "Cobalt Blue",
     sizes: {
@@ -293,7 +308,7 @@ export const catalog = [
     code: "S659",
     name: "Port Authority® Shirt",
     fullname: "Port Authority® Short Sleeve SuperPro™ Oxford Shirt",
-    colors: ["Black", "Navy","Oxford Blue","White"],
+    colors: ["Black", "Navy", "Oxford Blue", "White"],
     type: "mens",
     default_color: "Black",
     sizes: {
@@ -348,8 +363,17 @@ export const catalog = [
     code: "PC61",
     name: "Port & Company® Tee",
     fullname: "Port & Company® Essential Tee",
-    colors: ["Athletic Heather","Cardinal","Charcoal","Jet Black",
-      "Medium Grey","Navy","Red","Royal","White"],
+    colors: [
+      "Athletic Heather",
+      "Cardinal",
+      "Charcoal",
+      "Jet Black",
+      "Medium Grey",
+      "Navy",
+      "Red",
+      "Royal",
+      "White",
+    ],
     type: "mens",
     default_color: "Jet Black",
     sizes: {
@@ -368,7 +392,7 @@ export const catalog = [
     code: "267020",
     name: "Nike® Dri-FIT Classic Polo",
     fullname: "Nike® Dri-FIT Classic Polo",
-    colors: ["Black","Court Blue","Light Blue","White"],
+    colors: ["Black", "Court Blue", "Light Blue", "White"],
     type: "mens",
     default_color: "Black",
     sizes: {
@@ -378,14 +402,14 @@ export const catalog = [
       XLarge: 49.99,
       "2XLarge": 50.99,
       "3XLarge": 52.99,
-      "4XLarge": 54.99,     
+      "4XLarge": 54.99,
     },
-  },  
+  },
   {
     code: "286772",
     name: "Nike® Dri-FIT Classic Polo",
     fullname: "Nike® Women's Dri-FIT Classic Polo",
-    colors: ["Black","Light Blue","White"],
+    colors: ["Black", "Light Blue", "White"],
     type: "womens",
     default_color: "Black",
     sizes: {
@@ -393,14 +417,21 @@ export const catalog = [
       Medium: 49.99,
       Large: 49.99,
       XLarge: 49.99,
-      "2XLarge": 50.99,          
+      "2XLarge": 50.99,
     },
-  },  
+  },
   {
     code: "NKDC1963",
     name: "Nike® Dri-FIT Polo Shirt",
     fullname: "Nike® Dri-FIT Polo (addt'l logos cost extra)",
-    colors: ["Anthracite", "Black", "Cool Grey", "Navy", "University Red","White"],
+    colors: [
+      "Anthracite",
+      "Black",
+      "Cool Grey",
+      "Navy",
+      "University Red",
+      "White",
+    ],
     type: "mens",
     default_color: "Black",
     sizes: {
@@ -410,14 +441,21 @@ export const catalog = [
       XLarge: 39.99,
       "2XLarge": 41.99,
       "3XLarge": 43.99,
-      "4XLarge": 45.99,     
+      "4XLarge": 45.99,
     },
-  },  
+  },
   {
     code: "883681",
     name: "Nike® Dri-FIT Legacy Polo",
     fullname: "Nike® Dri-FIT Legacy Polo (addt'l logos cost extra)",
-    colors: ["Black","Dark Grey","Game Royal","Gym Red","Light Photo Blue","Midnight Navy"],
+    colors: [
+      "Black",
+      "Dark Grey",
+      "Game Royal",
+      "Gym Red",
+      "Light Photo Blue",
+      "Midnight Navy",
+    ],
     type: "mens",
     default_color: "Black",
     sizes: {
@@ -427,63 +465,77 @@ export const catalog = [
       XLarge: 62.99,
       "2XLarge": 64.99,
       "3XLarge": 66.99,
-      "4XLarge": 68.99,     
+      "4XLarge": 68.99,
     },
-  }, 
+  },
   {
     code: "NKDC1991",
     name: "Ladies Nike® Polo",
     fullname: "Ladies Nike® Micro Pique Polo (addt'l logos cost extra)",
-    colors: ["Anthracite", "Black", "Cool Grey", "Navy","White"],
+    colors: ["Anthracite", "Black", "Cool Grey", "Navy", "White"],
     type: "womens",
     default_color: "Black",
     sizes: {
-       Small: 39.99,
+      Small: 39.99,
       Medium: 39.99,
       Large: 39.99,
       XLarge: 39.99,
-      "2XLarge": 41.99,     
+      "2XLarge": 41.99,
     },
-  },  
+  },
   {
     code: "NKAH6266",
     name: "Nike Textured Polo",
     fullname: "Nike Dri-FIT Hex Textured Polo",
-    colors: ["Black","Court Blue","Dark Grey","Game Royal","Gym Red","White"],
+    colors: [
+      "Black",
+      "Court Blue",
+      "Dark Grey",
+      "Game Royal",
+      "Gym Red",
+      "White",
+    ],
     type: "mens",
     default_color: "Black",
     sizes: {
-      Small: 67.00,
-      Medium: 67.00,
-      Large: 67.00,
-      XLarge: 67.00,
-      "2XLarge": 69.00, 
-      "3XLarge": 71.00,
-      "4XLarge": 73.00,  
+      Small: 67.0,
+      Medium: 67.0,
+      Large: 67.0,
+      XLarge: 67.0,
+      "2XLarge": 69.0,
+      "3XLarge": 71.0,
+      "4XLarge": 73.0,
     },
-  },  
+  },
   {
     code: "NKBV6042",
     name: "Nike® Essential Polo",
     fullname: "Nike® Dry Essential Solid Polo",
-    colors: ["Black", "Game Royal", "Midnight Navy","University Blue", "University Red", "White"],
+    colors: [
+      "Black",
+      "Game Royal",
+      "Midnight Navy",
+      "University Blue",
+      "University Red",
+      "White",
+    ],
     type: "mens",
     default_color: "Black",
     sizes: {
-      Small: 56.00,
-      Medium: 56.00,
-      Large: 56.00,
-      XLarge: 56.00,
-      "2XLarge": 58.00,
-      "3XLarge": 60.00,
-      "4XLarge": 62.00,     
+      Small: 56.0,
+      Medium: 56.0,
+      Large: 56.0,
+      XLarge: 56.0,
+      "2XLarge": 58.0,
+      "3XLarge": 60.0,
+      "4XLarge": 62.0,
     },
   },
   {
     code: "TM1MY399",
     name: "TravisMathew Polo",
     fullname: "TravisMathew Bayfront Solid Polo",
-    colors: ["Black","Dark Grey","Insignia Blue","Roan Rouge"],
+    colors: ["Black", "Dark Grey", "Insignia Blue", "Roan Rouge"],
     type: "mens",
     default_color: "Black",
     sizes: {
@@ -492,15 +544,24 @@ export const catalog = [
       Large: 96.49,
       XLarge: 96.49,
       "2XLarge": 98.49,
-      "3XLarge": 100.49,          
+      "3XLarge": 100.49,
     },
   },
   {
     code: "TM1MU410",
     name: "TravisMathew Performance Polo",
     fullname: "TravisMathew Coto Performance Polo",
-    colors: ["Beryl Grn Hthr","Black","Blue Nights","Brilliant Blue Hthr","Federal Blue",
-    "Quiet Shade Grey Hthr","Quiet Shade Gry Blk","Vintage Indigo Blk","White"],
+    colors: [
+      "Beryl Grn Hthr",
+      "Black",
+      "Blue Nights",
+      "Brilliant Blue Hthr",
+      "Federal Blue",
+      "Quiet Shade Grey Hthr",
+      "Quiet Shade Gry Blk",
+      "Vintage Indigo Blk",
+      "White",
+    ],
     type: "mens",
     default_color: "Black",
     sizes: {
@@ -509,7 +570,7 @@ export const catalog = [
       Large: 79.99,
       XLarge: 79.99,
       "2XLarge": 81.99,
-      "3XLarge": 83.99,          
+      "3XLarge": 83.99,
     },
   },
   {
@@ -558,15 +619,24 @@ export const catalog = [
       Medium: 80.73,
       Large: 80.73,
       XLarge: 80.73,
-      "2XLarge": 82.73,      
+      "2XLarge": 82.73,
     },
   },
   {
     code: "K110",
     name: "Port Authority UV Polo",
     fullname: "Port Authority® Dry Zone® UV Micro-Mesh Polo",
-    colors: ["Carolina Blue","Coastal Blue","Deep Black","Graphite",
-    "Gusty Grey","Rich Red","River Blue Navy","True Royal","White"],
+    colors: [
+      "Carolina Blue",
+      "Coastal Blue",
+      "Deep Black",
+      "Graphite",
+      "Gusty Grey",
+      "Rich Red",
+      "River Blue Navy",
+      "True Royal",
+      "White",
+    ],
     type: "mens",
     default_color: "Deep Black",
     sizes: {
@@ -602,8 +672,15 @@ export const catalog = [
     code: "ST740",
     name: "Sport-Tek Polo",
     fullname: "Sport-Tek® UV Micropique Polo",
-    colors: ["Black","Deep Red","Graphite","Grey Concrete",
-      "True Navy","True Royal","White"],
+    colors: [
+      "Black",
+      "Deep Red",
+      "Graphite",
+      "Grey Concrete",
+      "True Navy",
+      "True Royal",
+      "White",
+    ],
     type: "mens",
     default_color: "Black",
     sizes: {
@@ -620,8 +697,18 @@ export const catalog = [
     code: "PC61LS",
     name: "Long Sleeve Tee",
     fullname: "Port & Company® Long Sleeve Essential Tee",
-    colors: ["Ash", "Athletic Heather", "Cardinal", "Charcoal", 
-      "Deep Navy","Jet Black","Navy","Red","Royal","White"],
+    colors: [
+      "Ash",
+      "Athletic Heather",
+      "Cardinal",
+      "Charcoal",
+      "Deep Navy",
+      "Jet Black",
+      "Navy",
+      "Red",
+      "Royal",
+      "White",
+    ],
     type: "mens",
     default_color: "Jet Black",
     sizes: {
@@ -638,8 +725,17 @@ export const catalog = [
     code: "PC90H",
     name: "Hooded Sweatshirt",
     fullname: "Port & Company® Essential Fleece Pullover Hooded Sweatshirt",
-    colors: ["Athletic Heather","Cardinal","Charcoal",
-      "Drk Hthr Gry","Jet Black","Navy","Red","Royal","White"],
+    colors: [
+      "Athletic Heather",
+      "Cardinal",
+      "Charcoal",
+      "Drk Hthr Gry",
+      "Jet Black",
+      "Navy",
+      "Red",
+      "Royal",
+      "White",
+    ],
     type: "mens",
     default_color: "Jet Black",
     sizes: {
@@ -677,12 +773,12 @@ export const catalog = [
     type: "mens",
     default_color: "Black",
     sizes: {
-      Small: 104.00,
-      Medium: 104.00,
-      Large: 104.00,
-      XLarge: 104.00,
-      "2XLarge": 106.00,
-      "3XLarge": 108.00,           
+      Small: 104.0,
+      Medium: 104.0,
+      Large: 104.0,
+      XLarge: 104.0,
+      "2XLarge": 106.0,
+      "3XLarge": 108.0,
     },
   },
   {
@@ -725,7 +821,7 @@ export const catalog = [
     code: "J333",
     name: "Torrent Waterproof Jacket",
     fullname: "Port Authority® Torrent Waterproof Jacket",
-    colors: ["Black", "Engine Red","Magnet","True Navy","True Royal"],
+    colors: ["Black", "Engine Red", "Magnet", "True Navy", "True Royal"],
     type: "mens",
     default_color: "Black",
     sizes: {
@@ -735,7 +831,7 @@ export const catalog = [
       XLarge: 64.99,
       "2XLarge": 66.99,
       "3XLarge": 68.99,
-      "4XLarge": 70.99,     
+      "4XLarge": 70.99,
     },
   },
   {
@@ -746,13 +842,13 @@ export const catalog = [
     type: "mens",
     default_color: "Black",
     sizes: {
-      Small: 124.00,
-      Medium: 124.00,
-      Large: 124.00,
-      XLarge: 124.00,
-      "2XLarge": 126.00,
-      "3XLarge": 128.00,
-      "4XLarge": 130.00,     
+      Small: 124.0,
+      Medium: 124.0,
+      Large: 124.0,
+      XLarge: 124.0,
+      "2XLarge": 126.0,
+      "3XLarge": 128.0,
+      "4XLarge": 130.0,
     },
   },
   {
@@ -770,7 +866,7 @@ export const catalog = [
       XLarge: 58.04,
       "2XLarge": 60.04,
       "3XLarge": 62.04,
-      "4XLarge": 64.04,     
+      "4XLarge": 64.04,
     },
   },
   {
@@ -788,7 +884,7 @@ export const catalog = [
       XLarge: 58.04,
       "2XLarge": 60.04,
       "3XLarge": 62.04,
-      "4XLarge": 64.04,     
+      "4XLarge": 64.04,
     },
   },
   {
@@ -797,12 +893,10 @@ export const catalog = [
     fullname: "Metal & Black Leather Fob w/black, 186 red & 872 gold imprint",
     colors: ["Black"],
     type: "accessory",
-    default_color: "Black",      
-    discount: [
-      { quantity: 500, price: 3.99 },     
-    ],
+    default_color: "Black",
+    discount: [{ quantity: 500, price: 3.99 }],
     sizes: {
-      500: 3.99,     
+      500: 3.99,
     },
   },
   {
@@ -811,12 +905,10 @@ export const catalog = [
     fullname: "Metal & Black Leather Fob w/black, 186 red & 872 gold imprint",
     colors: ["Black"],
     type: "accessory",
-    default_color: "Black",    
-    discount: [
-      { quantity: 500, price: 3.99 },     
-    ],
+    default_color: "Black",
+    discount: [{ quantity: 500, price: 3.99 }],
     sizes: {
-      500: 3.99,     
+      500: 3.99,
     },
   },
   {
@@ -826,11 +918,9 @@ export const catalog = [
     colors: ["Black"],
     type: "accessory",
     default_color: "Black",
-        discount: [
-      { quantity: 500, price: 3.99 },     
-    ],
+    discount: [{ quantity: 500, price: 3.99 }],
     sizes: {
-      500: 3.99,     
+      500: 3.99,
     },
   },
   {
@@ -839,12 +929,10 @@ export const catalog = [
     fullname: "Metal & Black Leather Fob w/black, 186 red & 872 gold imprint",
     colors: ["Black"],
     type: "accessory",
-    default_color: "Black",    
-    discount: [
-      { quantity: 500, price: 3.99 },     
-    ],
+    default_color: "Black",
+    discount: [{ quantity: 500, price: 3.99 }],
     sizes: {
-      500: 3.99,     
+      500: 3.99,
     },
   },
   {
@@ -853,38 +941,34 @@ export const catalog = [
     fullname: "Black Laser Engraved Leather Fob w/debossed leather imprint",
     colors: ["Black"],
     type: "accessory",
-    default_color: "Black",    
-    discount: [
-      { quantity: 500, price: 3.19 },     
-    ],
+    default_color: "Black",
+    discount: [{ quantity: 500, price: 3.19 }],
     sizes: {
-      500: 3.19,     
+      500: 3.19,
     },
   },
-  { code: "HENLAT-FOB-501621A",
+  {
+    code: "HENLAT-FOB-501621A",
     name: "Leather Key Fob - Lexus ATL",
     fullname: "Metal & Black Leather Fob w/black color fill",
     colors: ["Black"],
     type: "accessory",
-    default_color: "Black",      
-    discount: [
-      { quantity: 500, price: 3.99 },     
-    ],
+    default_color: "Black",
+    discount: [{ quantity: 500, price: 3.99 }],
     sizes: {
-      500: 3.99,     
+      500: 3.99,
     },
   },
-   { code: "HENLAL-FOB-509389L",
+  {
+    code: "HENLAL-FOB-509389L",
     name: "Leather Key Fob - Land Rover - N ATL",
     fullname: "Black Leather Fob with Laser engraved imprint",
     colors: ["Black"],
     type: "accessory",
-    default_color: "Black",      
-    discount: [
-      { quantity: 500, price: 3.99 },     
-    ],
+    default_color: "Black",
+    discount: [{ quantity: 500, price: 3.99 }],
     sizes: {
-      500: 3.99,     
+      500: 3.99,
     },
   },
   {
@@ -893,12 +977,10 @@ export const catalog = [
     fullname: "Black Laser Engraved Leather Fob w/debossed leather imprint",
     colors: ["Black"],
     type: "accessory",
-    default_color: "Black",    
-    discount: [
-      { quantity: 1000, price: 3.19 },     
-    ],
+    default_color: "Black",
+    discount: [{ quantity: 1000, price: 3.19 }],
     sizes: {
-      1000: 3.19,     
+      1000: 3.19,
     },
   },
   {
@@ -907,12 +989,10 @@ export const catalog = [
     fullname: "Black Laser Engraved Leather Fob",
     colors: ["Black"],
     type: "accessory",
-    default_color: "Black",    
-    discount: [
-      { quantity: 1000, price: 3.19 },     
-    ],
+    default_color: "Black",
+    discount: [{ quantity: 1000, price: 3.19 }],
     sizes: {
-      1000: 3.19,     
+      1000: 3.19,
     },
   },
   {
@@ -921,12 +1001,10 @@ export const catalog = [
     fullname: "Black Laser Engraved Leather Fob",
     colors: ["Black"],
     type: "accessory",
-    default_color: "Black",    
-    discount: [
-      { quantity: 250, price: 3.49 },     
-    ],
+    default_color: "Black",
+    discount: [{ quantity: 250, price: 3.49 }],
     sizes: {
-      250: 3.49,     
+      250: 3.49,
     },
   },
   {
@@ -935,12 +1013,10 @@ export const catalog = [
     fullname: "Black Laser Engraved Leather Fob",
     colors: ["Black"],
     type: "accessory",
-    default_color: "Black",    
-    discount: [
-      { quantity: 300, price: 3.29 },     
-    ],
+    default_color: "Black",
+    discount: [{ quantity: 300, price: 3.29 }],
     sizes: {
-      300: 3.29,     
+      300: 3.29,
     },
   },
   {
@@ -997,11 +1073,9 @@ export const catalog = [
     colors: ["Black"],
     type: "accessory",
     default_color: "Black",
-    discount: [
-      { quantity: 500, price: 3.99 },      
-    ],
+    discount: [{ quantity: 500, price: 3.99 }],
     sizes: {
-      500: 0.0,      
+      500: 0.0,
     },
   },
   {
@@ -1013,7 +1087,7 @@ export const catalog = [
     default_color: "Metal",
     supportedStores: ["HENLAT"],
     sizes: {
-      1000: 0.99,      
+      1000: 0.99,
     },
   },
   {
@@ -1025,7 +1099,7 @@ export const catalog = [
     default_color: "Black",
     supportedStores: ["HENLAT"],
     sizes: {
-      2500: 0.79,      
+      2500: 0.79,
     },
   },
   {
@@ -1037,10 +1111,10 @@ export const catalog = [
     default_color: "Black",
     supportedStores: ["HENLAL"],
     sizes: {
-      1000: 0.79,      
+      1000: 0.79,
     },
   },
-   {
+  {
     code: "HENLAT-33GT-497684Z",
     name: "Plastic Plate",
     fullname: "Plastic plate w/full color imprint",
@@ -1049,10 +1123,10 @@ export const catalog = [
     default_color: "Black",
     supportedStores: ["HENLAT"],
     sizes: {
-      250: 1.89,      
+      250: 1.89,
     },
   },
-   {
+  {
     code: "HENLAT-33P-391710A",
     name: "Plastic Plate",
     fullname: "Plastic plate w/black imprint",
@@ -1061,7 +1135,7 @@ export const catalog = [
     default_color: "Black",
     supportedStores: ["HENLAT"],
     sizes: {
-      1000: 0.99,      
+      1000: 0.99,
     },
   },
   {
@@ -1073,7 +1147,7 @@ export const catalog = [
     default_color: "Black",
     supportedStores: ["HENPRO"],
     sizes: {
-      1000: 0.99,      
+      1000: 0.99,
     },
   },
   {
@@ -1085,7 +1159,7 @@ export const catalog = [
     default_color: "Black",
     supportedStores: ["HENPMA"],
     sizes: {
-      1000: 0.99,      
+      1000: 0.99,
     },
   },
   {
@@ -1097,7 +1171,7 @@ export const catalog = [
     default_color: "Black",
     supportedStores: ["HENPRO"],
     sizes: {
-      1000: 0.0279,      
+      1000: 0.0279,
     },
   },
   {
@@ -1109,7 +1183,7 @@ export const catalog = [
     default_color: "Black",
     supportedStores: ["HENPMA"],
     sizes: {
-      1000: 0.0279,      
+      1000: 0.0279,
     },
   },
   {
@@ -1134,7 +1208,7 @@ export const catalog = [
     default_color: "Black",
     supportedStores: ["HENMMO"],
     sizes: {
-      500: 0.89,      
+      500: 0.89,
     },
   },
   {
@@ -1185,7 +1259,7 @@ export const catalog = [
     default_color: "Black",
     supportedStores: ["HENLDU"],
     sizes: {
-      200: 2.39,      
+      200: 2.39,
     },
   },
   {
@@ -1196,7 +1270,7 @@ export const catalog = [
     type: "customs",
     default_color: "Metal",
     supportedStores: ["HENLDU"],
-    sizes: {      
+    sizes: {
       2500: 3.35,
     },
   },
@@ -1208,7 +1282,7 @@ export const catalog = [
     type: "customs",
     default_color: "Black",
     supportedStores: ["HENCDU"],
-    sizes: {      
+    sizes: {
       250: 3.59,
     },
   },
@@ -1221,7 +1295,7 @@ export const catalog = [
     default_color: "Black",
     supportedStores: ["HENLDU"],
     sizes: {
-      1000: .79,      
+      1000: 0.79,
     },
   },
   {
@@ -1233,7 +1307,7 @@ export const catalog = [
     default_color: "Black",
     supportedStores: ["HENADU"],
     sizes: {
-      500: 1.29,      
+      500: 1.29,
     },
   },
   {
@@ -1244,8 +1318,8 @@ export const catalog = [
     type: "customs",
     default_color: "White",
     supportedStores: ["HENLDU"],
-    sizes: {     
-      2500: .89,
+    sizes: {
+      2500: 0.89,
     },
   },
   {
@@ -1256,7 +1330,7 @@ export const catalog = [
     type: "customs",
     default_color: "White",
     supportedStores: ["HENCDU"],
-    sizes: {     
+    sizes: {
       500: 1.39,
     },
   },
@@ -1307,7 +1381,7 @@ export const catalog = [
     default_color: "Dk Green",
     supportedStores: ["HENADU"],
     sizes: {
-      500: 0.99,      
+      500: 0.99,
     },
   },
   {
@@ -1318,8 +1392,8 @@ export const catalog = [
     type: "customs",
     default_color: "Black",
     supportedStores: ["HENHWO"],
-    sizes: {     
-      2500: 0.89,      
+    sizes: {
+      2500: 0.89,
     },
   },
   {
@@ -1332,7 +1406,6 @@ export const catalog = [
     supportedStores: ["HENHWO"],
     sizes: {
       2500: 0.95,
-      
     },
   },
   {
@@ -1345,7 +1418,6 @@ export const catalog = [
     supportedStores: ["HENCDU"],
     sizes: {
       300: 1.39,
-      
     },
   },
   {
@@ -1358,7 +1430,6 @@ export const catalog = [
     supportedStores: ["HENHWO"],
     sizes: {
       2500: 3.35,
-      
     },
   },
   {
@@ -1371,7 +1442,6 @@ export const catalog = [
     supportedStores: ["HENADU"],
     sizes: {
       500: 1.49,
-      
     },
   },
   {
@@ -1384,7 +1454,6 @@ export const catalog = [
     supportedStores: ["HENMMO"],
     sizes: {
       500: 1.39,
-      
     },
   },
   {
@@ -1397,7 +1466,6 @@ export const catalog = [
     supportedStores: ["HENMMO"],
     sizes: {
       500: 1.39,
-      
     },
   },
   {
@@ -1410,7 +1478,6 @@ export const catalog = [
     supportedStores: ["HENLAL"],
     sizes: {
       1000: 1.39,
-      
     },
   },
   {
@@ -1423,7 +1490,6 @@ export const catalog = [
     supportedStores: ["HENCDU"],
     sizes: {
       300: 1.39,
-      
     },
   },
   {
@@ -1436,7 +1502,6 @@ export const catalog = [
     supportedStores: ["HENMMO"],
     sizes: {
       250: 4.49,
-      
     },
   },
   {
@@ -1447,9 +1512,8 @@ export const catalog = [
     type: "customs",
     default_color: "Black",
     supportedStores: ["HENHWO"],
-    sizes: {      
+    sizes: {
       2500: 2.39,
-      
     },
   },
   {
@@ -1472,7 +1536,7 @@ export const catalog = [
     type: "service",
     default_color: "Orange",
     sizes: {
-      1500: 0.89,      
+      1500: 0.89,
     },
   },
   {
@@ -1483,7 +1547,7 @@ export const catalog = [
     type: "service",
     default_color: "Black",
     sizes: {
-      500: .39,      
+      500: 0.39,
     },
   },
   {
@@ -1494,7 +1558,7 @@ export const catalog = [
     type: "accessory",
     default_color: "Blue",
     sizes: {
-      500: .79,
+      500: 0.79,
     },
   },
   {
@@ -1527,7 +1591,7 @@ export const catalog = [
     type: "accessory",
     default_color: "Black",
     sizes: {
-      250: .99,
+      250: 0.99,
     },
   },
   {

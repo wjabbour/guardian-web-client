@@ -49,7 +49,13 @@ export function getStoreCode(companyName, storeAddress) {
   const config = allConfigs.find((config) => config.title === companyName);
 
   for (const store of config.stores) {
-    if (storeAddress === `${store.name}, ${store.address}`) return store.code;
+    // cannon doesnt have addresses
+    if (
+      storeAddress === store.name ||
+      storeAddress === `${store.name}, ${store.address}`
+    ) {
+      return store.code;
+    }
   }
 }
 
