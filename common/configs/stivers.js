@@ -1,7 +1,7 @@
 export const config = {
   title: "Stivers",
   company_logo: "stivers.png",
-  logo_placements: ["Right Sleeve", "Left Chest", "Front Center"],
+  logo_placements: ["Right Sleeve", "Left Chest", "Front Center","Full Front"],
   show_modification_thumbnail: true,
   minimum_apparel_order: false,
   render_logo_preview: true,
@@ -43,9 +43,10 @@ export const config = {
       "Ram",
       "Subaru",
     ],
+    tshirt: ["Stivers Important Job"],
     customs: [],
   },
-  email_recipients: ["lbudbill@gpcorp.com", "lbudbell@comcast.net"],
+  email_recipients: ["lbudbill@gpcorp.com", "lbudbell@comcast.net","mmcord@gpcorp.com"],
   stores: [
     {
       name: "Stivers Ford Montgomery",
@@ -53,7 +54,7 @@ export const config = {
       code: "STIFMO",
     },
     {
-      name: "Stivers Ford Montgomery",
+      name: "Stivers Ford Birmingham",
       address: "500 Palisades Blvd, Birmingham, AL, 35209",
       code: "STIFBI",
     },
