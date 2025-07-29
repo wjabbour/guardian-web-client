@@ -151,7 +151,7 @@ export const catalog = [
   },
   {
     code: "PC61P",
-    name: "Port & Company Pocket Tee",
+    name: "Port & Comp Pocket Tee",
     fullname: "Port & Company Essential Pocket Tee",
     colors: ["Charcoal", "Jet Black", "Navy"],
     type: "mens",
@@ -173,7 +173,7 @@ export const catalog = [
     colors: ["Deep Navy"],
     type: "mens",
     sub_category: "tshirt",
-    default_color: "Jet Black",
+    default_color: "Deep Navy",
     sizes: {
       Small: 8.99,
       Medium: 8.99,
