@@ -4,8 +4,8 @@ export const config = {
   logo_placements: ["Left Chest"],
   show_image_preview: true,
   embroideries: {
-    mens: ["Tommycar"],
-    womens: ["Tommycar"],
+    mens: ["Tommycar","Tommycar Collision"],
+    womens: ["Tommycar", "Tommycar Collision"],
     service: [],
     sales: [],
     customs: [],
