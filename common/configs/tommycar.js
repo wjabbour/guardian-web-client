@@ -1,7 +1,7 @@
 export const config = {
   title: "Tommycar",
   company_logo: "tommycar.png",
-  logo_placements: ["Left Chest"],
+  logo_placements: ["Left Chest","Full Front","Full Back"],
   show_image_preview: true,
   embroideries: {
     mens: ["Tommycar","Tommycar Collision"],
