@@ -894,9 +894,19 @@ export const catalog = [
     colors: ["Black"],
     type: "accessory",
     default_color: "Black",
-    discount: [{ quantity: 500, price: 3.99 }],
+    discount: [
+      { quantity: 100, price: 3.99 },
+      { quantity: 250, price: 3.99 },
+      { quantity: 500, price: 3.99 },
+      { quantity: 1000, price: 3.99 },
+      { quantity: 1500, price: 3.99 },
+    ],
     sizes: {
-      500: 3.99,
+       100: 0.0,
+       250: 0.0,
+       500: 0.0,
+      1000: 0.0,
+      1500: 0.0,
     },
   },
   {
@@ -906,9 +916,19 @@ export const catalog = [
     colors: ["Black"],
     type: "accessory",
     default_color: "Black",
-    discount: [{ quantity: 500, price: 3.99 }],
+    discount: [
+      { quantity: 100, price: 3.99 },
+      { quantity: 250, price: 3.99 },
+      { quantity: 500, price: 3.99 },
+      { quantity: 1000, price: 3.99 },
+      { quantity: 1500, price: 3.99 },
+    ],
     sizes: {
-      500: 3.99,
+       100: 0.0,
+       250: 0.0,
+       500: 0.0,
+      1000: 0.0,
+      1500: 0.0,
     },
   },
   {
@@ -918,9 +938,19 @@ export const catalog = [
     colors: ["Black"],
     type: "accessory",
     default_color: "Black",
-    discount: [{ quantity: 500, price: 3.99 }],
+    discount: [
+      { quantity: 100, price: 3.99 },
+      { quantity: 250, price: 3.99 },
+      { quantity: 500, price: 3.99 },
+      { quantity: 1000, price: 3.99 },
+      { quantity: 1500, price: 3.99 },
+    ],
     sizes: {
-      500: 3.99,
+       100: 0.0,
+       250: 0.0,
+       500: 0.0,
+      1000: 0.0,
+      1500: 0.0,
     },
   },
   {
@@ -930,9 +960,19 @@ export const catalog = [
     colors: ["Black"],
     type: "accessory",
     default_color: "Black",
-    discount: [{ quantity: 500, price: 3.99 }],
+    discount: [
+      { quantity: 100, price: 3.99 },
+      { quantity: 250, price: 3.99 },
+      { quantity: 500, price: 3.99 },
+      { quantity: 1000, price: 3.99 },
+      { quantity: 1500, price: 3.99 },
+    ],
     sizes: {
-      500: 3.99,
+       100: 0.0,
+       250: 0.0,
+       500: 0.0,
+      1000: 0.0,
+      1500: 0.0,
     },
   },
   {
@@ -942,9 +982,19 @@ export const catalog = [
     colors: ["Black"],
     type: "accessory",
     default_color: "Black",
-    discount: [{ quantity: 500, price: 3.19 }],
+    discount: [
+      { quantity: 100, price: 3.19 },
+      { quantity: 250, price: 3.19 },
+      { quantity: 500, price: 3.19 },
+      { quantity: 1000, price: 3.19 },
+      { quantity: 1500, price: 3.19 },
+    ],
     sizes: {
-      500: 3.19,
+       100: 0.0,
+       250: 0.0,
+       500: 0.0,
+      1000: 0.0,
+      1500: 0.0,
     },
   },
   {
@@ -954,9 +1004,19 @@ export const catalog = [
     colors: ["Black"],
     type: "accessory",
     default_color: "Black",
-    discount: [{ quantity: 500, price: 3.99 }],
+    discount: [
+      { quantity: 100, price: 3.19 },
+      { quantity: 250, price: 3.19 },
+      { quantity: 500, price: 3.19 },
+      { quantity: 1000, price: 3.19 },
+      { quantity: 1500, price: 3.19 },
+    ],
     sizes: {
-      500: 3.99,
+       100: 0.0,
+       250: 0.0,
+       500: 0.0,
+      1000: 0.0,
+      1500: 0.0,
     },
   },
   {
@@ -966,9 +1026,19 @@ export const catalog = [
     colors: ["Black"],
     type: "accessory",
     default_color: "Black",
-    discount: [{ quantity: 500, price: 3.99 }],
+    discount: [
+      { quantity: 100, price: 3.99 },
+      { quantity: 250, price: 3.99 },
+      { quantity: 500, price: 3.99 },
+      { quantity: 1000, price: 3.99 },
+      { quantity: 1500, price: 3.99 },
+    ],
     sizes: {
-      500: 3.99,
+       100: 0.0,
+       250: 0.0,
+       500: 0.0,
+      1000: 0.0,
+      1500: 0.0,
     },
   },
   {
@@ -978,9 +1048,19 @@ export const catalog = [
     colors: ["Black"],
     type: "accessory",
     default_color: "Black",
-    discount: [{ quantity: 1000, price: 3.19 }],
+   discount: [
+      { quantity: 100, price: 3.19 },
+      { quantity: 250, price: 3.19 },
+      { quantity: 500, price: 3.19 },
+      { quantity: 1000, price: 3.19 },
+      { quantity: 1500, price: 3.19 },
+    ],
     sizes: {
-      1000: 3.19,
+       100: 0.0,
+       250: 0.0,
+       500: 0.0,
+      1000: 0.0,
+      1500: 0.0,
     },
   },
   {
@@ -990,9 +1070,19 @@ export const catalog = [
     colors: ["Black"],
     type: "accessory",
     default_color: "Black",
-    discount: [{ quantity: 1000, price: 3.19 }],
+    discount: [
+      { quantity: 100, price: 3.19 },
+      { quantity: 250, price: 3.19 },
+      { quantity: 500, price: 3.19 },
+      { quantity: 1000, price: 3.19 },
+      { quantity: 1500, price: 3.19 },
+    ],
     sizes: {
-      1000: 3.19,
+       100: 0.0,
+       250: 0.0,
+       500: 0.0,
+      1000: 0.0,
+      1500: 0.0,
     },
   },
   {
@@ -1002,9 +1092,19 @@ export const catalog = [
     colors: ["Black"],
     type: "accessory",
     default_color: "Black",
-    discount: [{ quantity: 250, price: 3.49 }],
+    discount: [
+      { quantity: 100, price: 3.49 },
+      { quantity: 250, price: 3.49 },
+      { quantity: 500, price: 3.49 },
+      { quantity: 1000, price: 3.49 },
+      { quantity: 1500, price: 3.49 },
+    ],
     sizes: {
-      250: 3.49,
+       100: 0.0,
+       250: 0.0,
+       500: 0.0,
+      1000: 0.0,
+      1500: 0.0,
     },
   },
   {
@@ -1014,9 +1114,19 @@ export const catalog = [
     colors: ["Black"],
     type: "accessory",
     default_color: "Black",
-    discount: [{ quantity: 300, price: 3.29 }],
+    discount: [
+      { quantity: 100, price: 3.29 },
+      { quantity: 250, price: 3.29 },
+      { quantity: 500, price: 3.29 },
+      { quantity: 1000, price: 3.29 },
+      { quantity: 1500, price: 3.29 },
+    ],
     sizes: {
-      300: 3.29,
+       100: 0.0,
+       250: 0.0,
+       500: 0.0,
+      1000: 0.0,
+      1500: 0.0,
     },
   },
   {
@@ -1027,14 +1137,18 @@ export const catalog = [
     type: "accessory",
     default_color: "Black",
     discount: [
-      { quantity: 500, price: 3.99 },
-      { quantity: 1000, price: 3.29 },
-      { quantity: 2500, price: 2.99 },
+      { quantity: 100, price: 3.19 },
+      { quantity: 250, price: 3.19 },
+      { quantity: 500, price: 3.19 },
+      { quantity: 1000, price: 3.19 },
+      { quantity: 1500, price: 3.19 },
     ],
     sizes: {
-      500: 0.0,
+       100: 0.0,
+       250: 0.0,
+       500: 0.0,
       1000: 0.0,
-      2500: 0.0,
+      1500: 0.0,
     },
   },
   {
@@ -1044,8 +1158,19 @@ export const catalog = [
     colors: ["Metal"],
     type: "accessory",
     default_color: "Metal",
+   discount: [
+      { quantity: 100, price: 3.59 },
+      { quantity: 250, price: 3.59 },
+      { quantity: 500, price: 3.59 },
+      { quantity: 1000, price: 3.59 },
+      { quantity: 1500, price: 3.59 },
+    ],
     sizes: {
-      500: 3.59,
+       100: 0.0,
+       250: 0.0,
+       500: 0.0,
+      1000: 0.0,
+      1500: 0.0,
     },
   },
   {
@@ -1056,14 +1181,18 @@ export const catalog = [
     type: "accessory",
     default_color: "Metal",
     discount: [
-      { quantity: 500, price: 2.39 },
-      { quantity: 1000, price: 2.19 },
-      { quantity: 2500, price: 1.99 },
+      { quantity: 100, price: 3.59 },
+      { quantity: 250, price: 3.59 },
+      { quantity: 500, price: 3.59 },
+      { quantity: 1000, price: 3.59 },
+      { quantity: 1500, price: 3.59 },
     ],
     sizes: {
-      500: 0.0,
+       100: 0.0,
+       250: 0.0,
+       500: 0.0,
       1000: 0.0,
-      2500: 0.0,
+      1500: 0.0,
     },
   },
   {
@@ -1073,9 +1202,19 @@ export const catalog = [
     colors: ["Black"],
     type: "accessory",
     default_color: "Black",
-    discount: [{ quantity: 500, price: 3.99 }],
+    discount: [
+      { quantity: 100, price: 3.59 },
+      { quantity: 250, price: 3.59 },
+      { quantity: 500, price: 3.59 },
+      { quantity: 1000, price: 3.59 },
+      { quantity: 1500, price: 3.59 },
+    ],
     sizes: {
-      500: 0.0,
+       100: 0.0,
+       250: 0.0,
+       500: 0.0,
+      1000: 0.0,
+      1500: 0.0,
     },
   },
   {
@@ -1087,7 +1226,10 @@ export const catalog = [
     default_color: "Metal",
     supportedStores: ["HENLAT"],
     sizes: {
+       500: 0.99,
       1000: 0.99,
+      1500: 0.99,
+      2500: 0.99,
     },
   },
   {
@@ -1099,6 +1241,9 @@ export const catalog = [
     default_color: "Black",
     supportedStores: ["HENLAT"],
     sizes: {
+       500: 0.79,
+      1000: 0.79,
+      1500: 0.79,
       2500: 0.79,
     },
   },
@@ -1111,7 +1256,10 @@ export const catalog = [
     default_color: "Black",
     supportedStores: ["HENLAL"],
     sizes: {
+       500: 0.79,
       1000: 0.79,
+      1500: 0.79,
+      2500: 0.79,
     },
   },
   {
@@ -1123,7 +1271,10 @@ export const catalog = [
     default_color: "Black",
     supportedStores: ["HENLAT"],
     sizes: {
-      250: 1.89,
+       500: 1.89,
+      1000: 1.89,
+      1500: 1.89,
+      2500: 1.89,
     },
   },
   {
@@ -1135,7 +1286,10 @@ export const catalog = [
     default_color: "Black",
     supportedStores: ["HENLAT"],
     sizes: {
+       500: 0.99,
       1000: 0.99,
+      1500: 0.99,
+      2500: 0.99,
     },
   },
   {
@@ -1147,7 +1301,10 @@ export const catalog = [
     default_color: "Black",
     supportedStores: ["HENPRO"],
     sizes: {
+       500: 0.99,
       1000: 0.99,
+      1500: 0.99,
+      2500: 0.99,
     },
   },
   {
@@ -1159,7 +1316,10 @@ export const catalog = [
     default_color: "Black",
     supportedStores: ["HENPMA"],
     sizes: {
+       500: 0.99,
       1000: 0.99,
+      1500: 0.99,
+      2500: 0.99,
     },
   },
   {
@@ -1171,7 +1331,10 @@ export const catalog = [
     default_color: "Black",
     supportedStores: ["HENPRO"],
     sizes: {
+       500: 0.0279,
       1000: 0.0279,
+      1500: 0.0279,
+      2500: 0.0279,
     },
   },
   {
@@ -1183,7 +1346,10 @@ export const catalog = [
     default_color: "Black",
     supportedStores: ["HENPMA"],
     sizes: {
+       500: 0.0279,
       1000: 0.0279,
+      1500: 0.0279,
+      2500: 0.0279,
     },
   },
   {
@@ -1195,8 +1361,10 @@ export const catalog = [
     default_color: "Black",
     supportedStores: ["HENFAT"],
     sizes: {
+       500: 0.75,
       1000: 0.75,
-      2500: 0.65,
+      1500: 0.75,
+      2500: 0.75,
     },
   },
   {
@@ -1208,7 +1376,10 @@ export const catalog = [
     default_color: "Black",
     supportedStores: ["HENMMO"],
     sizes: {
-      500: 0.89,
+       500: 0.89,
+      1000: 0.89,
+      1500: 0.89,
+      2500: 0.89,
     },
   },
   {
@@ -1220,8 +1391,10 @@ export const catalog = [
     default_color: "Black",
     supportedStores: ["HENFAT"],
     sizes: {
-      500: 3.59,
-      1000: 3.19,
+       500: 3.59,
+      1000: 3.59,
+      1500: 3.59,
+      2500: 3.59,
     },
   },
   {
@@ -1233,8 +1406,10 @@ export const catalog = [
     default_color: "White",
     supportedStores: ["HENFAT"],
     sizes: {
+       500: 3.59,
       1000: 3.59,
-      2500: 3.19,
+      1500: 3.59,
+      2500: 3.59,
     },
   },
   {
@@ -1246,8 +1421,10 @@ export const catalog = [
     default_color: "Metal",
     supportedStores: ["HENFAT"],
     sizes: {
+       500: 3.69,
       1000: 3.69,
-      2500: 3.09,
+      1500: 3.69,
+      2500: 3.69,
     },
   },
   {
@@ -1259,7 +1436,10 @@ export const catalog = [
     default_color: "Black",
     supportedStores: ["HENLDU"],
     sizes: {
-      200: 2.39,
+       500: 2.39,
+      1000: 2.39,
+      1500: 2.39,
+      2500: 2.39,
     },
   },
   {
@@ -1271,6 +1451,9 @@ export const catalog = [
     default_color: "Metal",
     supportedStores: ["HENLDU"],
     sizes: {
+       500: 3.35,
+      1000: 3.35,
+      1500: 3.35,
       2500: 3.35,
     },
   },
@@ -1283,7 +1466,10 @@ export const catalog = [
     default_color: "Black",
     supportedStores: ["HENCDU"],
     sizes: {
-      250: 3.59,
+       500: 3.59,
+      1000: 3.59,
+      1500: 3.59,
+      2500: 3.59,
     },
   },
   {
@@ -1295,7 +1481,10 @@ export const catalog = [
     default_color: "Black",
     supportedStores: ["HENLDU"],
     sizes: {
+       500: 0.79,
       1000: 0.79,
+      1500: 0.79,
+      2500: 0.79,
     },
   },
   {
@@ -1307,7 +1496,10 @@ export const catalog = [
     default_color: "Black",
     supportedStores: ["HENADU"],
     sizes: {
-      500: 1.29,
+       500: 1.29,
+      1000: 1.29,
+      1500: 1.29,
+      2500: 1.29,
     },
   },
   {
@@ -1319,6 +1511,9 @@ export const catalog = [
     default_color: "White",
     supportedStores: ["HENLDU"],
     sizes: {
+       500: 0.89,
+      1000: 0.89,
+      1500: 0.89,
       2500: 0.89,
     },
   },
@@ -1331,7 +1526,10 @@ export const catalog = [
     default_color: "White",
     supportedStores: ["HENCDU"],
     sizes: {
-      500: 1.39,
+       500: 1.39,
+      1000: 1.39,
+      1500: 1.39,
+      2500: 1.39,
     },
   },
   {
@@ -1342,7 +1540,7 @@ export const catalog = [
     type: "service",
     default_color: "White",
     sizes: {
-      500: 0.89,
+       500: 0.89,
       1000: 0.69,
     },
   },
@@ -1367,9 +1565,10 @@ export const catalog = [
     default_color: "Black",
     supportedStores: ["HENFAT"],
     sizes: {
+       500: 0.89,
       1000: 0.89,
-      2500: 0.79,
-      5000: 0.69,
+      1500: 0.89,
+      2500: 0.89,
     },
   },
   {
@@ -1381,7 +1580,10 @@ export const catalog = [
     default_color: "Dk Green",
     supportedStores: ["HENADU"],
     sizes: {
-      500: 0.99,
+       500: 0.99,
+      1000: 0.99,
+      1500: 0.99,
+      2500: 0.99,
     },
   },
   {
@@ -1393,6 +1595,9 @@ export const catalog = [
     default_color: "Black",
     supportedStores: ["HENHWO"],
     sizes: {
+       500: 0.89,
+      1000: 0.89,
+      1500: 0.89,
       2500: 0.89,
     },
   },
@@ -1405,6 +1610,9 @@ export const catalog = [
     default_color: "White",
     supportedStores: ["HENHWO"],
     sizes: {
+       500: 0.95,
+      1000: 0.95,
+      1500: 0.95,
       2500: 0.95,
     },
   },
@@ -1417,7 +1625,10 @@ export const catalog = [
     default_color: "White",
     supportedStores: ["HENCDU"],
     sizes: {
-      300: 1.39,
+       500: 1.39,
+      1000: 1.39,
+      1500: 1.39,
+      2500: 1.39,
     },
   },
   {
@@ -1429,6 +1640,9 @@ export const catalog = [
     default_color: "Chrome Plated",
     supportedStores: ["HENHWO"],
     sizes: {
+       500: 3.35,
+      1000: 3.35,
+      1500: 3.35,
       2500: 3.35,
     },
   },
@@ -1441,7 +1655,10 @@ export const catalog = [
     default_color: "Chrome",
     supportedStores: ["HENADU"],
     sizes: {
-      500: 1.49,
+       500: 1.49,
+      1000: 1.49,
+      1500: 1.49,
+      2500: 1.49,
     },
   },
   {
@@ -1453,7 +1670,10 @@ export const catalog = [
     default_color: "Chrome",
     supportedStores: ["HENMMO"],
     sizes: {
-      500: 1.39,
+       500: 1.39,
+      1000: 1.39,
+      1500: 1.39,
+      2500: 1.39,
     },
   },
   {
@@ -1465,7 +1685,10 @@ export const catalog = [
     default_color: "Chrome",
     supportedStores: ["HENMMO"],
     sizes: {
-      500: 1.39,
+       500: 1.39,
+      1000: 1.39,
+      1500: 1.39,
+      2500: 1.39,
     },
   },
   {
@@ -1477,7 +1700,10 @@ export const catalog = [
     default_color: "Chrome Faced",
     supportedStores: ["HENLAL"],
     sizes: {
+       500: 1.39,
       1000: 1.39,
+      1500: 1.39,
+      2500: 1.39,
     },
   },
   {
@@ -1489,7 +1715,10 @@ export const catalog = [
     default_color: "Chrome",
     supportedStores: ["HENCDU"],
     sizes: {
-      300: 1.39,
+       500: 1.39,
+      1000: 1.39,
+      1500: 1.39,
+      2500: 1.39,
     },
   },
   {
@@ -1513,6 +1742,9 @@ export const catalog = [
     default_color: "Black",
     supportedStores: ["HENHWO"],
     sizes: {
+       500: 2.39,
+      1000: 2.39,
+      1500: 2.39,
       2500: 2.39,
     },
   },
@@ -1524,7 +1756,7 @@ export const catalog = [
     type: "service",
     default_color: "White",
     sizes: {
-      5000: 0.21,
+       5000:  0.21,
       10000: 0.19,
     },
   },
@@ -1557,8 +1789,19 @@ export const catalog = [
     colors: ["Blue"],
     type: "accessory",
     default_color: "Blue",
+    discount: [
+      { quantity: 100, price: 0.79 },
+      { quantity: 250, price: 0.79 },
+      { quantity: 500, price: 0.79 },
+      { quantity: 1000, price: 0.79 },
+      { quantity: 1500, price: 0.79 },
+    ],
     sizes: {
-      500: 0.79,
+       100: 0.0,
+       250: 0.0,
+       500: 0.0,
+      1000: 0.0,
+      1500: 0.0,
     },
   },
   {
@@ -1568,8 +1811,19 @@ export const catalog = [
     colors: ["Royal"],
     type: "accessory",
     default_color: "Royal",
+    discount: [
+      { quantity: 100, price: 2.89 },
+      { quantity: 250, price: 2.89 },
+      { quantity: 500, price: 2.89 },
+      { quantity: 1000, price: 2.89 },
+      { quantity: 1500, price: 2.89 },
+    ],
     sizes: {
-      360: 2.89,
+       100: 0.0,
+       250: 0.0,
+       500: 0.0,
+      1000: 0.0,
+      1500: 0.0,
     },
   },
   {
@@ -1579,8 +1833,19 @@ export const catalog = [
     colors: ["Black"],
     type: "accessory",
     default_color: "Black",
+    discount: [
+      { quantity: 100, price: 16.99 },
+      { quantity: 250, price: 16.99 },
+      { quantity: 500, price: 16.99 },
+      { quantity: 1000, price: 16.99 },
+      { quantity: 1500, price: 16.99 },
+    ],
     sizes: {
-      1000: 1.69,
+       100: 0.0,
+       250: 0.0,
+       500: 0.0,
+      1000: 0.0,
+      1500: 0.0,
     },
   },
   {
@@ -1590,8 +1855,19 @@ export const catalog = [
     colors: ["Black"],
     type: "accessory",
     default_color: "Black",
+    discount: [
+      { quantity: 100, price: 0.99 },
+      { quantity: 250, price: 0.99 },
+      { quantity: 500, price: 0.99 },
+      { quantity: 1000, price: 0.99 },
+      { quantity: 1500, price: 0.99 },
+    ],
     sizes: {
-      250: 0.99,
+       100: 0.0,
+       250: 0.0,
+       500: 0.0,
+      1000: 0.0,
+      1500: 0.0,
     },
   },
   {
@@ -1601,8 +1877,19 @@ export const catalog = [
     colors: ["Black"],
     type: "accessory",
     default_color: "Black",
+    discount: [
+      { quantity: 100, price: 17.99 },
+      { quantity: 250, price: 17.99 },
+      { quantity: 500, price: 17.99 },
+      { quantity: 1000, price: 17.99 },
+      { quantity: 1500, price: 17.99 },
+    ],
     sizes: {
-      96: 17.99,
+       100: 0.0,
+       250: 0.0,
+       500: 0.0,
+      1000: 0.0,
+      1500: 0.0,
     },
   },
   {
@@ -1612,8 +1899,19 @@ export const catalog = [
     colors: ["Black"],
     type: "accessory",
     default_color: "Black",
+    discount: [
+      { quantity: 100, price: 1.69 },
+      { quantity: 250, price: 1.69 },
+      { quantity: 500, price: 1.69 },
+      { quantity: 1000, price: 1.69 },
+      { quantity: 1500, price: 1.69 },
+    ],
     sizes: {
-      1000: 1.69,
+       100: 0.0,
+       250: 0.0,
+       500: 0.0,
+      1000: 0.0,
+      1500: 0.0,
     },
   },
   {
@@ -1623,8 +1921,19 @@ export const catalog = [
     colors: ["White"],
     type: "accessory",
     default_color: "White",
+    discount: [
+      { quantity: 100, price: 1.39 },
+      { quantity: 250, price: 1.39 },
+      { quantity: 500, price: 1.39 },
+      { quantity: 1000, price: 1.39 },
+      { quantity: 1500, price: 1.39 },
+    ],
     sizes: {
-      250: 1.39,
+       100: 0.0,
+       250: 0.0,
+       500: 0.0,
+      1000: 0.0,
+      1500: 0.0,
     },
   },
   {
@@ -1634,8 +1943,19 @@ export const catalog = [
     colors: ["White"],
     type: "accessory",
     default_color: "White",
+    discount: [
+      { quantity: 100, price: 1.55 },
+      { quantity: 250, price: 1.55 },
+      { quantity: 500, price: 1.55 },
+      { quantity: 1000, price: 1.55 },
+      { quantity: 1500, price: 1.55 },
+    ],
     sizes: {
-      250: 1.55,
+       100: 0.0,
+       250: 0.0,
+       500: 0.0,
+      1000: 0.0,
+      1500: 0.0,
     },
   },
   {
@@ -1645,8 +1965,19 @@ export const catalog = [
     colors: ["White"],
     type: "accessory",
     default_color: "White",
+    discount: [
+      { quantity: 100, price: 1.69 },
+      { quantity: 250, price: 1.69 },
+      { quantity: 500, price: 1.69 },
+      { quantity: 1000, price: 1.69 },
+      { quantity: 1500, price: 1.69 },
+    ],
     sizes: {
-      250: 1.69,
+       100: 0.0,
+       250: 0.0,
+       500: 0.0,
+      1000: 0.0,
+      1500: 0.0,
     },
   },
   {
@@ -1656,8 +1987,19 @@ export const catalog = [
     colors: ["Black"],
     type: "accessory",
     default_color: "Black",
+    discount: [
+      { quantity: 100, price: 2.29 },
+      { quantity: 250, price: 2.29 },
+      { quantity: 500, price: 2.29 },
+      { quantity: 1000, price: 2.29 },
+      { quantity: 1500, price: 2.29 },
+    ],
     sizes: {
-      100: 2.29,
+       100: 0.0,
+       250: 0.0,
+       500: 0.0,
+      1000: 0.0,
+      1500: 0.0,
     },
   },
 ];

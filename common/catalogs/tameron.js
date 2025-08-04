@@ -1,14 +1,16 @@
 export const catalog = [
   {
     code: "TAMHDA-33P3D-444019A",
-    name: "Hard Front Plates",
-    fullname: "Hard Front Plates",
+    name: "Hard Front 3D Plates",
+    fullname: "Hard Front 3D Plates",
     colors: ["Black"],
     type: "customs",
     default_color: "Black",
     sizes: {
-      1000: 0.0,
-      2500: 0.0,
+       500: 1.59,
+      1000: 1.44,
+      1500: 1.39,
+      2500: 1.29,
     },
   },
   {
@@ -19,20 +21,24 @@ export const catalog = [
     type: "customs",
     default_color: "Black",
     sizes: {
-      1000: 0.0,
-      2500: 0.0,
+       500: 0.79,
+      1000: 0.59,
+      1500: 0.55,
+      2500: 0.49,
     },
   },
   {
-    code: "die_cut_decals",
+    code: "TAMHDA-31DD-444021A",
     name: "Die Cut Decals",
     fullname: "Die Cut Decals",
     colors: ["Black", "White"],
     type: "customs",
     default_color: "Black",
     sizes: {
-      1000: 0.0,
-      2500: 0.0,
+       500: 0.79,
+      1000: 0.49,
+      1500: 0.54,
+      2500: 0.49,
     },
   },
   {
@@ -43,8 +49,9 @@ export const catalog = [
     type: "customs",
     default_color: "Black",
     sizes: {
-      1000: 0.0,
-      2500: 0.0,
+       250: 3.79,
+       500: 3.54,
+      1000: 3.25,
     },
   },
   {
