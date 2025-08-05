@@ -172,7 +172,7 @@ export const catalog = [
     code: "LK110",
     name: "Port Authority® Mesh Polo",
     fullname: "Port Authority® Women's Dry Zone® UV Micro-Mesh Polo",
-    colors: ["Deep Black", "Graphite", "True Royal", "True Red","White"],
+    colors: ["Deep Black", "Graphite", "True Royal", "Rich Red","White"],
     type: "womens",
     default_color: "Deep Black",
     sizes: {
