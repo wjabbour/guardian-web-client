@@ -6,12 +6,13 @@ import { SvgIcon } from "@mui/material";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import LogoPreview from "./LogoPreview";
 import { getDomainAwarePath } from "../../lib/utils";
-import { getWebCatalog } from "guardian-common";
+import { getWebCatalog, getWebConfigValue } from "guardian-common";
 
 export default function ClothingCatalog() {
   const navigate = useNavigate();
   const location = useLocation();
   const params = useParams();
+  const stores = getWebConfigValue("stores");
   const [catalogType, setCatalogType] = useState("mens");
   const [catalog, setCatalog] = useState(
     getWebCatalog().filter((item) => item.type === catalogType)
@@ -70,7 +71,9 @@ export default function ClothingCatalog() {
           </SvgIcon>
         </div>
         {catalog.map((item) => {
+          // dont filter out customs items if there are no stores for this company (some companies have no stores for some reason)
           if (
+            stores.length &&
             item.type === "customs" &&
             !(item.supportedStores ?? []).includes(params.storeCode)
           ) {
