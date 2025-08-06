@@ -26,11 +26,7 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "deploy": "npm run deploy-stivers && npm run deploy-tameron && npm run deploy-premier && npm run deploy-newcustomer && npm run deploy-cannon && npm run deploy-gpc81",
-    "deploy-tameron": "npm run build && aws s3 cp build s3://gptameron.com/ --recursive && aws cloudfront create-invalidation --distribution-id E1YPW3JQQ2QQ81 --paths \"/*\"",
-    "deploy-stivers": "npm run build && aws s3 cp build s3://gpstivers.com/ --recursive && aws cloudfront create-invalidation --distribution-id EEZ12WJWK62SX --paths \"/*\"",
-    "deploy-premier": "npm run build && aws s3 cp build s3://gp-premier.com/ --recursive && aws cloudfront create-invalidation --distribution-id EHOX2CBVSN2AB --paths \"/*\"",
-    "deploy-newcustomer": "npm run build && aws s3 cp build s3://newcustomer.gpstivers.com/ --recursive && aws cloudfront create-invalidation --distribution-id E3IQU0KQR8MGZ6 --paths \"/*\"",
+    "deploy": "npm run deploy-cannon && npm run deploy-gpc81",
     "deploy-cannon": "set AWS_PROFILE=cannon&& npm run build && aws s3 cp build s3://cannonemployeestore.com/ --recursive && aws cloudfront create-invalidation --distribution-id E14D6FK2VK66GQ --paths \"/*\"",
     "deploy-gpc81": "npm run build && aws s3 cp build s3://gpc81.com/ --recursive && aws cloudfront create-invalidation --distribution-id E1R5RLNLHZTA8G --paths \"/*\"",
     "start": "react-scripts start",
