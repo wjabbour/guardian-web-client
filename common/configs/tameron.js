@@ -12,7 +12,13 @@ export const config = {
     customs: [],
   },
   email_recipients: ["lbudbill@gpcorp.com", "lbudbell@comcast.net"],
-  stores: [],    
+  stores: [
+    {
+      name: "Tameron",
+      address: "12345 Online Order Pkwy, AL, 55555",
+      code: "ONLINE",
+    },
+  ],    
   bypass_codes: ["TAMERO"],
   server_hostname: "https://mxfj3q6m01.execute-api.us-east-1.amazonaws.com",
   account_reps: [

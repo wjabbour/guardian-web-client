@@ -822,8 +822,6 @@ export const catalog = [
     ],
     type: "sales",
     default_color: "Blue",
-    discount: [{ quantity: 100, price: 0.00 },
-               { quantity: 500, price: 0.00 }],
     sizes: {
       100: 0.00,
       500: 0.00,
@@ -858,8 +856,7 @@ export const catalog = [
       "Yellow",
     ],
     type: "sales",
-    default_color: "White",
-    discount: [{ quantity: 250, price: 0.00 }],
+    default_color: "White",    
     sizes: {
       250: 0.0,
     },
@@ -870,8 +867,7 @@ export const catalog = [
     fullname: "Kleer-Back Stock Stickers Versa #400 (100/pk)",
     colors: ["Blue", "Green", "Orange", "Red", "White", "Yellow"],
     type: "sales",
-    default_color: "White",
-    discount: [{ quantity: 100, price: 0.00 }],
+    default_color: "White",    
     sizes: {
       100: 0.0,
     },
@@ -882,8 +878,7 @@ export const catalog = [
     fullname: "Poly Tag Key Tag #250 (250/box)",
     colors: ["White", "Yellow"],
     type: "sales",
-    default_color: "White",
-    discount: [{ quantity: 250, price: 0.00 }],
+    default_color: "White",    
     sizes: {
       250: 0.0,
     },
@@ -894,8 +889,7 @@ export const catalog = [
     fullname: "Poly Stock Stickers #240 (250/box)",
     colors: ["White", "Yellow"],
     type: "sales",
-    default_color: "White",
-    discount: [{ quantity: 250, price: 0.00 }],
+    default_color: "White",   
     sizes: {
       250: 0.0,
     },
@@ -907,8 +901,7 @@ export const catalog = [
     colors: ["Beige","Blue","Green","Grey","Lilac",
       "Orange","Red","White","Yellow"],   
     type: "sales",
-    default_color: "Beige",
-    discount: [{ quantity: 125, price: 0.00 }],
+    default_color: "Beige",  
     sizes: {
       125: 0.00,
     },
@@ -919,8 +912,7 @@ export const catalog = [
     fullname: "Stock-In Numbers (250/pk)",
     colors: ["White"],
     type: "sales",
-    default_color: "White",
-    discount: [{ quantity: 250, price: 0.00 }],
+    default_color: "White",    
     sizes: {
       250: 0.00,
     },
@@ -931,8 +923,7 @@ export const catalog = [
     fullname: "Stock Number Mini Signs 6in x 3in #650 (250/pk)",
     colors: ["White", "Yellow"],
     type: "sales",
-    default_color: "White",
-    discount: [{ quantity: 250, price: 0.00 }],
+    default_color: "White",    
     sizes: {
       250: 0.00,
     },
@@ -943,8 +934,7 @@ export const catalog = [
     fullname: "Top Stripe Key Tags #225 (250/pk)",
     colors: ["Black","Blue","Green","Magenta","Orange","Red","Yellow"],
     type: "sales",
-    default_color: "Black",
-    discount: [{ quantity: 250, price: 0.00 }],
+    default_color: "Black",  
     sizes: {
       250: 0.00,
     },
@@ -955,8 +945,7 @@ export const catalog = [
     fullname: "7.5 in. Numbers - Black/Hot Pink (12/pk)",
     colors: ["BKHP0","BKHP1","BKHP2","BKHP3","BKHP4","BKHP5","BKHP6","BKHP7","BKHP8","BKHP9","BKHPS","BKHPD","BKHPP"],
     type: "sales",
-    default_color: "BKHP0",
-    discount: [{ quantity: 12, price: 0.00 }],
+    default_color: "BKHP0",    
     sizes: {
       12: 0.00,
     },
@@ -967,8 +956,7 @@ export const catalog = [
     fullname: "7.5 in. Numbers - Silver/Black (12/pk)",
     colors: ["SLBK0","SLBK1","SLBK2","SLBK3","SLBK4","SLBK5","SLBK6","SLBK7","SLBK8","SLBK9","SLBKS","SLBKD","SLBKP"],
     type: "sales",
-    default_color: "SLBK0",
-    discount: [{ quantity: 12, price: 0.00 }],
+    default_color: "SLBK0",    
     sizes: {
       12: 0.00,
     },
@@ -979,8 +967,7 @@ export const catalog = [
     fullname: "7.5 in. Numbers - Gold/Black (12/pk)",
     colors: ["GDBK0","GDBK1","GDBK2","GDBK3","GDBK4","GDBK5","GDBK6","GDBK7","GDBK8","GDBK9","GDBKS","GDBKD","GDBKP"],
     type: "sales",
-    default_color: "GDBK0",
-    discount: [{ quantity: 12, price: 0.00 }],
+    default_color: "GDBK0",    
     sizes: {
       12: 0.00,
     },
@@ -991,8 +978,7 @@ export const catalog = [
     fullname: "7.5 in. Numbers - Chartreuse/Black (12/pk)",
     colors: ["CBK0","CBK1","CBK2","CBK3","CBK4","CBK5","CBK6","CBK7","CBK8","CBK9","CBKS","CBKP"],
     type: "sales",
-    default_color: "CBK0",
-    discount: [{ quantity: 12, price: 0.00 }],
+    default_color: "CBK0",    
     sizes: {
       12: 0.00,
     },
@@ -1003,8 +989,7 @@ export const catalog = [
     fullname: "7.5 in. Numbers - Yellow/Black (12/pk)",
     colors: ["YBK0","YBK1","YBK2","YBK3","YBK4","YBK5","YBK6","YBK7","YBK8","YBK9","YBKS","YBKP", "YBKD"],
     type: "sales",
-    default_color: "YBK0",
-    discount: [{ quantity: 12, price: 0.00 }],
+    default_color: "YBK0",    
     sizes: {
       12: 0.00,
     },
@@ -1015,8 +1000,7 @@ export const catalog = [
     fullname: "7.5 in. Numbers - Yellow/Red (12/pk)",
     colors: ["YR0","YR1","YR2","YR3","YR4","YR5","YR6","YR7","YR8","YR9","YRS","YRP","YRD"],
     type: "sales",
-    default_color: "YR0",
-    discount: [{ quantity: 12, price: 0.00 }],
+    default_color: "YR0",    
     sizes: {
       12: 0.00,
     },
@@ -1027,8 +1011,7 @@ export const catalog = [
     fullname: "7.5 in. Numbers - Yellow/Green (12/pk)",
     colors: ["YGR0","YGR1","YGR2","YGR3","YGR4","YGR5","YGR6","YGR7","YGR8","YGR9","YGRS","YGRP","YGRD"],
     type: "sales",
-    default_color: "YGR0",
-    discount: [{ quantity: 12, price: 0.00 }],
+    default_color: "YGR0",    
     sizes: {
       12: 0.00,
     },
@@ -1039,8 +1022,7 @@ export const catalog = [
     fullname: "7.5 in. Numbers - Yellow/Blue (12/pk)",
     colors: ["YB0","YB1","YB2","YB3","YB4","YB5","YB6","YB7","YB8","YB9","YBS","YBP","YBD"],
     type: "sales",
-    default_color: "YB0",
-    discount: [{ quantity: 12, price: 0.00 }],
+    default_color: "YB0",    
     sizes: {
       12: 0.00,
     },
@@ -1051,8 +1033,7 @@ export const catalog = [
     fullname: "7.5 in. Numbers - White/Blue (12/pk)",
     colors: ["WB0","WB1","WB2","WB3","WB4","WB5","WB6","WB7","WB8","WB9","WBS","WBP","WBD"],
     type: "sales",
-    default_color: "WB0",
-    discount: [{ quantity: 12, price: 0.00 }],
+    default_color: "WB0",    
     sizes: {
       12: 0.00,
     },
@@ -1063,8 +1044,7 @@ export const catalog = [
     fullname: "7.5 in. Numbers - Blue/White (12/pk)",
     colors: ["BLW0","BLW1","BLW2","BLW3","BLW4","BLW5","BLW6","BLW7","BLW8","BLW9","BLWS","BLWP","BLWD"],
     type: "sales",
-    default_color: "BLW0",
-    discount: [{ quantity: 12, price: 0.00 }],
+    default_color: "BLW0",    
     sizes: {
       12: 0.00,
     },
@@ -1075,8 +1055,7 @@ export const catalog = [
     fullname: "7.5 in. Numbers - Red/White (12/pk)",
     colors: ["RW0","RW1","RW2","RW3","RW4","RW5","RW6","RW7","RW8","RW9","RWS","RWD","RWP"],
     type: "sales",
-    default_color: "RW0",
-    discount: [{ quantity: 12, price: 0.00 }],
+    default_color: "RW0",    
     sizes: {
       12: 0.00,
     },
@@ -1087,8 +1066,7 @@ export const catalog = [
     fullname: "9.5 in. Numbers - Chartreuse/Black (12/pk)",
     colors: ["CBK0","CBK1","CBK2","CBK3","CBK4","CBK5","CBK6","CBK7","CBK8","CBK9","CBKS","CBKD"],
     type: "sales",
-    default_color: "CBK0",
-    discount: [{ quantity: 12, price: 0.00 }],
+    default_color: "CBK0",    
     sizes: {
       12: 0.00,
     },
@@ -1099,8 +1077,7 @@ export const catalog = [
     fullname: "9.5 in. Numbers - Black/Hot Pink (12/pk)",
     colors: ["BKHP0","BKHP1","BKHP2","BKHP3","BKHP4","BKHP5","BKHP6","BKHP7","BKHP8","BKHP9","BKHPS","BKHPD","BKHPP"],
     type: "sales",
-    default_color: "BKHP0",
-    discount: [{ quantity: 12, price: 0.00 }],
+    default_color: "BKHP0",    
     sizes: {
       12: 0.00,
     },
@@ -1111,8 +1088,7 @@ export const catalog = [
     fullname: "9.5 in. Numbers - Yellow/Blue (12/pk)",
     colors: ["YB0","YB1","YB2","YB3","YB4","YB5","YB6","YB7","YB8","YB9","YBS","YBP","YBD"],
     type: "sales",
-    default_color: "YB0",
-    discount: [{ quantity: 12, price: 0.00 }],
+    default_color: "YB0",    
     sizes: {
       12: 0.00,
     },
@@ -1123,8 +1099,7 @@ export const catalog = [
     fullname: "9.5 in. Numbers - Yellow/Red (12/pk)",
     colors: ["YR0","YR1","YR2","YR3","YR4","YR5","YR6","YR7","YR8","YR9","YRS","YRP","YRD"],
     type: "sales",
-    default_color: "YR0",
-    discount: [{ quantity: 12, price: 0.00 }],
+    default_color: "YR0",    
     sizes: {
       12: 0.00,
     },
@@ -1135,8 +1110,7 @@ export const catalog = [
     fullname: "11.5 in. Numbers - Chartreuse/Black (12/pk)",
     colors: ["CBK0","CBK1","CBK2","CBK3","CBK4","CBK5","CBK6","CBK7","CBK8","CBK9","CBKS","CBKP"],
     type: "sales",
-    default_color: "CBK0",
-    discount: [{ quantity: 12, price: 0.00 }],
+    default_color: "CBK0",    
     sizes: {
       12: 0.00,
     },
@@ -1147,8 +1121,7 @@ export const catalog = [
     fullname: "11.5 in. Numbers - Yellow/Blue (12/pk)",
     colors: ["YB0","YB1","YB2","YB3","YB4","YB5","YB6","YB7","YB8","YB9","YBS","YBP","YBD"],
     type: "sales",
-    default_color: "YB0",
-    discount: [{ quantity: 12, price: 0.00 }],
+    default_color: "YB0",    
     sizes: {
       12: 0.00,
     },
@@ -1159,8 +1132,7 @@ export const catalog = [
     fullname: "11.5 in. Numbers - Yellow/Red (12/pk)",
     colors: ["YR0","YR1","YR2","YR3","YR4","YR5","YR6","YR7","YR8","YR9","YRS","YRP","YRD"],
     type: "sales",
-    default_color: "YR0",
-    discount: [{ quantity: 12, price: 0.00 }],
+    default_color: "YR0",    
     sizes: {
       12: 0.00,
     },
@@ -1171,8 +1143,7 @@ export const catalog = [
     fullname: "Arch Slogans - 2.75in. x 14in. (12/pk)",
     colors: ["Slogans","Red Yellow","Blue Yellow","Gold Black","Silver Black"],
     type: "sales",
-    default_color: "Slogans",
-    discount: [{ quantity: 12, price: 0.00 }],
+    default_color: "Slogans",    
     sizes: {
       12: 0.00,
     },
@@ -1183,8 +1154,7 @@ export const catalog = [
     fullname: "17 in. Latex Balloons (72/bag)",
     colors: ["Black","Blue","Green","Orange","Red","Yellow","Pink","Purple","White","Gold","Silver","Assorted"],
     type: "sales",
-    default_color: "Black",
-    discount: [{ quantity: 72, price: 0.00 }],
+    default_color: "Black",   
     sizes: {
       72: 0.00,
     },
@@ -1195,8 +1165,7 @@ export const catalog = [
     fullname: "36 in. Latex Balloons (10/bag)",
     colors: ["Blue","Green","Orange","Red","Yellow","White"],
     type: "sales",
-    default_color: "Blue",
-    discount: [{ quantity: 10, price: 0.00 }],
+    default_color: "Blue",    
     sizes: {
       10: 0.00,
     },
@@ -1207,8 +1176,7 @@ export const catalog = [
     fullname: "5.5 in. Rubber Chloroprene Balloons (1 ea)",
     colors: ["Blue","Green","Orange","Purple","Red","White","Yellow"],
     type: "sales",
-    default_color: "Blue",
-    discount: [{ quantity: 1, price: 0.00 }],
+    default_color: "Blue",    
     sizes: {
       1: 0.00,
     },
@@ -1219,8 +1187,7 @@ export const catalog = [
     fullname: "Balloon Ribbon (500 yards)",
     colors: ["Silver","White"],
     type: "sales",
-    default_color: "Silver",
-    discount: [{ quantity: 1, price: 0.00 }],
+    default_color: "Silver",    
     sizes: {
       1: 0.00,
     },
@@ -1231,8 +1198,7 @@ export const catalog = [
     fullname: "Cone of Balloon String - 1500 yards",
     colors: ["White"],
     type: "sales",
-    default_color: "White",
-    discount: [{ quantity: 1, price: 0.00 }],
+    default_color: "White",    
     sizes: {
       1: 0.00,
     },
@@ -1243,8 +1209,7 @@ export const catalog = [
     fullname: "Triangle Pennants 48 - 12 in. x 18 in.",
     colors: ["Assorted","RWB"],
     type: "sales",
-    default_color: "Assorted",
-    discount: [{ quantity: 1, price: 0.00 }],
+    default_color: "Assorted",    
     sizes: {
       1: 0.00,
     },
@@ -1255,8 +1220,7 @@ export const catalog = [
     fullname: "22 in. Giant Magnetic Car Bow (2 ea)",
     colors: ["Blue","Gold","Green","Patriotic","Pink","Red","Silver","White","Red Grn"],
     type: "sales",
-    default_color: "Blue",
-    discount: [{ quantity: 2, price: 0.00 }],
+    default_color: "Blue",   
     sizes: {
       2: 0.00,
     },
@@ -1267,8 +1231,7 @@ export const catalog = [
     fullname: "30 in. Giant Magnetic Car Bow (2 ea)",
     colors: ["Blue","Gold","Green","Patriotic","Pink","Red","Silver","White","Red Grn"],
     type: "sales",
-    default_color: "Blue",
-    discount: [{ quantity: 2, price: 0.00 }],
+    default_color: "Blue",   
     sizes: {
       2: 0.00,
     },
@@ -1279,8 +1242,7 @@ export const catalog = [
     fullname: "Stock Hang Tags - Red Tag Special - 9in x 12in (50/pk)",
     colors: ["Fluorr"],
     type: "sales",
-    default_color: "Fluorr",
-    discount: [{ quantity: 50, price: 0.00 }],
+    default_color: "Fluorr",   
     sizes: {
       50: 0.00,
     },
@@ -1291,8 +1253,7 @@ export const catalog = [
     fullname: "Stock Hang Tags - Red Tag Sale - 9in x 12in (50/pk)",
     colors: ["Fluorr"],
     type: "sales",
-    default_color: "Fluorr",
-    discount: [{ quantity: 50, price: 0.00 }],
+    default_color: "Fluorr",    
     sizes: {
       50: 0.00,
     },
@@ -1303,8 +1264,7 @@ export const catalog = [
     fullname: "Stock Hang Tags - As Advertised - 9in x 12in (50/pk)",
     colors: ["Fluorg","Fluorp","Fluorr","Fluory"],
     type: "sales",
-    default_color: "Fluorg",
-    discount: [{ quantity: 50, price: 0.00 }],
+    default_color: "Fluorg",    
     sizes: {
       50: 0.00,
     },
@@ -1315,8 +1275,7 @@ export const catalog = [
     fullname: "Stock Hang Tags - Financing Available - 9in x 12in (50/pk)",
     colors: ["Fluorg","Fluorp","Fluorr","Fluory"],
     type: "sales",
-    default_color: "Fluorg",
-    discount: [{ quantity: 50, price: 0.00 }],
+    default_color: "Fluorg",    
     sizes: {
       50: 0.00,
     },
@@ -1327,8 +1286,7 @@ export const catalog = [
     fullname: "Stock Hang Tags - Was Now - 9in x 12in (50/pk)",
     colors: ["Fluorg","Fluorp","Fluorr","Fluory"],
     type: "sales",
-    default_color: "Fluorg",
-    discount: [{ quantity: 50, price: 0.00 }],
+    default_color: "Fluorg",   
     sizes: {
       50: 0.00,
     },
@@ -1339,8 +1297,7 @@ export const catalog = [
     fullname: "Stock Hang Tags - Sale - 9in x 12in (50/pk)",
     colors: ["Fluorg","Fluorp","Fluorr","Fluory"],
     type: "sales",
-    default_color: "Fluorg",
-    discount: [{ quantity: 50, price: 0.00 }],
+    default_color: "Fluorg",   
     sizes: {
       50: 0.00,
     },
@@ -1351,8 +1308,7 @@ export const catalog = [
     fullname: "Stock Hang Tags - Clearance - 9in x 12in (50/pk)",
     colors: ["Fluorg","Fluorp","Fluorr","Fluory"],
     type: "sales",
-    default_color: "Fluorg",
-    discount: [{ quantity: 50, price: 0.00 }],
+    default_color: "Fluorg",   
     sizes: {
       50: 0.00,
     },
@@ -1363,8 +1319,7 @@ export const catalog = [
     fullname: "Stock Hang Tags - Like New - 9in x 12in (50/pk)",
     colors: ["Fluorg","Fluorp","Fluorr","Fluory"],
     type: "sales",
-    default_color: "Fluorg",
-    discount: [{ quantity: 50, price: 0.00 }],
+    default_color: "Fluorg",   
     sizes: {
       50: 0.00,
     },
@@ -1375,8 +1330,7 @@ export const catalog = [
     fullname: "Stock Hang Tags - Per Month - 9in x 12in (50/pk)",
     colors: ["Fluorg","Fluorp","Fluorr","Fluory"],
     type: "sales",
-    default_color: "Fluorg",
-    discount: [{ quantity: 50, price: 0.00 }],
+    default_color: "Fluorg",   
     sizes: {
       50: 0.00,
     },
@@ -1387,8 +1341,7 @@ export const catalog = [
     fullname: "Stock Hang Tags - List Price - 9in x 12in (50/pk)",
     colors: ["Fluorg","Fluorp","Fluorr","Fluory"],
     type: "sales",
-    default_color: "Fluorg",
-    discount: [{ quantity: 50, price: 0.00 }],
+    default_color: "Fluorg",   
     sizes: {
       50: 0.00,
     },
@@ -1399,8 +1352,7 @@ export const catalog = [
     fullname: "Stock Hang Tags - Special - 9in x 12in (50/pk)",
     colors: ["Fluorg","Fluorp","Fluorr","Fluory"],
     type: "sales",
-    default_color: "Fluorg",
-    discount: [{ quantity: 50, price: 0.00 }],
+    default_color: "Fluorg",   
     sizes: {
       50: 0.00,
     },
@@ -1412,7 +1364,6 @@ export const catalog = [
     colors: ["Fluorg","Fluorp","Fluorr","Fluory"],
     type: "sales",
     default_color: "Fluorg",
-    discount: [{ quantity: 50, price: 0.00 }],
     sizes: {
       50: 0.00,
     },
@@ -1423,8 +1374,7 @@ export const catalog = [
     fullname: "Stock Hang Tags - Blank - 9in x 12in (50/pk)",
     colors: ["Fluorg","Fluorp","Fluorr","Fluory"],
     type: "sales",
-    default_color: "Fluorg",
-    discount: [{ quantity: 50, price: 0.00 }],
+    default_color: "Fluorg",   
     sizes: {
       50: 0.00,
     },
@@ -1435,8 +1385,7 @@ export const catalog = [
     fullname: "Stock Hang Tags - Rebate - 9in x 12in (50/pk)",
     colors: ["Fluorg","Fluorp","Fluorr","Fluory"],
     type: "sales",
-    default_color: "Fluorg",
-    discount: [{ quantity: 50, price: 0.00 }],
+    default_color: "Fluorg",   
     sizes: {
       50: 0.00,
     },
@@ -1447,8 +1396,7 @@ export const catalog = [
     fullname: "Stock Hang Tags - Reduced - 9in x 12in (50/pk)",
     colors: ["Fluorg","Fluorp","Fluorr","Fluory"],
     type: "sales",
-    default_color: "Fluorg",
-    discount: [{ quantity: 50, price: 0.00 }],
+    default_color: "Fluorg",   
     sizes: {
       50: 0.00,
     },
@@ -1472,8 +1420,7 @@ export const catalog = [
     colors: ["A","B","C","D","E","F","G","H","I","J","K","L","M",
       "N","O","P","Q","R","S","T","U","V","W","X","Y","Z","Mc"],
     type: "sales",
-    default_color: "A",
-    discount: [{ quantity: 1, price: 0.00 }],
+    default_color: "A",    
     sizes: {
       1: 0.00,
     },
@@ -1484,8 +1431,7 @@ export const catalog = [
     fullname: "File Right Month Labels (270/sheet)",
     colors: ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],
     type: "sales",
-    default_color: "Jan",
-    discount: [{ quantity: 1, price: 0.00 }],
+    default_color: "Jan",    
     sizes: {
       1: 0.00,
     },
@@ -1496,8 +1442,7 @@ export const catalog = [
     fullname: "Certified Ovals (12/pk)",
     colors: ["Style A","Style B","Style C","Style D","Style E","Style F"],
     type: "sales",
-    default_color: "Style A",
-    discount: [{ quantity: 12, price: 0.00 }],
+    default_color: "Style A",    
     sizes: {
       12: 0.00,
     },
@@ -1509,7 +1454,6 @@ export const catalog = [
     colors: ["Blk Char","Blk Htpk","Blk Yllw","Blu Wht","Prp Char","Red Wht"],
     type: "sales",
     default_color: "Blk Char",
-    discount: [{ quantity: 12, price: 0.00 }],
     sizes: {
       12: 0.00,
     },
@@ -1520,8 +1464,7 @@ export const catalog = [
     fullname: "7 in. x 9 in. Bright Blue Bursts (2000-2026 avail - 12/pk)",
     colors: ["Blue24", "Blue25","Blue26"],
     type: "sales",
-    default_color: "Blue26",
-    discount: [{ quantity: 12, price: 0.00 }],
+    default_color: "Blue26",    
     sizes: {
       12: 0.00,
     },
@@ -1532,8 +1475,7 @@ export const catalog = [
     fullname: "9 in. x 11 in. Chartreuse Bursts (2000-2026 avail - 12/pk)",
     colors: ["Char24","Char25","Char26"],
     type: "sales",
-    default_color: "Char26",
-    discount: [{ quantity: 12, price: 0.00 }],
+    default_color: "Char26",    
     sizes: {
       12: 0.00,
     },
@@ -1544,8 +1486,7 @@ export const catalog = [
     fullname: "6 in. Happy Face (12/pk)",
     colors: ["Happy"],
     type: "sales",
-    default_color: "Happy",
-    discount: [{ quantity: 12, price: 0.00 }],
+    default_color: "Happy",    
     sizes: {
       12: 0.00,
     },
@@ -1556,8 +1497,7 @@ export const catalog = [
     fullname: "6 in. Happy Face w/sunglasses (12/pk)",
     colors: ["Sunglasses"],
     type: "sales",
-    default_color: "Sunglasses",
-    discount: [{ quantity: 12, price: 0.00 }],
+    default_color: "Sunglasses",    
     sizes: {
       12: 0.00,
     },
@@ -1568,8 +1508,7 @@ export const catalog = [
     fullname: "Numbers Box (holds 7.5 in x 9.5 in. numbers)",
     colors: ["White"],
     type: "sales",
-    default_color: "White",
-    discount: [{ quantity: 1, price: 0.00 }],
+    default_color: "White",    
     sizes: {
       1: 0.00,
     },
@@ -1580,8 +1519,7 @@ export const catalog = [
     fullname: "Vehicle Not for Sale Sticker (100/pk)",
     colors: ["Yellow"],
     type: "sales",
-    default_color: "Yellow",
-    discount: [{ quantity: 100, price: 0.00 }],
+    default_color: "Yellow",   
     sizes: {
       100: 0.00,
     },
@@ -1592,8 +1530,7 @@ export const catalog = [
     fullname: "Vehicle Not for Sale Sticker (100/pk)",
     colors: ["Yellow"],
     type: "sales",
-    default_color: "Yellow",
-    discount: [{ quantity: 100, price: 0.00 }],
+    default_color: "Yellow",   
     sizes: {
       100: 0.0,
     },
@@ -1604,8 +1541,7 @@ export const catalog = [
     fullname: "Vehicle Not for Sale Sticker (250/pk)",
     colors: ["Yellow"],
     type: "sales",
-    default_color: "Yellow",
-    discount: [{ quantity: 250, price: 0.00 }],
+    default_color: "Yellow",    
     sizes: {
       250: 0.0,
     },
@@ -1616,8 +1552,7 @@ export const catalog = [
     fullname: "Smog OK Sticker (100/pk)",
     colors: ["White"],
     type: "sales",
-    default_color: "White",
-    discount: [{ quantity: 100, price: 0.00 }],
+    default_color: "White",   
     sizes: {
       100: 0.0,
     },
@@ -1628,8 +1563,7 @@ export const catalog = [
     fullname: "Safety OK Sticker (100/pk)",
     colors: ["White"],
     type: "sales",
-    default_color: "White",
-    discount: [{ quantity: 100, price: 0.00 }],
+    default_color: "White",   
     sizes: {
       100: 0.0,
     },
@@ -1640,8 +1574,7 @@ export const catalog = [
     fullname: "Hold/Sold Tag - 8.5 in x 11 in. (50/pk)",
     colors: ["Yellow"],
     type: "sales",
-    default_color: "Yellow",
-    discount: [{ quantity: 50, price: 0.00 }],
+    default_color: "Yellow",   
     sizes: {
       50: 0.0,
     },
@@ -1652,8 +1585,7 @@ export const catalog = [
     fullname: "Hold/Sold Tag - 8 in x 4 in. (250/pk)",
     colors: ["Yellow"],
     type: "sales",
-    default_color: "Yellow",
-    discount: [{ quantity: 250, price: 0.00 }],
+    default_color: "Yellow",   
     sizes: {
       250: 0.0,
     },
@@ -1664,8 +1596,7 @@ export const catalog = [
     fullname: "Hold/Sold Tag - 4.5 in x 2.5 in. (250/pk)",
     colors: ["Yellow"],
     type: "sales",
-    default_color: "Yellow",
-    discount: [{ quantity: 250, price: 0.00 }],
+    default_color: "Yellow",    
     sizes: {
       250: 0.0,
     },
@@ -1676,8 +1607,7 @@ export const catalog = [
     fullname: "License Plate Envelope - 13 in x 6.5 in. (100/box)",
     colors: ["Kraft Paper"],
     type: "sales",
-    default_color: "Kraft Paper",
-    discount: [{ quantity: 100, price: 0.00 }],
+    default_color: "Kraft Paper",   
     sizes: {
       100: 0.0,
     },
@@ -1688,8 +1618,7 @@ export const catalog = [
     fullname: "Temp Tag Cover - Plastic (100/pk)",
     colors: ["Clear Plastic"],
     type: "sales",
-    default_color: "Clear Plastic",
-    discount: [{ quantity: 100, price: 0.00 }],
+    default_color: "Clear Plastic",   
     sizes: {
       100: 0.0,
     },
@@ -1700,8 +1629,7 @@ export const catalog = [
     fullname: "License Plate Protector (100/pk)",
     colors: ["Clear"],
     type: "sales",
-    default_color: "Clear",
-    discount: [{ quantity: 100, price: 0.00 }],
+    default_color: "Clear",   
     sizes: {
       100: 0.0,
     },
@@ -1712,8 +1640,7 @@ export const catalog = [
     fullname: "Grease Marker (1 each)",
     colors: ["Blue","Green","Pink","Orange","Purple","Red","White","Yellow"],
     type: "sales",
-    default_color: "Blue",
-    discount: [{ quantity: 1, price: 0.00 }],
+    default_color: "Blue",    
     sizes: {
       1: 0.00,
     },
@@ -1724,8 +1651,7 @@ export const catalog = [
     fullname: "Regular Uni-Posca Marker (1 each)",
     colors: ["Green","Orange","Pink","Red","White","Yellow"],
     type: "sales",
-    default_color: "Orange",
-    discount: [{ quantity: 1, price: 0.00 }],
+    default_color: "Orange",    
     sizes: {
       1: 0.00,
     },
@@ -1736,8 +1662,7 @@ export const catalog = [
     fullname: "LARGE Uni-Posca Marker (1 each)",
     colors: ["Blue","Pink","Red","White","Yellow"],
     type: "sales",
-    default_color: "Blue",
-    discount: [{ quantity: 1, price: 0.00 }],
+    default_color: "Blue",    
     sizes: {
       1: 0.00,
     },
@@ -1748,8 +1673,7 @@ export const catalog = [
     fullname: "Floor Mats/Coated Paper (500/bx)",
     colors: ["White"],
     type: "service",
-    default_color: "White",
-    discount: [{ quantity: 500, price: 0.00 }],
+    default_color: "White",   
     sizes: {
       500: 0.0,
     },
@@ -1760,8 +1684,7 @@ export const catalog = [
     fullname: "Steering Wheel Covers (500/bx)",
     colors: ["Plastic"],
     type: "service",
-    default_color: "Plastic",
-    discount: [{ quantity: 500, price: 0.00 }],
+    default_color: "Plastic",    
     sizes: {
       500: 0.0,
     },
@@ -1772,8 +1695,7 @@ export const catalog = [
     fullname: "The Gripper Plastic Seat Covers (250/box)",
     colors: ["Plastic"],
     type: "service",
-    default_color: "Plastic",
-    discount: [{ quantity: 250, price: 0.00 }],
+    default_color: "Plastic",    
     sizes: {
       250: 0.0,
     },
@@ -1784,8 +1706,7 @@ export const catalog = [
     fullname: "No-Slip Plastic Seat Covers (500/roll)",
     colors: ["Plastic"],
     type: "service",
-    default_color: "Plastic",
-    discount: [{ quantity: 1, price: 0.00 }],
+    default_color: "Plastic",    
     sizes: {
       500: 0.0,
     },
@@ -1796,8 +1717,7 @@ export const catalog = [
     fullname: "Seat Cover Floor Stand",
     colors: ["Black"],
     type: "service",
-    default_color: "Black",
-    discount: [{ quantity: 1, price: 0.00 }],
+    default_color: "Black",    
     sizes: {
       1: 0.0,
     },
@@ -1808,8 +1728,7 @@ export const catalog = [
     fullname: "Seat Cover Wall Dispenser",
     colors: ["Black"],
     type: "service",
-    default_color: "Black",
-    discount: [{ quantity: 1, price: 0.00 }],
+    default_color: "Black",    
     sizes: {
       1: 0.0,
     },
@@ -1820,8 +1739,7 @@ export const catalog = [
     fullname: "Metal Spring Rings (250/pk)",
     colors: ["Metal"],
     type: "service",
-    default_color: "Metal",
-    discount: [{ quantity: 250, price: 0.00 }],
+    default_color: "Metal",    
     sizes: {
       250: 0.00,
     },
@@ -1844,8 +1762,7 @@ export const catalog = [
     colors: ["_0000","1000","2000","3000","4000","5000",
       "6000","7000","8000", "9000"],  
     type: "service",
-    default_color: "1000",
-    discount: [{ quantity: 1, price: 0.00 }],
+    default_color: "1000",    
     sizes: {
       1: 0.0,
     },
@@ -1856,8 +1773,7 @@ export const catalog = [
     fullname: "Mirror Hang Service Numbers (1000/bx)",
     colors: ["Blue","Green","Grey","Lime","Orange","Pink","Purple","Red","Tan","White","Yellow"],  
     type: "service",
-    default_color: "Blue",
-    discount: [{ quantity: 1, price: 0.00 }],
+    default_color: "Blue",    
     sizes: {
       1: 0.0,
     },
@@ -1869,8 +1785,7 @@ export const catalog = [
     colors: ["_0000","1000","2000","3000","4000","5000",
       "6000","7000","8000", "9000"],  
     type: "service",
-    default_color: "1000",
-    discount: [{ quantity: 1, price: 0.00 }],
+    default_color: "1000",    
     sizes: {
       1: 0.0,
     },
@@ -1881,8 +1796,7 @@ export const catalog = [
     fullname: "Mirror Hang Service Numbers (000-999) (1000/bx)",
     colors: ["White"],  
     type: "service",
-    default_color: "White",
-    discount: [{ quantity: 1, price: 0.00 }],
+    default_color: "White",    
     sizes: {
       1: 0.0,
     },
@@ -1893,8 +1807,7 @@ export const catalog = [
     fullname: "Colored Dispatch Numbers (1000/pk)",
     colors: ["Blue","Green","Red","White","Yellow"],  
     type: "service",
-    default_color: "Blue",
-    discount: [{ quantity: 1, price: 0.00 }],
+    default_color: "Blue",    
     sizes: {
       1: 0.0,
     },
@@ -1905,8 +1818,7 @@ export const catalog = [
     fullname: "8.5 x 11 Blank Vinyl Sheet #9300 (100/pk)",
     colors: ["White"],
     type: "sales",
-    default_color: "White",
-    discount: [{ quantity: 1, price: 0.00 }],
+    default_color: "White",    
     sizes: {
       default: 0.00,
     },
@@ -1917,8 +1829,7 @@ export const catalog = [
     fullname: "Buyers Guide, Blank Front (100/pk)",
     colors: ["White"],
     type: "sales",
-    default_color: "White",
-    discount: [{ quantity: 1, price: 0.00 }],
+    default_color: "White",    
     sizes: {
       default: 0.00,
     },
@@ -1930,8 +1841,7 @@ export const catalog = [
     colors: ["YR 07","YR 08","YR 09","YR 10","YR 11","YR 12","YR 13","YR 14","YR 15","YR 16",
      "YR 17","YR 18","YR 19","YR 20","YR 21","YR 22", "YR 23", "YR 24","YR 25", "YR 26"],
     type: "sales",
-    default_color: "YR 07",
-    discount: [{ quantity: 1, price: 0.00 }],
+    default_color: "YR 07",    
     sizes: {
       1: 0.00,
     },
@@ -1943,8 +1853,7 @@ export const catalog = [
     colors: ["YR 2016", "YR 2017","YR 2018","YR 2019","YR 2020",
      "YR 2021","YR 2022","YR 2023","YR 2024", "YR 2025","YR 2026"],   
     type: "sales",
-    default_color: "YR 2016",
-    discount: [{ quantity: 1, price: 0.00 }],
+    default_color: "YR 2016",    
     sizes: {
       1: 0.00,
     },
