@@ -57,11 +57,8 @@ jobs:
         working-directory: ./client
 
       # 7. Run the deploy script from package.json
-      # The working directory must also be set here.
-      # Setting NODE_OPTIONS to use legacy OpenSSL provider for Node.js v17+ compatibility.
       - name: Run Deploy Script
         run: npm run deploy
         working-directory: ./client
-        env:
-          NODE_OPTIONS: '--openssl-legacy-provider'
-          SKIP_PREFLIGHT_CHECK: true
+        environment: 
+          CI: false
