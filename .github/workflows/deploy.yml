@@ -1,45 +1,31 @@
-# This workflow demonstrates how to set up Terraform and the AWS CLI.
-name: Terraform and AWS CLI Workflow
+name: Deploy client and server
 
-# Controls when the workflow will run
-# This action triggers on every push event to any branch.
 on:
   push:
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "build"
   build:
-    # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
-    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # 1. Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - name: Checkout code
         uses: actions/checkout@v4
 
-      # 2. Installs a specific version of Terraform CLI
       - name: Setup Terraform
         uses: hashicorp/setup-terraform@v3
 
-      # 3. Configures AWS credentials from repository secrets
-      # You must create secrets in your repository settings named AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v4
         with:
           aws-access-key-id: ${{ secrets.CANNON_KEY }}
           aws-secret-access-key: ${{ secrets.CANNON_SECRET }}
-          aws-region: us-east-1 # Change to your desired AWS region
+          aws-region: us-east-1
 
-      # 4. Set up Node.js environment
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20' # Specify the Node.js version you need
+          node-version: '20'
 
-      # 5. Cache npm dependencies
-      # This step caches the node_modules directory to speed up subsequent runs.
       - name: Cache Node.js modules
         id: cache-npm
         uses: actions/cache@v4
@@ -49,16 +35,31 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-node-
 
-      # 6. Install dependencies if cache not found
-      # Make sure to set the correct working directory if your package.json is not in the root.
       - name: Install NPM Dependencies
         if: steps.cache-npm.outputs.cache-hit != 'true'
         run: npm install
         working-directory: ./client
 
-      # 7. Run the deploy script from package.json
       - name: Run Deploy Script
         run: npm run deploy
         working-directory: ./client
         env: 
           CI: false
+
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-access-key-id: ${{ secrets.GPC_KEY }}
+          aws-secret-access-key: ${{ secrets.GPC_SECRET }}
+          aws-region: us-east-1
+
+      - name: Install NPM Dependencies
+        run: npm install
+        working-directory: ./backend
+
+      - name: Run Deploy Script
+        run: npm run deploy
+        working-directory: ./backend
+        env: 
+          CI: false
+      
