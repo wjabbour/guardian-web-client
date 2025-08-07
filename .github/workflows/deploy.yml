@@ -41,7 +41,9 @@ jobs:
       # 5. Install dependencies
       - name: Install NPM Dependencies
         run: npm install
+        working-directory: ./client
 
       # 6. Run the deploy script from package.json
       - name: Run Deploy Script
         run: npm run deploy
+        working-directory: ./client
