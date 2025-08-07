@@ -18,7 +18,7 @@
     "react-dom": "^18.2.0",
     "react-helmet": "^6.1.0",
     "react-router-dom": "^6.15.0",
-    "react-scripts": "^3.0.1",
+    "react-scripts": "^5.0.1",
     "sass": "^1.66.1",
     "sass-loader": "^13.3.2",
     "typescript": "3.9.4",
@@ -26,8 +26,8 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "deploy": "npm run deploy-cannon && npm run deploy-gpc81",
-    "deploy-cannon": "set AWS_PROFILE=cannon&& npm run build && aws s3 cp build s3://cannonemployeestore.com/ --recursive && aws cloudfront create-invalidation --distribution-id E14D6FK2VK66GQ --paths \"/*\"",
+    "deploy": "npm run deploy-cannon",
+    "deploy-cannon": "set AWS_PROFILE=cannon && npm run build && aws s3 cp build s3://cannonemployeestore.com/ --recursive && aws cloudfront create-invalidation --distribution-id E14D6FK2VK66GQ --paths \"/*\"",
     "deploy-gpc81": "npm run build && aws s3 cp build s3://gpc81.com/ --recursive && aws cloudfront create-invalidation --distribution-id E1R5RLNLHZTA8G --paths \"/*\"",
     "start": "react-scripts start",
     "build": "react-scripts build",
