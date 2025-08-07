@@ -14,37 +14,37 @@ jobs:
       - name: Setup Terraform
         uses: hashicorp/setup-terraform@v3
 
-      - name: Configure AWS Credentials
-        uses: aws-actions/configure-aws-credentials@v4
-        with:
-          aws-access-key-id: ${{ secrets.CANNON_KEY }}
-          aws-secret-access-key: ${{ secrets.CANNON_SECRET }}
-          aws-region: us-east-1
+      # - name: Configure AWS Credentials
+      #   uses: aws-actions/configure-aws-credentials@v4
+      #   with:
+      #     aws-access-key-id: ${{ secrets.CANNON_KEY }}
+      #     aws-secret-access-key: ${{ secrets.CANNON_SECRET }}
+      #     aws-region: us-east-1
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '20'
+      # - name: Setup Node.js
+      #   uses: actions/setup-node@v4
+      #   with:
+      #     node-version: '20'
 
-      - name: Cache Node.js modules
-        id: cache-npm
-        uses: actions/cache@v4
-        with:
-          path: ./client/node_modules
-          key: ${{ runner.os }}-node-${{ hashFiles('./client/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-node-
+      # - name: Cache Node.js modules
+      #   id: cache-npm
+      #   uses: actions/cache@v4
+      #   with:
+      #     path: ./client/node_modules
+      #     key: ${{ runner.os }}-node-${{ hashFiles('./client/package-lock.json') }}
+      #     restore-keys: |
+      #       ${{ runner.os }}-node-
 
-      - name: Install NPM Dependencies
-        if: steps.cache-npm.outputs.cache-hit != 'true'
-        run: npm install
-        working-directory: ./client
+      # - name: Install NPM Dependencies
+      #   if: steps.cache-npm.outputs.cache-hit != 'true'
+      #   run: npm install
+      #   working-directory: ./client
 
-      - name: Run Deploy Script
-        run: npm run deploy
-        working-directory: ./client
-        env: 
-          CI: false
+      # - name: Run Deploy Script
+      #   run: npm run deploy
+      #   working-directory: ./client
+      #   env: 
+      #     CI: false
 
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v4
@@ -53,11 +53,11 @@ jobs:
           aws-secret-access-key: ${{ secrets.GPC_SECRET }}
           aws-region: us-east-1
 
-      - name: Install NPM Dependencies
+      - name: Install backend dependencies
         run: npm install
         working-directory: ./backend
 
-      - name: Run Deploy Script
+      - name: Deploy server
         run: npm run deploy
         working-directory: ./backend
         env: 
