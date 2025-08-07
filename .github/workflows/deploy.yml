@@ -1,5 +1,5 @@
-# This is a basic workflow to demonstrate running a simple bash command.
-name: Hello World CI
+# This workflow demonstrates how to set up Terraform and the AWS CLI.
+name: Terraform and AWS CLI Workflow
 
 # Controls when the workflow will run
 # This action triggers on every push event to any branch.
@@ -15,6 +15,33 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # A single step to echo "Hello world"
-      - name: Echo Hello World
-        run: echo "Hello world"
+      # 1. Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      # 2. Installs a specific version of Terraform CLI
+      - name: Setup Terraform
+        uses: hashicorp/setup-terraform@v3
+
+      # 3. Configures AWS credentials from repository secrets
+      # You must create secrets in your repository settings named AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-access-key-id: ${{ secrets.CANNON_KEY }}
+          aws-secret-access-key: ${{ secrets.CANNON_SECRET }}
+          aws-region: us-east-1 # Change to your desired AWS region
+
+      # 4. Set up Node.js environment
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20' # Specify the Node.js version you need
+
+      # 5. Install dependencies
+      - name: Install NPM Dependencies
+        run: npm install
+
+      # 6. Run the deploy script from package.json
+      - name: Run Deploy Script
+        run: npm run deploy
