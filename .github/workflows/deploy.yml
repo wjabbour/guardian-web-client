@@ -1,0 +1,20 @@
+# This is a basic workflow to demonstrate running a simple bash command.
+name: Hello World CI
+
+# Controls when the workflow will run
+# This action triggers on every push event to any branch.
+on:
+  push:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # A single step to echo "Hello world"
+      - name: Echo Hello World
+        run: echo "Hello world"
