@@ -28,8 +28,8 @@ jobs:
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v4
         with:
-          aws-access-key-id: ${{ secrets.CANNON_KEY }}
-          aws-secret-access-key: ${{ secrets.CANNON_SECRET }}
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: us-east-1 # Change to your desired AWS region
 
       # 4. Set up Node.js environment
@@ -38,12 +38,30 @@ jobs:
         with:
           node-version: '20' # Specify the Node.js version you need
 
-      # 5. Install dependencies
+      # 5. Cache npm dependencies
+      # This step caches the node_modules directory to speed up subsequent runs.
+      - name: Cache Node.js modules
+        id: cache-npm
+        uses: actions/cache@v4
+        with:
+          path: ./client/node_modules
+          key: ${{ runner.os }}-node-${{ hashFiles('./client/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+
+      # 6. Install dependencies if cache not found
+      # Make sure to set the correct working directory if your package.json is not in the root.
       - name: Install NPM Dependencies
+        if: steps.cache-npm.outputs.cache-hit != 'true'
         run: npm install
         working-directory: ./client
 
-      # 6. Run the deploy script from package.json
+      # 7. Run the deploy script from package.json
+      # The working directory must also be set here.
+      # Setting NODE_OPTIONS to use legacy OpenSSL provider for Node.js v17+ compatibility.
       - name: Run Deploy Script
         run: npm run deploy
         working-directory: ./client
+        env:
+          NODE_OPTIONS: '--openssl-legacy-provider'
+          SKIP_PREFLIGHT_CHECK: true
