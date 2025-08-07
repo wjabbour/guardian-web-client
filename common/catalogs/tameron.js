@@ -6,7 +6,7 @@ export const catalog = [
     colors: ["Black"],
     type: "customs",
     default_color: "Black",
-    supportedStores: ["ONLINE"],
+    supportedStores: ["TAMCDA","TAMBDA","TAMSMO","TAMHDA","TAMKDI","TAMNMO","TAMKWE","ONLINE"],
     sizes: {
        500: 1.59,
       1000: 1.44,
@@ -21,7 +21,7 @@ export const catalog = [
     colors: ["Black"],
     type: "customs",
     default_color: "Black",
-    supportedStores: ["ONLINE"],
+    supportedStores: ["TAMCDA","TAMBDA","TAMSMO","TAMHDA","TAMKDI","TAMNMO","TAMKWE","ONLINE"],
     sizes: {
        500: 0.79,
       1000: 0.59,
@@ -36,7 +36,7 @@ export const catalog = [
     colors: ["Black", "White"],
     type: "customs",
     default_color: "Black",
-    supportedStores: ["ONLINE"],
+    supportedStores: ["TAMCDA","TAMBDA","TAMSMO","TAMHDA","TAMKDI","TAMNMO","TAMKWE","ONLINE"],
     sizes: {
        500: 0.79,
       1000: 0.49,
@@ -51,6 +51,7 @@ export const catalog = [
     colors: ["Black"],
     type: "customs",
     default_color: "Black",
+    supportedStores: ["TAMCDA","TAMBDA","TAMSMO","TAMHDA","TAMKDI","TAMNMO","TAMKWE","ONLINE"],
     sizes: {
        250: 3.79,
        500: 3.54,

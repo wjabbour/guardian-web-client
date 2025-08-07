@@ -14,10 +14,45 @@ export const config = {
   email_recipients: ["lbudbill@gpcorp.com", "lbudbell@comcast.net"],
   stores: [
     {
-      name: "Tameron",
-      address: "12345 Online Order Pkwy, AL, 55555",
-      code: "ONLINE",
+      name: "C11 Tameron CDJR (TAMCDA)",
+      address: "",
+      code: "TAMCDA",
     },
+    {
+      name: "C12 Tameron GMC (TAMBDA)",
+      address: "",
+      code: "TAMBDA",
+    },
+    {
+      name: "C15 Tameron Subaru (TAMSMO)",
+      address: "",
+      code: "TAMSMO",
+    },
+    {
+      name: "C16 Tameron Honda (TAMHDA)",
+      address: "",
+      code: "TAMHDA",
+    },
+    {
+      name: "C17 Tameron Kia (TAMKDI)",
+      address: "",
+      code: "TAMKDI",
+    },
+    {
+      name: "C18 Tameron Nissan Mobile (TAMNMO)",
+      address: "",
+      code: "TAMNMO",
+    },
+    {
+      name: "C19 Tameron Kia Nola (TAMKWE)",
+      address: "",
+      code: "TAMKWE",
+    },
+    {
+      name: "C20 Tameron Nissan Eastern Shore",
+      address: "",
+      code: "ONLINE",
+    },    
   ],    
   bypass_codes: ["TAMERO"],
   server_hostname: "https://mxfj3q6m01.execute-api.us-east-1.amazonaws.com",
