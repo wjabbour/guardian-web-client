@@ -60,5 +60,5 @@ jobs:
       - name: Run Deploy Script
         run: npm run deploy
         working-directory: ./client
-        environment: 
+        env: 
           CI: false
