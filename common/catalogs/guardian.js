@@ -3,7 +3,7 @@ export const catalog = [
     code: "CP91L",
     name: "Port & Company Beanie",
     fullname: "Port & Company® Fleece-Lined Beanie Cap",
-    colors: ["Athletic Red", "Athletic Royal", "Black"],
+    colors: ["Athletic Red", "Athletic Royal", "Black","Navy"],
     type: "mens",
     default_color: "Black",
     sizes: {
