@@ -35,12 +35,12 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-node-
 
-      - name: Install NPM Dependencies
+      - name: Install client dependencies
         if: steps.cache-npm.outputs.cache-hit != 'true'
         run: npm install
         working-directory: ./client
 
-      - name: Run Deploy Script
+      - name: Deploy client
         run: npm run deploy
         working-directory: ./client
         env: 
