@@ -1,10 +1,11 @@
 export const config = {
   title: "Hennessy",
   company_logo: "hennessy.png",
-  logo_placements: ["Left Chest","Front Center"],
+  logo_placements: ["Left Chest","Right Sleeve","Front Center"],
   show_modification_thumbnail: true,
-  minimum_apparel_order: true,
+  minimum_apparel_order: false,
   render_logo_preview: true,
+  show_image_preview: true,
   embroideries: {
     mens: [
       "Hennessy Automobile",
@@ -50,7 +51,7 @@ export const config = {
     ],
     accessory: [],
     sales: [],
-    service: [],  
+    service: [],     
   },
   email_recipients: [
     "lbudbill@gpcorp.com", 

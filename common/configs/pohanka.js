@@ -1,6 +1,7 @@
 export const config = {
   title: "Pohanka",
   company_logo: "pohanka.png",
+  show_image_preview: true,
   logo_placements: [
     "Left Chest",
     "Left Sleeve",
