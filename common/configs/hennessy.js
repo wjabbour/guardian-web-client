@@ -7,7 +7,7 @@ export const config = {
   render_logo_preview: true,
   embroideries: {
     mens: [
-      "Hennessy Auto Mobile",
+      "Hennessy Automobile",
       "Hennessy Ford",
       "Hennessy Ford Lincoln",
       "Hennessy Honda",
@@ -21,7 +21,7 @@ export const config = {
       "Porsche Atlanta NW",            
       ],
     womens: [
-      "Hennessy Auto Mobile",
+      "Hennessy Automobile",
       "Hennessy Ford",
       "Hennessy Ford Lincoln",
       "Hennessy Honda",
@@ -35,7 +35,7 @@ export const config = {
       "Porsche Atlanta NW", 
     ],  
     customs: [
-      "Hennessy Auto Mobile",
+      "Hennessy Automobile",
       "Hennessy Ford",
       "Hennessy Ford Lincoln",
       "Hennessy Honda",
@@ -56,6 +56,7 @@ export const config = {
     "lbudbill@gpcorp.com", 
     "lbudbell@comcast.net",
     "asarazua@gpcorp.com",
+    "jboston@gpcorp.com",
     "Zwarner@hennessyauto.com"],
 
   stores: [
@@ -123,8 +124,8 @@ export const config = {
   bypass_codes: ["HENNES"],
   server_hostname: "https://mxfj3q6m01.execute-api.us-east-1.amazonaws.com",
   account_reps: [
-    { name: "Louis Budbill", phone: "678-287-1659" },
     { name: "Andrew Sarazua", phone: "678-287-1604" },
+    { name: "John Boston", phone: "678-287-1601" },
   ],
   route_prefix: "/hennessy",
   paypal_not_supported: true,
