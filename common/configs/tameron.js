@@ -14,42 +14,42 @@ export const config = {
   email_recipients: ["lbudbill@gpcorp.com", "lbudbell@comcast.net"],
   stores: [
     {
-      name: "C11 Tameron CDJR (TAMCDA)",
+      name: "C11 Tameron CDJR",
       address: "",
       code: "TAMCDA",
     },
     {
-      name: "C12 Tameron GMC (TAMBDA)",
+      name: "C12 Tameron GMC",
       address: "",
       code: "TAMBDA",
     },
     {
-      name: "C15 Tameron Subaru (TAMSMO)",
+      name: "C15 Tameron Subaru",
       address: "",
       code: "TAMSMO",
     },
     {
-      name: "C16 Tameron Honda (TAMHDA)",
+      name: "C16 Tameron Honda",
       address: "",
       code: "TAMHDA",
     },
     {
-      name: "C17 Tameron Kia (TAMKDI)",
+      name: "C17 Tameron Kia",
       address: "",
       code: "TAMKDI",
     },
     {
-      name: "C18 Tameron Nissan Mobile (TAMNMO)",
+      name: "C18 Tameron Nissan Mobile",
       address: "",
       code: "TAMNMO",
     },
     {
-      name: "C19 Tameron Kia Nola (TAMKWE)",
+      name: "C19 Tameron Kia Nola",
       address: "",
       code: "TAMKWE",
     },
     {
-      name: "C20 Tameron Nissan Eastern Shore",
+      name: "C20 Tameron Nissan E Shore",
       address: "",
       code: "ONLINE",
     },    
