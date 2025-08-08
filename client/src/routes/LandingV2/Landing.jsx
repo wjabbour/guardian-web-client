@@ -42,6 +42,7 @@ export default function LandingV2() {
           photo_url="/images/auto.png"
           title={"Auto Catalog"}
         ></Category>
+        asd
         <Category
           location="https://www.flipsnack.com/gpcorp/2024apparelcatalog-v7/full-view.html"
           photo_url="/images/apparel.png"
