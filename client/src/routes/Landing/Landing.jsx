@@ -62,6 +62,13 @@ export default function Landing() {
             no_space={true}
           />
         )}
+        {types["tshirts"] && (
+          <ClothingIcon
+            img={"/images/tshirts1.jpg"}
+            link={"/catalog/detail"}
+            no_space={true}
+          />
+        )}
         {types["bodyshop"] && (
           <ClothingIcon
             img={"/images/bodyshop.jpg"}
