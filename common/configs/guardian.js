@@ -15,6 +15,7 @@ export const config = {
     detail: [],
     bodyshop: [],
     parts: [],
+    tshirts: ["Guardian"],
   },
   email_recipients: ["lbudbill@gpcorp.com", "lbudbell@comcast.net"],
   stores: [
