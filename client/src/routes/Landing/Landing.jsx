@@ -27,6 +27,13 @@ export default function Landing() {
             no_space={true}
           />
         )}
+        {types["tshirts"] && (
+          <ClothingIcon
+            img={"/images/tshirts1.jpg"}
+            link={"/catalog/tshirts"}
+            no_space={true}
+          />  
+        )}
         {types["office"] && (
           <ClothingIcon
             img={"/images/office.jpg"}
@@ -60,14 +67,7 @@ export default function Landing() {
             img={"/images/detail.jpg"}
             link={"/catalog/detail"}
             no_space={true}
-          />
-        )}
-        {types["tshirts"] && (
-          <ClothingIcon
-            img={"/images/tshirts1.jpg"}
-            link={"/catalog/tshirts"}
-            no_space={true}
-          />
+          />        
         )}
         {types["bodyshop"] && (
           <ClothingIcon
