@@ -22,7 +22,7 @@ export default function Landing() {
         )}
         {types["womens"] && (
           <ClothingIcon
-            img={"/images/ladies1.jpg"}
+            img={"/images/ladies2.jpg"}
             link={"/catalog/womens"}
             no_space={true}
           />
@@ -36,21 +36,21 @@ export default function Landing() {
         )}
         {types["service"] && (
           <ClothingIcon
-            img={"/images/service.jpg"}
+            img={"/images/service2.jpg"}
             link={"/catalog/service"}
             no_space={true}
           />
         )}
         {types["customs"] && (
           <ClothingIcon
-            img={"/images/customsguar.jpg"}
+            img={"/images/custom2.jpg"}
             link={stores.length ? "/stores" : "/catalog/customs"}
             no_space={true}
           />
         )}
         {types["sales"] && (
           <ClothingIcon
-            img={"/images/sales.jpg"}
+            img={"/images/sales2.jpg"}
             link={"/catalog/sales"}
             no_space={true}
           />
