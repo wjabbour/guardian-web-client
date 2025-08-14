@@ -25,6 +25,8 @@ export default function ClothingCatalog() {
       setCatalogType("hat");
     } else if (location.pathname.includes("/accessory")) {
       setCatalogType("accessory");
+    } else if (location.pathname.includes("/tshirts")) {
+      setCatalogType("tshirts");
     } else if (location.pathname.includes("/detail")) {
       setCatalogType("detail");
     } else if (location.pathname.includes("/bodyshop")) {
