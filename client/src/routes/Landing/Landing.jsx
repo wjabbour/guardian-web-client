@@ -85,7 +85,7 @@ export default function Landing() {
         )}
         {types["accessory"] && (
           <ClothingIcon
-            img={"/images/accessories.jpg"}
+            img={"/images/accessories2.jpg"}
             link={"/catalog/accessory"}
             no_space={false}
           />
