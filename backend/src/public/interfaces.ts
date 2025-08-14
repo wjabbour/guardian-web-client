@@ -14,6 +14,7 @@ export interface CatalogItem {
     | "office"
     | "service"
     | "sales"
+    | "tshirts"
     | "detail"
     | "bodyshop"
     | "parts";
