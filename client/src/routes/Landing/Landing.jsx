@@ -30,7 +30,7 @@ export default function Landing() {
         {types["tshirts"] && (
           <ClothingIcon
             img={"/images/tshirts1.jpg"}
-            link={"/catalog/tshirt"}
+            link={"/catalog/tshirts"}
             no_space={true}
           />  
         )}
@@ -87,7 +87,7 @@ export default function Landing() {
           <ClothingIcon
             img={"/images/accessories2.jpg"}
             link={"/catalog/accessory"}
-            no_space={false}
+            no_space={true}
           />
         )}
       </div>
