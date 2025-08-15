@@ -53,7 +53,9 @@ export default function Modification() {
     setPlacement(event.target.value);
   };
 
-  const embroideries = getEmbroidery(item.sub_category || item.type).map((e) => {
+  const embroideries = (
+    getEmbroidery(item.sub_category || item.type) || []
+  ).map((e) => {
     return <MenuItem value={e}>{e}</MenuItem>;
   });
 
