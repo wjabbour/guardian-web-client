@@ -5,17 +5,13 @@ import { useState } from "react";
 import Snackbar from "@mui/material/Snackbar";
 import { SvgIcon } from "@mui/material";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
-import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
-import FormControl from "@mui/material/FormControl";
-import Select from "@mui/material/Select";
 import Alert from "@mui/material/Alert";
 import { getDomainAwarePath, getEmbroidery } from "../../lib/utils";
-import { getWebConfigValue } from "guardian-common";
-import Thumbnail from "./Thumbnail";
 import ColorSelector from "./ColorSelector";
 import QuantitySelector from "./QuantitySelector";
 import { CartItem } from "../../lib/interfaces";
+import EmbroiderySelector from "./EmbroiderySelector";
 
 export async function loader({ params }) {
   return getWebCatalog().find((i) => i.code === params.id);
@@ -42,7 +38,6 @@ export default function Modification() {
   const [price] = useState(item.sizes[selected_size]);
   const [embroidery, setEmbroidery] = useState("");
   const [placement, setPlacement] = useState("Left Chest");
-  const logo_placements = getWebConfigValue("logo_placements") as string[];
   const [customsOrder, setCustomsOrder] = useState({});
 
   const handleChange = (event) => {
@@ -58,51 +53,6 @@ export default function Modification() {
   ).map((e) => {
     return <MenuItem value={e}>{e}</MenuItem>;
   });
-
-  const embroiderySelector = () => {
-    if (item.type === "customs" || embroideries.length === 0) {
-      return <></>;
-    }
-
-    return (
-      <div className={styles.selector}>
-        <FormControl fullWidth>
-          <InputLabel>Logo</InputLabel>
-          <Select value={embroidery} label="embroidery" onChange={handleChange}>
-            {embroideries}
-          </Select>
-        </FormControl>
-      </div>
-    );
-  };
-
-  const placementSelector = () => {
-    const hasCorrectType = ["womens", "mens"].includes(item.type);
-    const hasPlacementOptions = logo_placements.length > 0;
-
-    if (hasCorrectType && hasPlacementOptions) {
-      const placements = logo_placements.map((l) => {
-        return <MenuItem value={l}>{l}</MenuItem>;
-      });
-
-      return (
-        <div className={styles.selector}>
-          <FormControl fullWidth>
-            <InputLabel>Logo Placement</InputLabel>
-            <Select
-              value={placement}
-              label="placement"
-              onChange={handlePlacementChange}
-            >
-              {placements}
-            </Select>
-          </FormControl>
-        </div>
-      );
-    } else {
-      return <></>;
-    }
-  };
 
   function handleSnackbarClose() {
     setSnackbarOpen(false);
@@ -293,16 +243,14 @@ export default function Modification() {
               set_image_source={set_image_source}
             />
           </div>
-          <div className={`${styles.flex} ${styles.md_margin_bottom}`}>
-            <div>
-              {embroiderySelector()}
-              {placementSelector()}
-            </div>
-            <div>
-              <Thumbnail img={embroidery} />
-            </div>
-          </div>
-
+          <EmbroiderySelector
+            item={item}
+            embroideries={embroideries}
+            embroidery={embroidery}
+            placement={placement}
+            handleChange={handleChange}
+            handlePlacementChange={handlePlacementChange}
+          />
           <QuantitySelector
             item={item}
             sizes={sizes}
