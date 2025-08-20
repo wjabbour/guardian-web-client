@@ -19,7 +19,8 @@ export const config = {
       "Hennessy Porsche",
       "Porsche",      
       "Porsche North Atl",
-      "Porsche Atlanta NW",            
+      "Porsche Atlanta NW", 
+      "JLR",          
       ],
     womens: [
       "Hennessy Automobile",
@@ -34,6 +35,7 @@ export const config = {
       "Porsche",      
       "Porsche North Atl",
       "Porsche Atlanta NW", 
+      "JLR",
     ],  
     customs: [
       "Hennessy Automobile",
@@ -48,6 +50,7 @@ export const config = {
       "Porsche",     
       "Porsche North Atl",
       "Porsche Atlanta NW", 
+      "JLR",
     ],
     accessory: [],
     sales: [],
