@@ -897,7 +897,7 @@ export const catalog = [
     code: "SET1020",
     name: "Keychain & Pen Set",
     fullname: "Metal Leather Keychain & Ballpoint Pen Set",
-    colors: ["Colors"],
+    colors: ["Colors","Black","Blue","Brown","Burgundy","Green","Orange","Pink","Purple","Red"],
     type: "accessory",
     default_color: "Colors",   
     sizes: {
