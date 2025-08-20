@@ -894,6 +894,21 @@ export const catalog = [
     },
   },
   {
+    code: "SET1020",
+    name: "Keychain & Pen Set",
+    fullname: "Metal Leather Keychain & Ballpoint Pen Set",
+    colors: ["Colors"],
+    type: "accessory",
+    default_color: "Colors",   
+    sizes: {
+       100: 0.00,
+       250: 0.00,
+       500: 0.00,
+      1000: 0.00,
+      1500: 0.00,
+    },
+  },
+  {
     code: "CG2640",
     name: "Leather Loop Keychain",
     fullname: "Leather Loop Metal Keychain",
