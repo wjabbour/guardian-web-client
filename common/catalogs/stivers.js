@@ -313,7 +313,7 @@ export const catalog = [
     code: "04015",
     name: "10oz. Perfect-Fit Tumbler",
     fullname: "10 oz. Perfect-Fit Tumbler",
-    colors: ["Black", "Blue", "Burgundy", "Gun Metal", "Navy", "Red"],
+    colors: ["Black", "Blue", "Burgundy", "Gunmetal", "Navy", "Red"],
     type: "accessory",
     default_color: "Black",
     sizes: {
