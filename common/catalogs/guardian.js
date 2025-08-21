@@ -986,6 +986,50 @@ export const catalog = [
     },
   },
   {
+    code: "6645",
+    name: "16oz. Stadium Cup",
+    fullname: "16 oz. Rally Stadium Cups (large imprint area)",
+    colors: ["Black","Blue","Maroon","Red","White"],
+    type: "accessory",
+    default_color: "Black",
+    sizes: {
+       100: 0.00,
+    },
+  },
+  {
+    code: "6648",
+    name: "20oz. Stadium Cup",
+    fullname: "20 oz. Rally Stadium Cups (large imprint area)",
+    colors: ["Black","Blue","Maroon","Red","White"],
+    type: "accessory",
+    default_color: "Black",
+    sizes: {
+       100: 0.00,
+    },
+  },
+  {
+    code: "5706",
+    name: "16oz. Swig Bottle",
+    fullname: "16 oz. Swig Stainless Steel Bottles",
+    colors: ["Black","Blue","Lime","Navy","Orange","Purple","Red","Silver","White"],
+    type: "accessory",
+    default_color: "Black",
+    sizes: {
+       100: 0.00,
+    },
+  },
+  {
+    code: "5726",
+    name: "26oz. Swig Bottle",
+    fullname: "26 oz. Swig Stainless Steel Bottles",
+    colors: ["Black","Silver"],
+    type: "accessory",
+    default_color: "Black",
+    sizes: {
+       100: 0.00,
+    },
+  },
+  {
     code: "GP546",
     name: "Deal Jackets",
     fullname: "Deal Jackets - Plain",
