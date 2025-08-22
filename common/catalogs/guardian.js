@@ -994,7 +994,37 @@ export const catalog = [
     sizes: {
        100: 0.00,
     },
+  },
+  {
+    code: "1000B",
+    name: "Foam Koozies",
+    fullname: "Collapsible Foam Koozies (1-color & 4CP available)",
+    colors: ["Colors"],
+    type: "accessory",
+    default_color: "Colors",   
+    sizes: {
+       100: 0.00,
+       250: 0.00,
+       500: 0.00,
+      1000: 0.00,
+      1500: 0.00,    
+    },
   },  
+  {
+    code: "8163",
+    name: "15oz. Mug w/imprint",
+    fullname: "15 oz. Ember Mug (Laser engraving & Silk-Screening available)",
+    colors: ["Black","Cobalt Blue","Green","Lilac","Red","Royal","White"],
+    type: "accessory",
+    default_color: "Black",    
+    sizes: {
+       100: 0.00,
+       250: 0.00,
+       500: 0.00,
+      1000: 0.00,
+      1500: 0.00,
+    },
+  },
   {
     code: "GP546",
     name: "Deal Jackets",
