@@ -974,18 +974,6 @@ export const catalog = [
     },
   },
   {
-    code: "",
-    name: "20oz. Himalayan Tumbler",
-    fullname: "20 oz. Himalayan Tumbler",
-    colors: ["Black","Fuchsia","Gold","Gray","Green","Maroon",
-      "Navy","Orange","Purple","Red","Silver","Teal","White"],
-    type: "accessory",
-    default_color: "Black",
-    sizes: {
-       100: 0.00,
-    },
-  },
-  {
     code: "6645",
     name: "16oz. Stadium Cup",
     fullname: "16 oz. Rally Stadium Cups (large imprint area)",
@@ -1006,29 +994,7 @@ export const catalog = [
     sizes: {
        100: 0.00,
     },
-  },
-  {
-    code: "",
-    name: "16oz. Swig Bottle",
-    fullname: "16 oz. Swig Stainless Steel Bottles",
-    colors: ["Black","Blue","Lime","Navy","Orange","Purple","Red","Silver","White"],
-    type: "accessory",
-    default_color: "Black",
-    sizes: {
-       100: 0.00,
-    },
-  },
-  {
-    code: "",
-    name: "26oz. Swig Bottle",
-    fullname: "26 oz. Swig Stainless Steel Bottles",
-    colors: ["Black","Silver"],
-    type: "accessory",
-    default_color: "Black",
-    sizes: {
-       100: 0.00,
-    },
-  },
+  },  
   {
     code: "GP546",
     name: "Deal Jackets",
