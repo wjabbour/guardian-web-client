@@ -996,6 +996,19 @@ export const catalog = [
     },
   },
   {
+    code: "04011",
+    name: "Grip Water Bottle",
+    fullname: "24 oz. Grip Water Bottle",
+    colors: ["Black","Blue","Burgundy","Gold","Green","Navy","Pink","Purple","Red","Silver"],
+    type: "accessory",
+    default_color: "Black",
+    sizes: {
+       100: 0.00,
+       250: 0.00,
+       500: 0.00,        
+    },
+  },  
+  {
     code: "1000B",
     name: "Foam Koozies",
     fullname: "Collapsible Foam Koozies (1-color & 4CP available)",
