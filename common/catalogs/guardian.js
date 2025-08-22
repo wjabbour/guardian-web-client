@@ -974,7 +974,7 @@ export const catalog = [
     },
   },
   {
-    code: "5790",
+    code: "",
     name: "20oz. Himalayan Tumbler",
     fullname: "20 oz. Himalayan Tumbler",
     colors: ["Black","Fuchsia","Gold","Gray","Green","Maroon",
@@ -1008,7 +1008,7 @@ export const catalog = [
     },
   },
   {
-    code: "5706",
+    code: "",
     name: "16oz. Swig Bottle",
     fullname: "16 oz. Swig Stainless Steel Bottles",
     colors: ["Black","Blue","Lime","Navy","Orange","Purple","Red","Silver","White"],
@@ -1019,7 +1019,7 @@ export const catalog = [
     },
   },
   {
-    code: "5726",
+    code: "",
     name: "26oz. Swig Bottle",
     fullname: "26 oz. Swig Stainless Steel Bottles",
     colors: ["Black","Silver"],
