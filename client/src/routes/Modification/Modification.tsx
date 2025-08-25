@@ -36,12 +36,12 @@ export default function Modification() {
   const colors = item.colors;
   const [selected_size] = useState(sizes[0]);
   const [price] = useState(item.sizes[selected_size]);
-  const [embroidery, setEmbroidery] = useState("");
+  const [firstEmbroidery, setFirstEmbroidery] = useState("");
   const [placement, setPlacement] = useState("Left Chest");
   const [customsOrder, setCustomsOrder] = useState({});
 
-  const handleChange = (event) => {
-    setEmbroidery(event.target.value);
+  const handleFirstEmbroideryChange = (event) => {
+    setFirstEmbroidery(event.target.value);
   };
 
   const handlePlacementChange = (event) => {
@@ -116,7 +116,7 @@ export default function Modification() {
     if (
       hasEmbroideryOptions &&
       embroideryTypes.includes(item.type) &&
-      !embroidery
+      !firstEmbroidery
     ) {
       setErrorSnackbarOpen(true);
       setErrorSnackbarText("Must select an embroidery");
@@ -151,12 +151,12 @@ export default function Modification() {
             color: colors[j],
             code: item.code,
             placement: item.type === "accessory" ? "N/A" : placement,
-            embroidery,
+            embroidery: firstEmbroidery,
           };
 
           const key = `${item.code},${Object.keys(item.sizes)[i - 1]},${
             colors[j]
-          },${embroidery}`;
+          },${firstEmbroidery}`;
 
           if (new_cart[key]) {
             new_cart[key].quantity += cart_item.quantity;
@@ -170,7 +170,7 @@ export default function Modification() {
 
     if (!any_input_has_value || invalid_input) {
     } else {
-      setEmbroidery("");
+      setFirstEmbroidery("");
       set_cart(new_cart);
       sessionStorage.setItem("cart", JSON.stringify(new_cart));
       setSnackbarOpen(true);
@@ -188,7 +188,7 @@ export default function Modification() {
       color: color,
       code: item.code,
       placement: null,
-      embroidery,
+      embroidery: firstEmbroidery,
     };
 
     if (cart[key]) {
@@ -246,9 +246,9 @@ export default function Modification() {
           <EmbroiderySelector
             item={item}
             embroideries={embroideries}
-            embroidery={embroidery}
+            embroidery={firstEmbroidery}
             placement={placement}
-            handleChange={handleChange}
+            handleChange={handleFirstEmbroideryChange}
             handlePlacementChange={handlePlacementChange}
           />
           <QuantitySelector

@@ -60,7 +60,8 @@ export default function EmbroiderySelector({
     );
   };
 
-  const EmbroiderySelector = () => {
+  // are we modifying the first or second logo?
+  const EmbroiderySelector = (logoPlace) => {
     if (item.type === "customs" || embroideries.length === 0) {
       return <></>;
     }
