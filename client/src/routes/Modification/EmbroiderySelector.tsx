@@ -4,6 +4,10 @@ import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 import MenuItem from "@mui/material/MenuItem";
 import { getWebConfigValue } from "guardian-common";
+import { useState } from "react";
+import { SvgIcon } from "@mui/material";
+import AddCircleIcon from "@mui/icons-material/AddCircle";
+import DoDisturbOnIcon from "@mui/icons-material/DoDisturbOn";
 
 export default function EmbroiderySelector({
   item,
@@ -14,8 +18,49 @@ export default function EmbroiderySelector({
   handlePlacementChange,
 }) {
   const logo_placements = getWebConfigValue("logo_placements") as string[];
+  const [secondLogo, setSecondLogo] = useState(false);
 
-  const embroiderySelector = () => {
+  const SecondLogoAdd = () => {
+    if (secondLogo) {
+      return null;
+    }
+    return (
+      <div className="flex gap-2">
+        <p className="font-bold text-[14px]">Want to add a second logo?</p>
+        <SvgIcon
+          onClick={() => {
+            setSecondLogo(true);
+          }}
+          fontSize="inherit"
+          className="relative top-1 cursor-pointer"
+        >
+          <AddCircleIcon />
+        </SvgIcon>
+      </div>
+    );
+  };
+
+  const SecondLogoRemove = () => {
+    if (!secondLogo) {
+      return null;
+    }
+    return (
+      <div className="flex gap-2">
+        <p className="font-bold text-[14px]">Only want one logo?</p>
+        <SvgIcon
+          onClick={() => {
+            setSecondLogo(false);
+          }}
+          fontSize="inherit"
+          className="relative top-1 cursor-pointer"
+        >
+          <DoDisturbOnIcon />
+        </SvgIcon>
+      </div>
+    );
+  };
+
+  const EmbroiderySelector = () => {
     if (item.type === "customs" || embroideries.length === 0) {
       return <></>;
     }
@@ -32,7 +77,7 @@ export default function EmbroiderySelector({
     );
   };
 
-  const placementSelector = () => {
+  const PlacementSelector = () => {
     const hasCorrectType = ["womens", "mens"].includes(item.type);
     const hasPlacementOptions = logo_placements.length > 0;
 
@@ -61,9 +106,17 @@ export default function EmbroiderySelector({
   };
   return (
     <div className="flex mb-[30px] mt-[30px]">
-      <div className="w-[250px] flex flex-col gap-[5px]">
-        {embroiderySelector()}
-        {placementSelector()}
+      <div className="w-[250px] flex flex-col gap-[10px]">
+        <EmbroiderySelector />
+        <PlacementSelector />
+        <SecondLogoAdd />
+        {secondLogo && (
+          <>
+            <EmbroiderySelector />
+            <PlacementSelector />
+            <SecondLogoRemove />
+          </>
+        )}
       </div>
       <div>
         <Thumbnail img={embroidery} />
