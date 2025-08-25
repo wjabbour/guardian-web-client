@@ -39,7 +39,7 @@ export default function Modification() {
   const [firstEmbroidery, setFirstEmbroidery] = useState("");
   const [secondEmbroidery, setSecondEmbroidery] = useState("");
   const [firstPlacement, setFirstPlacement] = useState("Left Chest");
-  const [secondPlacement, setSecondPlacement] = useState("");
+  const [secondPlacement, setSecondPlacement] = useState("Left Chest");
   const [customsOrder, setCustomsOrder] = useState({});
 
   const handleFirstEmbroideryChange = (event) => {
@@ -164,9 +164,17 @@ export default function Modification() {
             embroidery: firstEmbroidery,
           };
 
-          const key = `${item.code},${Object.keys(item.sizes)[i - 1]},${
+          let key = `${item.code},${Object.keys(item.sizes)[i - 1]},${
             colors[j]
           },${firstEmbroidery}`;
+
+          if (secondEmbroidery) {
+            cart_item["secondEmbroidery"] = secondEmbroidery;
+            cart_item["secondPlacement"] = secondPlacement;
+            key += `,${secondEmbroidery}`;
+          }
+
+          console.log(cart_item)
 
           if (new_cart[key]) {
             new_cart[key].quantity += cart_item.quantity;
@@ -181,6 +189,7 @@ export default function Modification() {
     if (!any_input_has_value || invalid_input) {
     } else {
       setFirstEmbroidery("");
+      setSecondEmbroidery("");
       set_cart(new_cart);
       sessionStorage.setItem("cart", JSON.stringify(new_cart));
       setSnackbarOpen(true);
@@ -200,6 +209,10 @@ export default function Modification() {
       placement: null,
       embroidery: firstEmbroidery,
     };
+
+    if (secondEmbroidery) {
+      cart_item['secondEmbroidery'] = secondEmbroidery;
+    }
 
     if (cart[key]) {
       cart[key].quantity += cart_item.quantity;

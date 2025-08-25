@@ -54,6 +54,8 @@ export default function EmbroiderySelector({
         <SvgIcon
           onClick={() => {
             setSecondLogo(false);
+            // hack to replicate structure of native HTML event
+            handleSecondEmbroideryChange({ target: { value: "" } });
           }}
           fontSize="inherit"
           className="relative top-1 cursor-pointer"
