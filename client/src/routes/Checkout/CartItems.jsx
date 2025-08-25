@@ -31,9 +31,19 @@ export default function CartItems() {
                 <b>Color:</b> {item.color}
               </p>
               {item.embroidery && (
-                <p>
-                  <b>Embroidery:</b> {item.embroidery}
-                </p>
+                <>
+                  {item.secondEmbroidery && (
+                    <p>
+                      <b>Embroidery:</b> {item.embroidery} /{" "}
+                      {item.secondEmbroidery}
+                    </p>
+                  )}
+                  {!item.secondEmbroidery && (
+                    <p>
+                      <b>Embroidery:</b> {item.embroidery}
+                    </p>
+                  )}
+                </>
               )}
               {!["accessory", "customs"].includes(item.type) && (
                 <p>
