@@ -5,17 +5,13 @@ import { useState } from "react";
 import Snackbar from "@mui/material/Snackbar";
 import { SvgIcon } from "@mui/material";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
-import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
-import FormControl from "@mui/material/FormControl";
-import Select from "@mui/material/Select";
 import Alert from "@mui/material/Alert";
 import { getDomainAwarePath, getEmbroidery } from "../../lib/utils";
-import { getWebConfigValue } from "guardian-common";
-import Thumbnail from "./Thumbnail";
 import ColorSelector from "./ColorSelector";
 import QuantitySelector from "./QuantitySelector";
 import { CartItem } from "../../lib/interfaces";
+import EmbroiderySelector from "./EmbroiderySelector";
 
 export async function loader({ params }) {
   return getWebCatalog().find((i) => i.code === params.id);
@@ -40,17 +36,26 @@ export default function Modification() {
   const colors = item.colors;
   const [selected_size] = useState(sizes[0]);
   const [price] = useState(item.sizes[selected_size]);
-  const [embroidery, setEmbroidery] = useState("");
-  const [placement, setPlacement] = useState("Left Chest");
-  const logo_placements = getWebConfigValue("logo_placements") as string[];
+  const [firstEmbroidery, setFirstEmbroidery] = useState("");
+  const [secondEmbroidery, setSecondEmbroidery] = useState("");
+  const [firstPlacement, setFirstPlacement] = useState("Left Chest");
+  const [secondPlacement, setSecondPlacement] = useState("Left Chest");
   const [customsOrder, setCustomsOrder] = useState({});
 
-  const handleChange = (event) => {
-    setEmbroidery(event.target.value);
+  const handleFirstEmbroideryChange = (event) => {
+    setFirstEmbroidery(event.target.value);
   };
 
-  const handlePlacementChange = (event) => {
-    setPlacement(event.target.value);
+  const handleSecondEmbroideryChange = (event) => {
+    setSecondEmbroidery(event.target.value);
+  };
+
+  const handleFirstPlacementChange = (event) => {
+    setFirstPlacement(event.target.value);
+  };
+
+  const handleSecondPlacementChange = (event) => {
+    setSecondPlacement(event.target.value);
   };
 
   const embroideries = (
@@ -58,51 +63,6 @@ export default function Modification() {
   ).map((e) => {
     return <MenuItem value={e}>{e}</MenuItem>;
   });
-
-  const embroiderySelector = () => {
-    if (item.type === "customs" || embroideries.length === 0) {
-      return <></>;
-    }
-
-    return (
-      <div className={styles.selector}>
-        <FormControl fullWidth>
-          <InputLabel>Logo</InputLabel>
-          <Select value={embroidery} label="embroidery" onChange={handleChange}>
-            {embroideries}
-          </Select>
-        </FormControl>
-      </div>
-    );
-  };
-
-  const placementSelector = () => {
-    const hasCorrectType = ["womens", "mens"].includes(item.type);
-    const hasPlacementOptions = logo_placements.length > 0;
-
-    if (hasCorrectType && hasPlacementOptions) {
-      const placements = logo_placements.map((l) => {
-        return <MenuItem value={l}>{l}</MenuItem>;
-      });
-
-      return (
-        <div className={styles.selector}>
-          <FormControl fullWidth>
-            <InputLabel>Logo Placement</InputLabel>
-            <Select
-              value={placement}
-              label="placement"
-              onChange={handlePlacementChange}
-            >
-              {placements}
-            </Select>
-          </FormControl>
-        </div>
-      );
-    } else {
-      return <></>;
-    }
-  };
 
   function handleSnackbarClose() {
     setSnackbarOpen(false);
@@ -166,7 +126,7 @@ export default function Modification() {
     if (
       hasEmbroideryOptions &&
       embroideryTypes.includes(item.type) &&
-      !embroidery
+      !firstEmbroidery
     ) {
       setErrorSnackbarOpen(true);
       setErrorSnackbarText("Must select an embroidery");
@@ -200,13 +160,21 @@ export default function Modification() {
             size: sizes[i - 1],
             color: colors[j],
             code: item.code,
-            placement: item.type === "accessory" ? "N/A" : placement,
-            embroidery,
+            placement: item.type === "accessory" ? "N/A" : firstPlacement,
+            embroidery: firstEmbroidery,
           };
 
-          const key = `${item.code},${Object.keys(item.sizes)[i - 1]},${
+          let key = `${item.code},${Object.keys(item.sizes)[i - 1]},${
             colors[j]
-          },${embroidery}`;
+          },${firstEmbroidery}`;
+
+          if (secondEmbroidery) {
+            cart_item["secondEmbroidery"] = secondEmbroidery;
+            cart_item["secondPlacement"] = secondPlacement;
+            key += `,${secondEmbroidery}`;
+          }
+
+          console.log(cart_item)
 
           if (new_cart[key]) {
             new_cart[key].quantity += cart_item.quantity;
@@ -220,7 +188,8 @@ export default function Modification() {
 
     if (!any_input_has_value || invalid_input) {
     } else {
-      setEmbroidery("");
+      setFirstEmbroidery("");
+      setSecondEmbroidery("");
       set_cart(new_cart);
       sessionStorage.setItem("cart", JSON.stringify(new_cart));
       setSnackbarOpen(true);
@@ -238,8 +207,12 @@ export default function Modification() {
       color: color,
       code: item.code,
       placement: null,
-      embroidery,
+      embroidery: firstEmbroidery,
     };
+
+    if (secondEmbroidery) {
+      cart_item['secondEmbroidery'] = secondEmbroidery;
+    }
 
     if (cart[key]) {
       cart[key].quantity += cart_item.quantity;
@@ -293,16 +266,18 @@ export default function Modification() {
               set_image_source={set_image_source}
             />
           </div>
-          <div className={`${styles.flex} ${styles.md_margin_bottom}`}>
-            <div>
-              {embroiderySelector()}
-              {placementSelector()}
-            </div>
-            <div>
-              <Thumbnail img={embroidery} />
-            </div>
-          </div>
-
+          <EmbroiderySelector
+            item={item}
+            embroideries={embroideries}
+            firstEmbroidery={firstEmbroidery}
+            secondEmbroidery={secondEmbroidery}
+            firstPlacement={firstPlacement}
+            secondPlacement={secondPlacement}
+            handleFirstEmbroideryChange={handleFirstEmbroideryChange}
+            handleSecondEmbroideryChange={handleSecondEmbroideryChange}
+            handleFirstPlacementChange={handleFirstPlacementChange}
+            handleSecondPlacementChange={handleSecondPlacementChange}
+          />
           <QuantitySelector
             item={item}
             sizes={sizes}
