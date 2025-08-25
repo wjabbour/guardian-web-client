@@ -37,15 +37,25 @@ export default function Modification() {
   const [selected_size] = useState(sizes[0]);
   const [price] = useState(item.sizes[selected_size]);
   const [firstEmbroidery, setFirstEmbroidery] = useState("");
-  const [placement, setPlacement] = useState("Left Chest");
+  const [secondEmbroidery, setSecondEmbroidery] = useState("");
+  const [firstPlacement, setFirstPlacement] = useState("Left Chest");
+  const [secondPlacement, setSecondPlacement] = useState("");
   const [customsOrder, setCustomsOrder] = useState({});
 
   const handleFirstEmbroideryChange = (event) => {
     setFirstEmbroidery(event.target.value);
   };
 
-  const handlePlacementChange = (event) => {
-    setPlacement(event.target.value);
+  const handleSecondEmbroideryChange = (event) => {
+    setSecondEmbroidery(event.target.value);
+  };
+
+  const handleFirstPlacementChange = (event) => {
+    setFirstPlacement(event.target.value);
+  };
+
+  const handleSecondPlacementChange = (event) => {
+    setSecondPlacement(event.target.value);
   };
 
   const embroideries = (
@@ -150,7 +160,7 @@ export default function Modification() {
             size: sizes[i - 1],
             color: colors[j],
             code: item.code,
-            placement: item.type === "accessory" ? "N/A" : placement,
+            placement: item.type === "accessory" ? "N/A" : firstPlacement,
             embroidery: firstEmbroidery,
           };
 
@@ -246,10 +256,14 @@ export default function Modification() {
           <EmbroiderySelector
             item={item}
             embroideries={embroideries}
-            embroidery={firstEmbroidery}
-            placement={placement}
-            handleChange={handleFirstEmbroideryChange}
-            handlePlacementChange={handlePlacementChange}
+            firstEmbroidery={firstEmbroidery}
+            secondEmbroidery={secondEmbroidery}
+            firstPlacement={firstPlacement}
+            secondPlacement={secondPlacement}
+            handleFirstEmbroideryChange={handleFirstEmbroideryChange}
+            handleSecondEmbroideryChange={handleSecondEmbroideryChange}
+            handleFirstPlacementChange={handleFirstPlacementChange}
+            handleSecondPlacementChange={handleSecondPlacementChange}
           />
           <QuantitySelector
             item={item}

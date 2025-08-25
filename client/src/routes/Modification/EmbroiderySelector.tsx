@@ -12,10 +12,14 @@ import DoDisturbOnIcon from "@mui/icons-material/DoDisturbOn";
 export default function EmbroiderySelector({
   item,
   embroideries,
-  embroidery,
-  placement,
-  handleChange,
-  handlePlacementChange,
+  firstEmbroidery,
+  secondEmbroidery,
+  firstPlacement,
+  secondPlacement,
+  handleFirstEmbroideryChange,
+  handleSecondEmbroideryChange,
+  handleFirstPlacementChange,
+  handleSecondPlacementChange,
 }) {
   const logo_placements = getWebConfigValue("logo_placements") as string[];
   const [secondLogo, setSecondLogo] = useState(false);
@@ -61,16 +65,28 @@ export default function EmbroiderySelector({
   };
 
   // are we modifying the first or second logo?
-  const EmbroiderySelector = (logoPlace) => {
+  const EmbroiderySelector = ({ embroideryPlace }) => {
     if (item.type === "customs" || embroideries.length === 0) {
       return <></>;
     }
 
     return (
-      <div>
+      <div className="w-[250px]">
         <FormControl fullWidth>
           <InputLabel>Logo</InputLabel>
-          <Select value={embroidery} label="embroidery" onChange={handleChange}>
+          <Select
+            value={
+              embroideryPlace === "first" ? firstEmbroidery : secondEmbroidery
+            }
+            label="embroidery"
+            onChange={(e) => {
+              if (embroideryPlace === "first") {
+                handleFirstEmbroideryChange(e);
+              } else {
+                handleSecondEmbroideryChange(e);
+              }
+            }}
+          >
             {embroideries}
           </Select>
         </FormControl>
@@ -78,7 +94,7 @@ export default function EmbroiderySelector({
     );
   };
 
-  const PlacementSelector = () => {
+  const PlacementSelector = ({ embroideryPlace }) => {
     const hasCorrectType = ["womens", "mens"].includes(item.type);
     const hasPlacementOptions = logo_placements.length > 0;
 
@@ -88,13 +104,21 @@ export default function EmbroiderySelector({
       });
 
       return (
-        <div>
+        <div className="w-[250px]">
           <FormControl fullWidth>
             <InputLabel>Logo Placement</InputLabel>
             <Select
-              value={placement}
+              value={
+                embroideryPlace === "first" ? firstPlacement : secondPlacement
+              }
               label="placement"
-              onChange={handlePlacementChange}
+              onChange={(e) => {
+                if (embroideryPlace === "first") {
+                  handleFirstPlacementChange(e);
+                } else {
+                  handleSecondPlacementChange(e);
+                }
+              }}
             >
               {placements}
             </Select>
@@ -106,22 +130,36 @@ export default function EmbroiderySelector({
     }
   };
   return (
-    <div className="flex mb-[30px] mt-[30px]">
-      <div className="w-[250px] flex flex-col gap-[10px]">
-        <EmbroiderySelector />
-        <PlacementSelector />
+    <div className="mb-[30px] mt-[30px]">
+      <div className="flex flex-col">
+        <div className="flex">
+          <div className="flex flex-col gap-2">
+            <EmbroiderySelector embroideryPlace={"first"} />
+            <PlacementSelector embroideryPlace={"first"} />
+          </div>
+          <div>
+            <Thumbnail img={firstEmbroidery} />
+          </div>
+        </div>
+
         <SecondLogoAdd />
-        {secondLogo && (
-          <>
-            <EmbroiderySelector />
-            <PlacementSelector />
-            <SecondLogoRemove />
-          </>
-        )}
       </div>
-      <div>
-        <Thumbnail img={embroidery} />
-      </div>
+
+      {secondLogo && (
+        <div className="flex flex-col mt-[20px]">
+          <div className="flex">
+            <div className="flex flex-col gap-2">
+              <EmbroiderySelector embroideryPlace={"second"} />
+              <PlacementSelector embroideryPlace={"second"} />
+            </div>
+            <div>
+              <Thumbnail img={secondEmbroidery} />
+            </div>
+          </div>
+
+          <SecondLogoRemove />
+        </div>
+      )}
     </div>
   );
 }
