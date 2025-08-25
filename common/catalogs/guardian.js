@@ -996,7 +996,7 @@ export const catalog = [
     },
   },
   {
-    code: "04011",
+    code: "040110",
     name: "Grip Water Bottle",
     fullname: "24 oz. Grip Water Bottle",
     colors: ["Black","Blue","Burgundy","Gold","Green","Navy","Pink","Purple","Red","Silver"],
