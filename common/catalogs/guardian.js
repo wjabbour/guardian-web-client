@@ -1084,6 +1084,21 @@ export const catalog = [
     },
   },
   {
+    code: "291",
+    name: "Aquarius Comfort Pen",
+    fullname: "Aquarius Comfort Pen",
+    colors: ["Black","Blue","Grey","Red"],
+    type: "accessory",
+    default_color: "Black",    
+    sizes: {
+       100: 0.00,
+       250: 0.00,
+       500: 0.00,
+      1000: 0.00,
+      1500: 0.00,
+    },
+  },
+  {
     code: "GP546",
     name: "Deal Jackets",
     fullname: "Deal Jackets - Plain",

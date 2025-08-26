@@ -10,7 +10,6 @@ import { config as TameronConfig } from "./configs/tameron";
 import { config as NavarreConfig } from "./configs/navarre";
 import { config as HoffmanConfig } from "./configs/hoffman";
 import { config as TommycarConfig } from "./configs/tommycar";
-import { config as McdonaldConfig } from "./configs/mcdonald";
 import { catalog as CannonCatalog } from "./catalogs/cannon";
 import { catalog as GuardianCatalog } from "./catalogs/guardian";
 import { catalog as HennessyCatalog } from "./catalogs/hennessy";
@@ -23,7 +22,6 @@ import { catalog as TameronCatalog } from "./catalogs/tameron";
 import { catalog as NavarreCatalog } from "./catalogs/navarre";
 import { catalog as HoffmanCatalog } from "./catalogs/hoffman";
 import { catalog as TommycarCatalog } from "./catalogs/tommycar";
-import { catalog as McdonaldCatalog } from "./catalogs/mcdonald";
 
 const DEFAULT_CONFIG = {
   title: "Guardian",
@@ -45,7 +43,7 @@ const allConfigs = [
   NavarreConfig,
   HoffmanConfig,
   TommycarConfig,
-  McdonaldConfig,
+ 
 ];
 
 export function getStoreCode(companyName, storeAddress) {
@@ -108,8 +106,7 @@ export function getWebCatalog() {
     return HoffmanCatalog;
   } else if (url.includes("tommycar")) {
     return TommycarCatalog;
-  } else if (url.includes("mcdonald")) {
-    return McdonaldCatalog;
+  
   }
 }
 
@@ -142,8 +139,6 @@ export function getCatalog(companyName) {
       return HoffmanCatalog;
     case "Tommycar":
       return TommycarCatalog;
-     case "Mcdonald":
-      return McdonaldCatalog;
   }
 }
 
@@ -174,9 +169,7 @@ export function getWebConfigValue(val) {
   } else if (url.includes("hoffman")) {
     return HoffmanConfig[val];
   } else if (url.includes("tommycar")) {
-    return TommycarConfig[val];
-  } else if (url.includes("mcdonald")) {
-    return McdonaldConfig[val];
+    return TommycarConfig[val];  
   } else {
     // when the user is on gpc81.com landing page we need to display a string in the browser tab
     return DEFAULT_CONFIG[val];
@@ -207,8 +200,6 @@ export function getConfigValue(val, config) {
     case "Hoffman":
       return HoffmanConfig[val];
     case "Tommycar":
-      return TommycarConfig[val];
-    case "Mcdonald":
-      return McdonaldConfig[val];
+      return TommycarConfig[val]; 
   }
 }
