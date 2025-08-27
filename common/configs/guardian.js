@@ -17,7 +17,7 @@ export const config = {
     parts: [],
     tshirts: ["Guardian"],
   },
-  email_recipients: ["lbudbill@gpcorp.com", "lbudbell@comcast.net"],
+  email_recipients: ["lbudbill@gpcorp.com", "lbudbell@comcast.net","shanell@gpcorp.com","support@gpcorp.com"],
   stores: [
     {
       name: "Guardian Products",
