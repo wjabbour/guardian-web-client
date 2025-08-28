@@ -47,9 +47,9 @@ export const config = {
     parts: [],
   },
   email_recipients: [
-    "lbudbill@gpcorp.com",
-    "lbudbell@comcast.net",
     "rgreenberg@gpcorp.com",
+    "support@gpcorp.com",
+    "shanell@gpcorp.com"
   ],
   stores: [
     {

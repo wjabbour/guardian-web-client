@@ -11,6 +11,33 @@ export const catalog = [
     },
   },
   {
+    code: "C112",
+    name: "Port Authority Trucker Cap",
+    fullname: "Port Authority® Snapback Trucker Cap",
+    colors: [
+      "Black",
+      "Black Grey Steel",
+      "Black Tan",
+      "Black White",
+      "Flame Red",
+      "Flame Red White",
+      "Grey Steel",
+      "Gusty Grey",
+      "Light Khaki White",
+      "Olive Drab Green",
+      "Patriot Blue",
+      "Patriot Blue White",
+      "True Navy",
+      "True Pink White",
+      "Woodland Camo",
+    ],
+    type: "mens",
+    default_color: "Black",
+    sizes: {
+      OSFA: 0.0,
+    },
+  },
+  {
     code: "PC55P",
     name: "Port & Company Tee",
     fullname: "Port & Company® Core Blend Pocket Tee",
@@ -537,7 +564,7 @@ export const catalog = [
     name: "Sport-Tek PosiCharge Tee",
     fullname: "Sport-Tek PosiCharge Competitor Tee",
     colors: ["Black"],
-    type: "mens",
+    type: "tshirts",
     default_color: "Black",
     sizes: {
       Small: 0.00,
@@ -687,7 +714,7 @@ export const catalog = [
       "4XLarge": 0.00,
     },
   },
-   {
+  {
     code: "J317",
     name: "Port Authority® Jacket",
     fullname: "Port Authority® Core Soft Shell Jacket",
