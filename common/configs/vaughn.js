@@ -16,7 +16,7 @@ export const config = {
     hat: ["Vaughn Automotive","GMC"],
     mens: [
     "Chevrolet Bowtie Stacked",
-    "Ford Oval",
+    "Ford",
     "GMC",
     "Toyota Stacked",
     "Vaughn Automotive",
@@ -26,7 +26,7 @@ export const config = {
 ],
     womens: [
     "Chevrolet Bowtie Stacked",
-    "Ford Oval",
+    "Ford",
     "GMC",
     "Toyota Stacked",
     "Vaughn Automotive",

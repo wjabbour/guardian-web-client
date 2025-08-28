@@ -26,7 +26,7 @@ export const catalog = [
         "White",
     ],
     type: "mens",
-    default_color: "Black",
+    default_color: "Anthracite",
     sizes: {
       Small: 46.50,
       Medium: 46.50,
@@ -53,7 +53,7 @@ export const catalog = [
         "White",
     ],
     type: "mens",
-    default_color: "Black",
+    default_color: "Anthracite",
     sizes: {
       "3XLT": 58.99,
       "4XLT": 60.99,
@@ -250,17 +250,6 @@ export const catalog = [
       "2XLarge": 44.99,
       "3XLarge": 46.99,
       "4XLarge": 47.99,
-    },
-  },
-  {
-    code: "CP80",
-    name: "Port & Co™ Twill Cap",
-    fullname: "Port & Co™ Six-Panel Twill Cap",
-    colors: ["Black","Charcoal","Neon Pink","Purple","Royal","True Red"],
-    type: "hat",
-    default_color: "Black",
-    sizes: {
-      OSFA: 10.99,
     },
   },
   {
