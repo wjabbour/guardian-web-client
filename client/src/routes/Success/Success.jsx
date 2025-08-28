@@ -51,13 +51,24 @@ export default function Success() {
                   </div>
                   {cart[k].embroidery && (
                     <div className={styles.color__title}>
-                      Embroidery: {cart[k].embroidery}
+                      {cart[k].secondEmbroidery && (
+                        <p>
+                          Embroidery: {cart[k].embroidery} /{" "}
+                          {cart[k].secondEmbroidery}
+                        </p>
+                      )}
+                      {!cart[k].secondEmbroidery && (
+                        <p>Embroidery: {cart[k].embroidery}</p>
+                      )}
                     </div>
                   )}
 
                   {cart[k].type !== "accessory" && (
                     <div className={styles.color__title}>
-                      Placement: {cart[k].placement}
+                      Placement:{" "}
+                      {cart[k].secondPlacement
+                        ? `${cart[k].placement} / ${cart[k].secondPlacement}`
+                        : cart[k].placement}
                     </div>
                   )}
 

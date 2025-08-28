@@ -47,7 +47,10 @@ export default function CartItems() {
               )}
               {!["accessory", "customs"].includes(item.type) && (
                 <p>
-                  <b>Placement:</b> {item.placement}
+                  <b>Placement:</b>{" "}
+                  {item.secondPlacement
+                    ? `${item.placement} / ${item.secondPlacement}`
+                    : `${item.placement}`}
                 </p>
               )}
               {!["customs"].includes(item.type) && (
