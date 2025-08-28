@@ -86,7 +86,7 @@ export const catalog = [
         "White"
       ],
     type: "womens",
-    default_color: "Black",
+    default_color: "Anthracite",
     sizes: {
       Small: 46.50,
       Medium: 46.50,

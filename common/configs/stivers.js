@@ -9,6 +9,7 @@ export const config = {
   embroideries: {
     hat: [
       "Stivers",
+      "Stivers with Outline",
       "Quicklane",
       "Ford",
       "Hyundai",
@@ -19,6 +20,7 @@ export const config = {
     ],
     mens: [
       "Stivers",
+      "Stivers with Outline",
       "Quicklane",
       "Subaru",
       "Stivers Ford South",
@@ -28,6 +30,7 @@ export const config = {
     ],
     womens: [
       "Stivers",
+      "Stivers with Outline",
       "Quicklane",
       "Subaru",
       "Stivers Ford South",
