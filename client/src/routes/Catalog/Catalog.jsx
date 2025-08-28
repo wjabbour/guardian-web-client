@@ -21,7 +21,7 @@ export default function ClothingCatalog() {
   useEffect(() => {
     if (location.pathname.includes("/mens")) {
       setCatalogType("mens");
-    } else if (location.pathname.includes("/hats")) {
+    } else if (location.pathname.includes("/hat")) {
       setCatalogType("hat");
     } else if (location.pathname.includes("/accessory")) {
       setCatalogType("accessory");
