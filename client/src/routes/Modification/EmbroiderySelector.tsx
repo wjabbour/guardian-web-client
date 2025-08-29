@@ -97,7 +97,7 @@ export default function EmbroiderySelector({
   };
 
   const PlacementSelector = ({ embroideryPlace }) => {
-    const hasCorrectType = ["womens", "mens"].includes(item.type);
+    const hasCorrectType = ["womens", "mens","hat","tshirts"].includes(item.type);
     const hasPlacementOptions = logo_placements.length > 0;
 
     if (hasCorrectType && hasPlacementOptions) {
