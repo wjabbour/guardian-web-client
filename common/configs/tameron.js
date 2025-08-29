@@ -12,7 +12,12 @@ export const config = {
     hat: ["Tameron"],
     customs: [],
   },
-  email_recipients: ["lbudbill@gpcorp.com", "lbudbell@comcast.net"],
+  email_recipients: [
+    "lbudbill@gpcorp.com",    
+    "mmccord@gpcorp.com",
+    "support@gpcorp.com",
+    "shanell@gpcorp.com",
+  ],
   stores: [
     {
       name: "C11 Tameron CDJR",

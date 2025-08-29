@@ -50,7 +50,12 @@ export const config = {
     tshirt: ["Stivers Important Job"],
     customs: [],
   },
-  email_recipients: ["lbudbill@gpcorp.com", "lbudbell@comcast.net","mmcord@gpcorp.com"],
+  email_recipients: [
+    "lbudbill@gpcorp.com",    
+    "mmccord@gpcorp.com",
+    "support@gpcorp.com",
+    "shanell@gpcorp.com",
+  ],
   stores: [
     {
       name: "Stivers Ford Montgomery",

@@ -12,7 +12,12 @@ export const config = {
     office: [],
     service: [],
   },
-  email_recipients: ["lbudbill@gpcorp.com", "lbudbell@comcast.net"],
+  email_recipients: [
+    "lbudbill@gpcorp.com",    
+    "grodney@gpcorp.com",
+    "support@gpcorp.com",
+    "shanell@gpcorp.com",
+  ],
   stores: [
     {
       name: "Cannon Ford of Cleveland",
