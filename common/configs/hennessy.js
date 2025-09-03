@@ -78,19 +78,19 @@ export const config = {
       password: "HENLDU",
     },
     {
-      name: "Hennessy Ford",
+      name: "Hennessy Ford Lincoln",
       address: "5675 Peachtree Ind Blvd, Atlanta, GA 30341",
       code: "HENFAT",
       password: "HENFAT",
     },
     {
-      name: "Hennessy Land Rover",
+      name: "Hennessy JLR N Atlanta",
       address: "1505 Mansell Road, Alpharetta, GA 30004",
       code: "HENLAL",
       password: "HENLAL",
     },
     {
-      name: "Hennessy Land Rover Gwinnett",
+      name: "Hennessy JLR Gwinnett",
       address: "3423 Old Norcross Rd, Duluth, GA 30096",
       code: "HENADU",
       password: "HENADU",
@@ -114,7 +114,7 @@ export const config = {
       password: "HENHWO",
     },
     {
-      name: "Hennessy Porsche",
+      name: "Hennessy Porsche Roswell",
       address: "900 Mansell Rd, Roswell, GA 30076",
       code: "HENPRO",
       password: "HENPRO",
@@ -124,6 +124,12 @@ export const config = {
       address: "2501 Windy Hill Rd SE, Marietta, GA 30067",
       code: "HENPMA",
       password: "HENPMA",
+    },
+    {
+      name: "Hennessy JLR Buckhead",
+      address: "3040 Piedmont Rd NE, Atlanta, GA 30305",
+      code: "HENCAT",
+      password: "HENCAT",
     },
   ],    
   bypass_codes: [
@@ -138,6 +144,7 @@ export const config = {
     "HENMMO",
     "HENPMA",
     "HENPRO",
+    "HENCAT",
   ],
   server_hostname: "https://mxfj3q6m01.execute-api.us-east-1.amazonaws.com",
   account_reps: [
