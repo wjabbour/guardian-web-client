@@ -991,7 +991,7 @@ export const catalog = [
   },
   {
     code: "04032",
-    name: "20oz. Revolve Tumbler",
+    name: "20 oz. Revolve Tumbler",
     fullname: "20 oz. Revolve Tumbler",
     colors: ["Black","Blue","Burgundy","Green","Navy","Red","Silver","White"],
     type: "accessory",
@@ -1002,7 +1002,7 @@ export const catalog = [
   },
   {
     code: "5790",
-    name: "20oz. Himalayan Tumbler",
+    name: "20 oz. Himalayan Tumbler",
     fullname: "20 oz. Himalayan Tumbler",
     colors: ["Black","Fuchsia","Gold","Gray","Green","Maroon",
       "Navy","Orange","Purple","Red","Silver","Teal","White"],
@@ -1014,7 +1014,7 @@ export const catalog = [
   },
   {
     code: "6645",
-    name: "16oz. Stadium Cup",
+    name: "16 oz. Stadium Cup",
     fullname: "16 oz. Rally Stadium Cups (large imprint area)",
     colors: ["Black","Blue","Maroon","Red","White"],
     type: "accessory",
@@ -1025,7 +1025,7 @@ export const catalog = [
   },
   {
     code: "6648",
-    name: "20oz. Stadium Cup",
+    name: "20 oz. Stadium Cup",
     fullname: "20 oz. Rally Stadium Cups (large imprint area)",
     colors: ["Black","Blue","Maroon","Red","White"],
     type: "accessory",
@@ -1049,7 +1049,7 @@ export const catalog = [
   },
   {
     code: "5706",
-    name: "16oz. Swig Bottle",
+    name: "16 oz. Swig Bottle",
     fullname: "16 oz. Swig Stainless Steel Bottles",
     colors: ["Black","Blue","Lime","Navy","Orange","Purple","Red","Silver","White"],
     type: "accessory",
@@ -1060,7 +1060,7 @@ export const catalog = [
   },  
   {
     code: "5726",
-    name: "26oz. Swig Bottle",
+    name: "26 oz. Swig Bottle",
     fullname: "26 oz. Swig Stainless Steel Bottles",
     colors: ["Black","Silver"],
     type: "accessory",
@@ -1079,14 +1079,25 @@ export const catalog = [
     sizes: {
        100: 0.00,
        250: 0.00,
-       500: 0.00,
-      1000: 0.00,
-      1500: 0.00,    
+       500: 0.00,         
+    },
+  },  
+  {
+    code: "42",
+    name: "TALL Boy Coolie",
+    fullname: "16 oz. Tall Boy Coolie (1-color imprint available)",
+    colors: ["Black","Burgundy","Carolina Blue"],
+    type: "accessory",
+    default_color: "Black",   
+    sizes: {
+       100: 0.00,
+       250: 0.00,
+       500: 0.00,         
     },
   },  
   {
     code: "8163",
-    name: "15oz. Mug w/imprint",
+    name: "15 oz. Mug w/imprint",
     fullname: "15 oz. Ember Mug (Laser engraving & Silk-Screening available)",
     colors: ["Black","Cobalt Blue","Green","Lilac","Red","Royal","White"],
     type: "accessory",
@@ -1101,7 +1112,7 @@ export const catalog = [
   },
   {
     code: "6301",
-    name: "11oz. Ceramic Mug",
+    name: "11 oz. Ceramic Mug",
     fullname: "11 oz. Ceramic Coffee Mug",
     colors: ["Black","Green","Navy","White"],
     type: "accessory",
