@@ -7,14 +7,16 @@ export const config = {
     "Right Sleeve", 
     "Yoke",
     "Front Center-HATS",
-    "Front/Left Panel-HATS",
-    "Front/Right Panel-HATS",    
+    "Left Panel-HATS",
+    "Right Panel-HATS",    
   ],
   show_image_preview: true,
   embroideries: {
     hat: ["Guardian"],
     mens: ["Guardian"],
     womens: ["Guardian"],
+    tshirts: ["Guardian"],
+    hat: ["Guardian"],
     accessory: ["Guardian"],
     customs: [],
     office: [],
@@ -23,7 +25,7 @@ export const config = {
     detail: [],
     bodyshop: [],
     parts: [],
-    tshirts: ["Guardian"],
+    
   },
   email_recipients: ["lbudbill@gpcorp.com", "lbudbell@comcast.net","shanell@gpcorp.com"],
   stores: [
