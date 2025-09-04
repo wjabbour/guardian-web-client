@@ -1479,7 +1479,7 @@ export const catalog = [
   {
     code: "GP200",
     name: "Key Tags",
-    fullname: "Key Tag Versa #200 (250/box)",
+    fullname: "Self-Protecting Key Tags #200 (250/box)",
     colors: [
       "Blue",
       "Gray",
@@ -1574,6 +1574,17 @@ export const catalog = [
     default_color: "Black",  
     sizes: {
       250: 0.00,
+    },
+  },
+  {
+    code: "GP418ACURA",
+    name: "Clip On Flag - Acura",
+    fullname: "Clip-On Window Flag - ACURA",
+    colors: ["Black"],
+    type: "sales",
+    default_color: "Black",  
+    sizes: {
+      1: 0.00,
     },
   },
   {
