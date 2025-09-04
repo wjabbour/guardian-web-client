@@ -15,14 +15,14 @@ export const config = {
   embroideries: {
     hat: ["Vaughn Automotive","GMC"],
     mens: [
-    "Chevrolet Bowtie Stacked",
+     "Chevrolet Bowtie Stacked",
     "Ford",
     "GMC",
     "Toyota Stacked",
     "Vaughn Automotive",
-    "Vaughn Automotive Toyota",
     "Vaughn Value",
-    "Vaughn Brand Logos",   
+    "Vaughn Automotive Toyota",
+    "Vaughn Brand Logos",  
 ],
     womens: [
     "Chevrolet Bowtie Stacked",
@@ -30,8 +30,8 @@ export const config = {
     "GMC",
     "Toyota Stacked",
     "Vaughn Automotive",
-    "Vaughn Automotive Toyota",
     "Vaughn Value",
+    "Vaughn Automotive Toyota",
     "Vaughn Brand Logos",   
 ],
     accessory: [],
@@ -84,7 +84,7 @@ export const config = {
     {
       name: "Vaughn Ford",
       address: "4303 Highway 19, Zachary, LA 70791",
-      code: "FAUFOZ",
+      code: "VAUGOZ",
     },
     {
       name: "Vaughn Pre-Owned Alexandria",
