@@ -1,4 +1,5 @@
 import styles from "./Modification.module.scss";
+import { useState } from "react";
 import Checkbox from "@mui/material/Checkbox";
 
 export default function QuantitySelector({
@@ -26,7 +27,8 @@ export default function QuantitySelector({
   }
 
   function QuantityOptions() {
-    const clone = structuredClone(customsOrder);
+    const [order, setOrder] = useState(structuredClone(customsOrder));
+    console.log(order);
     return (
       <tbody>
         {sizes.map((size) => {
@@ -37,26 +39,26 @@ export default function QuantitySelector({
                 return (
                   <td className="p-[2px]">
                     {shouldUseQuantityBasedOrdering && (
-                      <Checkbox
-                        checked={clone[size]?.includes(color)}
-                        onChange={() => {
-                          // we are unselecting the checkbox
-                          if (clone[size]?.includes(color)) {
-                            const idx = clone[size].indexOf(color);
+                      <input
+                        className="border-2 border-solid border-gray-600 rounded-md p-1"
+                        type="text"
+                        value={order[size]?.quantity || 0}
+                        onChange={(e) => {
+                          setOrder((old) => {
+                            const newOne = structuredClone(old);
+                            newOne[size] = {
+                              quantity: Number(e.target.value),
+                              color,
+                            };
 
-                            if (idx > -1) {
-                              clone[size].splice(idx, 1);
-                            }
-                          } else {
-                            if (clone[size]) {
-                              clone[size].push(color);
-                            } else {
-                              clone[size] = [color];
-                            }
-                          }
-                          setCustomsOrder(clone);
+                            return newOne;
+                          });
+
                         }}
-                      />
+                        onBlur={() => {
+                          setCustomsOrder(order);
+                        }}
+                      ></input>
                     )}
                     {!shouldUseQuantityBasedOrdering && (
                       <input

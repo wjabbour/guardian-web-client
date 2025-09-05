@@ -97,17 +97,17 @@ export default function Modification() {
       const items: { [key: string]: number } = {};
 
       Object.keys(customsOrder).forEach((k: string) => {
+        console.log(k);
         // the keys of customsOrder are the different available quantities
         const quantity = parseInt(k);
-        const colors = customsOrder[k];
+        // object representing quantity and color selected
+        const orderInfo = customsOrder[k];
 
-        colors.forEach((color) => {
-          items[color] = items[color] ? items[color] + quantity : quantity;
-        });
+        items[orderInfo.color] = quantity * orderInfo.quantity;
       });
 
-      for (const [key, value] of Object.entries(items)) {
-        addCustomsToCart(value, key, new_cart);
+      for (const [color, quantity] of Object.entries(items)) {
+        addCustomsToCart(quantity, color, new_cart);
       }
 
       set_cart(new_cart);
@@ -174,7 +174,7 @@ export default function Modification() {
             key += `,${secondEmbroidery}`;
           }
 
-          console.log(cart_item)
+          console.log(cart_item);
 
           if (new_cart[key]) {
             new_cart[key].quantity += cart_item.quantity;
@@ -211,7 +211,7 @@ export default function Modification() {
     };
 
     if (secondEmbroidery) {
-      cart_item['secondEmbroidery'] = secondEmbroidery;
+      cart_item["secondEmbroidery"] = secondEmbroidery;
     }
 
     if (cart[key]) {
