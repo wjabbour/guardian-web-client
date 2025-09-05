@@ -181,7 +181,7 @@ export const catalog = [
     type: "accessory",
     default_color: "White",
     sizes: {
-      2500: .28,
+      1: .28,
     },
   },
   {
@@ -192,7 +192,7 @@ export const catalog = [
     type: "accessory",
     default_color: "Clear",
     sizes: {
-      5100: .32,
+      1: .32,
     },
   },
   {
@@ -203,7 +203,7 @@ export const catalog = [
     type: "service",
     default_color: "Plastic",
     sizes: {
-      500: 65.00,
+      1: 65.00,
     },
   },
   {
@@ -214,7 +214,7 @@ export const catalog = [
     type: "service",
     default_color: "White",
     sizes: {
-      500: 60.00,
+      1: 60.00,
     },
   },
   {
@@ -225,7 +225,7 @@ export const catalog = [
     type: "service",
     default_color: "Metal",
     sizes: {
-      250: 13.95,
+      1: 13.95,
     },
   },
   {
@@ -258,7 +258,7 @@ export const catalog = [
     type: "sales",
     default_color: "Blue",
     sizes: {
-      100: 16.95,
+      1: 16.95,
     },
   },
   {
