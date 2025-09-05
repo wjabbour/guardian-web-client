@@ -6,9 +6,8 @@ export const catalog = [
     colors: ["Plastic"],
     type: "service",
     default_color: "Plastic",
-    discount: [{ quantity: 500, price: 73.5 }],
     sizes: {
-      1: 73.5,
+      500: 73.50,
     },
   },
   {
@@ -30,7 +29,7 @@ export const catalog = [
     colors: ["White"],
     type: "sales",
     default_color: "White",
-    discount: [{ quantity: 1, price: 135.0 }],
+    discount: [{ quantity: 1, price: 135.00 }],
     sizes: {
       default: 135.0,
     },
