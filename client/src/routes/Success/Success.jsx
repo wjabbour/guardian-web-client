@@ -63,7 +63,7 @@ export default function Success() {
                     </div>
                   )}
 
-                  {cart[k].type !== "accessory" && (
+                  {cart[k].placement && (
                     <div className={styles.color__title}>
                       Placement:{" "}
                       {cart[k].secondPlacement
