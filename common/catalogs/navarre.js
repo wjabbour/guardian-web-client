@@ -354,7 +354,7 @@ export const catalog = [
     type: "service",
     default_color: "White",
     sizes: {
-      250: 34.14,
+      1: 34.14,
     },
   },
   {
@@ -365,7 +365,7 @@ export const catalog = [
     type: "service",
     default_color: "White",
     sizes: {
-      250: 34.14,
+      1: 34.14,
     },
   },
   {
@@ -376,7 +376,7 @@ export const catalog = [
     type: "service",
     default_color: "White",
     sizes: {
-      250: 34.14,
+      1: 34.14,
     },
   },
   {
@@ -387,7 +387,7 @@ export const catalog = [
     type: "service",
     default_color: "White",
     sizes: {
-      250: 34.14,
+      1: 34.14,
     },
   },
   {
