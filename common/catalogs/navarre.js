@@ -258,7 +258,7 @@ export const catalog = [
     type: "sales",
     default_color: "Blue",
     sizes: {
-      1: 16.95,
+      100: 16.95,
     },
   },
   {
