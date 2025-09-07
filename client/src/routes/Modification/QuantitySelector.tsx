@@ -42,18 +42,17 @@ export default function QuantitySelector({
                       <input
                         className="border-2 border-solid border-gray-600 rounded-md p-1"
                         type="text"
-                        value={order[size]?.quantity || 0}
+                        value={order[`${size},${color}`]?.quantity || 0}
                         onChange={(e) => {
                           setOrder((old) => {
                             const newOne = structuredClone(old);
-                            newOne[size] = {
+                            newOne[`${size},${color}`] = {
                               quantity: Number(e.target.value),
                               color,
                             };
 
                             return newOne;
                           });
-
                         }}
                         onBlur={() => {
                           setCustomsOrder(order);

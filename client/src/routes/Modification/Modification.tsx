@@ -97,13 +97,19 @@ export default function Modification() {
       const items: { [key: string]: number } = {};
 
       Object.keys(customsOrder).forEach((k: string) => {
-        console.log(k);
-        // the keys of customsOrder are the different available quantities
-        const quantity = parseInt(k);
+        // the keys of customsOrder are the quantity chosen and the color, like "1,Blue"
+        const quantity = parseInt(k.split(",")[0]);
         // object representing quantity and color selected
         const orderInfo = customsOrder[k];
 
-        items[orderInfo.color] = quantity * orderInfo.quantity;
+        /*
+          if the user ordered 2x500 and 1x1000 then we need to add them together
+        */
+        if (items[orderInfo.color]) {
+          items[orderInfo.color] += quantity * orderInfo.quantity;
+        } else {
+          items[orderInfo.color] = quantity * orderInfo.quantity;
+        }
       });
 
       for (const [color, quantity] of Object.entries(items)) {
@@ -201,7 +207,7 @@ export default function Modification() {
     const cart_item = {
       type: item.type,
       name: item.fullname,
-      price: item.sizes[quantity],
+      price: getPriceWithDiscount(Number(quantity), 1),
       quantity: Number(quantity),
       size: "default",
       color: color,
