@@ -22,6 +22,7 @@ export default function StoreSelection() {
             navigate(getDomainAwarePath(`/catalog/${storeCode}/customs`));
           }
         }}
+        setIsModalOpen={setModalOpen}
       />
       <div
         className="relative right-[50px] cursor-pointer text-[32px]"
