@@ -1,8 +1,12 @@
 import styles from "./Catalog.module.scss";
 import { getEmbroidery } from "../../lib/utils";
 
-export default function LogoPreview({ embroideryType }) {
-  const logos = getEmbroidery(embroideryType).map((l) => {
+export default function LogoPreview({ catalogType }) {
+  if (!getEmbroidery.catalogType) {
+    return null;
+  }
+
+  const logos = getEmbroidery(catalogType).map((l) => {
     l = l.toLowerCase().split(" ").join("_");
     if (l === "chrysler" || l === "dodge") {
       return (
