@@ -21,6 +21,12 @@ export default function EmbroiderySelector({
   handleFirstPlacementChange,
   handleSecondPlacementChange,
 }) {
+  // Returns an array of arrays
+  const embroideriesConfig = getWebConfigValue("embroideries");
+  const typesSupportingEmbroidery = Object.keys(embroideriesConfig).filter(
+    (type) => embroideriesConfig[type].length
+  );
+
   const logo_placements = getWebConfigValue("logo_placements") as string[];
   const [secondLogo, setSecondLogo] = useState(false);
 
@@ -97,10 +103,9 @@ export default function EmbroiderySelector({
   };
 
   const PlacementSelector = ({ embroideryPlace }) => {
-    const hasCorrectType = ["womens", "mens","hat","tshirts"].includes(item.type);
     const hasPlacementOptions = logo_placements.length > 0;
 
-    if (hasCorrectType && hasPlacementOptions) {
+    if (hasPlacementOptions) {
       const placements = logo_placements.map((l) => {
         return <MenuItem value={l}>{l}</MenuItem>;
       });
@@ -131,6 +136,11 @@ export default function EmbroiderySelector({
       return <></>;
     }
   };
+
+  if (!typesSupportingEmbroidery.includes(item.type)) {
+    return null;
+  }
+
   return (
     <div className="mb-[30px] mt-[30px]">
       <div className="flex flex-col">
