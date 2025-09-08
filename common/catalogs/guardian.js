@@ -1599,6 +1599,17 @@ export const catalog = [
     },
   },
   {
+    code: "GP418BUICK",
+    name: "Clip-On Window Flag",
+    fullname: "Clip-On Window Flag - BUICK",
+    colors: ["White"],
+    type: "sales",
+    default_color: "White",  
+    sizes: {
+      1: 0.00,
+    },
+  },
+  {
     code: "GP418CHEVROLET",
     name: "Clip-On Window Flag",
     fullname: "Clip-On Window Flag - CHEVROLET",
@@ -1610,9 +1621,31 @@ export const catalog = [
     },
   },
   {
+    code: "GP418CHRYSLER",
+    name: "Clip-On Window Flag",
+    fullname: "Clip-On Window Flag - CHRYSLER",
+    colors: ["Black"],
+    type: "sales",
+    default_color: "Black",  
+    sizes: {
+      1: 0.00,
+    },
+  },
+  {
     code: "GP418DODGE",
     name: "Clip-On Window Flag",
     fullname: "Clip-On Window Flag - DODGE",
+    colors: ["Black"],
+    type: "sales",
+    default_color: "Black",  
+    sizes: {
+      1: 0.00,
+    },
+  },
+  {
+    code: "GP418RAM",
+    name: "Clip-On Window Flag",
+    fullname: "Clip-On Window Flag - DODGE RAM",
     colors: ["Black"],
     type: "sales",
     default_color: "Black",  
@@ -1643,6 +1676,17 @@ export const catalog = [
     },
   },
   {
+    code: "GP418GMC",
+    name: "Clip-On Window Flag",
+    fullname: "Clip-On Window Flag - GMC",
+    colors: ["Black"],
+    type: "sales",
+    default_color: "Black",  
+    sizes: {
+      1: 0.00,
+    },
+  },
+  {
     code: "GP418HONDA",
     name: "Clip-On Window Flag",
     fullname: "Clip-On Window Flag - HONDA",
@@ -1660,6 +1704,17 @@ export const catalog = [
     colors: ["Blue"],
     type: "sales",
     default_color: "Blue",  
+    sizes: {
+      1: 0.00,
+    },
+  },
+  {
+    code: "GP418INFINITI",
+    name: "Clip-On Window Flag",
+    fullname: "Clip-On Window Flag - INFINITI",
+    colors: ["White"],
+    type: "sales",
+    default_color: "White",  
     sizes: {
       1: 0.00,
     },
@@ -1742,12 +1797,45 @@ export const catalog = [
     },
   },
   {
+    code: "GP418TOYOTA",
+    name: "Clip-On Window Flag",
+    fullname: "Clip-On Window Flag - TOYOTA",
+    colors: ["White"],
+    type: "sales",
+    default_color: "White",  
+    sizes: {
+      1: 0.00,
+    },
+  },
+  {
     code: "GP418VW",
     name: "Clip-On Window Flag",
     fullname: "Clip-On Window Flag - VOLKSWAGEN",
     colors: ["Navy"],
     type: "sales",
     default_color: "Navy",  
+    sizes: {
+      1: 0.00,
+    },
+  },
+  {
+    code: "GP418BWCHK",
+    name: "Clip-On Window Flag",
+    fullname: "Clip-On Window Flag - BLACK/WHITE CHECKERED",
+    colors: ["White"],
+    type: "sales",
+    default_color: "White",  
+    sizes: {
+      1: 0.00,
+    },
+  },
+  {
+    code: "GP418BLWCHK",
+    name: "Clip-On Window Flag",
+    fullname: "Clip-On Window Flag - BLUE/WHITE CHECKERED",
+    colors: ["White"],
+    type: "sales",
+    default_color: "White",  
     sizes: {
       1: 0.00,
     },
