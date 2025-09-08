@@ -84,7 +84,7 @@ export const config = {
     {
       name: "Vaughn Ford",
       address: "4303 Highway 19, Zachary, LA 70791",
-      code: "VAUGOZ",
+      code: "VAUFOZ",
     },
     {
       name: "Vaughn Pre-Owned Alexandria",
