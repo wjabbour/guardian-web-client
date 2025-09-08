@@ -343,7 +343,7 @@ export const catalog = [
     type: "service",
     default_color: "White",
     sizes: {
-      500: 99.99,
+      1: 99.99,
     },
   },
   {

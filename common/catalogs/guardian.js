@@ -2802,9 +2802,9 @@ export const catalog = [
     default_color: "Metal",
     supportedStores: ["GUAPR1","GUAPR2"],
     sizes: {
-      500: 0.0,
-      1000: 0.0,
-      2500: 0.0,
+      "qty of 500": 0.0,
+      "qty of 1000": 0.0,
+      "qty of 2500": 0.0,
     },
   },
   {

@@ -328,7 +328,7 @@ export const catalog = [
     type: "accessory",
     default_color: "Black",
     sizes: {
-      Default: 6.99,
+      1: 6.99,
     },
   },
   {
@@ -339,7 +339,7 @@ export const catalog = [
     type: "accessory",
     default_color: "Grey",
     sizes: {
-      Default: 6.99,
+      1: 6.99,
     },
   },
   {
@@ -350,7 +350,7 @@ export const catalog = [
     type: "accessory",
     default_color: "Grey",
     sizes: {
-      Default: 6.99,
+      1: 6.99,
     },
   },
   // {
