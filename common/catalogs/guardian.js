@@ -1,4 +1,21 @@
 export const catalog = [
+  {
+  code: "HENCAT-33P-497838B",
+    name: "Plastic Plates",
+    fullname: "White Plastic w/black/yellow imprint",
+    colors: ["White"],
+    type: "customs",
+    default_color: "White",
+    supportedStores: ["GUAPR1","GUAPR2"],
+    discount: [
+      { quantity: 500, price: 3.00 },
+      { quantity: 1000, price: 2.50 },
+      { quantity: 2500, price: 1.50 },
+    ],
+    sizes: {
+      1: 3.00,      
+   },
+  },
    {
     code: "CP91L",
     name: "Port & Company Beanie",
