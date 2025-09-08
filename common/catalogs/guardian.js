@@ -2691,7 +2691,7 @@ export const catalog = [
     type: "service",
     default_color: "White",
     sizes: {
-      500: 0.00,
+      "box of 500": 0.00,
     },
   },
   {
@@ -2702,7 +2702,7 @@ export const catalog = [
     type: "service",
     default_color: "White",
     sizes: {
-      250: 0.00,
+      "pack of 250": 0.00,
     },
   },
   {
@@ -2802,9 +2802,9 @@ export const catalog = [
     default_color: "Metal",
     supportedStores: ["GUAPR1","GUAPR2"],
     sizes: {
-      "qty of 500": 0.0,
-      "qty of 1000": 0.0,
-      "qty of 2500": 0.0,
+      500: 0.0,
+      1000: 0.0,
+      2500: 0.0,
     },
   },
   {
