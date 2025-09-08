@@ -7,14 +7,11 @@ export const catalog = [
     type: "customs",
     default_color: "Black",
     supportedStores: ["TAMCDA","TAMBDA","TAMSMO","TAMHDA","TAMKDI","TAMNMO","TAMKWE","ONLINE"],
-     discount: [
-      { quantity: 500, price: 1.59 },
-      { quantity: 1000, price: 1.44 },
-      { quantity: 1500, price: 1.39 },
-      { quantity: 2500, price: 1.29 },
-    ],
     sizes: {
-       1: 1.59,
+       500: 1.59,
+       1000: 1.44,
+       1500: 1.39,
+       2500: 1.29,
     },
   },
   {
