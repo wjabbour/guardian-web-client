@@ -12,8 +12,7 @@ export const config = {
     office: [],
     service: [],
   },
-  email_recipients: [
-    "lbudbill@gpcorp.com",    
+  email_recipients: [       
     "grodney@gpcorp.com",
     "support@gpcorp.com",
     "shanell@gpcorp.com",
