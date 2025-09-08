@@ -413,7 +413,7 @@ export const catalog = [
     type: "customs",
     default_color: "White",
     discount: [
-      { quantity: 1000, price: 0.0 },
+      { quantity: 100, price: 0.0 },
       { quantity: 2500, price: 0.0 },
     ],
     sizes: {
