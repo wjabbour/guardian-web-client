@@ -14,7 +14,7 @@ export const catalog = [
       { quantity: 2500, price: 1.29 },
     ],
     sizes: {
-       1: 0.00,
+       1: 1.59,
     },
   },
   {
