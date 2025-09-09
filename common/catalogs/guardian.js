@@ -1951,12 +1951,45 @@ export const catalog = [
     },
   },
   {
+    code: "GP418SALE",
+    name: "Clip-On Window Flag",
+    fullname: "Clip-On Window Flag - SALE",
+    colors: ["Blue","Red"],
+    type: "sales",
+    default_color: "Blue",  
+    sizes: {
+      1: 0.00,
+    },
+  },
+  {
+    code: "GP418PTSALE",
+    name: "Clip-On Window Flag",
+    fullname: "Clip-On Window Flag - PATRIOTIC SALE",
+    colors: ["White"],
+    type: "sales",
+    default_color: "White",  
+    sizes: {
+      1: 0.00,
+    },
+  },
+  {
     code: "GP418ESPANOL",
     name: "Clip-On Window Flag",
     fullname: "Clip-On Window Flag - SE HABLA ESPANOL",
     colors: ["White"],
     type: "sales",
     default_color: "White",  
+    sizes: {
+      1: 0.00,
+    },
+  },
+  {
+    code: "GP418SMILEY",
+    name: "Clip-On Window Flag",
+    fullname: "Clip-On Window Flag - SMILEY FACE",
+    colors: ["Yellow"],
+    type: "sales",
+    default_color: "Yellow",  
     sizes: {
       1: 0.00,
     },
