@@ -269,6 +269,7 @@ export const catalog = [
     fullname: "Port Authority® Snapback Trucker Cap",
     colors: ["Black","Flame Red","Flame Red Black","Flame Red White","White"],
     type: "hat",
+    halfColors: ['Flame Red Black', 'Flame Red White'],
     default_color: "Black",
     sizes: {
       OSFA: 12.99,
