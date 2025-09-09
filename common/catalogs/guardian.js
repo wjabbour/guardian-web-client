@@ -1687,12 +1687,34 @@ export const catalog = [
     },
   },
   {
+    code: "GP418GMCERT",
+    name: "Clip-On Window Flag",
+    fullname: "Clip-On Window Flag - GM CERTIFIED USED",
+    colors: ["White"],
+    type: "sales",
+    default_color: "White",  
+    sizes: {
+      1: 0.00,
+    },
+  },
+  {
     code: "GP418HONDA",
     name: "Clip-On Window Flag",
     fullname: "Clip-On Window Flag - HONDA",
     colors: ["Strong Blue"],
     type: "sales",
     default_color: "Strong Blue",  
+    sizes: {
+      1: 0.00,
+    },
+  },
+  {
+    code: "GP418HONDACERT",
+    name: "Clip-On Window Flag",
+    fullname: "Clip-On Window Flag - HONDA CERTIFIED PRE-OWNED",
+    colors: ["White"],
+    type: "sales",
+    default_color: "White",  
     sizes: {
       1: 0.00,
     },
@@ -1885,6 +1907,17 @@ export const catalog = [
     },
   },
   {
+    code: "GP418CRFX",
+    name: "Clip-On Window Flag",
+    fullname: "Clip-On Window Flag - CARFAX",
+    colors: ["Strong Blue"],
+    type: "sales",
+    default_color: "Strong Blue",  
+    sizes: {
+      1: 0.00,
+    },
+  },
+  {
     code: "GP418CERTPRE",
     name: "Clip-On Window Flag",
     fullname: "Clip-On Window Flag - CERTIFIED PRE-OWNED",
@@ -1894,7 +1927,18 @@ export const catalog = [
     sizes: {
       1: 0.00,
     },
-  },  
+  },
+  {
+    code: "GP418CERTPREO",
+    name: "Clip-On Window Flag",
+    fullname: "Clip-On Window Flag - CERTIFIED PRE-OWNED CDJR",
+    colors: ["Gold"],
+    type: "sales",
+    default_color: "Gold",  
+    sizes: {
+      1: 0.00,
+    },
+  },    
   {
     code: "GP418GRTMPG",
     name: "Clip-On Window Flag",
@@ -1990,6 +2034,17 @@ export const catalog = [
     colors: ["Yellow"],
     type: "sales",
     default_color: "Yellow",  
+    sizes: {
+      1: 0.00,
+    },
+  },
+  {
+    code: "GP418STPSVNW",
+    name: "Clip-On Window Flag",
+    fullname: "Clip-On Window Flag - STOP SAVE NOW",
+    colors: ["White"],
+    type: "sales",
+    default_color: "White",  
     sizes: {
       1: 0.00,
     },
