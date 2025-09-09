@@ -96,7 +96,7 @@ export default function ClothingCatalog() {
           );
         })}
       </div>
-      <LogoPreview embroideryType={catalogType} />
+      <LogoPreview catalogType={catalogType} />
     </div>
   );
 }
