@@ -1907,6 +1907,17 @@ export const catalog = [
     },
   },
   {
+    code: "GP418HOTBUYS",
+    name: "Clip-On Window Flag",
+    fullname: "Clip-On Window Flag - HOT BUYS",
+    colors: ["Blue"],
+    type: "sales",
+    default_color: "Blue",  
+    sizes: {
+      1: 0.00,
+    },
+  },
+  {
     code: "GP418HYBRID",
     name: "Clip-On Window Flag",
     fullname: "Clip-On Window Flag - HYBRID",
@@ -1924,6 +1935,17 @@ export const catalog = [
     colors: ["Red"],
     type: "sales",
     default_color: "Red",  
+    sizes: {
+      1: 0.00,
+    },
+  },
+  {
+    code: "GP418RTSALE",
+    name: "Clip-On Window Flag",
+    fullname: "Clip-On Window Flag - RED TAG SALE",
+    colors: ["Yellow"],
+    type: "sales",
+    default_color: "Yellow",  
     sizes: {
       1: 0.00,
     },
