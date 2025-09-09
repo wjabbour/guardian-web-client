@@ -181,7 +181,7 @@ export const catalog = [
     type: "accessory",
     default_color: "White",
     sizes: {
-      1: .28,
+      "# napkins": .28,
     },
   },
   {
@@ -192,7 +192,7 @@ export const catalog = [
     type: "accessory",
     default_color: "Clear",
     sizes: {
-      1: .32,
+      "# cups": .32,
     },
   },
   {
@@ -203,7 +203,7 @@ export const catalog = [
     type: "service",
     default_color: "Plastic",
     sizes: {
-      1: 65.00,
+      "# rolls": 65.00,
     },
   },
   {
@@ -214,7 +214,7 @@ export const catalog = [
     type: "service",
     default_color: "White",
     sizes: {
-      1: 60.00,
+      "# boxes": 60.00,
     },
   },
   {
@@ -225,7 +225,7 @@ export const catalog = [
     type: "service",
     default_color: "Metal",
     sizes: {
-      1: 13.95,
+      "# packs": 13.95,
     },
   },
   {
@@ -247,7 +247,7 @@ export const catalog = [
     type: "service",
     default_color: "1000",
     sizes: {
-      1: 65.00,
+      "# boxes": 65.00,
     },
   },
   {
@@ -258,7 +258,7 @@ export const catalog = [
     type: "sales",
     default_color: "Blue",
     sizes: {
-      1: 16.95,
+      "# packs": 16.95,
     },
   },
   {
@@ -280,7 +280,7 @@ export const catalog = [
     type: "sales",
     default_color: "Blue",
     sizes: {
-      1: 35.95,
+      "# boxes": 35.95,
     },
   },
   {
@@ -301,7 +301,7 @@ export const catalog = [
     type: "sales",
     default_color: "Beige",
     sizes: {
-      1: 65.00,
+      "# boxes": 65.00,
     },
   },
   {
@@ -332,7 +332,7 @@ export const catalog = [
     type: "sales",
     default_color: "BY 08",
     sizes: {
-      1: 10.99,
+      "# packs": 10.99,
     },
   },
   {
@@ -343,7 +343,7 @@ export const catalog = [
     type: "service",
     default_color: "White",
     sizes: {
-      1: 99.99,
+      "# boxes": 99.99,
     },
   },
   {
@@ -354,7 +354,7 @@ export const catalog = [
     type: "service",
     default_color: "White",
     sizes: {
-      1: 34.14,
+      "# packs": 34.14,
     },
   },
   {
@@ -365,7 +365,7 @@ export const catalog = [
     type: "service",
     default_color: "White",
     sizes: {
-      1: 34.14,
+      "# packs": 34.14,
     },
   },
   {
@@ -376,7 +376,7 @@ export const catalog = [
     type: "service",
     default_color: "White",
     sizes: {
-      1: 34.14,
+      "# packs": 34.14,
     },
   },
   {
@@ -387,7 +387,7 @@ export const catalog = [
     type: "service",
     default_color: "White",
     sizes: {
-      1: 34.14,
+      "# packs": 34.14,
     },
   },
   {
@@ -409,7 +409,7 @@ export const catalog = [
     type: "sales",
     default_color: "Blue",
     sizes: {
-      1: 115.00,
+      "# boxes": 115.00,
     },
   },
   {

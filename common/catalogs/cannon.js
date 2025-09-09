@@ -44,9 +44,7 @@ export const catalog = [
       "CANNJA","CANNOX","GREIGR","CANCLR","CANBVI","CANCSE",
       ],
     sizes: {
-      500: 0.0,
-      1000: 0.0,
-      1250: 0.0,
+      "# decals": 0.0,      
     },
   },
   {
@@ -68,8 +66,7 @@ export const catalog = [
     type: "office",
     default_color: "Buff",
     sizes: {
-      500: 0.0,
-      1000: 0.0,
+      "# boxes": 0.0,      
     },
   },
   {
@@ -91,7 +88,7 @@ export const catalog = [
     type: "office",
     default_color: "Number 0",
     sizes: {
-      500: 0.017,
+      "# boxes": 8.50,
     },
   },
   {
@@ -114,7 +111,7 @@ export const catalog = [
     type: "service",
     default_color: "Plastic",
     sizes: {
-      500: 0.147,
+      "# rolls": 73.50,
     },
   },
   {
