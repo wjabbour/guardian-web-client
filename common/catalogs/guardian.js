@@ -1818,6 +1818,17 @@ export const catalog = [
       1: 0.00,
     },
   },
+   {
+    code: "GP418BASADV",
+    name: "Clip-On Window Flag",
+    fullname: "Clip-On Window Flag - AS ADVERTISED",
+    colors: ["Red"],
+    type: "sales",
+    default_color: "Red",  
+    sizes: {
+      1: 0.00,
+    },
+  },
   {
     code: "GP418BWCHK",
     name: "Clip-On Window Flag",
@@ -1836,6 +1847,50 @@ export const catalog = [
     colors: ["White"],
     type: "sales",
     default_color: "White",  
+    sizes: {
+      1: 0.00,
+    },
+  },
+  {
+    code: "GP418BBHPH",
+    name: "Clip-On Window Flag",
+    fullname: "Clip-On Window Flag - BUY HERE PAY HERE",
+    colors: ["Red"],
+    type: "sales",
+    default_color: "Red",  
+    sizes: {
+      1: 0.00,
+    },
+  },
+  {
+    code: "GP418BBHPH2",
+    name: "Clip-On Window Flag",
+    fullname: "Clip-On Window Flag - BUY HERE PAY HERE",
+    colors: ["Red"],
+    type: "sales",
+    default_color: "Red",  
+    sizes: {
+      1: 0.00,
+    },
+  },
+  {
+    code: "GP418CERTPREB",
+    name: "Clip-On Window Flag",
+    fullname: "Clip-On Window Flag - CERTIFIED PRE-OWNED - BLUE",
+    colors: ["Blue"],
+    type: "sales",
+    default_color: "Blue",  
+    sizes: {
+      1: 0.00,
+    },
+  },
+  {
+    code: "GP418CERTPRER",
+    name: "Clip-On Window Flag",
+    fullname: "Clip-On Window Flag - CERTIFIED PRE-OWNED - Red",
+    colors: ["Red"],
+    type: "sales",
+    default_color: "Red",  
     sizes: {
       1: 0.00,
     },
