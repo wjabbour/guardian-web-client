@@ -19,7 +19,7 @@ export const catalog = [
     default_color: "White",
     discount: [{ quantity: 500, price: 76.44 }],
     sizes: {
-      "boxes": 76.44,
+      "# boxes": 76.44,
     },
   },
   {
@@ -31,7 +31,7 @@ export const catalog = [
     default_color: "White",
     discount: [{ quantity: 1, price: 135.0 }],
     sizes: {
-      "packs": 135.0,
+      "# packs": 135.0,
     },
   },
   {
