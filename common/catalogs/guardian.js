@@ -1852,7 +1852,7 @@ export const catalog = [
     },
   },
   {
-    code: "GP418BBHPH",
+    code: "GP418BHPH",
     name: "Clip-On Window Flag",
     fullname: "Clip-On Window Flag - BUY HERE PAY HERE",
     colors: ["Red"],
@@ -1863,7 +1863,7 @@ export const catalog = [
     },
   },
   {
-    code: "GP418BBHPH2",
+    code: "GP418BHPH2",
     name: "Clip-On Window Flag",
     fullname: "Clip-On Window Flag - BUY HERE PAY HERE",
     colors: ["Red"],
@@ -1874,27 +1874,16 @@ export const catalog = [
     },
   },
   {
-    code: "GP418CERTPREB",
+    code: "GP418CERTPRE",
     name: "Clip-On Window Flag",
-    fullname: "Clip-On Window Flag - CERTIFIED PRE-OWNED - BLUE",
-    colors: ["Blue"],
+    fullname: "Clip-On Window Flag - CERTIFIED PRE-OWNED",
+    colors: ["Blue","Red"],
     type: "sales",
     default_color: "Blue",  
     sizes: {
       1: 0.00,
     },
-  },
-  {
-    code: "GP418CERTPRER",
-    name: "Clip-On Window Flag",
-    fullname: "Clip-On Window Flag - CERTIFIED PRE-OWNED - Red",
-    colors: ["Red"],
-    type: "sales",
-    default_color: "Red",  
-    sizes: {
-      1: 0.00,
-    },
-  },
+  },  
   {
     code: "30BKHP",
     name: "7.5 in. Numbers - Bk/Htpk",
