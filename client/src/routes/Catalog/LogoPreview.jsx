@@ -2,7 +2,7 @@ import styles from "./Catalog.module.scss";
 import { getEmbroidery } from "../../lib/utils";
 
 export default function LogoPreview({ catalogType }) {
-  if (!getEmbroidery.catalogType) {
+  if (!getEmbroidery(catalogType)) {
     return null;
   }
 
