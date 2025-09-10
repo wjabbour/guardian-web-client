@@ -2103,7 +2103,18 @@ export const catalog = [
     sizes: {
       1: 0.00,
     },
-  }, 
+  },
+  {
+    code: "GP831AJBL",
+    name: "Swooper Flag",
+    fullname: "Swooper Flag - FORD",
+    colors: ["Blue"],
+    type: "sales",
+    default_color: "Blue",  
+    sizes: {
+      1: 0.00,
+    },
+  },  
   {
     code: "GP831BEBL",
     name: "Swooper Flag",
