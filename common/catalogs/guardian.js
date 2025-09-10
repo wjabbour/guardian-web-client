@@ -2147,7 +2147,51 @@ export const catalog = [
     sizes: {
       1: 0.00,
     },
-  },  
+  }, 
+  {
+    code: "GP831BL",
+    name: "Swooper Flag",
+    fullname: "Swooper Flag - SOLID BLUE",
+    colors: ["Blue"],
+    type: "sales",
+    default_color: "Blue",  
+    sizes: {
+      1: 0.00,
+    },
+  },
+  {
+    code: "GP831RD",
+    name: "Swooper Flag",
+    fullname: "Swooper Flag - SOLID RED",
+    colors: ["Red"],
+    type: "sales",
+    default_color: "Red",  
+    sizes: {
+      1: 0.00,
+    },
+  },
+  {
+    code: "GP831WT",
+    name: "Swooper Flag",
+    fullname: "Swooper Flag - WHITE",
+    colors: ["White"],
+    type: "sales",
+    default_color: "White",  
+    sizes: {
+      1: 0.00,
+    },
+  }, 
+  {
+    code: "GP831YL",
+    name: "Swooper Flag",
+    fullname: "Swooper Flag - SOLID YELLOW",
+    colors: ["Yellow"],
+    type: "sales",
+    default_color: "Yellow",  
+    sizes: {
+      1: 0.00,
+    },
+  },       
   {
     code: "GP831CBBL",
     name: "Swooper Flag",
@@ -2237,16 +2281,60 @@ export const catalog = [
     },
   }, 
   {
-    code: "GP831BEXRD",
+    code: "GP831EXRD",
     name: "Swooper Flag",
-    fullname: "Swooper Flag - NISSAN  ",
+    fullname: "Swooper Flag - NISSAN ",
     colors: ["Red"],
     type: "sales",
     default_color: "Red",  
     sizes: {
       1: 0.00,
     },
-  },                                  
+  }, 
+  {
+    code: "GP831CPRDYL",
+    name: "Swooper Flag",
+    fullname: "Swooper Flag - SALE (RED/YELLOW) ",
+    colors: ["Red"],
+    type: "sales",
+    default_color: "Red",  
+    sizes: {
+      1: 0.00,
+    },
+  },
+  {
+    code: "GP831CPBL",
+    name: "Swooper Flag",
+    fullname: "Swooper Flag - SALE (BLUE/WHITE) ",
+    colors: ["Blue"],
+    type: "sales",
+    default_color: "Blue",  
+    sizes: {
+      1: 0.00,
+    },
+  },
+  {
+    code: "GP831CPRD",
+    name: "Swooper Flag",
+    fullname: "Swooper Flag - SALE (RED/WHITE) ",
+    colors: ["Red"],
+    type: "sales",
+    default_color: "Red",  
+    sizes: {
+      1: 0.00,
+    },
+  },
+  {
+    code: "GP831DTWTBK",
+    name: "Swooper Flag",
+    fullname: "Swooper Flag - SE HABLA ESPANOL ",
+    colors: ["White"],
+    type: "sales",
+    default_color: "White",  
+    sizes: {
+      1: 0.00,
+    },
+  },                                            
   {
     code: "30BKHP",
     name: "7.5 in. Numbers - Bk/Htpk",
