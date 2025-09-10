@@ -2083,6 +2083,39 @@ export const catalog = [
     },
   },
   {
+    code: "GP831DPBLYL",
+    name: "Swooper Flag",
+    fullname: "Swooper Flag - 4 x 4",
+    colors: ["Blue"],
+    type: "sales",
+    default_color: "Blue",  
+    sizes: {
+      1: 0.00,
+    },
+  },
+  {
+    code: "GP831CFRWB",
+    name: "Swooper Flag",
+    fullname: "Swooper Flag - BUY HERE/PAY HERE",
+    colors: ["Red"],
+    type: "sales",
+    default_color: "Red",  
+    sizes: {
+      1: 0.00,
+    },
+  },
+  {
+    code: "GP831CQRDWT",
+    name: "Swooper Flag",
+    fullname: "Swooper Flag - CERTIFIED PRE-OWNED",
+    colors: ["Red"],
+    type: "sales",
+    default_color: "Red",  
+    sizes: {
+      1: 0.00,
+    },
+  },  
+  {
     code: "GP831EMWTBK",
     name: "Swooper Flag",
     fullname: "Swooper Flag - CHECKERED FLAG (BLACK & WHITE)",
@@ -2093,7 +2126,7 @@ export const catalog = [
       1: 0.00,
     },
   }, 
-    {
+  {
     code: "GP831FN",
     name: "Swooper Flag",
     fullname: "Swooper Flag - CHECKERED FLAG (BLACK & YELLOW)",
@@ -2103,7 +2136,18 @@ export const catalog = [
     sizes: {
       1: 0.00,
     },
-  }, 
+  },
+  {
+    code: "GP831EOBLWT",
+    name: "Swooper Flag",
+    fullname: "Swooper Flag - CHECKERED FLAG (BLUE & WHITE)",
+    colors: ["Blue"],
+    type: "sales",
+    default_color: "Blue",  
+    sizes: {
+      1: 0.00,
+    },
+  },  
   {
     code: "GP831CBBL",
     name: "Swooper Flag",
@@ -2149,12 +2193,34 @@ export const catalog = [
     },
   }, 
   {
+    code: "GP831DLRDYL",
+    name: "Swooper Flag",
+    fullname: "Swooper Flag - HOT BUYS",
+    colors: ["Blue"],
+    type: "sales",
+    default_color: "Blue",  
+    sizes: {
+      1: 0.00,
+    },
+  }, 
+  {
     code: "GP831BDWTRD",
     name: "Swooper Flag",
     fullname: "Swooper Flag - KIA",
     colors: ["Red"],
     type: "sales",
     default_color: "Red",  
+    sizes: {
+      1: 0.00,
+    },
+  }, 
+  {
+    code: "GP831BY",
+    name: "Swooper Flag",
+    fullname: "Swooper Flag - LINCOLN",
+    colors: ["Black"],
+    type: "sales",
+    default_color: "Black",  
     sizes: {
       1: 0.00,
     },
@@ -2169,7 +2235,18 @@ export const catalog = [
     sizes: {
       1: 0.00,
     },
-  },                               
+  }, 
+  {
+    code: "GP831BEXRD",
+    name: "Swooper Flag",
+    fullname: "Swooper Flag - NISSAN  ",
+    colors: ["Red"],
+    type: "sales",
+    default_color: "Red",  
+    sizes: {
+      1: 0.00,
+    },
+  },                                  
   {
     code: "30BKHP",
     name: "7.5 in. Numbers - Bk/Htpk",
