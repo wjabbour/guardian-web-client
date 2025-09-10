@@ -2345,7 +2345,18 @@ export const catalog = [
     sizes: {
       1: 0.00,
     },
-  },  
+  },
+  {
+    code: "GP831BIRD",
+    name: "Swooper Flag",
+    fullname: "Swooper Flag - TOYOTA ",
+    colors: ["White"],
+    type: "sales",
+    default_color: "White",  
+    sizes: {
+      1: 0.00,
+    },
+  },    
   {
     code: "GP831AWBLWT",
     name: "Swooper Flag",
@@ -2386,6 +2397,39 @@ export const catalog = [
     colors: ["Red"],
     type: "sales",
     default_color: "Red",  
+    sizes: {
+      1: 0.00,
+    },
+  },
+   {
+    code: "GP831CKGNYL",
+    name: "Swooper Flag",
+    fullname: "Swooper Flag - WE FINANCE",
+    colors: ["Green"],
+    type: "sales",
+    default_color: "Green",  
+    sizes: {
+      1: 0.00,
+    },
+  },
+   {
+    code: "GP831CNRWB",
+    name: "Swooper Flag",
+    fullname: "Swooper Flag - WELCOME",
+    colors: ["Blue"],
+    type: "sales",
+    default_color: "Blue",  
+    sizes: {
+      1: 0.00,
+    },
+  },
+  {
+    code: "GP831ECRWB",
+    name: "Swooper Flag",
+    fullname: "Swooper Flag - 0% FINANCE",
+    colors: ["Blue"],
+    type: "sales",
+    default_color: "Blue",  
     sizes: {
       1: 0.00,
     },
