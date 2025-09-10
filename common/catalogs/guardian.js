@@ -2083,6 +2083,28 @@ export const catalog = [
     },
   },
   {
+    code: "GP831CBBL",
+    name: "Swooper Flag",
+    fullname: "Swooper Flag - CHRYSLER",
+    colors: ["Black"],
+    type: "sales",
+    default_color: "Black",  
+    sizes: {
+      1: 0.00,
+    },
+  }, 
+  {
+    code: "GP831DY",
+    name: "Swooper Flag",
+    fullname: "Swooper Flag - DODGE",
+    colors: ["Black"],
+    type: "sales",
+    default_color: "Black",  
+    sizes: {
+      1: 0.00,
+    },
+  }, 
+  {
     code: "GP831BDWTRD",
     name: "Swooper Flag",
     fullname: "Swooper Flag - KIA",
@@ -2092,7 +2114,18 @@ export const catalog = [
     sizes: {
       1: 0.00,
     },
-  },                
+  }, 
+  {
+    code: "GP831BMBLWT",
+    name: "Swooper Flag",
+    fullname: "Swooper Flag - MAZDA",
+    colors: ["Strong Blue"],
+    type: "sales",
+    default_color: "Strong Blue",  
+    sizes: {
+      1: 0.00,
+    },
+  },                               
   {
     code: "30BKHP",
     name: "7.5 in. Numbers - Bk/Htpk",
