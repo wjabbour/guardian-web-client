@@ -2334,7 +2334,62 @@ export const catalog = [
     sizes: {
       1: 0.00,
     },
-  },                                            
+  }, 
+  {
+    code: "GP831AWBLWT",
+    name: "Swooper Flag",
+    fullname: "Swooper Flag - TRUCKS (BLUE/WHITE)",
+    colors: ["Blue"],
+    type: "sales",
+    default_color: "Blue",  
+    sizes: {
+      1: 0.00,
+    },
+  },
+  {
+    code: "GP831AURDWT",
+    name: "Swooper Flag",
+    fullname: "Swooper Flag - TRUCKS (RED/WHITE)",
+    colors: ["Red"],
+    type: "sales",
+    default_color: "Red",  
+    sizes: {
+      1: 0.00,
+    },
+  },
+  {
+    code: "GP831CIBLWT",
+    name: "Swooper Flag",
+    fullname: "Swooper Flag - USED CARS (BLUE/WHITE)",
+    colors: ["Blue"],
+    type: "sales",
+    default_color: "Blue",  
+    sizes: {
+      1: 0.00,
+    },
+  },
+  {
+    code: "GP831CIRDWT",
+    name: "Swooper Flag",
+    fullname: "Swooper Flag - USED CARS (RED/WHITE)",
+    colors: ["Red"],
+    type: "sales",
+    default_color: "Red",  
+    sizes: {
+      1: 0.00,
+    },
+  },
+  {
+    code: "GP831BNWTRD",
+    name: "Swooper Flag",
+    fullname: "Swooper Flag - CERTIFIED USED VEHICLES",
+    colors: ["White"],
+    type: "sales",
+    default_color: "White",  
+    sizes: {
+      1: 0.00,
+    },
+  },                                             
   {
     code: "30BKHP",
     name: "7.5 in. Numbers - Bk/Htpk",
