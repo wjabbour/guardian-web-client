@@ -2105,6 +2105,17 @@ export const catalog = [
     },
   }, 
   {
+    code: "GP831BEBL",
+    name: "Swooper Flag",
+    fullname: "Swooper Flag - HONDA",
+    colors: ["Blue"],
+    type: "sales",
+    default_color: "Blue",  
+    sizes: {
+      1: 0.00,
+    },
+  }, 
+  {
     code: "GP831BDWTRD",
     name: "Swooper Flag",
     fullname: "Swooper Flag - KIA",
