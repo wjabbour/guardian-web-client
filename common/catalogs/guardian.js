@@ -2334,7 +2334,18 @@ export const catalog = [
     sizes: {
       1: 0.00,
     },
-  }, 
+  },
+  {
+    code: "GP831DNWTRD",
+    name: "Swooper Flag",
+    fullname: "Swooper Flag - STOP SAVE NOW ",
+    colors: ["Yellow"],
+    type: "sales",
+    default_color: "Yellow",  
+    sizes: {
+      1: 0.00,
+    },
+  },  
   {
     code: "GP831AWBLWT",
     name: "Swooper Flag",
