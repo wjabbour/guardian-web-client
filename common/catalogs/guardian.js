@@ -22,6 +22,17 @@ export const catalog = [
     },
   },
   {
+    code: "NE205",
+    name: "New Era® Trucker Cap",
+    fullname: "New Era® Snapback Trucker Cap (addt'l logos cost extra)",
+    colors: ["Black","Graphite","Grey","Deep Navywt"],
+    type: "hat",
+    default_color: "Black",
+    sizes: {
+      OSFA: 0.00,
+    },
+  },
+  {
     code: "CP80",
     name: "Port & Co™ Six-Panel Cap",
     fullname: "Port & Co™ Six-Panel Twill Cap",
@@ -80,34 +91,23 @@ export const catalog = [
     },
   },
   {
-    code: "112",
-    name: "Richardson Trucker Cap",
-    fullname: "Richardson Snapback Trucker Cap (addt'l logos cost extra)",
-    colors: ["Amber Gold","Black","Charcoal","Loden","Maroon","Navy","White"],
-    type: "hat",
-    default_color: "Amber Gold",
-    sizes: {
-      OSFA: 0.00,
-    },
-  },
-  {
-    code: "NE205",
-    name: "New Era® Trucker Cap",
-    fullname: "New Era® Snapback Trucker Cap (addt'l logos cost extra)",
-    colors: ["Black","Graphite","Grey","Deep Navywt"],
-    type: "hat",
-    default_color: "Black",
-    sizes: {
-      OSFA: 0.00,
-    },
-  },
-  {
     code: "STC39",
     name: "Sport-Tek® Trucker Cap",
     fullname: "Sport-Tek® YP Classics® Retro Trucker Cap (addt'l logos cost extra)",
     colors: ["Black","Graphite","True Navy True Navy","True Navy White","White"],
     type: "hat",
     default_color: "Black",
+    sizes: {
+      OSFA: 0.00,
+    },
+  },
+  {
+    code: "112",
+    name: "Richardson Trucker Cap",
+    fullname: "Richardson Snapback Trucker Cap (addt'l logos cost extra)",
+    colors: ["Amber Gold","Black","Charcoal","Loden","Maroon","Navy","White"],
+    type: "hat",
+    default_color: "Amber Gold",
     sizes: {
       OSFA: 0.00,
     },
@@ -2081,7 +2081,18 @@ export const catalog = [
     sizes: {
       1: 0.00,
     },
-  },             
+  },
+  {
+    code: "GP831BDWTRD",
+    name: "Swooper Flag",
+    fullname: "Swooper Flag - KIA",
+    colors: ["Red"],
+    type: "sales",
+    default_color: "Red",  
+    sizes: {
+      1: 0.00,
+    },
+  },                
   {
     code: "30BKHP",
     name: "7.5 in. Numbers - Bk/Htpk",
