@@ -2083,6 +2083,28 @@ export const catalog = [
     },
   },
   {
+    code: "GP831EMWTBK",
+    name: "Swooper Flag",
+    fullname: "Swooper Flag - CHECKERED FLAG (BLACK & WHITE)",
+    colors: ["Black"],
+    type: "sales",
+    default_color: "Black",  
+    sizes: {
+      1: 0.00,
+    },
+  }, 
+    {
+    code: "GP831FN",
+    name: "Swooper Flag",
+    fullname: "Swooper Flag - CHECKERED FLAG (BLACK & YELLOW)",
+    colors: ["Black"],
+    type: "sales",
+    default_color: "Black",  
+    sizes: {
+      1: 0.00,
+    },
+  }, 
+  {
     code: "GP831CBBL",
     name: "Swooper Flag",
     fullname: "Swooper Flag - CHRYSLER",
