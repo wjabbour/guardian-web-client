@@ -6,6 +6,7 @@ export const config = {
   embroideries: {
     mens: ["Tommycar","Tommycar Collision"],
     womens: ["Tommycar", "Tommycar Collision"],
+    tshirts: ["Tommycar", "Tommycar Collision"],
     service: [],
     sales: [],
     customs: [],
