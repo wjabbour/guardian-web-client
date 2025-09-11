@@ -1577,23 +1577,23 @@ export const catalog = [
     },
   },
   {
+    code: "GP415",
+    name: "Clip-On Window Flag",
+    fullname: "Clip-On U.S. Flag - (12/pack - 3 pack min.)",
+    colors: ["White"],
+    type: "sales",
+    default_color: "White",  
+    sizes: {
+      1: 0.00,
+    },
+  },
+  {
     code: "GP418ACURA",
     name: "Clip-On Window Flag",
     fullname: "Clip-On Window Flag - ACURA",
     colors: ["Black"],
     type: "sales",
     default_color: "Black",  
-    sizes: {
-      1: 0.00,
-    },
-  },
-  {
-    code: "GP418BESTBUYS",
-    name: "Clip-On Window Flag",
-    fullname: "Clip-On Window Flag - BEST BUYS HERE",
-    colors: ["Blue"],
-    type: "sales",
-    default_color: "Blue",  
     sizes: {
       1: 0.00,
     },
@@ -1891,6 +1891,17 @@ export const catalog = [
     colors: ["White"],
     type: "sales",
     default_color: "White",  
+    sizes: {
+      1: 0.00,
+    },
+  },
+  {
+    code: "GP418BESTBUYS",
+    name: "Clip-On Window Flag",
+    fullname: "Clip-On Window Flag - BEST BUYS HERE",
+    colors: ["Blue"],
+    type: "sales",
+    default_color: "Blue",  
     sizes: {
       1: 0.00,
     },
