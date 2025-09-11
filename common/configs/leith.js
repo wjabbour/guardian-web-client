@@ -6,6 +6,7 @@ export const config = {
   embroideries: {
     mens: ["honda"],
     womens: ["honda"],
+    tshirts: ["honda"],
     hat: [],
     customs: [],
   },
