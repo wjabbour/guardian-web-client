@@ -1,5 +1,24 @@
 export const catalog = [
   {
+    code: "PC61",
+    name: "Port & Company® Tee",
+    fullname: "Port & Company® Essential Tee",
+    colors: ["Jet Black"],
+    type: "tshirts",
+    default_color: "Jet Black",
+    sizes: {
+      Small: 9.25,
+      Medium: 9.25,
+      Large: 9.25,
+      XLarge: 9.25,
+      "2XLarge": 10.25,
+      "3XLarge": 12.25,
+      "4XLarge": 13.25,
+      "5XLarge": 15.25,
+      "6XLarge": 16.25,
+    },
+  },
+  {
     code: "ST650",
     name: "Sport-Tek® Polo Shirt",
     fullname: "Sport-Tek® Micropique Polo",

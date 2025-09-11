@@ -2401,6 +2401,17 @@ export const catalog = [
       1: 0.00,
     },
   },
+  {
+    code: "GP831CIRWB",
+    name: "Swooper Flag",
+    fullname: "Swooper Flag - USED CARS (RED/WHITE/BLUE)",
+    colors: ["Blue"],
+    type: "sales",
+    default_color: "Blue",  
+    sizes: {
+      1: 0.00,
+    },
+  },
    {
     code: "GP831CKGNYL",
     name: "Swooper Flag",

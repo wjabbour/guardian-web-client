@@ -105,7 +105,7 @@ export const config = {
   server_hostname: "https://mxfj3q6m01.execute-api.us-east-1.amazonaws.com",
   account_reps: [
     { name: "Bob Sugden", phone: "678-287-1662" },
-    { name: "Louis Budbill", phone: "678-287-1659" },
+    { name: "Louis Budbill", phone: "678-287-1649" },
   ],
   route_prefix: "/leith",
   paypal_not_supported: true,
