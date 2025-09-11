@@ -69,7 +69,7 @@ export const catalog = [
     name: "Port & Co™ Hooded Sweatshirt",
     fullname: "Port & Co™ Core Fleece Pullover Hooded Sweatshirt",
     colors: ["Jet Black"],
-    type: "tshirt",
+    type: "tshirts",
     default_color: "Jet Black",
     sizes: {
       Small: 15.99,
