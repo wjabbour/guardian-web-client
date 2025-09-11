@@ -1588,6 +1588,17 @@ export const catalog = [
     },
   },
   {
+    code: "GP418BESTBUYS",
+    name: "Clip-On Window Flag",
+    fullname: "Clip-On Window Flag - BEST BUYS HERE",
+    colors: ["Blue"],
+    type: "sales",
+    default_color: "Blue",  
+    sizes: {
+      1: 0.00,
+    },
+  },
+  {
     code: "GP418BMW",
     name: "Clip-On Window Flag",
     fullname: "Clip-On Window Flag - BMW",
