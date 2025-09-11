@@ -6,7 +6,7 @@ export const config = {
   embroideries: {
     mens: ["Honda"],
     womens: ["Honda"],
-    tshirts: ["Holman"],
+    tshirts: ["Holman","Holman Driving Whats Right"],
     hat: [],
     customs: [],
   },
