@@ -66,7 +66,7 @@ export const catalog = [
   },
   {
     code: "PC78H",
-    name: "Port & Co™ Hooded Sweatshirt",
+    name: "Port & Co™ Sweatshirt",
     fullname: "Port & Co™ Core Fleece Pullover Hooded Sweatshirt",
     colors: ["Jet Black"],
     type: "tshirts",
