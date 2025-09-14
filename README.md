@@ -4,45 +4,19 @@
 
 VSCode is basically an advanced text editor. It makes viewing and updating the source code much easier. Go [here](https://code.visualstudio.com/download) to download VSCode.
 
-### Node
-
-Node is a JavaScript runtime and also includes the package manager `npm`. `npm` is used to install all of the packages needed to run the site.
-
-Follow [these instructions](https://nodejs.org/en/download/package-manager) to install Node for your operating system.
-
-### Terraform
-
-Terraform is a tool that takes care of deploying the resources to AWS that make the site functional, e.g. the database.
-
-Download the appropriate binary [here](https://developer.hashicorp.com/terraform/install) (if you have 32-bit Windows you should use `386`, if you have 64-bit Windows you should use `AMD64`).
-
-Once downloaded, unzip the compressed file, and move the Terraform binary (file ending with `.exe` extension) to your `C:\Apps\Terraform` folder (you may need to create this folder).
-
-Once that is complete, you will need to update your PATH environment variable (this tells Windows where binaries are found on your operation system).
-
-Check out [this StackOverflow post](https://stackoverflow.com/questions/1618280/where-can-i-set-path-to-make-exe-on-windows) for more information.
-
 ### git
 
 git is a version control system. You will use this to save changes that you make to the website configurations. Go [here](https://git-scm.com/download/win) to download the appropriate version of git for your operating system (be sure to choose correctly between 32-bit and 64-bit).
 
 ### GitHub
 
-The code is deployed on GitHub. You must download and install git to interact with GitHub. Go to github.com and create an account or sign in. The code is available [here](https://github.com/wjabbour/stivers).
+The code is deployed on GitHub. You must download and install git to interact with GitHub. Go to github.com and create an account or sign in. The code is available [here](https://github.com/wjabbour/guardian-web-client).
 
-First, in your shell, navigate to where you want this code to be stored on your file system. You will be going here whenever you want to run commands to deploy the site so make sure its convenient. Personally, I create a folder named `source` and put it directly under my user folder. So the path to the codebase ends up being `C/Users/wjabbour/source/stivers`.
+First, in your shell, navigate to where you want this code to be stored on your file system. You will need to navigate to this directory whenever you want to interact with the repository, so make sure it's convenient. Personally, I create a folder named `source` and put it directly under my user folder. So the path to the codebase ends up being `C/Users/wjabbour/source/guardian-web-client`.
 
 So in that case, I first navigate to the `source` directory.
 
-Type `git clone https://github.com/wjabbour/stivers.git`. Now `cd` into the `stivers` directory so that you're ready to run subsequent commands. Done!
-
-### AWS CLI v2
-
-The AWS CLI is used to manage credentials that will be used by Terraform to interact with AWS. [This page](https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html) has instructions for setting up AWS CLI v2.
-
-The AWS access key and secret key will need to be securely shared with you.
-
-With the cli installed, run the command `aws configure`. For "AWS Access Key ID" enter the AWS access key. For "AWS Secret Access Key" enter the secret key. For "Default region name" enter `us-east-1`. For "Default output format" enter `json`. Your local AWS profile has now been created.
+Type `git clone https://github.com/wjabbour/guardian-web-client.git`. Now `cd` into the `guardian-web-client` directory so that you're ready to run subsequent commands. Done!
 
 ### Ready To Go?
 
@@ -50,9 +24,6 @@ Open up PowerShell and try checking the version number of the programs to ensure
 
 ```
 git -v
-aws --version
-terraform -v
-node -v
 ```
 
 # Tips & Tricks
@@ -209,13 +180,7 @@ To upload a logo picture, download a .png or .jpg file of the logo to your compu
 
 ## Deploying the site
 
-With everything complete, we are ready to deploy. Deployment is the process of taking all of your local changes and pushing them to the cloud to update what the end users will interact with. We must deploy the client code (which will update the website in the users browser) and the backend code (which receives requests from the client and performs actions).
-
-From the project root, run `git pull`. This will ensure that you have all of the latest code before you make any changes.
-
-From the project root, `cd` into the client directory and run `npm run deploy`. This will take a few minutes.
-
-Move back to the project root and `cd` into the backend directory and run `npm run deploy`. This will take a few minutes.
+The site is deployed whenever changes are pushed to the GitHub repository.
 
 # Contributors
 
