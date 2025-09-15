@@ -34,7 +34,7 @@ export const catalog = [
   },
   {
     code: "A475",
-    name: "Adidas Quarter-Zip Pullover",
+    name: "Adidas 1/4-Zip Pullover",
     fullname: "Men's Lightweight Mélange Quarter-Zip Pullover",
     colors: ["Black Melange"],
     type: "mens",
@@ -51,7 +51,7 @@ export const catalog = [
   },
   {
     code: "A708",
-    name: "Adidas Quarter-Zip Pullover",
+    name: "Adidas 1/4-Zip Pullover",
     fullname: "Men's Textured Stripe Quarter-Zip Pullover",
     colors: ["Black"],
     type: "mens",
