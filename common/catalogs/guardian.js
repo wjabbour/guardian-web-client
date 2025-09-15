@@ -2105,6 +2105,17 @@ export const catalog = [
     },
   },
   {
+    code: "GPNS38CO",
+    name: "1-sidded Stock Message Flag",
+    fullname: "Single-Faced Stock Message Drape Flag - NEW TRUCKS",
+    colors: ["White"],
+    type: "sales",
+    default_color: "White",  
+    sizes: {
+      1: 0.00,
+    },
+  },
+  {
     code: "GP831DPBLYL",
     name: "Swooper Flag",
     fullname: "Swooper Flag - 4 x 4",
