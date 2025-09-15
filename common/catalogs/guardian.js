@@ -2314,17 +2314,6 @@ export const catalog = [
     },
   }, 
   {
-    code: "GP831BBGY",
-    name: "Swooper Flag",
-    fullname: "Swooper Flag - MITSUBISHI",
-    colors: ["Grey"],
-    type: "sales",
-    default_color: "Grey",  
-    sizes: {
-      1: 0.00,
-    },
-  }, 
-  {
     code: "GP831EXRD",
     name: "Swooper Flag",
     fullname: "Swooper Flag - NISSAN ",
