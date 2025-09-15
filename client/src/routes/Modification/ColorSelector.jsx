@@ -1,4 +1,4 @@
-import styles from "./Modification.module.scss";
+import './colors.css'
 
 export default function ColorSelector({
   item,
@@ -7,13 +7,13 @@ export default function ColorSelector({
   set_image_source,
 }) {
   const halfColors = item.halfColors || [];
-  const color_selection = item.colors.map((color) => {
+  const colorOptions = item.colors.map((color) => {
     if (halfColors.includes(color)) {
       const primaryColor = color.split(" ")[0];
       return (
-        <div className={styles.color__option} key={color}>
+        <div className="" key={color}>
           <div
-            className={`${styles.color__block} ${styles[primaryColor]}`}
+            className=""
             onClick={() => {
               const selectedColor = color.split(" ").join("_");
               set_selected_color(selectedColor);
@@ -22,37 +22,41 @@ export default function ColorSelector({
               );
             }}
           >
-            <div className={`${styles.color__triangle} `}></div>
+            <div className=""></div>
           </div>
 
-          <div className={styles.color__name}>
+          <div className="">
             <p>{color}</p>
           </div>
         </div>
       );
     } else {
       return (
-        <div className={styles.color__option} key={color}>
-          <div
-            className={`${styles.color__block} ${
-              styles[color.split(" ").join("_")]
-            } ${selected_color === color ? styles.selected : ""}`}
-            onClick={() => {
-              set_selected_color(color);
-              set_image_source(
-                `/images/${item.code}_${color
-                  .split(" ")
-                  .join("_")
-                  .toLowerCase()}.jpg`
-              );
-            }}
-          ></div>
-          <div className={styles.color__name}>
-            <p>{color}</p>
-          </div>
-        </div>
+        <div
+          className={`h-[32px] w-[38px] max-w-[38px] cursor-pointer ${color.split(" ").join("_")} rounded-sm basis-1/4`}
+          key={color}
+          onClick={() => {
+            set_selected_color(color);
+            set_image_source(
+              `/images/${item.code}_${color
+                .split(" ")
+                .join("_")
+                .toLowerCase()}.jpg`
+            );
+          }}
+        ></div>
       );
     }
   });
-  return color_selection;
+
+
+  return (
+    <div className="w-[250px]">
+      <div className="flex flex-wrap gap-[5px]">
+        {colorOptions}
+      </div>
+      <div className="">
+        <p>{selected_color}</p>
+      </div>
+    </div>);
 }
