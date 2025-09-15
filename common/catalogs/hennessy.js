@@ -198,7 +198,7 @@ export const catalog = [
     name: "Port & Company Beanie",
     fullname: "Port & Company® Fleece-Lined Beanie Cap",
     colors: ["Athletic Red", "Athletic Royal", "Black", "Navy"],
-    type: "mens",
+    type: "hat",
     default_color: "Black",
     sizes: {
       OSFA: 12.99,
@@ -217,7 +217,7 @@ export const catalog = [
       "Navy",
       "White",
     ],
-    type: "mens",
+    type: "hat",
     default_color: "Black",
     sizes: {
       OSFA: 21.99,
@@ -228,7 +228,7 @@ export const catalog = [
     name: "New Era® Trucker Cap",
     fullname: "New Era® Snapback Trucker Cap (addt'l logos cost extra)",
     colors: ["Black", "Graphite", "Grey", "Deep Navywt"],
-    type: "mens",
+    type: "hat",
     default_color: "Black",
     sizes: {
       OSFA: 26.99,
@@ -246,7 +246,7 @@ export const catalog = [
       "True Navy White",
       "White",
     ],
-    type: "mens",
+    type: "hat",
     default_color: "Black",
     sizes: {
       OSFA: 21.99,
