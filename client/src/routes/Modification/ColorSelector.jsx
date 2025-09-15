@@ -1,4 +1,4 @@
-import './colors.css'
+import "./colors.css";
 
 export default function ColorSelector({
   item,
@@ -6,6 +6,7 @@ export default function ColorSelector({
   selected_color,
   set_image_source,
 }) {
+  console.log(selected_color);
   const halfColors = item.halfColors || [];
   const colorOptions = item.colors.map((color) => {
     if (halfColors.includes(color)) {
@@ -33,7 +34,13 @@ export default function ColorSelector({
     } else {
       return (
         <div
-          className={`h-[32px] w-[38px] max-w-[38px] cursor-pointer ${color.split(" ").join("_")} rounded-sm basis-1/4`}
+          className={`h-[32px] w-[38px] cursor-pointer ${color
+            .split(" ")
+            .join("_")} rounded-sm ${
+            color === selected_color
+              ? "border-[2px] border-yellow-400"
+              : "border-[1px] border-black"
+          } `}
           key={color}
           onClick={() => {
             set_selected_color(color);
@@ -49,14 +56,13 @@ export default function ColorSelector({
     }
   });
 
-
   return (
-    <div className="w-[250px]">
-      <div className="flex flex-wrap gap-[5px]">
-        {colorOptions}
-      </div>
-      <div className="">
-        <p>{selected_color}</p>
-      </div>
-    </div>);
+    <div className="w-[350px]">
+      <div className="flex flex-wrap gap-[5px]">{colorOptions}</div>
+      <p className="mt-2 font-medium">
+        <span className="text-[16px] text-gray-400">Color: </span>
+        {selected_color}
+      </p>
+    </div>
+  );
 }
