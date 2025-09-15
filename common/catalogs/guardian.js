@@ -2237,6 +2237,17 @@ export const catalog = [
     },
   },
   {
+    code: "GP831DKRWB",
+    name: "Swooper Flag",
+    fullname: "Swooper Flag - EASY FINANCE",
+    colors: ["Blue"],
+    type: "sales",
+    default_color: "Blue",  
+    sizes: {
+      1: 0.00,
+    },
+  },
+  {
     code: "GP831AJBL",
     name: "Swooper Flag",
     fullname: "Swooper Flag - FORD",

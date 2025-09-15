@@ -245,7 +245,7 @@ export const catalog = [
       "True Navy True Navy",
       "True Navy White",
       "White",
-    ],
+    ],    
     type: "hat",
     default_color: "Black",
     sizes: {
