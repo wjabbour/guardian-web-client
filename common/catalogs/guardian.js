@@ -2106,7 +2106,7 @@ export const catalog = [
   },
   {
     code: "GPNS38CR",
-    name: "1-sided Stock Message Flag",
+    name: "1-sided Message Flag",
     fullname: "Single-Faced Stock Message Drape Flag - NEW CARS",
     colors: ["White"],
     type: "sales",
@@ -2117,7 +2117,7 @@ export const catalog = [
   },
   {
     code: "GPNS38CO",
-    name: "1-sided Stock Message Flag",
+    name: "1-sided Message Flag",
     fullname: "Single-Faced Stock Message Drape Flag - NEW TRUCKS",
     colors: ["White"],
     type: "sales",
