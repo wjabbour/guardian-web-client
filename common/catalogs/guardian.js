@@ -2237,6 +2237,28 @@ export const catalog = [
     },
   },
   {
+    code: "GPD38AE",
+    name: "1-sided Free Flying Flag",
+    fullname: "Single-Faced Free Flying Drape Flag - BUICK",
+    colors: ["White"],
+    type: "sales",
+    default_color: "White",  
+    sizes: {
+      1: 0.00,
+    },
+  },
+  {
+    code: "GPD38AC",
+    name: "1-sided Free Flying Flag",
+    fullname: "Single-Faced Free Flying Drape Flag - CADILLAC",
+    colors: ["White"],
+    type: "sales",
+    default_color: "White",  
+    sizes: {
+      1: 0.00,
+    },
+  },
+  {
     code: "GP831DPBLYL",
     name: "Swooper Flag",
     fullname: "Swooper Flag - 4 x 4",
