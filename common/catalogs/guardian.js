@@ -2127,6 +2127,50 @@ export const catalog = [
     },
   },
   {
+    code: "GPNS38CP",
+    name: "1-sided Message Flag",
+    fullname: "Single-Faced Stock Message Drape Flag - SALE",
+    colors: ["White"],
+    type: "sales",
+    default_color: "White",  
+    sizes: {
+      1: 0.00,
+    },
+  },
+  {
+    code: "GPNS38DO",
+    name: "1-sided Message Flag",
+    fullname: "Single-Faced Stock Message Drape Flag - SPECIALS",
+    colors: ["White"],
+    type: "sales",
+    default_color: "White",  
+    sizes: {
+      1: 0.00,
+    },
+  },
+  {
+    code: "GPNS38CI",
+    name: "1-sided Message Flag",
+    fullname: "Single-Faced Stock Message Drape Flag - USED CARS",
+    colors: ["White"],
+    type: "sales",
+    default_color: "White",  
+    sizes: {
+      1: 0.00,
+    },
+  },
+  {
+    code: "GPNS38K",
+    name: "1-sided Message Flag",
+    fullname: "Single-Faced Stock Message Drape Flag - WE FINANCE",
+    colors: ["White"],
+    type: "sales",
+    default_color: "White",  
+    sizes: {
+      1: 0.00,
+    },
+  },
+  {
     code: "GP831DPBLYL",
     name: "Swooper Flag",
     fullname: "Swooper Flag - 4 x 4",
