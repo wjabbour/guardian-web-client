@@ -2259,6 +2259,39 @@ export const catalog = [
     },
   },
   {
+    code: "GPD38AA",
+    name: "1-sided Free Flying Flag",
+    fullname: "Single-Faced Free Flying Drape Flag - CHEVROLET",
+    colors: ["White"],
+    type: "sales",
+    default_color: "White",  
+    sizes: {
+      1: 0.00,
+    },
+  },
+  {
+    code: "GPD38CVB",
+    name: "1-sided Free Flying Flag",
+    fullname: "Single-Faced Free Flying Drape Flag - CHEVROLET",
+    colors: ["Blue"],
+    type: "sales",
+    default_color: "Blue",  
+    sizes: {
+      1: 0.00,
+    },
+  },
+  {
+    code: "GPD38AB",
+    name: "1-sided Free Flying Flag",
+    fullname: "Single-Faced Free Flying Drape Flag - CHEVY TRUCKS",
+    colors: ["White"],
+    type: "sales",
+    default_color: "White",  
+    sizes: {
+      1: 0.00,
+    },
+  },
+  {
     code: "GP831DPBLYL",
     name: "Swooper Flag",
     fullname: "Swooper Flag - 4 x 4",
