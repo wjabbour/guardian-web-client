@@ -9,25 +9,30 @@ export default function ColorSelector({
   const halfColors = item.halfColors || [];
   const colorOptions = item.colors.map((color) => {
     if (halfColors.includes(color)) {
-      const primaryColor = color.split(" ")[0];
+      const topColor = color.split(" ")[0];
+      const bottomColor = color.split(" ")[1];
+      console.log(topColor)
       return (
-        <div className="" key={color}>
-          <div
-            className=""
-            onClick={() => {
-              const selectedColor = color.split(" ").join("_");
-              set_selected_color(selectedColor);
-              set_image_source(
-                `/images/${item.code}_${selectedColor.toLowerCase()}.jpg`
-              );
-            }}
-          >
-            <div className=""></div>
-          </div>
-
-          <div className="">
-            <p>{color}</p>
-          </div>
+        // TODO: refactor to component
+        <div
+          className={`relative h-[32px] w-[38px] cursor-pointer rounded-sm ${
+            color === selected_color
+              ? "border-[2px] border-yellow-400"
+              : "border-[1px] border-black"
+          }`}
+          key={color}
+          onClick={() => {
+            set_selected_color(color);
+            set_image_source(
+              `/images/${item.code}_${color
+                .split(" ")
+                .join("_")
+                .toLowerCase()}.jpg`
+            );
+          }}
+        >
+          <div className={`h-[15px] ${topColor}`}></div>
+          <div className={`h-[15px] ${bottomColor}`}></div>
         </div>
       );
     } else {
