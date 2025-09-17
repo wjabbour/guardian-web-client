@@ -171,8 +171,8 @@ export default function Modification() {
             embroidery: firstEmbroidery,
           };
 
-          let key = `${item.code},${Object.keys(item.sizes)[i - 1]},${
-            colors[j]
+          let key = `${item.code},${Object.keys(item.sizes)[j]},${
+            colors[i - 1]
           },${firstEmbroidery}`;
 
           if (secondEmbroidery) {
