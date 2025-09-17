@@ -52,7 +52,7 @@ export const catalog = [
   {
     code: "A476",
     name: "Adidas 1/4-Zip Pullover",
-    fullname: "Men's Lightweight Mélange Quarter-Zip Pullover",
+    fullname: "Women's Lightweight Mélange Quarter-Zip Pullover",
     colors: ["Black Melange"],
     type: "womens",
     default_color: "Black Melange",
