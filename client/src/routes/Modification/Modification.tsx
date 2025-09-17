@@ -79,6 +79,7 @@ export default function Modification() {
       Number(Object.keys(item.sizes)[0])
     );
 
+    // TODO: shouldnt this be broken out to a function?
     if (shouldUseQuantityBasedOrdering) {
       // check order not empty
       const noCustoms =
@@ -161,10 +162,10 @@ export default function Modification() {
           }
 
           const cart_item: CartItem = {
-            price: item.sizes[sizes[i - 1]],
+            price: item.sizes[sizes[j]],
             quantity: Number(inputs[j].value),
-            size: sizes[i - 1],
-            color: colors[j],
+            size: sizes[j],
+            color: colors[i - 1],
             code: item.code,
             placement: item.type === "accessory" ? "N/A" : firstPlacement,
             embroidery: firstEmbroidery,
@@ -179,8 +180,6 @@ export default function Modification() {
             cart_item["secondPlacement"] = secondPlacement;
             key += `,${secondEmbroidery}`;
           }
-
-          console.log(cart_item);
 
           if (new_cart[key]) {
             new_cart[key].quantity += cart_item.quantity;

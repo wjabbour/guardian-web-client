@@ -1,6 +1,5 @@
 import styles from "./Modification.module.scss";
 import { useState } from "react";
-import Checkbox from "@mui/material/Checkbox";
 
 export default function QuantitySelector({
   item,
@@ -13,13 +12,13 @@ export default function QuantitySelector({
     Number(Object.keys(item.sizes)[0])
   );
 
-  function ColorHeaders() {
+  function Header() {
     return (
       <thead>
         <tr>
           <th scope="col"></th>
-          {item.colors.map((color) => {
-            return <th scope="col">{color}</th>;
+          {sizes.map((size) => {
+            return <th scope="col">{size}</th>;
           })}
         </tr>
       </thead>
@@ -28,25 +27,25 @@ export default function QuantitySelector({
 
   function QuantityOptions() {
     const [order, setOrder] = useState(structuredClone(customsOrder));
-    console.log(order);
     return (
       <tbody>
-        {sizes.map((size) => {
+        {item.colors.map((color) => {
           return (
             <tr>
-              <th scope="row">{size}</th>
-              {item.colors.map((color) => {
+             {/* TODO fix this */}
+              <th scope="row">{color}</th>
+              {sizes.map((size) => {
                 return (
                   <td className="p-[2px]">
                     {shouldUseQuantityBasedOrdering && (
                       <input
                         className="border-2 border-solid border-gray-600 rounded-md p-1"
                         type="text"
-                        value={order[`${size},${color}`]?.quantity || 0}
+                        value={order[`${color},${color}`]?.quantity || 0}
                         onChange={(e) => {
                           setOrder((old) => {
                             const newOne = structuredClone(old);
-                            newOne[`${size},${color}`] = {
+                            newOne[`${color},${color}`] = {
                               quantity: Number(e.target.value),
                               color,
                             };
@@ -77,7 +76,7 @@ export default function QuantitySelector({
   return (
     <div className={styles.form__container}>
       <table id="table">
-        <ColorHeaders />
+        <Header />
         <QuantityOptions />
       </table>
     </div>
