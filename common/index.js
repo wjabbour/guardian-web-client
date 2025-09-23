@@ -11,6 +11,7 @@ import { config as NavarreConfig } from "./configs/navarre";
 import { config as HoffmanConfig } from "./configs/hoffman";
 import { config as TommycarConfig } from "./configs/tommycar";
 import { config as VaughnConfig } from "./configs/vaughn";
+import { config as FriendshipConfig } from "./configs/friendship";
 import { catalog as CannonCatalog } from "./catalogs/cannon";
 import { catalog as GuardianCatalog } from "./catalogs/guardian";
 import { catalog as HennessyCatalog } from "./catalogs/hennessy";
@@ -24,6 +25,7 @@ import { catalog as NavarreCatalog } from "./catalogs/navarre";
 import { catalog as HoffmanCatalog } from "./catalogs/hoffman";
 import { catalog as TommycarCatalog } from "./catalogs/tommycar";
 import { catalog as VaughnCatalog } from "./catalogs/vaughn";
+import { catalog as FriendshipCatalog } from "./catalogs/friendship";
 
 const DEFAULT_CONFIG = {
   title: "Guardian",
@@ -46,6 +48,7 @@ const allConfigs = [
   HoffmanConfig,
   TommycarConfig,
   VaughnConfig,
+  FriendshipConfig,
  
 ];
 
@@ -111,6 +114,8 @@ export function getWebCatalog() {
     return TommycarCatalog;
   } else if (url.includes("vaughn")) {
     return VaughnCatalog;
+  } else if (url.includes("friendship")) {
+    return FriendshipCatalog;  
   
   }
 }
@@ -146,6 +151,8 @@ export function getCatalog(companyName) {
       return TommycarCatalog;
     case "Vaughn":
       return VaughnCatalog;
+    case "Friendship":
+      return FriendshipCatalog;
   }
 }
 
@@ -178,7 +185,10 @@ export function getWebConfigValue(val) {
   } else if (url.includes("tommycar")) {
     return TommycarConfig[val]; 
   } else if (url.includes("vaughn")) {
-    return VaughnConfig[val];  
+    return VaughnConfig[val];
+  } else if (url.includes("friendship")) {
+    return FriendshipConfig[val];
+
   } else {
     // when the user is on gpc81.com landing page we need to display a string in the browser tab
     return DEFAULT_CONFIG[val];
@@ -211,6 +221,8 @@ export function getConfigValue(val, config) {
     case "Tommycar":
       return TommycarConfig[val]; 
     case "Vaughn":
-      return VaughnConfig[val]; 
+      return VaughnConfig[val];
+    case "Friendship":
+      return FriendshipConfig[val];  
   }
 }

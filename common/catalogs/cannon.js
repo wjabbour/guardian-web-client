@@ -117,7 +117,7 @@ export const catalog = [
   {
     code: "TM1MY394",
     name: "Cuffed Beanie",
-    fullname: "Travis Matthew® Solid Cuffed Beanie",
+    fullname: "TravisMathew® Solid Cuffed Beanie",
     colors: ["Black"],
     type: "accessory",
     default_color: "Black",
