@@ -634,6 +634,14 @@
   background-color: rgb(202, 206, 207);
 }
 
+.Clover_Green {
+  background-color: rgb(83, 124, 72);
+}
+
+.Club_Green {
+  background-color: rgb(9, 90, 6);
+
+}
 .Clear_Plastic {
   background-color: rgb(202, 206, 207);
 }
@@ -1430,6 +1438,10 @@
   background-color: #474747;
 }
 
+.Stone {
+  background-color: #dacd93;
+}
+
 .Stormy_Grey {
   background-color: rgb(59, 58, 58);
 }
@@ -1470,7 +1482,7 @@
   background-color: #e3c687;
 }
 
-.Teal {
+.Teal_Green {
   background-color: #067067;
 }
 
@@ -1548,6 +1560,10 @@
 
 .Turquoise {
   background-color: #11b6b6;
+}
+
+.Ultramarine_Blue {
+  background-color: #538ee6;
 }
 
 .University_Blue {
