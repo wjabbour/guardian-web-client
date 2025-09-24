@@ -116,8 +116,8 @@ export const catalog = [
   },
   {
     code: "TM1MY394",
-    name: "Cuffed Beanie",
-    fullname: "TravisMathew® Solid Cuffed Beanie",
+    name: "Cuffed Beanie #TM1MY394",
+    fullname: "TravisMathew® Solid Cuffed Beanie (TM1MY394)",
     colors: ["Black"],
     type: "accessory",
     default_color: "Black",
@@ -127,8 +127,8 @@ export const catalog = [
   },
   {
     code: "F218",
-    name: "Fleece Pullover",
-    fullname: 'Port Authority® Value Fleece 1/4" Zip Pullover',
+    name: "Fleece Pullover #F218",
+    fullname: "Port Authority® Value Fleece 1/4-Zip Pullover (F218)",
     colors: ["Black", "Gray"],
     type: "mens",
     default_color: "Black",
@@ -147,8 +147,8 @@ export const catalog = [
   },
   {
     code: "K805",
-    name: '1/4" Zip Pullover',
-    fullname: "Port Authority® Vertical Texture 1/4-Zip Pullover",
+    name: "1/4-Zip Pullover #K805",
+    fullname: "Port Authority® Vertical Texture 1/4-Zip Pullover (K805)",
     colors: ["Black"],
     type: "mens",
     default_color: "Black",
@@ -165,8 +165,8 @@ export const catalog = [
   },
   {
     code: "A430",
-    name: "Sport Polo",
-    fullname: "Adidas® Men's Basic Sport Polo",
+    name: "Sport Polo #A430",
+    fullname: "Adidas® Men's Basic Sport Polo (A430)",
     colors: ["Black"],
     default_color: "Black",
     sizes: {
@@ -183,8 +183,8 @@ export const catalog = [
   },
   {
     code: "J333",
-    name: "Waterproof Jacket",
-    fullname: "Port Authority® Torrent Waterproof Jacket",
+    name: "Waterproof Jacket #J333",
+    fullname: "Port Authority® Torrent Waterproof Jacket (J333)",
     colors: ["Black", "Gray"],
     default_color: "Black",
     type: "mens",
@@ -201,8 +201,8 @@ export const catalog = [
   },
   {
     code: "J792",
-    name: "Nootka Jacket",
-    fullname: "Port Authority® Nootka Jacket",
+    name: "Nootka Jacket #J792",
+    fullname: "Port Authority® Nootka Jacket (J792)",
     colors: ["Black"],
     default_color: "Black",
     type: "mens",
@@ -219,8 +219,8 @@ export const catalog = [
   },
   {
     code: "MQO00055",
-    name: "Soft Shell Jacket",
-    fullname: "Clique Telemark Eco Stretch Softshell Jacket",
+    name: "Soft Shell Jacket #MQO00055",
+    fullname: "Clique Telemark Eco Stretch Softshell Jacket (MQO00055)",
     colors: ["Black"],
     default_color: "Black",
     type: "mens",
@@ -237,8 +237,8 @@ export const catalog = [
   },
   {
     code: "BB18002",
-    name: "Nailhead Shirt",
-    fullname: "Brooks Brothers® Wrinkle-Free Stretch Nailhead Shirt",
+    name: "Nailhead Shirt #BB18002",
+    fullname: "Brooks Brothers® Wrinkle-Free Stretch Nailhead Shirt (BB18002)",
     colors: ["White"],
     default_color: "White",
     type: "mens",
@@ -255,8 +255,8 @@ export const catalog = [
   },
   {
     code: "TLS608",
-    name: "Long Sleeve Shirt",
-    fullname: "Port Authority® Tall Long Sleeve Easy Care Shirt",
+    name: "Long Sleeve Shirt #TLS608",
+    fullname: "Port Authority® Tall Long Sleeve Easy Care Shirt (TLS608)",
     colors: ["White"],
     default_color: "White",
     type: "mens",
@@ -270,8 +270,8 @@ export const catalog = [
   },
   {
     code: "L407",
-    name: "Rain Jacket",
-    fullname: "Port Authority® Ladies Essential Rain Jacket",
+    name: "Rain Jacket #L407",
+    fullname: "Port Authority® Ladies Essential Rain Jacket (L407)",
     colors: ["Black", "Graphite"],
     default_color: "Black",
     sizes: {
@@ -288,8 +288,8 @@ export const catalog = [
   },
   {
     code: "L123",
-    name: "All Weather Jacket",
-    fullname: "Port Authority® Ladies All Weather 3 in 1 Jacket",
+    name: "All Weather Jacket #L123",
+    fullname: "Port Authority® Ladies All Weather 3-in-1 Jacket (L123)",
     colors: ["Black"],
     default_color: "Black",
     sizes: {
@@ -306,10 +306,11 @@ export const catalog = [
   },
   {
     code: "LQO00041",
-    name: "Soft Shell Jacket",
-    fullname: "Clique Telemark Eco Stretch Softshell Jacket",
+    name: "Soft Shell Jacket #LQO00041",
+    fullname: "Clique Telemark Eco Stretch Softshell Jacket (LQO00041)",
     colors: ["Black"],
     default_color: "Black",
+    type: "womens",
     sizes: {
       Small: 47.08,
       Medium: 47.08,
@@ -318,14 +319,14 @@ export const catalog = [
       "2XLarge": 49.22,
       "3XLarge": 51.36,
     },
-    type: "womens",
   },
   {
     code: "L233",
-    name: "Fleece Full Zip Jacket",
-    fullname: "Port Authority® Ladies Summit Fleece Full Zip Jacket",
+    name: "Fleece Full Zip Jacket #L233",
+    fullname: "Port Authority® Ladies Summit Fleece Zip Jacket (L233)",
     colors: ["Black"],
     default_color: "Black",
+    type: "womens",
     sizes: {
       XSmall: 46.48,
       Small: 46.48,
@@ -336,12 +337,11 @@ export const catalog = [
       "3XLarge": 52.90,
       "4XLarge": 55.04,
     },
-    type: "womens",
   },
   {
     code: "LST253",
-    name: '1/4" Zip Sweatshirt',
-    fullname: "Sport Tek® Ladies 1/4 Zip Sweatshirt",
+    name: "1/4-Zip Sweatshirt #LST253",
+    fullname: "Sport Tek® Ladies 1/4 Zip Sweatshirt (LST253)",
     colors: ["Black", "Graphite"],
     default_color: "Black",
     sizes: {
@@ -358,8 +358,8 @@ export const catalog = [
   },
   {
     code: "BB18003",
-    name: "Nailhead Shirt",
-    fullname: "Brooks Brothers® Women's Wrinkle-Free Stretch Nailhead Shirt",
+    name: "Nailhead Shirt #BB18003",
+    fullname: "Brooks Brothers® Women's Stretch Nailhead Shirt (BB18003)",
     colors: ["White"],
     default_color: "White",
     sizes: {
@@ -376,8 +376,8 @@ export const catalog = [
   },
   {
     code: "A431",
-    name: "Sport Polo",
-    fullname: "Adidas® Women's Basic Sport Polo",
+    name: "Sport Polo #A431",
+    fullname: "Adidas® Women's Basic Sport Polo (A431)",
     colors: ["Black"],
     default_color: "Black",
     sizes: {
@@ -393,8 +393,8 @@ export const catalog = [
   },
   {
     code: "LQO00055",
-    name: "Full Zip Vest",
-    fullname: "Clique Trail Softshell Full Zip Vest",
+    name: "Full Zip Vest #LQO00055",
+    fullname: "Clique Trail Softshell Full Zip Vest (LQO00055)",
     colors: ["Black"],
     default_color: "Black",
     sizes: {
@@ -411,8 +411,8 @@ export const catalog = [
   },
   {
     code: "MQO00068",
-    name: "Full Zip Vest",
-    fullname: "Clique Trail Softshell Full Zip Vest",
+    name: "Full Zip Vest #MQO00068",
+    fullname: "Clique Trail Softshell Full Zip Vest (MQO00068)",
     colors: ["Black"],
     default_color: "Black",
     sizes: {

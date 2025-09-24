@@ -62,7 +62,7 @@ export const catalog = [
   },
   {
     code: "CGW708",
-    name: "Callaway Polo #CGW708",
+    name: "Callaway 3/4 Sleeve Polo #CGW708",
     fullname: "Callaway 3/4 Sleeve Polo (CGW708)",
     colors: ["Peacoat"],
     type: "womens",

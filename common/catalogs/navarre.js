@@ -414,8 +414,8 @@ export const catalog = [
   },
   {
     code: "ST740",
-    name: "Sport-Tek Micropique Polo",
-    fullname: "Sport-Tek® UV Micropique Polo",
+    name: "Sport-Tek Micropique Polo #ST740",
+    fullname: "Sport-Tek® UV Micropique Polo (ST740)",
     colors: ["Black", "Graphite", "Grey Concrete"],
     type: "mens",
     default_color: "Black",
@@ -431,8 +431,8 @@ export const catalog = [
   },
   {
     code: "NKDC1963",
-    name: "Nike® Dri-FIT Polo Shirt",
-    fullname: "Nike® Dri-FIT Polo",
+    name: "Nike® Dri-FIT Polo Shirt #NKDC1963",
+    fullname: "Nike® Dri-FIT Polo (NKDC1963)",
     colors: ["Anthracite", "Black", "Cool Grey"],
     type: "mens",
     default_color: "Black",
@@ -453,8 +453,8 @@ export const catalog = [
   },
   {
     code: "J317",
-    name: "Port Authority® Jacket",
-    fullname: "Port Authority® Core Soft Shell Jacket",
+    name: "Port Authority® Jacket #J317",
+    fullname: "Port Authority® Core Soft Shell Jacket (J317)",
     colors: [
       "Battleship Grey",
       "Black",
@@ -478,8 +478,8 @@ export const catalog = [
   },
   {
     code: "L317",
-    name: "Port Authority® Jacket",
-    fullname: "Port Authority® Women's Core Soft Shell Jacket",
+    name: "Port Authority® Jacket #L317",
+    fullname: "Port Authority® Women's Soft Shell Jacket (L317)",
     colors: [
       "Battleship Grey",
       "Black",
@@ -501,8 +501,8 @@ export const catalog = [
   },
   {
     code: "J325",
-    name: "Port Authority Vest",
-    fullname: "Port Authority® Core Soft Shell Vest",
+    name: "Port Authority Vest #J325",
+    fullname: "Port Authority® Core Soft Shell Vest (J325)",
     colors: ["Battleship Grey", "Black", "Black Charcoal Heather"],
     type: "mens",
     default_color: "Black",
@@ -518,8 +518,8 @@ export const catalog = [
   },
   {
     code: "L325",
-    name: "Port Authority Vest",
-    fullname: "Port Authority® Women's Core Soft Shell Vest",
+    name: "Port Authority Vest #L325",
+    fullname: "Port Authority® Women's Soft Shell Vest (L325)",
     colors: ["Battleship Grey", "Black", "Black Charcoal Heather"],
     type: "womens",
     default_color: "Black",
@@ -535,8 +535,8 @@ export const catalog = [
   },
   {
     code: "J331",
-    name: "Port Authority Jacket",
-    fullname: "Port Authority® All-Conditions Jacket",
+    name: "Port Authority Jacket #J331",
+    fullname: "Port Authority® All-Conditions Jacket (J331)",
     colors: ["Black"],
     type: "mens",
     default_color: "Black",
@@ -552,8 +552,8 @@ export const catalog = [
   },
   {
     code: "L331",
-    name: "Port Authority Jacket",
-    fullname: "Port Authority® Women's All-Conditions Jacket",
+    name: "Port Authority Jacket #L331",
+    fullname: "Port Authority® Women's All-Conditions Jacket (L331)",
     colors: ["Black"],
     type: "womens",
     default_color: "Black",
@@ -569,8 +569,8 @@ export const catalog = [
   },
   {
     code: "CP90",
-    name: "Port Authority Knit Cap",
-    fullname: "Port & Company® - Knit Cap",
+    name: "Port Authority Knit Cap #CP90",
+    fullname: "Port & Company® - Knit Cap (CP90)",
     colors: ["Athletic Oxford", "Black", "Charcoal Heather"],
     type: "mens",
     default_color: "Black",
@@ -580,8 +580,8 @@ export const catalog = [
   },
   {
     code: "C112",
-    name: "Port Authority Trucker Cap",
-    fullname: "Port Authority® Snapback Trucker Cap",
+    name: "Port Authority Trucker Cap #C112",
+    fullname: "Port Authority® Snapback Trucker Cap (C112)",
     colors: ["Black", "Gusty Grey", "Grey Steel"],
     type: "mens",
     default_color: "Black",

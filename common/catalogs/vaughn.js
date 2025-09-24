@@ -1,8 +1,8 @@
 export const catalog = [
   {
    code: "NKDC1963",
-    name: "Nike® Dri-FIT Polo Shirt",
-    fullname: "Nike Dri-FIT Micro Pique 2.0 Polo",
+    name: "Nike® Dri-FIT Polo Shirt #NKDC1963",
+    fullname: "Nike Dri-FIT Micro Pique 2.0 Polo (NKDC1963)",
     colors: [
         "Anthracite", 
         "Black", 
@@ -39,8 +39,8 @@ export const catalog = [
   },
   {
     code: "NKDC1963T",
-    name: "Nike® Dri-FIT- TALL",
-    fullname: "Nike Dri-FIT Micro Pique 2.0 Polo - TALL SIZES",
+    name: "Nike® Dri-FIT- TALL #NKDC1963",
+    fullname: "Nike Dri-FIT Micro Pique 2.0 Polo - TALL SIZES (NKDC1963)",
     colors: [
         "Anthracite",
         "Black",
@@ -61,8 +61,8 @@ export const catalog = [
   },
   {
     code: "NKDC1991",
-    name: "Ladies Nike® Polo",
-    fullname: "Ladies Nike® Micro Pique Polo",
+    name: "Ladies Nike® Polo #NKDC1991",
+    fullname: "Ladies Nike® Micro Pique Polo (NKDC1991)",
     colors: [
         "Anthracite", 
         "Black", 
@@ -97,8 +97,8 @@ export const catalog = [
   },
   {
     code: "J325",
-    name: "Port Authority® Vest",
-    fullname: "Port Authority® Core Soft Shell Vest",
+    name: "Port Authority® Vest #J325",
+    fullname: "Port Authority® Soft Shell Vest (J325)",
     colors: ["Battleship Grey","Black","Black Charcoal Heather","Dress Blue Navy"],
     type: "mens",
     default_color: "Battleship Grey",
@@ -114,8 +114,8 @@ export const catalog = [
   },
   {
     code: "L325",
-    name: "Port Authority® Vest",
-    fullname: "Port Authority® Women's Core Soft Shell Vest",
+    name: "Port Authority® Vest #L325",
+    fullname: "Port Authority® Women's Core Soft Shell Vest (L325)",
     colors: ["Battleship Grey","Black","Black Charcoal Heather","Dress Blue Navy","Marshmallow"],
     type: "womens",
     default_color: "Battleship Grey",
@@ -131,8 +131,8 @@ export const catalog = [
   },
   {
     code: "F236",
-    name: "Port Authority® Vest",
-    fullname: "Port Authority ® Sweater Fleece Vest",
+    name: "Port Authority® Vest #F236",
+    fullname: "Port Authority ® Sweater Fleece Vest (F236)",
     colors: ["Black Heather","Grey Heather"],
     type: "mens",
     default_color: "Black Heather",
@@ -148,8 +148,8 @@ export const catalog = [
   },
   {
     code: "L236",
-    name: "Port Authority® Vest",
-    fullname: "Port Authority ® Women's Sweater Fleece Vest",
+    name: "Port Authority® Vest #L236",
+    fullname: "Port Authority ® Women's Sweater Fleece Vest (L236)",
     colors: ["Black Heather","Grey Heather"],
     type: "womens",
     default_color: "Black Heather",
@@ -165,8 +165,8 @@ export const catalog = [
   },
   {
     code: "ST650",
-    name: "Sport-Tek® Polo Shirt",
-    fullname: "Sport-Tek® Micropique Polo",
+    name: "Sport-Tek® Polo Shirt #ST650",
+    fullname: "Sport-Tek® Micropique Polo (ST650)",
     colors: ["Grey Concrete"],
     type: "mens",
     default_color: "Grey Concrete",
@@ -181,8 +181,8 @@ export const catalog = [
   },
   {
     code: "LST650",
-    name: "Sport-Tek® Polo Shirt",
-    fullname: "Sport-Tek® Womens Micropique Polo",
+    name: "Sport-Tek® Polo Shirt #LST650",
+    fullname: "Sport-Tek® Womens Micropique Polo (LST650)",
     colors: ["Grey Concrete"],
     type: "womens",
     default_color: "Grey Concrete",
@@ -197,8 +197,8 @@ export const catalog = [
   },
     {
     code: "J317",
-    name: "Port Authority® Jacket",
-    fullname: "Port Authority® Core Soft Shell Jacket",
+    name: "Port Authority® Jacket #J317",
+    fullname: "Port Authority® Soft Shell Jacket (J317)",
     colors: [
       "Battleship Grey",
       "Black",
@@ -226,8 +226,8 @@ export const catalog = [
   },
   {
     code: "L317",
-    name: "Port Authority® Jacket",
-    fullname: "Port Authority® Women's Core Soft Shell Jacket",
+    name: "Port Authority® Jacket #L317",
+    fullname: "Port Authority® Women's Soft Shell Jacket (L317)",
     colors: [
       "Battleship Grey", 
       "Black",
@@ -254,8 +254,8 @@ export const catalog = [
   },
   {
     code: "CP80",
-    name: "Port & Co™ Twill Cap",
-    fullname: "Port & Co™ Six-Panel Twill Cap",
+    name: "Port & Co™ Twill Cap #CP80",
+    fullname: "Port & Co™ Six-Panel Twill Cap (CP80)",
     colors: ["Black","Charcoal","Neon Pink","Purple","Royal","True Red"],
     type: "hat",
     default_color: "Black",
@@ -265,8 +265,8 @@ export const catalog = [
   },
    {
     code: "C112",
-    name: "Port Authority Trucker Cap",
-    fullname: "Port Authority® Snapback Trucker Cap",
+    name: "Port Authority Trucker Cap #C112",
+    fullname: "Port Authority® Snapback Trucker Cap (C112)",
     colors: ["Black","FlameRed","FlameRed Black","FlameRed White","White"],
     type: "hat",
     halfColors: ['FlameRed Black', 'FlameRed White'],
@@ -277,8 +277,8 @@ export const catalog = [
   },
   {
     code: "ST350",
-    name: "Sport-Tek PosiCharge Tee",
-    fullname: "Sport-Tek PosiCharge Competitor Tee",
+    name: "Sport-Tek PosiCharge Tee #ST350",
+    fullname: "Sport-Tek PosiCharge Competitor Tee (ST350)",
     colors: ["Iron Grey"],
     type: "tshirts",
     default_color: "Iron Grey",
@@ -293,8 +293,8 @@ export const catalog = [
   },
   {
     code: "LST350",
-    name: "Sport-Tek PosiCharge Tee",
-    fullname: "Sport-Tek Women's PosiCharge Competitor Tee",
+    name: "Sport-Tek PosiCharge Tee #LST350",
+    fullname: "Sport-Tek Women's PosiCharge Competitor Tee (LST350)",
     colors: ["Iron Grey"],
     type: "tshirts",
     default_color: "Iron Grey",

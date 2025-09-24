@@ -195,8 +195,8 @@ export const catalog = [
   },
   {
     code: "CP91L",
-    name: "Port & Company Beanie",
-    fullname: "Port & Company® Fleece-Lined Beanie Cap",
+    name: "Port & Company Beanie #CP91L",
+    fullname: "Port & Company® Fleece-Lined Beanie Cap (CP91L)",
     colors: ["Athletic Red", "Athletic Royal", "Black", "Navy"],
     type: "hat",
     default_color: "Black",
@@ -206,7 +206,7 @@ export const catalog = [
   },
   {
     code: "112",
-    name: "Richardson Trucker Cap",
+    name: "Richardson Trucker Cap #112",
     fullname: "Richardson Snapback Trucker Cap (addt'l logos cost extra)",
     colors: [
       "Amber Gold",
@@ -225,7 +225,7 @@ export const catalog = [
   },
   {
     code: "NE205",
-    name: "New Era® Trucker Cap",
+    name: "New Era® Trucker Cap #NE205",
     fullname: "New Era® Snapback Trucker Cap (addt'l logos cost extra)",
     colors: ["Black", "Graphite", "Grey", "Deep Navywt"],
     type: "hat",
@@ -236,7 +236,7 @@ export const catalog = [
   },
   {
     code: "STC39",
-    name: "Sport-Tek® Trucker Cap",
+    name: "Sport-Tek® Trucker Cap #STC39",
     fullname:
       "Sport-Tek® YP Classics® Retro Trucker Cap (addt'l logos cost extra)",
     colors: [
@@ -254,8 +254,8 @@ export const catalog = [
   },
   {
     code: "BB18000",
-    name: "Brooks Brothers® Shirt",
-    fullname: "Brooks Brothers® Wrinkle-Free Stretch Pinpoint Shirt",
+    name: "Brooks Brothers® Shirt #BB18000",
+    fullname: "Brooks Brothers® Wrinkle-Free Stretch Pinpoint Shirt (BB18000)",
     colors: ["Cobalt Blue", "Deep Black", "Newport Blue", "White"],
     type: "mens",
     default_color: "Cobalt Blue",
@@ -271,8 +271,8 @@ export const catalog = [
   },
   {
     code: "BB18002",
-    name: "Brooks Brothers® Shirt",
-    fullname: "Brooks Brothers® Wrinkle-Free Nailhead Shirt",
+    name: "Brooks Brothers® Shirt #BB18002",
+    fullname: "Brooks Brothers® Wrinkle-Free Nailhead Shirt (BB18002)",
     colors: ["Cobalt Blue", "White"],
     type: "mens",
     default_color: "Cobalt Blue",
@@ -288,8 +288,8 @@ export const catalog = [
   },
   {
     code: "BB18003",
-    name: "Brooks Brothers® Shirt",
-    fullname: "Brooks Brothers® Women's Wrinkle-Free Nailhead Shirt",
+    name: "Brooks Brothers® Shirt #BB18003",
+    fullname: "Brooks Brothers® Women's Wrinkle-Free Nailhead Shirt (BB18003)",
     colors: ["Cobalt Blue", "White"],
     type: "womens",
     default_color: "Cobalt Blue",
@@ -305,8 +305,8 @@ export const catalog = [
   },
   {
     code: "S659",
-    name: "Port Authority® Shirt",
-    fullname: "Port Authority® Short Sleeve SuperPro™ Oxford Shirt",
+    name: "Port Authority® Shirt #S659",
+    fullname: "Port Authority® Short Sleeve SuperPro™ Oxford Shirt (S659)",
     colors: ["Black", "Navy", "Oxford Blue", "White"],
     type: "mens",
     default_color: "Black",
@@ -322,8 +322,8 @@ export const catalog = [
   },
   {
     code: "S608",
-    name: "Port Authority® Shirt",
-    fullname: "Port Authority® Long Sleeve Easy Care Shirt",
+    name: "Port Authority® Shirt #S608",
+    fullname: "Port Authority® Long Sleeve Easy Care Shirt (S608)",
     colors: ["White"],
     type: "mens",
     default_color: "White",
@@ -341,8 +341,8 @@ export const catalog = [
   },
   {
     code: "L608",
-    name: "Port Authority® Shirt",
-    fullname: "Port Authority® Women's Long Sleeve Shirt",
+    name: "Port Authority® Shirt #L608",
+    fullname: "Port Authority® Women's Long Sleeve Shirt (L608)",
     colors: ["White"],
     type: "womens",
     default_color: "White",
@@ -360,8 +360,8 @@ export const catalog = [
   },
   {
     code: "PC61",
-    name: "Port & Company® Tee",
-    fullname: "Port & Company® Essential Tee",
+    name: "Port & Company® Tee #PC61",
+    fullname: "Port & Company® Essential Tee (PC61)",
     colors: [
       "Athletic Heather",
       "Cardinal",
@@ -389,8 +389,8 @@ export const catalog = [
   },
   {
     code: "267020",
-    name: "Nike® Dri-FIT Classic Polo",
-    fullname: "Nike® Dri-FIT Classic Polo",
+    name: "Nike® Dri-FIT Classic Polo #267020",
+    fullname: "Nike® Dri-FIT Classic Polo (267020)",
     colors: ["Black", "Court Blue", "Light Blue", "White"],
     type: "mens",
     default_color: "Black",
@@ -406,8 +406,8 @@ export const catalog = [
   },
   {
     code: "286772",
-    name: "Nike® Dri-FIT Classic Polo",
-    fullname: "Nike® Women's Dri-FIT Classic Polo",
+    name: "Nike® Dri-FIT Classic Polo #286772",
+    fullname: "Nike® Women's Dri-FIT Classic Polo (286772)",
     colors: ["Black", "Light Blue", "White"],
     type: "womens",
     default_color: "Black",
@@ -421,7 +421,7 @@ export const catalog = [
   },
   {
     code: "NKDC1963",
-    name: "Nike® Dri-FIT Polo Shirt",
+    name: "Nike® Dri-FIT Polo Shirt #NKDC1963",
     fullname: "Nike® Dri-FIT Polo (addt'l logos cost extra)",
     colors: [
       "Anthracite",
@@ -445,7 +445,7 @@ export const catalog = [
   },
   {
     code: "883681",
-    name: "Nike® Dri-FIT Legacy Polo",
+    name: "Nike® Dri-FIT Legacy Polo #883681",
     fullname: "Nike® Dri-FIT Legacy Polo (addt'l logos cost extra)",
     colors: [
       "Black",
@@ -469,7 +469,7 @@ export const catalog = [
   },
   {
     code: "NKDC1991",
-    name: "Ladies Nike® Polo",
+    name: "Ladies Nike® Polo #NKDC1991",
     fullname: "Ladies Nike® Micro Pique Polo (addt'l logos cost extra)",
     colors: ["Anthracite", "Black", "Cool Grey", "Navy", "White"],
     type: "womens",
@@ -484,8 +484,8 @@ export const catalog = [
   },
   {
     code: "NKAH6266",
-    name: "Nike Textured Polo",
-    fullname: "Nike Dri-FIT Hex Textured Polo",
+    name: "Nike Textured Polo #NKAH6266",
+    fullname: "Nike Dri-FIT Hex Textured Polo (NKAH6266)",
     colors: [
       "Black",
       "Court Blue",
@@ -508,8 +508,8 @@ export const catalog = [
   },
   {
     code: "NKBV6042",
-    name: "Nike® Essential Polo",
-    fullname: "Nike® Dry Essential Solid Polo",
+    name: "Nike® Essential Polo #NKBV6042",
+    fullname: "Nike® Dry Essential Solid Polo (NKBV6042)",
     colors: [
       "Black",
       "Game Royal",
@@ -532,8 +532,8 @@ export const catalog = [
   },
   {
     code: "TM1MY399",
-    name: "TravisMathew Polo",
-    fullname: "TravisMathew Bayfront Solid Polo",
+    name: "TravisMathew Polo #TM1MY399",
+    fullname: "TravisMathew Bayfront Solid Polo (TM1MY399)",
     colors: ["Black", "Dark Grey", "Insignia Blue", "Roan Rouge"],
     type: "mens",
     default_color: "Black",
@@ -548,8 +548,8 @@ export const catalog = [
   },
   {
     code: "TM1MU410",
-    name: "TravisMathew Performance Polo",
-    fullname: "TravisMathew Coto Performance Polo",
+    name: "TravisMathew Performance Polo #TM1MU410",
+    fullname: "TravisMathew Coto Performance Polo (TM1MU410)",
     colors: [
       "Beryl Grn Hthr",
       "Black",
@@ -574,8 +574,8 @@ export const catalog = [
   },
   {
     code: "OG101",
-    name: "OGIO® - Caliber2.0 Polo",
-    fullname: "OGIO® - Caliber2.0 Polo",
+    name: "OGIO® - Caliber2.0 Polo #OG101",
+    fullname: "OGIO® - Caliber2.0 Polo (OG101)",
     colors: ["Blacktop"],
     type: "mens",
     default_color: "Blacktop",
@@ -591,8 +591,8 @@ export const catalog = [
   },
   {
     code: "LOG101",
-    name: "OGIO® - Jewel Polo",
-    fullname: "OGIO® - Jewel Polo",
+    name: "OGIO® - Jewel Polo #LOG101",
+    fullname: "OGIO® - Jewel Polo (LOG101)",
     colors: ["Blacktop"],
     type: "womens",
     default_color: "Blacktop",
@@ -608,8 +608,8 @@ export const catalog = [
   },
   {
     code: "TM1WW003",
-    name: "TravisMathew 1/4-Zip",
-    fullname: "TravisMathew Women's Crestview 1/4-Zip",
+    name: "TravisMathew 1/4-Zip #TM1WW003",
+    fullname: "TravisMathew Women's Crestview 1/4-Zip (TM1WW003)",
     colors: ["Black"],
     type: "womens",
     default_color: "Black",
@@ -623,8 +623,8 @@ export const catalog = [
   },
   {
     code: "K110",
-    name: "Port Authority UV Polo",
-    fullname: "Port Authority® Dry Zone® UV Micro-Mesh Polo",
+    name: "Port Authority UV Polo #K110",
+    fullname: "Port Authority® Dry Zone® UV Micro-Mesh Polo (K110)",
     colors: [
       "Carolina Blue",
       "Coastal Blue",
@@ -652,8 +652,8 @@ export const catalog = [
   },
   {
     code: "ST350",
-    name: "Sport-Tek PosiCharge Tee",
-    fullname: "Sport-Tek PosiCharge Competitor Tee",
+    name: "Sport-Tek PosiCharge Tee #ST350",
+    fullname: "Sport-Tek PosiCharge Competitor Tee (ST350)",
     colors: ["Black"],
     type: "mens",
     default_color: "Black",
@@ -669,8 +669,8 @@ export const catalog = [
   },
   {
     code: "ST740",
-    name: "Sport-Tek Polo",
-    fullname: "Sport-Tek® UV Micropique Polo",
+    name: "Sport-Tek Polo #ST740",
+    fullname: "Sport-Tek® UV Micropique Polo (ST740)",
     colors: [
       "Black",
       "Deep Red",
@@ -694,8 +694,8 @@ export const catalog = [
   },
   {
     code: "PC61LS",
-    name: "Long Sleeve Tee",
-    fullname: "Port & Company® Long Sleeve Essential Tee",
+    name: "Long Sleeve Tee #PC61LS",
+    fullname: "Port & Company® Long Sleeve Essential Tee (PC61LS)",
     colors: [
       "Ash",
       "Athletic Heather",
@@ -722,8 +722,8 @@ export const catalog = [
   },
   {
     code: "PC90H",
-    name: "Hooded Sweatshirt",
-    fullname: "Port & Company® Essential Fleece Pullover Hooded Sweatshirt",
+    name: "Hooded Sweatshirt #PC90H",
+    fullname: "Port & Company® Essential Fleece Hooded Sweatshirt (PC90H)",
     colors: [
       "Athletic Heather",
       "Cardinal",
@@ -749,8 +749,8 @@ export const catalog = [
   },
   {
     code: "F700",
-    name: "Raglan Fleece",
-    fullname: "Port Authority® C-FREE® Raglan Fleece",
+    name: "Raglan Fleece #F700",
+    fullname: "Port Authority® C-FREE® Raglan Fleece (F700)",
     colors: ["Deep Black", "Grey Steel", "True Navy"],
     type: "mens",
     default_color: "Deep Black",
@@ -766,8 +766,8 @@ export const catalog = [
   },
   {
     code: "TM1MZ339",
-    name: "TravisMathew 1/4-Zip",
-    fullname: "TravisMathew Coveside 1/4-Zip",
+    name: "TravisMathew 1/4-Zip #TM1MZ339",
+    fullname: "TravisMathew Coveside 1/4-Zip (TM1MZ339)",
     colors: ["Black", "Blue Nights", "Drk Gry Hthr", "Light Blue Hthr"],
     type: "mens",
     default_color: "Black",
@@ -782,8 +782,8 @@ export const catalog = [
   },
   {
     code: "L317",
-    name: "Port Authority® Jacket",
-    fullname: "Port Authority® Women's Core Soft Shell Jacket",
+    name: "Port Authority® Jacket #L317",
+    fullname: "Port Authority® Women's Core Soft Shell Jacket (L317)",
     colors: ["Black"],
     type: "womens",
     default_color: "Black",
@@ -799,8 +799,8 @@ export const catalog = [
   },
   {
     code: "J317",
-    name: "Port Authority® Jacket",
-    fullname: "Port Authority® Core Soft Shell Jacket",
+    name: "Port Authority® Jacket #J317",
+    fullname: "Port Authority® Core Soft Shell Jacket (J317)",
     colors: ["Black"],
     type: "mens",
     default_color: "Black",
@@ -818,8 +818,8 @@ export const catalog = [
   },
   {
     code: "J333",
-    name: "Torrent Waterproof Jacket",
-    fullname: "Port Authority® Torrent Waterproof Jacket",
+    name: "Torrent Waterproof Jacket #J333",
+    fullname: "Port Authority® Torrent Waterproof Jacket (J333)",
     colors: ["Black", "Engine Red", "Magnet", "True Navy", "True Royal"],
     type: "mens",
     default_color: "Black",
@@ -835,8 +835,8 @@ export const catalog = [
   },
   {
     code: "NKDR1543",
-    name: "Nike® Hooded Jacket",
-    fullname: "Nike® Hooded Soft Shell Jacket",
+    name: "Nike® Hooded Jacket #NKDR1543",
+    fullname: "Nike® Hooded Soft Shell Jacket (NKDR1543)",
     colors: ["Black"],
     type: "mens",
     default_color: "Black",
@@ -852,8 +852,8 @@ export const catalog = [
   },
   {
     code: "J335",
-    name: "Port Authority® Jacket",
-    fullname: "Port Authority® Hooded Core Soft Shell Jacket",
+    name: "Port Authority® Jacket #J335",
+    fullname: "Port Authority® Hooded Soft Shell Jacket (J335)",
     colors: ["Black"],
     type: "mens",
     default_color: "Black",
@@ -870,8 +870,8 @@ export const catalog = [
   },
   {
     code: "L335",
-    name: "Port Authority® Jacket",
-    fullname: "Port Authority® Women's Hooded Core Soft Shell Jacket",
+    name: "Port Authority® Jacket #L335",
+    fullname: "Port Authority® Women's Hooded Soft Shell Jacket (L335)",
     colors: ["Black"],
     type: "womens",
     default_color: "Black",
