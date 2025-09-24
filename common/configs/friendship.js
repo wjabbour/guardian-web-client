@@ -1,6 +1,6 @@
 export const config = {
   title: "Friendship",
-  company_logo: "friendship.png",
+  company_logo: "friendship_cars.png",
   logo_placements: [
     "Left Chest", 
     "Front Center - HATS",    
