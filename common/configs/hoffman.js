@@ -79,7 +79,7 @@ export const config = {
   ],
   bypass_codes: ["BRONX"],
   server_hostname: "https://mxfj3q6m01.execute-api.us-east-1.amazonaws.com",
-  account_reps: [{ name: "", phone: "" }],
+  account_reps: [{ name: "Bob Sugden", phone: "678-287-1620" }],
   route_prefix: "/hoffman",
   paypal_not_supported: true,
   password: "HoffmaN",
