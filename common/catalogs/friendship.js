@@ -524,7 +524,7 @@ export const catalog = [
   {
     code: "GP546",
     name: "Deal Jackets",
-    fullname: "Deal Jackets - Plain",
+    fullname: "Deal Jackets - Plain (sold in boxes of 100 & 500)",
     colors: [
       "Blue",
       "Buff",
@@ -559,7 +559,7 @@ export const catalog = [
   {
     code: "GP200",
     name: "Key Tags",
-    fullname: "Self-Protecting Key Tags #200 (250/box)",
+    fullname: "Self-Protecting Key Tags #200 (250 per box)",
     colors: [
       "Blue",
       "Gray",
@@ -575,7 +575,7 @@ export const catalog = [
     type: "sales",
     default_color: "White",    
     sizes: {
-      250: 0.0,
+      "# boxes": 0.0,
     },
   },
   {
@@ -592,23 +592,23 @@ export const catalog = [
   {
     code: "3044",
     name: "Spring Rings",
-    fullname: "Metal Spring Rings (250/pk)",
+    fullname: "Metal Spring Rings (250 per pack)",
     colors: ["Metal"],
     type: "service",
     default_color: "Metal",    
     sizes: {
-      250: 0.00,
+      "# packs": 0.00,
     },
   },
   {
     code: "EIT50",
     name: "Self-Locking Key Tags",
-    fullname: "Self-Locking Key Tags (1000/pk)",
+    fullname: "Self-Locking Key Tags (1000 per pack)",
     colors: ["Blue","Green","Orange","Red","Yellow","White"],
     type: "service",
     default_color: "Blue",
     sizes: {
-      1000: 0.00,
+      "# packs": 0.00,
     },
   },         
   {
