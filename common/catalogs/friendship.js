@@ -5,7 +5,8 @@ export const catalog = [
     fullname: "Stroke Dome Decal - chrome w/black imprint (5.75 in. x 1.3 in.)",
     colors: ["Chrome"],
     type: "customs",
-    default_color: "Chrome",    
+    default_color: "Chrome", 
+    supportedStores: ["FRICBT"],   
     sizes: {
       250: 0.00,
       500: 0.00,
@@ -18,7 +19,8 @@ export const catalog = [
     fullname: "Chrome Domecal w/ 4cp imprint (2.25 in. x 2.25 in.)",
     colors: ["Chrome"],
     type: "customs",
-    default_color: "Chrome",    
+    default_color: "Chrome", 
+    supportedStores: ["FRICBT"],    
     sizes: {
       250: 0.00,
       500: 0.00,
@@ -31,7 +33,8 @@ export const catalog = [
     fullname: "Black Plastic Frame",
     colors: ["Black"],
     type: "customs",
-    default_color: "Black",    
+    default_color: "Black", 
+    supportedStores: ["FRICBT"],    
     sizes: {
       250: 0.00,
       500: 0.00,
@@ -44,7 +47,8 @@ export const catalog = [
     fullname: "Aluminum Plate with Full Color (12 in. x 6 in.)",
     colors: ["Aluminum"],
     type: "customs",
-    default_color: "Aluminum",    
+    default_color: "Aluminum",
+    supportedStores: ["FRICBT"],     
     sizes: {
       250: 0.00,
       500: 0.00,
@@ -57,7 +61,8 @@ export const catalog = [
     fullname: "White Plastic Plate with Full Color (12 in. x 6 in.)",
     colors: ["Yellow"],
     type: "customs",
-    default_color: "Yellow",    
+    default_color: "Yellow",
+    supportedStores: ["FRICBT"],     
     sizes: {
       250: 0.00,
       500: 0.00,
