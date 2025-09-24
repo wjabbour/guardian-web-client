@@ -14,7 +14,7 @@ export const catalog = [
     code: "CGM211",
     name: "Callaway Performance Polo",
     fullname: "Callaway Core Performance Polo",
-    colors: ["Black","Peacoat"],
+    colors: ["Black","Peacoat","Smoked Pearl"],
     type: "mens",
     default_color: "Black",
     sizes: {
@@ -64,7 +64,7 @@ export const catalog = [
     code: "LOG101",
     name: "OGIO® - Jewel Polo",
     fullname: "OGIO® - Jewel Polo",
-    colors: ["Blacktop"],
+    colors: ["Blacktop","Diesel Grey","Rogue Grey"],
     type: "womens",
     default_color: "Blacktop",
     sizes: {
