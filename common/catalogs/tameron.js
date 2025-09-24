@@ -175,7 +175,7 @@ export const catalog = [
     fullname: "OGIO® Fulcrum 1/4-Zip",
     colors: ["Blacktop"],
     type: "mens",
-    default_color: "Black",
+    default_color: "Blacktop",
     sizes: {
       Small: 74.99,
       Medium: 74.99,
