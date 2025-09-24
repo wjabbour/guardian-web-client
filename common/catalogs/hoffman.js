@@ -64,7 +64,7 @@ export const catalog = [
     code: "LOG101",
     name: "OGIO® - Jewel Polo",
     fullname: "OGIO® - Jewel Polo",
-    colors: ["Blacktop","Diesel Grey","Rogue Grey"],
+    colors: ["Blacktop","Navy","Rogue Grey"],
     type: "womens",
     default_color: "Blacktop",
     sizes: {
