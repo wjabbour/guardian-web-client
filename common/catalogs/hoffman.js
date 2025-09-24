@@ -28,9 +28,9 @@ export const catalog = [
     },
   },
   {
-    code: "CGM212",
-    name: "Callaway Performance Polo #CGM212",
-    fullname: "ladies Callaway Core Performance Polo (CGM212)",
+    code: "CGW212",
+    name: "Callaway Performance Polo #CGW212",
+    fullname: "Ladies Callaway Core Performance Polo (CGW212)",
     colors: ["Black","Peacoat","Smoked Pearl"],
     type: "womens",
     default_color: "Black",
