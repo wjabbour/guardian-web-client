@@ -2,7 +2,8 @@ export const config = {
   title: "Friendship",
   company_logo: "friendship.png",
   logo_placements: [
-    "Left Chest",      
+    "Left Chest", 
+    "Front Center - HATS",    
   ],
   show_image_preview: true,
   embroideries: {
@@ -24,7 +25,7 @@ export const config = {
   email_recipients: ["lbudbill@gpcorp.com", "bkays@gpcorp.com","shanell@gpcorp.com","support@gpcorp.com"],
   stores: [
     {
-      name: "Friendship Corporate Enterprises",
+      name: "Friendship Corp. Enterprises",
       address: "1954 West State Street, Bristol, TN 37620",
       code: "FRICBT",
     },
