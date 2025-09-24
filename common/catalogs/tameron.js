@@ -170,6 +170,23 @@ export const catalog = [
     },
   },
   {
+    code: "OE701",
+    name: "OGIO® Fulcrum 1/4-Zip",
+    fullname: "OGIO® Fulcrum 1/4-Zip",
+    colors: ["Blacktop"],
+    type: "mens",
+    default_color: "Black",
+    sizes: {
+      Small: 74.99,
+      Medium: 74.99,
+      Large: 74.99,
+      XLarge: 74.99,
+      "2XLarge": 75.99,
+      "3XLarge": 76.99,
+      "4XLarge": 77.99,
+    },
+  },
+  {
     code: "LST650",
     name: "Sport-Tek® Polo Shirt",
     fullname: "Sport-Tek® Micro Pique Polo",
