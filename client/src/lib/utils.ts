@@ -1,5 +1,10 @@
 import { getWebConfigValue } from "guardian-common";
 
+/*
+  on the gpc81 site, when a user logs in they are logging in for a specific company.
+  From that point on, their url should permanently be prefixed like gpc81.com/{company}/
+  for all routes. 
+*/
 export function getDomainAwarePath(destination) {
   const prefix = getWebConfigValue("route_prefix");
   const url = window.location.href;
