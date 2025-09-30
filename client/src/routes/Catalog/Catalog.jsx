@@ -17,6 +17,9 @@ export default function ClothingCatalog() {
   const [catalog, setCatalog] = useState(
     getWebCatalog().filter((item) => item.type === catalogType)
   );
+  const customsStorePickerEnabled = getWebConfigValue(
+    "enable_customs_store_picker"
+  );
 
   useEffect(() => {
     if (location.pathname.includes("/mens")) {
@@ -77,6 +80,7 @@ export default function ClothingCatalog() {
           if (
             stores.length &&
             item.type === "customs" &&
+            customsStorePickerEnabled && // there will be no store pathParam to filter by in this case
             !(item.supportedStores ?? []).includes(params.storeCode)
           ) {
             return null;

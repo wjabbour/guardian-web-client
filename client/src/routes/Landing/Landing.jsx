@@ -9,7 +9,9 @@ export default function Landing() {
   catalog.forEach((item) => {
     types[item.type] = 1;
   });
-
+  const customsStorePickerEnabled = getWebConfigValue(
+    "enable_customs_store_picker"
+  );
   return (
     <div className={styles.landing}>
       <div className={styles.catalog}>
@@ -32,7 +34,7 @@ export default function Landing() {
             img={"/images/tshirts1.jpg"}
             link={"/catalog/tshirts"}
             no_space={true}
-          />  
+          />
         )}
         {types["hat"] && (
           <ClothingIcon
@@ -58,7 +60,11 @@ export default function Landing() {
         {types["customs"] && (
           <ClothingIcon
             img={"/images/custom2.jpg"}
-            link={stores.length ? "/stores" : "/catalog/customs"}
+            link={
+              stores.length && customsStorePickerEnabled
+                ? "/stores"
+                : "/catalog/customs"
+            }
             no_space={true}
           />
         )}
@@ -74,7 +80,7 @@ export default function Landing() {
             img={"/images/detail.jpg"}
             link={"/catalog/detail"}
             no_space={true}
-          />        
+          />
         )}
         {types["bodyshop"] && (
           <ClothingIcon

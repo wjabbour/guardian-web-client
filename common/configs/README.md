@@ -77,6 +77,10 @@ If a user were to view an item page for any item with `type` or `sub_category` e
 
 Determines which email addresses will receive an order email once an order is successfully placed and paid for. **Note:** The email associated with the order will always receive an order email, even if they're not in this array.
 
+### enable_customs_store_picker
+
+If true, when a user navigates to the customs catalog, they will be presented with a list of stores to choose from. They must enter the password associated with the store. This is used when different stores have different sets of customs items.
+
 ### stores
 
 Each store option looks like this:
