@@ -61,7 +61,7 @@ export const catalog = [
   {
     code: "NKDC1963",
     name: "Nike® Dri-FIT Polo Shirt",
-    fullname: "Nike® Dri-FIT Polo Shirt",
+    fullname: "Nike® Dri-FIT Micro Pique 2.0 Polo",
     colors: ["Black"],
     type: "mens",
     default_color: "Black",
@@ -83,7 +83,7 @@ export const catalog = [
   {
     code: "ST650",
     name: "Sport-Tek® Polo Shirt",
-    fullname: "Sport-Tek® Micro Pique Polo",
+    fullname: "Sport-Tek® Micropique Sport-Wick Polo",
     colors: ["Iron Grey", "True Red", "Black", "True Royal"],
     type: "mens",
     default_color: "Black",
@@ -154,8 +154,8 @@ export const catalog = [
   },
   {
     code: "MCK01086",
-    name: 'Cutter & Buck® 1/4" Zip',
-    fullname: 'Cutter & Buck® Eco Mens 1/4" Zip',
+    name: "Cutter & Buck® 1/4-Zip",
+    fullname: "Cutter & Buck® Eco Mens 1/4-Zip",
     colors: ["Black", "Tour Blue"],
     type: "mens",
     default_color: "Black",
@@ -189,7 +189,7 @@ export const catalog = [
   {
     code: "LST650",
     name: "Sport-Tek® Polo Shirt",
-    fullname: "Sport-Tek® Micro Pique Polo",
+    fullname: "Sport-Tek® Women's Micropique Sport-Wick Polo",
     colors: ["Iron Grey", "True Red", "Black", "True Royal"],
     type: "womens",
     default_color: "Black",
@@ -206,7 +206,7 @@ export const catalog = [
   {
     code: "NKDC1991",
     name: "Ladies Nike® Polo",
-    fullname: "Ladies Nike® Micro Pique Polo",
+    fullname: "Nike Women's Micro Pique 2.0 Polo",
     colors: ["Black"],
     type: "womens",
     default_color: "Black",
@@ -260,7 +260,7 @@ export const catalog = [
     type: "mens",
     default_color: "Black",
     sizes: {
-      "One Size Fits All": 10.99,
+      "OSFA": 10.99,
     },
   },
   {
@@ -269,7 +269,7 @@ export const catalog = [
     fullname: "New Era Interception Cap",
     colors: ["Graphite_Black"],
     type: "mens",
-    default_color: "Graphite",
+    default_color: "Graphite_Black",
     sizes: {
       Small: 13.98,
       Medium: 13.98,

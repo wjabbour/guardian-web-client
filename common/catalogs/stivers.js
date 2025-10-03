@@ -204,7 +204,7 @@ export const catalog = [
   {
     code: "ST650",
     name: "Sport-Tek® Polo Shirt",
-    fullname: "Sport-Tek® Sport-Wick Polo",
+    fullname: "Sport-Tek® Micropique Sport-Wick Polo",
     colors: [
       "Black",
       "True Royal",
@@ -231,7 +231,7 @@ export const catalog = [
   {
     code: "TST650",
     name: "Sport-Tek® TALL Polo Shirt",
-    fullname: "Sport-Tek® Tall Sport-Wick Polo",
+    fullname: "Sport-Tek® Tall Micropique Sport-Wick Polo",
     colors: [
       "Black",
       "True Royal",
@@ -254,7 +254,7 @@ export const catalog = [
   {
     code: "LST650",
     name: "Sport-Tek® Polo Shirt",
-    fullname: "Sport-Tek® Sport-Wick Polo",
+    fullname: "Sport-Tek® Women's Micropique Sport-Wick Polo",
     colors: [
       "Black",
       "True Royal",
@@ -368,7 +368,7 @@ export const catalog = [
   {
     code: "NKDC1963",
     name: "Nike® Dri-FIT Polo Shirt",
-    fullname: "Nike® Dri-FIT Polo Shirt",
+    fullname: "Nike® Dri-FIT Micro Pique 2.0 Polo Shirt",
     colors: [
         "Anthracite", 
         "Black", 
@@ -406,7 +406,7 @@ export const catalog = [
   {
     code: "NKDC1991",
     name: "Nike® Dri-FIT Polo Shirt",
-    fullname: "Nike® Dri-FIT Polo Shirt",
+    fullname: "Nike® Women's Dri-FIT Micro Pique Polo Shirt",
     colors: [
         "Anthracite", 
         "Black", 
@@ -566,8 +566,8 @@ export const catalog = [
   },
   {
     code: "L805",
-    name: "Port Authority® 1/4-Zip Pullover",
-    fullname: "Port Authority® 1/4-Zip Pullover",
+    name: "Port Authority® Full-Zip Jacket",
+    fullname: "Port Authority® Women's Full-Zip Jacket",
     colors: ["Black", "Regatta Blue", "True Navy", "Iron Grey"],
     type: "womens",
     default_color: "Black",

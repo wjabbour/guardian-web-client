@@ -955,7 +955,7 @@ export const catalog = [
   {
     code: "HENLAL-FOB-509389L",
     name: "Leather Key Fob - Land Rover - N ATL",
-    fullname: "Black Leather Fob with Laser engraved imprint (must order min. of 250)",
+    fullname: "Black Leather Fob w/laser engraved imprint (must order min. of 250)",
     colors: ["Black"],
     type: "accessory",
     default_color: "Black",

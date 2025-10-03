@@ -165,7 +165,7 @@ export const catalog = [
    {
     code: "NAVHLK-PLATE-511843A",
     name: "7 in. Plastic Plate",
-    fullname: "7 in. Plastic Plate with 287 blue imprint",
+    fullname: "7 in. Plastic Plate w/287 blue imprint",
     colors: ["White"],
     type: "accessory",
     default_color: "White",

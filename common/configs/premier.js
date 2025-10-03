@@ -71,9 +71,14 @@ export const config = {
     "PRECHB",
     "PRENME",
   ],
+  bypass_codes: ["PREMIE"],
   server_hostname: "https://mxfj3q6m01.execute-api.us-east-1.amazonaws.com",
   account_reps: [
-    { name: "Louis Budbill", phone: "678-287-1649" },
-    { name: "Glenn Rodney", phone: "678-287-1608" },
+      { name: "Glenn Rodney", phone: "678-287-1608" },
+      { name: "Louis Budbill", phone: "678-287-1649" },  
   ],
+  route_prefix: "/premier",
+  paypal_not_supported: true,
+  password: "PremieR",
 };
+ 

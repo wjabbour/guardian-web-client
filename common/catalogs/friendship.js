@@ -614,12 +614,12 @@ export const catalog = [
   {
     code: "SDNC",
     name: "Service Numbers",
-    fullname: "Mirror Hang Service Numbers (1000/bx)",
+    fullname: "Mirror Hang Service Numbers (1000 per box)",
     colors: ["Blue","Green","Grey","Lime","Orange","Pink","Purple","Red","Tan","White","Yellow"],  
     type: "service",
     default_color: "Blue",    
     sizes: {
-      1: 0.0,
+      "# boxes": 0.0,
     },
   }, 
 ];
