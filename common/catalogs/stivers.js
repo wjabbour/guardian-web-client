@@ -1,7 +1,7 @@
 export const catalog = [
   {
     code: "NKFB6448",
-    name: "Nike Mesh Back Cap",
+    name: "Nike Mesh Back Cap #NKFB6448",
     fullname: "Nike Stretch-to-Fit Mesh Back Cap",
     colors: [
       "Anthr White",
@@ -24,7 +24,7 @@ export const catalog = [
   },
   {
     code: "STC38",
-    name: "Sport-Tek Trucker Cap",
+    name: "Sport-Tek Trucker Cap #STC38",
     fullname: "Sport-Tek® YP Classics® 5-Panel Trucker Mesh Back Cap",
     colors: [
       "Blk Blk",
@@ -49,7 +49,7 @@ export const catalog = [
   },
   {
     code: "C112",
-    name: "Port Authority Trucker Cap",
+    name: "Port Authority Trucker Cap #C112",
     fullname: "Port Authority® Snapback Trucker Cap",
     colors: [
       "Black",
@@ -75,7 +75,7 @@ export const catalog = [
   },
   {
     code: "J317",
-    name: "Port Authority® Jacket",
+    name: "Port Authority® Jacket #J317",
     fullname: "Port Authority® Core Soft Shell Jacket",
     colors: ["Black", "Battleship Grey"],
     type: "mens",
@@ -94,7 +94,7 @@ export const catalog = [
   },
   {
     code: "L317",
-    name: "Port Authority® Jacket",
+    name: "Port Authority® Jacket #L317",
     fullname: "Port Authority® Ladies Core Soft Shell Jacket",
     colors: ["Black", "Battleship Grey"],
     type: "womens",
@@ -113,7 +113,7 @@ export const catalog = [
   },
   {
     code: "PC55",
-    name: "Port & Company Blend Tee",
+    name: "Port & Company Blend Tee #PC55",
     fullname: "Port & Company Core Blend Tee",
     colors: ["Charcoal", "Jet Black", "Navy"],
     type: "mens",
@@ -132,7 +132,7 @@ export const catalog = [
   },
   {
     code: "PC61",
-    name: "Port & Company Tee",
+    name: "Port & Company Tee #PC61",
     fullname: "Port & Company Essential Tee",
     colors: ["Candy Pink", "Charcoal", "Jet Black", "Medium Grey", "Navy"],
     type: "mens",
@@ -151,7 +151,7 @@ export const catalog = [
   },
   {
     code: "PC61P",
-    name: "Port & Comp Pocket Tee",
+    name: "Port & Comp Pocket Tee #PC61P",
     fullname: "Port & Company Essential Pocket Tee",
     colors: ["Charcoal", "Jet Black", "Navy"],
     type: "mens",
@@ -168,7 +168,7 @@ export const catalog = [
   },
   {
     code: "PC380",
-    name: "Port & Co Perf Tee",
+    name: "Port & Co Perf Tee #PC380",
     fullname: "Port & Company Performance Tee",
     colors: ["Deep Navy"],
     type: "mens",
@@ -186,7 +186,7 @@ export const catalog = [
   },
   {
     code: "ST350",
-    name: "Sport-Tek PosiCharge Tee",
+    name: "Sport-Tek PosiCharge Tee #ST350",
     fullname: "Sport-Tek PosiCharge Competitor Tee",
     colors: ["Black", "Iron Grey", "True Navy", "Neon Pink"],
     type: "mens",
@@ -203,7 +203,7 @@ export const catalog = [
   },
   {
     code: "ST650",
-    name: "Sport-Tek® Polo Shirt",
+    name: "Sport-Tek® Polo Shirt #ST650",
     fullname: "Sport-Tek® Micropique Sport-Wick Polo",
     colors: [
       "Black",
@@ -230,7 +230,7 @@ export const catalog = [
   },
   {
     code: "TST650",
-    name: "Sport-Tek® TALL Polo Shirt",
+    name: "Sport-Tek® TALL Polo Shirt #TST650",
     fullname: "Sport-Tek® Tall Micropique Sport-Wick Polo",
     colors: [
       "Black",
@@ -253,7 +253,7 @@ export const catalog = [
   },
   {
     code: "LST650",
-    name: "Sport-Tek® Polo Shirt",
+    name: "Sport-Tek® Polo Shirt #LST650",
     fullname: "Sport-Tek® Women's Micropique Sport-Wick Polo",
     colors: [
       "Black",
@@ -367,7 +367,7 @@ export const catalog = [
   // },
   {
     code: "NKDC1963",
-    name: "Nike® Dri-FIT Polo Shirt",
+    name: "Nike® Dri-FIT Polo Shirt #NKDC1963",
     fullname: "Nike® Dri-FIT Micro Pique 2.0 Polo Shirt",
     colors: [
         "Anthracite", 
@@ -405,7 +405,7 @@ export const catalog = [
   },
   {
     code: "NKDC1991",
-    name: "Nike® Dri-FIT Polo Shirt",
+    name: "Nike® Dri-FIT Polo Shirt #NKDC1991",
     fullname: "Nike® Women's Dri-FIT Micro Pique Polo Shirt",
     colors: [
         "Anthracite", 
@@ -443,7 +443,7 @@ export const catalog = [
   },
   {
     code: "CGM451",
-    name: "Callaway Opti-Vent Polo",
+    name: "Callaway Opti-Vent Polo #CGM451",
     fullname: "Callaway Opti-Vent Polo",
     colors: ["Peacoat", "Salsa", "White"],
     type: "mens",
@@ -460,7 +460,7 @@ export const catalog = [
   },
   {
     code: "JST62",
-    name: "Sport-Tek® V-Neck Wind Shirt",
+    name: "Sport-Tek® V-Neck Wind Shirt #JST62",
     fullname: "Sport-Tek® Tipped V-Neck Raglan Wind Shirt",
     colors: ["Blk Graphite","Blk True Red","Black White","Graphite White","True Navy White","True Royal White"],
     type: "mens",
@@ -479,7 +479,7 @@ export const catalog = [
   },
   {
     code: "L331",
-    name: "Port Authority® Rain Jacket",
+    name: "Port Authority® Rain Jacket #L331",
     fullname: "Port Authority® All-Conditions Jacket",
     colors: ["Black"],
     type: "womens",
@@ -496,7 +496,7 @@ export const catalog = [
   },
   {
     code: "JST72",
-    name: "Sport-Tek® V-Neck Raglan Wind Shirt",
+    name: "Sport-Tek® V-Neck Wind Shirt #JST72",
     fullname: "Sport-Tek® Raglan Wind Shirt",
     colors: ["Black"],
     type: "mens",
@@ -515,7 +515,7 @@ export const catalog = [
   },
   {
     code: "CGW437",
-    name: "Callaway Opti-Vent Polo",
+    name: "Callaway Opti-Vent Polo #CGW437",
     fullname: "Callaway Ladies Opti-Vent Polo",
     colors: ["Peacoat", "Salsa", "White"],
     type: "womens",
@@ -532,7 +532,7 @@ export const catalog = [
   },
   {
     code: "K805",
-    name: "Port Authority® 1/4-Zip Pullover",
+    name: "Port Authority® 1/4-Zip Pullover #K805",
     fullname: "Port Authority® 1/4-Zip Pullover",
     colors: ["Black", "Regatta Blue", "True Navy", "Iron Grey"],
     type: "mens",
@@ -549,9 +549,9 @@ export const catalog = [
   },
   {
     code: "J331",
-    name: "Port Authority® Rain Jacket",
+    name: "Port Authority® Rain Jacket #J331",
     fullname: "Port Authority® All-Conditions Jacket",
-    colors: ["Black", "Direct Blue"],
+    colors: ["Black","Direct Blue"],
     type: "mens",
     default_color: "Black",
     sizes: {
@@ -566,7 +566,7 @@ export const catalog = [
   },
   {
     code: "L805",
-    name: "Port Authority® Full-Zip Jacket",
+    name: "Port Authority® Full-Zip Jacket #L805",
     fullname: "Port Authority® Women's Full-Zip Jacket",
     colors: ["Black", "Regatta Blue", "True Navy", "Iron Grey"],
     type: "womens",

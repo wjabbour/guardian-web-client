@@ -15,7 +15,7 @@ export const config = {
   embroideries: {
     hat: ["Vaughn Automotive","GMC"],
     mens: [
-     "Chevrolet Bowtie Stacked",
+    "Chevrolet Bowtie Stacked",
     "Ford",
     "GMC",
     "Toyota Stacked",
