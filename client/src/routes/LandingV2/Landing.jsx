@@ -20,13 +20,7 @@ function AutoCatalogLink(props) {
   return (
     <p
       className="text-2xl font-bold text-cyan-700 cursor-pointer underline tracking-tight"
-      onClick={() =>
-        window.open(
-          "https://www.flipsnack.com/gpcorp/2025-guardian-auto-catalog-lb/full-view.html?p=" +
-            props.page,
-          "_blank"
-        )
-      }
+      onClick={() => window.open(props.link, "_blank")}
     >
       {props.text}
     </p>
@@ -54,13 +48,8 @@ export default function LandingV2() {
         ></Category>
       </div>
       <div className="mt-[35px] flex gap-[25px] justify-center">
-        <AutoCatalogLink text="Promotional" page="2" />
-        <AutoCatalogLink text="Sales" page="34" />
-        <AutoCatalogLink text="Service" page="114" />
-        <AutoCatalogLink text="Office" page="168" />
-        <AutoCatalogLink text="Parts" page="186" />
-        <AutoCatalogLink text="Body Shop" page="192" />
-        <AutoCatalogLink text="Detail" page="196" />
+        <AutoCatalogLink text="More promotional" link="https://hitpromo.net" />
+        <AutoCatalogLink text="More apparel" link="https://sanmar.com" />
       </div>
     </div>
   );
