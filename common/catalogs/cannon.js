@@ -85,7 +85,7 @@ export const catalog = [
       "Number 8",
       "Number 9",
     ],
-    type: "office",
+    type: "service",
     default_color: "Number 0",
     sizes: {
       "# boxes": 8.50,

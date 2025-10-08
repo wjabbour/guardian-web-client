@@ -18,11 +18,6 @@ export const config = {
   ],
   stores: [
     {
-      name: "Leith Acura",
-      address: "2300 Capital Summit Court, Raleigh, NC 27616",
-      code: "10118LEIARA",
-    },
-    {
       name: "Chris Leith Automotive",
       address: "PO Box 1707, Wake Forest, NC 27588",
       code: "CHRIWA",
@@ -54,7 +49,7 @@ export const config = {
     },
     {
       name: "Leith Honda",
-      address: "3940 Capital Hills Drive, NC 27606",
+      address: "3940 Capital Hills Drive, Raleigh, NC 27606",
       code: "LEIHRA",
     },
     {

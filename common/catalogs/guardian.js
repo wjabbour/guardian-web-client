@@ -1804,7 +1804,7 @@ export const catalog = [
       "White",
       "Yellow",
     ],
-    type: "sales",
+    type: "office",
     default_color: "Blue",
     sizes: {
       100: 0.00,
