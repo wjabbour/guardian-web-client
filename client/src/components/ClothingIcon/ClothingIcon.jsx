@@ -15,30 +15,27 @@ export default function ClothingIcon(props) {
   */
   return (
     <div
-      className="cursor-pointer relative flex flex-col justify-center border-[1px] border-solid border-gray-500"
+      className="cursor-pointer relative flex flex-col justify-center border-[1px] border-solid border-gray-500 h-[350px]"
       onClick={() => navigate(getDomainAwarePath(props.link))}
     >
+      {isLoading &&
+        <div className="absolute animate-pulse bg-gray-400 z-10 h-full w-full"></div>}
       {props.no_space != true && (
         <div className="bg-white" style={{ height: 150 - heightOffset }}></div>
       )}
 
       <div className="w-[200px] h-[300px]">
-        {isLoading &&
-          <div className="absolute animate-pulse bg-gray-200 z-10 h-full w-full"></div>}
         <img
-          className={`w-full h-full transition-opacity duration-[2000ms] ease-in-out ${isLoading ? "opacity-0" : "opacity-100"
+          className={`w-full h-full transition-opacity duration-[600ms] ease-in-out ${isLoading ? "opacity-0" : "opacity-100"
             }`}
           ref={ref}
           onLoad={() => {
             setHeight(ref.current.clientHeight / 2);
-            setLoading(false);
+            setLoading(false)
           }}
           src={props.img}
         ></img>
       </div>
-
-
-
 
       {
         props.no_space != true && (
@@ -46,9 +43,12 @@ export default function ClothingIcon(props) {
         )
       }
 
-      <div className="absolute bottom-0 w-full bg-slate-800 text-white p-1">
-        <p>{props.label}</p>
-      </div>
-    </div >
+      {!isLoading &&
+        <div className="absolute bottom-0 w-full bg-slate-800 text-white p-1">
+          <p>{props.label}</p>
+        </div>
+      }
+
+    </div>
   );
 }
