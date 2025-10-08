@@ -70,9 +70,20 @@ export const catalog = [
     },
   },
   {
+    code: "301-100",
+    name: "Plain File Folders - #301-100",
+    fullname: "Plain File Folders - Color Code (100 per box) #301-100",
+    colors: ["Plain"],
+    type: "office",
+    default_color: "Plain",
+    sizes: {
+      "# boxes": 27.99,      
+    },
+  },
+  {
     code: "310",
-    name: "File Number Labels",
-    fullname: "File Right Number Labels (500/box)",
+    name: "File Number Labels #310",
+    fullname: "File Right Number Labels (500/box) #310",
     colors: [
       "Number 0",
       "Number 1",
@@ -114,6 +125,28 @@ export const catalog = [
       "# rolls": 73.50,
     },
   },
+  {
+    code: "BOW30",
+    name: "30 in. Giant Bow #BOW30",
+    fullname: "30 in. Giant Magnetic Car Bow (2 ea)",
+    colors: ["Blue","Gold","Green","Patriotic","Pink","Red","Silver","White","Red Grn"],
+    type: "sales",
+    default_color: "Blue",   
+    sizes: {
+      "Qty of 2": 38.95,
+    },
+  },
+  {
+    code: "SDNC",
+    name: "Service Numbers #SDNC",
+    fullname: "Mirror Hang Service Numbers (1000/bx)",
+    colors: ["Blue","Green","Grey","Lime","Orange","Pink","Purple","Red","Tan","White","Yellow"],  
+    type: "service",
+    default_color: "Blue",    
+    sizes: {
+      "1 box": 93.00,
+    },
+  }, 
   {
     code: "TM1MY394",
     name: "Cuffed Beanie #TM1MY394",

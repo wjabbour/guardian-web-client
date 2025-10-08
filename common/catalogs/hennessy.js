@@ -889,10 +889,10 @@ export const catalog = [
   {
     code: "HENPRO-FOB-414917C",
     name: "Leather Key Fob (red stitch) - Porsche N ATL",
-    fullname: "Metal & Black Leather Fob w/black, 186 red & 872 gold imprint (must order min. of 250)",
-    colors: ["Black Red Stitch"],
+    fullname: "Metal & Black Leather Fob - red stitch (must order min. of 250)",
+    colors: ["Black"],
     type: "accessory",
-    default_color: "Black Red Stitch",
+    default_color: "Black",
     sizes: {
       1: 3.99,           
     },
@@ -900,10 +900,10 @@ export const catalog = [
   {
     code: "HENPRO-FOB-415104C",
     name: "Leather Key Fob (white stitch) - Porsche N ATL",
-    fullname: "Metal & Black Leather Fob w/black, 186 red & 872 gold imprint (must order min. of 250)",
-    colors: ["Black White Stitch"],
+    fullname: "Metal & Black Leather Fob - white stitch (must order min. of 250)",
+    colors: ["Black"],
     type: "accessory",
-    default_color: "Black White Stitch",
+    default_color: "Black",
     sizes: {
       1: 3.99,       
      },
@@ -911,10 +911,10 @@ export const catalog = [
   {
     code: "HENPMA-FOB-497832C",
     name: "Leather Key Fob (red stitch) - Porsche Marietta",
-    fullname: "Metal & Black Leather Fob w/black, 186 red & 872 gold imprint (must order min. of 250)",
-    colors: ["Black Red Stitch"],
+    fullname: "Metal & Black Leather Fob - red stitch (must order min. of 250)",
+    colors: ["Black"],
     type: "accessory",
-    default_color: "Black Red Stitch",
+    default_color: "Black",
     sizes: {
       1: 3.99,     
     },
@@ -922,10 +922,10 @@ export const catalog = [
   {
     code: "HENPMA-FOB-498046C",
     name: "Leather Key Fob (white stitch) - Porsche Marietta",
-    fullname: "Metal & Black Leather Fob w/black, 186 red & 872 gold imprint (must order min. of 250)",
-    colors: ["Black White Stitch"],
+    fullname: "Metal & Black Leather Fob - white stitch (must order min. of 250)",
+    colors: ["Black"],
     type: "accessory",
-    default_color: "Black White Stitch",
+    default_color: "Black",
     sizes: {
       1: 3.99,      
     },
@@ -933,7 +933,7 @@ export const catalog = [
   {
     code: "HENLAT-GPLLKR-456506L",
     name: "Leather Key Fob - Lexus ATL",
-    fullname: "Black Laser Engraved Leather Fob w/debossed leather imprint (must order min. of 250)",
+    fullname: "Black Laser Engraved Leather Fob  (must order min. of 250)",
     colors: ["Black"],
     type: "accessory",
     default_color: "Black",
@@ -966,7 +966,7 @@ export const catalog = [
   {
     code: "HENLDU-GPLLKR-473091L",
     name: "Leather Key Fob - Lexus Gwinnett",
-    fullname: "Black Laser Engraved Leather Fob w/debossed leather imprint (must order min. of 250)",
+    fullname: "Black Laser Engraved Leather Fob (must order min. of 250)",
     colors: ["Black"],
     type: "accessory",
     default_color: "Black",
@@ -987,11 +987,11 @@ export const catalog = [
   },
   {
     code: "HENADU-GPLLKR-497621L",
-    name: "Leather Key Fob (green stitch) - Land Rover Gwinnett (must order min. of 250)",
-    fullname: "Black Laser Engraved Leather Fob",
-    colors: ["Black Green Stitch"],
+    name: "Leather Key Fob (green stitch) - Land Rover Gwinnett",
+    fullname: "Black Laser Engraved Leather Fob - green stitch (must order min. of 250)",
+    colors: ["Black"],
     type: "accessory",
-    default_color: "Black Green Stitch",
+    default_color: "Black",
     sizes: {
       1: 3.49,      
     },
@@ -1010,7 +1010,7 @@ export const catalog = [
   {
     code: "CG1640",
     name: "Laser Engraved Keychain",
-    fullname: "Brushed Zinc/Leather Key Tag w/Laser Engraved Imprint (must order min. of 250)",
+    fullname: "Brushed Zinc/Leather Key Tag (must order min. of 250)",
     colors: ["Black"],
     type: "accessory",
     default_color: "Black",
@@ -1032,7 +1032,7 @@ export const catalog = [
   {
     code: "HENFAT-FOB-505249",
     name: "Laser Engraved Keychain",
-    fullname: "Blue Banner Keychain w/Laser Engraved Imprint (must order min. of 250)",
+    fullname: "Blue Banner Keychain (must order min. of 250)",
     colors: ["Metal"],
     type: "accessory",
     default_color: "Metal",
@@ -1043,7 +1043,7 @@ export const catalog = [
   {
     code: "HENMMO-FOB-502771L",
     name: "Matte Black Keychain - Southlake Mazda Buick GMC",
-    fullname: "Matte Black Keychain w/frost effect engraving (#CG-1070) *must order min. of 250",
+    fullname: "Matte Black Keychain (must order min. of 250)",
     colors: ["Black"],
     type: "accessory",
     default_color: "Black",
