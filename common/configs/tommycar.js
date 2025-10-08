@@ -44,7 +44,7 @@ export const config = {
       code: "VOLCNO",
     },
   ],
-  bypass_codes: ["BUYER"],
+  bypass_codes: ["LISA1"],
   server_hostname: "https://mxfj3q6m01.execute-api.us-east-1.amazonaws.com",
   account_reps: [
     { name: "Hunter Peck", phone: "678-287-1642" },

@@ -66,7 +66,7 @@ export const catalog = [
     type: "office",
     default_color: "Buff",
     sizes: {
-      "# boxes": 0.0,      
+      "# boxes": 126.78,      
     },
   },
   {
@@ -88,7 +88,7 @@ export const catalog = [
     type: "service",
     default_color: "Number 0",
     sizes: {
-      "# boxes": 8.50,
+      "# boxes": 8.99,
     },
   },
   {
