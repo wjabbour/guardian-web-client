@@ -43,12 +43,13 @@ export default function ClothingIcon(props) {
         )
       }
 
-      {!isLoading &&
-        <div className="absolute bottom-0 w-full bg-slate-800 text-white p-1">
+
+      {(!isLoading && props.label !== false) &&
+        < div className="absolute bottom-0 w-full bg-slate-800 text-white p-1">
           <p>{props.label}</p>
         </div>
       }
 
-    </div>
+    </div >
   );
 }
