@@ -7,7 +7,7 @@ export const catalog = [
     type: "service",
     default_color: "Plastic",
     sizes: {
-      "# rolls": 73.5,
+      "# rolls": 73.50,
     },
   },
   {
@@ -31,7 +31,7 @@ export const catalog = [
     default_color: "White",
     discount: [{ quantity: 1, price: 135.0 }],
     sizes: {
-      "# packs": 135.0,
+      "# packs": 135.00,
     },
   },
   {
