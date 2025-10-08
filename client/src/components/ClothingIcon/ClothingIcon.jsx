@@ -15,7 +15,7 @@ export default function ClothingIcon(props) {
   */
   return (
     <div
-      className="cursor-pointer relative flex flex-col justify-center border-[1px] border-solid border-gray-500 h-[350px]"
+      className="cursor-pointer relative flex flex-col justify-center border-[1px] border-solid border-gray-400 h-[350px] rounded-lg"
       onClick={() => navigate(getDomainAwarePath(props.link))}
     >
       {isLoading &&
