@@ -24,7 +24,7 @@ export default function ClothingIcon(props) {
         <div className="bg-white" style={{ height: 150 - heightOffset }}></div>
       )}
 
-      <div className="w-[200px] h-[300px]">
+      <div className="w-[200px] max-h-[300px]">
         <img
           className={`w-full h-full transition-opacity duration-[600ms] ease-in-out ${isLoading ? "opacity-0" : "opacity-100"
             }`}
