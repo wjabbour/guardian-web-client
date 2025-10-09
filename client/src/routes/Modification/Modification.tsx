@@ -167,7 +167,7 @@ export default function Modification() {
             size: sizes[j],
             color: colors[i - 1],
             code: item.code,
-            placement: item.type === "mens" || item.type === 'womens' ? firstPlacement : "N/A",
+            placement: item.type === "mens" || item.type === 'womens' || item.type === 'tshirts' || item.type === 'hat' ? firstPlacement : "N/A",
             embroidery: firstEmbroidery,
           };
 
