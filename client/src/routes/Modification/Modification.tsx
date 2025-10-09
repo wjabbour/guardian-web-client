@@ -86,8 +86,8 @@ export default function Modification() {
         Object.keys(customsOrder).length === 0
           ? true
           : Object.values(customsOrder).every(
-              (arr: string[]) => arr.length === 0
-            );
+            (arr: string[]) => arr.length === 0
+          );
 
       if (noCustoms) {
         setErrorSnackbarOpen(true);
@@ -167,13 +167,12 @@ export default function Modification() {
             size: sizes[j],
             color: colors[i - 1],
             code: item.code,
-            placement: item.type === "accessory" ? "N/A" : firstPlacement,
+            placement: item.type === "mens" || item.type === 'womens' ? firstPlacement : "N/A",
             embroidery: firstEmbroidery,
           };
 
-          let key = `${item.code},${Object.keys(item.sizes)[j]},${
-            colors[i - 1]
-          },${firstEmbroidery}`;
+          let key = `${item.code},${Object.keys(item.sizes)[j]},${colors[i - 1]
+            },${firstEmbroidery}`;
 
           if (secondEmbroidery) {
             cart_item["secondEmbroidery"] = secondEmbroidery;
