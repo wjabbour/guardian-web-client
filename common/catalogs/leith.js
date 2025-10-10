@@ -1,7 +1,7 @@
 export const catalog = [
   {
     code: "PC61",
-    name: "Port & Company® Tee",
+    name: "Port & Company® Tee #PC61",
     fullname: "Port & Company® Essential Tee",
     colors: ["Jet Black"],
     type: "tshirts",
@@ -57,7 +57,7 @@ export const catalog = [
   },
   {
     code: "ST650",
-    name: "Sport-Tek® Polo Shirt",
+    name: "Sport-Tek® Polo Shirt #ST650",
     fullname: "Sport-Tek® Micropique Polo",
     colors: [
       "Black",
@@ -96,7 +96,7 @@ export const catalog = [
   },
   {
     code: "TST650",
-    name: "Sport-Tek® Polo - TALL",
+    name: "Sport-Tek® Polo - TALL #TST650",
     fullname: "Sport-Tek® TALL Micropique Polo",
     colors: [
       "Black",
@@ -126,7 +126,7 @@ export const catalog = [
   },
   {
     code: "LST650",
-    name: "Sport-Tek® Polo Shirt",
+    name: "Sport-Tek® Polo Shirt #LST650",
     fullname: "Sport-Tek® Womens Micropique Polo",
     colors: [
       "Black",
@@ -163,7 +163,7 @@ export const catalog = [
   },
   {
     code: "ST657",
-    name: "Sport-Tek LS Polo",
+    name: "Sport-Tek LS Polo #ST657",
     fullname: "Sport-Tek® Long Sleeve Micropique Polo",
     colors: [
       "Black",
@@ -190,7 +190,7 @@ export const catalog = [
   },
   {
     code: "L540LS",
-    name: "Port Authority® Polo",
+    name: "Port Authority® Polo #L540LS",
     fullname: "Port Authority Womens Long Sleeve Polo",
     colors: [
       "Black",
@@ -215,7 +215,7 @@ export const catalog = [
   },
   {
     code: "J317",
-    name: "Port Authority® Jacket",
+    name: "Port Authority® Jacket #J317",
     fullname: "Port Authority® Core Soft Shell Jacket",
     colors: [
       "Battleship Grey",
@@ -246,7 +246,7 @@ export const catalog = [
   },
   {
     code: "L317",
-    name: "Port Authority® Jacket",
+    name: "Port Authority® Jacket #L317",
     fullname: "Port Authority® Ladies Core Soft Shell Jacket",
     colors: [
       "Battleship Grey",
@@ -263,30 +263,30 @@ export const catalog = [
     type: "womens",
     default_color: "Black",
     sizes: {
-      Small: 41.0,
-      Medium: 41.0,
-      Large: 41.0,
-      XLarge: 41.0,
-      "2XLarge": 42.0,
-      "3XLarge": 43.0,
-      "4XLarge": 44.0,
+      Small: 41.00,
+      Medium: 41.00,
+      Large: 41.00,
+      XLarge: 41.00,
+      "2XLarge": 42.00,
+      "3XLarge": 43.00,
+      "4XLarge": 44.00,
     },
   },
   {
     code: "K805",
-    name: "Port Authority® Pullover",
+    name: "Port Authority® Pullover #K805",
     fullname: "Port Authority® Vertical Texture 1/4-Zip Pullover",
     colors: ["Black", "Iron Grey", "Regatta Blue", "True Navy"],
     type: "mens",
     default_color: "Black",
     sizes: {
-      Small: 32.0,
-      Medium: 32.0,
-      Large: 32.0,
-      XLarge: 32.0,
-      "2XLarge": 33.0,
-      "3XLarge": 34.0,
-      "4XLarge": 35.0,
+      Small: 32.00,
+      Medium: 32.00,
+      Large: 32.00,
+      XLarge: 32.00,
+      "2XLarge": 33.00,
+      "3XLarge": 34.00,
+      "4XLarge": 35.00,
     },
   },
   {
@@ -297,12 +297,12 @@ export const catalog = [
     type: "womens",
     default_color: "Black",
     sizes: {
-      Small: 32.0,
-      Medium: 32.0,
-      Large: 32.0,
-      XLarge: 32.0,
-      "2XLarge": 33.0,
-      "3XLarge": 34.0,
+      Small: 32.00,
+      Medium: 32.00,
+      Large: 32.00,
+      XLarge: 32.00,
+      "2XLarge": 33.00,
+      "3XLarge": 34.00,
       "4XLarge": 35.0,
     },
   },
