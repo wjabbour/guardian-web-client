@@ -99,6 +99,11 @@ export const config = {
       code: "FRIHBO",
     },
     {
+      name: "Friendship Nissan of Boone",
+      address: "135 Innovation Drive, Boone, NC 28607",
+      code: "FRINBO",
+    },
+    {
       name: "Friendship Chevy of Forest City",
       address: "1740 College Ave, Forest City, NC 28043",
       code: "FRICFC",
