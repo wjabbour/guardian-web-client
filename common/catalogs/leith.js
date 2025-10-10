@@ -291,7 +291,7 @@ export const catalog = [
   },
   {
     code: "L805",
-    name: "Port Authority® Pullover",
+    name: "Port Authority® Pullover #L805",
     fullname: "Port Authority® Women's Vertical Texture Full-Zip Jacket",
     colors: ["Black", "Iron Grey", "Regatta Blue", "True Navy"],
     type: "womens",
@@ -303,7 +303,7 @@ export const catalog = [
       XLarge: 32.00,
       "2XLarge": 33.00,
       "3XLarge": 34.00,
-      "4XLarge": 35.0,
+      "4XLarge": 35.00,
     },
   },
 ];
