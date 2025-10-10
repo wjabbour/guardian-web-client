@@ -1122,6 +1122,10 @@
   background-color: #83f7a9;
 }
 
+.Natural {
+  background-color: #d3bb9f;
+}
+
 .Navy {
   background-color: #021b40;
 }
@@ -1374,12 +1378,24 @@
   background-color: #0653cf;
 }
 
+.Safety_Green {
+  background-color: #b3f33df1;
+}
+
+.Safety_Orange {
+  background-color: #f8550af1;
+}
+
 .Salsa {
   background-color: #eb371ff1;
 }
 
 .Salmon {
   background-color: #f06b1ef1;
+}
+
+.Sand {
+  background-color: #917645f1;
 }
 
 .Sep {
