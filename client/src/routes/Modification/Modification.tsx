@@ -3,11 +3,9 @@ import { getWebCatalog } from "guardian-common";
 import { useLoaderData, useOutletContext, useNavigate } from "react-router-dom";
 import { useState } from "react";
 import Snackbar from "@mui/material/Snackbar";
-import { SvgIcon } from "@mui/material";
-import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import MenuItem from "@mui/material/MenuItem";
 import Alert from "@mui/material/Alert";
-import { getDomainAwarePath, getEmbroidery } from "../../lib/utils";
+import { getEmbroidery } from "../../lib/utils";
 import ColorSelector from "./ColorSelector";
 import QuantitySelector from "./QuantitySelector";
 import { CartItem } from "../../lib/interfaces";
@@ -243,16 +241,6 @@ export default function Modification() {
 
   return (
     <div className={styles.container}>
-      <div
-        className={styles.back__button}
-        onClick={() => {
-          navigate(getDomainAwarePath("/"));
-        }}
-      >
-        <SvgIcon fontSize="inherit">
-          <ArrowBackIcon />
-        </SvgIcon>
-      </div>
       <div className={styles.card}>
         <div className={styles.image__container}>
           <img src={image_source}></img>

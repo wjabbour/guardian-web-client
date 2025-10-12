@@ -9,13 +9,10 @@ import TableContainer from "@mui/material/TableContainer";
 import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
-import { SvgIcon } from "@mui/material";
-import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import Snackbar from "@mui/material/Snackbar";
 import Alert from "@mui/material/Alert";
 import Row from "./Row";
 import PasswordEntryDialog from "../../components/PasswordEntryDialog";
-import { getDomainAwarePath } from "../../lib/utils";
 
 export default function BasicTable() {
   const navigate = useNavigate();
@@ -61,16 +58,6 @@ export default function BasicTable() {
 
   return (
     <div className={styles.container}>
-      <div
-        className={styles.back__button}
-        onClick={() => {
-          navigate(getDomainAwarePath("/"));
-        }}
-      >
-        <SvgIcon fontSize="inherit">
-          <ArrowBackIcon />
-        </SvgIcon>
-      </div>
       <TableContainer component={Paper}>
         <Table aria-label="simple table">
           <TableHead>

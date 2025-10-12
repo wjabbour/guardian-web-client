@@ -2,10 +2,7 @@ import styles from "./Catalog.module.scss";
 import ClothingIcon from "../../components/ClothingIcon/ClothingIcon";
 import { useState, useEffect } from "react";
 import { useNavigate, useLocation, useParams } from "react-router-dom";
-import { SvgIcon } from "@mui/material";
-import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import LogoPreview from "./LogoPreview";
-import { getDomainAwarePath } from "../../lib/utils";
 import { getWebCatalog, getWebConfigValue } from "guardian-common";
 
 export default function ClothingCatalog() {
@@ -65,16 +62,6 @@ export default function ClothingCatalog() {
         </div>
       )}
       <div className={styles.grid}>
-        <div
-          className={styles.back__button}
-          onClick={() => {
-            navigate(getDomainAwarePath("/"));
-          }}
-        >
-          <SvgIcon fontSize="inherit">
-            <ArrowBackIcon />
-          </SvgIcon>
-        </div>
         {catalog.map((item) => {
           // dont filter out customs items if there are no stores for this company (some companies have no stores for some reason)
           if (
@@ -86,17 +73,11 @@ export default function ClothingCatalog() {
             return null;
           }
           return (
-            <div
-              onClick={() => {
-                navigate(getDomainAwarePath(`/item/${item.code}`));
-              }}
-              key={item.key}
-            >
-              <ClothingIcon
-                img={`/images/${item.code}.jpg`}
-                label={item.name}
-              />
-            </div>
+            <ClothingIcon
+              link={`/item/${item.code}`}
+              img={`/images/${item.code}.jpg`}
+              label={item.name}
+            />
           );
         })}
       </div>

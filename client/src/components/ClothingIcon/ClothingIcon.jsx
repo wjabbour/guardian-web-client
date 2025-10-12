@@ -1,4 +1,3 @@
-import styles from "./ClothingIcon.module.scss";
 import { useNavigate } from "react-router-dom";
 import { useRef, useState } from "react";
 import { getDomainAwarePath } from "../../lib/utils";

@@ -1,8 +1,5 @@
 import styles from "./Success.module.scss";
 import { useNavigate, useLocation } from "react-router-dom";
-import { SvgIcon } from "@mui/material";
-import ArrowBackIcon from "@mui/icons-material/ArrowBack";
-import { getDomainAwarePath } from "../../lib/utils";
 
 export default function Success() {
   const navigate = useNavigate();
@@ -12,16 +9,6 @@ export default function Success() {
 
   return (
     <div className={styles.container}>
-      <div
-        className={styles.back__button}
-        onClick={() => {
-          navigate(getDomainAwarePath("/"));
-        }}
-      >
-        <SvgIcon fontSize="inherit">
-          <ArrowBackIcon />
-        </SvgIcon>
-      </div>
       <div className={styles.card}>
         <div className="flex justify-center text-xl font-bold">
           <h1>Order Placed Successfully</h1>
