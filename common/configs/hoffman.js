@@ -1,13 +1,12 @@
 export const config = {
   title: "Hoffman",
   company_logo: "hoffman.png",
-  logo_placements: [
-    "Left Chest",
-    "Right Sleeve",
-    "Left Sleeve",
-    "Yoke",
-    "Front Center",
-  ],
+  logo_placements: {
+    mens: ["Left Chest", "Right Sleeve", "Left Sleeve", "Yoke"],
+    womens: ["Left Chest", "Right Sleeve", "Left Sleeve", "Yoke"],
+    hat: ["Front Center"],
+    tshirts: ["Left Chest", "Right Sleeve", "Left Sleeve", "Yoke"],
+  },
   show_image_preview: true,
   embroideries: {
     hat: [

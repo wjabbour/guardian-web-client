@@ -1,15 +1,12 @@
 export const config = {
   title: "Guardian",
   company_logo: "guardian.png",
-  logo_placements: [
-    "Left Chest", 
-    "Left Sleeve", 
-    "Right Sleeve", 
-    "Yoke",
-    "Front Center-HATS",
-    "Left Panel-HATS",
-    "Right Panel-HATS",    
-  ],
+  logo_placements: {
+    mens: ["Left Chest", "Left Sleeve", "Right Sleeve", "Yoke"],
+    womens: ["Left Chest", "Left Sleeve", "Right Sleeve", "Yoke"],
+    hat: ["Front Center", "Left Panel", "Right Panel"],
+    tshirts: ["Left Chest", "Left Sleeve", "Right Sleeve", "Yoke"],
+  },
   show_image_preview: true,
   embroideries: {
     hat: ["Guardian"],
@@ -25,9 +22,12 @@ export const config = {
     detail: [],
     bodyshop: [],
     parts: [],
-    
   },
-  email_recipients: ["lbudbill@gpcorp.com", "lbudbell@comcast.net","shanell@gpcorp.com"],
+  email_recipients: [
+    "lbudbill@gpcorp.com",
+    "lbudbell@comcast.net",
+    "shanell@gpcorp.com",
+  ],
   stores: [
     {
       name: "Guardian Products",

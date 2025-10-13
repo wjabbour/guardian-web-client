@@ -1,6 +1,6 @@
 import styles from "./Modification.module.scss";
 import { getWebCatalog } from "guardian-common";
-import { useLoaderData, useOutletContext, useNavigate } from "react-router-dom";
+import { useLoaderData, useOutletContext } from "react-router-dom";
 import { useState } from "react";
 import Snackbar from "@mui/material/Snackbar";
 import MenuItem from "@mui/material/MenuItem";
@@ -10,6 +10,7 @@ import ColorSelector from "./ColorSelector";
 import QuantitySelector from "./QuantitySelector";
 import { CartItem } from "../../lib/interfaces";
 import EmbroiderySelector from "./EmbroiderySelector";
+import { getWebConfigValue } from "guardian-common";
 
 export async function loader({ params }) {
   return getWebCatalog().find((i) => i.code === params.id);
@@ -17,7 +18,6 @@ export async function loader({ params }) {
 
 export default function Modification() {
   const item: any = useLoaderData();
-  const navigate = useNavigate();
   const [selected_color, set_selected_color] = useState(item.default_color);
   const [image_source, set_image_source] = useState(
     `/images/${item.code}_${selected_color
@@ -36,8 +36,14 @@ export default function Modification() {
   const [price] = useState(item.sizes[selected_size]);
   const [firstEmbroidery, setFirstEmbroidery] = useState("");
   const [secondEmbroidery, setSecondEmbroidery] = useState("");
-  const [firstPlacement, setFirstPlacement] = useState("Left Chest");
-  const [secondPlacement, setSecondPlacement] = useState("Left Chest");
+  const logo_placements = getWebConfigValue("logo_placements")[item.type];
+  const [firstPlacement, setFirstPlacement] = useState(
+    logo_placements?.[0] || "Left Chest"
+  );
+
+  const [secondPlacement, setSecondPlacement] = useState(
+    logo_placements?.[0] || "Left Chest"
+  );
   const [customsOrder, setCustomsOrder] = useState({});
 
   const handleFirstEmbroideryChange = (event) => {
@@ -84,8 +90,8 @@ export default function Modification() {
         Object.keys(customsOrder).length === 0
           ? true
           : Object.values(customsOrder).every(
-            (arr: string[]) => arr.length === 0
-          );
+              (arr: string[]) => arr.length === 0
+            );
 
       if (noCustoms) {
         setErrorSnackbarOpen(true);
@@ -127,6 +133,7 @@ export default function Modification() {
 
     const hasEmbroideryOptions = embroideries.length > 0;
     const embroideryTypes = ["mens", "womens", "accessory"];
+    const placementTypes = ["mens", "womens", "tshirts", "hat"];
 
     if (
       hasEmbroideryOptions &&
@@ -165,12 +172,15 @@ export default function Modification() {
             size: sizes[j],
             color: colors[i - 1],
             code: item.code,
-            placement: item.type === "mens" || item.type === 'womens' || item.type === 'tshirts' || item.type === 'hat' ? firstPlacement : "N/A",
+            placement: placementTypes.includes(item.type)
+              ? firstPlacement
+              : "N/A",
             embroidery: firstEmbroidery,
           };
 
-          let key = `${item.code},${Object.keys(item.sizes)[j]},${colors[i - 1]
-            },${firstEmbroidery}`;
+          let key = `${item.code},${Object.keys(item.sizes)[j]},${
+            colors[i - 1]
+          },${firstEmbroidery}`;
 
           if (secondEmbroidery) {
             cart_item["secondEmbroidery"] = secondEmbroidery;
@@ -260,6 +270,7 @@ export default function Modification() {
           </div>
           <EmbroiderySelector
             item={item}
+            placements={logo_placements}
             embroideries={embroideries}
             firstEmbroidery={firstEmbroidery}
             secondEmbroidery={secondEmbroidery}

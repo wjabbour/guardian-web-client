@@ -1,7 +1,12 @@
 export const config = {
   title: "Tameron",
   company_logo: "tameron.png",
-  logo_placements: ["Right Sleeve", "Front","Left Chest"],
+  logo_placements: {
+    mens: ["Right Sleeve", "Left Chest"],
+    womens: ["Right Sleeve", "Left Chest"],
+    hat: ["Front"],
+    tshirts: ["Right Sleeve", "Left Chest"],
+  },
   show_modification_thumbnail: true,
   minimum_apparel_order: true,
   render_logo_preview: true,
@@ -13,7 +18,7 @@ export const config = {
     customs: [],
   },
   email_recipients: [
-    "lbudbill@gpcorp.com",    
+    "lbudbill@gpcorp.com",
     "mmccord@gpcorp.com",
     "support@gpcorp.com",
     "shanell@gpcorp.com",
@@ -58,8 +63,8 @@ export const config = {
       name: "C20 Tameron Nissan E Shore",
       address: "",
       code: "ONLINE",
-    },    
-  ],    
+    },
+  ],
   bypass_codes: ["TAMERO"],
   server_hostname: "https://mxfj3q6m01.execute-api.us-east-1.amazonaws.com",
   account_reps: [

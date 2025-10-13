@@ -1,7 +1,12 @@
 export const config = {
   title: "New Customer",
   company_logo: "hennessy.png",
-  logo_placements: ["Left Chest", "Right Sleeve"],
+  logo_placements: {
+    mens: ["Left Chest", "Right Sleeve"],
+    womens: ["Left Chest", "Right Sleeve"],
+    hat: [],
+    tshirts: ["Left Chest", "Right Sleeve"],
+  },
   show_image_preview: true,
   embroideries: {
     hat: [

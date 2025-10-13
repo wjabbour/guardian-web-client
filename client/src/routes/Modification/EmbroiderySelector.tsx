@@ -11,6 +11,7 @@ import DoDisturbOnIcon from "@mui/icons-material/DoDisturbOn";
 
 export default function EmbroiderySelector({
   item,
+  placements,
   embroideries,
   firstEmbroidery,
   secondEmbroidery,
@@ -27,7 +28,6 @@ export default function EmbroiderySelector({
     (type) => embroideriesConfig[type].length
   );
 
-  const logo_placements = getWebConfigValue("logo_placements") as string[];
   const [secondLogo, setSecondLogo] = useState(false);
 
   const SecondLogoAdd = () => {
@@ -103,11 +103,15 @@ export default function EmbroiderySelector({
   };
 
   const PlacementSelector = ({ embroideryPlace }) => {
-    const hasPlacementOptions = logo_placements.length > 0;
+    const hasPlacementOptions = placements.length > 0;
 
     if (hasPlacementOptions) {
-      const placements = logo_placements.map((l) => {
-        return <MenuItem value={l}>{l}</MenuItem>;
+      const options = placements.map((l) => {
+        return (
+          <MenuItem id={l} value={l}>
+            {l}
+          </MenuItem>
+        );
       });
 
       return (
@@ -127,13 +131,11 @@ export default function EmbroiderySelector({
                 }
               }}
             >
-              {placements}
+              {options}
             </Select>
           </FormControl>
         </div>
       );
-    } else {
-      return <></>;
     }
   };
 

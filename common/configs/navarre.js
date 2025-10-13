@@ -1,7 +1,12 @@
 export const config = {
   title: "Navarre",
   company_logo: "navarre.png",
-  logo_placements: ["Left Chest", "Front Center"],
+  logo_placements: {
+    mens: ["Left Chest"],
+    womens: ["Left Chest"],
+    hat: ["Front Center"],
+    tshirts: ["Left Chest"],
+  },
   show_image_preview: true,
   embroideries: {
     hat: [
@@ -13,7 +18,7 @@ export const config = {
       "Navarre Hyundai",
       "Navarre Jeep Ram",
       "Navarre Nissan",
-      "Navarre Premium Select",         
+      "Navarre Premium Select",
     ],
     mens: [
       "Navarre",
@@ -49,7 +54,7 @@ export const config = {
   email_recipients: [
     "rgreenberg@gpcorp.com",
     "support@gpcorp.com",
-    "shanell@gpcorp.com"
+    "shanell@gpcorp.com",
   ],
   stores: [
     {

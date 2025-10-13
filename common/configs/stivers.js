@@ -1,7 +1,12 @@
 export const config = {
   title: "Stivers",
   company_logo: "stivers.png",
-  logo_placements: ["Right Sleeve", "Left Chest", "Front Center","Full Front"],
+  logo_placements: {
+    mens: ["Right Sleeve", "Left Chest"],
+    womens: ["Right Sleeve", "Left Chest"],
+    hat: ["Front Center", "Full Front"],
+    tshirts: ["Right Sleeve", "Left Chest"],
+  },
   show_modification_thumbnail: true,
   minimum_apparel_order: false,
   render_logo_preview: true,
@@ -51,7 +56,7 @@ export const config = {
     customs: [],
   },
   email_recipients: [
-    "lbudbill@gpcorp.com",    
+    "lbudbill@gpcorp.com",
     "mmccord@gpcorp.com",
     "support@gpcorp.com",
     "shanell@gpcorp.com",

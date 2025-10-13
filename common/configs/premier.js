@@ -1,7 +1,12 @@
 export const config = {
   title: "Premier",
   company_logo: "premier.png",
-  logo_placements: ["Left Chest"],
+  logo_placements: {
+    mens: ["Left Chest"],
+    womens: ["Left Chest"],
+    hat: [],
+    tshirts: ["Left Chest"],
+  },
   show_image_preview: false,
   embroideries: {
     mens: [
@@ -74,11 +79,10 @@ export const config = {
   bypass_codes: ["PREMIE"],
   server_hostname: "https://mxfj3q6m01.execute-api.us-east-1.amazonaws.com",
   account_reps: [
-      { name: "Glenn Rodney", phone: "678-287-1608" },
-      { name: "Louis Budbill", phone: "678-287-1649" },  
+    { name: "Glenn Rodney", phone: "678-287-1608" },
+    { name: "Louis Budbill", phone: "678-287-1649" },
   ],
   route_prefix: "/premier",
   paypal_not_supported: true,
   password: "PremieR",
 };
- 

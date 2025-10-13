@@ -2,13 +2,12 @@ export const config = {
   title: "Pohanka",
   company_logo: "pohanka.png",
   show_image_preview: true,
-  logo_placements: [
-    "Left Chest",
-    "Left Sleeve",
-    "Right Sleeve",
-    "Yoke",
-    "Front Center",
-  ],
+  logo_placements: {
+    mens: ["Left Chest", "Left Sleeve", "Right Sleeve", "Yoke"],
+    womens: ["Left Chest", "Left Sleeve", "Right Sleeve", "Yoke"],
+    hat: ["Front Center"],
+    tshirts: ["Left Chest", "Left Sleeve", "Right Sleeve", "Yoke"],
+  },
   show_image_preview: true,
   embroideries: {
     hat: ["Pohanka"],
@@ -23,9 +22,7 @@ export const config = {
     bodyshop: [],
     parts: [],
   },
-  email_recipients: [
-    "lbudbill@gpcorp.com",       
-  ],
+  email_recipients: ["lbudbill@gpcorp.com"],
   stores: [
     {
       name: "Pohanka Hyundai",

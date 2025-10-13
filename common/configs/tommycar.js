@@ -1,10 +1,15 @@
 export const config = {
   title: "Tommycar",
   company_logo: "tommycar.png",
-  logo_placements: ["Left Chest","Full Front","Full Back"],
+  logo_placements: {
+    mens: ["Left Chest"],
+    womens: ["Left Chest"],
+    hat: ["Full Front", "Full Back"],
+    tshirts: ["Left Chest"],
+  },
   show_image_preview: true,
   embroideries: {
-    mens: ["Tommycar","Tommycar Collision"],
+    mens: ["Tommycar", "Tommycar Collision"],
     womens: ["Tommycar", "Tommycar Collision"],
     tshirts: ["Tommycar", "Tommycar Collision"],
     service: [],

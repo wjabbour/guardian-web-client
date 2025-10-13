@@ -1,16 +1,18 @@
 export const config = {
   title: "Friendship",
   company_logo: "friendship_cars.png",
-  logo_placements: [
-    "Left Chest", 
-    "Front Center - HATS",    
-  ],
+  logo_placements: {
+    mens: ["Left Chest"],
+    womens: ["Left Chest"],
+    hat: ["Front Center"],
+    tshirts: ["Left Chest"],
+  },
   show_image_preview: true,
   embroideries: {
-    hat: ["Friendship Cars","Friendship2"],
-    mens: ["Friendship Cars","Friendship2"],
-    womens: ["Friendship Cars","Friendship2"],
-    tshirts: ["Friendship2"],    
+    hat: ["Friendship Cars", "Friendship2"],
+    mens: ["Friendship Cars", "Friendship2"],
+    womens: ["Friendship Cars", "Friendship2"],
+    tshirts: ["Friendship2"],
     accessory: [],
     customs: [],
     office: [],
@@ -19,9 +21,13 @@ export const config = {
     detail: [],
     bodyshop: [],
     parts: [],
-    
   },
-  email_recipients: ["lbudbill@gpcorp.com", "bkays@gpcorp.com","shanell@gpcorp.com","support@gpcorp.com"],
+  email_recipients: [
+    "lbudbill@gpcorp.com",
+    "bkays@gpcorp.com",
+    "shanell@gpcorp.com",
+    "support@gpcorp.com",
+  ],
   stores: [
     {
       name: "Friendship Corp. Enterprises",

@@ -1,7 +1,11 @@
 export const config = {
   title: "Hennessy",
   company_logo: "hennessy.png",
-  logo_placements: ["Left Chest", "Right Sleeve", "Front Center-HATS"],
+  logo_placements: {
+    mens: ["Left Chest", "Right Sleeve"],
+    womens: ["Left Chest", "Right Sleeve"],
+    hat: ["Front Center"],
+  },
   show_modification_thumbnail: true,
   minimum_apparel_order: false,
   render_logo_preview: true,
@@ -38,7 +42,7 @@ export const config = {
       "Porsche Atlanta NW",
       "JLR",
     ],
-    customs: [],    
+    customs: [],
     hat: [
       "Hennessy Automobile",
       "Hennessy Ford",
