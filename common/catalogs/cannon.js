@@ -269,7 +269,7 @@ export const catalog = [
     },
   },
   {
-    code: "BB18002 Cannon",
+    code: "BB18002C",
     name: "Regular Long Sleeve Shirt",
     fullname: "Brooks Brothers® Wrinkle-Free Stretch Nailhead Shirt (BB18002)",
     colors: ["White"],
@@ -309,8 +309,6 @@ export const catalog = [
     default_color: "White",
     type: "mens",
     sizes: {
-      LT: 0.00,
-      XLT: 0.00,
       "7XL": 0.00,
       "8XL": 0.00,
       "9XL": 0.00,
