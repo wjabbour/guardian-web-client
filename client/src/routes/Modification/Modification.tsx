@@ -174,7 +174,7 @@ export default function Modification() {
             code: item.code,
             placement: placementTypes.includes(item.type)
               ? firstPlacement
-              : "N/A",
+              : null,
             embroidery: firstEmbroidery,
           };
 
