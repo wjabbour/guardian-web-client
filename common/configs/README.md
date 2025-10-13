@@ -46,7 +46,20 @@ Determines which picture will be rendered in the top navigation bar. The value f
 
 ### logo_placements
 
-Determines the values for the `Logo Placement` dropdown on item pages.
+Determines the values for the `Logo Placement` dropdown on item modification pages on a per-item-type basis.
+
+**e.g.**
+
+```
+logo_placements: {
+  mens: ["Left Chest"],
+  womens: ["Left Chest"],
+  hat: ["Front Center"],
+  tshirts: ["Left Chest"],
+},
+```
+
+If a user were modifying a hat, the available logo placement would be `Front Center`.
 
 ### show_image_preview
 
@@ -67,7 +80,7 @@ mens: [
 ],
 ```
 
-If a user were to view an item page for any item with `type` or `sub_category` equal to `hat` then the `Logo` select would have only one option: `Cadillac`. If a user were to view an item page for any item with `type` equal to `mens` then the `Logo` select would have only one option: `Hennessy Ford`. 
+If a user were to view an item page for any item with `type` or `sub_category` equal to `hat` then the `Logo` select would have only one option: `Cadillac`. If a user were to view an item page for any item with `type` equal to `mens` then the `Logo` select would have only one option: `Hennessy Ford`.
 
 **Note:** `sub_category` takes precedence over `type`. Therefore, if an item has a `type` of `mens` and a `sub_category` of `tshirt`, then the application will first attempt to set the Logo dropdown options to the values contained in the `tshirt` array, falling back to `mens` if none exists for that item.
 
