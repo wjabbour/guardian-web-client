@@ -255,10 +255,10 @@ export const catalog = [
     default_color: "White",
     type: "mens",
     sizes: {
-      "7XL": 0.00,
-      "8XL": 0.00,
-      "9XL": 0.00,
-      "10XL": 0.00,
+      "7XL": 43.44,
+      "8XL": 45.44,
+      "9XL": 49.44,
+      "10XL": 51.44,
     },
   },     
   {
