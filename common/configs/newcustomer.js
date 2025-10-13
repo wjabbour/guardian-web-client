@@ -4,7 +4,7 @@ export const config = {
   logo_placements: {
     mens: ["Left Chest", "Right Sleeve"],
     womens: ["Left Chest", "Right Sleeve"],
-    hat: [],
+    hat: ["Front Center"],
     tshirts: ["Left Chest", "Right Sleeve"],
   },
   show_image_preview: true,

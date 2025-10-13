@@ -288,7 +288,7 @@ export const catalog = [
   },
   {
     code: "TLS608",
-    name: "Long Sleeve Shirt #TLS608",
+    name: " Tall Long Sleeve Shirt",
     fullname: "Port Authority® Tall Long Sleeve Easy Care Shirt (TLS608)",
     colors: ["White"],
     default_color: "White",
