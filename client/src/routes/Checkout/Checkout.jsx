@@ -20,7 +20,6 @@ import IconButton from "@mui/material/IconButton";
 import Tooltip from "@mui/material/Tooltip";
 import Typography from "@mui/material/Typography";
 import { SvgIcon } from "@mui/material";
-import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import { LoadingButton } from "@mui/lab";
 import CartItems from "./CartItems";
 import { getWebCatalog } from "guardian-common";
@@ -209,16 +208,6 @@ export default function Checkout() {
 
   return (
     <div className="flex justify-center p-[75px]">
-      <div
-        className="relative right-[50px] text-[32px] cursor-pointer"
-        onClick={() => {
-          navigate(getDomainAwarePath("/"));
-        }}
-      >
-        <SvgIcon fontSize="inherit">
-          <ArrowBackIcon />
-        </SvgIcon>
-      </div>
       <div className="flex flex-col gap-[15px] w-[800px] border-2 border-gray-400 border-solid p-[15px] rounded-md">
         <div className="relative flex flex-col gap-[15px]">
           <CartItems />
