@@ -11,7 +11,7 @@ export default function CartItems() {
       {Object.keys(cart).map((k) => {
         const item = cart[k];
         return (
-          <div className="relative flex h-[140px] p-1">
+          <div className="relative flex p-1">
             <div className="relative top-1 cursor-pointer">
               <DeleteIcon
                 style={{ color: "#C70000" }}
