@@ -4,10 +4,10 @@ export const config = {
   logo_placements: {
     mens: ["Left Chest"],
     womens: ["Left Chest"],
-    hat: [],
+    hat: ["Front Center"],
     tshirts: ["Left Chest"],
   },
-  show_image_preview: false,
+  show_image_preview: true,
   embroideries: {
     mens: [
       "Premier",
