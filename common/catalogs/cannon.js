@@ -269,8 +269,8 @@ export const catalog = [
     },
   },
   {
-    code: "BB18002",
-    name: "Nailhead Shirt #BB18002",
+    code: "BB18002 Cannon",
+    name: "Regular Long Sleeve Shirt",
     fullname: "Brooks Brothers® Wrinkle-Free Stretch Nailhead Shirt (BB18002)",
     colors: ["White"],
     default_color: "White",
@@ -299,6 +299,22 @@ export const catalog = [
       "2XLT": 36.38,
       "3XLT": 38.52,
       "4XLT": 40.66,
+    },
+  },
+  {
+    code: "S608ES",
+    name: "Extended Size Long Sleeve Shirt",
+    fullname: "Port Authority® Extended Size Long Sleeve Easy Care Shirt (S608ES)",
+    colors: ["White"],
+    default_color: "White",
+    type: "mens",
+    sizes: {
+      LT: 0.00,
+      XLT: 0.00,
+      "7XL": 0.00,
+      "8XL": 0.00,
+      "9XL": 0.00,
+      "10XL": 0.00,
     },
   },
   {
