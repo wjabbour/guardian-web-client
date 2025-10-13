@@ -270,7 +270,7 @@ export const catalog = [
   },
   {
     code: "BB18002C",
-    name: "Regular Long Sleeve Shirt",
+    name: "Regular Long Sleeve",
     fullname: "Brooks Brothers® Wrinkle-Free Stretch Nailhead Shirt (BB18002)",
     colors: ["White"],
     default_color: "White",
@@ -288,7 +288,7 @@ export const catalog = [
   },
   {
     code: "TLS608",
-    name: " Tall Long Sleeve Shirt",
+    name: " Tall Long Sleeve",
     fullname: "Port Authority® Tall Long Sleeve Easy Care Shirt (TLS608)",
     colors: ["White"],
     default_color: "White",
@@ -303,7 +303,7 @@ export const catalog = [
   },
   {
     code: "S608ES",
-    name: "Extended Size Long Sleeve Shirt",
+    name: "Extended Size Long Sleeve",
     fullname: "Port Authority® Extended Size Long Sleeve Easy Care Shirt (S608ES)",
     colors: ["White"],
     default_color: "White",
