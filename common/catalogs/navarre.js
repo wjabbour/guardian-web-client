@@ -572,7 +572,7 @@ export const catalog = [
     name: "Port Authority Knit Cap #CP90",
     fullname: "Port & Company® - Knit Cap (CP90)",
     colors: ["Athletic Oxford", "Black", "Charcoal Heather"],
-    type: "mens",
+    type: "hat",
     default_color: "Black",
     sizes: {
       OSFA: 10.49,
@@ -583,7 +583,7 @@ export const catalog = [
     name: "Port Authority Trucker Cap #C112",
     fullname: "Port Authority® Snapback Trucker Cap (C112)",
     colors: ["Black", "Gusty Grey", "Grey Steel"],
-    type: "mens",
+    type: "hat",
     default_color: "Black",
     sizes: {
       OSFA: 13.25,
