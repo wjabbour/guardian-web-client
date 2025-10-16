@@ -116,7 +116,7 @@ export const catalog = [
     code: "PC55P",
     name: "Port & Company Pocket Tee",
     fullname: "Port & Company® Core Blend Pocket Tee",
-    colors: ["Jet Black"],
+    colors: ["Ash","Jet Black"],
     type: "tshirts",
     sub_category: "tshirt",
     default_color: "Jet Black",
