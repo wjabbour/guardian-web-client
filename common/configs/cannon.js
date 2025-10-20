@@ -139,7 +139,7 @@ export const config = {
       code: "CANCSE",
     },
   ],
-  bypass_codes: ["CANNON"],
+  bypass_codes: ["CANNON","NINA"],
   server_hostname: "https://o1yn7lpenj.execute-api.us-east-1.amazonaws.com",
   account_reps: [
     { name: "Louis Budbill", phone: "678-287-1649" },

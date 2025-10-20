@@ -12,6 +12,8 @@ import { config as HoffmanConfig } from "./configs/hoffman";
 import { config as TommycarConfig } from "./configs/tommycar";
 import { config as VaughnConfig } from "./configs/vaughn";
 import { config as FriendshipConfig } from "./configs/friendship";
+import { config as MattbowersConfig } from "./configs/mattbowers";
+
 import { catalog as CannonCatalog } from "./catalogs/cannon";
 import { catalog as GuardianCatalog } from "./catalogs/guardian";
 import { catalog as HennessyCatalog } from "./catalogs/hennessy";
@@ -26,6 +28,7 @@ import { catalog as HoffmanCatalog } from "./catalogs/hoffman";
 import { catalog as TommycarCatalog } from "./catalogs/tommycar";
 import { catalog as VaughnCatalog } from "./catalogs/vaughn";
 import { catalog as FriendshipCatalog } from "./catalogs/friendship";
+import { catalog as MattbowersCatalog } from "./catalogs/mattbowers";
 
 const DEFAULT_CONFIG = {
   title: "Guardian",
@@ -49,6 +52,7 @@ const allConfigs = [
   TommycarConfig,
   VaughnConfig,
   FriendshipConfig,
+  MattbowersConfig,
  
 ];
 
@@ -115,7 +119,9 @@ export function getWebCatalog() {
   } else if (url.includes("vaughn")) {
     return VaughnCatalog;
   } else if (url.includes("friendship")) {
-    return FriendshipCatalog;  
+    return FriendshipCatalog;
+  } else if (url.includes("mattbowers")) {
+    return MattbowersCatalog;    
   
   }
 }
@@ -153,6 +159,8 @@ export function getCatalog(companyName) {
       return VaughnCatalog;
     case "Friendship":
       return FriendshipCatalog;
+    case "Mattbowers":
+      return MattbowersCatalog;
   }
 }
 
@@ -188,6 +196,8 @@ export function getWebConfigValue(val) {
     return VaughnConfig[val];
   } else if (url.includes("friendship")) {
     return FriendshipConfig[val];
+  } else if (url.includes("mattbowers")) {
+    return MattbowersConfig[val];
 
   } else {
     // when the user is on gpc81.com landing page we need to display a string in the browser tab
@@ -223,6 +233,8 @@ export function getConfigValue(val, config) {
     case "Vaughn":
       return VaughnConfig[val];
     case "Friendship":
-      return FriendshipConfig[val];  
+      return FriendshipConfig[val];
+    case "Mattbowers":
+      return MattbowersConfig[val];   
   }
 }

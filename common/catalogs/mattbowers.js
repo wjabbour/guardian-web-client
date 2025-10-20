@@ -1,0 +1,35 @@
+export const catalog = [
+  {
+    code: "A230",
+    name: "Adidas Performance Polo #A230",
+    fullname: "Adidas Men's Performance Polo (A230)",
+    colors: ["Black","Collegiate Red","Collegiate Royal","Collegiate Purple","Navy","White"],
+    type: "mens",
+    default_color: "Black",
+    sizes: {
+      Small: 39.99,
+      Medium: 39.99,
+      Large: 39.99,
+      XLarge: 39.99,
+      "2XLarge": 46.50,
+      "3XLarge": 48.50,
+      "4XLarge": 50.99,
+    },
+  },
+  {
+    code: "A231",
+    name: "Adidas Performance Polo #A231",
+    fullname: "Adidas Women's Performance Polo (A231)",
+    colors: ["Black","Collegiate Red","Collegiate Royal","Collegiate Purple","Navy","White"],
+    type: "womens",
+    default_color: "Black",
+    sizes: {
+       Small: 39.99,
+      Medium: 39.99,
+      Large: 39.99,
+      XLarge: 39.99,
+      "2XLarge": 46.50,
+      "3XLarge": 48.50,    
+    },
+  },
+];
