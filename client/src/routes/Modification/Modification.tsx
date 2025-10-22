@@ -36,13 +36,15 @@ export default function Modification() {
   const [price] = useState(item.sizes[selected_size]);
   const [firstEmbroidery, setFirstEmbroidery] = useState("");
   const [secondEmbroidery, setSecondEmbroidery] = useState("");
-  const logo_placements = getWebConfigValue("logo_placements")[item.type];
+  const logo_placements = getWebConfigValue("logo_placements")[item.type] || [];
+  const embroideries = getEmbroidery(item.sub_category || item.type) || [];
+
   const [firstPlacement, setFirstPlacement] = useState(
-    logo_placements?.[0] || "Left Chest"
+    logo_placements[0] || "Left Chest"
   );
 
   const [secondPlacement, setSecondPlacement] = useState(
-    logo_placements?.[0] || "Left Chest"
+    logo_placements[0] || "Left Chest"
   );
   const [customsOrder, setCustomsOrder] = useState({});
 
@@ -61,12 +63,6 @@ export default function Modification() {
   const handleSecondPlacementChange = (event) => {
     setSecondPlacement(event.target.value);
   };
-
-  const embroideries = (
-    getEmbroidery(item.sub_category || item.type) || []
-  ).map((e) => {
-    return <MenuItem value={e}>{e}</MenuItem>;
-  });
 
   function handleSnackbarClose() {
     setSnackbarOpen(false);

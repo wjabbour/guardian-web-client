@@ -95,7 +95,9 @@ export default function EmbroiderySelector({
               }
             }}
           >
-            {embroideries}
+            {embroideries.map((e) => (
+              <MenuItem value={e}>{e}</MenuItem>
+            ))}
           </Select>
         </FormControl>
       </div>
