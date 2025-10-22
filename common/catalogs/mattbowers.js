@@ -378,5 +378,29 @@ export const catalog = [
        1500: .44,
        2500: .44,
    },
+  },
+  {
+    code: "GP546",
+    name: "Deal Jackets",
+    fullname: "Deal Jackets - Plain",
+    colors: [
+      "Blue",
+      "Buff",
+      "Fuchsia",
+      "Green",
+      "Grey",
+      "Lavender",
+      "Pink",
+      "Salmon",
+      "White",
+      "Yellow",
+    ],
+    type: "office",
+    default_color: "Blue",
+    sizes: {
+      "1 box": 115.76,
+      "5 boxes": 115.76,
+      "10 boxes": 105.00
+    },
   },        
 ];
