@@ -134,7 +134,7 @@ export const catalog = [
   },
   {
     code: "ST350",
-    name: "Sport-Tek® PosiCharge® Tee #ST350",
+    name: "Sport-Tek PosiCharge Tee #ST350",
     fullname: "Sport-Tek® PosiCharge® Competitor Tee (ST350)",
     colors: [
       "Black",      
@@ -158,7 +158,7 @@ export const catalog = [
   },
   {
     code: "W816",
-    name: "Port Authority Long Sleeve Shirt #W816",
+    name: "Port Authority Long Sleeve #W816",
     fullname: "Port Authority Long Sleeve Nailhead Easy Care Shirt (W816)",
     colors: ["Deep Black","Mediterranean Blue", "White"],
     type: "mens",
@@ -175,7 +175,7 @@ export const catalog = [
   },
   {
     code: "NKBV6044",
-    name: "Nike® Dry 1/2-Zip Cover-Up #NKBV6044",
+    name: "Nike® 1/2-Zip Cover-Up #NKBV6044",
     fullname: "NNike® Dry 1/2-Zip Cover-Up (NKBV6044)",
     colors: ["Black","Gym Blue"],
     type: "mens",
@@ -192,7 +192,7 @@ export const catalog = [
   }, 
   {
     code: "ST850",
-    name: "Sport-Tek® 1/4-Zip Pullover #ST850",
+    name: "Sport-Tek® 1/4-Zip #ST850",
     fullname: "Sport-Tek® Sport-Wick® Stretch 1/4-Zip Pullover (ST850)",
     colors: ["Black","Charcoal Grey","True Red","True Royal","White"],
     type: "mens",
@@ -318,20 +318,6 @@ export const catalog = [
   },
   {
     code: "MATFME-CG1240-470649L",
-    name: "Theromo Die Cut Decal",
-    fullname: "Thermo Die Cut Decal (5 in x 1.61 in.)",
-    colors: ["Black","White"],
-    type: "customs",
-    default_color: "Black",
-    supportedStores: ["MATFME"],
-    sizes: {
-      1000: .65,
-      1500: .65,
-      2500: .65,
-    },
-  }, 
-  {
-    code: "MATFME-CG1240-470649L",
     name: "Leather Strap Key Tag",
     fullname: "Laser Engraved Zinc Leather Strap Key Tag (2-sided)",
     colors: ["Black"],
@@ -385,7 +371,7 @@ export const catalog = [
     name: "Custom Deal Jacket",
     fullname: "Custom Deal Jacket (DSA-500)",
     colors: ["Blue","White"],
-    type: "accessory",
+    type: "sales",
     default_color: "Blue",    
     sizes: {
        1000: .44,
