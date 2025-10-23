@@ -4018,13 +4018,13 @@ export const catalog = [
   {
     code: "SDNRG",
     name: "Service Numbers",
-    fullname: "Service Dispatch Numbers (1000/bx)",
+    fullname: "Service Dispatch Numbers (1000/box)",
     colors: ["_0000","1000","2000","3000","4000","5000",
       "6000","7000","8000", "9000"],  
     type: "service",
     default_color: "1000",    
     sizes: {
-      1: 0.0,
+      "1 box": 0.0,
     },
   }, 
   {
@@ -4094,7 +4094,7 @@ export const catalog = [
       default: 0.00,
     },
   },
-   {
+  {
     code: "3198WB",
     name: "Oval Year Stickers",
     fullname: "Oval Year Stickers - Blue/White (12/pk)",
