@@ -11,30 +11,30 @@ export const config = {
   embroideries: {
     mens: [
       "Matt B Ford Metairie",
-      "MB Ford Metairie",
       "Matt B Ford Met Blue", 
+      "MB Ford Metairie",
       "MB",
       "MB Flag",
            
     ],
     womens: [
       "Matt B Ford Metairie",
-      "MB Ford Metairie",
       "Matt B Ford Met Blue", 
+      "MB Ford Metairie",
       "MB",
       "MB Flag",
     ],
     tshirts: [
       "Matt B Ford Metairie",
-      "MB Ford Metairie",
       "Matt B Ford Met Blue", 
+      "MB Ford Metairie",
       "MB",
       "MB Flag",
     ],
     hat:  [
       "Matt B Ford Metairie",
-      "MB Ford Metairie",
       "Matt B Ford Met Blue", 
+      "MB Ford Metairie",
       "MB",
       "MB Flag",
     ],
