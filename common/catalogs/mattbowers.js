@@ -514,4 +514,15 @@ export const catalog = [
       "10 pks": 10.99,
     },
   },
+  {
+    code: "HANG-SG",
+    name: "Hang Tag - Was Now",
+    fullname: "Stock Hang Tags - Was Now - 9in x 12in (50 per pack)",
+    colors: ["Fluorg","Fluorp","Fluorr","Fluory"],
+    type: "sales",
+    default_color: "Fluorg",   
+    sizes: {
+      "# packs": 0.00,
+    },
+  },
 ];
