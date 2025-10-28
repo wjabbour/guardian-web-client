@@ -5,8 +5,7 @@ export const catalog = [
     fullname: "Port & Company® Fleece-Lined Beanie Cap",
     colors: ["Athletic Oxford","Athletic Red", "Athletic Royal", "Black","Navy","Neon Green","White"],
     type: "hat",
-    default_color: "Athletic Oxford",
-    description: "This is a test of the emergency broadcasting system",
+    default_color: "Athletic Oxford",    
     sizes: {
       OSFA: 0.00,
     },
@@ -841,6 +840,7 @@ export const catalog = [
     ],
     type: "mens",
     default_color: "Anthracite",
+    description: "This is a test of the emergency broadcast system.",
     sizes: {
       Small: 0.00,
       Medium: 0.00,
