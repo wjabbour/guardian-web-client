@@ -839,8 +839,7 @@ export const catalog = [
         "White",
     ],
     type: "mens",
-    default_color: "Anthracite",
-    description: "This is a test of the emergency broadcast system.",
+    default_color: "Anthracite",    
     sizes: {
       Small: 0.00,
       Medium: 0.00,
