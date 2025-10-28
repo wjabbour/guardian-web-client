@@ -256,14 +256,13 @@ export default function Modification() {
           {item.type !== "customs" && (
             <div className={styles.price}>Starts at ${price} each</div>
           )}
-          <div className={styles.color__selector}>
-            <ColorSelector
-              item={item}
-              set_selected_color={set_selected_color}
-              selected_color={selected_color}
-              set_image_source={set_image_source}
-            />
-          </div>
+          <ColorSelector
+            item={item}
+            set_selected_color={set_selected_color}
+            selected_color={selected_color}
+            set_image_source={set_image_source}
+          />
+
           <EmbroiderySelector
             item={item}
             placements={logo_placements}
