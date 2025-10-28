@@ -14,7 +14,7 @@ export const catalog = [
       "Team Red White",
       "White White",
     ],
-    type: "mens",
+    type: "hat",
     default_color: "Blk Blk",
     sizes: {
       S_M: 30.0,
@@ -41,10 +41,10 @@ export const catalog = [
       "White Black Black",
       "White True Navy",
     ],
-    type: "mens",
+    type: "hat",
     default_color: "Blk Blk",
     sizes: {
-      OSFA: 9.0,
+      OSFA: 9.00,
     },
   },
   {
@@ -67,10 +67,10 @@ export const catalog = [
       "True Pink White",
       "Woodland Camo",
     ],
-    type: "mens",
+    type: "hat",
     default_color: "Black",
     sizes: {
-      OSFA: 6.6,
+      OSFA: 15.99,
     },
   },
   {
