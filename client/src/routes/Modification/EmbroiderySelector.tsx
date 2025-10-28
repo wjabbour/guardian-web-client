@@ -146,7 +146,7 @@ export default function EmbroiderySelector({
   }
 
   return (
-    <div className="mb-[30px] mt-[30px]">
+    <div className="mb-[30px] mt-[15px]">
       <div className="flex flex-col">
         <div className="flex">
           <div className="flex flex-col gap-2">

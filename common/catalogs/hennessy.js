@@ -7,7 +7,7 @@ export const catalog = [
     type: "service",
     default_color: "Plastic",
     sizes: {
-      "# rolls": 73.50,
+      "# rolls": 73.5,
     },
   },
   {
@@ -31,7 +31,7 @@ export const catalog = [
     default_color: "White",
     discount: [{ quantity: 1, price: 135.0 }],
     sizes: {
-      "# packs": 135.00,
+      "# packs": 135.0,
     },
   },
   {
@@ -245,7 +245,7 @@ export const catalog = [
       "True Navy True Navy",
       "True Navy White",
       "White",
-    ],    
+    ],
     type: "hat",
     default_color: "Black",
     sizes: {
@@ -894,19 +894,20 @@ export const catalog = [
     type: "accessory",
     default_color: "Black",
     sizes: {
-      1: 3.99,           
+      1: 3.99,
     },
   },
   {
     code: "HENPRO-FOB-415104C",
     name: "Leather Key Fob (white stitch) - Porsche N ATL",
-    fullname: "Metal & Black Leather Fob - white stitch (must order min. of 250)",
+    fullname:
+      "Metal & Black Leather Fob - white stitch (must order min. of 250)",
     colors: ["Black"],
     type: "accessory",
     default_color: "Black",
     sizes: {
-      1: 3.99,       
-     },
+      1: 3.99,
+    },
   },
   {
     code: "HENPMA-FOB-497832C",
@@ -916,18 +917,19 @@ export const catalog = [
     type: "accessory",
     default_color: "Black",
     sizes: {
-      1: 3.99,     
+      1: 3.99,
     },
   },
   {
     code: "HENPMA-FOB-498046C",
     name: "Leather Key Fob (white stitch) - Porsche Marietta",
-    fullname: "Metal & Black Leather Fob - white stitch (must order min. of 250)",
+    fullname:
+      "Metal & Black Leather Fob - white stitch (must order min. of 250)",
     colors: ["Black"],
     type: "accessory",
     default_color: "Black",
     sizes: {
-      1: 3.99,      
+      1: 3.99,
     },
   },
   {
@@ -938,29 +940,31 @@ export const catalog = [
     type: "accessory",
     default_color: "Black",
     sizes: {
-      1: 3.19,      
+      1: 3.19,
     },
   },
   {
     code: "HENLAT-FOB-501621A",
     name: "Leather Key Fob - Lexus ATL",
-    fullname: "Metal & Black Leather Fob w/black color fill (must order min. of 250)",
+    fullname:
+      "Metal & Black Leather Fob w/black color fill (must order min. of 250)",
     colors: ["Black"],
     type: "accessory",
     default_color: "Black",
     sizes: {
-      1: 3.19,      
+      1: 3.19,
     },
   },
   {
     code: "HENLAL-FOB-509389L",
     name: "Leather Key Fob - Land Rover - N ATL",
-    fullname: "Black Leather Fob w/laser engraved imprint (must order min. of 250)",
+    fullname:
+      "Black Leather Fob w/laser engraved imprint (must order min. of 250)",
     colors: ["Black"],
     type: "accessory",
     default_color: "Black",
     sizes: {
-      1: 3.99,      
+      1: 3.99,
     },
   },
   {
@@ -971,7 +975,7 @@ export const catalog = [
     type: "accessory",
     default_color: "Black",
     sizes: {
-      1: 3.19,      
+      1: 3.19,
     },
   },
   {
@@ -982,18 +986,19 @@ export const catalog = [
     type: "accessory",
     default_color: "Black",
     sizes: {
-      1: 3.19,     
+      1: 3.19,
     },
   },
   {
     code: "HENADU-GPLLKR-497621L",
     name: "Leather Key Fob (green stitch) - Land Rover Gwinnett",
-    fullname: "Black Laser Engraved Leather Fob - green stitch (must order min. of 250)",
+    fullname:
+      "Black Laser Engraved Leather Fob - green stitch (must order min. of 250)",
     colors: ["Black"],
     type: "accessory",
     default_color: "Black",
     sizes: {
-      1: 3.49,      
+      1: 3.49,
     },
   },
   {
@@ -1004,7 +1009,7 @@ export const catalog = [
     type: "accessory",
     default_color: "Black",
     sizes: {
-      1: 3.29,      
+      1: 3.29,
     },
   },
   {
@@ -1015,18 +1020,19 @@ export const catalog = [
     type: "accessory",
     default_color: "Black",
     sizes: {
-      1: 3.19,      
+      1: 3.19,
     },
   },
   {
     code: "HENFAT-FOB-506092",
     name: "Laser Engraved Keychain",
-    fullname: "Chrome Keychain w/laser engraved imprint (must order min. of 250)",
+    fullname:
+      "Chrome Keychain w/laser engraved imprint (must order min. of 250)",
     colors: ["Metal"],
     type: "accessory",
     default_color: "Metal",
     sizes: {
-      1: 3.59,     
+      1: 3.59,
     },
   },
   {
@@ -1037,7 +1043,7 @@ export const catalog = [
     type: "accessory",
     default_color: "Metal",
     sizes: {
-      1: 3.59,      
+      1: 3.59,
     },
   },
   {
@@ -1048,7 +1054,7 @@ export const catalog = [
     type: "accessory",
     default_color: "Black",
     sizes: {
-      1: 3.59,      
+      1: 3.59,
     },
   },
   {

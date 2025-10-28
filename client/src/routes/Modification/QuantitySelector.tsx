@@ -1,4 +1,3 @@
-import styles from "./Modification.module.scss";
 import { useState } from "react";
 
 export default function QuantitySelector({
@@ -73,7 +72,7 @@ export default function QuantitySelector({
     );
   }
   return (
-    <div className={styles.form__container}>
+    <div className="">
       <table id="table">
         <Header />
         <QuantityOptions />

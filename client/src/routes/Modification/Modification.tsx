@@ -11,6 +11,7 @@ import QuantitySelector from "./QuantitySelector";
 import { CartItem } from "../../lib/interfaces";
 import EmbroiderySelector from "./EmbroiderySelector";
 import { getWebConfigValue } from "guardian-common";
+import Description from "./Description";
 
 export async function loader({ params }) {
   return getWebCatalog().find((i) => i.code === params.id);
@@ -38,6 +39,7 @@ export default function Modification() {
   const [secondEmbroidery, setSecondEmbroidery] = useState("");
   const logo_placements = getWebConfigValue("logo_placements")[item.type] || [];
   const embroideries = getEmbroidery(item.sub_category || item.type) || [];
+  const description = item.description || "";
 
   const [firstPlacement, setFirstPlacement] = useState(
     logo_placements[0] || "Left Chest"
@@ -254,28 +256,34 @@ export default function Modification() {
         <div className={styles.information__panel}>
           <div className={styles.name}>{item.fullname}</div>
           {item.type !== "customs" && (
-            <div className={styles.price}>Starts at ${price} each</div>
+            <div className="font-bold text-[16px] mb-[20px]">
+              Starts at ${price} each
+            </div>
           )}
-          <ColorSelector
-            item={item}
-            set_selected_color={set_selected_color}
-            selected_color={selected_color}
-            set_image_source={set_image_source}
-          />
+          <Description description={description} />
 
-          <EmbroiderySelector
-            item={item}
-            placements={logo_placements}
-            embroideries={embroideries}
-            firstEmbroidery={firstEmbroidery}
-            secondEmbroidery={secondEmbroidery}
-            firstPlacement={firstPlacement}
-            secondPlacement={secondPlacement}
-            handleFirstEmbroideryChange={handleFirstEmbroideryChange}
-            handleSecondEmbroideryChange={handleSecondEmbroideryChange}
-            handleFirstPlacementChange={handleFirstPlacementChange}
-            handleSecondPlacementChange={handleSecondPlacementChange}
-          />
+          <div className="mt-[10px] flex gap-[50px]">
+            <EmbroiderySelector
+              item={item}
+              placements={logo_placements}
+              embroideries={embroideries}
+              firstEmbroidery={firstEmbroidery}
+              secondEmbroidery={secondEmbroidery}
+              firstPlacement={firstPlacement}
+              secondPlacement={secondPlacement}
+              handleFirstEmbroideryChange={handleFirstEmbroideryChange}
+              handleSecondEmbroideryChange={handleSecondEmbroideryChange}
+              handleFirstPlacementChange={handleFirstPlacementChange}
+              handleSecondPlacementChange={handleSecondPlacementChange}
+            />
+            <ColorSelector
+              item={item}
+              set_selected_color={set_selected_color}
+              selected_color={selected_color}
+              set_image_source={set_image_source}
+            />
+          </div>
+
           <QuantitySelector
             item={item}
             sizes={sizes}
@@ -283,11 +291,15 @@ export default function Modification() {
             setCustomsOrder={setCustomsOrder}
           />
 
-          <div
-            className={styles.checkout__container}
-            onClick={() => addItemToCart()}
-          >
-            <p>Add To Cart</p>
+          <div className="relative h-[50px] mt-[15px]">
+            <div
+              className="absolute flex items-center justify-center bg-[#f3c313] w-[135px] h-[30px] mt-[15px] rounded-[15px] cursor-pointer right-0"
+              onClick={() => addItemToCart()}
+            >
+              <p className="text-[16px] relative bottom-[1px] font-medium">
+                Add to Cart
+              </p>
+            </div>
           </div>
         </div>
       </div>
