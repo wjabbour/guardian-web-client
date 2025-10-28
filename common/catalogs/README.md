@@ -11,6 +11,7 @@ A catalog is an array of items that will appear in the website. An item looks li
     type: "mens",
     sub_category: "tshirt",
     default_color: "Black",
+    description: "Here is a description about the product",
     sizes: {
       Small: 37.99,
       Medium: 37.99,
@@ -32,10 +33,27 @@ A catalog is an array of items that will appear in the website. An item looks li
 - `type`: the category of the item - mens, womens, accessory, customs, service, office. Used to determine which embroideries/logos are available on the modification page
 - `sub_category`: the sub-category of an item. Used to determine which embroideries/logos are available on the modification page
 - `default_color`: this will determine which picture is shown when initially viewing the item on the modification page (`/item/${code}`), e.g. if `default_color` is red, then the picture that will be shown is `${code}_red.jpg`.
+- `description`: this will determine the text in the product description component on the modification page. If this property
+  is not defined for an item then the application will not render the product description component. If the text is long enough
+  a "Read More" button will be rendered below the text preview. If you want more control over the layout of the description you can use backticks to define the string.
+
+<b>e.g.</b>
+
+```
+description: `
+This description will properly display new lines and spaces
+
+Like this one here
+
+Or this one here
+`
+```
+
 - `sizes`: a map of size/quantity to price.
-- `halfColors`: currently only used for hats. A subset of the options from `colors` which should have their color preview set as a half-colored box. Each option in `halfColors` must be a string containing only two colors and the colors must exist in `{project_root}/client/src/routes/Modification/colors.css` file as discussed below in the section on adding new colors. 
+- `halfColors`: currently only used for hats. A subset of the options from `colors` which should have their color preview set as a half-colored box. Each option in `halfColors` must be a string containing only two colors and the colors must exist in `{project_root}/client/src/routes/Modification/colors.css` file as discussed below in the section on adding new colors.
 
 e.g.
+
 ```
 {
   colors: ['White', 'Black', 'Blue White'],
@@ -66,7 +84,6 @@ Let's take a quick look at a customs item which looks slightly different:
 ```
 
 With the above configuration, the user would see two options: 10 & 20. This indicates the user would be choosing to purchase either a quantity of 10 or a quantity of 20. If they were to purchase a quantity of 10, the price would be 0.75 each for a total of 7.50. At checkout, the application will apply the best available price based on the quantity. For example, if the user were to order a quantity of 10 two separate times (and thus their cart would have a total quantity of 20) then the application will set the price as being 0.60 each.
-
 
 ### Adding new items
 
