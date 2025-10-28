@@ -6,6 +6,7 @@ export const catalog = [
     colors: ["Athletic Oxford","Athletic Red", "Athletic Royal", "Black","Navy","Neon Green","White"],
     type: "hat",
     default_color: "Athletic Oxford",
+    description: "This is a test of the emergency broadcasting system",
     sizes: {
       OSFA: 0.00,
     },

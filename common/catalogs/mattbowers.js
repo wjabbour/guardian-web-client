@@ -522,7 +522,9 @@ export const catalog = [
     type: "sales",
     default_color: "Fluorg",   
     sizes: {
-      "# packs": 0.00,
+      "1 pk": 29.45,
+      "5 pks": 29.45,
+      "10 pks": 27.45,
     },
   },
 ];
