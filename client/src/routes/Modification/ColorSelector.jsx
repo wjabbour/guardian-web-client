@@ -61,7 +61,7 @@ export default function ColorSelector({
   });
 
   return (
-    <div className="mt-[25px]">
+    <div className="w-[300px] mt-[25px]">
       <div className="flex flex-wrap gap-[5px]">{colorOptions}</div>
       <p className="mt-2 font-medium">
         <span className="text-[16px] text-gray-400">Color: </span>
