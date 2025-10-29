@@ -438,7 +438,7 @@
   background-color: #524d4fdb;
 }
 
-.Black_Grey_Steel {
+.Black_GreySteel {
   background-color: black;
 }
 
@@ -950,6 +950,10 @@
   background-color: #575859;
 }
 
+.GreySteel {
+  background-color: #575859;
+}
+
 .Gridiron_Green {
   background-color: #42993f;
 }
@@ -1036,6 +1040,10 @@
 
 .Light_Blue_Hthr {
   background-color: #9bc8eb;
+}
+
+.LightKhaki {
+  background-color: #dbcd84;
 }
 
 .Light_Khaki_White {
@@ -1246,7 +1254,7 @@
   background-color: #2a5498;
 }
 
-.Patriot_Blue_White {
+.PatriotBlue_White {
   background-color: #2a5498;
 }
 
@@ -1608,6 +1616,10 @@
 
 .True_Navy_White {
   background-color: #0e213d;
+}
+
+.TruePink {
+  background-color: #ed6eab;
 }
 
 .True_Pink_White {

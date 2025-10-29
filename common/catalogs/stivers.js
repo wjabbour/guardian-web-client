@@ -69,6 +69,14 @@ export const catalog = [
     ],
     type: "hat",
     default_color: "Black",
+    halfColors: [
+      'Black GreySteel',
+      'Black Tan',
+      'FlameRed White',
+      'LightKhaki White',
+      'PatriotBlue White',
+      'TruePink White',
+    ],
     sizes: {
       OSFA: 15.99,
     },
