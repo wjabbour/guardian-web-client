@@ -56,7 +56,7 @@ export const catalog = [
       "Black Grey Steel",
       "Black Tan",
       "Black White",
-      "Flame Red White",
+      "FlameRed White",
       "Grey Steel",
       "Gusty Grey",
       "Light Khaki White",
@@ -354,7 +354,7 @@ export const catalog = [
     },
   },
   // {
-  //   code: 'C112',
+  //   code: 'C402',
   //   name: 'Snapback',
   //   fullname: 'Port Authority® Snapback Trucker Cap',
   //   colors: ['Black', 'Navy', 'Black White', 'Patriot Royal', 'Red White', 'Royal White', 'Grey Steel', 'Pink White', 'Woodland Camo', 'Khaki White'],
