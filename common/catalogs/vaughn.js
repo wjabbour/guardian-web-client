@@ -270,7 +270,7 @@ export const catalog = [
     colors: ["Black","FlameRed","FlameRed Black","FlameRed White","White"],
     type: "hat",
     halfColors: ['FlameRed Black', 'FlameRed White'],
-    default_color: "Black",
+    default_color: "Black",    
     sizes: {
       OSFA: 12.99,
     },
