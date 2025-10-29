@@ -64,7 +64,7 @@ export const catalog = [
     },
   },
   {
-    code: "C112",
+    code: "C402",
     name: "Port Authority Trucker Cap",
     fullname: "Port Authority® Snapback Trucker Cap",
     colors: [
