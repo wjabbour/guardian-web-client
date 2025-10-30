@@ -176,7 +176,7 @@ export const catalog = [
   {
     code: "NKBV6044",
     name: "Nike® 1/2-Zip Cover-Up #NKBV6044",
-    fullname: "NNike® Dry 1/2-Zip Cover-Up (NKBV6044)",
+    fullname: "Nike® Dry 1/2-Zip Cover-Up (NKBV6044)",
     colors: ["Black","Gym Blue"],
     type: "mens",
     default_color: "Black",
