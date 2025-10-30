@@ -118,7 +118,7 @@ export const catalog = [
     code: "29M",
     name: "Jerzees® Dri-Power® Tee #29M",
     fullname: "Jerzees® Dri-Power® 50/50 Cotton/Poly T-Shirt (29M)",
-    colors: ["Charcoal Grey","JNavy","Grey Concrete","Royal"], 
+    colors: ["Charcoal Grey","JNavy","Royal"], 
     type: "tshirts",
     default_color: "Charcoal Grey",
     sizes: {
