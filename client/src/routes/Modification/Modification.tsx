@@ -39,6 +39,7 @@ export default function Modification() {
   const [secondEmbroidery, setSecondEmbroidery] = useState("");
   const logo_placements = getWebConfigValue("logo_placements")[item.type] || [];
   const embroideries = getEmbroidery(item.sub_category || item.type) || [];
+
   const description = item.description || "";
 
   const [firstPlacement, setFirstPlacement] = useState(

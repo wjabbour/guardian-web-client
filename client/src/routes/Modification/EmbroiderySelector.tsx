@@ -3,7 +3,6 @@ import InputLabel from "@mui/material/InputLabel";
 import FormControl from "@mui/material/FormControl";
 import Select from "@mui/material/Select";
 import MenuItem from "@mui/material/MenuItem";
-import { getWebConfigValue } from "guardian-common";
 import { useState } from "react";
 import { SvgIcon } from "@mui/material";
 import AddCircleIcon from "@mui/icons-material/AddCircle";
@@ -22,12 +21,6 @@ export default function EmbroiderySelector({
   handleFirstPlacementChange,
   handleSecondPlacementChange,
 }) {
-  // Returns an array of arrays
-  const embroideriesConfig = getWebConfigValue("embroideries");
-  const typesSupportingEmbroidery = Object.keys(embroideriesConfig).filter(
-    (type) => embroideriesConfig[type].length
-  );
-
   const [secondLogo, setSecondLogo] = useState(false);
 
   const SecondLogoAdd = () => {
@@ -73,11 +66,7 @@ export default function EmbroiderySelector({
   };
 
   // are we modifying the first or second logo?
-  const EmbroiderySelector = ({ embroideryPlace }) => {
-    if (item.type === "customs" || embroideries.length === 0) {
-      return <></>;
-    }
-
+  const EmbroiderySelector = ({ options, embroideryPlace }) => {
     return (
       <div className="w-[250px]">
         <FormControl fullWidth>
@@ -95,7 +84,7 @@ export default function EmbroiderySelector({
               }
             }}
           >
-            {embroideries.map((e) => (
+            {options.map((e) => (
               <MenuItem value={e}>{e}</MenuItem>
             ))}
           </Select>
@@ -141,7 +130,24 @@ export default function EmbroiderySelector({
     }
   };
 
-  if (!typesSupportingEmbroidery.includes(item.type)) {
+  if (item.variations) {
+    return (
+      <div className="mb-[30px] mt-[15px]">
+        <div className="flex flex-col">
+          <div className="flex">
+            <div className="flex flex-col gap-2">
+              <EmbroiderySelector
+                options={item.variations}
+                embroideryPlace={"first"}
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+  if (embroideries.length === 0) {
     return null;
   }
 
@@ -150,7 +156,10 @@ export default function EmbroiderySelector({
       <div className="flex flex-col">
         <div className="flex">
           <div className="flex flex-col gap-2">
-            <EmbroiderySelector embroideryPlace={"first"} />
+            <EmbroiderySelector
+              options={embroideries}
+              embroideryPlace={"first"}
+            />
             <PlacementSelector embroideryPlace={"first"} />
           </div>
           <div>
@@ -165,7 +174,10 @@ export default function EmbroiderySelector({
         <div className="flex flex-col mt-[20px]">
           <div className="flex">
             <div className="flex flex-col gap-2">
-              <EmbroiderySelector embroideryPlace={"second"} />
+              <EmbroiderySelector
+                options={embroideries}
+                embroideryPlace={"second"}
+              />
               <PlacementSelector embroideryPlace={"second"} />
             </div>
             <div>
