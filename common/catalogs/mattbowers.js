@@ -32,6 +32,28 @@ export const catalog = [
     },
   },
   {
+    code: "C818",
+    name: "Port Authority Snapback Cap #C818",
+    fullname: "Port Authority® Double Mesh Snapback Sandwich Bill Cap #C818",
+    colors: [
+      "Black Red",
+      "Black ShockBlue",     
+      "Black Silver",          
+    ],
+    type: "hat",
+    default_color: "Black Red",
+    description:"One size fits all",
+    halfColors: [
+      'Black Red',
+      'Black ShockBlue',     
+      'Black Silver',    
+    ],
+    sizes: {
+      "12+": 11.25,
+      "24+": 10.99,      
+    },
+  },
+  {
     code: "CP90",
     name: "Port & Co™ Knit Cap #CP90",
     fullname: "Port & Co™ Knit Cap (CP90)",
@@ -262,11 +284,11 @@ export const catalog = [
   },
   {
     code: "NKDC2104",
-    name: "Nike Long Sleeve Polo",
-    fullname: "Nike Dri-FIT Micro Pique 2.0 Long Sleeve Polo",
+    name: "Nike Long Sleeve Polo #NKDC2104",
+    fullname: "Nike Dri-FIT Micro Pique 2.0 Long Sleeve Polo (NKDC2104)",
     colors: ["Anthracite","Black","Game Royal","Gym Blue","Navy","University Red"],
     type: "mens",
-    default_color: "Black",
+    default_color: "Anthracite",
     sizes: {
       Small: 54.99,
       Medium: 54.99,
@@ -279,11 +301,11 @@ export const catalog = [
   },
   {
     code: "NKDC2105",
-    name: "Nike Long Sleeve Polo",
-    fullname: "Nike Women's Dri-FIT Micro Pique 2.0 Long Sleeve Polo",
+    name: "Nike Long Sleeve Polo #NKDC2105",
+    fullname: "Nike Women's Dri-FIT Micro Pique 2.0 Long Sleeve Polo (NKDC2105)",
     colors: ["Anthracite","Black","Game Royal","Gym Blue","Navy","University Red"],
     type: "womens",
-    default_color: "Black",
+    default_color: "Anthracite",
     sizes: {
       Small: 54.99,
       Medium: 54.99,
