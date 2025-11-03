@@ -11,16 +11,17 @@ export const catalog = [
     ],
     type: "hat",
     default_color: "Black",
+    descripton: "One size fits all",
     halfColors: [
       'FlameRed Black',
       'FlameRed White',
       'HthrGry PatriotBlue',      
     ],
     sizes: {
-      "OSFA 12+": 14.99,
-      "OSFA 24+": 13.99,
-      "OSFA 50+": 12.99,
-      "OSFA 100+": 12.00,
+      "12+": 14.99,
+      "24+": 13.99,
+      "50+": 12.99,
+      "100+": 12.00,
     },
   },
   {
@@ -328,9 +329,9 @@ export const catalog = [
     default_color: "Chrome",
     supportedStores: ["MATFME"],
     sizes: {
-      1000: 1.99,
-      1500: 1.99,
-      2500: 1.99,
+      "1000/bx": 1.99,
+      "1500/bx": 1.99,
+      "2500/bx": 1.99,
     },
   }, 
   {
