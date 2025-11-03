@@ -602,6 +602,10 @@
   background-color: #6f0f08;
 }
 
+.Cabernet {
+  background-color: #771111f1;
+}
+
 .Candy_Pink {
   background-color: #e7a5d3f1;
 }
@@ -732,6 +736,18 @@
 
 .Dark_Grey {
   background-color: #5e666a;
+}
+
+.Dark_Pine {
+  background-color: #126424;
+}
+
+.Dark_Purple {
+  background-color: #3e0f7c;
+}
+
+.Dark_Royal {
+  background-color: #190ae2;
 }
 
 .Dk_Green {
@@ -986,6 +1002,10 @@
   background-color: #ffe102;
 }
 
+.HthrGry {
+  background-color: #a2a5a7;
+}
+
 .Heather_Grey_Black {
   background-color: #b7bec1;
 }
@@ -1144,6 +1164,10 @@
 
 .Metal_Blue_Hthr {
   background-color: #9fc5f0;
+}
+
+.Midas {
+  background-color: #9e783f;
 }
 
 .Midnight_Navy {
@@ -1505,6 +1529,10 @@
 .Silver_Black {
   background-color: #838387;
 }
+
+.Smoke {
+  background-color: #1b1b1b;
+} 
 
 .Smoked_Pearl {
   background-color: #767678;

@@ -41,10 +41,10 @@ export const config = {
     customs: [],
   },
   email_recipients: [
-    "lbudbill@gpcorp.com",
+    "rgreenberg@gpcorp.com",
     "shanell@gpcorp.com",
     "support@gpcorp.com",
-    "rgreenberg@gpcorp.com",
+    
   ],
   stores: [
     {
@@ -52,13 +52,22 @@ export const config = {
       address: "3724 Veterans Memorial Blvd, Metairie, LA 70002",
       code: "MATFME",
     },
+    {
+      name: "Matt Bowers Chevrolet Cadillac",
+      address: "316 E Howze Beach Rd, Slidell, LA 70461",
+      code: "BOWCSL",
+    },
+    {
+      name: "Matt Bowers Hyundai",
+      address: "298 E Howze Beach Rd, Slidell, LA 70461",
+      code: "BOWHSL",
+    },
     ],
   bypass_codes: ["MATTB"],
   server_hostname: "https://mxfj3q6m01.execute-api.us-east-1.amazonaws.com",
   account_reps: [
     { name: "Richard Greenberg", phone: "678-287-1635" },
-    { name: "Louis Budbill", phone: "678-287-1649" },
-  ],
+    ],
   route_prefix: "/mattbowers",
   paypal_not_supported: true,
   password: "MattbowerS",
