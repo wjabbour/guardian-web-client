@@ -11,7 +11,7 @@ export const catalog = [
     ],
     type: "hat",
     default_color: "Black",
-    descripton: "One size fits all",
+    description:"One size fits all",
     halfColors: [
       'FlameRed Black',
       'FlameRed White',
