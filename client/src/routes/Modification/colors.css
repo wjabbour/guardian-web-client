@@ -1122,6 +1122,10 @@
   background-color: rgb(99, 93, 93);
 }
 
+.Magnetic_Blue {
+  background-color: rgb(0, 129, 214);
+}
+
 .Mandarin_Orange {
   background-color: rgb(224, 147, 46);
 }
@@ -1336,6 +1340,14 @@
 
 .Purple {
   background-color: #5112a3;
+}
+
+.Purple_Magic {
+  background-color: #7d2e96;
+}
+
+.Quiet_Shade {
+  background-color: rgb(85, 95, 87);
 }
 
 .Quiet_Shade_Gry_Blk {
