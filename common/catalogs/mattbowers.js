@@ -773,6 +773,20 @@ export const catalog = [
     },
   },
   {
+    code: "BOWCSL-31DD-450936A",
+    name: "Theromo Die Cut Decal",
+    fullname: "Thermo Die Cut Decal (5 in x .72 in.)",
+    colors: ["Black","White"],
+    type: "customs",
+    default_color: "Black",
+    supportedStores: ["MATFME","BOWCSL","BOWHSL"],
+    sizes: {
+      "1000/bx": .69,
+      "1500/bx": .69,
+      "2500/bx": .69,
+    },
+  },
+  {
     code: "MATFME-CG1240-470649L",
     name: "Leather Strap Key Tag",
     fullname: "Laser Engraved Zinc Leather Strap Key Tag (2-sided)",
