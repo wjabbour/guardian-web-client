@@ -13,14 +13,16 @@ export const config = {
       "Matt B Ford Metairie",
       "Matt B Ford Met Blue", 
       "MB Ford Metairie",
+      "MB Auto Group",
       "MB",
       "MB Flag",
-           
+                 
     ],
     womens: [
       "Matt B Ford Metairie",
       "Matt B Ford Met Blue", 
       "MB Ford Metairie",
+      "MB Auto Group",
       "MB",
       "MB Flag",
     ],
@@ -28,6 +30,7 @@ export const config = {
       "Matt B Ford Metairie",
       "Matt B Ford Met Blue", 
       "MB Ford Metairie",
+      "MB Auto Group",
       "MB",
       "MB Flag",
     ],
@@ -35,6 +38,7 @@ export const config = {
       "Matt B Ford Metairie",
       "Matt B Ford Met Blue", 
       "MB Ford Metairie",
+      "MB Auto Group",
       "MB",
       "MB Flag",
     ],
