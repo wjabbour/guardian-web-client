@@ -60,6 +60,13 @@ export const config = {
       "MB Flag", 
     ],
     customs: [],
+    office: [],
+    service: [],
+    sales: [],
+    detail: [],
+    bodyshop: [],
+    parts: [],
+
   },
   email_recipients: [
     "rgreenberg@gpcorp.com",
@@ -86,9 +93,7 @@ export const config = {
     ],
   bypass_codes: ["MATTB"],
   server_hostname: "https://mxfj3q6m01.execute-api.us-east-1.amazonaws.com",
-  account_reps: [
-    { name: "Richard Greenberg", phone: "678-287-1635" },
-    ],
+  account_reps: [{ name: "Richard Greenberg", phone: "678-287-1635" },],   
   route_prefix: "/mattbowers",
   paypal_not_supported: true,
   password: "MattbowerS",
