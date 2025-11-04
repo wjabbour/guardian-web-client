@@ -655,9 +655,9 @@ export const catalog = [
     default_color: "Chrome",
     supportedStores: ["MATFME","BOWCSL","BOWHSL"],
     sizes: {
-      "1000/bx": 1.99,
-      "1500/bx": 1.99,
-      "2500/bx": 1.99,
+      "1000/bx": 1990.00,
+      "1500/bx": 2985.00,
+      "2500/bx": 4975.00,
     },
   },
   {
@@ -669,9 +669,9 @@ export const catalog = [
     default_color: "Black",
     supportedStores: ["MATFME","BOWCSL","BOWHSL"],
     sizes: {
-      "1000/bx": .72,
-      "1500/bx": .72,
-      "2500/bx": .72,
+      "1000/bx": 720.00,
+      "1500/bx": 1080.00,
+      "2500/bx": 1800.00,
     },
   },
   {
@@ -683,9 +683,9 @@ export const catalog = [
     default_color: "Black",
     supportedStores: ["MATFME","BOWCSL","BOWHSL"],
     sizes: {
-      "1000/bx": .72,
-      "1500/bx": .72,
-      "2500/bx": .72,
+      "1000/bx": 720.00,
+      "1500/bx": 1080.00,
+      "2500/bx": 1800.00,
     },
   },    
   {
@@ -697,9 +697,9 @@ export const catalog = [
     default_color: "Blue",
     supportedStores: ["MATFME","BOWCSL","BOWHSL"],
     sizes: {
-      "1000/bx": .61,
-      "1500/bx": .61,
-      "2500/bx": .61,
+      "1000/bx": 610.00,
+      "1500/bx": 915.00,
+      "2500/bx": 1525.00,
     },
   },
   {
@@ -711,9 +711,9 @@ export const catalog = [
     default_color: "Blue",
     supportedStores: ["MATFME","BOWCSL","BOWHSL"],
     sizes: {
-      "1000/bx": .85,
-      "1500/bx": .85,
-      "2500/bx": .85,
+      "1000/bx": 850.00,
+      "1500/bx": 1275.00,
+      "2500/bx": 2125.00,
     },
   },
   {
@@ -725,9 +725,9 @@ export const catalog = [
     default_color: "Blue",
     supportedStores: ["MATFME","BOWCSL","BOWHSL"],
     sizes: {
-      "1000/bx": .61,
-      "1500/bx": .61,
-      "2500/bx": .61,
+      "1000/bx": 610.00,
+      "1500/bx": 915.00,
+      "2500/bx": 1525.00,
     },
   },    
   {
@@ -740,9 +740,9 @@ export const catalog = [
     description: "BLACK WILL NOT SHOW ON WHITE DECAL",
     supportedStores: ["MATFME","BOWCSL","BOWHSL"],
     sizes: {
-      "1000/bx": .65,
-      "1500/bx": .65,
-      "2500/bx": .65,
+      "1000/bx": 650.00,
+      "1500/bx": 975.00,
+      "2500/bx": 1625.00,
     },
   },
    {
@@ -755,9 +755,9 @@ export const catalog = [
     description: "BLACK WILL NOT SHOW ON WHITE DECAL",
     supportedStores: ["MATFME","BOWCSL","BOWHSL"],
     sizes: {
-      "1000/bx": .65,
-      "1500/bx": .65,
-      "2500/bx": .65,
+      "1000/bx": 650.00,
+      "1500/bx": 975.00,
+      "2500/bx": 1625.00,
     },
   },
   {
@@ -770,9 +770,9 @@ export const catalog = [
     description: "BLACK WILL NOT SHOW ON WHITE DECAL",
     supportedStores: ["MATFME","BOWCSL","BOWHSL"],
     sizes: {
-      "1000/bx": .65,
-      "1500/bx": .65,
-      "2500/bx": .65,
+      "1000/bx": 650.00,
+      "1500/bx": 975.00,
+      "2500/bx": 1625.00,
     },
   },
   {
@@ -785,9 +785,9 @@ export const catalog = [
     description: "BLACK WILL NOT SHOW ON WHITE DECAL",
     supportedStores: ["MATFME","BOWCSL","BOWHSL"],
     sizes: {
-      "1000/bx": .65,
-      "1500/bx": .65,
-      "2500/bx": .65,
+      "1000/bx": 650.00,
+      "1500/bx": 975.00,
+      "2500/bx": 1625.00,
     },
   },
   {
@@ -798,9 +798,9 @@ export const catalog = [
     type: "accessory",
     default_color: "Black",    
     sizes: {
-       "1000/bx": 2.99,
-       "1500/bx": 2.75,
-       "2500/bx": 2.25,
+       "1000/bx": 2990.00,
+       "1500/bx": 4485.00,
+       "2500/bx": 5625.00,
    },
   }, 
   {
@@ -811,9 +811,9 @@ export const catalog = [
     type: "accessory",
     default_color: "Blue",    
     sizes: {
-       "1000/bx": 2.05,
-       "1500/bx": 1.99,
-       "2500/bx": 1.55,
+       "1000/bx": 2050.00,
+       "1500/bx": 2985.00,
+       "2500/bx": 3875.00,
    },
   },
   {
@@ -824,7 +824,7 @@ export const catalog = [
     type: "accessory",
     default_color: "White",    
     sizes: {
-       "1000/bx": 1.29,
+       "1000/bx": 1290.00,
     },
   }, 
   {
@@ -835,9 +835,9 @@ export const catalog = [
     type: "accessory",
     default_color: "Blue",    
     sizes: {
-       "1000/bx": .61,
-       "1500/bx": .59,
-       "2500/bx": .54,
+       "1000/bx": 610.00,
+       "1500/bx": 885.00,
+       "2500/bx": 1350.00,
    },
   },
   {
@@ -848,9 +848,9 @@ export const catalog = [
     type: "sales",
     default_color: "Blue",    
     sizes: {
-       "1000/bx": .44,
-       "1500/bx": .44,
-       "2500/bx": .44,
+       "1000/bx": 440.00,
+       "1500/bx": 660.00,
+       "2500/bx": 1100.00,
    },
   },
   {
@@ -872,8 +872,8 @@ export const catalog = [
     default_color: "Beige",  
     sizes: {
       "1 box": 67.99,
-      "5 boxes": 67.99,
-      "10 boxes": 62.99,
+      "5 boxes": 339.95,
+      "10 boxes": 629.90,
     },
   },
   {
@@ -896,8 +896,8 @@ export const catalog = [
     default_color: "Blue",    
     sizes: {
       "1 box": 33.99,
-      "5 boxes": 31.99,
-      "10 boxes": 29.99,
+      "5 boxes": 159.95,
+      "10 boxes": 299.90,
     },
   },        
   {
@@ -933,8 +933,8 @@ export const catalog = [
     default_color: "Blue",    
     sizes: {
       "1 pk": 15.99,
-      "5 pks": 15.99,
-      "10 pks": 12.99,
+      "5 pks": 79.95,
+      "10 pks": 129.90,
     },
   }, 
   {
@@ -946,7 +946,7 @@ export const catalog = [
     type: "service",
     default_color: "White",    
     sizes: {
-       "2500/bx": .15,
+       "2500/bx": 375.00,
     },
   }, 
   {
@@ -958,8 +958,8 @@ export const catalog = [
     default_color: "Metal",    
     sizes: {
       "1 pk": 16.99,
-      "5 pks": 12.99,
-      "10 pks": 10.99,
+      "5 pks": 64.95,
+      "10 pks": 109.90,
     },
   },
   {
@@ -982,8 +982,8 @@ export const catalog = [
     default_color: "1000",    
     sizes: {
       "1 box": 84.99,
-      "5 boxes": 83.99,
-      "10 boxes": 79.99,
+      "5 boxes": 419.95,
+      "10 boxes": 799.90,
     },
   }, 
   {
@@ -996,8 +996,8 @@ export const catalog = [
     default_color: "YR 07",    
     sizes: {
       "1 pk": 11.99,
-      "5 pks": 10.99,
-      "10 pks": 10.99,
+      "5 pks": 54.95,
+      "10 pks": 109.90,
     },
   },
   {
@@ -1009,8 +1009,8 @@ export const catalog = [
     default_color: "Fluorg",   
     sizes: {
       "1 pk": 29.45,
-      "5 pks": 29.45,
-      "10 pks": 27.45,
+      "5 pks": 147.25,
+      "10 pks": 274.50,
     },
   },
 ];
