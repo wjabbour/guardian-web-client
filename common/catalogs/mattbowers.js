@@ -653,11 +653,12 @@ export const catalog = [
     colors: ["Chrome"],
     type: "customs",
     default_color: "Chrome",
+    description: "Sold in boxes of 1000, 1500 and 2500",
     supportedStores: ["MATFME","BOWCSL","BOWHSL"],
     sizes: {
-      "1000/bx": 1990.00,
-      "1500/bx": 2985.00,
-      "2500/bx": 4975.00,
+      "1000": 1.99,
+      "1500": 1.99,
+      "2500": 1.99,
     },
   },
   {
