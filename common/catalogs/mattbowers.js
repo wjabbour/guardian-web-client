@@ -779,6 +779,7 @@ export const catalog = [
     colors: ["Black","White"],
     type: "customs",
     default_color: "Black",
+    description: "BLACK WILL NOT SHOW ON WHITE DECAL",
     supportedStores: ["MATFME","BOWCSL","BOWHSL"],
     sizes: {
       "1000/bx": .69,
