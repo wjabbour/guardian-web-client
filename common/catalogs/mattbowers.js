@@ -920,6 +920,18 @@ export const catalog = [
     },
   }, 
   {
+    code: "BOWHSL-1830-490972A",
+    name: "Service Due Sticker",
+    fullname: "White Vinyl Service Due Sticker w/black imprint (1.5 in. x 2.25 in.)",
+    description: "GREY DOES NOT PRINT",
+    colors: ["White"],
+    type: "service",
+    default_color: "White",    
+    sizes: {
+       "2500/bx": .15,
+    },
+  }, 
+  {
     code: "3044",
     name: "Spring Rings",
     fullname: "Metal Spring Rings (250/pk)",
