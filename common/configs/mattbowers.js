@@ -13,10 +13,11 @@ export const config = {
       "Matt B Ford Metairie",
       "Matt B Ford Met Blue", 
       "MB Ford Metairie",
-      "MB Chevy Slidell",
-      "MB Auto Group",
+      "MattB Hyundai Slidell",
+      "MB Chevy Slidell",      
       "MB",
       "MB Hyundai Slidell",
+      "MB Auto Group",
       "MB Flag",
                  
     ],
