@@ -15,6 +15,7 @@ export const config = {
       "MB Ford Metairie",
       "MB Auto Group",
       "MB",
+      "MB Hyundai Slidell",
       "MB Flag",
                  
     ],
@@ -24,6 +25,7 @@ export const config = {
       "MB Ford Metairie",
       "MB Auto Group",
       "MB",
+      "MB Hyundai Slidell",
       "MB Flag",
     ],
     tshirts: [
@@ -32,6 +34,7 @@ export const config = {
       "MB Ford Metairie",
       "MB Auto Group",
       "MB",
+      "MB Hyundai Slidell",
       "MB Flag",
     ],
     hat:  [
@@ -40,6 +43,7 @@ export const config = {
       "MB Ford Metairie",
       "MB Auto Group",
       "MB",
+      "MB Hyundai Slidell",
       "MB Flag",
     ],
     customs: [],
