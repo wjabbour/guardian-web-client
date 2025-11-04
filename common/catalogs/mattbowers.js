@@ -653,7 +653,7 @@ export const catalog = [
     colors: ["Chrome"],
     type: "customs",
     default_color: "Chrome",
-    description: "Sold in boxes of 1000, 1500 and 2500",
+    description: "Sold in quantities of 1000, 1500 and 2500",
     supportedStores: ["MATFME","BOWCSL","BOWHSL"],
     sizes: {
       "1000": 1.99,

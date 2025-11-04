@@ -66,7 +66,7 @@ export const config = {
     detail: [],
     bodyshop: [],
     parts: [],
-
+    accessory: [],
   },
   email_recipients: [
     "rgreenberg@gpcorp.com",
