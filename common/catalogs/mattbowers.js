@@ -737,6 +737,7 @@ export const catalog = [
     colors: ["Black","White"],
     type: "customs",
     default_color: "Black",
+    description: "BLACK WILL NOT SHOW ON WHITE DECAL",
     supportedStores: ["MATFME","BOWCSL","BOWHSL"],
     sizes: {
       "1000/bx": .65,
@@ -751,11 +752,12 @@ export const catalog = [
     colors: ["Black","White"],
     type: "customs",
     default_color: "Black",
+    description: "BLACK WILL NOT SHOW ON WHITE DECAL",
     supportedStores: ["MATFME","BOWCSL","BOWHSL"],
     sizes: {
-      "1000/bx": .69,
-      "1500/bx": .69,
-      "2500/bx": .69,
+      "1000/bx": .65,
+      "1500/bx": .65,
+      "2500/bx": .65,
     },
   },
   {
@@ -765,6 +767,7 @@ export const catalog = [
     colors: ["Black","White"],
     type: "customs",
     default_color: "Black",
+    description: "BLACK WILL NOT SHOW ON WHITE DECAL",
     supportedStores: ["MATFME","BOWCSL","BOWHSL"],
     sizes: {
       "1000/bx": .65,
@@ -782,9 +785,9 @@ export const catalog = [
     description: "BLACK WILL NOT SHOW ON WHITE DECAL",
     supportedStores: ["MATFME","BOWCSL","BOWHSL"],
     sizes: {
-      "1000/bx": .69,
-      "1500/bx": .69,
-      "2500/bx": .69,
+      "1000/bx": .65,
+      "1500/bx": .65,
+      "2500/bx": .65,
     },
   },
   {
