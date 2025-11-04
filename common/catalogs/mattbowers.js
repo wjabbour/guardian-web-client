@@ -715,7 +715,21 @@ export const catalog = [
       "1500/bx": .85,
       "2500/bx": .85,
     },
-  },  
+  },
+  {
+    code: "BOWCSL-33GT-450935Z",
+    name: "15 Gauge Vinyl Plate",
+    fullname: "15 Gauge Vinyl Plate - White w/4CP imprint",
+    colors: ["Blue"],
+    type: "customs",
+    default_color: "Blue",
+    supportedStores: ["MATFME","BOWCSL","BOWHSL"],
+    sizes: {
+      "1000/bx": .61,
+      "1500/bx": .61,
+      "2500/bx": .61,
+    },
+  },    
   {
     code: "MATFME-31DD-402399A",
     name: "Thermo Die Cut Decal",
