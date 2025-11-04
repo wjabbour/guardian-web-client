@@ -8,6 +8,7 @@ export const config = {
     tshirts: ["Left Chest", "Front Center"],
   },
   show_image_preview: true,
+  minimum_apparel_order: false,
   embroideries: {
     mens: [
       "Matt B Ford Metairie",
