@@ -982,8 +982,9 @@ export const catalog = [
     code: "SDNRG",
     name: "Service Hang Numbers",
     fullname: "Service Hang Numbers (1000/bx)",
-    colors: [
-      "_0000",
+    colors: ["White"],
+    variations: [
+      "0000",
       "1000",
       "2000",
       "3000",
@@ -995,8 +996,13 @@ export const catalog = [
       "9000",
     ],  
     type: "service",
-    default_color: "1000",
-    description: "Sold in quantities of one, five, and ten boxes",     
+    default_color: "white",
+    description: "Sold in quantities of one, five, and ten boxes", 
+    discount: [
+      { quantity: 1, price: 84.99 },
+      { quantity: 5, price: 83.99 },
+      { quantity: 10, price: 79.99 },
+    ],    
     sizes: {
       "1": 84.99,
       "5": 83.99,
