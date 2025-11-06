@@ -21,7 +21,7 @@ export const config = {
     "lbudbill@gpcorp.com",
     "grodney@gpcorp.com",
     "mmccord@gpcorp.com",
-    "support@gpcorp.com",
+    "webportalorders@gpcorp.com",
     "shanell@gpcorp.com",
   ],
   stores: [

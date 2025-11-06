@@ -29,7 +29,7 @@ export const config = {
     ],
     customs: [],
   },
-  email_recipients: ["lbudbill@gpcorp.com", "lbudbell@comcast.net"],
+  email_recipients: ["lbudbill@gpcorp.com", "webportalorders@gpcorp.com","shanell@gpcorp.com"],
   stores: [
     {
       name: "Premier Honda",

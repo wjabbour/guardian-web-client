@@ -67,6 +67,7 @@ export const config = {
     "lbudbill@gpcorp.com",
     "lbudbell@comcast.net",
     "bsugden@gpcorp.com",
+    "webportalorders@gpcorp.com",
   ],
 
   stores: [

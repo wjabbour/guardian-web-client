@@ -58,7 +58,7 @@ export const config = {
   email_recipients: [
     "lbudbill@gpcorp.com",
     "mmccord@gpcorp.com",
-    "support@gpcorp.com",
+    "webportalorders@gpcorp.com",
     "shanell@gpcorp.com",
   ],
   stores: [

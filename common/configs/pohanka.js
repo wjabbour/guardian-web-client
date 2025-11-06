@@ -22,7 +22,10 @@ export const config = {
     bodyshop: [],
     parts: [],
   },
-  email_recipients: ["lbudbill@gpcorp.com"],
+  email_recipients: [
+    "lbudbill@gpcorp.com",
+    "webportalorders@gpcorp.com",  
+  ],
   stores: [
     {
       name: "Pohanka Hyundai",
