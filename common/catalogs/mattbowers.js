@@ -2,7 +2,7 @@ export const catalog = [
   {
     code: "C402",
     name: "Port Authority Trucker Cap #C402",
-    fullname: "Port Authority® Snapback Trucker Cap #C402",
+    fullname: "Port Authority® Snapback Trucker Cap (C402)",
     colors: [
       "Black",
       "Black Tan",     
@@ -34,7 +34,7 @@ export const catalog = [
   {
     code: "C818",
     name: "Port Authority Snapback Cap #C818",
-    fullname: "Port Authority® Double Mesh Snapback Sandwich Bill Cap #C818",
+    fullname: "Port Authority® Double Mesh Snapback Sandwich Bill Cap (C818)",
     colors: [
       "Black Red",
       "Black ShockBlue",     
