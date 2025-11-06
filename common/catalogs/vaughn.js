@@ -368,7 +368,7 @@ export const catalog = [
       "Yellow",
     ],
     type: "sales",
-    default_color: "White", 
+    default_color: "Blue", 
     description: "Sold in quantities of 1 or 10 boxes",    
     sizes: {
       "1": 36.95,
@@ -381,7 +381,7 @@ export const catalog = [
     fullname: "Kleer-Back Stock Stickers Versa #400 (100/pk)",
     colors: ["Blue", "Green", "Orange", "Red", "White", "Yellow"],
     type: "sales",
-    default_color: "White", 
+    default_color: "Blue", 
     description: "Sold in quantities of 1 or 10 packs",  
     sizes: {
       "1": 17.95,
