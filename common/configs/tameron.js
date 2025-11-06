@@ -19,6 +19,7 @@ export const config = {
   },
   email_recipients: [
     "lbudbill@gpcorp.com",
+    "grodney@gpcorp.com",
     "mmccord@gpcorp.com",
     "support@gpcorp.com",
     "shanell@gpcorp.com",
