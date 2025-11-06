@@ -354,7 +354,7 @@ export const catalog = [
   {
     code: "GP200",
     name: "Key Tags #GP200",
-    fullname: "Self-Protecting Key Tags #200 (250 per box)",
+    fullname: "Self-Protecting Key Tags #200 (250/bx)",
     colors: [
       "Blue",
       "Gray",
@@ -369,7 +369,7 @@ export const catalog = [
     ],
     type: "sales",
     default_color: "White", 
-    description: "Sold in quantities of one and ten boxes",    
+    description: "Sold in quantities of 1 or 10 boxes",    
     sizes: {
       "1": 36.95,
       "10": 30.00,
@@ -378,11 +378,11 @@ export const catalog = [
   {
     code: "VT400",
     name: "Stock Stickers #VT400",
-    fullname: "Kleer-Back Stock Stickers Versa #400 (100 per pack)",
+    fullname: "Kleer-Back Stock Stickers Versa #400 (100/pk)",
     colors: ["Blue", "Green", "Orange", "Red", "White", "Yellow"],
     type: "sales",
     default_color: "White", 
-    description: "Sold in quantities of one and ten boxes",  
+    description: "Sold in quantities of 1 or 10 packs",  
     sizes: {
       "1": 17.95,
       "10": 12.00,
@@ -444,7 +444,7 @@ export const catalog = [
     colors: ["Clear"],
     type: "sales",
     default_color: "Clear",
-    description: "Sold in quantities of one and ten boxes", 
+    description: "Sold in quantities of 1 or 10 packs", 
     discount: [
       { quantity: 1, price: 99.00 },
       { quantity: 10, price: 80.00 },

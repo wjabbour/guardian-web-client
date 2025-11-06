@@ -743,7 +743,7 @@ export const catalog = [
     colors: ["Black","White"],
     type: "customs",
     default_color: "Black",    
-    description: "BLACK WILL NOT SHOW ON WHITE DECAL",
+    description: "BLACK WILL NOT SHOW ON WHITE DECAL; Sold in quantities of 1000, 1500 & 2500",
     supportedStores: ["MATFME","BOWCSL","BOWHSL"],
     sizes: {
       "1000": .65,
@@ -758,7 +758,7 @@ export const catalog = [
     colors: ["Black","White"],
     type: "customs",
     default_color: "Black",
-    description: "BLACK WILL NOT SHOW ON WHITE DECAL",
+    description: "BLACK WILL NOT SHOW ON WHITE DECAL; Sold in quantities of 1000, 1500 & 2500",
     supportedStores: ["MATFME","BOWCSL","BOWHSL"],
     sizes: {
       "1000": .65,
@@ -788,7 +788,7 @@ export const catalog = [
     colors: ["Black","White"],
     type: "customs",
     default_color: "Black",
-    description: "BLACK WILL NOT SHOW ON WHITE DECAL",
+    description: "BLACK WILL NOT SHOW ON WHITE DECAL; Sold in quantities of 1000, 1500 & 2500",
     supportedStores: ["MATFME","BOWCSL","BOWHSL"],
     sizes: {
       "1000": .65,
@@ -867,7 +867,7 @@ export const catalog = [
   {
     code: "226",
     name: "Combo Key Tags",
-    fullname: "Combo Key Tags - Numbered (125/box)",
+    fullname: "Combo Key Tags - Numbered (125/bx)",
     colors: [
       "Beige",
       "Blue",
@@ -881,7 +881,7 @@ export const catalog = [
     ],   
     type: "sales",
     default_color: "Beige",
-    description: "Sold in quantities of one, five, and ten boxes", 
+    description: "Sold in quantities of 1, 5 or 10 boxes", 
     sizes: {
       "1": 67.99,
       "5": 67.99,
@@ -891,7 +891,7 @@ export const catalog = [
   {
     code: "GP200",
     name: "Stock Key Tags",
-    fullname: "Self-Protecting Key Tags (250/box)",
+    fullname: "Self-Protecting Key Tags (250/bx)",
     colors: [
       "Blue",
       "Gray",
@@ -906,7 +906,7 @@ export const catalog = [
     ],
     type: "sales",
     default_color: "Blue",
-    description: "Sold in quantities of one, five, and ten boxes",    
+    description: "Sold in quantities of 1, 5 or 10 boxes",    
     sizes: {
       "1": 33.99,
       "5": 31.99,
@@ -916,7 +916,7 @@ export const catalog = [
   {
     code: "GP546",
     name: "Deal Jackets",
-    fullname: "Deal Jackets - Plain (500/box)",
+    fullname: "Deal Jackets - Plain (500/bx)",
     colors: [
       "Blue",
       "Buff",
@@ -931,7 +931,7 @@ export const catalog = [
     ],
     type: "sales",
     default_color: "Blue",
-    description: "Sold in quantities of one, five, and ten boxes", 
+    description: "Sold in quantities of 1,5 or 10 boxes", 
     sizes: {
       "1": 115.76,
       "5": 115.76,
@@ -945,7 +945,7 @@ export const catalog = [
     colors: ["Blue", "Green", "Orange", "Red", "White", "Yellow"],
     type: "sales",
     default_color: "Blue",
-    description: "Sold in quantities of one, five, and ten packs",    
+    description: "Sold in quantities of 1, 5 or 10 packs",    
     sizes: {
       "1": 15.99,
       "5": 15.99,
@@ -971,7 +971,7 @@ export const catalog = [
     colors: ["Metal"],
     type: "service",
     default_color: "Metal",
-    description: "Sold in quantities of one, five, and ten packs",    
+    description: "Sold in quantities of 1, 5 or 10 packs",    
     sizes: {
       "1": 16.99,
       "5": 12.99,
@@ -997,7 +997,7 @@ export const catalog = [
     ],  
     type: "service",
     default_color: "white",
-    description: "Sold in quantities of one, five, and ten boxes", 
+    description: "Sold in quantities of 1, 5 or 10 boxes", 
     discount: [
       { quantity: 1, price: 84.99 },
       { quantity: 5, price: 83.99 },
@@ -1038,7 +1038,7 @@ export const catalog = [
     ],
     type: "sales",
     default_color: "Blue",
-    description: "Sold in quantities of one, five, and ten packs",
+    description: "Sold in quantities of 1, 5, or 10 packs", 
     discount: [
       { quantity: 1, price: 11.99 },
       { quantity: 5, price: 10.99 },
@@ -1053,11 +1053,11 @@ export const catalog = [
   {
     code: "HANG-SG",
     name: "Hang Tag - Was Now",
-    fullname: "Stock Hang Tags - Was Now - 9in x 12in (50 per pack)",
+    fullname: "Stock Hang Tags - Was Now - 9in x 12in (50/pk)",
     colors: ["Fluorg","Fluorp","Fluorr","Fluory"],
     type: "sales",
     default_color: "Fluorg",
-    description: "Sold in quantities of one, five, and ten packs",   
+    description: "Sold in quantities of 1, 5, or 10 packs",   
     sizes: {
       "1": 29.45,
       "5": 29.45,
