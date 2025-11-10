@@ -654,7 +654,7 @@ export const catalog = [
     type: "customs",
     default_color: "Chrome",
     description: "Sold in quantities of 1000, 1500 and 2500",
-    supportedStores: ["MATFME","BOWCSL","BOWHSL"],
+    supportedStores: ["MATFME"],
     sizes: {
       "1000": 1.99,
       "1500": 1.99,
@@ -669,7 +669,7 @@ export const catalog = [
     type: "customs",
     default_color: "Black",
     description: "Sold in quantities of 1000, 1500 and 2500",
-    supportedStores: ["MATFME","BOWCSL","BOWHSL"],
+    supportedStores: ["BOWHSL"],
     sizes: {
       "1000": .72,
       "1500": .72,
@@ -684,7 +684,7 @@ export const catalog = [
     type: "customs",
     default_color: "Black",
     description: "Sold in quantities of 1000, 1500 and 2500",
-    supportedStores: ["MATFME","BOWCSL","BOWHSL"],
+    supportedStores: ["BOWCSL"],
     sizes: {
       "1000": .72,
       "1500": .72,
@@ -699,7 +699,7 @@ export const catalog = [
     type: "customs",
     default_color: "Blue",
     description: "Sold in quantities of 1000, 1500 and 2500",
-    supportedStores: ["MATFME","BOWCSL","BOWHSL"],
+    supportedStores: ["MATFME"],
     sizes: {
       "1000": .61,
       "1500": .61,
@@ -714,7 +714,7 @@ export const catalog = [
     type: "customs",
     default_color: "Blue",
     description: "Sold in quantities of 1000, 1500 and 2500",
-    supportedStores: ["MATFME","BOWCSL","BOWHSL"],
+    supportedStores: ["BOWHSL"],
     sizes: {
       "1000": .85,
       "1500": .85,
@@ -729,7 +729,7 @@ export const catalog = [
     type: "customs",
     default_color: "Blue",
     description: "Sold in quantities of 1000, 1500 and 2500",
-    supportedStores: ["MATFME","BOWCSL","BOWHSL"],
+    supportedStores: ["BOWCSL"],
     sizes: {
       "1000": .61,
       "1500": .61,
@@ -744,7 +744,7 @@ export const catalog = [
     type: "customs",
     default_color: "Black",    
     description: "BLACK WILL NOT SHOW ON WHITE DECAL; Sold in quantities of 1000, 1500 & 2500",
-    supportedStores: ["MATFME","BOWCSL","BOWHSL"],
+    supportedStores: ["MATFME"],
     sizes: {
       "1000": .65,
       "1500": .65,
@@ -759,7 +759,7 @@ export const catalog = [
     type: "customs",
     default_color: "Black",
     description: "BLACK WILL NOT SHOW ON WHITE DECAL; Sold in quantities of 1000, 1500 & 2500",
-    supportedStores: ["MATFME","BOWCSL","BOWHSL"],
+    supportedStores: ["BOWHSL"],
     sizes: {
       "1000": .65,
       "1500": .65,
@@ -774,7 +774,7 @@ export const catalog = [
     type: "customs",
     default_color: "Black",
     description: "BLACK WILL NOT SHOW ON WHITE DECAL; Sold in quantities of 1000, 1500 & 2500",
-    supportedStores: ["MATFME","BOWCSL","BOWHSL"],
+    supportedStores: ["MATFME"],
     sizes: {
       "1000": .65,
       "1500": .65,
@@ -789,7 +789,7 @@ export const catalog = [
     type: "customs",
     default_color: "Black",
     description: "BLACK WILL NOT SHOW ON WHITE DECAL; Sold in quantities of 1000, 1500 & 2500",
-    supportedStores: ["MATFME","BOWCSL","BOWHSL"],
+    supportedStores: ["BOWCSL"],
     sizes: {
       "1000": .65,
       "1500": .65,

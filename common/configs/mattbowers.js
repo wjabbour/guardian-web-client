@@ -69,7 +69,7 @@ export const config = {
     accessory: [],
   },
   email_recipients: [
-    "rgreenberg@gpcorp.com",    
+    "rgreenberg@gpcorp.com",       
     "shanell@gpcorp.com",
     "webportalorders@gpcorp.com",
     
