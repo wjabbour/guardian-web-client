@@ -1,6 +1,6 @@
 export const config = {
   title: "Mattbowers",
-  company_logo: "matt_bowers.png",
+  company_logo: "matt_bower s.png",
   logo_placements: {
     mens: ["Left Chest"],
     womens: ["Left Chest"],
@@ -9,6 +9,7 @@ export const config = {
   },
   show_image_preview: true,
   minimum_apparel_order: false,
+  enable_customs_store_picker: true,
   embroideries: {
     mens: [
       "Matt B Ford Metairie",
