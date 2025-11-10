@@ -17,9 +17,7 @@ export const config = {
     hat: ["Tameron"],
     customs: [],
   },
-  email_recipients: [
-    "lbudbill@gpcorp.com",
-    "grodney@gpcorp.com",
+  email_recipients: [      
     "mmccord@gpcorp.com",
     "webportalorders@gpcorp.com",
     "shanell@gpcorp.com",
