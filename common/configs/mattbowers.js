@@ -1,6 +1,6 @@
 export const config = {
   title: "Mattbowers",
-  company_logo: "matt_bower s.png",
+  company_logo: "matt_bowers.png",
   logo_placements: {
     mens: ["Left Chest"],
     womens: ["Left Chest"],
