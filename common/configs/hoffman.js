@@ -10,7 +10,7 @@ export const config = {
   show_image_preview: true,
   embroideries: {
     hat: [
-      "Audi with Rings 3 inch.EMB",
+      "Audi With Rings 3 Inch.EMB",
       "BMW",
       "Honda Blue",
       "Lexus",
@@ -22,11 +22,11 @@ export const config = {
       "Ford Lincoln",          
       "Hoffman Insurance",      
       "Hoffman Motorsports",
-      "Hoffman H Logo.EMB",          
+      "Hoffman H Logo.EMB",         
       
     ],
     mens: [
-      "Audi with Rings 3 inch.EMB",
+      "Audi With Rings 3 Inch",
       "BMW",
       "Honda Blue",
       "Lexus",
@@ -34,7 +34,7 @@ export const config = {
       "Porsche With Shield",
       "Toyota",
       "Hoffman Auto Group.EMB",
-      "Hoffman Collision Center 3 Inches.EMB",      
+      "Hoffman Collision Center 3 Inches",      
       "Ford Lincoln",          
       "Hoffman Insurance",      
       "Hoffman Motorsports",
