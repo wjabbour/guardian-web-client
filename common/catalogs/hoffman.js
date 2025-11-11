@@ -136,13 +136,13 @@ export const catalog = [
     type: "mens",
     default_color: "Blacktop",
     sizes: {
-      Small: 84.88,
-      Medium: 84.88,
-      Large: 84.88,
-      XLarge: 84.88,
-      "2XLarge": 86.88,
-      "3XLarge": 87.88,
-      "4XLarge": 88.88,
+      Small: 79.99,
+      Medium: 79.99,
+      Large: 79.99,
+      XLarge: 79.99,
+      "2XLarge": 81.99,
+      "3XLarge": 83.99,
+      "4XLarge": 84.99,
     },
   },
   {
@@ -153,13 +153,13 @@ export const catalog = [
     type: "womens",
     default_color: "Blacktop",
     sizes: {
-      Small: 84.88,
-      Medium: 84.88,
-      Large: 84.88,
-      XLarge: 84.88,
-      "2XLarge": 86.88,
-      "3XLarge": 87.88,
-      "4XLarge": 88.88,
+      Small: 79.99,
+      Medium: 79.99,
+      Large: 79.99,
+      XLarge: 79.99,
+      "2XLarge": 81.99,
+      "3XLarge": 83.99,
+      "4XLarge": 84.99,
     },
   },  
   {
@@ -185,8 +185,8 @@ export const catalog = [
       { quantity: 1500, price: 3.49 },      
     ],
     sizes: {
-      1000: 0.0, 
-      1500: 0.0,     
+      1000: 3.65, 
+      1500: 3.49,     
     },
   },
    {
@@ -200,7 +200,7 @@ export const catalog = [
       { quantity: 2000, price: 1.69 },             
     ],
     sizes: {
-      2000: 0.0,          
+      2000: 1.69,          
     },
   },
   {
@@ -252,7 +252,7 @@ export const catalog = [
       { quantity: 2500, price: 1.19 },     
     ],
     sizes: {
-      2500: 0.0,           
+      2500: 1.19,           
     },
   },
    {
@@ -267,8 +267,8 @@ export const catalog = [
       { quantity: 5000, price: 1.09 },      
     ],
     sizes: {
-      2500: 0.0,
-      5000: 0.0,           
+      2500: 1.19,
+      5000: 1.09,           
     },
   },
 ]
