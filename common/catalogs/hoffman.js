@@ -4,7 +4,7 @@ export const catalog = [
     name: "Port Authority® Beanie #CP95",
     fullname: "Port Authority® 100% Cotton Beanie (CP95)",
     colors: ["Navy"],
-    type: "mens",
+    type: "hat",
     default_color: "Navy",
     sizes: {
       OSFA: 8.49,      
