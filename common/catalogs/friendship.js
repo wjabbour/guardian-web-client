@@ -30,15 +30,14 @@ export const catalog = [
   {
     code: "FRICBT-34PE-481524A",
     name: "Black Plastic Frame",
-    fullname: "Black Plastic Frame",
+    fullname: "Black Plastic Frame (250 per box)",
     colors: ["Black"],
     type: "customs",
-    default_color: "Black", 
+    default_color: "Black",
+    descripton: "Maxiumum quantity one box",
     supportedStores: ["FRICBT"],    
     sizes: {
-      250: 0.00,
-      500: 0.00,
-      1000: 0.00,      
+      250: 0.69,          
     },
   },
   {
