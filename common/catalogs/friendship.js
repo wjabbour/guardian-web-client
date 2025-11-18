@@ -1,16 +1,15 @@
 export const catalog = [
     {
-    code: "FRIENDSHIPFORD-31SD",
+    code: "330128-FRIENDSHIP-31SD",
     name: "Stroke Dome Decal",
     fullname: "Stroke Dome Decal - chrome w/black imprint (5.75 in. x 1.3 in.)",
     colors: ["Chrome"],
     type: "customs",
     default_color: "Chrome", 
+    description: "Maximum one box (enter '1' in the box below)",
     supportedStores: ["FRICBT"],   
     sizes: {
-      250: 0.00,
-      500: 0.00,
-      1000: 0.00, 
+      250: 1.50,       
     },
   },
   {
@@ -19,12 +18,11 @@ export const catalog = [
     fullname: "Chrome Domecal w/ 4cp imprint (2.25 in. x 2.25 in.)",
     colors: ["Chrome"],
     type: "customs",
-    default_color: "Chrome", 
+    default_color: "Chrome",
+    description: "Maximum one box (enter '1' in the box below)",
     supportedStores: ["FRICBT"],    
     sizes: {
-      250: 0.00,
-      500: 0.00,
-      1000: 0.00, 
+      250: 0.99,     
     },
   },
   {
@@ -34,7 +32,7 @@ export const catalog = [
     colors: ["Black"],
     type: "customs",
     default_color: "Black",
-    description: "Maximum one box (enter '1' in box below)",
+    description: "Maximum one box (enter '1' in the box below)",
     supportedStores: ["FRICBT"],    
     sizes: {
       250: 0.69,          
@@ -47,10 +45,10 @@ export const catalog = [
     colors: ["White"],
     type: "customs",
     default_color: "White",
-    description: "Maximum three boxes (enter '1, 2 or 3' in box below)",
+    description: "Minumum three boxes (enter '3' in the box below)",
     supportedStores: ["FRICBT"],    
     sizes: {
-      "500": 0.23,          
+      500: 0.23,          
     },
   },
   {
@@ -60,11 +58,10 @@ export const catalog = [
     colors: ["Aluminum"],
     type: "customs",
     default_color: "Aluminum",
+    description: "Maximum one box (enter '1' in the box below)",
     supportedStores: ["FRICBT"],     
     sizes: {
-      250: 0.00,
-      500: 0.00,
-      1000: 0.00,      
+      50: 3.65,            
     },
   },
   {
@@ -74,11 +71,10 @@ export const catalog = [
     colors: ["Yellow"],
     type: "customs",
     default_color: "Yellow",
+    description: "Maximum one box (enter '1' in the box below)",
     supportedStores: ["FRICBT"],     
     sizes: {
-      250: 0.00,
-      500: 0.00,
-      1000: 0.00,      
+      250: 0.75,           
     },
   },
   {
@@ -597,8 +593,7 @@ export const catalog = [
     colors: ["White"],
     type: "service",
     default_color: "White",
-    description: "Enter 1, 2, or 3 in the designated box. The maximum quantity allowed per order is three boxes.",
-    description: "Maximum three boxes (enter '1, 2 or 3' in box below)",
+    description: "Maximum quantity allowed per order is three boxes. Enter 1, 2, or 3 in the quantity box.",   
     supportedStores: ["FRICBT"],    
     sizes: {
       500: 0.23,          
