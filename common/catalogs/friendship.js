@@ -34,10 +34,23 @@ export const catalog = [
     colors: ["Black"],
     type: "customs",
     default_color: "Black",
-    description: "Max. qty. one box - enter '1' in box below",
+    description: "Maximum one box (enter '1' in box below)",
     supportedStores: ["FRICBT"],    
     sizes: {
       250: 0.69,          
+    },
+  },
+  {
+    code: "FRIHPR-FMS2-516400B",
+    name: "Custom Floor Mat",
+    fullname: "Coated Paper Floor Mat w/black & 288 blue imprint (17 in. x 2 in.)",
+    colors: ["White"],
+    type: "customs",
+    default_color: "White",
+    description: "Maximum three boxes (enter '1, 2 or 3' in box below)",
+    supportedStores: ["FRICBT"],    
+    sizes: {
+      "500": 0.23,          
     },
   },
   {
@@ -575,6 +588,20 @@ export const catalog = [
     default_color: "White",    
     sizes: {
       "# boxes": 0.0,
+    },
+  },
+  {
+    code: "FRIHPR-FMS2-516400B",
+    name: "Custom Floor Mat",
+    fullname: "Coated Paper Floor Mat w/black & 288 blue imprint (17 in. x 2 in.)",
+    colors: ["White"],
+    type: "service",
+    default_color: "White",
+    description: "Enter 1, 2, or 3 in the designated box. The maximum quantity allowed per order is three boxes.",
+    description: "Maximum three boxes (enter '1, 2 or 3' in box below)",
+    supportedStores: ["FRICBT"],    
+    sizes: {
+      500: 0.23,          
     },
   },
   {
