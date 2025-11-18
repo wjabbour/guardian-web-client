@@ -6,7 +6,7 @@ export const catalog = [
     colors: ["Chrome"],
     type: "customs",
     default_color: "Chrome", 
-    description: "Maximum one box (enter '1' in the box below)",
+    description: "Maximum one box (enter '1' in the box below - 250/bx)",
     supportedStores: ["FRICBT"],   
     sizes: {
       250: 1.50,       
@@ -19,7 +19,7 @@ export const catalog = [
     colors: ["Chrome"],
     type: "customs",
     default_color: "Chrome",
-    description: "Maximum one box (enter '1' in the box below)",
+    description: "Maximum one box (enter '1' in the box below - 250/bx)",
     supportedStores: ["FRICBT"],    
     sizes: {
       250: 0.99,     
@@ -45,7 +45,7 @@ export const catalog = [
     colors: ["White"],
     type: "customs",
     default_color: "White",
-    description: "Minumum three boxes (enter '3' in the box below)",
+    description: "Minumum three boxes (enter '3' in the box below - 500/bx)",
     supportedStores: ["FRICBT"],    
     sizes: {
       500: 0.23,          
@@ -58,7 +58,7 @@ export const catalog = [
     colors: ["Aluminum"],
     type: "customs",
     default_color: "Aluminum",
-    description: "Maximum one box (enter '1' in the box below)",
+    description: "Maximum one box (enter '1' in the box below - 50/bx)",
     supportedStores: ["FRICBT"],     
     sizes: {
       50: 3.65,            
@@ -71,7 +71,7 @@ export const catalog = [
     colors: ["Yellow"],
     type: "customs",
     default_color: "Yellow",
-    description: "Maximum one box (enter '1' in the box below)",
+    description: "Maximum one box (enter '1' in the box below - 250/bx)",
     supportedStores: ["FRICBT"],     
     sizes: {
       250: 0.75,           
