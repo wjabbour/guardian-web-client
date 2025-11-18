@@ -34,7 +34,7 @@ export const catalog = [
     colors: ["Black"],
     type: "customs",
     default_color: "Black",
-    description: "Maxiumum quantity one box",
+    description: "Max. qty. one box - enter '1' in box below",
     supportedStores: ["FRICBT"],    
     sizes: {
       250: 0.69,          
