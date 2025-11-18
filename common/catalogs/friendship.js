@@ -1,7 +1,7 @@
 export const catalog = [
     {
     code: "330128-FRIENDSHIP-31SD",
-    name: "Stroke Dome Decal",
+    name: "Friendship Decal",
     fullname: "Stroke Dome Decal - chrome w/black imprint (5.75 in. x 1.3 in.)",
     colors: ["Chrome"],
     type: "customs",
@@ -14,7 +14,7 @@ export const catalog = [
   },
   {
     code: "FRICBT-31DC-419926Z",
-    name: "Dog Domecal with Imprint",
+    name: "Dog Decal",
     fullname: "Chrome Domecal w/ 4cp imprint (2.25 in. x 2.25 in.)",
     colors: ["Chrome"],
     type: "customs",
@@ -40,7 +40,7 @@ export const catalog = [
   },
   {
     code: "FRIHPR-FMS2-516400B",
-    name: "Custom Floor Mat",
+    name: "Custom Paper Floor Mat",
     fullname: "Coated Paper Floor Mat w/black & 288 blue imprint (17 in. x 2 in.)",
     colors: ["White"],
     type: "customs",
@@ -66,7 +66,7 @@ export const catalog = [
   },
   {
     code: "FRICBT-33GT-481523Z",
-    name: "White Plastic Plate",
+    name: "Plastic Plate",
     fullname: "White Plastic Plate with Full Color (12 in. x 6 in.)",
     colors: ["Yellow"],
     type: "customs",
@@ -588,7 +588,7 @@ export const catalog = [
   },
   {
     code: "FRIHPR-FMS2-516400B",
-    name: "Custom Floor Mat",
+    name: "Custom Paper Floor Mat",
     fullname: "Coated Paper Floor Mat w/black & 288 blue imprint (17 in. x 2 in.)",
     colors: ["White"],
     type: "service",
