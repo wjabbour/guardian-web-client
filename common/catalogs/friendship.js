@@ -14,7 +14,7 @@ export const catalog = [
   },
   {
     code: "FRICBT-31DC-419926Z",
-    name: "Chrome Domecal with Imprint",
+    name: "Dog Domecal with Imprint",
     fullname: "Chrome Domecal w/ 4cp imprint (2.25 in. x 2.25 in.)",
     colors: ["Chrome"],
     type: "customs",
