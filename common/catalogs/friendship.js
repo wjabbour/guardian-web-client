@@ -1,7 +1,7 @@
 export const catalog = [
     {
     code: "330128-FRIENDSHIP-31SD",
-    name: "Friendship Decal",
+    name: "     Friendship Decal",
     fullname: "Stroke Dome Decal - chrome w/black imprint (5.75 in. x 1.3 in.)",
     colors: ["Chrome"],
     type: "customs",
