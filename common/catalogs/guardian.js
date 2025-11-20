@@ -1326,7 +1326,7 @@ export const catalog = [
   },
   {
     code: "J317",
-    name: "Port Authority® Jacket",
+    name: "Port Authority® Jackets",
     fullname: "Port Authority® Core Soft Shell Jacket",
     colors: ["Black", "Battleship Grey"],
     type: "mens",
