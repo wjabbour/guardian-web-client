@@ -1,6 +1,6 @@
 export const config = {
   title: "Jcmortgage",
-  company_logo: "johns_creek_mortgage.png",
+  company_logo: "jc_mortgage.png",
   logo_placements: {
     mens: ["Left Chest","Right Chest"],
     womens: ["Left Chest","Right Chest"],
