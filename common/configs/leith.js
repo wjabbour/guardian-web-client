@@ -9,8 +9,8 @@ export const config = {
   },
   show_image_preview: true,
   embroideries: {
-    mens: ["Honda"],
-    womens: ["Honda"],
+    mens: ["Honda","GMC 3,5 Inch.EMB"],
+    womens: ["Honda","GMC 3,5 Inch.EMB"],
     tshirts: ["Holman", "Holman Driving Whats Right"],
     hat: [],
     customs: [],
