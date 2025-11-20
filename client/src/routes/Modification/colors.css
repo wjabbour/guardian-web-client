@@ -458,6 +458,10 @@
   background-color: black;
 }
 
+.Black_Solid {
+  background-color: black;
+}
+
 .Black_White{
   background-color: black;
 }
@@ -1492,6 +1496,10 @@
 
 .Sep {
   background-color: #dc73bb;
+}
+
+.Shadow_Grey {
+  background-color: rgb(56, 61, 59);
 }
 
 .Shadow_Gry_Hthr {
