@@ -1,0 +1,42 @@
+export const config = {
+  title: "Jcmortgage",
+  company_logo: "johns_creek_mortgage.png",
+  logo_placements: {
+    mens: ["Left Chest","Right Chest"],
+    womens: ["Left Chest","Right Chest"],
+    hat: [],
+    tshirts: [],
+  },
+  show_image_preview: true,
+  embroideries: {
+    hat: [],
+    mens: ["Johns Creek Mortgage.EMB"],
+    womens: ["Johns Creek Mortgage.EMB"],
+    accessory: [],
+    customs: [],
+    office: [],
+    service: [],
+    sales: [],
+    detail: [],
+    bodyshop: [],
+    parts: [],
+  },
+  email_recipients: [
+    "rgreenberg@gpcorp.com",
+    "webportalorders@gpcorp.com",
+    "shanell@gpcorp.com",
+  ],
+  stores: [
+    {
+      name: "Johns Creek Mortgage",
+      address: "6455 E Johns Crossing, Ste 350, Johns Creek, GA 30097",
+      code: "JCMOGA",
+    },    
+  ],
+  bypass_codes: ["JOHNSCREEK"],
+  server_hostname: "https://mxfj3q6m01.execute-api.us-east-1.amazonaws.com",
+  account_reps: [{ name: "Richard Greenberg", phone: "678-287-1635" }],
+  route_prefix: "/jcmortgage",
+  paypal_not_supported: true,
+  password: "JohnscreeK",
+};

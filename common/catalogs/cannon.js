@@ -180,7 +180,7 @@ export const catalog = [
     code: "F218",
     name: "Fleece Pullover #F218",
     fullname: "Port Authority® Value Fleece 1/4-Zip Pullover (F218)",
-    colors: ["Black", "Gray"],
+    colors: ["Black", "Iron Grey"],
     type: "mens",
     default_color: "Black",
     sizes: {

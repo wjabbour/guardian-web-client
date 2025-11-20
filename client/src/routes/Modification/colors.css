@@ -1170,6 +1170,10 @@
   background-color: #6c6d74;
 }
 
+.Meld_Grey_Hthr {
+  background-color: #5b5e5c;
+}
+
 .Metal_Blue_Hthr {
   background-color: #9fc5f0;
 }
@@ -1482,6 +1486,10 @@
   background-color: #dc73bb;
 }
 
+.Shady_Blue {
+  background-color: rgb(46, 66, 88);
+}
+
 .ShockBlue {
   background-color: rgb(14, 166, 212);
 }
@@ -1566,6 +1574,10 @@
   background-color: #767678;
 }
 
+.Smoked_Pearl_Gry {
+  background-color: #5d635d;
+}
+
 .Spar_Blue {
   background-color: #1d4b5e;
 }
@@ -1626,8 +1638,24 @@
   background-color: #067067;
 }
 
+.Team_Anthracite {
+  background-color: #50554e;
+}
+
+.Team_Black {
+  background-color: #1a1919;
+}
+
+.Team_Navy {
+  background-color: #0d1120;
+}
+
 .Team_Red {
   background-color: #7c2222;
+}
+
+.Team_Royal {
+  background-color: #164c9e;
 }
 
 .Team_Red_White {
