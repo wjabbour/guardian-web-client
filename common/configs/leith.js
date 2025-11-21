@@ -12,7 +12,7 @@ export const config = {
     mens: [      
       "Kia New Logo 3 Inches.EMB",
       "GMC 3,5 Inch.EMB",
-      "Honda Stacked 3 Inch 2 Inch.EMB",
+      "Honda Stacked 3 Inch x 2 Inch",
       "Lexus Stacked 3 Inches.EMB",
       "Toyota Stacked 3 Inches Wide.EMB",
       "Ford Oval 3 Inches Wide.EMB",
@@ -31,7 +31,7 @@ export const config = {
     womens: [
       "Kia New Logo 3 Inches.EMB",
       "GMC 3,5 Inch.EMB",
-      "Honda Stacked 3 Inch 2 Inch.EMB",
+      "Honda Stacked 3 Inch x 2 Inch",
       "Lexus Stacked 3 Inches.EMB",
       "Toyota Stacked 3 Inches Wide.EMB",
       "Ford Oval 3 Inches Wide.EMB",

@@ -10,8 +10,8 @@ export const config = {
   show_image_preview: true,
   embroideries: {
     hat: [],
-    mens: ["Johns Creek Mortgage.EMB"],
-    womens: ["Johns Creek Mortgage.EMB"],
+    mens: ["Johns Creek Mortgage"],
+    womens: ["Johns Creek Mortgage"],
     accessory: [],
     customs: [],
     office: [],
