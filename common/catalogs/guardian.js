@@ -1862,7 +1862,7 @@ export const catalog = [
     type: "sales",
     default_color: "White",    
     sizes: {
-      "# packs": 0.0,
+      "# packs": 0.00,
     },
   }, 
   {
