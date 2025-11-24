@@ -466,6 +466,10 @@
   background-color: black;
 }
 
+.Black_Twist {
+  background-color: rgb(87, 86, 86);
+}
+
 .Black_White {
   background-color: black;
 }
@@ -782,6 +786,10 @@
   background-color: rgb(99, 96, 96);
 }
 
+.Drk_Ryl_Twst {
+  background-color: #637cbe;
+}
+
 .Dec {
   background-color: #0d3403;
 }
@@ -804,6 +812,10 @@
 
 .Deep_Red {
   background-color: #a81212;
+}
+
+.Deep_Royal {
+  background-color: #241ba3;
 }
 
 .Deep_Smoke {
@@ -946,6 +958,10 @@
   background-color: #9e774f;
 }
 
+.Gardenia {
+  background-color: #e0e2c0;
+}
+
 .Gorge_Green {
   background-color: #025225;
 }
@@ -1022,6 +1038,10 @@
   background-color: #ffe102;
 }
 
+.Hthrd_Charcoal {
+  background-color: #3c3e3f;
+}
+
 .HthrGry {
   background-color: #a2a5a7;
 }
@@ -1087,6 +1107,10 @@
 }
 
 .Light_Blue_Hthr {
+  background-color: #9bc8eb;
+}
+
+.Light_Gry_Hthr {
   background-color: #9bc8eb;
 }
 

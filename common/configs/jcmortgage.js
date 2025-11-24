@@ -33,10 +33,10 @@ export const config = {
       code: "JCMOGA",
     },    
   ],
-  bypass_codes: ["JOHNSCREEK"],
+  bypass_codes: ["JCMORTGAGE"],
   server_hostname: "https://mxfj3q6m01.execute-api.us-east-1.amazonaws.com",
   account_reps: [{ name: "Richard Greenberg", phone: "678-287-1635" }],
   route_prefix: "/jcmortgage",
   paypal_not_supported: true,
-  password: "JohnscreeK",
+  password: "JcmortgagE",
 };
