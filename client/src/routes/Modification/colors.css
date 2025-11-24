@@ -466,35 +466,35 @@
   background-color: black;
 }
 
-.Black_White{
+.Black_White {
   background-color: black;
 }
 
-.Blk_Char{
+.Blk_Char {
   background-color: black;
 }
 
-.Blk_Char{
+.Blk_Char {
   background-color: black;
 }
 
-.Blk_Graphite{
+.Blk_Graphite {
   background-color: black;
 }
 
-.Black_Melange{
+.Black_Melange {
   background-color: black;
 }
 
-.Blk_True_Red{
+.Blk_True_Red {
   background-color: black;
 }
 
-.Blk_Yllw{
+.Blk_Yllw {
   background-color: black;
 }
 
-.Blu_Wht{
+.Blu_Wht {
   background-color: rgb(35, 84, 174);
 }
 
@@ -648,6 +648,10 @@
 
 .Charcoal_Grey {
   background-color: #464747;
+}
+
+.Chartreuse {
+  background-color: #b7c74a;
 }
 
 .Chili_Pepper {
