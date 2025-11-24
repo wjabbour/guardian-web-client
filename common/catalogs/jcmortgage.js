@@ -258,6 +258,23 @@ export const catalog = [
     },
   },
   {
+    code: "LST941",
+    name: "Port Authority® Fleece Vest #LST941",
+    fullname: "Sport-Tek® Womens Teknical Hybrid Vest (LST941)",
+    colors: ["Black","Iron Grey","Silver","True Navy","True Royal"],
+    type: "womens",
+    default_color: "Black",
+    sizes: {
+      Small: 49.99,
+      Medium: 49.99,
+      Large: 49.99,
+      XLarge: 49.99,
+      "2XLarge": 51.99,
+      "3XLarge": 53.99,
+      "4XLarge": 55.99,
+    },
+  },
+  {
     code: "LST357",
     name: "Sport-Tek® 1/4-Zip Pullover #LST357",
     fullname: "Sport-Tek® Women's PosiCharge® Competitor™ 1/4-Zip Pullover (LST357)",
@@ -344,7 +361,7 @@ export const catalog = [
     code: "LNEA228",
     name: "New Era® Power 1/2-Zip #LNEA228",
     fullname: "New Era® Women's Power 1/2-Zip (LNEA228)",
-    colors: ["Black","Shadow Gryy Hthr","True Navy"],
+    colors: ["Black","Shadow Gry Hthr","True Navy"],
     type: "womens",
     default_color: "Black",
     sizes: {
