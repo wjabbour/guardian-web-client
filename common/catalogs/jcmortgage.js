@@ -226,7 +226,7 @@ export const catalog = [
   {
     code: "DT6101",
     name: "District® Fleece Hoodie #DT6101",
-    fullname: "District® Women's V.I.T.™ Fleece Hoodie(DT6101)",
+    fullname: "District® Women's V.I.T.™ Fleece Hoodie (DT6101)",
     colors: ["Black","Deep Royal","Light Gry Hthr","White"],
     type: "womens",
     default_color: "Black",
@@ -314,7 +314,7 @@ export const catalog = [
     fullname: "Nike Women's Club Fleece Sleeve Swoosh 1/2-Zip (NKDX6720)",
     colors: ["Anthracite","Black","Drk Gry Hthr","Game Royal","Midnight Navy","White"],
     type: "womens",
-    default_color: "Black",
+    default_color: "Anthracite",
     sizes: {
       Small: 70.99,
       Medium: 70.99,

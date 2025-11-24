@@ -557,7 +557,7 @@ export const catalog = [
       "Blue Nights",
       "Brilliant Blue Hthr",
       "Federal Blue",
-      "Quiet Shade Grey Hthr",
+      "Quiet Shade Gry Hthr",
       "Quiet Shade Gry Blk",
       "Vintage Indigo Blk",
       "White",

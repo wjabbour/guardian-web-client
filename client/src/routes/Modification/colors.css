@@ -783,7 +783,7 @@
 }
 
 .Drk_Hthr_Gry {
-  background-color: rgb(99, 96, 96);
+  background-color: rgb(117, 115, 115);
 }
 
 .Drk_Ryl_Twst {
@@ -1111,7 +1111,7 @@
 }
 
 .Light_Gry_Hthr {
-  background-color: #9bc8eb;
+  background-color: #c6cfd6;
 }
 
 .LightKhaki {
@@ -1652,6 +1652,10 @@
 
 .Stone {
   background-color: #dacd93;
+}
+
+.Storm_Grey {
+  background-color: rgb(59, 58, 58);
 }
 
 .Stormy_Grey {
