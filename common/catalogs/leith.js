@@ -469,7 +469,7 @@ export const catalog = [
     code: "3198SB",
     name: "Oval Year Stickers",
     fullname: "Oval Year Stickers - Silver/Black (12/pk)",
-    colors: ["silver"], 
+    colors: ["Silver"], 
     variations: [
       "2016", 
       "2017",
@@ -484,7 +484,7 @@ export const catalog = [
       "2026",
     ],   
     type: "sales",
-    default_color: "silver",    
+    default_color: "Silver",    
     sizes: {
       "# packs": 7.99,
     },
@@ -493,7 +493,7 @@ export const catalog = [
     code: "3198BY",
     name: "Oval Year Stickers",
     fullname: "Oval Year Stickers - Black/Yellow (12/pk)",
-    colors: ["yellow"],
+    colors: ["Yellow"],
     variations: [
       "2008",
       "2009",
@@ -515,7 +515,7 @@ export const catalog = [
       "2025",
       "2026"],
     type: "sales",
-    default_color: "yellow",
+    default_color: "Yellow",
     sizes: {
       "# packs": 7.99,
     },
@@ -550,7 +550,7 @@ export const catalog = [
     code: "30SLBK",
     name: "7.5 in. Numbers - Slv/Blk",
     fullname: "7.5 in. Numbers - Silver/Black (12 per pack)",
-    colors: ["silver"],
+    colors: ["Silver"],
     variations: [
       "0",
       "1",
@@ -567,7 +567,7 @@ export const catalog = [
       "%",
     ],
     type: "sales",
-    default_color: "silver",    
+    default_color: "Silver",    
     sizes: {
       "# packs": 2.99,
     },
@@ -576,7 +576,7 @@ export const catalog = [
     code: "30GDBK",
     name: "7.5 in. Numbers - Gld/Blk",
     fullname: "7.5 in. Numbers - Gold/Black (12 per pack)",
-    colors: ["gold"],
+    colors: ["Gold"],
     variations: [
       "0",
       "1",
@@ -593,7 +593,7 @@ export const catalog = [
       "%",
     ],
     type: "sales",
-    default_color: "gold",    
+    default_color: "Gold",    
     sizes: {
       "# packs": 2.99,
     },
@@ -602,7 +602,7 @@ export const catalog = [
     code: "30CBK",
     name: "7.5 in. Numbers - Char/Blk",
     fullname: "7.5 in. Numbers - Chartreuse/Black (12 per pack)",
-    colors: ["chartreuse"],
+    colors: ["Chartreuse"],
     variations: [
       "0",
       "1",
@@ -618,7 +618,7 @@ export const catalog = [
       "%",
     ],
     type: "sales",
-    default_color: "chartreuse",    
+    default_color: "Chartreuse",    
     sizes: {
       "# packs": 2.99,
     },
@@ -627,7 +627,7 @@ export const catalog = [
     code: "30YBK",
     name: "7.5 in. Numbers - Ylw/Blk",
     fullname: "7.5 in. Numbers - Yellow/Black (12 per pack)",
-    colors: ["black"],
+    colors: ["Black"],
      variations: [
       "0",
       "1",
@@ -644,7 +644,7 @@ export const catalog = [
       "%",
     ],
     type: "sales",
-    default_color: "black",    
+    default_color: "Black",    
     sizes: {
       "# packs": 2.99,
     },
@@ -653,7 +653,7 @@ export const catalog = [
     code: "30YR",
     name: "7.5 in. Numbers - Yllw/Red",
     fullname: "7.5 in. Numbers - Yellow/Red (12 per pack)",
-    colors: ["red"],
+    colors: ["Red"],
     variations: [
       "0",
       "1",
@@ -670,7 +670,7 @@ export const catalog = [
       "%",
     ],
     type: "sales",
-    default_color: "red",    
+    default_color: "Red",    
     sizes: {
       "# packs": 2.99,
     },
@@ -679,7 +679,7 @@ export const catalog = [
     code: "30YGR",
     name: "7.5 in. Numbers - Yllw/Grn",
     fullname: "7.5 in. Numbers - Yellow/Green (12 per pack)",
-    colors: ["green"],
+    colors: ["Green"],
     variations: [
       "0",
       "1",
@@ -696,7 +696,7 @@ export const catalog = [
       "%",
     ],
     type: "sales",
-    default_color: "green",    
+    default_color: "Green",    
     sizes: {
       "# packs": 2.99,
     },
@@ -705,7 +705,7 @@ export const catalog = [
     code: "30YB",
     name: "7.5 in. Number - Yllw/Blue",
     fullname: "7.5 in. Numbers - Yellow/Blue (12 per pack)",
-    colors: ["blue"],
+    colors: ["Blue"],
     variations: [
       "0",
       "1",
@@ -722,7 +722,7 @@ export const catalog = [
       "%",
     ],
     type: "sales",
-    default_color: "blue",    
+    default_color: "Blue",    
     sizes: {
       "# packs": 2.99,
     },
@@ -731,7 +731,7 @@ export const catalog = [
     code: "30WB",
     name: "7.5 in. Number - Wht/Blue",
     fullname: "7.5 in. Numbers - White/Blue (12 per pack)",
-    colors: ["blue"],
+    colors: ["Blue"],
     variations: [
       "0",
       "1",
@@ -748,7 +748,7 @@ export const catalog = [
       "%",
     ],
     type: "sales",
-    default_color: "blue",    
+    default_color: "Blue",    
     sizes: {
       "# packs": 2.99,
     },
@@ -757,7 +757,7 @@ export const catalog = [
     code: "30BLW",
     name: "7.5 in. Number - Blue/Wht",
     fullname: "7.5 in. Numbers - Blue/White (12 per pack)",
-    colors: ["white"],
+    colors: ["Blue"],
     variations: [
       "0",
       "1",
@@ -774,7 +774,7 @@ export const catalog = [
       "%",
     ],
     type: "sales",
-    default_color: "white",    
+    default_color: "Blue",    
     sizes: {
       "# packs": 2.99,
     },
@@ -783,7 +783,7 @@ export const catalog = [
     code: "30RW",
     name: "7.5 in. Numbers - Red/Wht",
     fullname: "7.5 in. Numbers - Red/White (12 per pack)",
-    colors: ["red"],
+    colors: ["Red"],
     variations: [
       "0",
       "1",
@@ -800,7 +800,7 @@ export const catalog = [
       "%",
     ],
     type: "sales",
-    default_color: "red",    
+    default_color: "Red",    
     sizes: {
       "# packs": 2.99,
     },
