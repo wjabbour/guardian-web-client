@@ -884,4 +884,43 @@ export const catalog = [
       1000: 0.55,
     },
   },
+  {
+    code: "LEILRA-34PE-515367A",
+    name: "Black Plastic Frame",
+    fullname: "Black Plastic Frame w/white imprint",
+    description: "Sold in quantities of 1000. Enter '1' for one box of 1000 frames.",
+    colors: ["Black"],
+    type: "customs",
+    default_color: "Black",
+    supportedStores: ["LEILRA"],
+    sizes: {
+      1000: 0.55,
+    },
+  },
+  {
+    code: "LEINCA-34PE-515370A",
+    name: "Black Plastic Frame",
+    fullname: "Black Plastic Frame w/white imprint",
+    description: "Sold in quantities of 1000. Enter '1' for one box of 1000 frames.",
+    colors: ["Black"],
+    type: "customs",
+    default_color: "Black",
+    supportedStores: ["LEINCA"],
+    sizes: {
+      1000: 0.55,
+    },
+  },
+  {
+    code: "LEITRL-34PE-515300A",
+    name: "Black Plastic Frame",
+    fullname: "Black Plastic Frame w/white imprint",
+    description: "Sold in quantities of 1000. Enter '1' for one box of 1000 frames.",
+    colors: ["Black"],
+    type: "customs",
+    default_color: "Black",
+    supportedStores: ["LEITRL"],
+    sizes: {
+      1000: 0.55,
+    },
+  },
 ];
