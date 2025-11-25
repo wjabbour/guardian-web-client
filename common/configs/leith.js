@@ -58,6 +58,11 @@ export const config = {
   ],
   stores: [
     {
+      name: "Leith Corporate Headquarters",
+      address: "8005 Capital Blvd, Raleigh, NC 27616",
+      code: "LEICRA",
+    },
+    {
       name: "Chris Leith Automotive",
       address: "PO Box 1707, Wake Forest, NC 27588",
       code: "CHRIWA",
@@ -83,7 +88,7 @@ export const config = {
       code: "LEITR2",
     },
     {
-      name: "Leith CDJR",
+      name: "Leith CDJR Aberdeen",
       address: "11220 N. US HWY 15 501 N, Aberdeen, NC 27603",
       code: "LEICAB",
     },
@@ -101,12 +106,7 @@ export const config = {
       name: "Leith Chrysler Jeep Raleigh",
       address: "5500 Capital Blvd, Raleigh, NC 27616",
       code: "LEICRB",
-    },
-    {
-      name: "Leith Corporate Headquarters",
-      address: "8005 Capital Blvd, Raleigh, NC 27616",
-      code: "LEICRA",
-    },
+    },    
     {
       name: "Leith Ford",
       address: "PO Box 1809, Wendell, NC 27591",
@@ -146,7 +146,12 @@ export const config = {
       name: "Leith Toyota",
       address: "8005 Capital Blvd, Raleigh, NC 27616",
       code: "LEITRL",
-    }, 
+    },
+    {
+      name: "Leith Vinfast",
+      address: "200 Auto Park Blvd, Cary, NC 27511",
+      code: "LEIVNC",
+    },  
     {
       name: "Leith Volkswagen Cary",
       address: "2300 Auto Park Blvd, Cary, NC 27511",
