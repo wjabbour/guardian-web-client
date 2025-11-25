@@ -103,7 +103,17 @@ export const config = {
       code: "LEIFWE",
     },
     {
-      name: "Leith Honda",
+      name: "Leith GMC",
+      address: "5320 Rolesville Rd, Wendell, NC 27591",
+      code: "LEIGWE",
+    },
+    {
+      name: "Leith Honda Aberdeen",
+      address: "11045 US-15 #501, Aberdeen, NC 28315",
+      code: "LEIHAB",
+    },
+    {
+      name: "Leith Honda Raleigh",
       address: "3940 Capital Hills Drive, Raleigh, NC 27606",
       code: "LEIHRA",
     },
