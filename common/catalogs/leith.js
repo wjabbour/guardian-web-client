@@ -310,7 +310,8 @@ export const catalog = [
       "9000",
     ],  
     type: "service",
-    default_color: "white",    
+    default_color: "white",
+    description: "Enter a qty of '1' to order one box of 1000",     
     discount: [
       { quantity: 1, price: 51.00 },
     ],    
@@ -356,6 +357,7 @@ export const catalog = [
     code: "GP200",
     name: "Key Tags",
     fullname: "Self-Protecting Key Tags #200 (250 per box)",
+    description: "Sold in quantities of 250. Enter '1' for one box of 250 tags.", 
     colors: [
       "Blue",
       "Gray",
@@ -378,6 +380,7 @@ export const catalog = [
     code: "VT400",
     name: "Stock Stickers",
     fullname: "Kleer-Back Stock Stickers Versa #400 (100 per pack)",
+    description: "Sold in quantities of 100. Enter '1' for one pack of 100 stickers.", 
     colors: ["Blue", "Green", "Orange", "Red", "White", "Yellow"],
     type: "sales",
     default_color: "Blue",    
@@ -389,6 +392,7 @@ export const catalog = [
     code: "GP546",
     name: "Deal Jackets",
     fullname: "Deal Jackets - Plain (500 per box)",
+    description: "Sold in quantities of 500. Enter '1' for one box of 500 jackets.", 
     colors: [
       "Blue",
       "Buff",
@@ -411,6 +415,7 @@ export const catalog = [
     code: "GP790",
     name: "Sticker",
     fullname: "Vehicle Not for Sale Sticker (100/pk)",
+    description: "Sold in quantities of 100. Enter '1' for one pack of 100 stickers", 
     colors: ["Yellow"],
     type: "sales",
     default_color: "Yellow",   
