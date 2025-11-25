@@ -281,6 +281,18 @@ export const catalog = [
     },
   },
   {
+    code: "55010",
+    name: "Steering Wheel Covers",
+    fullname: "Steering Wheel Covers (500/bx)",
+    description: "Enter a qty of '1' to order one box", 
+    colors: ["Plastic"],
+    type: "service",
+    default_color: "Plastic",    
+    sizes: {
+      500: 51.99,
+    },
+  },
+  {
     code: "SDNRG",
     name: "Service Hang Numbers",
     fullname: "Service Hang Numbers (1000/bx)",
@@ -327,7 +339,19 @@ export const catalog = [
     sizes: {
       "# rolls": 48.00,
     },
-  }, 
+  },
+  {
+    code: "EIT50",
+    name: "Self-Locking Key Tags",
+    fullname: "Self-Locking Key Tags (1000/pk)",
+    description: "Sold in quantities of 1000. Enter '1' for one pack of 1000 tags.", 
+    colors: ["Blue","Green","Orange","Red","Yellow","White"],
+    type: "service",
+    default_color: "Blue",
+    sizes: {
+      1000: 19.99,
+    },
+  },          
   {
     code: "GP200",
     name: "Key Tags",
@@ -429,7 +453,7 @@ export const catalog = [
   }, 
   {
     code: "3198SB",
-    name: "Oval Year Stickers",
+    name: "Oval Year Stickers - Silver",
     fullname: "Oval Year Stickers - Silver/Black (12/pk)",
     colors: ["Silver"], 
     variations: [
@@ -453,7 +477,7 @@ export const catalog = [
   },
   {
     code: "3198BY",
-    name: "Oval Year Stickers",
+    name: "Oval Year Stickers - Yellow",
     fullname: "Oval Year Stickers - Black/Yellow (12/pk)",
     colors: ["Yellow"],
     variations: [
