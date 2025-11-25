@@ -767,4 +767,52 @@ export const catalog = [
       "# packs": 2.99,
     },
   },
+  {
+    code: "LEIACA-34PE-515430A",
+    name: "Black Plastic Frame",
+    fullname: "Black Plastic Frame w/white imprint",
+    colors: ["Black"],
+    type: "customs",
+    default_color: "Black",
+    supportedStores: ["LEIACA"],
+    sizes: {
+      1000: 0.55,
+    },
+  },
+  {
+    code: "LEIARA-34PE-515519A",
+    name: "Black Plastic Frame",
+    fullname: "Black Plastic Frame w/white imprint",
+    colors: ["Black"],
+    type: "customs",
+    default_color: "Black",
+    supportedStores: ["LEIARA"],
+    sizes: {
+      1000: 0.55,
+    },
+  },
+  {
+    code: "LEICAB-34PE-515312A",
+    name: "Black Plastic Frame",
+    fullname: "Black Plastic Frame w/white imprint",
+    colors: ["Black"],
+    type: "customs",
+    default_color: "Black",
+    supportedStores: ["LEICAB"],
+    sizes: {
+      1000: 0.55,
+    },
+  },
+  {
+    code: "LEICRB-34PE-515312A",
+    name: "Black Plastic Frame",
+    fullname: "Black Plastic Frame w/white imprint",
+    colors: ["Black"],
+    type: "customs",
+    default_color: "Black",
+    supportedStores: ["LEICRB"],
+    sizes: {
+      1000: 0.55,
+    },
+  },
 ];
