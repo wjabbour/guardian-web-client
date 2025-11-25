@@ -819,4 +819,17 @@ export const catalog = [
       1000: 0.55,
     },
   },
+  {
+    code: "LEICWE-34PE-515437A",
+    name: "Black Plastic Frame",
+    fullname: "Black Plastic Frame w/white imprint",
+    description: "Sold in quantities of 1000. Enter '1' for one box of 1000 frames.",
+    colors: ["Black"],
+    type: "customs",
+    default_color: "Black",
+    supportedStores: ["LEICWE"],
+    sizes: {
+      1000: 0.55,
+    },
+  },
 ];

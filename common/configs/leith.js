@@ -29,7 +29,7 @@ export const config = {
        "VW Icon New.EMB",      
     ],
     womens: [
-      "Acura 3 Inches Wide.EMB",     
+       "Acura 3 Inches Wide.EMB",     
        "Audi Rings 3 Inch.EMB",
        "BMW Icon 2,5 Inches.EMB",
        "Chrysler Jeep Ram Dodge.EMB",
@@ -68,14 +68,29 @@ export const config = {
       code: "LEIARA",
     },
     {
+      name: "Leith Autopark Kia",
+      address: "5330 Rolesville Rd, Wendell, NC 27591",
+      code: "LEITWE",
+    },    
+    {
+      name: "Leith BMW/Mercedes",
+      address: "5603 Capital Blvd, Raleigh, NC 27616",
+      code: "LEITR2",
+    },
+    {
       name: "Leith CDJR",
       address: "11220 N. US HWY 15 501 N, Aberdeen, NC 27603",
       code: "LEICAB",
     },
     {
-      name: "Leith Chrysler Jeep",
+      name: "Leith Chrysler Jeep Cary",
       address: "400 Autopark Boulevard, Cary, NC 27511",
       code: "LEICCA",
+    },
+    {
+      name: "Leith Chrysler Jeep Raleigh",
+      address: "5500 Capital Blvd, Raleigh, NC 27619",
+      code: "LETCRA",
     },
     {
       name: "Leith Corporate Headquarters",
@@ -98,45 +113,25 @@ export const config = {
       code: "LEILRA",
     },
     {
-      name: "Leith Nissan",
-      address: "2100 Auto Park Drive, Cary, NC 27511",
-      code: "LEINCA",
-    },
-    {
-      name: "Leith Nissan",
-      address: "2000 Auto Park Drive, Cary, NC 27511",
-      code: "LEITCA",
-    },
-    {
-      name: "Leith BMW/Mercedes Benz",
-      address: "5603 Capital Blvd, Raleigh, NC 27616",
-      code: "LEITR2",
-    },
-    {
       name: "Leith Mercedes",
       address: "5601 Capital Boulevard, Raleigh, NC 27616",
       code: "LEITRA",
     },
     {
+      name: "Leith Nissan",
+      address: "2100 Auto Park Drive, Cary, NC 27511",
+      code: "LEINCA",
+    },    
+    {
       name: "Leith Toyota",
       address: "8005 Capital Blvd, Raleigh, NC 27616",
       code: "LEITRL",
-    },
-    {
-      name: "Leith Autopark Kia",
-      address: "5330 Rolesville Rd, Wendell, NC 27591",
-      code: "LEITWE",
-    },
+    },    
     {
       name: "Leith Volkswagen",
       address: "4005 Capital Hills Drive, Raleigh, NC 27616",
       code: "LEIVRA",
-    },
-    {
-      name: "Leith Chrysler Jeep",
-      address: "5500 Capital Blvd, Raleigh, NC 27619",
-      code: "LETCRA",
-    },
+    },    
   ],
   bypass_codes: ["LEITH"],
   server_hostname: "https://mxfj3q6m01.execute-api.us-east-1.amazonaws.com",
