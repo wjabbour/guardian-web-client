@@ -63,7 +63,12 @@ export const config = {
       code: "CHRIWA",
     },
     {
-      name: "Leith Acura",
+      name: "Leith Acura Cary",
+      address: "900 Autopark Blvd, Cary, NC 27511",
+      code: "LEIACA",
+    },
+    {
+      name: "Leith Acura Raleigh",
       address: "2300 Capital Summit Ct, Raleigh, NC 27616",
       code: "LEIARA",
     },
@@ -83,14 +88,19 @@ export const config = {
       code: "LEICAB",
     },
     {
+      name: "Leith CDJR Wendell",
+      address: "5310 Rolesville Rd, Wendell, NC 27591",
+      code: "LEICWE",
+    },
+    {
       name: "Leith Chrysler Jeep Cary",
       address: "400 Autopark Boulevard, Cary, NC 27511",
       code: "LEICCA",
     },
     {
       name: "Leith Chrysler Jeep Raleigh",
-      address: "5500 Capital Blvd, Raleigh, NC 27619",
-      code: "LETCRA",
+      address: "5500 Capital Blvd, Raleigh, NC 27616",
+      code: "LEICRB",
     },
     {
       name: "Leith Corporate Headquarters",
@@ -136,9 +146,14 @@ export const config = {
       name: "Leith Toyota",
       address: "8005 Capital Blvd, Raleigh, NC 27616",
       code: "LEITRL",
-    },    
+    }, 
     {
-      name: "Leith Volkswagen",
+      name: "Leith Volkswagen Cary",
+      address: "2300 Auto Park Blvd, Cary, NC 27511",
+      code: "LEIVCA",
+    },   
+    {
+      name: "Leith Volkswagen Raleigh",
       address: "4005 Capital Hills Drive, Raleigh, NC 27616",
       code: "LEIVRA",
     },    
