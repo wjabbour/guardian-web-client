@@ -792,7 +792,7 @@ export const catalog = [
     },
   },
   {
-    code: "LEICAB-34PE-515312A",
+    code: "LEICAB-34PE-515438A",
     name: "Black Plastic Frame",
     fullname: "Black Plastic Frame w/white imprint",
     colors: ["Black"],
