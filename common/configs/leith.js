@@ -8,6 +8,7 @@ export const config = {
     tshirts: ["Left Chest", "Right Chest","Yoke","Left Sleeve","Right Sleeve"],
   },
   show_image_preview: true,
+  enable_customs_store_picker: true,
   embroideries: {
     mens: [  
        "Acura 3 Inches Wide.EMB",     
