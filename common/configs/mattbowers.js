@@ -22,6 +22,7 @@ export const config = {
       "MB",         
       "Matt B Ford Met Blue",      
       "MB Flag",
+      "Matt Bowers CDJR",
                  
     ],
     womens: [
@@ -35,6 +36,7 @@ export const config = {
       "MB",         
       "Matt B Ford Met Blue",      
       "MB Flag",
+      "Matt Bowers CDJR",
     ],
     tshirts: [
       "Matt B Ford Metairie",
@@ -47,6 +49,7 @@ export const config = {
       "MB",         
       "Matt B Ford Met Blue",      
       "MB Flag",
+      "Matt Bowers CDJR",
     ],
     hat:  [
       "Matt B Ford Metairie",
@@ -58,7 +61,8 @@ export const config = {
       "MB Hyundai Slidell", 
       "MB",         
       "Matt B Ford Met Blue",      
-      "MB Flag", 
+      "MB Flag",
+      "Matt Bowers CDJR", 
     ],
     customs: [],
     office: [],
