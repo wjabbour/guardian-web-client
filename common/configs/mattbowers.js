@@ -22,8 +22,7 @@ export const config = {
       "MB Chevy Slidell", 
       "MB Flag",
       "MB Ford Metairie",    
-      "MB Hyundai Slidell", 
-           
+      "MB Hyundai Slidell",           
     ],
     womens: [
       "Matt B Ford Metairie",

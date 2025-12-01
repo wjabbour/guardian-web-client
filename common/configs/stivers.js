@@ -32,6 +32,7 @@ export const config = {
       "Stivers Ford Birmingham",
       "Stivers Montgomery",
       "Stivers Prattville",
+      "Lincoln 1,97 Inch.EMB",
     ],
     womens: [
       "Stivers",
@@ -42,6 +43,7 @@ export const config = {
       "Stivers Ford Birmingham",
       "Stivers Montgomery",
       "Stivers Prattville",
+      "Lincoln 1,97 Inch.EMB",
     ],
     accessory: [
       "Ford",
