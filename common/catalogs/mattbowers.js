@@ -118,7 +118,7 @@ export const catalog = [
   },
   {
     code: "CP80",
-    name: "Port & Co™ Six-Panel Cap",
+    name: "Port & Co™ Six-Panel Cap #CP80",
     fullname: "Port & Co™ Six-Panel Twill Cap",
     colors: [      
       "Black",      
@@ -187,8 +187,8 @@ export const catalog = [
   },
   {
     code: "64000",
-    name: "Port & Company® Tee #64000",
-    fullname: "Port & Company® Essential Tee (64000)",
+    name: "Gildan Softstyle® T-Shirt #64000",
+    fullname: "Gildan Softstyle® T-Shirt (64000)",
     colors: [
       "Black",      
       "Dark Heather",      
