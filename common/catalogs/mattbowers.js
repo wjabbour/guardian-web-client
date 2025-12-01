@@ -442,8 +442,8 @@ export const catalog = [
   },
   {
     code: "ST650",
-    name: "Sport-Tek® Polo Shirt",
-    fullname: "Sport-Tek® Micropique Polo",
+    name: "Sport-Tek® Polo Shirt #ST650",
+    fullname: "Sport-Tek® Sport-Wick Micropique Polo (ST650)",
     colors: [
       "Black",     
       "Grey Concrete",
