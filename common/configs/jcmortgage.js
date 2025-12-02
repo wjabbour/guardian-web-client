@@ -2,17 +2,18 @@ export const config = {
   title: "Jcmortgage",
   company_logo: "jc_mortgage.png",
   logo_placements: {
-    mens: ["Left Chest","Right Chest"],
-    womens: ["Left Chest","Right Chest"],
-    hat: [],
+    mens: ["Left Chest"],
+    womens: ["Left Chest"],
+    hat: ["Front Center"],
     tshirts: [],
+    accessory: ["Front Center-Bag","Bottom Right Corner-Towel"]
   },
   show_image_preview: true,
   embroideries: {
-    hat: [],
+    hat: ["Johns Creek Mortgage"],
     mens: ["Johns Creek Mortgage"],
     womens: ["Johns Creek Mortgage"],
-    accessory: [],
+    accessory: ["Johns Creek Mortgage"],
     customs: [],
     office: [],
     service: [],
