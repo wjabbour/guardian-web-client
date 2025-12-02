@@ -814,6 +814,10 @@
   background-color: rgb(4, 16, 45);
 }
 
+.DeepNavy {
+  background-color: rgb(4, 16, 45);
+}
+
 .Deep_Navywt {
   background-color: rgb(29, 40, 66);
 }
@@ -1470,6 +1474,10 @@
   background-color: #294366;
 }
 
+.RichNavy {
+  background-color: #2d3549;
+}
+
 .Rich_Red {
   background-color: #b90808;
 }
@@ -1810,6 +1818,10 @@
   background-color: #0a0a0a;
 }
 
+.TrueKhaki {
+  background-color: #a8a47e;
+}
+
 .True_Navy {
   background-color: #021b40;
 }
@@ -1819,6 +1831,10 @@
 }
 
 .True_Navy_White {
+  background-color: #0e213d;
+}
+
+.TrueNavy {
   background-color: #0e213d;
 }
 
@@ -1923,7 +1939,7 @@
 }
 
 .Woodland_Brown {
-  background-color: #b86818;
+  background-color: #8a6642;
 }
 
 .Woodland_Camo {

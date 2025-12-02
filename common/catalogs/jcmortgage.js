@@ -223,6 +223,22 @@ export const catalog = [
     },
   },
   {
+    code: "NL9307",
+    name: "Next Level Apparel® Hoodie #NL9307",
+    fullname: "Next Level Apparel® Heavyweight Hoodie (NL9307)",
+    colors: ["Black","Bone","HthrGry","Midnight Navy","Tan"],
+    type: "womens",
+    default_color: "Black",
+    sizes: {
+      Small: 46.00,
+      Medium: 46.00,
+      Large: 46.00,
+      XLarge: 46.00,
+      "2XLarge": 48.00,
+      "3XLarge": 50.00,      
+    },
+  },
+  {
     code: "NEA137",
     name: "New Era® Tri-Blend Hoodie #NEA137",
     fullname: "New Era® Tri-Blend Hoodie (NEA137)",
@@ -671,7 +687,7 @@ export const catalog = [
   },
    {
     code: "BG226",
-    name: "Port Authority® Daily Commute Backpack #BG226",
+    name: "Port Authority® Backpack #BG226",
     fullname: "Port Authority® Daily Commute Backpack (BG226)",
     colors: ["Black","Grey Smoke"],
     type: "accessory",
@@ -682,7 +698,7 @@ export const catalog = [
   },
   {
     code: "BG428",
-    name: "Port Authority® Cotton Canvas Shopper Tote #BG428",
+    name: "Port Authority® Shopper Tote #BG428",
     fullname: "Port Authority® Cotton Canvas Shopper Tote (BG428)",
     colors: ["Deep Black","Natural"],
     type: "accessory",
@@ -709,6 +725,55 @@ export const catalog = [
     default_color: "Black",
     sizes: {
       OSFA: 19.00,
+    },
+  },
+  {
+    code: "C402",
+    name: "Port Authority Trucker Cap #C402",
+    fullname: "Port Authority® Snapback Trucker Cap (C402)",
+    colors: [
+      "Black",
+      "Black GreySteel",
+      "Hthrgry PatriotBlue",
+      "PatriotBlue White",
+      "TrueNavy White",
+      "RichNavy TrueKhaki",
+      "Woodland Brown",
+      "White"
+    ],
+    type: "hat",
+    halfColors: [
+      'Black GreySteel',
+      'Hthrgry PatriotBlue',
+      'PatriotBlue White',
+      'TrueNavy White',
+      'RichNavy TrueKhaki'
+    ],
+    default_color: "Black",    
+    sizes: {
+      OSFA: 21.00,
+    },
+  },
+  {
+    code: "NE215",
+    name: "New Era® 9TWENTY® Snapback Cap #NE215",
+    fullname: "New Era® 9TWENTY® Unstructured Mesh Snapback Cap (NE215)",
+    colors: [
+      "Black Stone",
+      "DeepNavy Stone",
+      "Graphite Stone",
+      "Royal Stone",      
+    ],
+    type: "hat",
+    halfColors: [
+      'Black Stone',
+      'DeepNavy Stone',
+      'Graphite Stone',
+      'Royal Stone',      
+    ],
+    default_color: "Black Stone",    
+    sizes: {
+      OSFA: 27.00,
     },
   },
 ]
