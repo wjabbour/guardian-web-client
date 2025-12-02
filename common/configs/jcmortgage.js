@@ -6,7 +6,7 @@ export const config = {
     womens: ["Left Chest"],
     hat: ["Front Center"],
     tshirts: [],
-    accessory: ["Front Center-Bag","Bottom Right Corner-Towel"]
+    accessory: ["Front Center - Bag","Bottom Right Corner-Blanket/Towel"]
   },
   show_image_preview: true,
   embroideries: {

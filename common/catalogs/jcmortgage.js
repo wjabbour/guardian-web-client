@@ -49,7 +49,7 @@ export const catalog = [
   },
   {
     code: "838957",
-    name: "Nike Women's Polo $69.99",
+    name: "Nike Dri-FIT Polo $69.99",
     fullname: "Nike Women's Dri-FIT Legacy Polo (838957)",
     colors: [
       "Black",      
@@ -69,7 +69,7 @@ export const catalog = [
   },
   {
     code: "LST650",
-    name: "Sport-Tek® Microqique Polo $33.00",
+    name: "Sport-Tek® Polo $33.00",
     fullname: "Sport-Tek® Womens Micropique Polo (LST650)",
     colors: [
       "Black",      
@@ -93,7 +93,7 @@ export const catalog = [
   },
   {
     code: "ST650",
-    name: "Sport-Tek® Microqique Polo $33.00",
+    name: "Sport-Tek® Polo $33.00",
     fullname: "Sport-Tek® Micropique Polo (ST650)",
     colors: [
       "Black",      
@@ -191,7 +191,7 @@ export const catalog = [
   },
    {
     code: "LNEA500",
-    name: "New Era® Women's Hoodie $59.99",
+    name: "New Era® Hoodie $59.99",
     fullname: "New Era® Women's French Terry Pullover Hoodie (LNEA500)",
     colors: ["Black","Black Twist","Drk Ryl Twst","Lt Grph Twst","True Navy"],
     type: "womens",
@@ -274,7 +274,7 @@ export const catalog = [
   },
   {
     code: "L219",
-    name: "Port Authority® Fleece Vest $36.99",
+    name: "Port Authority® Vest $36.99",
     fullname: "Port Authority® Women's Value Fleece Vest (L219)",
     colors: ["Black","Iron Grey","True Navy","True Royal"],
     type: "womens",
@@ -291,7 +291,7 @@ export const catalog = [
   },
   {
     code: "LST941",
-    name: "Port Authority® Fleece Vest $49.99",
+    name: "Sport-Tek® Vest $49.99",
     fullname: "Sport-Tek® Womens Teknical Hybrid Vest (LST941)",
     colors: ["Black","Iron Grey","Silver","True Navy","True Royal"],
     type: "womens",
@@ -308,7 +308,7 @@ export const catalog = [
   },
   {
     code: "LST357",
-    name: "Sport-Tek® 1/4-Zip Pullover $31.99",
+    name: "Sport-Tek® 1/4-Zip $31.99",
     fullname: "Sport-Tek® Women's PosiCharge® Competitor™ 1/4-Zip Pullover (LST357)",
     colors: ["Black","Iron Grey","True Navy","True Royal","White"],
     type: "womens",
@@ -342,7 +342,7 @@ export const catalog = [
   },
   {
     code: "LK210",
-    name: "Port Authority® Wearever 1/4-Zip $44.99",
+    name: "Port Authority® 1/4-Zip $44.99",
     fullname: "Port Authority® Women's Wearever Signature Double Pique 1/4-Zip (LK210)",
     colors: ["Deep Black","Gusty Grey","River Blue Navy","Storm Grey"],
     type: "womens",
@@ -374,7 +374,7 @@ export const catalog = [
   }, 
   {
     code: "L224",
-    name: "Port Authority® 1/2-Zip Pullover $34.99",
+    name: "Port Authority® 1/2-Zip $34.99",
     fullname: "Port Authority® Women's Microfleece 1/2-Zip Pullover (L224)",
     colors: ["Black","Pearl Grey","True Navy"],
     type: "womens",
@@ -525,7 +525,7 @@ export const catalog = [
   },
   {
     code: "OG813",
-    name: "OGIO® Luuma 1/2-Zip Fleece $68.99",
+    name: "OGIO® Luuma 1/2-Zip $68.99",
     fullname: "OGIO® Luuma 1/2-Zip Fleece (OG813)",
     colors: ["Blacktop","Pearl Grey Heather","River Blue Navy"],
     type: "mens",
@@ -643,7 +643,7 @@ export const catalog = [
   },
   {
     code: "93023",
-    name: "OGIO® Slim Brief $52.00",
+    name: "OGIO® Slim Briefcase $52.00",
     fullname: "OGIO® Slim Brief (93023)",
     colors: ["Blacktop"],
     type: "accessory",
@@ -698,7 +698,7 @@ export const catalog = [
   },
   {
     code: "BG428",
-    name: "Port Authority® Shopper Tote $19.00",
+    name: "Port Authority® Tote $19.00",
     fullname: "Port Authority® Cotton Canvas Shopper Tote (BG428)",
     colors: ["Deep Black","Natural"],
     type: "accessory",
