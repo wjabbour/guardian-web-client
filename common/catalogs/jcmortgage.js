@@ -734,7 +734,7 @@ export const catalog = [
     colors: [
       "Black",
       "Black GreySteel",
-      "Hthrgry PatriotBlue",
+      "HthrGry PatriotBlue",
       "PatriotBlue White",
       "TrueNavy White",
       "RichNavy TrueKhaki",
@@ -744,7 +744,7 @@ export const catalog = [
     type: "hat",
     halfColors: [
       'Black GreySteel',
-      'Hthrgry PatriotBlue',
+      'HthrGry PatriotBlue',
       'PatriotBlue White',
       'TrueNavy White',
       'RichNavy TrueKhaki'
