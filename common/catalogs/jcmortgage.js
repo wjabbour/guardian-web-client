@@ -49,7 +49,7 @@ export const catalog = [
   },
   {
     code: "838957",
-    name: "Nike Dri-FIT Polo $69.99",
+    name: "Nike® Dri-FIT Polo $69.99",
     fullname: "Nike Women's Dri-FIT Legacy Polo (838957)",
     colors: [
       "Black",      
@@ -140,8 +140,8 @@ export const catalog = [
   },
   {
     code: "CJ1614",
-    name: "Nike Club Fleece Crew $59.99",
-    fullname: "Nike Club Fleece Crew (CJ1614)",
+    name: "Nike® Club Fleece Crew $59.99",
+    fullname: "Nike® Club Fleece Crew (CJ1614)",
     colors: ["Anthracite","Black","Drk Gry Hthr","Navy","Royal","White"],
     type: "mens",
     default_color: "Anthracite",
@@ -191,7 +191,7 @@ export const catalog = [
   },
    {
     code: "LNEA500",
-    name: "New Era® Hoodie $59.99",
+    name: "New Era® Terry Hoodie $59.99",
     fullname: "New Era® Women's French Terry Pullover Hoodie (LNEA500)",
     colors: ["Black","Black Twist","Drk Ryl Twst","Lt Grph Twst","True Navy"],
     type: "womens",
@@ -359,8 +359,8 @@ export const catalog = [
   }, 
   {
     code: "NKDX6720",
-    name: "Nike Fleece 1/2-Zip $70.99",
-    fullname: "Nike Women's Club Fleece Sleeve Swoosh 1/2-Zip (NKDX6720)",
+    name: "Nike® Fleece 1/2-Zip $70.99",
+    fullname: "Nike® Women's Club Fleece Sleeve Swoosh 1/2-Zip (NKDX6720)",
     colors: ["Anthracite","Black","Drk Gry Hthr","Game Royal","Midnight Navy","White"],
     type: "womens",
     default_color: "Anthracite",
@@ -475,8 +475,8 @@ export const catalog = [
   },
   {
     code: "CN9492",
-    name: "Nike 1/4-Zip Fleece $67.99",
-    fullname: "Nike Therma-FIT 1/4-Zip Fleece (CN9492)",
+    name: "Nike® 1/4-Zip Fleece $67.99",
+    fullname: "Nike® Therma-FIT 1/4-Zip Fleece (CN9492)",
     colors: ["Team Anthracite","Team Black","Team Navy","Team Royal"],
     type: "mens",
     default_color: "Team Anthracite",
@@ -559,8 +559,8 @@ export const catalog = [
   },
   {
     code: "NKDX6716",
-    name: "Nike Full-Zip Jacket $98.99",
-    fullname: "Nike Storm-FIT Full-Zip Jacket (NKDX6716)",
+    name: "Nike® Full-Zip Jacket $98.99",
+    fullname: "Nike® Storm-FIT Full-Zip Jacket (NKDX6716)",
     colors: ["Anthracite","Black","College Navy","Stone"],
     type: "mens",
     default_color: "Anthracite",
