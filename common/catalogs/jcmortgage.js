@@ -1,7 +1,7 @@
 export const catalog = [
     {
     code: "NKDC1991",
-    name: "Nike® Dri-FIT Polo #NKDC1991",
+    name: "Nike® Dri-FIT Polo $49.99",
     fullname: "Nike® Women's Dri-FIT Micro Pique 2.0 Polo (NKDC1991)",
      colors: [
         "Anthracite", 
@@ -24,7 +24,7 @@ export const catalog = [
   },
   {
     code: "NKDC1963",
-    name: "Nike® Dri-FIT Polo #NKDC1963",
+    name: "Nike® Dri-FIT Polo $49.99",
     fullname: "Nike® Dri-FIT Micro Pique 2.0 Polo (NKDC1963)",
     colors: [
         "Anthracite", 
@@ -49,7 +49,7 @@ export const catalog = [
   },
   {
     code: "838957",
-    name: "Nike Women's Polo #838957",
+    name: "Nike Women's Polo $69.99",
     fullname: "Nike Women's Dri-FIT Legacy Polo (838957)",
     colors: [
       "Black",      
@@ -69,7 +69,7 @@ export const catalog = [
   },
   {
     code: "LST650",
-    name: "Sport-Tek® Microqique Polo #LST650",
+    name: "Sport-Tek® Microqique Polo $33.00",
     fullname: "Sport-Tek® Womens Micropique Polo (LST650)",
     colors: [
       "Black",      
@@ -93,7 +93,7 @@ export const catalog = [
   },
   {
     code: "ST650",
-    name: "Sport-Tek® Microqique Polo #ST650",
+    name: "Sport-Tek® Microqique Polo $33.00",
     fullname: "Sport-Tek® Micropique Polo (ST650)",
     colors: [
       "Black",      
@@ -117,7 +117,7 @@ export const catalog = [
   },  
   {
     code: "TM1MU410",
-    name: "TravisMathew Polo #TM1MU410",
+    name: "TravisMathew Polo $74.99",
     fullname: "TravisMathew Coto Performance Polo (TM1MU410)",
     colors: [
         "Black",
@@ -140,7 +140,7 @@ export const catalog = [
   },
   {
     code: "CJ1614",
-    name: "Nike Club Fleece Crew #CJ1614",
+    name: "Nike Club Fleece Crew $59.99",
     fullname: "Nike Club Fleece Crew (CJ1614)",
     colors: ["Anthracite","Black","Drk Gry Hthr","Navy","Royal","White"],
     type: "mens",
@@ -157,7 +157,7 @@ export const catalog = [
   },
   {
     code: "PC90",
-    name: "Port & Co™ Sweatshirt #PC90",
+    name: "Port & Co™ Sweatshirt $25.99",
     fullname: "Port & Co™ Essential Fleece Crewneck Sweatshirt (PC90)",
     colors: ["Ash","Athletic Heather","Charcoal","Jet Black","Navy","Royal","White"],
     type: "mens",
@@ -174,7 +174,7 @@ export const catalog = [
   },
   {
     code: "DT6105",
-    name: "District® Fleece Crew #DT6105",
+    name: "District® Fleece Crew $31.99",
     fullname: "District® Women's V.I.T.™ Fleece Crew (DT6105)",
     colors: ["Black","Gardenia","Hthrd Charcoal","Light Gry Hthr"],
     type: "womens",
@@ -191,7 +191,7 @@ export const catalog = [
   },
    {
     code: "LNEA500",
-    name: "New Era® Women's Hoodie #LNEA500",
+    name: "New Era® Women's Hoodie $59.99",
     fullname: "New Era® Women's French Terry Pullover Hoodie (LNEA500)",
     colors: ["Black","Black Twist","Drk Ryl Twst","Lt Grph Twst","True Navy"],
     type: "womens",
@@ -208,7 +208,7 @@ export const catalog = [
   },
   {
     code: "NL9307",
-    name: "Next Level Apparel® Hoodie #NL9307",
+    name: "Next Level Apparel® Hoodie $46.00",
     fullname: "Next Level Apparel® Heavyweight Hoodie (NL9307)",
     colors: ["Black","Bone","HthrGry","Midnight Navy","Tan"],
     type: "mens",
@@ -224,7 +224,7 @@ export const catalog = [
   },
   {
     code: "NL9307",
-    name: "Next Level Apparel® Hoodie #NL9307",
+    name: "Next Level Apparel® Hoodie $46.00",
     fullname: "Next Level Apparel® Heavyweight Hoodie (NL9307)",
     colors: ["Black","Bone","HthrGry","Midnight Navy","Tan"],
     type: "womens",
@@ -240,7 +240,7 @@ export const catalog = [
   },
   {
     code: "NEA137",
-    name: "New Era® Tri-Blend Hoodie #NEA137",
+    name: "New Era® Tri-Blend Hoodie $35.99",
     fullname: "New Era® Tri-Blend Hoodie (NEA137)",
     colors: ["Black Solid","Graphite","Shadow Grey","True Navy"],
     type: "mens",
@@ -257,7 +257,7 @@ export const catalog = [
   },
   {
     code: "DT6101",
-    name: "District® Fleece Hoodie #DT6101",
+    name: "District® Fleece Hoodie $34.99",
     fullname: "District® Women's V.I.T.™ Fleece Hoodie (DT6101)",
     colors: ["Black","Deep Royal","Light Gry Hthr","White"],
     type: "womens",
@@ -274,7 +274,7 @@ export const catalog = [
   },
   {
     code: "L219",
-    name: "Port Authority® Fleece Vest #L219",
+    name: "Port Authority® Fleece Vest $36.99",
     fullname: "Port Authority® Women's Value Fleece Vest (L219)",
     colors: ["Black","Iron Grey","True Navy","True Royal"],
     type: "womens",
@@ -291,7 +291,7 @@ export const catalog = [
   },
   {
     code: "LST941",
-    name: "Port Authority® Fleece Vest #LST941",
+    name: "Port Authority® Fleece Vest $49.99",
     fullname: "Sport-Tek® Womens Teknical Hybrid Vest (LST941)",
     colors: ["Black","Iron Grey","Silver","True Navy","True Royal"],
     type: "womens",
@@ -308,7 +308,7 @@ export const catalog = [
   },
   {
     code: "LST357",
-    name: "Sport-Tek® 1/4-Zip Pullover #LST357",
+    name: "Sport-Tek® 1/4-Zip Pullover $31.99",
     fullname: "Sport-Tek® Women's PosiCharge® Competitor™ 1/4-Zip Pullover (LST357)",
     colors: ["Black","Iron Grey","True Navy","True Royal","White"],
     type: "womens",
@@ -325,7 +325,7 @@ export const catalog = [
   },
   {
     code: "LOG861",
-    name: "OGIO® Transcend 1/4-Zip #LOG861",
+    name: "OGIO® Transcend 1/4-Zip $64.99",
     fullname: "OGIO® Women's Transcend 1/4-Zip (LOG861)",
     colors: ["Blacktop","Opal White","River Blue Navy","Tarmac Grey"],
     type: "womens",
@@ -342,7 +342,7 @@ export const catalog = [
   },
   {
     code: "LK210",
-    name: "Port Authority® Wearever 1/4-Zip #LK210",
+    name: "Port Authority® Wearever 1/4-Zip $44.99",
     fullname: "Port Authority® Women's Wearever Signature Double Pique 1/4-Zip (LK210)",
     colors: ["Deep Black","Gusty Grey","River Blue Navy","Storm Grey"],
     type: "womens",
@@ -359,7 +359,7 @@ export const catalog = [
   }, 
   {
     code: "NKDX6720",
-    name: "Nike Fleece 1/2-Zip #NKDX6720",
+    name: "Nike Fleece 1/2-Zip $70.99",
     fullname: "Nike Women's Club Fleece Sleeve Swoosh 1/2-Zip (NKDX6720)",
     colors: ["Anthracite","Black","Drk Gry Hthr","Game Royal","Midnight Navy","White"],
     type: "womens",
@@ -374,7 +374,7 @@ export const catalog = [
   }, 
   {
     code: "L224",
-    name: "Port Authority® 1/2-Zip Pullover #L224",
+    name: "Port Authority® 1/2-Zip Pullover $34.99",
     fullname: "Port Authority® Women's Microfleece 1/2-Zip Pullover (L224)",
     colors: ["Black","Pearl Grey","True Navy"],
     type: "womens",
@@ -391,7 +391,7 @@ export const catalog = [
   }, 
   {
     code: "LNEA228",
-    name: "New Era® Power 1/2-Zip #LNEA228",
+    name: "New Era® Power 1/2-Zip $46.99",
     fullname: "New Era® Women's Power 1/2-Zip (LNEA228)",
     colors: ["Black","Shadow Gry Hthr","True Navy"],
     type: "womens",
@@ -408,7 +408,7 @@ export const catalog = [
   }, 
   {
     code: "OG741",
-    name: "OGIO® Soft Shell Vest #OG741",
+    name: "OGIO® Soft Shell Vest $68.99",
     fullname: "OGIO® Kinetic Soft Shell Vest (OG741)",
     colors: ["Blacktop","River Blue Navy","Sahara"],
     type: "mens",
@@ -425,7 +425,7 @@ export const catalog = [
   },
   {
     code: "F219",
-    name: "Port Authority® Vest #F219",
+    name: "Port Authority® Vest $36.99",
     fullname: "Port Authority® Value Fleece Vest (F219)",
     colors: ["Black","Iron Grey","True Navy","True Royal"],
     type: "mens",
@@ -442,7 +442,7 @@ export const catalog = [
   },
   {
     code: "CT102286",
-    name: "Carhartt® Gilliam Vest #CT102286",
+    name: "Carhartt® Gilliam Vest $98.99",
     fullname: "Carhartt® Gilliam Vest (CT102286)",
     colors: ["Black","Navy","Shadow Grey"],
     type: "mens",
@@ -458,7 +458,7 @@ export const catalog = [
   },
   {
     code: "F218",
-    name: "Port Authority® Pullover #F218",
+    name: "Port Authority® Pullover $39.99",
     fullname: "Port Authority® Value Fleece 1/4-Zip Pullover (F218)",
     colors: ["Black","Iron Grey","True Navy"],
     type: "mens",
@@ -475,7 +475,7 @@ export const catalog = [
   },
   {
     code: "CN9492",
-    name: "Nike 1/4-Zip Fleece #CN9492",
+    name: "Nike 1/4-Zip Fleece $67.99",
     fullname: "Nike Therma-FIT 1/4-Zip Fleece (CN9492)",
     colors: ["Team Anthracite","Team Black","Team Navy","Team Royal"],
     type: "mens",
@@ -492,7 +492,7 @@ export const catalog = [
   },
   {
     code: "NF0A8ENR",
-    name: "The North Face® 1/4-Zip #NF0A8ENR",
+    name: "The North Face® 1/4-Zip $77.99",
     fullname: "The North Face® Ambition 1/4-Zip (NF0A8ENR)",
     colors: ["Meld Grey Hthr","Shady Blue","Smoked Pearl Gry","TNF Black"],
     type: "mens",
@@ -508,7 +508,7 @@ export const catalog = [
   },
   {
     code: "NEA228",
-    name: "New Era® Power 1/2-Zip #NEA228",
+    name: "New Era® Power 1/2-Zip $43.99",
     fullname: "New Era® Power 1/2-Zip (NEA228)",
     colors: ["Black","Shadow Gry Hthr","True Navy"],
     type: "mens",
@@ -525,7 +525,7 @@ export const catalog = [
   },
   {
     code: "OG813",
-    name: "OGIO® Luuma 1/2-Zip Fleece #OG813",
+    name: "OGIO® Luuma 1/2-Zip Fleece $68.99",
     fullname: "OGIO® Luuma 1/2-Zip Fleece (OG813)",
     colors: ["Blacktop","Pearl Grey Heather","River Blue Navy"],
     type: "mens",
@@ -542,7 +542,7 @@ export const catalog = [
   },
   {
     code: "OG740",
-    name: "OGIO® Kinetic Jacket #OG740",
+    name: "OGIO® Kinetic Jacket $77.99",
     fullname: "OGIO® Kinetic Soft Shell Jacket (OG740)",
     colors: ["Blacktop","River Blue Navy","Sahara"],
     type: "mens",
@@ -559,7 +559,7 @@ export const catalog = [
   },
   {
     code: "NKDX6716",
-    name: "Nike Full-Zip Jacket #NKDX6716",
+    name: "Nike Full-Zip Jacket $98.99",
     fullname: "Nike Storm-FIT Full-Zip Jacket (NKDX6716)",
     colors: ["Anthracite","Black","College Navy","Stone"],
     type: "mens",
@@ -576,7 +576,7 @@ export const catalog = [
   },
   {
     code: "J317",
-    name: "Port Authority® Jacket #J317",
+    name: "Port Authority® Jacket $47.99",
     fullname: "Port Authority® Core Soft Shell Jacket (J317)",
     colors: ["Black", "Battleship Grey","Dress Blue Navy","True Royal"],
     type: "mens",
@@ -593,7 +593,7 @@ export const catalog = [
   },
   {
     code: "L317",
-    name: "Port Authority® Jacket #L317",
+    name: "Port Authority® Jacket $47.99",
     fullname: "Port Authority® Ladies Core Soft Shell Jacket (L317)",
     colors: ["Black", "Battleship Grey","Dress Blue Navy","True Royal"],
     type: "womens",
@@ -610,7 +610,7 @@ export const catalog = [
   },
   {
     code: "TW530",
-    name: "Port Authority® Golf Towel #TW530",
+    name: "Port Authority® Golf Towel $19.00",
     fullname: "Port Authority® Grommeted Microfiber Golf Towel (TW530)",
     colors: ["Black", "Deep Smoke","Royal","True Navy","White"],
     type: "accessory",
@@ -621,7 +621,7 @@ export const catalog = [
   },
   {
     code: "TB850",
-    name: "Port Authority® Travel Blanket #TB850",
+    name: "Port Authority® Travel Blanket $35.00",
     fullname: "Port Authority® Fleece & Poly Travel Blanket (TB850)",
     colors: ["Black", "Lead Grey","True Navy","True Royal"],
     type: "accessory",
@@ -632,7 +632,7 @@ export const catalog = [
   },
   {
     code: "BP70",
-    name: "Port Authority® Picnic Blanket #BP70",
+    name: "Port Authority® Picnic Blanket $45.00",
     fullname: "Port Authority® Picnic Blanket (BP70)",
     colors: ["Grey Steel","True Black","True Royal"],
     type: "accessory",
@@ -643,7 +643,7 @@ export const catalog = [
   },
   {
     code: "93023",
-    name: "OGIO® Slim Brief #93023",
+    name: "OGIO® Slim Brief $52.00",
     fullname: "OGIO® Slim Brief (93023)",
     colors: ["Blacktop"],
     type: "accessory",
@@ -654,7 +654,7 @@ export const catalog = [
   },
   {
     code: "BG305",
-    name: "Port Authority® Computer Case #BG305",
+    name: "Port Authority® Computer Case $26.75",
     fullname: "Port Authority® Value Computer Case (BG305)",
     colors: ["Black","Dark Charcoal","Twilight Blue"],
     type: "accessory",
@@ -665,7 +665,7 @@ export const catalog = [
   },
   {
     code: "BG309",
-    name: "Port Authority® Briefcase #BG309",
+    name: "Port Authority® Briefcase $34.50",
     fullname: "Port Authority® Vector Briefcase (BG309)",
     colors: ["Grey Heather","Navy Heather"],
     type: "accessory",
@@ -676,7 +676,7 @@ export const catalog = [
   },
   {
     code: "91005",
-    name: "OGIO® Convert Pack #91005",
+    name: "OGIO® Convert Pack $90.00",
     fullname: "OGIO® Convert Pack (91005)",
     colors: ["Black","Tarmac"],
     type: "accessory",
@@ -687,7 +687,7 @@ export const catalog = [
   },
    {
     code: "BG226",
-    name: "Port Authority® Backpack #BG226",
+    name: "Port Authority® Backpack $36.00",
     fullname: "Port Authority® Daily Commute Backpack (BG226)",
     colors: ["Black","Grey Smoke"],
     type: "accessory",
@@ -698,7 +698,7 @@ export const catalog = [
   },
   {
     code: "BG428",
-    name: "Port Authority® Shopper Tote #BG428",
+    name: "Port Authority® Shopper Tote $19.00",
     fullname: "Port Authority® Cotton Canvas Shopper Tote (BG428)",
     colors: ["Deep Black","Natural"],
     type: "accessory",
@@ -709,7 +709,7 @@ export const catalog = [
   },
   {
     code: "CP80",
-    name: "Port & Co™ Six-Panel Cap #CP80",
+    name: "Port & Co™ Six-Panel Cap $19.00",
     fullname: "Port & Co™ Six-Panel Twill Cap (CP80)",
     colors: [
       "Black",      
@@ -729,7 +729,7 @@ export const catalog = [
   },
   {
     code: "C402",
-    name: "Port Authority Trucker Cap #C402",
+    name: "Port Authority Trucker Cap $21.00",
     fullname: "Port Authority® Snapback Trucker Cap (C402)",
     colors: [
       "Black",
@@ -756,7 +756,7 @@ export const catalog = [
   },
   {
     code: "NE215",
-    name: "New Era® 9TWENTY® Snapback Cap #NE215",
+    name: "New Era® 9TWENTY® Snapback Cap $27.00",
     fullname: "New Era® 9TWENTY® Unstructured Mesh Snapback Cap (NE215)",
     colors: [
       "Black Stone",
