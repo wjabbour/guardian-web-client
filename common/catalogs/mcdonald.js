@@ -44,7 +44,7 @@ export const catalog = [
     colors: ["Chrome"],
     type: "customs",
     default_color: "Chrome",
-    description: "Enter '1' for a shipment of 250, 500 or 1000 frames",
+    description: "Enter '1' for a shipment of 250, 500 or 1000 nameplates",
     discount: [
       { quantity: 250, price: .49 },  
       { quantity: 500, price: .49 }, 
@@ -63,7 +63,7 @@ export const catalog = [
     colors: ["Black"],
     type: "customs",
     default_color: "Black",
-    description: "Enter '1' for a shipment of 250, 500 or 1000 frames",
+    description: "Enter '1' for a shipment of 250, 500 or 1000 nameplates",
     discount: [
       { quantity: 250, price: .49 },  
       { quantity: 500, price: .49 }, 
@@ -82,7 +82,7 @@ export const catalog = [
     colors: ["White"],
     type: "customs",
     default_color: "White",
-    description: "Enter '1' for a shipment of 250, 500 or 1000 frames",
+    description: "Enter '1' for a shipment of 250, 500 or 1000 plates",
     discount: [
       { quantity: 250, price: .50 },  
       { quantity: 500, price: .50 }, 
@@ -101,7 +101,45 @@ export const catalog = [
     colors: ["White"],
     type: "customs",
     default_color: "White",
-    description: "Enter '1' for a shipment of 250, 500 or 1000 frames",
+    description: "Enter '1' for a shipment of 250, 500 or 1000 plates",
+    discount: [
+      { quantity: 250, price: .50 },  
+      { quantity: 500, price: .50 }, 
+      { quantity: 1000, price: .50 },     
+    ],
+    sizes: {
+      250: .50, 
+      500: .50,
+      1000: .50,      
+    },
+  },
+  {
+    code: "GENOLI-33P-513164A",
+    name: ".20 Gauge Plastic Plate",
+    fullname: ".20 Gauge White Plastic Plate",
+    colors: ["White"],
+    type: "customs",
+    default_color: "White",
+    description: "Enter '1' for a shipment of 250, 500 or 1000 plates",
+    discount: [
+      { quantity: 250, price: .50 },  
+      { quantity: 500, price: .50 }, 
+      { quantity: 1000, price: .50 },     
+    ],
+    sizes: {
+      250: .50, 
+      500: .50,
+      1000: .50,      
+    },
+  },
+  {
+    code: "MCDADE-33GT-513167Z",
+    name: ".20 Gauge Plastic Plate",
+    fullname: ".20 Gauge White Plastic Plate (4CP)",
+    colors: ["White"],
+    type: "customs",
+    default_color: "White",
+    description: "Enter '1' for a shipment of 250, 500 or 1000 plates",
     discount: [
       { quantity: 250, price: .50 },  
       { quantity: 500, price: .50 }, 
