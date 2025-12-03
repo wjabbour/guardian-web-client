@@ -4,7 +4,7 @@ export const catalog = [
     name: "Black Plastic Frame",
     fullname: "Black Plastic Frame w/white imprint",
     colors: ["Black"],
-    type: "custom",
+    type: "customs",
     default_color: "Black",
     description: "Enter '1' for a shipment of 250, 500 or 1000 frames",
     discount: [
@@ -23,7 +23,7 @@ export const catalog = [
     name: "Chrome Metal Frame",
     fullname: "Black Powder Coated Zinc Metal Frame w/ white imprint",
     colors: ["Black"],
-    type: "custom",
+    type: "customs",
     default_color: "Black",
     description: "Enter '1' for a shipment of 250, 500 or 1000 frames",
     discount: [
@@ -42,7 +42,7 @@ export const catalog = [
     name: "Chrome Plastic Nameplate",
     fullname: "Chrome-Plated Plastic Nameplates",
     colors: ["Chrome"],
-    type: "custom",
+    type: "customs",
     default_color: "Chrome",
     description: "Enter '1' for a shipment of 250, 500 or 1000 frames",
     discount: [
@@ -61,7 +61,7 @@ export const catalog = [
     name: "Black Plastic Nameplate",
     fullname: "Black Plastic Nameplates",
     colors: ["Black"],
-    type: "custom",
+    type: "customs",
     default_color: "Black",
     description: "Enter '1' for a shipment of 250, 500 or 1000 frames",
     discount: [
@@ -80,7 +80,7 @@ export const catalog = [
     name: ".20 Gauge Plastic Plate",
     fullname: ".20 Gauge White Plastic Plate",
     colors: ["White"],
-    type: "custom",
+    type: "customs",
     default_color: "White",
     description: "Enter '1' for a shipment of 250, 500 or 1000 frames",
     discount: [
@@ -99,7 +99,7 @@ export const catalog = [
     name: ".20 Gauge Plastic Plate",
     fullname: ".20 Gauge White Plastic Plate (4CP)",
     colors: ["White"],
-    type: "custom",
+    type: "customs",
     default_color: "White",
     description: "Enter '1' for a shipment of 250, 500 or 1000 frames",
     discount: [
