@@ -63,7 +63,6 @@ export default function Row({ order, editClick, isAdmin }) {
     if (!isAdmin) return;
   }
 
-  console.log(order);
   return (
     <Fragment>
       <TableRow sx={{ "& > *": { borderBottom: "unset" } }}>

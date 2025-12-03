@@ -1,6 +1,5 @@
 import styles from "./Orders.module.scss";
 import { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
 import * as http from "../../lib/http";
 import Table from "@mui/material/Table";
 import TableBody from "@mui/material/TableBody";
@@ -13,14 +12,17 @@ import Snackbar from "@mui/material/Snackbar";
 import Alert from "@mui/material/Alert";
 import Row from "./Row";
 import PasswordEntryDialog from "../../components/PasswordEntryDialog";
+import StoreSelect from "./StoreSelect";
+import { getStore, getStoreCode } from "guardian-common";
 
 export default function BasicTable() {
-  const navigate = useNavigate();
   const [orders, setOrders] = useState([]);
+  const [displayedOrders, setDisplayedOrders] = useState(orders)
   const [errorSnackbarOpen, setErrorSnackbarOpen] = useState(false);
   const [errorSnackbarText, setErrorSnackbarText] = useState("");
   const [isAdmin, setIsAdmin] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const storeOptions = [...new Set(orders.map((o) => getStore(o.company_name ?? '', o.store)))];
 
   function editClick() {
     if (!isAdmin) {
@@ -32,8 +34,21 @@ export default function BasicTable() {
     setErrorSnackbarOpen(false);
   }
 
+  function handleFilterChange (store) {
+      
+    if (!store) {
+      setDisplayedOrders([...orders])
+      return
+    }
+
+    const code = getStoreCode(orders[0].company_name, store)
+    setDisplayedOrders((prev) => {
+      return [ ...prev.filter((i) => i.store === code)]
+    })
+  }
+
   function rows() {
-    return orders.map((order) => {
+    return displayedOrders.map((order) => {
       return <Row order={order} editClick={editClick} isAdmin={isAdmin} />;
     });
   }
@@ -53,11 +68,16 @@ export default function BasicTable() {
 
       const paidOrders = orders.filter((order) => order.paid !== 0);
       setOrders(paidOrders);
+      setDisplayedOrders(paidOrders)
     });
   }, []);
 
   return (
     <div className={styles.container}>
+      <StoreSelect
+        stores={storeOptions}
+        onChange={handleFilterChange}
+      />
       <TableContainer component={Paper}>
         <Table aria-label="simple table">
           <TableHead>
