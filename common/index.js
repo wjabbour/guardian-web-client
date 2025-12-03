@@ -14,6 +14,7 @@ import { config as VaughnConfig } from "./configs/vaughn";
 import { config as FriendshipConfig } from "./configs/friendship";
 import { config as MattbowersConfig } from "./configs/mattbowers";
 import { config as JcmortgageConfig } from "./configs/jcmortgage";
+import { config as McdonaldConfig } from "./configs/mcdonald";
 
 import { catalog as CannonCatalog } from "./catalogs/cannon";
 import { catalog as GuardianCatalog } from "./catalogs/guardian";
@@ -31,6 +32,7 @@ import { catalog as VaughnCatalog } from "./catalogs/vaughn";
 import { catalog as FriendshipCatalog } from "./catalogs/friendship";
 import { catalog as MattbowersCatalog } from "./catalogs/mattbowers";
 import { catalog as JcmortgageCatalog } from "./catalogs/jcmortgage";
+import { catalog as McdonaldCatalog } from "./catalogs/mcdonald";
 
 const DEFAULT_CONFIG = {
   title: "Guardian",
@@ -56,6 +58,7 @@ const allConfigs = [
   FriendshipConfig,
   MattbowersConfig,
   JcmortgageConfig,
+  McdonaldConfig,
  
 ];
 
@@ -126,7 +129,9 @@ export function getWebCatalog() {
   } else if (url.includes("mattbowers")) {
     return MattbowersCatalog; 
   } else if (url.includes("jcmortgage")) {
-    return JcmortgageCatalog;   
+    return JcmortgageCatalog;
+  } else if (url.includes("mcdonald")) {
+    return McdonaldCatalog;      
   
   }
 }
@@ -168,6 +173,8 @@ export function getCatalog(companyName) {
       return MattbowersCatalog;
     case "Jcmortgage":
       return JcmortgageCatalog;
+    case "Mcdonald":
+      return McdonaldCatalog;
   }
 }
 
@@ -207,6 +214,8 @@ export function getWebConfigValue(val) {
     return MattbowersConfig[val];
   } else if (url.includes("jcmortgage")) {
     return JcmortgageConfig[val];
+  } else if (url.includes("mcdonald")) {
+    return McdonaldConfig[val];
 
   } else {
     // when the user is on gpc81.com landing page we need to display a string in the browser tab
@@ -246,6 +255,8 @@ export function getConfigValue(val, config) {
     case "Mattbowers":
       return MattbowersConfig[val];
     case "Jcmortgage":
-      return JcmortgageConfig[val];      
+      return JcmortgageConfig[val]; 
+    case "Mcdonald":
+      return McdonaldConfig[val];     
   }
 }

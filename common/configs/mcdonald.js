@@ -1,0 +1,113 @@
+export const config = {
+  title: "Mcdonald",
+  company_logo: "mcdonald.png",
+  logo_placements: {
+    mens: [],
+    womens: [],
+    hat: [],
+    tshirts: [],
+    accessory: [],
+  },
+  show_image_preview: true,
+  embroideries: {
+    hat: [],
+    mens: [],
+    womens: [],
+    accessory: [],
+    customs: [],
+    office: [],
+    service: [],
+    sales: [],
+    detail: [],
+    bodyshop: [],
+    parts: [],
+  },
+  email_recipients: [
+    "jcallahan@gpcorp.com",
+    "webportalorders@gpcorp.com",
+    "shanell@gpcorp.com",
+  ],
+  stores: [
+    {
+      name: "Audi Parker",
+      address: "18455 Ponderosa Drive, Parker, CO 80134",
+      code: "AUDPCO",
+    },
+    {
+      name: "Genesis of Littleton",
+      address: "6500 South Broadway, Littleton, CO 80121",
+      code: "GENOLI",
+    }, 
+    {
+      name: "McDonald Audi - Denver",
+      address: "6060 South Broadway, Denver, CO 80121",
+      code: "MCDADE",
+    }, 
+    {
+      name: "McDonald Automotive - Corp. Office",
+      address: "6060 South Broadway, Littleton, CO 80121",
+      code: "MCDALI",
+    }, 
+    {
+      name: "McDonald Detail Center - Angel's",
+      address: "8041 South Grant Way, LIttleton, CO 80122",
+      code: "MCDDLI",
+    }, 
+    {
+      name: "McDonald Hyundai",
+      address: "1400 Plum Valley Lane, Highlands Ranch, CO 80129",
+      code: "MCDHLI",
+    },
+    {
+      name: "McDonald Mazda - West",
+      address: "10345 Colfaz Ave, Lakewood, CO 80214",
+      code: "MCDMLA",
+    },
+    {
+      name: "McDonald Mazda - South",
+      address: "6100 S. Broadway, Littleton, CO 80121",
+      code: "MCDMLI",
+    }, 
+    {
+      name: "McDonald Mazda - North",
+      address: "1461 Vista View Drive, Longmont, CO 80504",
+      code: "MCDMLO",
+    },
+    {
+      name: "McDonald Nissan - Highlands Ranch",
+      address: "1320 Plum Valley Lane, Highlands Ranch, CO 80129",
+      code: "MCDNHI",
+    }, 
+    {
+      name: "McDonald Toyota - Ft. Morgan",
+      address: "1209 Main Street, Fort Morgan, CO 80701",
+      code: "MCDTCO",
+    },
+    {
+      name: "McDonald Toyota - Greeley",
+      address: "4732 West 26th Street, Greeley, CO 80634",
+      code: "MCDTGR",
+    },
+    {
+      name: "McDonald Volkswagen",
+      address: "6000 S Broadway, Littleton, CO 80121",
+      code: "MCDVLI",
+    },
+    {
+      name: "McDonald Volvo",
+      address: "6040 S. Broadway, Littleton, CO 80121",
+      code: "MCDVLT",
+    },
+    {
+      name: "Polestar Denver",
+      address: "240 St. Paul Street, Denver, CO 80206",
+      code: "POLDEN",
+    },            
+  ],
+  bypass_codes: ["MCDONALD"],
+  server_hostname: "https://mxfj3q6m01.execute-api.us-east-1.amazonaws.com",
+  account_reps: [{ name: "Jim Callahan", phone: "678-287-1605" }],
+  route_prefix: "/mcdonald",
+  paypal_not_supported: true,
+  password: "McdonalD",
+};
