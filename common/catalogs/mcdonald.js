@@ -246,4 +246,42 @@ export const catalog = [
       1000: .50,      
     },
   },
+  {
+    code: "MCDVLI-33GT-513174Z",
+    name: ".20 Gauge Plastic Plate",
+    fullname: ".20 Gauge White Plastic Plate (4CP)",
+    colors: ["White"],
+    type: "customs",
+    default_color: "White",
+    description: "Enter '1' for a shipment of 250, 500 or 1000 plates",
+    discount: [
+      { quantity: 250, price: .50 },  
+      { quantity: 500, price: .50 }, 
+      { quantity: 1000, price: .50 },     
+    ],
+    sizes: {
+      250: .50, 
+      500: .50,
+      1000: .50,      
+    },
+  },
+  {
+    code: "MCDVLT-33GT-513175Z",
+    name: ".20 Gauge Plastic Plate",
+    fullname: ".20 Gauge White Plastic Plate (4CP)",
+    colors: ["White"],
+    type: "customs",
+    default_color: "White",
+    description: "Enter '1' for a shipment of 250, 500 or 1000 plates",
+    discount: [
+      { quantity: 250, price: .50 },  
+      { quantity: 500, price: .50 }, 
+      { quantity: 1000, price: .50 },     
+    ],
+    sizes: {
+      250: .50, 
+      500: .50,
+      1000: .50,      
+    },
+  },
 ]
