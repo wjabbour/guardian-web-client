@@ -484,6 +484,7 @@ export const catalog = [
     code: "3198SB",
     name: "Oval Year Stickers - Silver",
     fullname: "Oval Year Stickers - Silver/Black (12/pk)",
+    colors: ["Silver"],
     variations: [
       "2016", 
       "2017",
@@ -507,6 +508,7 @@ export const catalog = [
     code: "3198BY",
     name: "Oval Year Stickers - Yellow",
     fullname: "Oval Year Stickers - Black/Yellow (12/pk)",
+    colors: ["Yellow"],
     variations: [
       "2008",
       "2009",
