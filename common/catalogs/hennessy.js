@@ -1380,6 +1380,7 @@ export const catalog = [
     colors: ["White"],
     type: "service",
     default_color: "White",
+    quantities: [500, 1000],
     sizes: {
       500: 0.89,
       1000: 0.69,

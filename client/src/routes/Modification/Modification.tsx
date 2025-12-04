@@ -3,7 +3,6 @@ import { getWebCatalog } from "guardian-common";
 import { useLoaderData, useOutletContext } from "react-router-dom";
 import { useState } from "react";
 import Snackbar from "@mui/material/Snackbar";
-import MenuItem from "@mui/material/MenuItem";
 import Alert from "@mui/material/Alert";
 import { getEmbroidery } from "../../lib/utils";
 import ColorSelector from "./ColorSelector";
@@ -32,6 +31,7 @@ export default function Modification() {
   const [errorSnackbarOpen, setErrorSnackbarOpen] = useState(false);
   const [errorSnackbarText, setErrorSnackbarText] = useState("");
   const sizes = Object.keys(item.sizes);
+  const quantities = item.quantities || [];
   const colors = item.colors;
   const [selected_size] = useState(sizes[0]);
   const [price] = useState(item.sizes[selected_size]);
@@ -39,6 +39,7 @@ export default function Modification() {
   const [secondEmbroidery, setSecondEmbroidery] = useState("");
   const logo_placements = getWebConfigValue("logo_placements")[item.type] || [];
   const embroideries = getEmbroidery(item.sub_category || item.type) || [];
+  const [selectedQuantity, setSelectedQuantity] = 0;
 
   const description = item.description || "";
 
@@ -81,6 +82,12 @@ export default function Modification() {
     const shouldUseQuantityBasedOrdering = !isNaN(
       Number(Object.keys(item.sizes)[0])
     );
+
+    const shouldUsePredefinedQuantityBasedOrdering = quantities.length > 0;
+
+    if (shouldUsePredefinedQuantityBasedOrdering) {
+       
+    }
 
     // TODO: shouldnt this be broken out to a function?
     if (shouldUseQuantityBasedOrdering) {
@@ -288,6 +295,7 @@ export default function Modification() {
           <QuantitySelector
             item={item}
             sizes={sizes}
+            quantities={quantities}
             customsOrder={customsOrder}
             setCustomsOrder={setCustomsOrder}
           />
