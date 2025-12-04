@@ -26,7 +26,7 @@ export const catalog = [
     },
   },
   {
-    code: "FRICBT-34PE-481524A",
+    code: "FRIENDSHIP-34PE",
     name: "Black Plastic Frame",
     fullname: "Black Plastic Frame (250 per box)",
     colors: ["Black"],
@@ -52,7 +52,7 @@ export const catalog = [
     },
   },
   {
-    code: "FRIFBR-33MRE-507557Z",
+    code: "FRIENDSHIP-33MRE",
     name: "Aluminum Plate",
     fullname: "Aluminum Plate with Full Color (12 in. x 6 in.)",
     colors: ["Aluminum"],
