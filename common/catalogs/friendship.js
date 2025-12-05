@@ -1,6 +1,6 @@
 export const catalog = [
     {
-    code: "330128-FRIENDSHIP-31SD",
+    code: "FRIENDSHIP-31SD",
     name: "Friendship Decal",
     fullname: "Stroke Dome Decal - chrome w/black imprint (5.75 in. x 1.3 in.)",
     colors: ["Chrome"],
@@ -13,7 +13,7 @@ export const catalog = [
     },
   },
   {
-    code: "FRICBT-31DC-419926Z",
+    code: "FRIENDSHIP-31DCI",
     name: "Dog Decal",
     fullname: "Chrome Domecal w/ 4cp imprint (2.25 in. x 2.25 in.)",
     colors: ["Chrome"],
@@ -22,11 +22,11 @@ export const catalog = [
     description: "Maximum one box (enter '1' in the box below - 250/bx)",
     supportedStores: ["FRICBT"],    
     sizes: {
-      250: 0.99,     
+      250: 1.50,     
     },
   },
   {
-    code: "FRICBT-34PE-481524A",
+    code: "FRIENDSHIP-34PE",
     name: "Black Plastic Frame",
     fullname: "Black Plastic Frame (250 per box)",
     colors: ["Black"],
@@ -52,7 +52,7 @@ export const catalog = [
     },
   },
   {
-    code: "FRIFBR-33MRE-507557Z",
+    code: "FRIENDSHIP-33MRE",
     name: "Aluminum Plate",
     fullname: "Aluminum Plate with Full Color (12 in. x 6 in.)",
     colors: ["Aluminum"],
@@ -65,9 +65,9 @@ export const catalog = [
     },
   },
   {
-    code: "FRICBT-33GT-481523Z",
+    code: "FRIENDSHIP-PLATE",
     name: "Plastic Plate",
-    fullname: "White Plastic Plate with Full Color (12 in. x 6 in.)",
+    fullname: ".20 Gauge White Plastic Plate with Full Color (12 in. x 6 in.)",
     colors: ["Yellow"],
     type: "customs",
     default_color: "Yellow",
