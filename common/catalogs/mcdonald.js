@@ -527,7 +527,7 @@ export const catalog = [
   {
     code: "3198BY",
     name: "Oval Year Stickers - Yellow",
-    fullname: "Oval Year Stickers - Black/Yellow (12/pk)",
+    fullname: "Oval Year Stickers - Yellow/Black (12/pk)",
     colors: ["Yellow"],
     variations: [
       "2008",
@@ -554,6 +554,28 @@ export const catalog = [
     default_color: "Yellow",
     sizes: {
       "# packs": 2.99,
+    },
+  },
+  {
+    code: "BOW30",
+    name: "30 in. Giant Bow",
+    fullname: "30 in. Giant Magnetic Car Bow (sold in pairs)",
+    colors: [
+      "Blue",
+      "Gold",
+      "Green",
+      "Patriotic",
+      "Pink",
+      "Red",
+      "Silver",
+      "White",
+      "Red Grn"
+    ],
+    halfColors: ["Red Grn"],
+    type: "sales",
+    default_color: "Blue",   
+    sizes: {
+      "pk of 2": 32.99,
     },
   },  
 ]

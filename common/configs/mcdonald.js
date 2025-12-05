@@ -50,7 +50,7 @@ export const config = {
     }, 
     {
       name: "McDonald Detail Center - Angel's",
-      address: "8041 South Grant Way, LIttleton, CO 80122",
+      address: "8041 South Grant Way, Littleton, CO 80122",
       code: "MCDDLI",
     }, 
     {

@@ -4152,7 +4152,7 @@ export const catalog = [
     type: "sales",
     default_color: "Blue",
     sizes: {
-      "# packs": 2.99,
+      "# packs": 0.00,
    },
   }, 
   {
@@ -4176,13 +4176,13 @@ export const catalog = [
     type: "sales",
     default_color: "Silver",    
     sizes: {
-      "# packs": 2.99,
+      "# packs": 0.00,
     },
   },
   {
     code: "3198BY",
     name: "Oval Year Stickers - Yellow",
-    fullname: "Oval Year Stickers - Black/Yellow (12/pk)",
+    fullname: "Oval Year Stickers - Yellow/Black (12/pk)",
     colors: ["Yellow"],
     variations: [
       "2008",
@@ -4208,7 +4208,7 @@ export const catalog = [
     type: "sales",
     default_color: "Yellow",
     sizes: {
-      "# packs": 2.99,
+      "# packs": 0.00,
     },
   },  
   {
