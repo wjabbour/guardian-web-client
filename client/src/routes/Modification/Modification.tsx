@@ -33,13 +33,23 @@ export default function Modification() {
   const sizes = Object.keys(item.sizes);
   const quantities = item.quantities || [];
   const colors = item.colors;
-  const [selected_size] = useState(sizes[0]);
-  const [price] = useState(item.sizes[selected_size]);
+  /*
+    this value is used for two things
+
+    1) for displaying some text in the price overview: "starts at $x"
+    2) discount calculation
+  */
+  const lowestPricedItemVariation = Math.min(
+    ...Object.values(item.pricing).map((i: any) => i.price)
+  );
+
   const [firstEmbroidery, setFirstEmbroidery] = useState("");
   const [secondEmbroidery, setSecondEmbroidery] = useState("");
   const logo_placements = getWebConfigValue("logo_placements")[item.type] || [];
   const embroideries = getEmbroidery(item.sub_category || item.type) || [];
-  const [selectedQuantity, setSelectedQuantity] = 0;
+  // lets adapt this to work for both grids and singular input, the quantity selector should just write to this object and we apply embroideries
+  const [selectedQuantity, setSelectedQuantity] = useState(0);
+  console.log(selectedQuantity);
 
   const description = item.description || "";
 
@@ -79,18 +89,17 @@ export default function Modification() {
     };
 
     // check if the keys of the sizes are numbers vs strings
-    const shouldUseQuantityBasedOrdering = !isNaN(
+    const shouldUseCustomQuantityBasedOrdering = !isNaN(
       Number(Object.keys(item.sizes)[0])
     );
 
     const shouldUsePredefinedQuantityBasedOrdering = quantities.length > 0;
 
     if (shouldUsePredefinedQuantityBasedOrdering) {
-       
     }
 
     // TODO: shouldnt this be broken out to a function?
-    if (shouldUseQuantityBasedOrdering) {
+    if (shouldUseCustomQuantityBasedOrdering) {
       // check order not empty
       const noCustoms =
         Object.keys(customsOrder).length === 0
@@ -124,7 +133,15 @@ export default function Modification() {
       });
 
       for (const [color, quantity] of Object.entries(items)) {
-        addCustomsToCart(quantity, color, new_cart);
+        addCustomsToCart(
+          item,
+          quantity,
+          color,
+          new_cart,
+          firstEmbroidery,
+          secondEmbroidery,
+          lowestPricedItemVariation
+        );
       }
 
       set_cart(new_cart);
@@ -214,47 +231,6 @@ export default function Modification() {
     }
   }
 
-  function addCustomsToCart(quantity, color, cart) {
-    const key = `${item.code},${color}`;
-    const cart_item = {
-      type: item.type,
-      name: item.fullname,
-      price: getPriceWithDiscount(Number(quantity), 1),
-      quantity: Number(quantity),
-      size: "default",
-      color: color,
-      code: item.code,
-      placement: null,
-      embroidery: firstEmbroidery,
-    };
-
-    if (secondEmbroidery) {
-      cart_item["secondEmbroidery"] = secondEmbroidery;
-    }
-
-    if (cart[key]) {
-      cart[key].quantity += cart_item.quantity;
-      cart[key].price = getPriceWithDiscount(cart[key].quantity, price);
-    } else {
-      cart[key] = cart_item;
-    }
-  }
-
-  function getPriceWithDiscount(cartQuantity: number, fallbackPrice: number) {
-    const sortedSizes = Object.keys(item.sizes).sort(
-      (a, b) => Number(a) - Number(b)
-    );
-
-    let price = fallbackPrice;
-    for (const size of sortedSizes) {
-      if (cartQuantity >= Number(size)) {
-        price = item.sizes[size];
-      }
-    }
-
-    return price;
-  }
-
   return (
     <div className={styles.container}>
       <div className={styles.card}>
@@ -265,7 +241,7 @@ export default function Modification() {
           <div className={styles.name}>{item.fullname}</div>
           {item.type !== "customs" && (
             <div className="font-bold text-[16px] mb-[20px]">
-              Starts at ${price} each
+              Starts at ${lowestPricedItemVariation} each
             </div>
           )}
           <Description description={description} />
@@ -294,8 +270,6 @@ export default function Modification() {
 
           <QuantitySelector
             item={item}
-            sizes={sizes}
-            quantities={quantities}
             customsOrder={customsOrder}
             setCustomsOrder={setCustomsOrder}
           />

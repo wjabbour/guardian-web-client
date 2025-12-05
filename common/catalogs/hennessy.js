@@ -58,7 +58,7 @@ export const catalog = [
       "2010",
       "2011",
       "2012",
-      "2013",      
+      "2013",
       "2014",
       "2015",
       "2016",
@@ -842,13 +842,13 @@ export const catalog = [
     type: "mens",
     default_color: "Black",
     sizes: {
-      Small: 124.00,
-      Medium: 124.00,
-      Large: 124.00,
-      XLarge: 124.00,
-      "2XLarge": 126.00,
-      "3XLarge": 128.00,
-      "4XLarge": 130.00,
+      Small: 124.0,
+      Medium: 124.0,
+      Large: 124.0,
+      XLarge: 124.0,
+      "2XLarge": 126.0,
+      "3XLarge": 128.0,
+      "4XLarge": 130.0,
     },
   },
   {
@@ -1380,10 +1380,17 @@ export const catalog = [
     colors: ["White"],
     type: "service",
     default_color: "White",
-    quantities: [500, 1000],
     sizes: {
       500: 0.89,
-      1000: 0.69,
+    },
+    pricing: {
+      base: {
+        quantities: [500, 1000],
+        price: 0.89,
+        discount: {
+          1000: 0.69,
+        },
+      },
     },
   },
   {

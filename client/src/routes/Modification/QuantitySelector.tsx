@@ -2,21 +2,21 @@ import { useState } from "react";
 import Select, { SelectChangeEvent } from "@mui/material/Select";
 import MenuItem from "@mui/material/MenuItem";
 
+function create2DArray(n, m, initialValue = null) {
+  return Array.from({ length: n }, () => Array(m).fill(initialValue));
+}
 export default function QuantitySelector({
   item,
-  sizes,
   customsOrder,
   setCustomsOrder,
-  quantities,
+  setOuterSelectedQuantity,
 }) {
   const [order, setOrder] = useState(structuredClone(customsOrder));
-  const [selectedQuantity, setSelectedQuantity] = useState(() => {
-    if (quantities.length > 0) {
-      return quantities[0];
-    }
+  const [selectedQuantity, setSelectedQuantity] = useState(
+    create2DArray(item.colors.length, Object.keys(item.pricing).length)
+  );
 
-    return 0;
-  });
+  console.log(selectedQuantity, "hey");
 
   /*
     There are three styles of item ordering that we want to support (and i bet
@@ -36,24 +36,12 @@ export default function QuantitySelector({
     Number(Object.keys(item.sizes)[0])
   );
 
-  const shouldUsePredefinedQuantityBasedOrdering = quantities.length > 0;
-
-  // ensure only one is true for easy evaluation in template
-  if (
-    shouldUseCustomQuantityBasedOrdering ||
-    shouldUsePredefinedQuantityBasedOrdering
-  )
-    shouldUseNormalOrdering = false;
-
-  if (shouldUsePredefinedQuantityBasedOrdering)
-    shouldUseCustomQuantityBasedOrdering = false;
-
   function Header() {
     return (
       <thead>
         <tr>
           <th scope="col"></th>
-          {sizes.map((size) => {
+          {item.sizes.map((size) => {
             return <th scope="col">{size}</th>;
           })}
         </tr>
@@ -78,7 +66,7 @@ export default function QuantitySelector({
           setSelectedQuantity(Number(e.target.value))
         }
       >
-        {quantities.map((q) => (
+        {item.quantities.map((q) => (
           <MenuItem value={q}>{q}</MenuItem>
         ))}
       </Select>
@@ -109,8 +97,7 @@ export default function QuantitySelector({
     );
   }
 
-  if (shouldUsePredefinedQuantityBasedOrdering)
-    return <PredefinedQuantityInput />;
+  if (true) return <PredefinedQuantityInput />;
 
   return (
     <div className="">
@@ -122,7 +109,7 @@ export default function QuantitySelector({
             return (
               <tr>
                 <th scope="row">{color}</th>
-                {sizes.map((size) => {
+                {item.sizes.map((size) => {
                   return (
                     <td className="p-[2px]">
                       {shouldUseCustomQuantityBasedOrdering && (
