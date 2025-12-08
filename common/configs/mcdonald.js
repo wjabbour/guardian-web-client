@@ -2,7 +2,7 @@ export const config = {
   title: "Mcdonald",
   company_logo: "mcdonald.png",
   logo_placements: {
-    mens: ["McDonald"],
+    mens: ["Left Chest"],
     womens: [],
     hat: [],
     tshirts: [],
@@ -11,7 +11,7 @@ export const config = {
   show_image_preview: true,
   embroideries: {
     hat: [],
-    mens: [],
+    mens: ["Mcdonald"],
     womens: [],
     accessory: [],
     customs: [],
