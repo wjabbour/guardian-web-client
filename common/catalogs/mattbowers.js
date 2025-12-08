@@ -937,9 +937,9 @@ export const catalog = [
     description: "BLACK WILL NOT SHOW ON WHITE DECAL; Sold in quantities of 1000, 1500 & 2500",
     supportedStores: ["BOWCME"],
     sizes: {
-      "1000": .69,
-      "1500": .69,
-      "2500": .69,
+      "1000": .65,
+      "1500": .65,
+      "2500": .65,
     },
   },
   {
