@@ -2,7 +2,7 @@ export const config = {
   title: "Mcdonald",
   company_logo: "mcdonald.png",
   logo_placements: {
-    mens: ["Guardian"],
+    mens: ["McDonald"],
     womens: [],
     hat: [],
     tshirts: [],
