@@ -607,7 +607,7 @@ export const catalog = [
       "3XLarge": 52.99,
       "4XLarge": 54.99,
     },
-  },
+  },  
   {
     code: "TW530",
     name: "Port Authority® Golf Towel $19.00",

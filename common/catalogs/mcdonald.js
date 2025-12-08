@@ -1,5 +1,27 @@
 export const catalog = [
-    {
+    {    
+    code: "NKDC1963",
+    name: "Nike® Dri-FIT Polo #NKDC1963",
+    fullname: "Nike® Dri-FIT Micro Pique 2.0 Polo (NKDC1963)",
+    colors: [
+        "Black",             
+        "Game Royal",        
+        "University Red",
+        "White",      
+    ],
+    type: "mens",
+    default_color: "Black",
+    sizes: {
+      Small: 0.00,
+      Medium: 0.00,
+      Large: 0.00,
+      XLarge: 0.00,
+      "2XLarge": 0.00,
+      "3XLarge": 0.00,
+      "4XLarge": 0.00,
+   },
+  },
+  {
     code: "MCDONALD-PFRAMEI",
     name: "Black Plastic Frame",
     fullname: "Black Plastic Frame w/white imprint",
