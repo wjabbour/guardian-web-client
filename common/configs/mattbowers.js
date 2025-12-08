@@ -88,7 +88,7 @@ export const config = {
       code: "MATFME",
     },
     {
-      name: "Matt Bowers Chevrolet Cadillac - Slidell",
+      name: "Matt Bowers Chevrolet Cadillac",
       address: "316 E Howze Beach Rd, Slidell, LA 70461",
       code: "BOWCSL",
     },
@@ -98,7 +98,7 @@ export const config = {
       code: "BOWHSL",
     },
     {
-      name: "Matt Bowers Chevrolet - Metairie",
+      name: "Matt Bowers Chevrolet",
       address: "8213 Airline Drive, Metairie, LA 70003",
       code: "BOWCME",
     },
