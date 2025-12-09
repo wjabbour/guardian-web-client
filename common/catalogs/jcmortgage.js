@@ -195,10 +195,10 @@ export const catalog = [
     },
   },
   {
-    code: "CJ1614",
+    code: "NKFD9863",
     name: "Nike® Club Fleece Crew $59.99",
-    fullname: "Nike® Club Fleece Crew (CJ1614)",
-    colors: ["Anthracite","Black","Drk Gry Hthr","Navy","Royal","White"],
+    fullname: "Nike Club Fleece Sleeve Swoosh Crew (NKFD9863)",
+    colors: ["Anthracite","Black","Drk Gry Hthr","Game Royal","Midnight Navy","White"],
     type: "mens",
     default_color: "Anthracite",
     sizes: {
@@ -796,6 +796,7 @@ export const catalog = [
     colors: ["Black", "Lead Grey","True Navy","True Royal"],
     type: "accessory",
     default_color: "Black",
+    description: "100% polyester fleece, 100% polyester woven backing. Attached elastic band to secure the rolled-up blanket. Dimensions: 50 in. x 60 in.",
     sizes: {
       OSFA: 35.00,      
     },
