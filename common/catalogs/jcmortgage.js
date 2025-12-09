@@ -852,7 +852,7 @@ export const catalog = [
       "Athletic Oxford",
       "Athletic Royal",
       "Black",
-      "Black Athletic Oxford",
+      "Black AthleticOxford",
       "Charcoal Heather",
       "Navy",
       "White",      
@@ -862,7 +862,7 @@ export const catalog = [
     default_color: "Athletic Oxford",
     halfColors:"Black AthleticOxford",
     sizes: {
-      OSFA: 19.00,
+      OSFA: 18.50,
     },
   },  
   {
@@ -932,6 +932,21 @@ export const catalog = [
     default_color: "Black Stone",    
     sizes: {
       OSFA: 27.00,
+    },
+  },
+  {
+    code: "NE910",
+    name: "New Era® Pom Beanie $31.00",
+    fullname: "New Era® Marled Knit Pom Beanie (NE910)",
+    colors: [
+      "Black",
+      "Deep Navy",
+      "Royal",            
+    ],
+    type: "hat",
+    default_color: "Black",    
+    sizes: {
+      OSFA: 31.00,
     },
   },
 ]
