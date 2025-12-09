@@ -771,7 +771,7 @@
 }
 
 .Dark_Grey {
-  background-color: #5e666a;
+  background-color: #393c3d;
 }
 
 .Dark_Pine {
@@ -1282,6 +1282,10 @@
   background-color: #472236a9;
 }
 
+.Navy_Blue_Hthr {
+  background-color: #2f425c8e;
+}
+
 .Navy_Heather {
   background-color: #2959998e;
 }
@@ -1486,7 +1490,7 @@
   background-color: #a2a7ad;
 }
 
-.Resused_Royal_Hthr {
+.Reused_Royal_Hthr {
   background-color: #367fdf;
 }
 
@@ -1601,6 +1605,11 @@
 .Sand {
   background-color: #917645f1;
 }
+
+.Sandstone {
+  background-color: #d6c8adf1;
+}
+
 
 .Sep {
   background-color: #dc73bb;
@@ -1928,6 +1937,10 @@
 
 .Very_Berry {
   background-color: #a52d8b;
+}
+
+.Vintage_Hthr_Navy {
+  background-color: rgb(91, 95, 116);
 }
 
 .Vintage_Indigo {

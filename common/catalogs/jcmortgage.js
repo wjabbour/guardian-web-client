@@ -1,5 +1,78 @@
 export const catalog = [
-   {
+  {
+    code: "PC01",
+    name: "Port & Co™ Blend Tee $18.50",
+    fullname: "Port & Co™ Core Blend Recycled Tee (PC01)",
+    colors: [
+      "Athletic Heather",
+      "Charcoal",
+      "Drk Hthr Gry",
+      "Jet Black",
+      "Navy",
+      "Navy Blue Hthr",      
+      "True Royal",      
+    ],
+    type: "mens",
+    default_color: "Athletic Heather",
+    sizes: {
+      Small: 18.50,
+      Medium: 18.50,
+      Large: 18.50,
+      XLarge: 18.50,
+      "2XLarge": 20.50,
+      "3XLarge": 24.00,            
+    },
+  },
+  {
+    code: "BC3001",
+    name: "BELLA+CANVAS® Short Sleeve Tee $21.25",
+    fullname: "BELLA+CANVAS® Unisex Jersey Short Sleeve Tee (BC3001)",
+    colors: [
+      "Ash",
+      "Black",
+      "Dark Grey",
+      "Navy",
+      "True Royal",
+      "White",                 
+    ],
+    type: "mens",
+    default_color: "Ash",
+    sizes: {
+      Small: 21.25,
+      Medium: 21.25,
+      Large: 21.25,
+      XLarge: 21.25,
+      "2XLarge": 23.50,
+      "3XLarge": 25.00,            
+    },
+  },
+  {
+    code: "29LS",
+    name: "Jerzees® Long Sleeve Tee $23.00",
+    fullname: "Jerzees® Dri-Power® 50/50 Cotton/Poly Long Sleeve T-Shirt (29LS)",
+    colors: [
+      "Ash",
+      "Athletic Heather",
+      "Black",
+      "Charcoal Grey",
+      "JNavy",
+      "Royal",
+      "Sandstone",
+      "Vintage Hthr Navy", 
+      "White",         
+    ],
+    type: "mens",
+    default_color: "Ash",
+    sizes: {
+      Small: 23.00,
+      Medium: 23.00,
+      Large: 23.00,
+      XLarge: 23.00,
+      "2XLarge": 25.00,
+      "3XLarge": 28.00,            
+    },
+  },        
+  {
     code: "ST650",
     name: "Sport-Tek® Polo $33.00",
     fullname: "Sport-Tek® Micropique Polo (ST650)",
@@ -325,7 +398,7 @@ export const catalog = [
   },
   {
     code: "LPC55",
-    name: "Port & Co™ Women's Core Blend Tee $20.00",
+    name: "Port & Co™ Blend Tee $20.00",
     fullname: "Port & Co™ Women's Core Blend Tee (LPC55)",
     colors: [
       "Athletic Heather",
@@ -347,7 +420,7 @@ export const catalog = [
   },   
   {
     code: "LPC61",
-    name: "Port & Co™ Women's Essential Tee $20.50",
+    name: "Port & Co™ Essential Tee $20.50",
     fullname: "Port & Co™ Women's Essential Tee (LPC61)",
     colors: [
       "Athletic Heather",
@@ -368,7 +441,7 @@ export const catalog = [
   },   
   {
     code: "AL2303",
-    name: "Allmade® V-Neck Tee $22",
+    name: "Allmade® V-Neck Tee $22.00",
     fullname: "Allmade® Women's Recycled Blend V-Neck Tee (AL2303)",
     colors: [
       "Reloaded Char Hthr",
