@@ -843,6 +843,27 @@ export const catalog = [
     sizes: {
       OSFA: 90.00,      
     },
+  },
+  {
+    code: "CP90",
+    name: "Port Authority® Knit Cap $18.50",
+    fullname: "Port Authority® Knit Cap (CP90)",
+    colors: [
+      "Athletic Oxford",
+      "Athletic Royal",
+      "Black",
+      "Black Athletic Oxford",
+      "Charcoal Heather",
+      "Navy",
+      "White",      
+      "Woodland Brown",
+    ],
+    type: "hat",
+    default_color: "Athletic Oxford",
+    halfColors:"Black AthleticOxford",
+    sizes: {
+      OSFA: 19.00,
+    },
   },  
   {
     code: "CP80",
