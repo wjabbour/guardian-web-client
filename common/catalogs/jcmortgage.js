@@ -162,6 +162,23 @@ export const catalog = [
     },
   },
   {
+    code: "NKFD9863",
+    name: "Nike® Club Fleece Crew $59.99",
+    fullname: "Nike Club Fleece Sleeve Swoosh Crew (NKFD9863)",
+    colors: ["Anthracite","Black","Drk Gry Hthr","Game Royal","Midnight Navy","White"],
+    type: "mens",
+    default_color: "Anthracite",
+    sizes: {
+      Small: 59.99,
+      Medium: 59.99,
+      Large: 59.99,
+      XLarge: 59.99,
+      "2XLarge": 61.99,
+      "3XLarge": 64.99,
+      "4XLarge": 66.99,
+    },
+  },  
+  {
     code: "NEA137",
     name: "New Era® Tri-Blend Hoodie $35.99",
     fullname: "New Era® Tri-Blend Hoodie (NEA137)",
@@ -192,23 +209,6 @@ export const catalog = [
       XLarge: 46.00,
       "2XLarge": 48.00,
       "3XLarge": 50.00,      
-    },
-  },
-  {
-    code: "NKFD9863",
-    name: "Nike® Club Fleece Crew $59.99",
-    fullname: "Nike Club Fleece Sleeve Swoosh Crew (NKFD9863)",
-    colors: ["Anthracite","Black","Drk Gry Hthr","Game Royal","Midnight Navy","White"],
-    type: "mens",
-    default_color: "Anthracite",
-    sizes: {
-      Small: 59.99,
-      Medium: 59.99,
-      Large: 59.99,
-      XLarge: 59.99,
-      "2XLarge": 61.99,
-      "3XLarge": 64.99,
-      "4XLarge": 66.99,
     },
   },  
   {
@@ -754,9 +754,34 @@ export const catalog = [
     default_color: "Black",
     description: "85/15 poly/nylon microfiber. Fully hemmed. Corner grommet with carabiner. Dimensions: 16 in. x 26 in.",
     sizes: {
-      "# towels": 19.00,      
+      OSFA: 19.00,      
     },
   },
+  {
+    code: "TB850",
+    name: "Port Authority® Travel Blanket $35.00",
+    fullname: "Port Authority® Fleece & Poly Travel Blanket (TB850)",
+    colors: ["Black", "Lead Grey","True Navy","True Royal"],
+    type: "accessory",
+    default_color: "Black",
+    description: "100% polyester fleece, 100% polyester woven backing. Attached elastic band to secure the rolled-up blanket. Dimensions: 50 in. x 60 in.",
+    sizes: {
+      OSFA: 35.00,      
+    },
+  },
+   {
+    code: "BP70",
+    name: "Port Authority® Picnic Blanket $45.00",
+    fullname: "Port Authority® Picnic Blanket (BP70)",
+    colors: ["Grey Steel","True Black","True Royal"],
+    type: "accessory",
+    default_color: "Grey Steel",
+    description: [
+      "100% polyester fleece, 100% polyester woven backing. Water-resistant woven backing. Zips around itself for easy folding."],
+    sizes: {
+      OSFA: 45.00,      
+    },
+  },  
   {
     code: "BG428",
     name: "Port Authority® Tote $19.00",
@@ -767,6 +792,30 @@ export const catalog = [
     description: "100% cotton canvas. Dimensions: 12.5 x 14.5 x 4 in.",
     sizes: {
       OSFA: 19.00,      
+    },
+  },
+  {
+    code: "BG226",
+    name: "Port Authority® Backpack $36.00",
+    fullname: "Port Authority® Daily Commute Backpack (BG226)",
+    colors: ["Black","Grey Smoke"],
+    type: "accessory",
+    default_color: "Black",
+    description: "POLYESTER; Padded air mesh shoulder straps. Padded back panel. Laptop dimensions: 15h x 12w x 1d. Fits most 15 in. laptops. Dimensions: 17.75h x 11.5w x 5d.",
+    sizes: {
+      OSFA: 36.00,      
+    },
+  },
+  {
+    code: "91005",
+    name: "OGIO® Convert Pack $90.00",
+    fullname: "OGIO® Convert Pack (91005)",
+    colors: ["Black","Tarmac"],
+    type: "accessory",
+    default_color: "Black",
+    description: "POLYESTER; Dedicated laptop compartment with large slip pocket for documents and a padded pocket for tablets. Detachable shoulder strap. Backpack straps stow neatly behind the back panel with ease. Multiple zippered pockets. Laptop sleeve: 15h x 10.5w x 1d. Fits most 15 in. laptops. Dimensions: 18h x 11w x 5d.",
+    sizes: {
+      OSFA: 90.00,      
     },
   },
   {
@@ -792,44 +841,7 @@ export const catalog = [
     sizes: {
       OSFA: 34.50,      
     },
-  },
-  {
-    code: "TB850",
-    name: "Port Authority® Travel Blanket $35.00",
-    fullname: "Port Authority® Fleece & Poly Travel Blanket (TB850)",
-    colors: ["Black", "Lead Grey","True Navy","True Royal"],
-    type: "accessory",
-    default_color: "Black",
-    description: "100% polyester fleece, 100% polyester woven backing. Attached elastic band to secure the rolled-up blanket. Dimensions: 50 in. x 60 in.",
-    sizes: {
-      OSFA: 35.00,      
-    },
-  },
-  {
-    code: "BG226",
-    name: "Port Authority® Backpack $36.00",
-    fullname: "Port Authority® Daily Commute Backpack (BG226)",
-    colors: ["Black","Grey Smoke"],
-    type: "accessory",
-    default_color: "Black",
-    description: "POLYESTER; Padded air mesh shoulder straps. Padded back panel. Laptop dimensions: 15h x 12w x 1d. Fits most 15 in. laptops. Dimensions: 17.75h x 11.5w x 5d.",
-    sizes: {
-      OSFA: 36.00,      
-    },
-  },
-  {
-    code: "BP70",
-    name: "Port Authority® Picnic Blanket $45.00",
-    fullname: "Port Authority® Picnic Blanket (BP70)",
-    colors: ["Grey Steel","True Black","True Royal"],
-    type: "accessory",
-    default_color: "Grey Steel",
-    description: [
-      "100% polyester fleece, 100% polyester woven backing. Water-resistant woven backing. Zips around itself for easy folding."],
-    sizes: {
-      OSFA: 45.00,      
-    },
-  },  
+  },   
   {
     code: "93023",
     name: "OGIO® Slim Briefcase $52.00",
@@ -843,18 +855,6 @@ export const catalog = [
       OSFA: 52.00,      
     },
   },  
-  {
-    code: "91005",
-    name: "OGIO® Convert Pack $90.00",
-    fullname: "OGIO® Convert Pack (91005)",
-    colors: ["Black","Tarmac"],
-    type: "accessory",
-    default_color: "Black",
-    description: "POLYESTER; Dedicated laptop compartment with large slip pocket for documents and a padded pocket for tablets. Detachable shoulder strap. Backpack straps stow neatly behind the back panel with ease. Multiple zippered pockets. Laptop sleeve: 15h x 10.5w x 1d. Fits most 15 in. laptops. Dimensions: 18h x 11w x 5d.",
-    sizes: {
-      OSFA: 90.00,      
-    },
-  },
   {
     code: "CP90",
     name: "Port Authority® Knit Cap $18.50",
