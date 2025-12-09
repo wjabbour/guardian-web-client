@@ -754,7 +754,7 @@ export const catalog = [
     default_color: "Black",
     description: "85/15 poly/nylon microfiber. Fully hemmed. Corner grommet with carabiner. Dimensions: 16 in. x 26 in.",
     sizes: {
-      OSFA: 19.00,      
+      "# towels": 19.00,      
     },
   },
   {
