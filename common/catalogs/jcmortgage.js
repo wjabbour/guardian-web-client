@@ -860,7 +860,7 @@ export const catalog = [
     ],
     type: "hat",
     default_color: "Athletic Oxford",
-    halfColors:"Black AthleticOxford",
+    halfColors:'Black AthleticOxford',
     sizes: {
       OSFA: 18.50,
     },
