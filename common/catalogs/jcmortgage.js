@@ -752,6 +752,7 @@ export const catalog = [
     colors: ["Black", "Deep Smoke","Royal","True Navy","White"],
     type: "accessory",
     default_color: "Black",
+    description: "85/15 poly/nylon microfiber. Fully hemmed. Corner grommet with carainer. Dimensions: 16 in. x 26 in.; 2.5 lbs.",
     sizes: {
       OSFA: 19.00,      
     },
@@ -763,6 +764,7 @@ export const catalog = [
     colors: ["Deep Black","Natural"],
     type: "accessory",
     default_color: "Deep Black",
+    description: "100% cotton canvas. Dimensions: 12.5h x 14.5w x 4d",
     sizes: {
       OSFA: 19.00,      
     },
@@ -774,6 +776,7 @@ export const catalog = [
     colors: ["Black","Dark Charcoal","Twilight Blue"],
     type: "accessory",
     default_color: "Black",
+    description: "POLYESTER; 600 denier polyester canvas. Web carying handles. Protective padding on sides and bottom. FITS MOST 15 in. laptops.",
     sizes: {
       OSFA: 26.75,      
     },
@@ -785,6 +788,7 @@ export const catalog = [
     colors: ["Grey Heather","Navy Heather"],
     type: "accessory",
     default_color: "Grey Heather",
+    description: "POLYESTER; Adjustable, padded shoulder strap. Large front side zippered pocket for easy decoration. Luggage trolley strap on back. Laptop sleeve dimensions 8h x 15w. Fits most 15 in. laptops.",
     sizes: {
       OSFA: 34.50,      
     },
@@ -808,6 +812,7 @@ export const catalog = [
     colors: ["Black","Grey Smoke"],
     type: "accessory",
     default_color: "Black",
+    description: "POLYESTER; Padded air mesh shoulder straps. Padded back panel. Laptop dimensions: 15h x 12w x 1d. Fits most 15 in. laptops. Dimensions: 17.75h x 11.5w x 5d",
     sizes: {
       OSFA: 36.00,      
     },
@@ -819,6 +824,8 @@ export const catalog = [
     colors: ["Grey Steel","True Black","True Royal"],
     type: "accessory",
     default_color: "Grey Steel",
+    description: [
+      "100% polyester fleece, 100% polyester woven backing. Water-resistant woven backing. Zips around itself for easy folding."],
     sizes: {
       OSFA: 45.00,      
     },
@@ -830,6 +837,8 @@ export const catalog = [
     colors: ["Blacktop"],
     type: "accessory",
     default_color: "Blacktop",
+    description: [
+      "POLYESTER; Dedicated laptop and tablet sleeves. Webbing haul handles. Removable, adjustable webbing shoulder strap. Dimensions 11h x 16.75w x 1.5d. Fits most 16 in. laptops."],
     sizes: {
       OSFA: 52.00,      
     },
@@ -841,6 +850,7 @@ export const catalog = [
     colors: ["Black","Tarmac"],
     type: "accessory",
     default_color: "Black",
+    description: "POLYESTER; Dedicated laptop compartment with large slip pocket for documents and a padded pocket for tablets, detachable shoulder strap, backpack straps stow neatly behind the back panel with ease. Multiple zippered pockets. Laptop sleeve: 15h x 10.5w x 1d. Fits most 15 in. laptops. Dimensions: 18h x 11w x 5d.",
     sizes: {
       OSFA: 90.00,      
     },
@@ -861,7 +871,7 @@ export const catalog = [
     ],
     type: "hat",
     default_color: "Athletic Oxford",
-    halfColors:'Black AthleticOxford',
+    halfColors: ['Black AthleticOxford'],
     sizes: {
       OSFA: 18.50,
     },
