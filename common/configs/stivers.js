@@ -26,16 +26,17 @@ export const config = {
     mens: [
       "Stivers",
       "Stivers with Outline",
-      "Quicklane",
-      "Subaru",
       "Stivers Ford South",
       "Stivers Ford Birmingham",
+      "Stivers Hyundai Genesis.EMB",
       "Stivers Montgomery",
       "Stivers Prattville",
+      "Quicklane",
+      "Subaru",             
       "Lincoln 1,97 Inch.EMB",
       "Hyundai Icon and Text.EMB",
       "Genesis Stacked 3,5 Inch.EMB",
-      "Stivers Hyundai Genesis.EMB",
+      
     ],
     womens: [
       "Stivers",
