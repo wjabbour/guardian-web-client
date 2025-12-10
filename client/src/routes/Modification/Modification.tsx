@@ -11,6 +11,7 @@ import { CartItem } from "../../lib/interfaces";
 import EmbroiderySelector from "./EmbroiderySelector";
 import { getWebConfigValue } from "guardian-common";
 import Description from "./Description";
+import { addCustomsToCart } from "./utils";
 
 export async function loader({ params }) {
   return getWebCatalog().find((i) => i.code === params.id);
@@ -94,19 +95,20 @@ export default function Modification() {
     }
 
     for (const [key, value] of Object.entries(selectedQuantity)) {
-      console.log(key, value);
+      addCustomsToCart(
+        item,
+        value,
+        item.colors[0],
+        new_cart,
+        firstEmbroidery,
+        secondEmbroidery,
+        lowestPricedItemVariation
+      );
+
+      set_cart(new_cart);
+      sessionStorage.setItem("cart", JSON.stringify(new_cart));
       return;
     }
-
-    // addCustomsToCart(
-    //   item,
-    //   quantity,
-    //   color,
-    //   new_cart,
-    //   firstEmbroidery,
-    //   secondEmbroidery,
-    //   lowestPricedItemVariation
-    // );
 
     // TODO: shouldnt this be broken out to a function?
     // if (shouldUseCustomQuantityBasedOrdering) {
