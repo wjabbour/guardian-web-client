@@ -32,10 +32,10 @@ export const config = {
       "Stivers Montgomery",
       "Stivers Prattville",
       "Subaru",  
-      "Quicklane",                 
-      "Lincoln 1,97 Inch.EMB",
+      "Quicklane",               
       "Hyundai Icon and Text.EMB",
       "Genesis Stacked 3,5 Inch.EMB",
+      "Lincoln 1,97 Inch.EMB",
       
     ],
     womens: [
@@ -47,10 +47,10 @@ export const config = {
       "Stivers Montgomery",
       "Stivers Prattville",
       "Subaru",  
-      "Quicklane",                 
-      "Lincoln 1,97 Inch.EMB",
+      "Quicklane",               
       "Hyundai Icon and Text.EMB",
       "Genesis Stacked 3,5 Inch.EMB",
+      "Lincoln 1,97 Inch.EMB",
     ],
     accessory: [
       "Ford",
