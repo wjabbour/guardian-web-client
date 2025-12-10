@@ -75,6 +75,7 @@ export default function Row({ order, editClick, isAdmin }) {
             {open ? <KeyboardArrowUpIcon /> : <KeyboardArrowDownIcon />}
           </IconButton>
         </TableCell>
+        <TableCell align="center">{order.customer_po || "N/A"}</TableCell>
         <TableCell align="center">
           {moment(parseInt(order.created_at)).format("MMMM DD, YYYY")}
         </TableCell>
