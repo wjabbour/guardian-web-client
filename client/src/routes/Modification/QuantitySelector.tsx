@@ -2,21 +2,14 @@ import { useState } from "react";
 import Select, { SelectChangeEvent } from "@mui/material/Select";
 import MenuItem from "@mui/material/MenuItem";
 
-function create2DArray(n, m, initialValue = null) {
-  return Array.from({ length: n }, () => Array(m).fill(initialValue));
-}
 export default function QuantitySelector({
   item,
   customsOrder,
   setCustomsOrder,
-  setOuterSelectedQuantity,
+  selectedQuantity,
+  setSelectedQuantity,
 }) {
   const [order, setOrder] = useState(structuredClone(customsOrder));
-  const [selectedQuantity, setSelectedQuantity] = useState(
-    create2DArray(item.colors.length, Object.keys(item.pricing).length)
-  );
-
-  console.log(selectedQuantity, "hey");
 
   /*
     There are three styles of item ordering that we want to support (and i bet
@@ -31,23 +24,18 @@ export default function QuantitySelector({
   */
   let shouldUseNormalOrdering = true;
 
-  // check if the keys of the sizes are numbers vs strings
-  let shouldUseCustomQuantityBasedOrdering = !isNaN(
-    Number(Object.keys(item.sizes)[0])
-  );
-
-  function Header() {
-    return (
-      <thead>
-        <tr>
-          <th scope="col"></th>
-          {item.sizes.map((size) => {
-            return <th scope="col">{size}</th>;
-          })}
-        </tr>
-      </thead>
-    );
-  }
+  // function Header() {
+  //   return (
+  //     <thead>
+  //       <tr>
+  //         <th scope="col"></th>
+  //         {item.sizes.map((size) => {
+  //           return <th scope="col">{size}</th>;
+  //         })}
+  //       </tr>
+  //     </thead>
+  //   );
+  // }
 
   function NormalInput() {
     return (
@@ -58,13 +46,17 @@ export default function QuantitySelector({
     );
   }
 
-  function PredefinedQuantityInput() {
+  function QuantitySelect() {
     return (
       <Select
-        value={"" + selectedQuantity}
-        onChange={(e: SelectChangeEvent) =>
-          setSelectedQuantity(Number(e.target.value))
-        }
+        value={"" + selectedQuantity.base}
+        onChange={(e: SelectChangeEvent) => {
+          setSelectedQuantity((prev) => {
+            const newQty = structuredClone(prev);
+            newQty["base"] = Number(e.target.value);
+            return newQty;
+          });
+        }}
       >
         {item.quantities.map((q) => (
           <MenuItem value={q}>{q}</MenuItem>
@@ -73,63 +65,63 @@ export default function QuantitySelector({
     );
   }
 
-  function CustomQuantityInput({ order, size, color, setOrder }) {
-    return (
-      <input
-        className="border-2 border-solid border-gray-600 rounded-md p-1"
-        type="text"
-        value={order[`${size},${color}`]?.quantity || 0}
-        onChange={(e) => {
-          setOrder((old) => {
-            const newOne = structuredClone(old);
-            newOne[`${size},${color}`] = {
-              quantity: Number(e.target.value),
-              color,
-            };
+  // function CustomQuantityInput({ order, size, color, setOrder }) {
+  //   return (
+  //     <input
+  //       className="border-2 border-solid border-gray-600 rounded-md p-1"
+  //       type="text"
+  //       value={order[`${size},${color}`]?.quantity || 0}
+  //       onChange={(e) => {
+  //         setOrder((old) => {
+  //           const newOne = structuredClone(old);
+  //           newOne[`${size},${color}`] = {
+  //             quantity: Number(e.target.value),
+  //             color,
+  //           };
 
-            return newOne;
-          });
-        }}
-        onBlur={() => {
-          setCustomsOrder(order);
-        }}
-      ></input>
-    );
-  }
+  //           return newOne;
+  //         });
+  //       }}
+  //       onBlur={() => {
+  //         setCustomsOrder(order);
+  //       }}
+  //     ></input>
+  //   );
+  // }
 
-  if (true) return <PredefinedQuantityInput />;
+  if (item.quantities) return <QuantitySelect />;
 
-  return (
-    <div className="">
-      <table id="table">
-        <Header />
+  // return (
+  //   <div className="">
+  //     <table id="table">
+  //       <Header />
 
-        <tbody>
-          {item.colors.map((color) => {
-            return (
-              <tr>
-                <th scope="row">{color}</th>
-                {item.sizes.map((size) => {
-                  return (
-                    <td className="p-[2px]">
-                      {shouldUseCustomQuantityBasedOrdering && (
-                        <CustomQuantityInput
-                          order={order}
-                          size={size}
-                          color={color}
-                          setOrder={setOrder}
-                        />
-                      )}
+  //       <tbody>
+  //         {item.colors.map((color) => {
+  //           return (
+  //             <tr>
+  //               <th scope="row">{color}</th>
+  //               {item.sizes.map((size) => {
+  //                 return (
+  //                   <td className="p-[2px]">
+  //                     {shouldUseCustomQuantityBasedOrdering && (
+  //                       <CustomQuantityInput
+  //                         order={order}
+  //                         size={size}
+  //                         color={color}
+  //                         setOrder={setOrder}
+  //                       />
+  //                     )}
 
-                      {shouldUseNormalOrdering && <NormalInput />}
-                    </td>
-                  );
-                })}
-              </tr>
-            );
-          })}
-        </tbody>
-      </table>
-    </div>
-  );
+  //                     {shouldUseNormalOrdering && <NormalInput />}
+  //                   </td>
+  //                 );
+  //               })}
+  //             </tr>
+  //           );
+  //         })}
+  //       </tbody>
+  //     </table>
+  //   </div>
+  // );
 }

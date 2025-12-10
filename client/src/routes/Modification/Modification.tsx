@@ -30,8 +30,7 @@ export default function Modification() {
   const [snackbarText] = useState("Item added to cart");
   const [errorSnackbarOpen, setErrorSnackbarOpen] = useState(false);
   const [errorSnackbarText, setErrorSnackbarText] = useState("");
-  const sizes = Object.keys(item.sizes);
-  const quantities = item.quantities || [];
+  const sizes = [];
   const colors = item.colors;
   /*
     this value is used for two things
@@ -48,8 +47,9 @@ export default function Modification() {
   const logo_placements = getWebConfigValue("logo_placements")[item.type] || [];
   const embroideries = getEmbroidery(item.sub_category || item.type) || [];
   // lets adapt this to work for both grids and singular input, the quantity selector should just write to this object and we apply embroideries
-  const [selectedQuantity, setSelectedQuantity] = useState(0);
-  console.log(selectedQuantity);
+  const [selectedQuantity, setSelectedQuantity] = useState({
+    base: Math.min(...item.quantities),
+  });
 
   const description = item.description || "";
 
@@ -84,72 +84,68 @@ export default function Modification() {
   }
 
   function addItemToCart() {
-    const new_cart = {
-      ...cart,
-    };
+    const new_cart = structuredClone(cart);
 
-    // check if the keys of the sizes are numbers vs strings
-    const shouldUseCustomQuantityBasedOrdering = !isNaN(
-      Number(Object.keys(item.sizes)[0])
-    );
-
-    const shouldUsePredefinedQuantityBasedOrdering = quantities.length > 0;
-
-    if (shouldUsePredefinedQuantityBasedOrdering) {
-    }
-
-    // TODO: shouldnt this be broken out to a function?
-    if (shouldUseCustomQuantityBasedOrdering) {
-      // check order not empty
-      const noCustoms =
-        Object.keys(customsOrder).length === 0
-          ? true
-          : Object.values(customsOrder).every(
-              (arr: string[]) => arr.length === 0
-            );
-
-      if (noCustoms) {
-        setErrorSnackbarOpen(true);
-        setErrorSnackbarText("Must make a selection");
-        return;
-      }
-
-      const items: { [key: string]: number } = {};
-
-      Object.keys(customsOrder).forEach((k: string) => {
-        // the keys of customsOrder are the quantity chosen and the color, like "1,Blue"
-        const quantity = parseInt(k.split(",")[0]);
-        // object representing quantity and color selected
-        const orderInfo = customsOrder[k];
-
-        /*
-          if the user ordered 2x500 and 1x1000 then we need to add them together
-        */
-        if (items[orderInfo.color]) {
-          items[orderInfo.color] += quantity * orderInfo.quantity;
-        } else {
-          items[orderInfo.color] = quantity * orderInfo.quantity;
-        }
-      });
-
-      for (const [color, quantity] of Object.entries(items)) {
-        addCustomsToCart(
-          item,
-          quantity,
-          color,
-          new_cart,
-          firstEmbroidery,
-          secondEmbroidery,
-          lowestPricedItemVariation
-        );
-      }
-
-      set_cart(new_cart);
-      sessionStorage.setItem("cart", JSON.stringify(new_cart));
-      setSnackbarOpen(true);
-      setCustomsOrder({});
+    console.log(Object.values(selectedQuantity));
+    if (Object.values(selectedQuantity).every((qty) => !qty)) {
+      setErrorSnackbarOpen(true);
+      setErrorSnackbarText("Must make a selection");
       return;
     }
+
+    for (const [key, value] of Object.entries(selectedQuantity)) {
+      console.log(key, value);
+      return;
+    }
+
+    // addCustomsToCart(
+    //   item,
+    //   quantity,
+    //   color,
+    //   new_cart,
+    //   firstEmbroidery,
+    //   secondEmbroidery,
+    //   lowestPricedItemVariation
+    // );
+
+    // TODO: shouldnt this be broken out to a function?
+    // if (shouldUseCustomQuantityBasedOrdering) {
+    //   const items: { [key: string]: number } = {};
+
+    //   Object.keys(customsOrder).forEach((k: string) => {
+    //     // the keys of customsOrder are the quantity chosen and the color, like "1,Blue"
+    //     const quantity = parseInt(k.split(",")[0]);
+    //     // object representing quantity and color selected
+    //     const orderInfo = customsOrder[k];
+
+    //     /*
+    //       if the user ordered 2x500 and 1x1000 then we need to add them together
+    //     */
+    //     if (items[orderInfo.color]) {
+    //       items[orderInfo.color] += quantity * orderInfo.quantity;
+    //     } else {
+    //       items[orderInfo.color] = quantity * orderInfo.quantity;
+    //     }
+    //   });
+
+    //   for (const [color, quantity] of Object.entries(items)) {
+    //     addCustomsToCart(
+    //       item,
+    //       quantity,
+    //       color,
+    //       new_cart,
+    //       firstEmbroidery,
+    //       secondEmbroidery,
+    //       lowestPricedItemVariation
+    //     );
+    //   }
+
+    //   set_cart(new_cart);
+    //   sessionStorage.setItem("cart", JSON.stringify(new_cart));
+    //   setSnackbarOpen(true);
+    //   setCustomsOrder({});
+    //   return;
+    // }
 
     let any_input_has_value = false;
     let invalid_input = false;
@@ -272,6 +268,8 @@ export default function Modification() {
             item={item}
             customsOrder={customsOrder}
             setCustomsOrder={setCustomsOrder}
+            setSelectedQuantity={setSelectedQuantity}
+            selectedQuantity={selectedQuantity}
           />
 
           <div className="relative h-[50px] mt-[15px]">
