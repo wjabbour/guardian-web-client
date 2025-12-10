@@ -789,7 +789,7 @@ export const catalog = [
     colors: ["Deep Black","Natural"],
     type: "accessory",
     default_color: "Deep Black",
-    description: "100% cotton canvas. Dimensions: 12.5 x 14.5 x 4 in.",
+    description: "100% cotton canvas. Dimensions: 12.5 in. x 14.5 in. x 4 in.",
     sizes: {
       OSFA: 19.00,      
     },

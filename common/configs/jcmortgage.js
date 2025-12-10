@@ -8,7 +8,7 @@ export const config = {
     tshirts: [],
     accessory: ["Front Center","Bottom Right Corner"]
   },
-  minimum_apparel_order: false,
+  minimum_apparel_order: false,  
   show_image_preview: true,
   embroideries: {
     hat: ["Johns Creek Mortgage"],
