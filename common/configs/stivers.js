@@ -35,6 +35,7 @@ export const config = {
       "Lincoln 1,97 Inch.EMB",
       "Hyundai Icon and Text.EMB",
       "Genesis Stacked 3,5 Inch.EMB",
+      "Stivers Hyundai Genesis.EMB",
     ],
     womens: [
       "Stivers",
@@ -48,6 +49,7 @@ export const config = {
       "Lincoln 1,97 Inch.EMB",
       "Hyundai Icon and Text.EMB",
       "Genesis Stacked 3,5 Inch.EMB",
+      "Stivers Hyundai Genesis.EMB",
     ],
     accessory: [
       "Ford",
