@@ -1380,12 +1380,9 @@ export const catalog = [
     colors: ["White"],
     type: "service",
     default_color: "White",
-    sizes: {
-      500: 0.89,
-    },
+    quantities: [500, 1000],
     pricing: {
       base: {
-        quantities: [500, 1000],
         price: 0.89,
         discount: {
           1000: 0.69,
@@ -1400,9 +1397,14 @@ export const catalog = [
     colors: ["White"],
     type: "service",
     default_color: "White",
-    sizes: {
-      1000: 0.89,
-      2500: 0.69,
+    quantities: [1000, 2500],
+    pricing: {
+      base: {
+        price: 0.89,
+        discount: {
+          2500: 0.69,
+        },
+      },
     },
   },
   {
