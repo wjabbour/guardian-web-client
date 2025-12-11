@@ -376,8 +376,8 @@ export const catalog = [
   },
   {
     code: "CGM441",
-    name: "Ottoman Polo #CGM441",
-    fullname: "Ottoman Polo (CGM441)",
+    name: "Callawy Ottoman Polo #CGM441",
+    fullname: "Callaway Ottoman Polo (CGM441)",
     colors: ["Black","Magnetic Blue","Peacoat","Salsa","Smoked Pearl","White"],
     type: "mens",
     default_color: "Black",
@@ -393,8 +393,8 @@ export const catalog = [
   },
   {
     code: "CGM451",
-    name: "Opti-Vent Polo #CGM451",
-    fullname: "Opti-Vent Polo (CGM451)",
+    name: "Callaway Opti-Vent Polo #CGM451",
+    fullname: "Callaway Opti-Vent Polo (CGM451)",
     colors: ["Black","Medium Blue","Peacoat","Purple Magic","Quiet Shade","Salsa","White"],
     type: "mens",
     default_color: "Black",
@@ -817,9 +817,9 @@ export const catalog = [
     description: "Sold in quantities of 1000, 1500 and 2500; Enter '1' for shipment of 1000, etc.",
     supportedStores: ["MATFME"],
     sizes: {
-      "1000": .39,
-      "1500": .39,
-      "2500": .39,
+      "1000": .49,
+      "1500": .49,
+      "2500": .49,
     },
   },
   {
@@ -832,9 +832,9 @@ export const catalog = [
     description: "Sold in quantities of 1000, 1500 and 2500; Enter '1' for shipment of 1000, etc.",
     supportedStores: ["BOWHSL"],
     sizes: {
-      "1000": .39,
-      "1500": .39,
-      "2500": .39,
+      "1000": .49,
+      "1500": .49,
+      "2500": .49,
     },
   },
   {
@@ -847,9 +847,9 @@ export const catalog = [
     description: "Sold in quantities of 1000, 1500 and 2500; Enter '1' for shipment of 1000, etc.",
     supportedStores: ["BOWCSL"],
     sizes: {
-      "1000": .39,
-      "1500": .39,
-      "2500": .39,
+      "1000": .49,
+      "1500": .49,
+      "2500": .49,
     },
   }, 
   {
@@ -862,9 +862,9 @@ export const catalog = [
     description: "Sold in quantities of 1000, 1500 and 2500; Enter '1' for shipment of 1000, etc.",
     supportedStores: ["BOWCME"],
     sizes: {
-      "1000": .39,
-      "1500": .39,
-      "2500": .39,
+      "1000": .49,
+      "1500": .49,
+      "2500": .49,
     },
   },       
   {
@@ -877,9 +877,9 @@ export const catalog = [
     description: "BLACK WILL NOT SHOW ON WHITE DECAL; Sold in quantities of 1000, 1500 & 2500",
     supportedStores: ["MATFME"],
     sizes: {
-      "1000": .65,
-      "1500": .65,
-      "2500": .65,
+      "1000": .64,
+      "1500": .64,
+      "2500": .64,
     },
   },
    {
@@ -892,9 +892,9 @@ export const catalog = [
     description: "BLACK WILL NOT SHOW ON WHITE DECAL; Sold in quantities of 1000, 1500 & 2500",
     supportedStores: ["BOWHSL"],
     sizes: {
-      "1000": .65,
-      "1500": .65,
-      "2500": .65,
+      "1000": .64,
+      "1500": .64,
+      "2500": .64,
     },
   },
   {
@@ -907,9 +907,9 @@ export const catalog = [
     description: "BLACK WILL NOT SHOW ON WHITE DECAL; Sold in quantities of 1000, 1500 & 2500",
     supportedStores: ["MATFME"],
     sizes: {
-      "1000": .65,
-      "1500": .65,
-      "2500": .65,
+      "1000": .64,
+      "1500": .64,
+      "2500": .64,
     },
   },
   {
@@ -922,9 +922,9 @@ export const catalog = [
     description: "BLACK WILL NOT SHOW ON WHITE DECAL; Sold in quantities of 1000, 1500 & 2500",
     supportedStores: ["BOWCSL"],
     sizes: {
-      "1000": .65,
-      "1500": .65,
-      "2500": .65,
+      "1000": .64,
+      "1500": .64,
+      "2500": .64,
     },
   },
   {
@@ -937,9 +937,9 @@ export const catalog = [
     description: "BLACK WILL NOT SHOW ON WHITE DECAL; Sold in quantities of 1000, 1500 & 2500",
     supportedStores: ["BOWCME"],
     sizes: {
-      "1000": .65,
-      "1500": .65,
-      "2500": .65,
+      "1000": .64,
+      "1500": .64,
+      "2500": .64,
     },
   },
   {

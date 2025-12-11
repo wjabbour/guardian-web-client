@@ -83,24 +83,34 @@ export const config = {
   ],
   stores: [
     {
-      name: "Matt Bowers Ford",
+      name: "Matt Bowers Ford - Metairie",
       address: "3724 Veterans Memorial Blvd, Metairie, LA 70002",
       code: "MATFME",
     },
     {
-      name: "Matt Bowers Chevrolet Cadillac",
+      name: "Matt Bowers Chevrolet",
       address: "316 E Howze Beach Rd, Slidell, LA 70461",
       code: "BOWCSL",
     },
     {
-      name: "Matt Bowers Hyundai",
+      name: "Matt Bowers Hyundai - Slidell",
       address: "298 E Howze Beach Rd, Slidell, LA 70461",
       code: "BOWHSL",
     },
     {
-      name: "Matt Bowers Chevrolet",
+      name: "Matt Bowers Chevrolet - Metairie",
       address: "8213 Airline Drive, Metairie, LA 70003",
       code: "BOWCME",
+    },
+    {
+      name: "Matt Bowers Infiniti - Metairie",
+      address: "3700 N Causeway Blvd, Metairie, LA 70002",
+      code: "BOWIME",
+    },
+    {
+      name: "Matt Bowers Hyundai - Metairie",
+      address: "5969 Veterans Memorial Blvd, Metairie, LA 70003",
+      code: "BOWHME",
     },
     ],
   bypass_codes: ["MATTB"],
