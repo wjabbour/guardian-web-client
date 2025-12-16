@@ -22,7 +22,7 @@ export const config = {
       "Matt Bowers Chevrolet",
       "Matt Bowers CDJR Baton Rouge",
       "Matt Bowers Chevrolet Metairie", 
-      "Matt Bowers Infiniti Metairie Text",    
+      "Matt Bowers Infiniti Metairie Txt",    
       "MB Chevy Slidell",
       "MB Ford Metairie",    
       "MB Hyundai Slidell",
