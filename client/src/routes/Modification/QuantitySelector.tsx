@@ -27,9 +27,7 @@ export default function QuantitySelector({
 
       // Update the parent's customsOrder
       const initialOrder = {
-        [`${activeColor}`]: {
-          quantity: firstQty,
-        },
+        [`${activeColor}`]: firstQty,
       };
       setUserSelection(initialOrder);
     }
@@ -47,9 +45,7 @@ export default function QuantitySelector({
     }));
 
     const newOrder = {
-      [`${activeColor}`]: {
-        quantity: value,
-      },
+      [`${activeColor}`]: value,
     };
 
     setUserSelection(newOrder);

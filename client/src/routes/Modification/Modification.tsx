@@ -14,6 +14,12 @@ import Description from "./Description";
 import { addCustomsToCart } from "./utils";
 import { ColorOption } from "../../lib/constants";
 
+type UserSelection = {
+  [key: string]: {
+    quantity: number;
+  };
+};
+
 export async function loader({ params }) {
   return getWebCatalog().find((i) => i.code === params.id);
 }
@@ -67,7 +73,8 @@ export default function Modification() {
   const [secondPlacement, setSecondPlacement] = useState(
     logo_placements[0] || "Left Chest"
   );
-  const [userSelection, setUserSelection] = useState({});
+
+  const [userSelection, setUserSelection] = useState<UserSelection>({});
 
   const handleFirstEmbroideryChange = (event) => {
     setFirstEmbroidery(event.target.value);
@@ -99,11 +106,12 @@ export default function Modification() {
       return;
     }
 
-    for (const [key, value] of Object.entries(selectedQuantity)) {
+    // key is size + color, value is object containing quantity
+    for (const [key, quantity] of Object.entries(userSelection)) {
       addCustomsToCart(
         item,
-        value,
-        item.colors[0],
+        quantity,
+        key,
         new_cart,
         firstEmbroidery,
         secondEmbroidery,
@@ -112,7 +120,6 @@ export default function Modification() {
 
       set_cart(new_cart);
       sessionStorage.setItem("cart", JSON.stringify(new_cart));
-      return;
     }
 
     // TODO: shouldnt this be broken out to a function?
@@ -149,9 +156,9 @@ export default function Modification() {
 
     //   set_cart(new_cart);
     //   sessionStorage.setItem("cart", JSON.stringify(new_cart));
-    //   setSnackbarOpen(true);
-    //   setCustomsOrder({});
-    //   return;
+    setSnackbarOpen(true);
+    setUserSelection({});
+    return;
     // }
 
     let any_input_has_value = false;
