@@ -3,9 +3,7 @@ export const catalog = [
     code: "600088V",
     name: "Seat Covers",
     fullname: "No-Slip Plastic Seat Covers (500/roll)",
-    colors: ["Plastic"],
     type: "service",
-    default_color: "Plastic",
     sizes: {
       "# rolls": 73.5,
     },
@@ -14,9 +12,7 @@ export const catalog = [
     code: "3088",
     name: "Floor Mats",
     fullname: "Floor Mats/Coated Paper (500/bx)",
-    colors: ["White"],
     type: "service",
-    default_color: "White",
     discount: [{ quantity: 500, price: 76.44 }],
     sizes: {
       "# boxes": 76.44,
@@ -26,9 +22,7 @@ export const catalog = [
     code: "BGVinyl",
     name: "Vinyl Sheet",
     fullname: "8.5 x 11 Blank Vinyl Sheet #9300 (100/pk)",
-    colors: ["White"],
     type: "sales",
-    default_color: "White",
     discount: [{ quantity: 1, price: 135.0 }],
     sizes: {
       "# packs": 135.0,
@@ -38,9 +32,7 @@ export const catalog = [
     code: "BGE12-AL",
     name: "Buyers Guide",
     fullname: "Buyers Guide, Blank Front (100/pk)",
-    colors: ["White"],
     type: "sales",
-    default_color: "White",
     discount: [{ quantity: 1, price: 74.95 }],
     sizes: {
       "# packs": 74.95,
@@ -50,7 +42,6 @@ export const catalog = [
     code: "3198WB",
     name: "Oval Year Stickers - Blue",
     fullname: "Oval Year Stickers - Blue/White (12/pk)",
-    colors: ["Blue"],
     variations: [
       "2007",
       "2008",
@@ -58,7 +49,7 @@ export const catalog = [
       "2010",
       "2011",
       "2012",
-      "2013",      
+      "2013",
       "2014",
       "2015",
       "2016",
@@ -74,7 +65,6 @@ export const catalog = [
       "2026",
     ],
     type: "sales",
-    default_color: "Blue",
     discount: [{ quantity: 1, price: 10.99 }],
     sizes: {
       "# packs": 10.99,
@@ -84,7 +74,6 @@ export const catalog = [
     code: "3198SB",
     name: "Oval Year Stickers - Silver",
     fullname: "Oval Year Stickers - Silver/Black (12/pk)",
-    colors: ["Silver"],
     variations: [
       "2016",
       "2017",
@@ -99,7 +88,6 @@ export const catalog = [
       "2026",
     ],
     type: "sales",
-    default_color: "Silver",
     discount: [{ quantity: 1, price: 10.99 }],
     sizes: {
       "# packs": 10.99,
@@ -175,9 +163,7 @@ export const catalog = [
     code: "GP790",
     name: "Not for Sale Sticker",
     fullname: "Sticker - Vehicle Not for Sale (100/pk)",
-    colors: ["Yellow"],
     type: "sales",
-    default_color: "Yellow",
     discount: [{ quantity: 1, price: 27.95 }],
     sizes: {
       "# packs": 27.95,
@@ -842,13 +828,13 @@ export const catalog = [
     type: "mens",
     default_color: "Black",
     sizes: {
-      Small: 124.00,
-      Medium: 124.00,
-      Large: 124.00,
-      XLarge: 124.00,
-      "2XLarge": 126.00,
-      "3XLarge": 128.00,
-      "4XLarge": 130.00,
+      Small: 124.0,
+      Medium: 124.0,
+      Large: 124.0,
+      XLarge: 124.0,
+      "2XLarge": 126.0,
+      "3XLarge": 128.0,
+      "4XLarge": 130.0,
     },
   },
   {
@@ -891,9 +877,7 @@ export const catalog = [
     code: "HENPRO-FOB-414917C",
     name: "Leather Key Fob (red stitch) - Porsche N ATL",
     fullname: "Metal & Black Leather Fob - red stitch (must order min. of 250)",
-    colors: ["Black"],
     type: "accessory",
-    default_color: "Black",
     sizes: {
       1: 3.99,
     },
@@ -903,9 +887,7 @@ export const catalog = [
     name: "Leather Key Fob (white stitch) - Porsche N ATL",
     fullname:
       "Metal & Black Leather Fob - white stitch (must order min. of 250)",
-    colors: ["Black"],
     type: "accessory",
-    default_color: "Black",
     sizes: {
       1: 3.99,
     },
@@ -914,9 +896,7 @@ export const catalog = [
     code: "HENPMA-FOB-497832C",
     name: "Leather Key Fob (red stitch) - Porsche Marietta",
     fullname: "Metal & Black Leather Fob - red stitch (must order min. of 250)",
-    colors: ["Black"],
     type: "accessory",
-    default_color: "Black",
     sizes: {
       1: 3.99,
     },
@@ -926,9 +906,7 @@ export const catalog = [
     name: "Leather Key Fob (white stitch) - Porsche Marietta",
     fullname:
       "Metal & Black Leather Fob - white stitch (must order min. of 250)",
-    colors: ["Black"],
     type: "accessory",
-    default_color: "Black",
     sizes: {
       1: 3.99,
     },
@@ -937,9 +915,7 @@ export const catalog = [
     code: "HENLAT-GPLLKR-456506L",
     name: "Leather Key Fob - Lexus ATL",
     fullname: "Black Laser Engraved Leather Fob  (must order min. of 250)",
-    colors: ["Black"],
     type: "accessory",
-    default_color: "Black",
     sizes: {
       1: 3.19,
     },
@@ -949,9 +925,7 @@ export const catalog = [
     name: "Leather Key Fob - Lexus ATL",
     fullname:
       "Metal & Black Leather Fob w/black color fill (must order min. of 250)",
-    colors: ["Black"],
     type: "accessory",
-    default_color: "Black",
     sizes: {
       1: 3.19,
     },
@@ -961,9 +935,7 @@ export const catalog = [
     name: "Leather Key Fob - Land Rover - N ATL",
     fullname:
       "Black Leather Fob w/laser engraved imprint (must order min. of 250)",
-    colors: ["Black"],
     type: "accessory",
-    default_color: "Black",
     sizes: {
       1: 3.99,
     },
@@ -972,9 +944,7 @@ export const catalog = [
     code: "HENLDU-GPLLKR-473091L",
     name: "Leather Key Fob - Lexus Gwinnett",
     fullname: "Black Laser Engraved Leather Fob (must order min. of 250)",
-    colors: ["Black"],
     type: "accessory",
-    default_color: "Black",
     sizes: {
       1: 3.19,
     },
@@ -983,9 +953,7 @@ export const catalog = [
     code: "HENLDU-G1640-427215L",
     name: "Leather Key Fob - Lexus Gwinnett",
     fullname: "Black Laser Engraved Leather Fob (must order min. of 250)",
-    colors: ["Black"],
     type: "accessory",
-    default_color: "Black",
     sizes: {
       1: 3.19,
     },
@@ -995,9 +963,7 @@ export const catalog = [
     name: "Leather Key Fob (green stitch) - Land Rover Gwinnett",
     fullname:
       "Black Laser Engraved Leather Fob - green stitch (must order min. of 250)",
-    colors: ["Black"],
     type: "accessory",
-    default_color: "Black",
     sizes: {
       1: 3.49,
     },
@@ -1006,9 +972,7 @@ export const catalog = [
     code: "HENCDU-G1640-475097LL",
     name: "Leather Key Fob - Cadillac Duluth",
     fullname: "Black Laser Engraved Leather Fob (must order min. of 250)",
-    colors: ["Black"],
     type: "accessory",
-    default_color: "Black",
     sizes: {
       1: 3.29,
     },
@@ -1017,9 +981,7 @@ export const catalog = [
     code: "CG1640",
     name: "Laser Engraved Keychain",
     fullname: "Brushed Zinc/Leather Key Tag (must order min. of 250)",
-    colors: ["Black"],
     type: "accessory",
-    default_color: "Black",
     sizes: {
       1: 3.19,
     },
@@ -1029,9 +991,7 @@ export const catalog = [
     name: "Laser Engraved Keychain",
     fullname:
       "Chrome Keychain w/laser engraved imprint (must order min. of 250)",
-    colors: ["Metal"],
     type: "accessory",
-    default_color: "Metal",
     sizes: {
       1: 3.59,
     },
@@ -1040,9 +1000,7 @@ export const catalog = [
     code: "HENFAT-FOB-505249",
     name: "Laser Engraved Keychain",
     fullname: "Blue Banner Keychain (must order min. of 250)",
-    colors: ["Metal"],
     type: "accessory",
-    default_color: "Metal",
     sizes: {
       1: 3.59,
     },
@@ -1051,9 +1009,7 @@ export const catalog = [
     code: "HENMMO-FOB-502771L",
     name: "Matte Black Keychain - Southlake Mazda Buick GMC",
     fullname: "Matte Black Keychain (must order min. of 250)",
-    colors: ["Black"],
     type: "accessory",
-    default_color: "Black",
     sizes: {
       1: 3.59,
     },
@@ -1062,9 +1018,7 @@ export const catalog = [
     code: "HENLAT-34MLF-379167A",
     name: "Zinc Metal Frame",
     fullname: "Zinc Metal Frame w/glossy black imprint",
-    colors: ["Metal"],
     type: "customs",
-    default_color: "Metal",
     supportedStores: ["HENLAT"],
     sizes: {
       500: 0.99,
@@ -1077,9 +1031,7 @@ export const catalog = [
     code: "HENLAT-G24-367503A",
     name: "Poly Coated Plate",
     fullname: "Poly Coated Plate w/black imprint",
-    colors: ["Black"],
     type: "customs",
-    default_color: "Black",
     supportedStores: ["HENLAT"],
     sizes: {
       500: 0.79,
@@ -1092,9 +1044,7 @@ export const catalog = [
     code: "HENLAL-G24-373653SA",
     name: "Poly Coated Plate",
     fullname: "Poly Coated Plate w/black imprint",
-    colors: ["Black"],
     type: "customs",
-    default_color: "Black",
     supportedStores: ["HENLAL"],
     sizes: {
       500: 0.79,
@@ -1107,9 +1057,7 @@ export const catalog = [
     code: "HENLAT-33GT-497684Z",
     name: "Plastic Plate",
     fullname: "Plastic plate w/full color imprint",
-    colors: ["Black"],
     type: "customs",
-    default_color: "Black",
     supportedStores: ["HENLAT"],
     sizes: {
       500: 1.89,
@@ -1122,9 +1070,7 @@ export const catalog = [
     code: "HENLAT-33P-391710A",
     name: "Plastic Plate",
     fullname: "Plastic plate w/black imprint",
-    colors: ["Black"],
     type: "customs",
-    default_color: "Black",
     supportedStores: ["HENLAT"],
     sizes: {
       500: 0.99,
@@ -1137,9 +1083,7 @@ export const catalog = [
     code: "HENPRO-33P-458858A",
     name: "Test Drive Plate",
     fullname: "TEST DRIVE - Plastic Plate w/black imprint",
-    colors: ["Black"],
     type: "customs",
-    default_color: "Black",
     supportedStores: ["HENPRO"],
     sizes: {
       500: 0.99,
@@ -1152,9 +1096,7 @@ export const catalog = [
     code: "HENPMA-33P-497831A",
     name: "Test Drive Plate",
     fullname: "TEST DRIVE - Plastic Plate w/black imprint",
-    colors: ["Black"],
     type: "customs",
-    default_color: "Black",
     supportedStores: ["HENPMA"],
     sizes: {
       500: 0.99,
@@ -1167,9 +1109,7 @@ export const catalog = [
     code: "HENPRO-34MLF-426579A",
     name: "Black Metal Frame",
     fullname: "Black Metal Frame w/white imprint",
-    colors: ["Black"],
     type: "customs",
-    default_color: "Black",
     supportedStores: ["HENPRO"],
     sizes: {
       500: 0.0279,
@@ -1182,9 +1122,7 @@ export const catalog = [
     code: "HENPMA-34MLF-497830A",
     name: "Black Metal Frame",
     fullname: "Black Metal Frame w/white imprint",
-    colors: ["Black"],
     type: "customs",
-    default_color: "Black",
     supportedStores: ["HENPMA"],
     sizes: {
       500: 0.0279,
@@ -1212,9 +1150,7 @@ export const catalog = [
     code: "HENMMO-31DD-504444A",
     name: "Die Cut Decal",
     fullname: "Black Vinyl Die Cut Decal",
-    colors: ["Black"],
     type: "customs",
-    default_color: "Black",
     supportedStores: ["HENMMO"],
     sizes: {
       500: 0.89,
@@ -1227,9 +1163,7 @@ export const catalog = [
     code: "HENFAT-34MRE-419207",
     name: "Aluminum Embossed Plate",
     fullname: "Aluminum Plate w/black imprint",
-    colors: ["Black"],
     type: "customs",
-    default_color: "Black",
     supportedStores: ["HENFAT"],
     sizes: {
       500: 3.59,
@@ -1242,9 +1176,7 @@ export const catalog = [
     code: "HENFAT-34MRE-418853",
     name: "Aluminum Embossed Plate",
     fullname: "White Aluminum Plate w/blue imprint",
-    colors: ["White"],
     type: "customs",
-    default_color: "White",
     supportedStores: ["HENFAT"],
     sizes: {
       500: 3.59,
@@ -1257,9 +1189,7 @@ export const catalog = [
     code: "HENFAT-34MLF-445719",
     name: "Zinc Metal Frame",
     fullname: "Standard Zinc Metal Frame",
-    colors: ["Metal"],
     type: "customs",
-    default_color: "Metal",
     supportedStores: ["HENFAT"],
     sizes: {
       500: 3.69,
@@ -1272,9 +1202,7 @@ export const catalog = [
     code: "HENLDU-33P3DS-379346A",
     name: "3D Plastic Plate",
     fullname: "Black 3D Plastic Plate w/matte silver imprint",
-    colors: ["Black"],
     type: "customs",
-    default_color: "Black",
     supportedStores: ["HENLDU"],
     sizes: {
       500: 2.39,
@@ -1287,9 +1215,7 @@ export const catalog = [
     code: "HENLDU-34MLF-366502A",
     name: "Zinc Metal Frame",
     fullname: "Zinc Metal Frame w/black imprint",
-    colors: ["Metal"],
     type: "customs",
-    default_color: "Metal",
     supportedStores: ["HENLDU"],
     sizes: {
       500: 3.35,
@@ -1302,9 +1228,7 @@ export const catalog = [
     code: "HENCDU-34MLF-485630A",
     name: "Black Metal Frame",
     fullname: "Black Metal Frame w/white imprint",
-    colors: ["Black"],
     type: "customs",
-    default_color: "Black",
     supportedStores: ["HENCDU"],
     sizes: {
       500: 3.59,
@@ -1317,9 +1241,7 @@ export const catalog = [
     code: "HENLDU-33P-497607A",
     name: "Certified Tag",
     fullname: "Lexus Certified Tag",
-    colors: ["Black"],
     type: "customs",
-    default_color: "Black",
     supportedStores: ["HENLDU"],
     sizes: {
       500: 0.79,
@@ -1332,9 +1254,7 @@ export const catalog = [
     code: "HENADU-33P-492576A",
     name: "Land Rover Tag",
     fullname: "Land Rover Black Tag",
-    colors: ["Black"],
     type: "customs",
-    default_color: "Black",
     supportedStores: ["HENADU"],
     sizes: {
       500: 1.29,
@@ -1347,9 +1267,7 @@ export const catalog = [
     code: "HENLDU-33G24-373661B",
     name: "Poly Coated Plate",
     fullname: "White Poly Coated Plate w/black & 36 metallic imprint",
-    colors: ["White"],
     type: "customs",
-    default_color: "White",
     supportedStores: ["HENLDU"],
     sizes: {
       500: 0.89,
@@ -1362,9 +1280,7 @@ export const catalog = [
     code: "HENCDU-G24-365677B",
     name: "Drive Out Tag",
     fullname: "White Poly Coated Plate w/black & 36 metallic gold imprint",
-    colors: ["White"],
     type: "customs",
-    default_color: "White",
     supportedStores: ["HENCDU"],
     sizes: {
       500: 1.39,
@@ -1377,9 +1293,7 @@ export const catalog = [
     code: "HENFAT-280C-497703",
     name: "Hang Tag",
     fullname: "VIP OFFER Hang Tag",
-    colors: ["White"],
     type: "service",
-    default_color: "White",
     sizes: {
       500: 0.89,
       1000: 0.69,
@@ -1389,9 +1303,7 @@ export const catalog = [
     code: "HENFAT-280C-491902",
     name: "Hang Tag",
     fullname: "SOLD Hang Tag",
-    colors: ["White"],
     type: "service",
-    default_color: "White",
     sizes: {
       1000: 0.89,
       2500: 0.69,
@@ -1401,9 +1313,7 @@ export const catalog = [
     code: "HENFAT-33G24-443352",
     name: "Poly Coated Plate",
     fullname: "Poly Coated Cardboard w/black/blue imprint",
-    colors: ["Black"],
     type: "customs",
-    default_color: "Black",
     supportedStores: ["HENFAT"],
     sizes: {
       500: 0.89,
@@ -1416,9 +1326,7 @@ export const catalog = [
     code: "HENADU-G24-385877A",
     name: "Poly Coated Plate",
     fullname: "Poly Coated Cardboard w/dark green imprint",
-    colors: ["Dk Green"],
     type: "customs",
-    default_color: "Dk Green",
     supportedStores: ["HENADU"],
     sizes: {
       500: 0.99,
@@ -1431,9 +1339,7 @@ export const catalog = [
     code: "HENHWO-31DD-343372",
     name: "Die Cut Decal",
     fullname: "Black & 285 Blue Die Cut Decal (screened on clear)",
-    colors: ["Black"],
     type: "customs",
-    default_color: "Black",
     supportedStores: ["HENHWO"],
     sizes: {
       500: 0.89,
@@ -1446,9 +1352,7 @@ export const catalog = [
     code: "HENHWO-33P-376460B",
     name: "Drive Out Tag",
     fullname: "Poly Coated Cardboard w/black & 293 blue imprint",
-    colors: ["White"],
     type: "customs",
-    default_color: "White",
     supportedStores: ["HENHWO"],
     sizes: {
       500: 0.95,
@@ -1461,9 +1365,7 @@ export const catalog = [
     code: "HENCDU-33P-370807A",
     name: "Hennessy Cadillac Tag",
     fullname: "Poly Coated Cardboard w/cool gray 11 imprint",
-    colors: ["White"],
     type: "customs",
-    default_color: "White",
     supportedStores: ["HENCDU"],
     sizes: {
       500: 1.39,
@@ -1476,9 +1378,7 @@ export const catalog = [
     code: "HENHWO-34CP-377796A",
     name: "Chrome Plated Frame",
     fullname: "Chrome Plated Frame w/black imprint",
-    colors: ["Chrome Plated"],
     type: "customs",
-    default_color: "Chrome Plated",
     supportedStores: ["HENHWO"],
     sizes: {
       500: 3.35,
@@ -1491,9 +1391,7 @@ export const catalog = [
     code: "HENADU-34CF-437447A",
     name: "Chrome Faced Frame",
     fullname: "Chrome Faced Frame w/black imprint",
-    colors: ["Chrome"],
     type: "customs",
-    default_color: "Chrome",
     supportedStores: ["HENADU"],
     sizes: {
       500: 1.49,
@@ -1506,9 +1404,7 @@ export const catalog = [
     code: "HENMMO-34CF-503744A",
     name: "Chrome Faced Frame",
     fullname: "Chrome Faced Frame w/black imprint",
-    colors: ["Chrome"],
     type: "customs",
-    default_color: "Chrome",
     supportedStores: ["HENMMO"],
     sizes: {
       500: 1.39,
@@ -1521,9 +1417,7 @@ export const catalog = [
     code: "HENMMO-34CF-503933A",
     name: "Chrome Faced Frame",
     fullname: "Chrome Faced Frame w/black imprint",
-    colors: ["Chrome"],
     type: "customs",
-    default_color: "Chrome",
     supportedStores: ["HENMMO"],
     sizes: {
       500: 1.39,
@@ -1536,9 +1430,7 @@ export const catalog = [
     code: "HENLAL-34CF-459349A",
     name: "Chrome Faced Frame",
     fullname: "Chrome Faced Frame w/black imprint",
-    colors: ["Chrome Faced"],
     type: "customs",
-    default_color: "Chrome Faced",
     supportedStores: ["HENLAL"],
     sizes: {
       500: 1.39,
@@ -1551,9 +1443,7 @@ export const catalog = [
     code: "HENCDU-34CF-370808A",
     name: "Chrome Faced Frame",
     fullname: "Chrome Faced Frame w/black imprint",
-    colors: ["Chrome"],
     type: "customs",
-    default_color: "Chrome",
     supportedStores: ["HENCDU"],
     sizes: {
       500: 1.39,
@@ -1566,9 +1456,7 @@ export const catalog = [
     code: "HENMMO-THC-477566A",
     name: "Domecal Hitch Cover",
     fullname: "Domecal Hitch Cover",
-    colors: ["Black"],
     type: "customs",
-    default_color: "Black",
     supportedStores: ["HENMMO"],
     sizes: {
       250: 4.49,
@@ -1578,9 +1466,7 @@ export const catalog = [
     code: "HENHWO-33P3D-376461A",
     name: "3D Tag",
     fullname: "3D Black Plate w/white imprint",
-    colors: ["Black"],
     type: "customs",
-    default_color: "Black",
     supportedStores: ["HENHWO"],
     sizes: {
       500: 2.39,
@@ -1593,9 +1479,7 @@ export const catalog = [
     code: "HENFAT-1830-478437",
     name: "Service Due Sticker",
     fullname: "Service Due Sticker w/QR code",
-    colors: ["White"],
     type: "service",
-    default_color: "White",
     sizes: {
       5000: 0.21,
       10000: 0.19,
@@ -1605,9 +1489,7 @@ export const catalog = [
     code: "HENCDU-STKR-506185Z",
     name: "Caution Sticker - Cadillac Duluth",
     fullname: "40 Mineral Orange Vinyl Sticker w/black imprint",
-    colors: ["Orange"],
     type: "service",
-    default_color: "Orange",
     sizes: {
       1500: 0.89,
     },
@@ -1616,9 +1498,7 @@ export const catalog = [
     code: "HENCDU-CERT-481428Z",
     name: "SVC Certificate - Cadillac Duluth",
     fullname: "Free Service Certificate",
-    colors: ["Black"],
     type: "service",
-    default_color: "Black",
     sizes: {
       500: 0.39,
     },
@@ -1627,9 +1507,7 @@ export const catalog = [
     code: "HENCDU-PEN-495480A",
     name: "Blue Maxiglide Pen - Cadillac Duluth",
     fullname: "Blue Maxiglide Pure Pen w/white imprint (#582)",
-    colors: ["Blue"],
     type: "accessory",
-    default_color: "Blue",
     sizes: {
       100: 0.79,
       250: 0.79,
@@ -1642,9 +1520,7 @@ export const catalog = [
     code: "HENFAT-MUG-505968",
     name: "15oz. Mug w/imprint",
     fullname: "Royal 15oz. Ember Mug w/silver imprint",
-    colors: ["Royal"],
     type: "accessory",
-    default_color: "Royal",
     sizes: {
       100: 2.89,
       250: 2.89,
@@ -1657,9 +1533,7 @@ export const catalog = [
     code: "HENFAT-MUG-492907",
     name: "15oz. Mug w/imprint",
     fullname: "Black 15oz. Mug w/laser engraved imprint",
-    colors: ["Black"],
     type: "accessory",
-    default_color: "Black",
     sizes: {
       100: 16.99,
       250: 16.99,
@@ -1672,9 +1546,7 @@ export const catalog = [
     code: "HENCDU-KOOZIE-508516A",
     name: "Black Kan-Tastic - Cadillac Duluth",
     fullname: "Black Kan-Tastic w/white imprint (#34)",
-    colors: ["Black"],
     type: "accessory",
-    default_color: "Black",
     sizes: {
       100: 0.99,
       250: 0.99,
@@ -1687,9 +1559,7 @@ export const catalog = [
     code: "HENCDU-BOTTLE-508517A",
     name: "Black 24oz Bottle - Cadillac Duluth",
     fullname: "Black 24oz Stainless Steel Bottle w/white imprint (#50240)",
-    colors: ["Black"],
     type: "accessory",
-    default_color: "Black",
     sizes: {
       100: 17.99,
       250: 17.99,
@@ -1702,9 +1572,7 @@ export const catalog = [
     code: "HENFAT-TOTE-493101",
     name: "Vinyl Tote w/imprint",
     fullname: "Vinyl Tote w/full color imprint",
-    colors: ["Black"],
     type: "accessory",
-    default_color: "Black",
     sizes: {
       100: 1.69,
       250: 1.69,
@@ -1717,9 +1585,7 @@ export const catalog = [
     code: "HENPMA-TOTE-2ML8410",
     name: "Matte Tote 8 x 10 x 4",
     fullname: "White Matte Laminated Euro Tote w/black imprint (8x10x4)",
-    colors: ["White"],
     type: "accessory",
-    default_color: "White",
     sizes: {
       100: 1.39,
       250: 1.39,
@@ -1732,9 +1598,7 @@ export const catalog = [
     code: "HENPMA-TOTE-2L13510",
     name: "Laminated Tote 13 x 10 x 5",
     fullname: "White Gloss Laminated Euro Tote w/black imprint (13x10x5)",
-    colors: ["White"],
     type: "accessory",
-    default_color: "White",
     sizes: {
       100: 1.55,
       250: 1.55,
@@ -1747,9 +1611,7 @@ export const catalog = [
     code: "HENPMA-TOTE-2L16612",
     name: "Laminated Tote 16 x 12 x 6",
     fullname: "White Gloss Laminated Euro Tote w/black imprint (16x12x6)",
-    colors: ["White"],
     type: "accessory",
-    default_color: "White",
     sizes: {
       100: 1.69,
       250: 1.69,
@@ -1762,9 +1624,7 @@ export const catalog = [
     code: "HENFAT-TOTE-492717",
     name: "Laminated Tote w/imprint",
     fullname: "Black Gloss Laminated Tote w/white imprint",
-    colors: ["Black"],
     type: "accessory",
-    default_color: "Black",
     sizes: {
       100: 2.29,
       250: 2.29,
