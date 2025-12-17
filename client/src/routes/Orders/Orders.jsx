@@ -17,12 +17,14 @@ import { getStore, getStoreCode } from "guardian-common";
 
 export default function BasicTable() {
   const [orders, setOrders] = useState([]);
-  const [displayedOrders, setDisplayedOrders] = useState(orders)
+  const [displayedOrders, setDisplayedOrders] = useState(orders);
   const [errorSnackbarOpen, setErrorSnackbarOpen] = useState(false);
   const [errorSnackbarText, setErrorSnackbarText] = useState("");
   const [isAdmin, setIsAdmin] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const storeOptions = [...new Set(orders.map((o) => getStore(o.company_name ?? '', o.store)))];
+  const storeOptions = [
+    ...new Set(orders.map((o) => getStore(o.company_name ?? "", o.store))),
+  ];
 
   function editClick() {
     if (!isAdmin) {
@@ -34,17 +36,16 @@ export default function BasicTable() {
     setErrorSnackbarOpen(false);
   }
 
-  function handleFilterChange (store) {
-      
+  function handleFilterChange(store) {
     if (!store) {
-      setDisplayedOrders([...orders])
-      return
+      setDisplayedOrders([...orders]);
+      return;
     }
 
-    const code = getStoreCode(orders[0].company_name, store)
+    const code = getStoreCode(orders[0].company_name, store);
     setDisplayedOrders((prev) => {
-      return [ ...prev.filter((i) => i.store === code)]
-    })
+      return [...prev.filter((i) => i.store === code)];
+    });
   }
 
   function rows() {
@@ -68,21 +69,19 @@ export default function BasicTable() {
 
       const paidOrders = orders.filter((order) => order.paid !== 0);
       setOrders(paidOrders);
-      setDisplayedOrders(paidOrders)
+      setDisplayedOrders(paidOrders);
     });
   }, []);
 
   return (
     <div className={styles.container}>
-      <StoreSelect
-        stores={storeOptions}
-        onChange={handleFilterChange}
-      />
+      <StoreSelect stores={storeOptions} onChange={handleFilterChange} />
       <TableContainer component={Paper}>
         <Table aria-label="simple table">
           <TableHead>
             <TableRow>
               <TableCell />
+              <TableCell align="center">PO</TableCell>
               <TableCell align="center">Order Date</TableCell>
               <TableCell align="center">Order Name</TableCell>
               <TableCell align="center">Store</TableCell>

@@ -319,7 +319,11 @@
 }
 
 .Athletic_Oxford {
-  background-color: #9b9ea17c;
+  background-color: #797c80e5;
+}
+
+.AthleticOxford {
+  background-color: #797c80e5;
 }
 
 .Athletic_Purple {
@@ -771,7 +775,7 @@
 }
 
 .Dark_Grey {
-  background-color: #5e666a;
+  background-color: #393c3d;
 }
 
 .Dark_Pine {
@@ -1006,6 +1010,10 @@
   background-color: #245c05;
 }
 
+.Grn {
+  background-color: #357e0e;
+}
+
 .Grey {
   background-color: #8b8c8f;
 }
@@ -1115,7 +1123,7 @@
 }
 
 .Khaki{
-  background-color: #f5e589;
+  background-color: #c0b67b;
 }
 
 .Kraft_Paper {
@@ -1276,6 +1284,10 @@
 
 .Navy_Blazer {
   background-color: #472236a9;
+}
+
+.Navy_Blue_Hthr {
+  background-color: #2f425c8e;
 }
 
 .Navy_Heather {
@@ -1474,6 +1486,18 @@
   background-color: #294366;
 }
 
+.Reloaded_Char_Hthr {
+  background-color: #474849;
+}
+
+.Remade_Gray_Hthr {
+  background-color: #a2a7ad;
+}
+
+.Reused_Royal_Hthr {
+  background-color: #367fdf;
+}
+
 .RichNavy {
   background-color: #2d3549;
 }
@@ -1578,9 +1602,18 @@
   background-color: #f06b1ef1;
 }
 
+.Salvaged_Navy_Hthr {
+  background-color: #3f4c5e;
+}
+
 .Sand {
   background-color: #917645f1;
 }
+
+.Sandstone {
+  background-color: #d6c8adf1;
+}
+
 
 .Sep {
   background-color: #dc73bb;
@@ -1908,6 +1941,10 @@
 
 .Very_Berry {
   background-color: #a52d8b;
+}
+
+.Vintage_Hthr_Navy {
+  background-color: rgb(91, 95, 116);
 }
 
 .Vintage_Indigo {

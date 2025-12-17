@@ -3486,25 +3486,47 @@ export const catalog = [
   {
     code: "BOW22",
     name: "22 in. Giant Bow",
-    fullname: "22 in. Giant Magnetic Car Bow (2 ea)",
-    colors: ["Blue","Gold","Green","Patriotic","Pink","Red","Silver","White","Red Grn"],
+    fullname: "22 in. Giant Magnetic Car Bow (sold in pairs)",
+    colors: [
+      "Blue",
+      "Gold",
+      "Green",
+      "Patriotic",
+      "Pink",
+      "Red",
+      "Silver",
+      "White",
+      "Red Grn"
+    ],
+    halfColors: ["Red Grn"],
     type: "sales",
     default_color: "Blue",   
     sizes: {
-      2: 0.00,
+      "pk of 2": 0.00,
     },
-  },
+  },  
   {
     code: "BOW30",
     name: "30 in. Giant Bow",
-    fullname: "30 in. Giant Magnetic Car Bow (2 ea)",
-    colors: ["Blue","Gold","Green","Patriotic","Pink","Red","Silver","White","Red Grn"],
+    fullname: "30 in. Giant Magnetic Car Bow (sold in pairs)",
+    colors: [
+      "Blue",
+      "Gold",
+      "Green",
+      "Patriotic",
+      "Pink",
+      "Red",
+      "Silver",
+      "White",
+      "Red Grn"
+    ],
+    halfColors: ["Red Grn"],
     type: "sales",
     default_color: "Blue",   
     sizes: {
-      2: 0.00,
+      "pk of 2": 0.00,
     },
-  },
+  },  
   {
     code: "HANG-HT-RDBK-TF",
     name: "Hang Tag - Red Tag Special",
@@ -4152,7 +4174,7 @@ export const catalog = [
     type: "sales",
     default_color: "Blue",
     sizes: {
-      "# packs": 2.99,
+      "# packs": 0.00,
    },
   }, 
   {
@@ -4176,13 +4198,13 @@ export const catalog = [
     type: "sales",
     default_color: "Silver",    
     sizes: {
-      "# packs": 2.99,
+      "# packs": 0.00,
     },
   },
   {
     code: "3198BY",
     name: "Oval Year Stickers - Yellow",
-    fullname: "Oval Year Stickers - Black/Yellow (12/pk)",
+    fullname: "Oval Year Stickers - Yellow/Black (12/pk)",
     colors: ["Yellow"],
     variations: [
       "2008",
@@ -4208,7 +4230,7 @@ export const catalog = [
     type: "sales",
     default_color: "Yellow",
     sizes: {
-      "# packs": 2.99,
+      "# packs": 0.00,
     },
   },  
   {

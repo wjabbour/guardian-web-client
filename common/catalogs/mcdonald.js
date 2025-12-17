@@ -1,5 +1,27 @@
 export const catalog = [
-    {
+    {    
+    code: "NKDC1963",
+    name: "Nike® Dri-FIT Polo #NKDC1963",
+    fullname: "Nike® Dri-FIT Micro Pique 2.0 Polo (NKDC1963)",
+    colors: [
+        "Black",             
+        "Game Royal",        
+        "University Red",
+        "White",      
+    ],
+    type: "mens",
+    default_color: "Black",
+    sizes: {
+      Small: 0.00,
+      Medium: 0.00,
+      Large: 0.00,
+      XLarge: 0.00,
+      "2XLarge": 0.00,
+      "3XLarge": 0.00,
+      "4XLarge": 0.00,
+   },
+  },
+  {
     code: "MCDONALD-PFRAMEI",
     name: "Black Plastic Frame",
     fullname: "Black Plastic Frame w/white imprint",
@@ -527,7 +549,7 @@ export const catalog = [
   {
     code: "3198BY",
     name: "Oval Year Stickers - Yellow",
-    fullname: "Oval Year Stickers - Black/Yellow (12/pk)",
+    fullname: "Oval Year Stickers - Yellow/Black (12/pk)",
     colors: ["Yellow"],
     variations: [
       "2008",
@@ -554,6 +576,28 @@ export const catalog = [
     default_color: "Yellow",
     sizes: {
       "# packs": 2.99,
+    },
+  },
+  {
+    code: "BOW30",
+    name: "30 in. Giant Bow",
+    fullname: "30 in. Giant Magnetic Car Bow (sold in pairs)",
+    colors: [
+      "Blue",
+      "Gold",
+      "Green",
+      "Patriotic",
+      "Pink",
+      "Red",
+      "Silver",
+      "White",
+      "Red Grn"
+    ],
+    halfColors: ["Red Grn"],
+    type: "sales",
+    default_color: "Blue",   
+    sizes: {
+      "pk of 2": 32.99,
     },
   },  
 ]

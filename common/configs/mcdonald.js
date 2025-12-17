@@ -2,7 +2,7 @@ export const config = {
   title: "Mcdonald",
   company_logo: "mcdonald.png",
   logo_placements: {
-    mens: [],
+    mens: ["Left Chest"],
     womens: [],
     hat: [],
     tshirts: [],
@@ -11,7 +11,7 @@ export const config = {
   show_image_preview: true,
   embroideries: {
     hat: [],
-    mens: [],
+    mens: ["Mcdonald"],
     womens: [],
     accessory: [],
     customs: [],
@@ -50,7 +50,7 @@ export const config = {
     }, 
     {
       name: "McDonald Detail Center - Angel's",
-      address: "8041 South Grant Way, LIttleton, CO 80122",
+      address: "8041 South Grant Way, Littleton, CO 80122",
       code: "MCDDLI",
     }, 
     {

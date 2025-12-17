@@ -6,8 +6,9 @@ export const config = {
     womens: ["Left Chest"],
     hat: ["Front Center"],
     tshirts: [],
-    accessory: ["Front Center - Bag","Bottom Right Corner-Blanket/Towel"]
+    accessory: ["Front Center","Bottom Right Corner"]
   },
+  minimum_apparel_order: false,  
   show_image_preview: true,
   embroideries: {
     hat: ["Johns Creek Mortgage"],
