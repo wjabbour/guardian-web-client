@@ -27,9 +27,9 @@ export const config = {
       "MB Ford Metairie",    
       "MB Hyundai Slidell",
       "MB Hyundai Metairie",
-      "MB Flag",
       "MB",
-      "Fleur De Lis"
+      "MB Flag",      
+      "Fleur De Lis",
 
     ],
     womens: [
@@ -48,9 +48,9 @@ export const config = {
       "MB Ford Metairie",    
       "MB Hyundai Slidell",
       "MB Hyundai Metairie",
-      "MB Flag",
       "MB",
-      "Fleur De Lis"
+      "MB Flag",      
+      "Fleur De Lis",
     ],
     tshirts: [
       "Matt B Ford Metairie",          
@@ -80,9 +80,9 @@ export const config = {
       "MB Ford Metairie",    
       "MB Hyundai Slidell",
       "MB Hyundai Metairie",
-      "MB Flag",
       "MB",
-      "Fleur De Lis"
+      "MB Flag",      
+      "Fleur De Lis",
     ],
     customs: [],
     office: [],
@@ -106,14 +106,9 @@ export const config = {
       code: "MATFME",
     },
     {
-      name: "Matt Bowers Chevrolet (Metairie)",
+      name: "Matt Bowers Chevy (Metairie)",
       address: "8213 Airline Drive, Metairie, LA 70003",
       code: "BOWCME",
-    },
-    {
-      name: "Matt Bowers Chevrolet (Slidell)",
-      address: "316 E Howze Beach Rd, Slidell, LA 70461",
-      code: "BOWCSL", 
     },
     {
       name: "Matt Bowers Hyundai (Metairie)",
@@ -121,15 +116,21 @@ export const config = {
       code: "BOWHME",
     },
     {
-      name: "Matt Bowers Hyundai (Slidell)",
-      address: "298 E Howze Beach Rd, Slidell, LA 70461",
-      code: "BOWHSL",
-    },    
-    {
       name: "Matt Bowers Infiniti (Metairie)",
       address: "3700 N Causeway Blvd, Metairie, LA 70002",
       code: "BOWIME",
+    },
+    {
+      name: "Matt Bowers Chevy (Slidell)",
+      address: "316 E Howze Beach Rd, Slidell, LA 70461",
+      code: "BOWCSL", 
     },    
+    {
+      name: "Matt Bowers Hyundai (Slidell)",
+      address: "298 E Howze Beach Rd, Slidell, LA 70461",
+      code: "BOWHSL",
+    },
+        
     ],
   bypass_codes: ["MATTB"],
   server_hostname: "https://mxfj3q6m01.execute-api.us-east-1.amazonaws.com",
