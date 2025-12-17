@@ -22,7 +22,7 @@ export default function Modification() {
   const [selected_color, set_selected_color] = useState(
     item.default_color || ""
   );
-  // colors is optional, if none provided then get the default file name, without color suffix
+
   const [image_source, set_image_source] = useState(
     item.colors
       ? `/images/${item.code}_${selected_color
@@ -82,14 +82,11 @@ export default function Modification() {
       ...cart,
     };
 
-    // check if the keys of the sizes are numbers vs strings
     const shouldUseQuantityBasedOrdering = !isNaN(
       Number(Object.keys(item.sizes)[0])
     );
 
-    // TODO: shouldnt this be broken out to a function?
     if (shouldUseQuantityBasedOrdering) {
-      // check order not empty
       const noCustoms =
         Object.keys(customsOrder).length === 0
           ? true
@@ -106,14 +103,9 @@ export default function Modification() {
       const items: { [key: string]: number } = {};
 
       Object.keys(customsOrder).forEach((k: string) => {
-        // the keys of customsOrder are the quantity chosen and the color, like "1,Blue"
         const quantity = parseInt(k.split(",")[0]);
-        // object representing quantity and color selected
         const orderInfo = customsOrder[k];
 
-        /*
-          if the user ordered 2x500 and 1x1000 then we need to add them together
-        */
         if (items[orderInfo.color]) {
           items[orderInfo.color] += quantity * orderInfo.quantity;
         } else {
@@ -150,7 +142,6 @@ export default function Modification() {
     }
 
     const table = document.getElementById("table") as any;
-    // the first row is the table headers, skip it
     for (let i = 1; i < table.rows.length; i++) {
       const inputs = table.rows[i].getElementsByTagName("input");
       for (let j = 0; j < inputs.length; j++) {
@@ -254,12 +245,13 @@ export default function Modification() {
   }
 
   return (
-    <div className={styles.container}>
-      <div className={styles.card}>
+    <div className="flex justify-center">
+      <div className="flex gap-[50px] bg-white p-[25px] min-w-[1000px] border border-gray-400">
         <div className={styles.image__container}>
-          <img src={image_source}></img>
+          <img src={image_source} alt={item.fullname} />
         </div>
-        <div className={styles.information__panel}>
+
+        <div className={`${styles.information__panel} flex flex-col flex-1`}>
           <div className={styles.name}>{item.fullname}</div>
           {item.type !== "customs" && (
             <div className="font-bold text-[16px] mb-[20px]">
@@ -297,18 +289,17 @@ export default function Modification() {
             setCustomsOrder={setCustomsOrder}
           />
 
-          <div className="relative h-[50px] mt-[15px]">
+          <div className="mt-auto pt-[20px] flex justify-end">
             <div
-              className="absolute flex items-center justify-center bg-[#f3c313] w-[135px] h-[30px] mt-[15px] rounded-[15px] cursor-pointer right-0"
+              className="flex items-center justify-center bg-[#f3c313] w-[135px] h-[35px] rounded-[15px] cursor-pointer hover:brightness-95 transition-all"
               onClick={() => addItemToCart()}
             >
-              <p className="text-[16px] relative bottom-[1px] font-medium">
-                Add to Cart
-              </p>
+              <p className="text-[16px] font-medium">Add to Cart</p>
             </div>
           </div>
         </div>
       </div>
+
       <Snackbar
         open={snackbarOpen}
         autoHideDuration={2500}
