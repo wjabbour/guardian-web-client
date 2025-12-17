@@ -174,7 +174,7 @@ export default function Modification() {
             price: item.sizes[sizes[j]],
             quantity: Number(inputs[j].value),
             size: sizes[j],
-            color: colors[i - 1],
+            color: colors ? colors[i - 1] : "Default",
             code: item.code,
             placement: placementTypes.includes(item.type)
               ? firstPlacement
@@ -183,7 +183,7 @@ export default function Modification() {
           };
 
           let key = `${item.code},${Object.keys(item.sizes)[j]},${
-            colors[i - 1]
+            colors ? colors[i - 1] : "Default"
           },${firstEmbroidery}`;
 
           if (secondEmbroidery) {
