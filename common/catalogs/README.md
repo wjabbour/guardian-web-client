@@ -29,10 +29,10 @@ A catalog is an array of items that will appear in the website. An item looks li
 - `code`: this should be a unique value in the catalog - no other item should have this same code.
 - `name`: a short name of the item, should be two to three small words
 - `fullname`: a potentially longer name for the item, can be a few words long
-- `colors`: governs the color preview options displayed on the modification page
+- `colors`: optional, governs the color preview options displayed on the modification page. If this property is not supplied then no color selector will be displayed.
 - `type`: the category of the item - mens, womens, accessory, customs, service, office. Used to determine which embroideries/logos are available on the modification page
 - `sub_category`: the sub-category of an item. Used to determine which embroideries/logos are available on the modification page
-- `default_color`: this will determine which picture is shown when initially viewing the item on the modification page (`/item/${code}`), e.g. if `default_color` is red, then the picture that will be shown is `${code}_red.jpg`.
+- `default_color`: optional, this will determine which picture is shown when initially viewing the item on the modification page (`/item/${code}`), e.g. if `default_color` is red, then the picture that will be shown is `${code}_red.jpg`. If this property is not supplied then the initial picture shown will be `${code}.jpg`. For items with no `colors` this property will determine the value of the `color` property on the order information. If omitted, this value will be set to `Default`.
 - `description`: this will determine the text in the product description component on the modification page. If this property
   is not defined for an item then the application will not render the product description component. If the text is long enough
   a "Read More" button will be rendered below the text preview. If you want more control over the layout of the description you can use backticks to define the string.
