@@ -13,7 +13,6 @@ export default function ColorSelector({
     if (halfColors.includes(color)) {
       const topColor = color.split(" ")[0];
       const bottomColor = color.split(" ")[1];
-      console.log(topColor)
       return (
         // TODO: refactor to component
         <div
