@@ -1,84 +1,91 @@
-import { useState } from "react";
+import { useEffect } from "react";
+import Select, { SelectChangeEvent } from "@mui/material/Select";
+import MenuItem from "@mui/material/MenuItem";
 import { ColorOption } from "../../lib/constants";
 
 export default function QuantitySelector({
   item,
-  sizes,
-  customsOrder,
-  setCustomsOrder,
+  userSelection,
+  setUserSelection,
+  selectedQuantity,
+  setSelectedQuantity,
 }) {
-  const colors = item.colors || [item.default_color || ColorOption.DEFAULT];
-  // check if the keys of the sizes are numbers vs strings
-  const shouldUseQuantityBasedOrdering = !isNaN(
-    Number(Object.keys(item.sizes)[0])
-  );
+  const activeColor =
+    item.colors?.[0] || item.default_color || ColorOption.DEFAULT;
 
-  function Header() {
+  console.log(userSelection);
+  // Auto-populate the first option on mount if quantities exist
+  useEffect(() => {
+    if (item.quantities && item.quantities.length > 0) {
+      const firstQty = item.quantities[0];
+
+      // Update the local UI state
+      setSelectedQuantity((prev) => ({
+        ...prev,
+        base: firstQty,
+      }));
+
+      // Update the parent's customsOrder
+      const initialOrder = {
+        [`${activeColor}`]: firstQty,
+      };
+      setUserSelection(initialOrder);
+    }
+  }, [item.quantities, activeColor, setSelectedQuantity, setUserSelection]);
+
+  /**
+   * Updates the parent's customsOrder object on manual change.
+   */
+  const handleSelectionChange = (event: SelectChangeEvent) => {
+    const value = Number(event.target.value);
+
+    setSelectedQuantity((prev) => ({
+      ...prev,
+      base: value,
+    }));
+
+    const newOrder = {
+      [`${activeColor}`]: value,
+    };
+
+    setUserSelection(newOrder);
+  };
+
+  function QuantitySelect() {
     return (
-      <thead>
-        <tr>
-          <th scope="col"></th>
-          {sizes.map((size) => {
-            return <th scope="col">{size}</th>;
-          })}
-        </tr>
-      </thead>
+      <div className="flex flex-col gap-2 mt-4">
+        <label className="text-sm font-bold text-gray-700">
+          Select Quantity:
+        </label>
+        <Select
+          value={"" + selectedQuantity.base}
+          onChange={handleSelectionChange}
+          sx={{
+            width: "120px",
+            height: "40px",
+            backgroundColor: "white",
+          }}
+          size="small"
+        >
+          {item.quantities.map((q) => (
+            <MenuItem key={q} value={q}>
+              {q}
+            </MenuItem>
+          ))}
+        </Select>
+      </div>
     );
   }
 
-  function QuantityOptions() {
-    const [order, setOrder] = useState(structuredClone(customsOrder));
-    return (
-      <tbody>
-        {colors.map((color) => {
-          return (
-            <tr>
-              <th scope="row">{color === ColorOption.DEFAULT ? "" : color}</th>
-              {sizes.map((size) => {
-                return (
-                  <td className="p-[2px]">
-                    {shouldUseQuantityBasedOrdering && (
-                      <input
-                        className="border-2 border-solid border-gray-600 rounded-md p-1"
-                        type="text"
-                        value={order[`${size},${color}`]?.quantity || 0}
-                        onChange={(e) => {
-                          setOrder((old) => {
-                            const newOne = structuredClone(old);
-                            newOne[`${size},${color}`] = {
-                              quantity: Number(e.target.value),
-                              color,
-                            };
-
-                            return newOne;
-                          });
-                        }}
-                        onBlur={() => {
-                          setCustomsOrder(order);
-                        }}
-                      ></input>
-                    )}
-                    {!shouldUseQuantityBasedOrdering && (
-                      <input
-                        className="border-2 border-solid border-gray-600 rounded-md p-1"
-                        type="text"
-                      ></input>
-                    )}
-                  </td>
-                );
-              })}
-            </tr>
-          );
-        })}
-      </tbody>
-    );
+  if (item.quantities) {
+    return <QuantitySelect />;
   }
+
   return (
-    <div className="">
-      <table id="table">
-        <Header />
-        <QuantityOptions />
-      </table>
+    <div className="mt-4 p-2 bg-gray-50 rounded-md border border-dashed border-gray-300">
+      <p className="text-sm italic text-gray-500">
+        Enter quantity in the table above for {item.fullname}
+      </p>
     </div>
   );
 }

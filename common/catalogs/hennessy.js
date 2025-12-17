@@ -1336,9 +1336,15 @@ export const catalog = [
     name: "Hang Tag",
     fullname: "VIP OFFER Hang Tag",
     type: "service",
-    sizes: {
-      500: 0.89,
-      1000: 0.69,
+    default_color: "White",
+    quantities: [500, 1000],
+    pricing: {
+      base: {
+        price: 0.89,
+        discount: {
+          1000: 0.69,
+        },
+      },
     },
   },
   {
@@ -1346,9 +1352,15 @@ export const catalog = [
     name: "Hang Tag",
     fullname: "SOLD Hang Tag",
     type: "service",
-    sizes: {
-      1000: 0.89,
-      2500: 0.69,
+    default_color: "White",
+    quantities: [1000, 2500],
+    pricing: {
+      base: {
+        price: 0.89,
+        discount: {
+          2500: 0.69,
+        },
+      },
     },
   },
   {

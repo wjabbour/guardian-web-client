@@ -3,7 +3,6 @@ import { getWebCatalog } from "guardian-common";
 import { useLoaderData, useOutletContext } from "react-router-dom";
 import { useState } from "react";
 import Snackbar from "@mui/material/Snackbar";
-import MenuItem from "@mui/material/MenuItem";
 import Alert from "@mui/material/Alert";
 import { getEmbroidery } from "../../lib/utils";
 import ColorSelector from "./ColorSelector";
@@ -12,7 +11,14 @@ import { CartItem } from "../../lib/interfaces";
 import EmbroiderySelector from "./EmbroiderySelector";
 import { getWebConfigValue } from "guardian-common";
 import Description from "./Description";
+import { addCustomsToCart } from "./utils";
 import { ColorOption } from "../../lib/constants";
+
+type UserSelection = {
+  [key: string]: {
+    quantity: number;
+  };
+};
 
 export async function loader({ params }) {
   return getWebCatalog().find((i) => i.code === params.id);
@@ -37,14 +43,26 @@ export default function Modification() {
   const [snackbarText] = useState("Item added to cart");
   const [errorSnackbarOpen, setErrorSnackbarOpen] = useState(false);
   const [errorSnackbarText, setErrorSnackbarText] = useState("");
-  const sizes = Object.keys(item.sizes);
+  const sizes = [];
   const colors = item.colors;
-  const [selected_size] = useState(sizes[0]);
-  const [price] = useState(item.sizes[selected_size]);
+  /*
+    this value is used for two things
+
+    1) for displaying some text in the price overview: "starts at $x"
+    2) discount calculation
+  */
+  const lowestPricedItemVariation = Math.min(
+    ...Object.values(item.pricing).map((i: any) => i.price)
+  );
+
   const [firstEmbroidery, setFirstEmbroidery] = useState("");
   const [secondEmbroidery, setSecondEmbroidery] = useState("");
   const logo_placements = getWebConfigValue("logo_placements")[item.type] || [];
   const embroideries = getEmbroidery(item.sub_category || item.type) || [];
+  // lets adapt this to work for both grids and singular input, the quantity selector should just write to this object and we apply embroideries
+  const [selectedQuantity, setSelectedQuantity] = useState({
+    base: Math.min(...item.quantities),
+  });
 
   const description = item.description || "";
 
@@ -55,7 +73,8 @@ export default function Modification() {
   const [secondPlacement, setSecondPlacement] = useState(
     logo_placements[0] || "Left Chest"
   );
-  const [customsOrder, setCustomsOrder] = useState({});
+
+  const [userSelection, setUserSelection] = useState<UserSelection>({});
 
   const handleFirstEmbroideryChange = (event) => {
     setFirstEmbroidery(event.target.value);
@@ -79,58 +98,68 @@ export default function Modification() {
   }
 
   function addItemToCart() {
-    const new_cart = {
-      ...cart,
-    };
+    const new_cart = structuredClone(cart);
 
-    // check if the keys of the sizes are numbers vs strings
-    const shouldUseQuantityBasedOrdering = !isNaN(
-      Number(Object.keys(item.sizes)[0])
-    );
+    if (Object.values(selectedQuantity).every((qty) => !qty)) {
+      setErrorSnackbarOpen(true);
+      setErrorSnackbarText("Must make a selection");
+      return;
+    }
 
-    // TODO: shouldnt this be broken out to a function?
-    if (shouldUseQuantityBasedOrdering) {
-      // check order not empty
-      const noCustoms =
-        Object.keys(customsOrder).length === 0
-          ? true
-          : Object.values(customsOrder).every(
-              (arr: string[]) => arr.length === 0
-            );
-
-      if (noCustoms) {
-        setErrorSnackbarOpen(true);
-        setErrorSnackbarText("Must make a selection");
-        return;
-      }
-
-      const items: { [key: string]: number } = {};
-
-      Object.keys(customsOrder).forEach((k: string) => {
-        // the keys of customsOrder are the quantity chosen and the color, like "1,Blue"
-        const quantity = parseInt(k.split(",")[0]);
-        // object representing quantity and color selected
-        const orderInfo = customsOrder[k];
-        /*
-          if the user ordered 2x500 and 1x1000 then we need to add them together
-        */
-        if (items[orderInfo.color]) {
-          items[orderInfo.color] += quantity * orderInfo.quantity;
-        } else {
-          items[orderInfo.color] = quantity * orderInfo.quantity;
-        }
-      });
-
-      for (const [color, quantity] of Object.entries(items)) {
-        addCustomsToCart(quantity, color, new_cart);
-      }
+    // key is size + color, value is object containing quantity
+    for (const [key, quantity] of Object.entries(userSelection)) {
+      addCustomsToCart(
+        item,
+        quantity,
+        key,
+        new_cart,
+        firstEmbroidery,
+        secondEmbroidery,
+        lowestPricedItemVariation
+      );
 
       set_cart(new_cart);
       sessionStorage.setItem("cart", JSON.stringify(new_cart));
-      setSnackbarOpen(true);
-      setCustomsOrder({});
-      return;
     }
+
+    // TODO: shouldnt this be broken out to a function?
+    // if (shouldUseCustomQuantityBasedOrdering) {
+    //   const items: { [key: string]: number } = {};
+
+    //   Object.keys(customsOrder).forEach((k: string) => {
+    //     // the keys of customsOrder are the quantity chosen and the color, like "1,Blue"
+    //     const quantity = parseInt(k.split(",")[0]);
+    //     // object representing quantity and color selected
+    //     const orderInfo = customsOrder[k];
+
+    //     /*
+    //       if the user ordered 2x500 and 1x1000 then we need to add them together
+    //     */
+    //     if (items[orderInfo.color]) {
+    //       items[orderInfo.color] += quantity * orderInfo.quantity;
+    //     } else {
+    //       items[orderInfo.color] = quantity * orderInfo.quantity;
+    //     }
+    //   });
+
+    //   for (const [color, quantity] of Object.entries(items)) {
+    //     addCustomsToCart(
+    //       item,
+    //       quantity,
+    //       color,
+    //       new_cart,
+    //       firstEmbroidery,
+    //       secondEmbroidery,
+    //       lowestPricedItemVariation
+    //     );
+    //   }
+
+    //   set_cart(new_cart);
+    //   sessionStorage.setItem("cart", JSON.stringify(new_cart));
+    setSnackbarOpen(true);
+    setUserSelection({});
+    return;
+    // }
 
     let any_input_has_value = false;
     let invalid_input = false;
@@ -214,47 +243,6 @@ export default function Modification() {
     }
   }
 
-  function addCustomsToCart(quantity, color, cart) {
-    const key = `${item.code},${color}`;
-    const cart_item = {
-      type: item.type,
-      name: item.fullname,
-      price: getPriceWithDiscount(Number(quantity), 1),
-      quantity: Number(quantity),
-      size: "default",
-      color: color,
-      code: item.code,
-      placement: null,
-      embroidery: firstEmbroidery,
-    };
-
-    if (secondEmbroidery) {
-      cart_item["secondEmbroidery"] = secondEmbroidery;
-    }
-
-    if (cart[key]) {
-      cart[key].quantity += cart_item.quantity;
-      cart[key].price = getPriceWithDiscount(cart[key].quantity, price);
-    } else {
-      cart[key] = cart_item;
-    }
-  }
-
-  function getPriceWithDiscount(cartQuantity: number, fallbackPrice: number) {
-    const sortedSizes = Object.keys(item.sizes).sort(
-      (a, b) => Number(a) - Number(b)
-    );
-
-    let price = fallbackPrice;
-    for (const size of sortedSizes) {
-      if (cartQuantity >= Number(size)) {
-        price = item.sizes[size];
-      }
-    }
-
-    return price;
-  }
-
   return (
     <div className="flex justify-center">
       <div className="flex gap-[50px] bg-white p-[25px] min-w-[1000px] border border-gray-400">
@@ -266,7 +254,7 @@ export default function Modification() {
           <div className={styles.name}>{item.fullname}</div>
           {item.type !== "customs" && (
             <div className="font-bold text-[16px] mb-[20px]">
-              Starts at ${price} each
+              Starts at ${lowestPricedItemVariation} each
             </div>
           )}
           <Description description={description} />
@@ -295,9 +283,10 @@ export default function Modification() {
 
           <QuantitySelector
             item={item}
-            sizes={sizes}
-            customsOrder={customsOrder}
-            setCustomsOrder={setCustomsOrder}
+            userSelection={userSelection}
+            setUserSelection={setUserSelection}
+            setSelectedQuantity={setSelectedQuantity}
+            selectedQuantity={selectedQuantity}
           />
 
           <div className="mt-auto pt-[20px] flex justify-end">
