@@ -6,12 +6,13 @@ export default function ColorSelector({
   selected_color,
   set_image_source,
 }) {
+  if (!item.colors) return null;
+
   const halfColors = item.halfColors || [];
   const colorOptions = item.colors.map((color) => {
     if (halfColors.includes(color)) {
       const topColor = color.split(" ")[0];
       const bottomColor = color.split(" ")[1];
-      console.log(topColor)
       return (
         // TODO: refactor to component
         <div

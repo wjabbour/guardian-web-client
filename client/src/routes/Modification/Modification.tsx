@@ -12,6 +12,7 @@ import { CartItem } from "../../lib/interfaces";
 import EmbroiderySelector from "./EmbroiderySelector";
 import { getWebConfigValue } from "guardian-common";
 import Description from "./Description";
+import { ColorOption } from "../../lib/constants";
 
 export async function loader({ params }) {
   return getWebCatalog().find((i) => i.code === params.id);
@@ -19,12 +20,17 @@ export async function loader({ params }) {
 
 export default function Modification() {
   const item: any = useLoaderData();
-  const [selected_color, set_selected_color] = useState(item.default_color);
+  const [selected_color, set_selected_color] = useState(
+    item.default_color || ""
+  );
+
   const [image_source, set_image_source] = useState(
-    `/images/${item.code}_${selected_color
-      .toLowerCase()
-      .split(" ")
-      .join("_")}.jpg`
+    item.colors
+      ? `/images/${item.code}_${selected_color
+          .toLowerCase()
+          .split(" ")
+          .join("_")}.jpg`
+      : `/images/${item.code}.jpg`
   );
   const [cart, set_cart] = useOutletContext<any>();
   const [snackbarOpen, setSnackbarOpen] = useState(false);
@@ -105,7 +111,6 @@ export default function Modification() {
         const quantity = parseInt(k.split(",")[0]);
         // object representing quantity and color selected
         const orderInfo = customsOrder[k];
-
         /*
           if the user ordered 2x500 and 1x1000 then we need to add them together
         */
@@ -169,7 +174,7 @@ export default function Modification() {
             price: item.sizes[sizes[j]],
             quantity: Number(inputs[j].value),
             size: sizes[j],
-            color: colors[i - 1],
+            color: colors ? colors[i - 1] : ColorOption.DEFAULT,
             code: item.code,
             placement: placementTypes.includes(item.type)
               ? firstPlacement
@@ -178,7 +183,7 @@ export default function Modification() {
           };
 
           let key = `${item.code},${Object.keys(item.sizes)[j]},${
-            colors[i - 1]
+            colors ? colors[i - 1] : ColorOption.DEFAULT
           },${firstEmbroidery}`;
 
           if (secondEmbroidery) {
@@ -249,12 +254,13 @@ export default function Modification() {
   }
 
   return (
-    <div className={styles.container}>
-      <div className={styles.card}>
+    <div className="flex justify-center">
+      <div className="flex gap-[50px] bg-white p-[25px] min-w-[1000px] border border-gray-400">
         <div className={styles.image__container}>
-          <img src={image_source}></img>
+          <img src={image_source} alt={item.fullname} />
         </div>
-        <div className={styles.information__panel}>
+
+        <div className={`${styles.information__panel} flex flex-col flex-1`}>
           <div className={styles.name}>{item.fullname}</div>
           {item.type !== "customs" && (
             <div className="font-bold text-[16px] mb-[20px]">
@@ -292,18 +298,17 @@ export default function Modification() {
             setCustomsOrder={setCustomsOrder}
           />
 
-          <div className="relative h-[50px] mt-[15px]">
+          <div className="mt-auto pt-[20px] flex justify-end">
             <div
-              className="absolute flex items-center justify-center bg-[#f3c313] w-[135px] h-[30px] mt-[15px] rounded-[15px] cursor-pointer right-0"
+              className="flex items-center justify-center bg-[#f3c313] w-[135px] h-[35px] rounded-[15px] cursor-pointer hover:brightness-95 transition-all"
               onClick={() => addItemToCart()}
             >
-              <p className="text-[16px] relative bottom-[1px] font-medium">
-                Add to Cart
-              </p>
+              <p className="text-[16px] font-medium">Add to Cart</p>
             </div>
           </div>
         </div>
       </div>
+
       <Snackbar
         open={snackbarOpen}
         autoHideDuration={2500}
