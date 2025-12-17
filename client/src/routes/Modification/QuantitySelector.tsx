@@ -7,7 +7,7 @@ export default function QuantitySelector({
   customsOrder,
   setCustomsOrder,
 }) {
-  const colors = item.colors || [ColorOption.DEFAULT];
+  const colors = item.colors || [item.default_color || ColorOption.DEFAULT];
   // check if the keys of the sizes are numbers vs strings
   const shouldUseQuantityBasedOrdering = !isNaN(
     Number(Object.keys(item.sizes)[0])
@@ -33,7 +33,7 @@ export default function QuantitySelector({
         {colors.map((color) => {
           return (
             <tr>
-              <th scope="row">{color}</th>
+              <th scope="row">{color === ColorOption.DEFAULT ? "" : color}</th>
               {sizes.map((size) => {
                 return (
                   <td className="p-[2px]">
