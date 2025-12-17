@@ -10,6 +10,14 @@ export default function CartItems() {
       </div>
       {Object.keys(cart).map((k) => {
         const item = cart[k];
+        const imagePath =
+          item.color === ""
+            ? `/images/${item.code}.jpg`
+            : `/images/${item.code}_${item.color
+                .split(" ")
+                .join("_")
+                .toLowerCase()}.jpg`;
+        console.log(item, imagePath)
         return (
           <div className="relative flex p-1">
             <div className="relative top-1 cursor-pointer">
@@ -63,13 +71,7 @@ export default function CartItems() {
               </p>
             </div>
             <div className="h-[140px]">
-              <img
-                className="h-[120px]"
-                src={`/images/${item.code}_${item.color
-                  .split(" ")
-                  .join("_")
-                  .toLowerCase()}.jpg`}
-              ></img>
+              <img className="h-[120px]" src={imagePath}></img>
             </div>
           </div>
         );
