@@ -19,12 +19,17 @@ export async function loader({ params }) {
 
 export default function Modification() {
   const item: any = useLoaderData();
-  const [selected_color, set_selected_color] = useState(item.default_color);
+  const [selected_color, set_selected_color] = useState(
+    item.default_color || ""
+  );
+  // colors is optional, if none provided then get the default file name, without color suffix
   const [image_source, set_image_source] = useState(
-    `/images/${item.code}_${selected_color
-      .toLowerCase()
-      .split(" ")
-      .join("_")}.jpg`
+    item.colors
+      ? `/images/${item.code}_${selected_color
+          .toLowerCase()
+          .split(" ")
+          .join("_")}.jpg`
+      : `/images/${item.code}.jpg`
   );
   const [cart, set_cart] = useOutletContext<any>();
   const [snackbarOpen, setSnackbarOpen] = useState(false);
