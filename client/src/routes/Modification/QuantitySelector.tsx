@@ -5,15 +5,15 @@ import { ColorOption } from "../../lib/constants";
 
 export default function QuantitySelector({
   item,
-  customsOrder,
-  setCustomsOrder,
+  userSelection,
+  setUserSelection,
   selectedQuantity,
   setSelectedQuantity,
 }) {
   const activeColor =
     item.colors?.[0] || item.default_color || ColorOption.DEFAULT;
 
-  console.log(customsOrder);
+  console.log(userSelection);
   // Auto-populate the first option on mount if quantities exist
   useEffect(() => {
     if (item.quantities && item.quantities.length > 0) {
@@ -31,9 +31,9 @@ export default function QuantitySelector({
           quantity: firstQty,
         },
       };
-      setCustomsOrder(initialOrder);
+      setUserSelection(initialOrder);
     }
-  }, [item.quantities, activeColor, setSelectedQuantity, setCustomsOrder]);
+  }, [item.quantities, activeColor, setSelectedQuantity, setUserSelection]);
 
   /**
    * Updates the parent's customsOrder object on manual change.
@@ -52,7 +52,7 @@ export default function QuantitySelector({
       },
     };
 
-    setCustomsOrder(newOrder);
+    setUserSelection(newOrder);
   };
 
   function QuantitySelect() {

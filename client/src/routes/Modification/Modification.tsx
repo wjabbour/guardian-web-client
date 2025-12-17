@@ -67,7 +67,7 @@ export default function Modification() {
   const [secondPlacement, setSecondPlacement] = useState(
     logo_placements[0] || "Left Chest"
   );
-  const [customsOrder, setCustomsOrder] = useState({});
+  const [userSelection, setUserSelection] = useState({});
 
   const handleFirstEmbroideryChange = (event) => {
     setFirstEmbroidery(event.target.value);
@@ -93,7 +93,6 @@ export default function Modification() {
   function addItemToCart() {
     const new_cart = structuredClone(cart);
 
-    console.log(Object.values(selectedQuantity));
     if (Object.values(selectedQuantity).every((qty) => !qty)) {
       setErrorSnackbarOpen(true);
       setErrorSnackbarText("Must make a selection");
@@ -277,8 +276,8 @@ export default function Modification() {
 
           <QuantitySelector
             item={item}
-            customsOrder={customsOrder}
-            setCustomsOrder={setCustomsOrder}
+            userSelection={userSelection}
+            setUserSelection={setUserSelection}
             setSelectedQuantity={setSelectedQuantity}
             selectedQuantity={selectedQuantity}
           />
