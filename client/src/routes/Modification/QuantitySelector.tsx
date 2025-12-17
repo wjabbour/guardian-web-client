@@ -7,7 +7,7 @@ export default function QuantitySelector({
   customsOrder,
   setCustomsOrder,
 }) {
-  const colors = item.colors || [ColorOption.DEFAULT];
+  const colors = item.colors || [item.default_color || ColorOption.DEFAULT];
   // check if the keys of the sizes are numbers vs strings
   const shouldUseQuantityBasedOrdering = !isNaN(
     Number(Object.keys(item.sizes)[0])
