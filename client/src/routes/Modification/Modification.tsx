@@ -83,11 +83,14 @@ export default function Modification() {
       ...cart,
     };
 
+    // check if the keys of the sizes are numbers vs strings
     const shouldUseQuantityBasedOrdering = !isNaN(
       Number(Object.keys(item.sizes)[0])
     );
 
+    // TODO: shouldnt this be broken out to a function?
     if (shouldUseQuantityBasedOrdering) {
+      // check order not empty
       const noCustoms =
         Object.keys(customsOrder).length === 0
           ? true
@@ -104,9 +107,13 @@ export default function Modification() {
       const items: { [key: string]: number } = {};
 
       Object.keys(customsOrder).forEach((k: string) => {
+        // the keys of customsOrder are the quantity chosen and the color, like "1,Blue"
         const quantity = parseInt(k.split(",")[0]);
+        // object representing quantity and color selected
         const orderInfo = customsOrder[k];
-
+        /*
+          if the user ordered 2x500 and 1x1000 then we need to add them together
+        */
         if (items[orderInfo.color]) {
           items[orderInfo.color] += quantity * orderInfo.quantity;
         } else {
@@ -143,6 +150,7 @@ export default function Modification() {
     }
 
     const table = document.getElementById("table") as any;
+    // the first row is the table headers, skip it
     for (let i = 1; i < table.rows.length; i++) {
       const inputs = table.rows[i].getElementsByTagName("input");
       for (let j = 0; j < inputs.length; j++) {
