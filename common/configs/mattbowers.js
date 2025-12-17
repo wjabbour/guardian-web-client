@@ -27,9 +27,9 @@ export const config = {
       "MB Ford Metairie",    
       "MB Hyundai Slidell",
       "MB Hyundai Metairie",
-      "MB Flag",
       "MB",
-      "Fleur De Lis"
+      "MB Flag",      
+      "Fleur De Lis",
 
     ],
     womens: [
@@ -48,9 +48,9 @@ export const config = {
       "MB Ford Metairie",    
       "MB Hyundai Slidell",
       "MB Hyundai Metairie",
-      "MB Flag",
       "MB",
-      "Fleur De Lis"
+      "MB Flag",      
+      "Fleur De Lis",
     ],
     tshirts: [
       "Matt B Ford Metairie",          
@@ -80,9 +80,9 @@ export const config = {
       "MB Ford Metairie",    
       "MB Hyundai Slidell",
       "MB Hyundai Metairie",
-      "MB Flag",
       "MB",
-      "Fleur De Lis"
+      "MB Flag",      
+      "Fleur De Lis",
     ],
     customs: [],
     office: [],
