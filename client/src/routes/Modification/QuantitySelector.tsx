@@ -5,7 +5,6 @@ import { ColorOption } from "../../lib/constants";
 
 export default function QuantitySelector({
   item,
-  userSelection,
   setUserSelection,
   selectedQuantity,
   setSelectedQuantity,
@@ -13,7 +12,6 @@ export default function QuantitySelector({
   const activeColor =
     item.colors?.[0] || item.default_color || ColorOption.DEFAULT;
 
-  console.log(userSelection);
   // Auto-populate the first option on mount if quantities exist
   useEffect(() => {
     if (item.quantities && item.quantities.length > 0) {

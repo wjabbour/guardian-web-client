@@ -283,7 +283,6 @@ export default function Modification() {
 
           <QuantitySelector
             item={item}
-            userSelection={userSelection}
             setUserSelection={setUserSelection}
             setSelectedQuantity={setSelectedQuantity}
             selectedQuantity={selectedQuantity}
