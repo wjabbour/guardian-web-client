@@ -33,7 +33,7 @@ export default function QuantitySelector({
         {colors.map((color) => {
           return (
             <tr>
-              <th scope="row">{color}</th>
+              <th scope="row">{color === ColorOption.DEFAULT ? "" : color}</th>
               {sizes.map((size) => {
                 return (
                   <td className="p-[2px]">
