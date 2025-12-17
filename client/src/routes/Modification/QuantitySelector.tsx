@@ -12,10 +12,6 @@ export default function QuantitySelector({
 }) {
   const [order, setOrder] = useState(structuredClone(customsOrder));
   const colors = item.colors || [item.default_color || ColorOption.DEFAULT];
-  // check if the keys of the sizes are numbers vs strings
-  const shouldUseQuantityBasedOrdering = !isNaN(
-    Number(Object.keys(item.sizes)[0])
-  );
 
   /*
     There are three styles of item ordering that we want to support (and i bet
@@ -63,53 +59,57 @@ export default function QuantitySelector({
             return newQty;
           });
         }}
+        sx={{ width: "100px" }} // Added sx prop
       >
         {item.quantities.map((q) => (
-          <MenuItem value={q}>{q}</MenuItem>
+          <MenuItem key={q} value={q}>
+            {q}
+          </MenuItem>
         ))}
       </Select>
-      <tbody>
-        {colors.map((color) => {
-          return (
-            <tr>
-              <th scope="row">{color === ColorOption.DEFAULT ? "" : color}</th>
-              {sizes.map((size) => {
-                return (
-                  <td className="p-[2px]">
-                    {shouldUseQuantityBasedOrdering && (
-                      <input
-                        className="border-2 border-solid border-gray-600 rounded-md p-1"
-                        type="text"
-                        value={order[`${size},${color}`]?.quantity || 0}
-                        onChange={(e) => {
-                          setOrder((old) => {
-                            const newOne = structuredClone(old);
-                            newOne[`${size},${color}`] = {
-                              quantity: Number(e.target.value),
-                              color,
-                            };
 
-                            return newOne;
-                          });
-                        }}
-                        onBlur={() => {
-                          setCustomsOrder(order);
-                        }}
-                      ></input>
-                    )}
-                    {!shouldUseQuantityBasedOrdering && (
-                      <input
-                        className="border-2 border-solid border-gray-600 rounded-md p-1"
-                        type="text"
-                      ></input>
-                    )}
-                  </td>
-                );
-              })}
-            </tr>
-          );
-        })}
-      </tbody>
+      // <tbody>
+      //   {colors.map((color) => {
+      //     return (
+      //       <tr>
+      //         <th scope="row">{color === ColorOption.DEFAULT ? "" : color}</th>
+      //         {sizes.map((size) => {
+      //           return (
+      //             <td className="p-[2px]">
+      //               {shouldUseQuantityBasedOrdering && (
+      //                 <input
+      //                   className="border-2 border-solid border-gray-600 rounded-md p-1"
+      //                   type="text"
+      //                   value={order[`${size},${color}`]?.quantity || 0}
+      //                   onChange={(e) => {
+      //                     setOrder((old) => {
+      //                       const newOne = structuredClone(old);
+      //                       newOne[`${size},${color}`] = {
+      //                         quantity: Number(e.target.value),
+      //                         color,
+      //                       };
+
+      //                       return newOne;
+      //                     });
+      //                   }}
+      //                   onBlur={() => {
+      //                     setCustomsOrder(order);
+      //                   }}
+      //                 ></input>
+      //               )}
+      //               {!shouldUseQuantityBasedOrdering && (
+      //                 <input
+      //                   className="border-2 border-solid border-gray-600 rounded-md p-1"
+      //                   type="text"
+      //                 ></input>
+      //               )}
+      //             </td>
+      //           );
+      //         })}
+      //       </tr>
+      //     );
+      //   })}
+      // </tbody>
     );
   }
 
