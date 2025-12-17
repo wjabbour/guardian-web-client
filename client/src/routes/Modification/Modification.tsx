@@ -12,6 +12,7 @@ import { CartItem } from "../../lib/interfaces";
 import EmbroiderySelector from "./EmbroiderySelector";
 import { getWebConfigValue } from "guardian-common";
 import Description from "./Description";
+import { ColorOption } from "../../lib/constants";
 
 export async function loader({ params }) {
   return getWebCatalog().find((i) => i.code === params.id);
@@ -165,7 +166,7 @@ export default function Modification() {
             price: item.sizes[sizes[j]],
             quantity: Number(inputs[j].value),
             size: sizes[j],
-            color: colors ? colors[i - 1] : "Default",
+            color: colors ? colors[i - 1] : ColorOption.DEFAULT,
             code: item.code,
             placement: placementTypes.includes(item.type)
               ? firstPlacement
@@ -174,7 +175,7 @@ export default function Modification() {
           };
 
           let key = `${item.code},${Object.keys(item.sizes)[j]},${
-            colors ? colors[i - 1] : "Default"
+            colors ? colors[i - 1] : ColorOption.DEFAULT
           },${firstEmbroidery}`;
 
           if (secondEmbroidery) {

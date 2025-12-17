@@ -1,5 +1,6 @@
 import DeleteIcon from "@mui/icons-material/Delete";
 import { useOutletContext } from "react-router-dom";
+import { ColorOption } from "../../lib/constants";
 
 export default function CartItems() {
   const [cart, set_cart] = useOutletContext();
@@ -10,14 +11,15 @@ export default function CartItems() {
       </div>
       {Object.keys(cart).map((k) => {
         const item = cart[k];
-        const imagePath =
-          item.color === ""
-            ? `/images/${item.code}.jpg`
-            : `/images/${item.code}_${item.color
-                .split(" ")
-                .join("_")
-                .toLowerCase()}.jpg`;
-        console.log(item, imagePath)
+        const isDefaultColor = item.color === ColorOption.DEFAULT;
+
+        const imagePath = isDefaultColor
+          ? `/images/${item.code}.jpg`
+          : `/images/${item.code}_${item.color
+              .split(" ")
+              .join("_")
+              .toLowerCase()}.jpg`;
+        console.log(item, imagePath);
         return (
           <div className="relative flex p-1">
             <div className="relative top-1 cursor-pointer">
@@ -35,9 +37,11 @@ export default function CartItems() {
               <p>
                 <b>{item.price} each</b>
               </p>
-              <p>
-                <b>Color:</b> {item.color}
-              </p>
+              {!isDefaultColor && (
+                <p>
+                  <b>Color:</b> {item.color}
+                </p>
+              )}
               {item.embroidery && (
                 <>
                   {item.secondEmbroidery && (

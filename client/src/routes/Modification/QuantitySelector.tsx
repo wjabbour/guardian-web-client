@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { ColorOption } from "../../lib/constants";
 
 export default function QuantitySelector({
   item,
@@ -6,7 +7,7 @@ export default function QuantitySelector({
   customsOrder,
   setCustomsOrder,
 }) {
-  const colors = item.colors || [""];
+  const colors = item.colors || [ColorOption.DEFAULT];
   // check if the keys of the sizes are numbers vs strings
   const shouldUseQuantityBasedOrdering = !isNaN(
     Number(Object.keys(item.sizes)[0])
