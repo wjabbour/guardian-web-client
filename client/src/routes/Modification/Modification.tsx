@@ -44,7 +44,6 @@ export default function Modification() {
   const [errorSnackbarOpen, setErrorSnackbarOpen] = useState(false);
   const [errorSnackbarText, setErrorSnackbarText] = useState("");
   const sizes = [];
-  const colors = item.colors;
   /*
     this value is used for two things
 
@@ -203,8 +202,8 @@ export default function Modification() {
             price: item.sizes[sizes[j]],
             quantity: Number(inputs[j].value),
             size: sizes[j],
-            color: colors
-              ? colors[i - 1]
+            color: item.colors
+              ? item.colors[i - 1]
               : item.default_color || ColorOption.DEFAULT,
             code: item.code,
             placement: placementTypes.includes(item.type)
@@ -214,7 +213,9 @@ export default function Modification() {
           };
 
           let key = `${item.code},${Object.keys(item.sizes)[j]},${
-            colors ? colors[i - 1] : item.default_color || ColorOption.DEFAULT
+            item.colors
+              ? item.colors[i - 1]
+              : item.default_color || ColorOption.DEFAULT
           },${firstEmbroidery}`;
 
           if (secondEmbroidery) {
