@@ -1346,7 +1346,6 @@ export const catalog = [
     name: "Hang Tag",
     fullname: "SOLD Hang Tag",
     type: "service",
-    default_color: "White",
     sizes: {
       1000: 0.89,
       2500: 0.69,
