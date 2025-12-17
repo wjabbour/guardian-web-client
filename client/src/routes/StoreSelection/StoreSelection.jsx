@@ -49,7 +49,7 @@ export default function StoreSelection() {
                   );
                 }
               }}
-              className="cursor-pointer text-center font-bold h-[80px] w-[180px] p-[15px] m-1 border border-black rounded-md border-solid"
+              className="cursor-pointer text-center font-bold w-[180px] p-[15px] m-1 border border-black rounded-md border-solid"
             >
               {store.name}
             </div>
