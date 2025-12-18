@@ -1,21 +1,32 @@
-export function addCustomsToCart(
-  item,
+import { SizeOption } from "../../lib/constants";
+
+export function createCartItem(
+  itemConfiguration,
   quantity,
-  color,
+  userSelectionValue,
   cart,
   firstEmbroidery: string,
   secondEmbroidery: string,
   fallbackPrice: number
 ) {
-  const key = `${item.code},${color}`;
+  const selection = userSelectionValue.split(",");
+  const size = selection[0];
+  const color = selection[1];
+
+  const key = `${itemConfiguration.code},${size},${color}`;
   const cart_item = {
-    type: item.type,
-    name: item.fullname,
-    price: getPriceWithDiscount(item, quantity, fallbackPrice),
+    type: itemConfiguration.type,
+    name: itemConfiguration.fullname,
+    price: getPriceWithDiscount(
+      itemConfiguration,
+      size,
+      quantity,
+      fallbackPrice
+    ),
     quantity,
-    size: "default",
-    color: color,
-    code: item.code,
+    size: size === "base" ? SizeOption.DEFAULT : size,
+    color,
+    code: itemConfiguration.code,
     placement: null,
     embroidery: firstEmbroidery,
   };
@@ -27,7 +38,8 @@ export function addCustomsToCart(
   if (cart[key]) {
     cart[key].quantity += cart_item.quantity;
     cart[key].price = getPriceWithDiscount(
-      item,
+      itemConfiguration,
+      size,
       cart[key].quantity,
       fallbackPrice
     );
@@ -37,20 +49,62 @@ export function addCustomsToCart(
 }
 
 function getPriceWithDiscount(
-  item,
+  itemConfiguration,
+  size: number,
   cartQuantity: number,
   fallbackPrice: number
 ) {
-  const sortedDiscountQuantites = Object.keys(item.pricing.base.discount).sort(
-    (a, b) => Number(a) - Number(b)
-  );
+  if (!itemConfiguration.pricing[size].discount) return fallbackPrice;
+
+  /*
+    the discount object is a mapping of quantity -> price where it is assumed that
+    no quantity which is greater than another quantity can contain a higher price
+
+    e.g. this is assumed to not be possible
+    {
+      100: 5
+      200: 6
+    }
+
+    We always assume that the price decreases as quantity increases.
+
+    Therefore, this function orders the quantities in the pricing map, successively checks if the
+    cart quantity of this item is greater than or equal to the discount quantity, and if so updates the price, applying
+    the discount
+  */
+  const sortedDiscountQuantites = Object.keys(
+    itemConfiguration.pricing[size].discount
+  ).sort((a, b) => Number(a) - Number(b));
 
   let price = fallbackPrice;
   for (const quantity of sortedDiscountQuantites) {
     if (cartQuantity >= Number(quantity)) {
-      price = item.pricing.base.discount[quantity];
+      price = itemConfiguration.pricing[size].discount[quantity];
+    } else {
+      // if 499 < 500 then we dont need to check if 499 < 1000
+      break;
     }
   }
 
   return price;
+}
+
+export function verifyEmbroidery(
+  itemConfiguration,
+  embroideries: string[],
+  firstEmbroidery: string,
+  secondEmbroidery: string
+) {
+  if (embroideries.length === 0) return true;
+
+  if (!firstEmbroidery) return false;
+
+  return true;
+}
+
+export function verifyQuantity(userSelection) {
+  if (Object.keys(userSelection).length === 0) return false;
+  if (Object.values(userSelection).every((value) => value === 0)) return false;
+
+  return true;
 }

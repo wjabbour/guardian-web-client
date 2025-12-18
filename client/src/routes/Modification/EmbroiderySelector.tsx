@@ -167,7 +167,9 @@ export default function EmbroiderySelector({
           </div>
         </div>
 
-        <SecondLogoAdd />
+        {/* if an item type only contains a single placement selection, 
+        then the user shouldnt be able to select two logos for the same placement */}
+        {placements.length > 1 && <SecondLogoAdd />}
       </div>
 
       {secondLogo && (

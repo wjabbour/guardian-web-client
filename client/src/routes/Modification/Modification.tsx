@@ -7,12 +7,10 @@ import Alert from "@mui/material/Alert";
 import { getEmbroidery } from "../../lib/utils";
 import ColorSelector from "./ColorSelector";
 import QuantitySelector from "./QuantitySelector";
-import { CartItem } from "../../lib/interfaces";
 import EmbroiderySelector from "./EmbroiderySelector";
 import { getWebConfigValue } from "guardian-common";
 import Description from "./Description";
-import { addCustomsToCart } from "./utils";
-import { ColorOption } from "../../lib/constants";
+import { createCartItem, verifyEmbroidery, verifyQuantity } from "./utils";
 
 type UserSelection = {
   [key: string]: {
@@ -33,9 +31,9 @@ export default function Modification() {
   const [image_source, set_image_source] = useState(
     item.colors
       ? `/images/${item.code}_${selected_color
-        .toLowerCase()
-        .split(" ")
-        .join("_")}.jpg`
+          .toLowerCase()
+          .split(" ")
+          .join("_")}.jpg`
       : `/images/${item.code}.jpg`
   );
   const [cart, set_cart] = useOutletContext<any>();
@@ -43,7 +41,6 @@ export default function Modification() {
   const [snackbarText] = useState("Item added to cart");
   const [errorSnackbarOpen, setErrorSnackbarOpen] = useState(false);
   const [errorSnackbarText, setErrorSnackbarText] = useState("");
-  const sizes = [];
   /*
     this value is used for two things
 
@@ -58,6 +55,7 @@ export default function Modification() {
   const [secondEmbroidery, setSecondEmbroidery] = useState("");
   const logo_placements = getWebConfigValue("logo_placements")[item.type] || [];
   const embroideries = getEmbroidery(item.sub_category || item.type) || [];
+  const [reset, setReset] = useState(Date.now());
 
   const description = item.description || "";
 
@@ -93,13 +91,25 @@ export default function Modification() {
   }
 
   function addItemToCart() {
+    if (
+      !verifyEmbroidery(item, embroideries, firstEmbroidery, secondEmbroidery)
+    ) {
+      setErrorSnackbarText("Must select an embroidery/logo");
+      setErrorSnackbarOpen(true);
+      return;
+    }
+
+    if (!verifyQuantity(userSelection)) {
+      setErrorSnackbarText("Must select a quantity");
+      setErrorSnackbarOpen(true);
+      return;
+    }
+
     const new_cart = structuredClone(cart);
 
-    // ensure that the user actually ordered something
-    console.log(userSelection)
     // key is size + color, value is object containing quantity
     for (const [key, quantity] of Object.entries(userSelection)) {
-      addCustomsToCart(
+      createCartItem(
         item,
         quantity,
         key,
@@ -115,6 +125,7 @@ export default function Modification() {
 
     setSnackbarOpen(true);
     setUserSelection({});
+    setReset(Date.now());
     return;
   }
 
@@ -132,6 +143,7 @@ export default function Modification() {
               Starts at ${lowestPricedItemVariation} each
             </div>
           )}
+
           <Description description={description} />
 
           <div className="mt-[10px] flex gap-[50px]">
@@ -159,6 +171,7 @@ export default function Modification() {
           <QuantitySelector
             item={item}
             setUserSelection={setUserSelection}
+            reset={reset}
           />
 
           <div className="mt-auto pt-[20px] flex justify-end">
