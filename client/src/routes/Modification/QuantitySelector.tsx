@@ -3,7 +3,7 @@ import Select, { SelectChangeEvent } from "@mui/material/Select";
 import MenuItem from "@mui/material/MenuItem";
 import { ColorOption, SizeOption } from "../../lib/constants";
 
-export default function QuantitySelector({ item, setUserSelection }) {
+export default function QuantitySelector({ item, setUserSelection, reset }) {
   const [selectedQty, setSelectedQty] = useState<number | "">("");
   const [gridValues, setGridValues] = useState<Record<string, number>>({});
 
@@ -22,8 +22,11 @@ export default function QuantitySelector({ item, setUserSelection }) {
       const firstQty = Number(item.quantities[0]);
       setSelectedQty(firstQty);
       setUserSelection({ [`${SizeOption.BASE},${activeColor}`]: firstQty });
+    } else {
+      setGridValues({});
+      setSelectedQty("");
     }
-  }, [item.quantities, activeColor, setUserSelection]);
+  }, [item.quantities, activeColor, setUserSelection, reset]);
 
   const handleSelectionChange = (event: SelectChangeEvent) => {
     const value = Number(event.target.value);

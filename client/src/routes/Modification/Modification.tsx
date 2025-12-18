@@ -55,6 +55,7 @@ export default function Modification() {
   const [secondEmbroidery, setSecondEmbroidery] = useState("");
   const logo_placements = getWebConfigValue("logo_placements")[item.type] || [];
   const embroideries = getEmbroidery(item.sub_category || item.type) || [];
+  const [reset, setReset] = useState(Date.now());
 
   const description = item.description || "";
 
@@ -124,6 +125,7 @@ export default function Modification() {
 
     setSnackbarOpen(true);
     setUserSelection({});
+    setReset(Date.now());
     return;
   }
 
@@ -166,7 +168,11 @@ export default function Modification() {
             />
           </div>
 
-          <QuantitySelector item={item} setUserSelection={setUserSelection} />
+          <QuantitySelector
+            item={item}
+            setUserSelection={setUserSelection}
+            reset={reset}
+          />
 
           <div className="mt-auto pt-[20px] flex justify-end">
             <div
