@@ -1321,11 +1321,6 @@ export const catalog = [
     type: "sales",
     default_color: "Blue",
     description: "Sold in quantities of 1, 5, or 10 packs; Enter '1' for one shipment of one pack, etc.", 
-    discount: [
-      { quantity: 1, price: 11.99 },
-      { quantity: 5, price: 10.99 },
-      { quantity: 10, price: 10.99 },
-    ],
     sizes: {
       "1": 11.99,
       "5": 10.99,
@@ -1588,11 +1583,6 @@ export const catalog = [
     type: "service",
     default_color: "white",
     description: "Sold in quantities of 1, 5 or 10 boxes", 
-    discount: [
-      { quantity: 1, price: 84.99 },
-      { quantity: 5, price: 83.99 },
-      { quantity: 10, price: 79.99 },
-    ],    
     sizes: {
       "1": 84.99,
       "5": 83.99,

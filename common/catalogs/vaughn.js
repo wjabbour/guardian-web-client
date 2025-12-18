@@ -432,9 +432,6 @@ export const catalog = [
     ],  
     type: "service",
     default_color: "white",    
-    discount: [
-      { quantity: 1, price: 81.00 },
-    ],    
     sizes: {
       "1 box": 81.00,      
     },
@@ -470,10 +467,6 @@ export const catalog = [
     type: "sales",
     default_color: "Clear",
     description: "Sold in quantities of 1 or 10 packs", 
-    discount: [
-      { quantity: 1, price: 99.00 },
-      { quantity: 10, price: 80.00 },
-    ],    
     sizes: {
       1: 99.00,
       10: 80.00,

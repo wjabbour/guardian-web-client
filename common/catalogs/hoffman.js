@@ -180,10 +180,6 @@ export const catalog = [
     colors: ["Silver"],
     type: "accessory",
     default_color: "Silver",
-    discount: [
-      { quantity: 1000, price: 3.65 },  
-      { quantity: 1500, price: 3.49 },      
-    ],
     sizes: {
       1000: 3.65, 
       1500: 3.49,     
@@ -196,9 +192,6 @@ export const catalog = [
     colors: ["White"],
     type: "accessory",
     default_color: "White",
-    discount: [
-      { quantity: 2000, price: 1.69 },             
-    ],
     sizes: {
       2000: 1.69,          
     },
@@ -248,9 +241,6 @@ export const catalog = [
     colors: ["White"],
     type: "sales",
     default_color: "White",
-    discount: [
-      { quantity: 2500, price: 1.19 },     
-    ],
     sizes: {
       2500: 1.19,           
     },
@@ -262,10 +252,6 @@ export const catalog = [
     colors: ["White"],
     type: "sales",
     default_color: "White",
-    discount: [
-      { quantity: 2500, price: 1.19 },
-      { quantity: 5000, price: 1.09 },      
-    ],
     sizes: {
       2500: 1.19,
       5000: 1.09,           
