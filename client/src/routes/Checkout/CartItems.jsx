@@ -24,7 +24,6 @@ export default function CartItems() {
               .split(" ")
               .join("_")
               .toLowerCase()}.jpg`;
-        console.log(item, imagePath);
         return (
           <div className="relative flex p-1">
             <div className="relative top-1 cursor-pointer">
