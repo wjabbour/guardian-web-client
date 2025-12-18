@@ -33,9 +33,9 @@ export default function Modification() {
   const [image_source, set_image_source] = useState(
     item.colors
       ? `/images/${item.code}_${selected_color
-        .toLowerCase()
-        .split(" ")
-        .join("_")}.jpg`
+          .toLowerCase()
+          .split(" ")
+          .join("_")}.jpg`
       : `/images/${item.code}.jpg`
   );
   const [cart, set_cart] = useOutletContext<any>();
@@ -94,8 +94,6 @@ export default function Modification() {
   function addItemToCart() {
     const new_cart = structuredClone(cart);
 
-    // ensure that the user actually ordered something
-    console.log(userSelection, 'userSelection')
     // key is size + color, value is object containing quantity
     for (const [key, quantity] of Object.entries(userSelection)) {
       createCartItem(
@@ -155,10 +153,7 @@ export default function Modification() {
             />
           </div>
 
-          <QuantitySelector
-            item={item}
-            setUserSelection={setUserSelection}
-          />
+          <QuantitySelector item={item} setUserSelection={setUserSelection} />
 
           <div className="mt-auto pt-[20px] flex justify-end">
             <div

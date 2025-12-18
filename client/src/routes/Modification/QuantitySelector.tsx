@@ -3,16 +3,14 @@ import Select, { SelectChangeEvent } from "@mui/material/Select";
 import MenuItem from "@mui/material/MenuItem";
 import { ColorOption, SizeOption } from "../../lib/constants";
 
-export default function QuantitySelector({
-  item,
-  setUserSelection,
-}) {
+export default function QuantitySelector({ item, setUserSelection }) {
   const [selectedQty, setSelectedQty] = useState<number | "">("");
   const [gridValues, setGridValues] = useState<Record<string, number>>({});
 
-  const effectiveSizes = (item.sizes && item.sizes.length > 0)
-    ? item.sizes
-    : (item.colors && item.colors.length > 0 && !item.quantities)
+  const effectiveSizes =
+    item.sizes && item.sizes.length > 0
+      ? item.sizes
+      : item.colors && item.colors.length > 0 && !item.quantities
       ? [SizeOption.DEFAULT]
       : [];
 
@@ -23,14 +21,14 @@ export default function QuantitySelector({
     if (item.quantities && item.quantities.length > 0) {
       const firstQty = Number(item.quantities[0]);
       setSelectedQty(firstQty);
-      setUserSelection({ [`base,${activeColor}`]: firstQty });
+      setUserSelection({ [`${SizeOption.BASE},${activeColor}`]: firstQty });
     }
   }, [item.quantities, activeColor, setUserSelection]);
 
   const handleSelectionChange = (event: SelectChangeEvent) => {
     const value = Number(event.target.value);
     setSelectedQty(value);
-    setUserSelection({ [`base,${activeColor}`]: value });
+    setUserSelection({ [`${SizeOption.BASE},${activeColor}`]: value });
   };
 
   const handleGridChange = (size: string, color: string, value: string) => {
@@ -48,14 +46,16 @@ export default function QuantitySelector({
   const handleSingleInputChange = (value: string) => {
     const qty = parseInt(value, 10) || 0;
     setSelectedQty(qty);
-    setUserSelection({ [`base,${activeColor}`]: qty });
+    setUserSelection({ [`${SizeOption.BASE},${activeColor}`]: qty });
   };
 
   // 1. PRE-DEFINED QUANTITIES (Dropdown)
   if (item.quantities && item.quantities.length > 0) {
     return (
       <div className="flex flex-col gap-2 mt-4">
-        <label className="text-sm font-bold text-gray-700">Select Quantity:</label>
+        <label className="text-sm font-bold text-gray-700">
+          Select Quantity:
+        </label>
         <Select
           value={selectedQty}
           onChange={handleSelectionChange}
@@ -63,7 +63,9 @@ export default function QuantitySelector({
           size="small"
         >
           {item.quantities.map((q) => (
-            <MenuItem key={q} value={Number(q)}>{q}</MenuItem>
+            <MenuItem key={q} value={Number(q)}>
+              {q}
+            </MenuItem>
           ))}
         </Select>
       </div>
@@ -77,9 +79,14 @@ export default function QuantitySelector({
         <table className="w-full border-collapse">
           <thead>
             <tr>
-              <th className="p-2 border bg-gray-100 text-xs uppercase text-gray-600">Color \ Size</th>
+              <th className="p-2 border bg-gray-100 text-xs uppercase text-gray-600">
+                Color \ Size
+              </th>
               {effectiveSizes.map((size: string) => (
-                <th key={size} className="p-2 border bg-gray-50 text-xs font-bold uppercase text-center">
+                <th
+                  key={size}
+                  className="p-2 border bg-gray-50 text-xs font-bold uppercase text-center"
+                >
                   {size}
                 </th>
               ))}
@@ -100,7 +107,9 @@ export default function QuantitySelector({
                         inputMode="numeric"
                         value={gridValues[key] || ""}
                         className="w-16 p-1 border rounded text-center focus:outline-none focus:ring-1 focus:ring-black"
-                        onChange={(e) => handleGridChange(size, color, e.target.value)}
+                        onChange={(e) =>
+                          handleGridChange(size, color, e.target.value)
+                        }
                         placeholder="0"
                       />
                     </td>

@@ -1,3 +1,5 @@
+import { SizeOption } from "../../lib/constants";
+
 export function createCartItem(
   itemConfiguration,
   quantity,
@@ -22,7 +24,7 @@ export function createCartItem(
       fallbackPrice
     ),
     quantity,
-    size: size === "base" ? "Default" : size,
+    size: size === "base" ? SizeOption.DEFAULT : size,
     color,
     code: itemConfiguration.code,
     placement: null,

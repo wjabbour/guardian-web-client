@@ -1,6 +1,6 @@
 import DeleteIcon from "@mui/icons-material/Delete";
 import { useOutletContext } from "react-router-dom";
-import { ColorOption } from "../../lib/constants";
+import { ColorOption, SizeOption } from "../../lib/constants";
 
 export default function CartItems() {
   const [cart, set_cart] = useOutletContext();
@@ -12,6 +12,7 @@ export default function CartItems() {
       {Object.keys(cart).map((k) => {
         const item = cart[k];
         const isDefaultColor = item.color === ColorOption.DEFAULT;
+        const isDefaultSize = item.size === SizeOption.DEFAULT;
 
         const imagePath = isDefaultColor
           ? `/images/${item.code}.jpg`
@@ -65,7 +66,7 @@ export default function CartItems() {
                     : `${item.placement}`}
                 </p>
               )}
-              {!["customs"].includes(item.type) && (
+              {!isDefaultSize && (
                 <p>
                   <b>Size:</b> {item.size}
                 </p>
