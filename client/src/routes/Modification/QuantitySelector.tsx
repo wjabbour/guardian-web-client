@@ -3,7 +3,6 @@ import Select, { SelectChangeEvent } from "@mui/material/Select";
 import MenuItem from "@mui/material/MenuItem";
 import { ColorOption } from "../../lib/constants";
 
-// Moved style constant outside to avoid re-calculating/re-injecting
 const hideArrowsStyle = `
   input::-webkit-outer-spin-button,
   input::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
@@ -16,6 +15,13 @@ export default function QuantitySelector({
 }) {
   const [selectedQty, setSelectedQty] = useState<number | "">("");
   const [gridValues, setGridValues] = useState<Record<string, number>>({});
+
+  // Normalize sizes: if no sizes but colors exist, provide a default dimension
+  const effectiveSizes = (item.sizes && item.sizes.length > 0)
+    ? item.sizes
+    : (item.colors && item.colors.length > 0 && !item.quantities)
+      ? ["Default"]
+      : [];
 
   const activeColor =
     item.colors?.[0] || item.default_color || ColorOption.DEFAULT;
@@ -40,19 +46,24 @@ export default function QuantitySelector({
 
     setGridValues((prev) => {
       const updated = { ...prev, [key]: qty };
-      // Push to parent immediately
       setUserSelection(updated);
       return updated;
     });
   };
 
-  // 1. Logic for PRE-DEFINED QUANTITIES
+  const handleSingleInputChange = (value: string) => {
+    const qty = value === "" ? 0 : Number(value);
+    setSelectedQty(qty);
+    setUserSelection({ [`${activeColor}`]: qty });
+  };
+
+  // 1. PRE-DEFINED QUANTITIES (Dropdown)
   if (item.quantities && item.quantities.length > 0) {
     return (
       <div className="flex flex-col gap-2 mt-4">
         <label className="text-sm font-bold text-gray-700">Select Quantity:</label>
         <Select
-          value={"" + selectedQty}
+          value={selectedQty}
           onChange={handleSelectionChange}
           sx={{ width: "120px", height: "40px", backgroundColor: "white" }}
           size="small"
@@ -65,17 +76,16 @@ export default function QuantitySelector({
     );
   }
 
-  // 2. Logic for SIZE/COLOR GRID
-  if (item.sizes && item.colors) {
+  // 2. SIZE/COLOR GRID (Now handles 1D and 2D grids)
+  if (effectiveSizes.length > 0 && item.colors && item.colors.length > 0) {
     return (
       <div className="mt-6 overflow-x-auto">
         <style dangerouslySetInnerHTML={{ __html: hideArrowsStyle }} />
-
         <table className="w-full border-collapse">
           <thead>
             <tr>
               <th className="p-2 border bg-gray-100 text-xs uppercase text-gray-600">Color \ Size</th>
-              {item.sizes.map((size: string) => (
+              {effectiveSizes.map((size: string) => (
                 <th key={size} className="p-2 border bg-gray-50 text-xs font-bold uppercase text-center">
                   {size}
                 </th>
@@ -88,7 +98,7 @@ export default function QuantitySelector({
                 <td className="p-2 border bg-gray-50 text-xs font-bold uppercase text-gray-700">
                   {color}
                 </td>
-                {item.sizes.map((size: string) => {
+                {effectiveSizes.map((size: string) => {
                   const key = `${size},${color}`;
                   return (
                     <td key={key} className="p-2 border">
@@ -110,5 +120,18 @@ export default function QuantitySelector({
     );
   }
 
-  return null;
+  // 3. SINGLE TEXT INPUT (Fallback for items with no colors/sizes/quantities)
+  return (
+    <div className="flex flex-col gap-2 mt-4">
+      <style dangerouslySetInnerHTML={{ __html: hideArrowsStyle }} />
+      <label className="text-sm font-bold text-gray-700">Input Quantity:</label>
+      <input
+        type="number"
+        value={selectedQty}
+        className="w-32 p-2 border rounded focus:outline-none focus:ring-1 focus:ring-black"
+        onChange={(e) => handleSingleInputChange(e.target.value)}
+        placeholder="0"
+      />
+    </div>
+  );
 }
