@@ -860,7 +860,7 @@ export const catalog = [
     type: "accessory",
     default_color: "Blacktop",
     description:`POLYESTER; Dedicated laptop and tablet sleeves. Webbing haul handles. Removable, adjustable webbing shoulder strap. 
-                Dimensions 11h x 16.75w x 1.5d. Fits most 16 in. laptops.`,
+    Dimensions 11h x 16.75w x 1.5d. Fits most 16 in. laptops.`,
     sizes: {
       "1": 52.00,      
    },
