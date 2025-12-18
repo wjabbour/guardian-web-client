@@ -13,7 +13,7 @@ export function createCartItem(
   const size = selection[0];
   const color = selection[1];
 
-  const key = `${itemConfiguration.code},${color}`;
+  const key = `${itemConfiguration.code},${size},${color}`;
   const cart_item = {
     type: itemConfiguration.type,
     name: itemConfiguration.fullname,

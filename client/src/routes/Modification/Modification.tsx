@@ -7,12 +7,10 @@ import Alert from "@mui/material/Alert";
 import { getEmbroidery } from "../../lib/utils";
 import ColorSelector from "./ColorSelector";
 import QuantitySelector from "./QuantitySelector";
-import { CartItem } from "../../lib/interfaces";
 import EmbroiderySelector from "./EmbroiderySelector";
 import { getWebConfigValue } from "guardian-common";
 import Description from "./Description";
 import { createCartItem } from "./utils";
-import { ColorOption } from "../../lib/constants";
 
 type UserSelection = {
   [key: string]: {
@@ -129,6 +127,7 @@ export default function Modification() {
               Starts at ${lowestPricedItemVariation} each
             </div>
           )}
+
           <Description description={description} />
 
           <div className="mt-[10px] flex gap-[50px]">
