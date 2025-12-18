@@ -32,7 +32,7 @@ export function createCartItem(
     ...(firstPlacement !== PlacementOption.DEFAULT
       ? { placement: firstPlacement }
       : {}),
-    ...(firstEmbroidery !== null ? { embroidery: firstEmbroidery } : {}),
+    ...(firstEmbroidery !== "" ? { embroidery: firstEmbroidery } : {}),
     ...(secondEmbroidery !== null ? { secondEmbroidery, secondPlacement } : {}),
   };
 
