@@ -1013,8 +1013,9 @@ export const catalog = [
     colors: ["Black", "Deep Smoke", "Royal", "True Navy", "White"],
     type: "accessory",
     default_color: "Black",
-    description: `85/15 poly/nylon microfiber. Fully hemmed. Corner grommet with carabiner. Dimensions: 16 in. x 26 in.`,
-
+    description: `85/15 poly/nylon microfiber. Fully hemmed. Corner grommet with carabiner.
+    
+Dimensions: 16 in. x 26 in.`,
     pricing: {
       base: {
         price: 19.0,
@@ -1028,8 +1029,9 @@ export const catalog = [
     colors: ["Black", "Lead Grey", "True Navy", "True Royal"],
     type: "accessory",
     default_color: "Black",
-    description: `100% polyester fleece, 100% polyester woven backing. Attached elastic band to secure the rolled-up blanket. Dimensions: 50 in. x 60 in.`,
-
+    description: `100% polyester fleece, 100% polyester woven backing. Attached elastic band to secure the rolled-up blanket.
+    
+Dimensions: 50 in. x 60 in.`,
     pricing: {
       base: {
         price: 35.0,
@@ -1044,7 +1046,6 @@ export const catalog = [
     type: "accessory",
     default_color: "Grey Steel",
     description: `100% polyester fleece, 100% polyester woven backing. Water-resistant woven backing. Zips around itself for easy folding.`,
-
     pricing: {
       base: {
         price: 45.0,
@@ -1074,8 +1075,8 @@ export const catalog = [
     type: "accessory",
     default_color: "Black",
     description: `POLYESTER; Padded air mesh shoulder straps. Padded back panel. Laptop dimensions: 15h x 12w x 1d. Fits most 15 in. laptops. 
-    Dimensions: 17.75h x 11.5w x 5d.`,
-
+    
+Dimensions: 17.75h x 11.5w x 5d.`,
     pricing: {
       base: {
         price: 36.0,
@@ -1091,7 +1092,9 @@ export const catalog = [
     default_color: "Black",
     description: `POLYESTER; Dedicated laptop compartment with large slip pocket for documents and a padded pocket for tablets. Detachable shoulder strap. 
     Backpack straps stow neatly behind the back panel with ease. Multiple zippered pockets. Laptop sleeve: 15h x 10.5w x 1d. 
-    Fits most 15 in. laptops. Dimensions: 18h x 11w x 5d.`,
+    Fits most 15 in. laptops. 
+    
+Dimensions: 18h x 11w x 5d.`,
     pricing: {
       base: {
         price: 90.0,
@@ -1120,7 +1123,9 @@ export const catalog = [
     type: "accessory",
     default_color: "Grey Heather",
     description: `POLYESTER; Adjustable, padded shoulder strap. Large front side zippered pocket for easy decoration. 
-    Luggage trolley strap on back. Laptop sleeve dimensions 8h x 15w. Fits most 15 in. laptops.
+    Luggage trolley strap on back.
+    
+Laptop sleeve dimensions 8h x 15w. Fits most 15 in. laptops.
     `,
     pricing: {
       base: {
@@ -1136,7 +1141,8 @@ export const catalog = [
     type: "accessory",
     default_color: "Blacktop",
     description: `POLYESTER; Dedicated laptop and tablet sleeves. Webbing haul handles. Removable, adjustable webbing shoulder strap. 
-    Dimensions 11h x 16.75w x 1.5d. Fits most 16 in. laptops.`,
+
+Dimensions 11h x 16.75w x 1.5d. Fits most 16 in. laptops.`,
     pricing: {
       base: {
         price: 52.0,
