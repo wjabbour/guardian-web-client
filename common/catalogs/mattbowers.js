@@ -804,8 +804,7 @@ export const catalog = [
     type: "customs",
     default_color: "Chrome",
     description: 
-    `Sold in quantities of 1000, 1500 and 2500; Enter '1' 
-    for a shipment of 1000 frames, etc.`,
+    `Sold in quantities of 1000, 1500 and 2500; Enter '1' for a shipment of 1000 frames, etc.`,
     supportedStores: ["BOWIME"],
     sizes: {
       "1000": 1.61,
@@ -821,8 +820,7 @@ export const catalog = [
     type: "customs",
     default_color: "Black",
     description: 
-    `Sold in quantities of 1000, 1500 and 2500; Enter '1' 
-    for a shipment of 1000 plates, etc.`,
+    `Sold in quantities of 1000, 1500 and 2500; Enter '1' for a shipment of 1000 plates, etc.`,
     supportedStores: ["BOWIME"],
     sizes: {
       "1000": .49,
@@ -838,8 +836,7 @@ export const catalog = [
     type: "customs",
     default_color: "Black",
     description: 
-    `BLACK WILL NOT SHOW ON WHITE DECAL; Sold in quantities of 
-    1000, 1500 & 2500. Enter '1' for a shipment of 1000 decals, etc.`,
+    `BLACK WILL NOT SHOW ON WHITE DECAL; Sold in quantities of 1000, 1500 & 2500. Enter '1' for a shipment of 1000 decals, etc.`,
     supportedStores: ["BOWIME"],
     sizes: {
       "1000": .64,
@@ -855,8 +852,7 @@ export const catalog = [
     type: "customs",
     default_color: "Chrome",
     description: 
-    `Sold in quantities of 1000, 1500 and 2500; Enter '1' 
-    for a shipment of 1000 plates, etc.`,
+    `Sold in quantities of 1000, 1500 and 2500; Enter '1' for a shipment of 1000 plates, etc.`,
     supportedStores: ["MATFME"],
     sizes: {
       "1000": .39,
@@ -872,8 +868,7 @@ export const catalog = [
     type: "customs",
     default_color: "Blue",
     description: 
-    `Sold in quantities of 1000, 1500 and 2500; Enter '1' 
-    for a shipment of 1000 plates, etc.`,
+    `Sold in quantities of 1000, 1500 and 2500; Enter '1' for a shipment of 1000 plates, etc.`,
     supportedStores: ["MATFME"],
     sizes: {
       "1000": .49,
@@ -888,9 +883,8 @@ export const catalog = [
     colors: ["Black","White"],
     type: "customs",
     default_color: "Black",    
-   description: 
-    `BLACK WILL NOT SHOW ON WHITE DECAL; Sold in quantities of 
-    1000, 1500 & 2500. Enter '1' for a shipment of 1000 decals, etc.`,
+    description: 
+    `BLACK WILL NOT SHOW ON WHITE DECAL; Sold in quantities of 1000, 1500 & 2500. Enter '1' for a shipment of 1000 decals, etc.`,
     supportedStores: ["MATFME"],
     sizes: {
       "1000": .64,
@@ -905,9 +899,8 @@ export const catalog = [
     colors: ["Black","White"],
     type: "customs",
     default_color: "Black",
-    description: 
-    `BLACK WILL NOT SHOW ON WHITE DECAL; Sold in quantities of 
-    1000, 1500 & 2500. Enter '1' for a shipment of 1000 decals, etc.`,
+    description:
+    `BLACK WILL NOT SHOW ON WHITE DECAL; Sold in quantities of 1000, 1500 & 2500. Enter '1' for a shipment of 1000 decals, etc.`,
     supportedStores: ["MATFME"],
     sizes: {
       "1000": .64,
@@ -922,9 +915,7 @@ export const catalog = [
     colors: ["Black"],
     type: "customs",
     default_color: "Black",
-    description: 
-    `Sold in quantities of 1000, 1500 and 2500; Enter '1' 
-    for a shipment of 1000 frames, etc.`,
+    description:`Sold in quantities of 1000, 1500 and 2500; Enter '1' for a shipment of 1000 frames, etc.`,
     supportedStores: ["BOWHSL"],
     sizes: {
       "1000": .59,
@@ -940,8 +931,7 @@ export const catalog = [
     type: "customs",
     default_color: "Blue",
     description: 
-    `Sold in quantities of 1000, 1500 and 2500; Enter '1' 
-    for a shipment of 1000 plates, etc.`,
+    `Sold in quantities of 1000, 1500 and 2500; Enter '1' for a shipment of 1000 plates, etc.`,
     supportedStores: ["BOWHSL"],
     sizes: {
       "1000": .49,
@@ -957,8 +947,7 @@ export const catalog = [
     type: "customs",
     default_color: "Black",
     description: 
-    `BLACK WILL NOT SHOW ON WHITE DECAL; Sold in quantities
-    of 1000, 1500 & 2500. Enter '1' for a shipment of 1000 decals, etc.`,
+    `BLACK WILL NOT SHOW ON WHITE DECAL; Sold in quantities of 1000, 1500 & 2500. Enter '1' for a shipment of 1000 decals, etc.`,
     supportedStores: ["BOWHSL"],
     sizes: {
       "1000": .64,
@@ -974,8 +963,7 @@ export const catalog = [
     type: "customs",
     default_color: "Black",
     description: 
-    `Sold in quantities of 1000, 1500 and 2500; Enter '1' 
-    for a shipment of 1000 frames, etc.`,
+    `Sold in quantities of 1000, 1500 and 2500; Enter '1' for a shipment of 1000 frames, etc.`,
     supportedStores: ["BOWCSL"],
     sizes: {
       "1000": .59,
@@ -991,8 +979,7 @@ export const catalog = [
     type: "customs",
     default_color: "Blue",
     description: 
-    `Sold in quantities of 1000, 1500 and 2500; Enter '1' 
-    for a shipment of 1000 plates, etc.`,
+    `Sold in quantities of 1000, 1500 and 2500; Enter '1' for a shipment of 1000 plates, etc.`,
     supportedStores: ["BOWCSL"],
     sizes: {
       "1000": .49,
@@ -1008,8 +995,7 @@ export const catalog = [
     type: "customs",
     default_color: "Black",
     description: 
-    `BLACK WILL NOT SHOW ON WHITE DECAL; Sold in quantities
-    of 1000, 1500 & 2500. Enter '1' for a shipment of 1000 decals, etc.`,
+    `BLACK WILL NOT SHOW ON WHITE DECAL; Sold in quantities of 1000, 1500 & 2500. Enter '1' for a shipment of 1000 decals, etc.`,
     supportedStores: ["BOWCSL"],
     sizes: {
       "1000": .64,
@@ -1025,8 +1011,7 @@ export const catalog = [
     type: "customs",
     default_color: "Black",
     description: 
-    `Sold in quantities of 1000, 1500 and 2500; Enter '1' 
-    for a shipment of 1000 frames, etc.`,
+    `Sold in quantities of 1000, 1500 and 2500; Enter '1' for a shipment of 1000 frames, etc.`,
     supportedStores: ["BOWCME"],
     sizes: {
       "1000": .59,
@@ -1042,8 +1027,7 @@ export const catalog = [
     type: "customs",
     default_color: "Blue",
     description: 
-    `Sold in quantities of 1000, 1500 and 2500; Enter '1' 
-    for a shipment of 1000 plates, etc.`,
+    `Sold in quantities of 1000, 1500 and 2500; Enter '1' for a shipment of 1000 plates, etc.`,
     supportedStores: ["BOWCME"],
     sizes: {
       "1000": .49,
@@ -1059,8 +1043,7 @@ export const catalog = [
     type: "customs",
     default_color: "Black",
     description: 
-    `BLACK WILL NOT SHOW ON WHITE DECAL; Sold in quantities of 1000, 
-    1500 & 2500. Enter '1' for a shipment of 1000 decals, etc.`,
+    `BLACK WILL NOT SHOW ON WHITE DECAL; Sold in quantities of 1000, 1500 & 2500. Enter '1' for a shipment of 1000 decals, etc.`,
     supportedStores: ["BOWCME"],
     sizes: {
       "1000": .64,
@@ -1089,8 +1072,7 @@ export const catalog = [
     type: "customs",
     default_color: "Black",
     description: 
-    `Sold in quantities of 1000, 1500 and 2500; Enter 
-    '1' for shipment of 1000 frames, etc.`,
+    `Sold in quantities of 1000, 1500 and 2500; Enter '1' for shipment of 1000 frames, etc.`,
     supportedStores: ["BOWHME"],
     sizes: {
       "1000": .59,
@@ -1106,8 +1088,7 @@ export const catalog = [
     type: "customs",
     default_color: "Blue",
     description: 
-    `Sold in quantities of 1000, 1500 and 2500; Enter 
-    '1' for a shipment of 1000 plates, etc.`,
+    `Sold in quantities of 1000, 1500 and 2500; Enter '1' for a shipment of 1000 plates, etc.`,
     supportedStores: ["BOWHME"],
     sizes: {
       "1000": .49,
@@ -1123,8 +1104,7 @@ export const catalog = [
     type: "customs",
     default_color: "Black",
     description: 
-    `BLACK WILL NOT SHOW ON WHITE DECAL; Sold in quantities of 1000, 
-    1500 & 2500. Enter '1' for a shipment of 1000 decals, etc.`,
+    `BLACK WILL NOT SHOW ON WHITE DECAL; Sold in quantities of 1000, 1500 & 2500. Enter '1' for a shipment of 1000 decals, etc.`,
     supportedStores: ["BOWHME"],
     sizes: {
       "1000": .64,
@@ -1377,7 +1357,7 @@ export const catalog = [
     colors: ["Fluorg","Fluorp","Fluorr","Fluory"],
     type: "sales",
     default_color: "Fluorg",
-    description: "Sold in quantities of 1, 5, or 10 packs; Enter '1' for one shipment of one pack, etc.",   
+    description: "Sold in quantities of 1, 5, or 10 packs; Enter '1' for one pack of 50 tags, etc.",   
     sizes: {
       "1": 29.45,
       "5": 29.45,
@@ -1484,7 +1464,7 @@ export const catalog = [
     colors: ["Blue","White"],
     type: "sales",
     default_color: "Blue",
-    description: "Sold in quantities of 1000, 1500 and 2500; Enter '1' for a shipment of 1000, etc. ",    
+    description: "Sold in quantities of 1000, 1500 and 2500; Enter '1' for a shipment of 1000, etc.",    
     sizes: {
        "1000": .44,
        "1500": .44,
