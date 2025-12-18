@@ -141,6 +141,8 @@ export default function Modification() {
         new_cart,
         firstEmbroidery,
         secondEmbroidery,
+        firstPlacement,
+        secondPlacement,
         lowestPricedItemVariation
       );
 

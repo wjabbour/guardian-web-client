@@ -7,13 +7,15 @@ export function createCartItem(
   cart,
   firstEmbroidery: string,
   secondEmbroidery: string,
+  firstPlacement: string,
+  secondPlacement: string,
   fallbackPrice: number
 ) {
   const selection = userSelectionValue.split(",");
   const size = selection[0];
   const color = selection[1];
 
-  const key = `${itemConfiguration.code},${size},${color}`;
+  const key = `${itemConfiguration.code},${size},${color},${firstEmbroidery},${secondEmbroidery},${firstPlacement},${secondPlacement}`;
   const cart_item = {
     type: itemConfiguration.type,
     name: itemConfiguration.fullname,
@@ -27,13 +29,12 @@ export function createCartItem(
     size: size === "base" ? SizeOption.DEFAULT : size,
     color,
     code: itemConfiguration.code,
-    placement: null,
-    embroidery: firstEmbroidery,
+    ...(firstPlacement !== PlacementOption.DEFAULT
+      ? { placement: firstPlacement }
+      : {}),
+    ...(firstEmbroidery !== null ? { embroidery: firstEmbroidery } : {}),
+    ...(secondEmbroidery !== null ? { secondEmbroidery, secondPlacement } : {}),
   };
-
-  if (secondEmbroidery) {
-    cart_item["secondEmbroidery"] = secondEmbroidery;
-  }
 
   if (cart[key]) {
     cart[key].quantity += cart_item.quantity;
