@@ -11,7 +11,7 @@ import { CartItem } from "../../lib/interfaces";
 import EmbroiderySelector from "./EmbroiderySelector";
 import { getWebConfigValue } from "guardian-common";
 import Description from "./Description";
-import { addCustomsToCart } from "./utils";
+import { createCartItem } from "./utils";
 import { ColorOption } from "../../lib/constants";
 
 type UserSelection = {
@@ -96,10 +96,10 @@ export default function Modification() {
     const new_cart = structuredClone(cart);
 
     // ensure that the user actually ordered something
-    console.log(userSelection)
+    console.log(userSelection, 'userSelection')
     // key is size + color, value is object containing quantity
     for (const [key, quantity] of Object.entries(userSelection)) {
-      addCustomsToCart(
+      createCartItem(
         item,
         quantity,
         key,

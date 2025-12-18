@@ -1,21 +1,27 @@
-export function addCustomsToCart(
-  item,
+export function createCartItem(
+  itemConfiguration,
   quantity,
-  color,
+  userSelectionValue,
   cart,
   firstEmbroidery: string,
   secondEmbroidery: string,
   fallbackPrice: number
 ) {
-  const key = `${item.code},${color}`;
+  const selection = userSelectionValue.split(",");
+  const size = selection[0];
+  const color = selection[1];
+
+  console.log('size', size, 'color', color)
+
+  const key = `${itemConfiguration.code},${color}`;
   const cart_item = {
-    type: item.type,
-    name: item.fullname,
-    price: getPriceWithDiscount(item, quantity, fallbackPrice),
+    type: itemConfiguration.type,
+    name: itemConfiguration.fullname,
+    price: getPriceWithDiscount(itemConfiguration, size, quantity, fallbackPrice),
     quantity,
-    size: "default",
-    color: color,
-    code: item.code,
+    size,
+    color,
+    code: itemConfiguration.code,
     placement: null,
     embroidery: firstEmbroidery,
   };
@@ -27,7 +33,8 @@ export function addCustomsToCart(
   if (cart[key]) {
     cart[key].quantity += cart_item.quantity;
     cart[key].price = getPriceWithDiscount(
-      item,
+      itemConfiguration,
+      size,
       cart[key].quantity,
       fallbackPrice
     );
@@ -37,18 +44,22 @@ export function addCustomsToCart(
 }
 
 function getPriceWithDiscount(
-  item,
+  itemConfiguration,
+  size: number,
   cartQuantity: number,
   fallbackPrice: number
 ) {
-  const sortedDiscountQuantites = Object.keys(item.pricing.base.discount).sort(
+  console.log(itemConfiguration, size, 'hey')
+  if (!itemConfiguration.pricing[size].discount) return fallbackPrice;
+
+  const sortedDiscountQuantites = Object.keys(itemConfiguration.pricing[size].discount).sort(
     (a, b) => Number(a) - Number(b)
   );
 
   let price = fallbackPrice;
   for (const quantity of sortedDiscountQuantites) {
     if (cartQuantity >= Number(quantity)) {
-      price = item.pricing.base.discount[quantity];
+      price = itemConfiguration.pricing.base.discount[quantity];
     }
   }
 

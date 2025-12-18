@@ -1,13 +1,7 @@
 import { useEffect, useState } from "react";
 import Select, { SelectChangeEvent } from "@mui/material/Select";
 import MenuItem from "@mui/material/MenuItem";
-import { ColorOption } from "../../lib/constants";
-
-const hideArrowsStyle = `
-  input::-webkit-outer-spin-button,
-  input::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
-  input[type=number] { -moz-appearance: textfield; }
-`;
+import { ColorOption, SizeOption } from "../../lib/constants";
 
 export default function QuantitySelector({
   item,
@@ -16,11 +10,10 @@ export default function QuantitySelector({
   const [selectedQty, setSelectedQty] = useState<number | "">("");
   const [gridValues, setGridValues] = useState<Record<string, number>>({});
 
-  // Normalize sizes: if no sizes but colors exist, provide a default dimension
   const effectiveSizes = (item.sizes && item.sizes.length > 0)
     ? item.sizes
     : (item.colors && item.colors.length > 0 && !item.quantities)
-      ? ["Default"]
+      ? [SizeOption.DEFAULT]
       : [];
 
   const activeColor =
@@ -41,7 +34,8 @@ export default function QuantitySelector({
   };
 
   const handleGridChange = (size: string, color: string, value: string) => {
-    const qty = value === "" ? 0 : Number(value);
+    // Just parse it. If it's not a number, default to 0.
+    const qty = parseInt(value, 10) || 0;
     const key = `${size},${color}`;
 
     setGridValues((prev) => {
@@ -52,7 +46,7 @@ export default function QuantitySelector({
   };
 
   const handleSingleInputChange = (value: string) => {
-    const qty = value === "" ? 0 : Number(value);
+    const qty = parseInt(value, 10) || 0;
     setSelectedQty(qty);
     setUserSelection({ [`${activeColor}`]: qty });
   };
@@ -76,11 +70,10 @@ export default function QuantitySelector({
     );
   }
 
-  // 2. SIZE/COLOR GRID (Now handles 1D and 2D grids)
+  // 2. SIZE/COLOR GRID
   if (effectiveSizes.length > 0 && item.colors && item.colors.length > 0) {
     return (
       <div className="mt-6 overflow-x-auto">
-        <style dangerouslySetInnerHTML={{ __html: hideArrowsStyle }} />
         <table className="w-full border-collapse">
           <thead>
             <tr>
@@ -103,7 +96,8 @@ export default function QuantitySelector({
                   return (
                     <td key={key} className="p-2 border">
                       <input
-                        type="number"
+                        type="text"
+                        inputMode="numeric"
                         value={gridValues[key] || ""}
                         className="w-16 p-1 border rounded text-center focus:outline-none focus:ring-1 focus:ring-black"
                         onChange={(e) => handleGridChange(size, color, e.target.value)}
@@ -120,13 +114,13 @@ export default function QuantitySelector({
     );
   }
 
-  // 3. SINGLE TEXT INPUT (Fallback for items with no colors/sizes/quantities)
+  // 3. SINGLE TEXT INPUT
   return (
     <div className="flex flex-col gap-2 mt-4">
-      <style dangerouslySetInnerHTML={{ __html: hideArrowsStyle }} />
       <label className="text-sm font-bold text-gray-700">Input Quantity:</label>
       <input
-        type="number"
+        type="text"
+        inputMode="numeric"
         value={selectedQty}
         className="w-32 p-2 border rounded focus:outline-none focus:ring-1 focus:ring-black"
         onChange={(e) => handleSingleInputChange(e.target.value)}
