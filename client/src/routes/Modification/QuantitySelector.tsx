@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Select, { SelectChangeEvent } from "@mui/material/Select";
 import MenuItem from "@mui/material/MenuItem";
 import { ColorOption } from "../../lib/constants";
@@ -6,41 +6,32 @@ import { ColorOption } from "../../lib/constants";
 export default function QuantitySelector({
   item,
   setUserSelection,
-  selectedQuantity,
-  setSelectedQuantity,
 }) {
+  // Local state initialized as a number (or undefined until set)
+  const [selectedQty, setSelectedQty] = useState<number | "">("");
+
   const activeColor =
     item.colors?.[0] || item.default_color || ColorOption.DEFAULT;
 
-  // Auto-populate the first option on mount if quantities exist
   useEffect(() => {
     if (item.quantities && item.quantities.length > 0) {
-      const firstQty = item.quantities[0];
+      // Coerce to number
+      const firstQty = Number(item.quantities[0]);
 
-      // Update the local UI state
-      setSelectedQuantity((prev) => ({
-        ...prev,
-        base: firstQty,
-      }));
+      setSelectedQty(firstQty);
 
-      // Update the parent's customsOrder
       const initialOrder = {
         [`${activeColor}`]: firstQty,
       };
       setUserSelection(initialOrder);
     }
-  }, [item.quantities, activeColor, setSelectedQuantity, setUserSelection]);
+  }, [item.quantities, activeColor, setUserSelection]);
 
-  /**
-   * Updates the parent's customsOrder object on manual change.
-   */
   const handleSelectionChange = (event: SelectChangeEvent) => {
+    // Explicitly coerce the event value to a number
     const value = Number(event.target.value);
 
-    setSelectedQuantity((prev) => ({
-      ...prev,
-      base: value,
-    }));
+    setSelectedQty(value);
 
     const newOrder = {
       [`${activeColor}`]: value,
@@ -56,7 +47,7 @@ export default function QuantitySelector({
           Select Quantity:
         </label>
         <Select
-          value={"" + selectedQuantity.base}
+          value={"" + selectedQty}
           onChange={handleSelectionChange}
           sx={{
             width: "120px",
@@ -66,7 +57,7 @@ export default function QuantitySelector({
           size="small"
         >
           {item.quantities.map((q) => (
-            <MenuItem key={q} value={q}>
+            <MenuItem key={q} value={Number(q)}>
               {q}
             </MenuItem>
           ))}
@@ -78,12 +69,4 @@ export default function QuantitySelector({
   if (item.quantities) {
     return <QuantitySelect />;
   }
-
-  return (
-    <div className="mt-4 p-2 bg-gray-50 rounded-md border border-dashed border-gray-300">
-      <p className="text-sm italic text-gray-500">
-        Enter quantity in the table above for {item.fullname}
-      </p>
-    </div>
-  );
 }

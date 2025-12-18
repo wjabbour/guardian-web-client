@@ -33,9 +33,9 @@ export default function Modification() {
   const [image_source, set_image_source] = useState(
     item.colors
       ? `/images/${item.code}_${selected_color
-          .toLowerCase()
-          .split(" ")
-          .join("_")}.jpg`
+        .toLowerCase()
+        .split(" ")
+        .join("_")}.jpg`
       : `/images/${item.code}.jpg`
   );
   const [cart, set_cart] = useOutletContext<any>();
@@ -58,10 +58,6 @@ export default function Modification() {
   const [secondEmbroidery, setSecondEmbroidery] = useState("");
   const logo_placements = getWebConfigValue("logo_placements")[item.type] || [];
   const embroideries = getEmbroidery(item.sub_category || item.type) || [];
-  // lets adapt this to work for both grids and singular input, the quantity selector should just write to this object and we apply embroideries
-  const [selectedQuantity, setSelectedQuantity] = useState({
-    base: Math.min(...item.quantities),
-  });
 
   const description = item.description || "";
 
@@ -99,11 +95,7 @@ export default function Modification() {
   function addItemToCart() {
     const new_cart = structuredClone(cart);
 
-    if (Object.values(selectedQuantity).every((qty) => !qty)) {
-      setErrorSnackbarOpen(true);
-      setErrorSnackbarText("Must make a selection");
-      return;
-    }
+    // ensure that the user actually ordered something
 
     // key is size + color, value is object containing quantity
     for (const [key, quantity] of Object.entries(userSelection)) {
@@ -212,11 +204,10 @@ export default function Modification() {
             embroidery: firstEmbroidery,
           };
 
-          let key = `${item.code},${Object.keys(item.sizes)[j]},${
-            item.colors
-              ? item.colors[i - 1]
-              : item.default_color || ColorOption.DEFAULT
-          },${firstEmbroidery}`;
+          let key = `${item.code},${Object.keys(item.sizes)[j]},${item.colors
+            ? item.colors[i - 1]
+            : item.default_color || ColorOption.DEFAULT
+            },${firstEmbroidery}`;
 
           if (secondEmbroidery) {
             cart_item["secondEmbroidery"] = secondEmbroidery;
@@ -285,8 +276,6 @@ export default function Modification() {
           <QuantitySelector
             item={item}
             setUserSelection={setUserSelection}
-            setSelectedQuantity={setSelectedQuantity}
-            selectedQuantity={selectedQuantity}
           />
 
           <div className="mt-auto pt-[20px] flex justify-end">
