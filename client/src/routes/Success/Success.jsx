@@ -1,6 +1,7 @@
 import styles from "./Success.module.scss";
 import { useLocation } from "react-router-dom";
 import { ColorOption } from "../../lib/constants";
+import { getCatalogItem } from "../../lib/utils";
 
 export default function Success() {
   const location = useLocation();
@@ -17,8 +18,10 @@ export default function Success() {
         <div className={styles.scrollable}>
           {cart_keys.map((k) => {
             const item = cart[k];
+            const itemConfiguration = getCatalogItem(item.code);
             const isDefaultColor =
-              item.color === ColorOption.DEFAULT || !item.color;
+              item.color === ColorOption.DEFAULT ||
+              item.color === itemConfiguration.default_color;
 
             const imagePath = isDefaultColor
               ? `/images/${item.code}.jpg`
