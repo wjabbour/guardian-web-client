@@ -10,7 +10,7 @@ import QuantitySelector from "./QuantitySelector";
 import EmbroiderySelector from "./EmbroiderySelector";
 import { getWebConfigValue } from "guardian-common";
 import Description from "./Description";
-import { createCartItem } from "./utils";
+import { createCartItem, verifyEmbroidery } from "./utils";
 
 type UserSelection = {
   [key: string]: {
@@ -90,6 +90,14 @@ export default function Modification() {
   }
 
   function addItemToCart() {
+    if (
+      !verifyEmbroidery(item, embroideries, firstEmbroidery, secondEmbroidery)
+    ) {
+      setErrorSnackbarText("Must select an embroidery/logo");
+      setErrorSnackbarOpen(true);
+      return;
+    }
+
     const new_cart = structuredClone(cart);
 
     // key is size + color, value is object containing quantity

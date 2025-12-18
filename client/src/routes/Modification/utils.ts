@@ -88,3 +88,16 @@ function getPriceWithDiscount(
 
   return price;
 }
+
+export function verifyEmbroidery(
+  itemConfiguration,
+  embroideries: string[],
+  firstEmbroidery: string,
+  secondEmbroidery: string
+) {
+  if (embroideries.length === 0) return true;
+
+  if (!firstEmbroidery) return false;
+
+  return true;
+}
