@@ -20,9 +20,16 @@ export default function CartItems() {
         const imagePath = isDefaultColor
           ? `/images/${item.code}.jpg`
           : `/images/${item.code}_${item.color
-              .split(" ")
-              .join("_")
-              .toLowerCase()}.jpg`;
+            .split(" ")
+            .join("_")
+            .toLowerCase()}.jpg`;
+        const formatter = new Intl.NumberFormat('en-US', {
+          style: 'currency',
+          currency: 'USD',
+        });
+
+        // Usage
+        const priceDisplay = formatter.format(item.price);
         return (
           <div className="relative flex p-1">
             <div className="relative top-1 cursor-pointer">
@@ -38,7 +45,7 @@ export default function CartItems() {
 
             <div className="flex flex-col w-[200px] p-1 text-sm">
               <p>
-                <b>{item.price} each</b>
+                <b>{priceDisplay} each</b>
               </p>
               {!(item.color === ColorOption.DEFAULT) && (
                 <p>
