@@ -10,7 +10,13 @@ import QuantitySelector from "./QuantitySelector";
 import EmbroiderySelector from "./EmbroiderySelector";
 import { getWebConfigValue } from "guardian-common";
 import Description from "./Description";
-import { createCartItem, verifyEmbroidery, verifyQuantity } from "./utils";
+import {
+  createCartItem,
+  verifyEmbroidery,
+  verifyPlacement,
+  verifyQuantity,
+} from "./utils";
+import { PlacementOption } from "../../lib/constants";
 
 type UserSelection = {
   [key: string]: {
@@ -52,37 +58,41 @@ export default function Modification() {
   );
 
   const [firstEmbroidery, setFirstEmbroidery] = useState("");
-  const [secondEmbroidery, setSecondEmbroidery] = useState("");
+  const [secondEmbroidery, setSecondEmbroidery] = useState(null);
   const logo_placements = getWebConfigValue("logo_placements")[item.type] || [];
   const embroideries = getEmbroidery(item.sub_category || item.type) || [];
   const [reset, setReset] = useState(Date.now());
 
   const description = item.description || "";
 
+  /*
+    if an item type has no placements, then we set as default, but really this is just a special
+    value that we will use to process the item differently, we prob want N/A to end up on the order data
+  */
   const [firstPlacement, setFirstPlacement] = useState(
-    logo_placements[0] || "Left Chest"
+    logo_placements[0] || PlacementOption.DEFAULT
   );
 
   const [secondPlacement, setSecondPlacement] = useState(
-    logo_placements[0] || "Left Chest"
+    logo_placements[0] || PlacementOption.DEFAULT
   );
 
   const [userSelection, setUserSelection] = useState<UserSelection>({});
 
-  const handleFirstEmbroideryChange = (event) => {
-    setFirstEmbroidery(event.target.value);
+  const handleFirstEmbroideryChange = (embroidery: string) => {
+    setFirstEmbroidery(embroidery);
   };
 
-  const handleSecondEmbroideryChange = (event) => {
-    setSecondEmbroidery(event.target.value);
+  const handleSecondEmbroideryChange = (embroidery: string) => {
+    setSecondEmbroidery(embroidery);
   };
 
-  const handleFirstPlacementChange = (event) => {
-    setFirstPlacement(event.target.value);
+  const handleFirstPlacementChange = (placement: string) => {
+    setFirstPlacement(placement);
   };
 
-  const handleSecondPlacementChange = (event) => {
-    setSecondPlacement(event.target.value);
+  const handleSecondPlacementChange = (placement: string) => {
+    setSecondPlacement(placement);
   };
 
   function handleSnackbarClose() {
@@ -91,16 +101,31 @@ export default function Modification() {
   }
 
   function addItemToCart() {
-    if (
-      !verifyEmbroidery(item, embroideries, firstEmbroidery, secondEmbroidery)
-    ) {
-      setErrorSnackbarText("Must select an embroidery/logo");
+    const embroideryErrMessage = verifyEmbroidery(
+      item,
+      embroideries,
+      firstEmbroidery,
+      secondEmbroidery
+    );
+    if (embroideryErrMessage) {
+      setErrorSnackbarText(embroideryErrMessage);
       setErrorSnackbarOpen(true);
       return;
     }
 
     if (!verifyQuantity(userSelection)) {
       setErrorSnackbarText("Must select a quantity");
+      setErrorSnackbarOpen(true);
+      return;
+    }
+
+    const placementErrMessage = verifyPlacement(
+      firstPlacement,
+      secondPlacement,
+      secondEmbroidery
+    );
+    if (placementErrMessage) {
+      setErrorSnackbarText(placementErrMessage);
       setErrorSnackbarOpen(true);
       return;
     }
@@ -125,6 +150,7 @@ export default function Modification() {
 
     setSnackbarOpen(true);
     setUserSelection({});
+    // reset quantities in UI
     setReset(Date.now());
     return;
   }

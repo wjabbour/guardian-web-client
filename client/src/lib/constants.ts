@@ -4,6 +4,10 @@ export enum ColorOption {
 
 // base and default can probably be combined
 export enum SizeOption {
-  BASE = 'base',
-  DEFAULT = "Default"
+  BASE = "base",
+  DEFAULT = "Default",
+}
+
+export enum PlacementOption {
+  DEFAULT = "Default",
 }

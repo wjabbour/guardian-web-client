@@ -11,7 +11,7 @@ export default function QuantitySelector({ item, setUserSelection, reset }) {
     item.sizes && item.sizes.length > 0
       ? item.sizes
       : item.colors && item.colors.length > 0 && !item.quantities
-      ? [SizeOption.DEFAULT]
+      ? [SizeOption.BASE]
       : [];
 
   const activeColor =
@@ -19,9 +19,17 @@ export default function QuantitySelector({ item, setUserSelection, reset }) {
 
   useEffect(() => {
     if (item.quantities && item.quantities.length > 0) {
-      const firstQty = Number(item.quantities[0]);
-      setSelectedQty(firstQty);
-      setUserSelection({ [`${SizeOption.BASE},${activeColor}`]: firstQty });
+      // if there are multiple quantities, this prevents the select option always reverting to the first option each time the
+      // user adds item to cart
+      if (selectedQty) {
+        setUserSelection({
+          [`${SizeOption.BASE},${activeColor}`]: selectedQty,
+        });
+      } else {
+        const firstQty = Number(item.quantities[0]);
+        setSelectedQty(firstQty);
+        setUserSelection({ [`${SizeOption.BASE},${activeColor}`]: firstQty });
+      }
     } else {
       setGridValues({});
       setSelectedQty("");
