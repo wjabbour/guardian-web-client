@@ -11,15 +11,18 @@ export function createCartItem(
   const size = selection[0];
   const color = selection[1];
 
-  console.log('size', size, 'color', color)
-
   const key = `${itemConfiguration.code},${color}`;
   const cart_item = {
     type: itemConfiguration.type,
     name: itemConfiguration.fullname,
-    price: getPriceWithDiscount(itemConfiguration, size, quantity, fallbackPrice),
+    price: getPriceWithDiscount(
+      itemConfiguration,
+      size,
+      quantity,
+      fallbackPrice
+    ),
     quantity,
-    size,
+    size: size === "base" ? "Default" : size,
     color,
     code: itemConfiguration.code,
     placement: null,
@@ -49,17 +52,35 @@ function getPriceWithDiscount(
   cartQuantity: number,
   fallbackPrice: number
 ) {
-  console.log(itemConfiguration, size, 'hey')
   if (!itemConfiguration.pricing[size].discount) return fallbackPrice;
 
-  const sortedDiscountQuantites = Object.keys(itemConfiguration.pricing[size].discount).sort(
-    (a, b) => Number(a) - Number(b)
-  );
+  /*
+    the discount object is a mapping of quantity -> price where it is assumed that
+    no quantity which is greater than another quantity can contain a higher price
+
+    e.g. this is assumed to not be possible
+    {
+      100: 5
+      200: 6
+    }
+
+    We always assume that the price decreases as quantity increases.
+
+    Therefore, this function orders the quantities in the pricing map, successively checks if the
+    cart quantity of this item is greater than or equal to the discount quantity, and if so updates the price, applying
+    the discount
+  */
+  const sortedDiscountQuantites = Object.keys(
+    itemConfiguration.pricing[size].discount
+  ).sort((a, b) => Number(a) - Number(b));
 
   let price = fallbackPrice;
   for (const quantity of sortedDiscountQuantites) {
     if (cartQuantity >= Number(quantity)) {
-      price = itemConfiguration.pricing.base.discount[quantity];
+      price = itemConfiguration.pricing[size].discount[quantity];
+    } else {
+      // if 499 < 500 then we dont need to check if 499 < 1000
+      break;
     }
   }
 

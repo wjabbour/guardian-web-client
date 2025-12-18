@@ -23,14 +23,14 @@ export default function QuantitySelector({
     if (item.quantities && item.quantities.length > 0) {
       const firstQty = Number(item.quantities[0]);
       setSelectedQty(firstQty);
-      setUserSelection({ [`${activeColor}`]: firstQty });
+      setUserSelection({ [`base,${activeColor}`]: firstQty });
     }
   }, [item.quantities, activeColor, setUserSelection]);
 
   const handleSelectionChange = (event: SelectChangeEvent) => {
     const value = Number(event.target.value);
     setSelectedQty(value);
-    setUserSelection({ [`${activeColor}`]: value });
+    setUserSelection({ [`base,${activeColor}`]: value });
   };
 
   const handleGridChange = (size: string, color: string, value: string) => {
@@ -48,7 +48,7 @@ export default function QuantitySelector({
   const handleSingleInputChange = (value: string) => {
     const qty = parseInt(value, 10) || 0;
     setSelectedQty(qty);
-    setUserSelection({ [`${activeColor}`]: qty });
+    setUserSelection({ [`base,${activeColor}`]: qty });
   };
 
   // 1. PRE-DEFINED QUANTITIES (Dropdown)

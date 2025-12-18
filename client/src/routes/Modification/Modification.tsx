@@ -43,7 +43,6 @@ export default function Modification() {
   const [snackbarText] = useState("Item added to cart");
   const [errorSnackbarOpen, setErrorSnackbarOpen] = useState(false);
   const [errorSnackbarText, setErrorSnackbarText] = useState("");
-  const sizes = [];
   /*
     this value is used for two things
 
