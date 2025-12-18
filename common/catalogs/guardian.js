@@ -3,9 +3,9 @@ export const catalog = [
     code: "CP91L",
     name: "Port & Company Beanie",
     fullname: "Port & Company® Fleece-Lined Beanie Cap",
-    colors: ["Athletic Oxford","Athletic Red", "Athletic Royal", "Black","Navy","Neon Green","White"],
+    colors: ["Athletic Oxford", "Athletic Red", "Athletic Royal", "Black", "Navy", "Neon Green", "White"],
     type: "hat",
-    default_color: "Athletic Oxford",    
+    default_color: "Athletic Oxford",
     sizes: ["OSFA"],
     pricing: {
       OSFA: { price: 0.00 },
@@ -15,7 +15,7 @@ export const catalog = [
     code: "CP95",
     name: "Port Authority® Cotton Beanie",
     fullname: "Port Authority® 100% Cotton Beanie",
-    colors: ["Black","Graphite","Navy"],
+    colors: ["Black", "Graphite", "Navy"],
     type: "hat",
     default_color: "Black",
     sizes: ["OSFA"],
@@ -27,7 +27,7 @@ export const catalog = [
     code: "NE205",
     name: "New Era® Trucker Cap",
     fullname: "New Era® Snapback Trucker Cap (addt'l logos cost extra)",
-    colors: ["Black","Graphite","Grey","Deep Navywt"],
+    colors: ["Black", "Graphite", "Grey", "Deep Navywt"],
     type: "hat",
     default_color: "Black",
     sizes: ["OSFA"],
@@ -108,7 +108,7 @@ export const catalog = [
     code: "STC39",
     name: "Sport-Tek® Trucker Cap",
     fullname: "Sport-Tek® YP Classics® Retro Trucker Cap (addt'l logos cost extra)",
-    colors: ["Black","Graphite","True Navy True Navy","True Navy White","White"],
+    colors: ["Black", "Graphite", "True Navy True Navy", "True Navy White", "White"],
     type: "hat",
     default_color: "Black",
     sizes: ["OSFA"],
@@ -120,7 +120,7 @@ export const catalog = [
     code: "112",
     name: "Richardson Trucker Cap",
     fullname: "Richardson Snapback Trucker Cap (addt'l logos cost extra)",
-    colors: ["Amber Gold","Black","Charcoal","Loden","Maroon","Navy","White"],
+    colors: ["Amber Gold", "Black", "Charcoal", "Loden", "Maroon", "Navy", "White"],
     type: "hat",
     default_color: "Amber Gold",
     sizes: ["OSFA"],
@@ -132,7 +132,7 @@ export const catalog = [
     code: "PC55P",
     name: "Port & Company Pocket Tee",
     fullname: "Port & Company® Core Blend Pocket Tee",
-    colors: ["Ash","Athletic Maroon","Jet Black"],
+    colors: ["Ash", "Athletic Maroon", "Jet Black"],
     type: "tshirts",
     sub_category: "tshirt",
     default_color: "Jet Black",
@@ -230,7 +230,7 @@ export const catalog = [
     code: "PC61P",
     name: "Port & Co Pocket Tee",
     fullname: "Port & Company® Essential Pocket Tee",
-    colors: ["Charcoal","Jet Black","Navy","Red","Royal","White"],
+    colors: ["Charcoal", "Jet Black", "Navy", "Red", "Royal", "White"],
     type: "tshirts",
     default_color: "Jet Black",
     sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge", "3XLarge", "4XLarge"],
@@ -274,7 +274,7 @@ export const catalog = [
       "2XLarge": { price: 0.00 },
       "3XLarge": { price: 0.00 },
       "4XLarge": { price: 0.00 },
-   },
+    },
   },
   {
     code: "LST350",
@@ -330,7 +330,7 @@ export const catalog = [
       "3XLarge": { price: 0.00 },
       "4XLarge": { price: 0.00 },
     },
-  }, 
+  },
   {
     code: "LPC78H",
     name: "Port & Co™ Sweatshirt",
@@ -348,12 +348,12 @@ export const catalog = [
       "3XLarge": { price: 0.00 },
       "4XLarge": { price: 0.00 },
     },
-  },   
+  },
   {
     code: "J325",
     name: "Port Authority® Vest",
     fullname: "Port Authority® Core Soft Shell Vest",
-    colors: ["Battleship Grey","Black","Black Charcoal Heather","Dress Blue Navy"],
+    colors: ["Battleship Grey", "Black", "Black Charcoal Heather", "Dress Blue Navy"],
     type: "mens",
     default_color: "Battleship Grey",
     sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge", "3XLarge", "4XLarge"],
@@ -371,7 +371,7 @@ export const catalog = [
     code: "L325",
     name: "Port Authority® Vest",
     fullname: "Port Authority® Women's Core Soft Shell Vest",
-    colors: ["Battleship Grey","Black","Black Charcoal Heather","Dress Blue Navy","Marshmallow"],
+    colors: ["Battleship Grey", "Black", "Black Charcoal Heather", "Dress Blue Navy", "Marshmallow"],
     type: "womens",
     default_color: "Battleship Grey",
     sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge", "3XLarge", "4XLarge"],
@@ -389,7 +389,7 @@ export const catalog = [
     code: "F236",
     name: "Port Authority® Vest",
     fullname: "Port Authority ® Sweater Fleece Vest",
-    colors: ["Black Heather","Grey Heather"],
+    colors: ["Black Heather", "Grey Heather"],
     type: "mens",
     default_color: "Black Heather",
     sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge", "3XLarge", "4XLarge"],
@@ -407,7 +407,7 @@ export const catalog = [
     code: "L236",
     name: "Port Authority® Vest",
     fullname: "Port Authority ® Women's Sweater Fleece Vest",
-    colors: ["Black Heather","Grey Heather"],
+    colors: ["Black Heather", "Grey Heather"],
     type: "womens",
     default_color: "Black Heather",
     sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge", "3XLarge", "4XLarge"],
@@ -425,7 +425,7 @@ export const catalog = [
     code: "BB18000",
     name: "Brooks Brothers® Shirt",
     fullname: "Brooks Brothers® Wrinkle-Free Stretch Pinpoint Shirt",
-    colors: ["Cobalt Blue", "Deep Black","Newport Blue","White"],
+    colors: ["Cobalt Blue", "Deep Black", "Newport Blue", "White"],
     type: "mens",
     default_color: "Cobalt Blue",
     sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge", "3XLarge", "4XLarge"],
@@ -443,7 +443,7 @@ export const catalog = [
     code: "BB18002",
     name: "Brooks Brothers® Shirt",
     fullname: "Brooks Brothers® Wrinkle-Free Nailhead Shirt",
-    colors: ["Club Green","Cobalt Blue","Deep Black", "Navy Blazer","Newport Blue", "White"],
+    colors: ["Club Green", "Cobalt Blue", "Deep Black", "Navy Blazer", "Newport Blue", "White"],
     type: "mens",
     default_color: "Club Green",
     sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge", "3XLarge", "4XLarge"],
@@ -461,7 +461,7 @@ export const catalog = [
     code: "BB18003",
     name: "Brooks Brothers® Shirt",
     fullname: "Brooks Brothers® Women's Wrinkle-Free Nailhead Shirt",
-    colors: ["Club Green","Cobalt Blue","Deep Black", "Navy Blazer","Newport Blue", "White"],
+    colors: ["Club Green", "Cobalt Blue", "Deep Black", "Navy Blazer", "Newport Blue", "White"],
     type: "womens",
     default_color: "Club Green",
     sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge", "3XLarge", "4XLarge"],
@@ -479,7 +479,7 @@ export const catalog = [
     code: "S659",
     name: "Port Authority® Shirt",
     fullname: "Port Authority® Short Sleeve SuperPro™ Oxford Shirt",
-    colors: ["Black", "Navy","Oxford Blue","White"],
+    colors: ["Black", "Navy", "Oxford Blue", "White"],
     type: "mens",
     default_color: "Black",
     sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge", "3XLarge", "4XLarge"],
@@ -573,7 +573,7 @@ export const catalog = [
     code: "LK110",
     name: "Port Authority® Mesh Polo",
     fullname: "Port Authority® Women's Dry Zone® UV Micro-Mesh Polo",
-    colors: ["Deep Black", "Graphite", "True Royal", "Rich Red","White"],
+    colors: ["Deep Black", "Graphite", "True Royal", "Rich Red", "White"],
     type: "womens",
     default_color: "Deep Black",
     sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge", "3XLarge", "4XLarge"],
@@ -651,12 +651,12 @@ export const catalog = [
     fullname: "Sport-Tek® TALL Micropique Polo",
     colors: [
       "Black",
-      "Blue Lake",      
+      "Blue Lake",
       "Deep Red",
       "Forest Green",
       "Grey Concrete",
       "Iron Grey",
-      "Kelly Green",      
+      "Kelly Green",
       "Maroon",
       "Purple",
       "True Navy",
@@ -665,7 +665,7 @@ export const catalog = [
       "White",
     ],
     type: "mens",
-    default_color: "Black",    
+    default_color: "Black",
     sizes: ["LT", "XLT", "2XLT", "3XLT", "4XLT"],
     pricing: {
       LT: { price: 0.00 },
@@ -771,7 +771,7 @@ export const catalog = [
     code: "267020",
     name: "Nike® Dri-FIT Classic Polo",
     fullname: "Nike® Dri-FIT Classic Polo",
-    colors: ["Black","Court Blue","Light Blue","Midnight Navy","Varsity Red","White"],
+    colors: ["Black", "Court Blue", "Light Blue", "Midnight Navy", "Varsity Red", "White"],
     type: "mens",
     default_color: "Black",
     sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge", "3XLarge", "4XLarge"],
@@ -784,12 +784,12 @@ export const catalog = [
       "3XLarge": { price: 0.00 },
       "4XLarge": { price: 0.00 },
     },
-  }, 
+  },
   {
     code: "286772",
     name: "Nike® Dri-FIT Classic Polo",
     fullname: "Nike® Women's Dri-FIT Classic Polo",
-    colors: ["Black","Light Blue","White"],
+    colors: ["Black", "Light Blue", "White"],
     type: "womens",
     default_color: "Black",
     sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge"],
@@ -800,12 +800,12 @@ export const catalog = [
       XLarge: { price: 0.00 },
       "2XLarge": { price: 0.00 },
     },
-  },  
+  },
   {
     code: "883681",
     name: "Nike® Dri-FIT Legacy Polo",
     fullname: "Nike® Dri-FIT Legacy Polo (addt'l logos cost extra)",
-    colors: ["Black","Dark Grey","Game Royal","Gym Red","Light Photo Blue","Midnight Navy"],
+    colors: ["Black", "Dark Grey", "Game Royal", "Gym Red", "Light Photo Blue", "Midnight Navy"],
     type: "mens",
     default_color: "Black",
     sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge", "3XLarge", "4XLarge"],
@@ -818,14 +818,14 @@ export const catalog = [
       "3XLarge": { price: 0.00 },
       "4XLarge": { price: 0.00 },
     },
-  },  
+  },
   {
     code: "NKDC1991",
     name: "Ladies Nike® Polo",
     fullname: "Ladies Nike® Micro Pique Polo",
     colors: [
-      "Anthracite", 
-      "Black", 
+      "Anthracite",
+      "Black",
       "Blue Tint",
       "Brilliant Orange",
       "Cool Grey",
@@ -861,29 +861,29 @@ export const catalog = [
     name: "Nike® Dri-FIT Polo Shirt",
     fullname: "Nike Dri-FIT Micro Pique 2.0 Polo",
     colors: [
-        "Anthracite", 
-        "Black", 
-        "Blue Tint",
-        "Brilliant Orange",
-        "Cool Grey",
-        "Court Purple",
-        "Game Royal",
-        "Gorge Green",
-        "Gym Blue",
-        "Lucid Green",
-        "Mint",
-        "Navy",
-        "Team Red",
-        "Tidal Blue",
-        "University Red",
-        "Urban Lilac",
-        "Valor Blue",
-        "Varsity Maize",
-        "Vivid Pink",
-        "White",
+      "Anthracite",
+      "Black",
+      "Blue Tint",
+      "Brilliant Orange",
+      "Cool Grey",
+      "Court Purple",
+      "Game Royal",
+      "Gorge Green",
+      "Gym Blue",
+      "Lucid Green",
+      "Mint",
+      "Navy",
+      "Team Red",
+      "Tidal Blue",
+      "University Red",
+      "Urban Lilac",
+      "Valor Blue",
+      "Varsity Maize",
+      "Vivid Pink",
+      "White",
     ],
     type: "mens",
-    default_color: "Anthracite",    
+    default_color: "Anthracite",
     sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge", "3XLarge", "4XLarge"],
     pricing: {
       Small: { price: 0.00 },
@@ -893,29 +893,29 @@ export const catalog = [
       "2XLarge": { price: 0.00 },
       "3XLarge": { price: 0.00 },
       "4XLarge": { price: 0.00 },
-   },
+    },
   },
   {
     code: "NKDC1963T",
     name: "Nike® Dri-FIT- TALL",
     fullname: "Nike Dri-FIT Micro Pique 2.0 Polo - TALL SIZES",
     colors: [
-        "Anthracite",
-        "Black",
-        "Cool Grey",
-        "Game Royal",
-        "Gym Blue",
-        "Navy",
-        "University Red",
-        "Valor Blue",
-        "White",
+      "Anthracite",
+      "Black",
+      "Cool Grey",
+      "Game Royal",
+      "Gym Blue",
+      "Navy",
+      "University Red",
+      "Valor Blue",
+      "White",
     ],
     type: "mens",
     default_color: "Anthracite",
     sizes: ["LT", "XLT", "2XLT", "3XLT", "4XLT"],
     pricing: {
-       LT: { price: 0.00 },
-       XLT: { price: 0.00 },
+      LT: { price: 0.00 },
+      XLT: { price: 0.00 },
       "2XLT": { price: 0.00 },
       "3XLT": { price: 0.00 },
       "4XLT": { price: 0.00 },
@@ -925,7 +925,7 @@ export const catalog = [
     code: "NKAH6266",
     name: "Nike Textured Polo",
     fullname: "Nike Dri-FIT Hex Textured Polo",
-    colors: ["Black","Court Blue","Dark Grey","Game Royal","Gym Red","White"],
+    colors: ["Black", "Court Blue", "Dark Grey", "Game Royal", "Gym Red", "White"],
     type: "mens",
     default_color: "Black",
     sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge", "3XLarge", "4XLarge"],
@@ -943,7 +943,7 @@ export const catalog = [
     code: "NKBV6042",
     name: "Nike® Essential Polo",
     fullname: "Nike® Dry Essential Solid Polo",
-    colors: ["Black", "Game Royal", "Midnight Navy","University Blue", "University Red", "White"],
+    colors: ["Black", "Game Royal", "Midnight Navy", "University Blue", "University Red", "White"],
     type: "mens",
     default_color: "Black",
     sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge", "3XLarge", "4XLarge"],
@@ -957,11 +957,11 @@ export const catalog = [
       "4XLarge": { price: 0.00 },
     },
   },
-   {
+  {
     code: "TM1MY399",
     name: "TravisMathew Polo",
     fullname: "TravisMathew Bayfront Solid Polo",
-    colors: ["Black","Dark Grey","Insignia Blue","Roan Rouge"],
+    colors: ["Black", "Dark Grey", "Insignia Blue", "Roan Rouge"],
     type: "mens",
     default_color: "Black",
     sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge", "3XLarge"],
@@ -978,8 +978,8 @@ export const catalog = [
     code: "TM1MU410",
     name: "TravisMathew Performance Polo",
     fullname: "TravisMathew Coto Performance Polo",
-    colors: ["Beryl Grn Hthr","Black","Blue Nights","Brilliant Blue Hthr","Federal Blue",
-    "Quiet Shade Gry Hthr","Quiet Shade Gry Blk","Vintage Indigo Blk","White"],
+    colors: ["Beryl Grn Hthr", "Black", "Blue Nights", "Brilliant Blue Hthr", "Federal Blue",
+      "Quiet Shade Gry Hthr", "Quiet Shade Gry Blk", "Vintage Indigo Blk", "White"],
     type: "mens",
     default_color: "Black",
     sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge", "3XLarge"],
@@ -1028,11 +1028,11 @@ export const catalog = [
       "4XLarge": { price: 0.00 },
     },
   },
-   {
+  {
     code: "A231",
     name: "Adidas Performance Polo",
     fullname: "Adidas Women's Performance Polo",
-    colors: ["Black","Collegiate Red","Collegiate Royal"],
+    colors: ["Black", "Collegiate Red", "Collegiate Royal"],
     type: "womens",
     default_color: "Black",
     sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge", "3XLarge"],
@@ -1049,7 +1049,7 @@ export const catalog = [
     code: "NKDC2105",
     name: "Nike Long Sleeve Polo",
     fullname: "Nike Women's Dri-FIT Micro Pique 2.0 Long Sleeve Polo",
-    colors: ["Anthracite","Black","Game Royal","Gym Blue","Navy","University Red","White"],
+    colors: ["Anthracite", "Black", "Game Royal", "Gym Blue", "Navy", "University Red", "White"],
     type: "womens",
     default_color: "Black",
     sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge"],
@@ -1146,8 +1146,8 @@ export const catalog = [
     code: "ST740",
     name: "Sport-Tek Polo",
     fullname: "Sport-Tek® UV Micropique Polo",
-    colors: ["Black","Deep Red","Graphite","Grey Concrete",
-      "True Navy","True Royal","White"],
+    colors: ["Black", "Deep Red", "Graphite", "Grey Concrete",
+      "True Navy", "True Royal", "White"],
     type: "mens",
     default_color: "Black",
     sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge", "3XLarge", "4XLarge"],
@@ -1165,7 +1165,7 @@ export const catalog = [
     code: "A230",
     name: "Adidas Performance Polo",
     fullname: "Adidas Men's Performance Polo",
-    colors: ["Black","Collegiate Red","Collegiate Royal"],
+    colors: ["Black", "Collegiate Red", "Collegiate Royal"],
     type: "mens",
     default_color: "Black",
     sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge", "3XLarge", "4XLarge"],
@@ -1183,7 +1183,7 @@ export const catalog = [
     code: "NKDC2104",
     name: "Nike Long Sleeve Polo",
     fullname: "Nike Dri-FIT Micro Pique 2.0 Long Sleeve Polo",
-    colors: ["Anthracite","Black","Game Royal","Gym Blue","Navy","University Red","White"],
+    colors: ["Anthracite", "Black", "Game Royal", "Gym Blue", "Navy", "University Red", "White"],
     type: "mens",
     default_color: "Black",
     sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge", "3XLarge", "4XLarge"],
@@ -1202,10 +1202,10 @@ export const catalog = [
     name: "Long Sleeve Tee",
     fullname: "Port & Company® Long Sleeve Essential Tee",
     colors: [
-      "Ash", 
-      "Athletic Heather", 
-      "Cardinal", 
-      "Charcoal", 
+      "Ash",
+      "Athletic Heather",
+      "Cardinal",
+      "Charcoal",
       "Deep Navy",
       "Jet Black",
       "Navy",
@@ -1230,8 +1230,8 @@ export const catalog = [
     code: "PC90H",
     name: "Hooded Sweatshirt",
     fullname: "Port & Company® Essential Fleece Pullover Hooded Sweatshirt",
-    colors: ["Athletic Heather","Cardinal","Charcoal",
-      "Drk Hthr Gry","Jet Black","Navy","Red","Royal","White"],
+    colors: ["Athletic Heather", "Cardinal", "Charcoal",
+      "Drk Hthr Gry", "Jet Black", "Navy", "Red", "Royal", "White"],
     type: "mens",
     default_color: "Jet Black",
     sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge", "3XLarge", "4XLarge"],
@@ -1279,7 +1279,7 @@ export const catalog = [
       "2XLarge": { price: 0.00 },
       "3XLarge": { price: 0.00 },
     },
-  },  
+  },
   {
     code: "K805",
     name: "Port Authority® 1/4-Zip Pullover",
@@ -1428,7 +1428,7 @@ export const catalog = [
     code: "NF0A88D5",
     name: "NF® Soft Shell Jacket",
     fullname: "The North Face® Chest Logo Ridgewall Soft Shell Jacket",
-    colors: ["Shady Blue","TNF Black","TNF Drk Gry Hthr","Urban Navy Hthr"],
+    colors: ["Shady Blue", "TNF Black", "TNF Drk Gry Hthr", "Urban Navy Hthr"],
     type: "mens",
     default_color: "TNF Black",
     sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge", "3XLarge"],
@@ -1445,7 +1445,7 @@ export const catalog = [
     code: "J333",
     name: "Torrent Waterproof Jacket",
     fullname: "Port Authority® Torrent Waterproof Jacket",
-    colors: ["Black", "Engine Red","Magnet","True Navy","True Royal"],
+    colors: ["Black", "Engine Red", "Magnet", "True Navy", "True Royal"],
     type: "mens",
     default_color: "Black",
     sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge", "3XLarge", "4XLarge"],
@@ -1519,7 +1519,7 @@ export const catalog = [
     code: "NF0A88D4",
     name: "NF® Soft Shell Jacket",
     fullname: "The North Face® Women's Chest Logo Ridgewall Soft Shell Jacket",
-    colors: ["TNF Black","TNF Blackberry Wine","TNF Drk Gry Hthr"],
+    colors: ["TNF Black", "TNF Blackberry Wine", "TNF Drk Gry Hthr"],
     type: "womens",
     default_color: "TNF Black",
     sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge"],
@@ -1535,9 +1535,9 @@ export const catalog = [
     code: "BOXLIDS",
     name: "Custom Color Lids",
     fullname: "Custom Color Gift Box Lids",
-    colors: ["Black","Blue","Burgundy","Gold","Green","Orange","Pink","Purple","Red","Silver"],
+    colors: ["Black", "Blue", "Burgundy", "Gold", "Green", "Orange", "Pink", "Purple", "Red", "Silver"],
     type: "accessory",
-    default_color: "Black",   
+    default_color: "Black",
     quantities: [100, 250, 500, 1000, 1500],
     pricing: {
       base: {
@@ -1551,7 +1551,7 @@ export const catalog = [
     fullname: "Stitched Leather Laser Engraved Keychain",
     colors: ["Black", "Brown"],
     type: "accessory",
-    default_color: "Black",   
+    default_color: "Black",
     quantities: [100, 250, 500, 1000, 1500],
     pricing: {
       base: {
@@ -1563,9 +1563,9 @@ export const catalog = [
     code: "CG1542",
     name: "Carbon Fiber Keychain",
     fullname: "Carbon Fiber Leather Keychain",
-    colors: ["Black", "Blue", "Burgundy","Red"],
+    colors: ["Black", "Blue", "Burgundy", "Red"],
     type: "accessory",
-    default_color: "Black",   
+    default_color: "Black",
     quantities: [100, 250, 500],
     pricing: {
       base: {
@@ -1579,7 +1579,7 @@ export const catalog = [
     fullname: "Carbon Fiber Strap Metal Keychain",
     colors: ["Black"],
     type: "accessory",
-    default_color: "Black",   
+    default_color: "Black",
     quantities: [100, 250, 500],
     pricing: {
       base: {
@@ -1591,9 +1591,9 @@ export const catalog = [
     code: "Q42971",
     name: "Metal Color Series",
     fullname: "Metal Color Series Keychain (2-sided imprint available)",
-    colors: ["Blue","Grey","Green","Red"],
+    colors: ["Blue", "Grey", "Green", "Red"],
     type: "accessory",
-    default_color: "Grey",   
+    default_color: "Grey",
     quantities: [100, 250, 500],
     pricing: {
       base: {
@@ -1605,9 +1605,9 @@ export const catalog = [
     code: "SET1020",
     name: "Keychain & Pen Set",
     fullname: "Metal Leather Keychain & Ballpoint Pen Set",
-    colors: ["Black","Blue","Brown","Burgundy","Green","Orange","Pink","Purple","Red"],
+    colors: ["Black", "Blue", "Brown", "Burgundy", "Green", "Orange", "Pink", "Purple", "Red"],
     type: "accessory",
-    default_color: "Black",   
+    default_color: "Black",
     quantities: [100, 250, 500, 1000, 1500],
     pricing: {
       base: {
@@ -1619,9 +1619,9 @@ export const catalog = [
     code: "SET2024",
     name: "Keychain Gift Set",
     fullname: "Metal Leather Keychain Gift Set (logo imprinted on box top & keychains)",
-    colors: ["Black","Blue","Burgundy","Green","Orange","Pink","Purple","Red"],
+    colors: ["Black", "Blue", "Burgundy", "Green", "Orange", "Pink", "Purple", "Red"],
     type: "accessory",
-    default_color: "Black",   
+    default_color: "Black",
     quantities: [100, 250, 500, 1000, 1500],
     pricing: {
       base: {
@@ -1635,7 +1635,7 @@ export const catalog = [
     fullname: "Leather Keychain & Fiber Ballpoint Stylus Gift Set (logo imprinted all pieces)",
     colors: ["Black"],
     type: "accessory",
-    default_color: "Black",   
+    default_color: "Black",
     quantities: [100, 250, 500, 1000, 1500],
     pricing: {
       base: {
@@ -1649,7 +1649,7 @@ export const catalog = [
     fullname: "Leather Loop Metal Keychain",
     colors: ["Black", "Brown"],
     type: "accessory",
-    default_color: "Black",   
+    default_color: "Black",
     quantities: [100, 250, 500],
     pricing: {
       base: {
@@ -1661,9 +1661,9 @@ export const catalog = [
     code: "04015",
     name: "10 oz. Tumbler",
     fullname: "Perfect Fit Tumbler (Perfect for Keurig Machines & Cup Holders",
-    colors: ["Black","Blue","Burgundy","Gunmetal","Navy","Red"],
+    colors: ["Black", "Blue", "Burgundy", "Gunmetal", "Navy", "Red"],
     type: "accessory",
-    default_color: "Black",   
+    default_color: "Black",
     quantities: [100],
     pricing: {
       base: {
@@ -1675,7 +1675,7 @@ export const catalog = [
     code: "04032",
     name: "20 oz. Revolve Tumbler",
     fullname: "20 oz. Revolve Tumbler",
-    colors: ["Black","Blue","Burgundy","Green","Navy","Red","Silver","White"],
+    colors: ["Black", "Blue", "Burgundy", "Green", "Navy", "Red", "Silver", "White"],
     type: "accessory",
     default_color: "Black",
     quantities: [100],
@@ -1689,8 +1689,8 @@ export const catalog = [
     code: "5790",
     name: "20 oz. Himalayan Tumbler",
     fullname: "20 oz. Himalayan Tumbler",
-    colors: ["Black","Fuchsia","Gold","Gray","Green","Maroon",
-      "Navy","Orange","Purple","Red","Silver","Teal","White"],
+    colors: ["Black", "Fuchsia", "Gold", "Gray", "Green", "Maroon",
+      "Navy", "Orange", "Purple", "Red", "Silver", "Teal", "White"],
     type: "accessory",
     default_color: "Black",
     quantities: [100],
@@ -1704,7 +1704,7 @@ export const catalog = [
     code: "6645",
     name: "16 oz. Stadium Cup",
     fullname: "16 oz. Rally Stadium Cups (large imprint area)",
-    colors: ["Black","Blue","Maroon","Red","White"],
+    colors: ["Black", "Blue", "Maroon", "Red", "White"],
     type: "accessory",
     default_color: "Black",
     quantities: [100],
@@ -1718,7 +1718,7 @@ export const catalog = [
     code: "6648",
     name: "20 oz. Stadium Cup",
     fullname: "20 oz. Rally Stadium Cups (large imprint area)",
-    colors: ["Black","Blue","Maroon","Red","White"],
+    colors: ["Black", "Blue", "Maroon", "Red", "White"],
     type: "accessory",
     default_color: "Black",
     quantities: [100],
@@ -1732,7 +1732,7 @@ export const catalog = [
     code: "040110",
     name: "Grip Water Bottle",
     fullname: "24 oz. Grip Water Bottle",
-    colors: ["Black","Blue","Burgundy","Gold","Green","Navy","Pink","Purple","Red","Silver"],
+    colors: ["Black", "Blue", "Burgundy", "Gold", "Green", "Navy", "Pink", "Purple", "Red", "Silver"],
     type: "accessory",
     default_color: "Black",
     quantities: [100, 250, 500],
@@ -1746,7 +1746,7 @@ export const catalog = [
     code: "5706",
     name: "16 oz. Swig Bottle",
     fullname: "16 oz. Swig Stainless Steel Bottles",
-    colors: ["Black","Blue","Lime","Navy","Orange","Purple","Red","Silver","White"],
+    colors: ["Black", "Blue", "Lime", "Navy", "Orange", "Purple", "Red", "Silver", "White"],
     type: "accessory",
     default_color: "Black",
     quantities: [100],
@@ -1755,12 +1755,12 @@ export const catalog = [
         price: 0.00,
       },
     },
-  },  
+  },
   {
     code: "5726",
     name: "26 oz. Swig Bottle",
     fullname: "26 oz. Swig Stainless Steel Bottles",
-    colors: ["Black","Silver"],
+    colors: ["Black", "Silver"],
     type: "accessory",
     default_color: "Black",
     quantities: [100],
@@ -1776,14 +1776,14 @@ export const catalog = [
     fullname: "Collapsible Foam Koozies (1-color & 4CP available)",
     colors: ["Colors"],
     type: "accessory",
-    default_color: "Colors",   
+    default_color: "Colors",
     quantities: [100, 250, 500],
     pricing: {
       base: {
         price: 0.00,
       },
     },
-  },  
+  },
   {
     code: "42",
     name: "TALL Boy 16 oz. Coolie",
@@ -1807,21 +1807,21 @@ export const catalog = [
       "Yellow",
     ],
     type: "accessory",
-    default_color: "Black",   
+    default_color: "Black",
     quantities: [100, 250, 500],
     pricing: {
       base: {
         price: 0.00,
       },
     },
-  },  
+  },
   {
     code: "8163",
     name: "15 oz. Mug w/imprint",
     fullname: "15 oz. Ember Mug (Laser engraving & Silk-Screening available)",
-    colors: ["Black","Cobalt Blue","Green","Lilac","Red","Royal","White"],
+    colors: ["Black", "Cobalt Blue", "Green", "Lilac", "Red", "Royal", "White"],
     type: "accessory",
-    default_color: "Black",    
+    default_color: "Black",
     quantities: [100, 250, 500, 1000, 1500],
     pricing: {
       base: {
@@ -1833,9 +1833,9 @@ export const catalog = [
     code: "6301",
     name: "11 oz. Ceramic Mug",
     fullname: "11 oz. Ceramic Coffee Mug",
-    colors: ["Black","Green","Navy","White"],
+    colors: ["Black", "Green", "Navy", "White"],
     type: "accessory",
-    default_color: "Black",    
+    default_color: "Black",
     quantities: [100, 250, 500, 1000, 1500],
     pricing: {
       base: {
@@ -1847,9 +1847,9 @@ export const catalog = [
     code: "321",
     name: "Javalina Executive Pen",
     fullname: "Javalina Executive Pen (more colors available)",
-    colors: ["Black","Blue","Green","Red"],
+    colors: ["Black", "Blue", "Green", "Red"],
     type: "accessory",
-    default_color: "Black",    
+    default_color: "Black",
     quantities: [100, 250, 500, 1000, 1500],
     pricing: {
       base: {
@@ -1861,9 +1861,9 @@ export const catalog = [
     code: "307",
     name: "Macaw® Pen",
     fullname: "Macaw® Pen",
-    colors: ["Black","Blue","Lime Green","Orange","Pink","Red"],
+    colors: ["Black", "Blue", "Lime Green", "Orange", "Pink", "Red"],
     type: "accessory",
-    default_color: "Black",    
+    default_color: "Black",
     quantities: [100, 250, 500, 1000, 1500],
     pricing: {
       base: {
@@ -1875,9 +1875,9 @@ export const catalog = [
     code: "291",
     name: "Aquarius Comfort Pen",
     fullname: "Aquarius Comfort Pen",
-    colors: ["Black","Blue","Grey","Red"],
+    colors: ["Black", "Blue", "Grey", "Red"],
     type: "accessory",
-    default_color: "Black",    
+    default_color: "Black",
     quantities: [100, 250, 500, 1000, 1500],
     pricing: {
       base: {
@@ -1941,7 +1941,7 @@ export const catalog = [
       "Yellow",
     ],
     type: "sales",
-    default_color: "White",    
+    default_color: "White",
     pricing: {
       base: {
         price: 0.0,
@@ -1954,86 +1954,86 @@ export const catalog = [
     fullname: "Kleer-Back Stock Stickers Versa #400 (100 per pack)",
     colors: ["Blue", "Green", "Orange", "Red", "White", "Yellow"],
     type: "sales",
-    default_color: "White",    
+    default_color: "White",
     pricing: {
       base: {
         price: 0.00,
       },
     },
-  }, 
+  },
   {
     code: "250",
     name: "Poly Key Tag",
     fullname: "Poly Tag Key Tag #250 (250 per box)",
     colors: ["White", "Yellow"],
     type: "sales",
-    default_color: "White",    
+    default_color: "White",
     pricing: {
       base: {
         price: 0.0,
       },
     },
-  }, 
+  },
   {
     code: "240",
     name: "Poly Stock Stickers",
     fullname: "Poly Stock Stickers #240 (250 per box)",
     colors: ["White", "Yellow"],
     type: "sales",
-    default_color: "White",   
+    default_color: "White",
     pricing: {
       base: {
         price: 0.0,
       },
     },
-  }, 
+  },
   {
     code: "226",
     name: "Combo Key Tags",
     fullname: "Combo Key Tags - Numbered (125 per box)",
-    colors: ["Beige","Blue","Green","Grey","Lilac",
-      "Orange","Red","White","Yellow"],   
+    colors: ["Beige", "Blue", "Green", "Grey", "Lilac",
+      "Orange", "Red", "White", "Yellow"],
     type: "sales",
-    default_color: "Beige",  
+    default_color: "Beige",
     pricing: {
       base: {
         price: 0.00,
       },
     },
-  }, 
+  },
   {
     code: "DKTB",
     name: "Stock-In Numbers",
     fullname: "Stock-In Numbers (250 per pack)",
     colors: ["White"],
     type: "sales",
-    default_color: "White",    
+    default_color: "White",
     pricing: {
       base: {
         price: 0.00,
       },
     },
-  }, 
-   {
+  },
+  {
     code: "650B",
     name: "Stock Number Signs",
     fullname: "Stock Number Mini Signs 6in x 3in #650 (250 per pack)",
     colors: ["White", "Yellow"],
     type: "sales",
-    default_color: "White",    
+    default_color: "White",
     pricing: {
       base: {
         price: 0.00,
       },
     },
-  }, 
+  },
   {
     code: "225",
     name: "Top Stripe Key Tags",
     fullname: "Top Stripe Key Tags #225 (250 per pack)",
-    colors: ["Black","Blue","Green","Magenta","Orange","Red","Yellow"],
+    colors: ["Black", "Blue", "Green", "Magenta", "Orange", "Red", "Yellow"],
     type: "sales",
-    default_color: "Black",  
+    default_color: "Black",
     pricing: {
       base: {
         price: 0.00,
@@ -2046,7 +2046,7 @@ export const catalog = [
     fullname: "Clip-On U.S. Flag - (12 per pack - 3 pack min.)",
     colors: ["White"],
     type: "sales",
-    default_color: "White",  
+    default_color: "White",
     pricing: {
       base: {
         price: 0.00,
@@ -2059,8 +2059,8 @@ export const catalog = [
     fullname: "Clip-On Window Flag - ACURA",
     colors: ["Black"],
     type: "sales",
-    default_color: "Black",  
-    quantities: [1],
+    default_color: "Black",
+
     pricing: {
       base: {
         price: 0.00,
@@ -2073,8 +2073,8 @@ export const catalog = [
     fullname: "Clip-On Window Flag - BMW",
     colors: ["White"],
     type: "sales",
-    default_color: "White",  
-    quantities: [1],
+    default_color: "White",
+
     pricing: {
       base: {
         price: 0.00,
@@ -2087,8 +2087,8 @@ export const catalog = [
     fullname: "Clip-On Window Flag - BUICK",
     colors: ["White"],
     type: "sales",
-    default_color: "White",  
-    quantities: [1],
+    default_color: "White",
+
     pricing: {
       base: {
         price: 0.00,
@@ -2101,8 +2101,8 @@ export const catalog = [
     fullname: "Clip-On Window Flag - CHEVROLET",
     colors: ["White"],
     type: "sales",
-    default_color: "White",  
-    quantities: [1],
+    default_color: "White",
+
     pricing: {
       base: {
         price: 0.00,
@@ -2115,8 +2115,8 @@ export const catalog = [
     fullname: "Clip-On Window Flag - CHRYSLER",
     colors: ["Black"],
     type: "sales",
-    default_color: "Black",  
-    quantities: [1],
+    default_color: "Black",
+
     pricing: {
       base: {
         price: 0.00,
@@ -2129,8 +2129,8 @@ export const catalog = [
     fullname: "Clip-On Window Flag - DODGE",
     colors: ["Black"],
     type: "sales",
-    default_color: "Black",  
-    quantities: [1],
+    default_color: "Black",
+
     pricing: {
       base: {
         price: 0.00,
@@ -2143,8 +2143,8 @@ export const catalog = [
     fullname: "Clip-On Window Flag - DODGE RAM",
     colors: ["Black"],
     type: "sales",
-    default_color: "Black",  
-    quantities: [1],
+    default_color: "Black",
+
     pricing: {
       base: {
         price: 0.00,
@@ -2157,8 +2157,8 @@ export const catalog = [
     fullname: "Clip-On Window Flag - FORD",
     colors: ["White"],
     type: "sales",
-    default_color: "White",  
-    quantities: [1],
+    default_color: "White",
+
     pricing: {
       base: {
         price: 0.00,
@@ -2171,8 +2171,8 @@ export const catalog = [
     fullname: "Clip-On Window Flag - FORD CERTIFIED",
     colors: ["White"],
     type: "sales",
-    default_color: "White",  
-    quantities: [1],
+    default_color: "White",
+
     pricing: {
       base: {
         price: 0.00,
@@ -2185,8 +2185,8 @@ export const catalog = [
     fullname: "Clip-On Window Flag - GMC",
     colors: ["Black"],
     type: "sales",
-    default_color: "Black",  
-    quantities: [1],
+    default_color: "Black",
+
     pricing: {
       base: {
         price: 0.00,
@@ -2199,8 +2199,8 @@ export const catalog = [
     fullname: "Clip-On Window Flag - GM CERTIFIED USED",
     colors: ["White"],
     type: "sales",
-    default_color: "White",  
-    quantities: [1],
+    default_color: "White",
+
     pricing: {
       base: {
         price: 0.00,
@@ -2213,8 +2213,8 @@ export const catalog = [
     fullname: "Clip-On Window Flag - HONDA",
     colors: ["Strong Blue"],
     type: "sales",
-    default_color: "Strong Blue",  
-    quantities: [1],
+    default_color: "Strong Blue",
+
     pricing: {
       base: {
         price: 0.00,
@@ -2227,8 +2227,8 @@ export const catalog = [
     fullname: "Clip-On Window Flag - HONDA CERTIFIED PRE-OWNED",
     colors: ["White"],
     type: "sales",
-    default_color: "White",  
-    quantities: [1],
+    default_color: "White",
+
     pricing: {
       base: {
         price: 0.00,
@@ -2241,8 +2241,8 @@ export const catalog = [
     fullname: "Clip-On Window Flag - HYUNDAI",
     colors: ["Blue"],
     type: "sales",
-    default_color: "Blue",  
-    quantities: [1],
+    default_color: "Blue",
+
     pricing: {
       base: {
         price: 0.00,
@@ -2255,22 +2255,22 @@ export const catalog = [
     fullname: "Clip-On Window Flag - INFINITI",
     colors: ["White"],
     type: "sales",
-    default_color: "White",  
-    quantities: [1],
+    default_color: "White",
+
     pricing: {
       base: {
         price: 0.00,
       },
     },
   },
-    {
+  {
     code: "GP418JEEP",
     name: "Clip-On Window Flag",
     fullname: "Clip-On Window Flag - JEEP",
     colors: ["Black"],
     type: "sales",
-    default_color: "Black",  
-    quantities: [1],
+    default_color: "Black",
+
     pricing: {
       base: {
         price: 0.00,
@@ -2283,8 +2283,8 @@ export const catalog = [
     fullname: "Clip-On Window Flag - KIA",
     colors: ["White"],
     type: "sales",
-    default_color: "White",  
-    quantities: [1],
+    default_color: "White",
+
     pricing: {
       base: {
         price: 0.00,
@@ -2297,8 +2297,8 @@ export const catalog = [
     fullname: "Clip-On Window Flag - LEXUS",
     colors: ["Black"],
     type: "sales",
-    default_color: "Black",  
-    quantities: [1],
+    default_color: "Black",
+
     pricing: {
       base: {
         price: 0.00,
@@ -2311,8 +2311,8 @@ export const catalog = [
     fullname: "Clip-On Window Flag - LINCOLN",
     colors: ["Black"],
     type: "sales",
-    default_color: "Black",  
-    quantities: [1],
+    default_color: "Black",
+
     pricing: {
       base: {
         price: 0.00,
@@ -2325,8 +2325,8 @@ export const catalog = [
     fullname: "Clip-On Window Flag - MAZDA",
     colors: ["White"],
     type: "sales",
-    default_color: "White",  
-    quantities: [1],
+    default_color: "White",
+
     pricing: {
       base: {
         price: 0.00,
@@ -2339,8 +2339,8 @@ export const catalog = [
     fullname: "Clip-On Window Flag - MERCEDES",
     colors: ["White"],
     type: "sales",
-    default_color: "White",  
-    quantities: [1],
+    default_color: "White",
+
     pricing: {
       base: {
         price: 0.00,
@@ -2353,8 +2353,8 @@ export const catalog = [
     fullname: "Clip-On Window Flag - NISSAN",
     colors: ["Black"],
     type: "sales",
-    default_color: "Black",  
-    quantities: [1],
+    default_color: "Black",
+
     pricing: {
       base: {
         price: 0.00,
@@ -2367,8 +2367,8 @@ export const catalog = [
     fullname: "Clip-On Window Flag - TOYOTA",
     colors: ["White"],
     type: "sales",
-    default_color: "White",  
-    quantities: [1],
+    default_color: "White",
+
     pricing: {
       base: {
         price: 0.00,
@@ -2381,22 +2381,22 @@ export const catalog = [
     fullname: "Clip-On Window Flag - VOLKSWAGEN",
     colors: ["Navy"],
     type: "sales",
-    default_color: "Navy",  
-    quantities: [1],
+    default_color: "Navy",
+
     pricing: {
       base: {
         price: 0.00,
       },
     },
   },
-   {
+  {
     code: "GP418ASADV",
     name: "Clip-On Window Flag",
     fullname: "Clip-On Window Flag - AS ADVERTISED",
     colors: ["Red"],
     type: "sales",
-    default_color: "Red",  
-    quantities: [1],
+    default_color: "Red",
+
     pricing: {
       base: {
         price: 0.00,
@@ -2409,8 +2409,8 @@ export const catalog = [
     fullname: "Clip-On Window Flag - BLACK/WHITE CHECKERED",
     colors: ["White"],
     type: "sales",
-    default_color: "White",  
-    quantities: [1],
+    default_color: "White",
+
     pricing: {
       base: {
         price: 0.00,
@@ -2423,8 +2423,8 @@ export const catalog = [
     fullname: "Clip-On Window Flag - BLUE/WHITE CHECKERED",
     colors: ["White"],
     type: "sales",
-    default_color: "White",  
-    quantities: [1],
+    default_color: "White",
+
     pricing: {
       base: {
         price: 0.00,
@@ -2437,8 +2437,8 @@ export const catalog = [
     fullname: "Clip-On Window Flag - RED/WHITE CHECKERED",
     colors: ["White"],
     type: "sales",
-    default_color: "White",  
-    quantities: [1],
+    default_color: "White",
+
     pricing: {
       base: {
         price: 0.00,
@@ -2451,8 +2451,8 @@ export const catalog = [
     fullname: "Clip-On Window Flag - BEST BUYS HERE",
     colors: ["Blue"],
     type: "sales",
-    default_color: "Blue",  
-    quantities: [1],
+    default_color: "Blue",
+
     pricing: {
       base: {
         price: 0.00,
@@ -2465,8 +2465,8 @@ export const catalog = [
     fullname: "Clip-On Window Flag - BUY HERE PAY HERE",
     colors: ["Red"],
     type: "sales",
-    default_color: "Red",  
-    quantities: [1],
+    default_color: "Red",
+
     pricing: {
       base: {
         price: 0.00,
@@ -2479,8 +2479,8 @@ export const catalog = [
     fullname: "Clip-On Window Flag - BUY HERE PAY HERE",
     colors: ["Red"],
     type: "sales",
-    default_color: "Red",  
-    quantities: [1],
+    default_color: "Red",
+
     pricing: {
       base: {
         price: 0.00,
@@ -2493,8 +2493,8 @@ export const catalog = [
     fullname: "Clip-On Window Flag - CARFAX",
     colors: ["Strong Blue"],
     type: "sales",
-    default_color: "Strong Blue",  
-    quantities: [1],
+    default_color: "Strong Blue",
+
     pricing: {
       base: {
         price: 0.00,
@@ -2505,10 +2505,10 @@ export const catalog = [
     code: "GP418CERTPRE",
     name: "Clip-On Window Flag",
     fullname: "Clip-On Window Flag - CERTIFIED PRE-OWNED",
-    colors: ["Blue","Red"],
+    colors: ["Blue", "Red"],
     type: "sales",
-    default_color: "Blue",  
-    quantities: [1],
+    default_color: "Blue",
+
     pricing: {
       base: {
         price: 0.00,
@@ -2521,22 +2521,22 @@ export const catalog = [
     fullname: "Clip-On Window Flag - CERTIFIED PRE-OWNED CDJR",
     colors: ["Gold"],
     type: "sales",
-    default_color: "Gold",  
-    quantities: [1],
+    default_color: "Gold",
+
     pricing: {
       base: {
         price: 0.00,
       },
     },
-  },    
+  },
   {
     code: "GP418GRTMPG",
     name: "Clip-On Window Flag",
     fullname: "Clip-On Window Flag - GREAT MPG",
     colors: ["Red"],
     type: "sales",
-    default_color: "Red",  
-    quantities: [1],
+    default_color: "Red",
+
     pricing: {
       base: {
         price: 0.00,
@@ -2549,8 +2549,8 @@ export const catalog = [
     fullname: "Clip-On Window Flag - HOT BUYS",
     colors: ["Blue"],
     type: "sales",
-    default_color: "Blue",  
-    quantities: [1],
+    default_color: "Blue",
+
     pricing: {
       base: {
         price: 0.00,
@@ -2563,22 +2563,22 @@ export const catalog = [
     fullname: "Clip-On Window Flag - HYBRID",
     colors: ["Green"],
     type: "sales",
-    default_color: "Green",  
-    quantities: [1],
+    default_color: "Green",
+
     pricing: {
       base: {
         price: 0.00,
       },
     },
-  }, 
+  },
   {
     code: "GP418LOOK",
     name: "Clip-On Window Flag",
     fullname: "Clip-On Window Flag - LOOK",
     colors: ["Red"],
     type: "sales",
-    default_color: "Red",  
-    quantities: [1],
+    default_color: "Red",
+
     pricing: {
       base: {
         price: 0.00,
@@ -2591,8 +2591,8 @@ export const catalog = [
     fullname: "Clip-On Window Flag - RED TAG SALE",
     colors: ["Yellow"],
     type: "sales",
-    default_color: "Yellow",  
-    quantities: [1],
+    default_color: "Yellow",
+
     pricing: {
       base: {
         price: 0.00,
@@ -2603,10 +2603,10 @@ export const catalog = [
     code: "GP418SALE",
     name: "Clip-On Window Flag",
     fullname: "Clip-On Window Flag - SALE",
-    colors: ["Blue","Red"],
+    colors: ["Blue", "Red"],
     type: "sales",
-    default_color: "Blue",  
-    quantities: [1],
+    default_color: "Blue",
+
     pricing: {
       base: {
         price: 0.00,
@@ -2619,8 +2619,8 @@ export const catalog = [
     fullname: "Clip-On Window Flag - PATRIOTIC SALE",
     colors: ["White"],
     type: "sales",
-    default_color: "White",  
-    quantities: [1],
+    default_color: "White",
+
     pricing: {
       base: {
         price: 0.00,
@@ -2633,8 +2633,8 @@ export const catalog = [
     fullname: "Clip-On Window Flag - SE HABLA ESPANOL",
     colors: ["White"],
     type: "sales",
-    default_color: "White",  
-    quantities: [1],
+    default_color: "White",
+
     pricing: {
       base: {
         price: 0.00,
@@ -2647,8 +2647,8 @@ export const catalog = [
     fullname: "Clip-On Window Flag - SMILEY FACE",
     colors: ["Yellow"],
     type: "sales",
-    default_color: "Yellow",  
-    quantities: [1],
+    default_color: "Yellow",
+
     pricing: {
       base: {
         price: 0.00,
@@ -2661,8 +2661,8 @@ export const catalog = [
     fullname: "Clip-On Window Flag - STOP SAVE NOW",
     colors: ["White"],
     type: "sales",
-    default_color: "White",  
-    quantities: [1],
+    default_color: "White",
+
     pricing: {
       base: {
         price: 0.00,
@@ -2675,36 +2675,36 @@ export const catalog = [
     fullname: "Clip-On Window Flag - USED CARS",
     colors: ["Red"],
     type: "sales",
-    default_color: "Red",  
-    quantities: [1],
+    default_color: "Red",
+
     pricing: {
       base: {
         price: 0.00,
       },
     },
-  }, 
+  },
   {
     code: "GP418WEBYCRS",
     name: "Clip-On Window Flag",
     fullname: "Clip-On Window Flag - WE BUY CARS",
     colors: ["Red"],
     type: "sales",
-    default_color: "Red",  
-    quantities: [1],
+    default_color: "Red",
+
     pricing: {
       base: {
         price: 0.00,
       },
     },
-  }, 
+  },
   {
     code: "GP418WEFNCE",
     name: "Clip-On Window Flag",
     fullname: "Clip-On Window Flag - WE FINANCE",
     colors: ["Red"],
     type: "sales",
-    default_color: "Red",  
-    quantities: [1],
+    default_color: "Red",
+
     pricing: {
       base: {
         price: 0.00,
@@ -2717,8 +2717,8 @@ export const catalog = [
     fullname: "Single-Faced Stock Message Drape Flag - LEASING (also avail 2-sided, with or w/o sleeves)",
     colors: ["White"],
     type: "sales",
-    default_color: "White",  
-    quantities: [1],
+    default_color: "White",
+
     pricing: {
       base: {
         price: 0.00,
@@ -2731,8 +2731,8 @@ export const catalog = [
     fullname: "Single-Faced Stock Message Drape Flag - LOW PRICES",
     colors: ["White"],
     type: "sales",
-    default_color: "White",  
-    quantities: [1],
+    default_color: "White",
+
     pricing: {
       base: {
         price: 0.00,
@@ -2745,8 +2745,8 @@ export const catalog = [
     fullname: "Single-Faced Stock Message Drape Flag - NEW CARS",
     colors: ["White"],
     type: "sales",
-    default_color: "White",  
-    quantities: [1],
+    default_color: "White",
+
     pricing: {
       base: {
         price: 0.00,
@@ -2759,8 +2759,8 @@ export const catalog = [
     fullname: "Single-Faced Stock Message Drape Flag - NEW TRUCKS",
     colors: ["White"],
     type: "sales",
-    default_color: "White",  
-    quantities: [1],
+    default_color: "White",
+
     pricing: {
       base: {
         price: 0.00,
@@ -2773,8 +2773,8 @@ export const catalog = [
     fullname: "Single-Faced Stock Message Drape Flag - OPEN",
     colors: ["White"],
     type: "sales",
-    default_color: "White",  
-    quantities: [1],
+    default_color: "White",
+
     pricing: {
       base: {
         price: 0.00,
@@ -2787,8 +2787,8 @@ export const catalog = [
     fullname: "Single-Faced Stock Message Drape Flag - PRE OWNED",
     colors: ["White"],
     type: "sales",
-    default_color: "White",  
-    quantities: [1],
+    default_color: "White",
+
     pricing: {
       base: {
         price: 0.00,
@@ -2801,8 +2801,8 @@ export const catalog = [
     fullname: "Single-Faced Stock Message Drape Flag - SALE",
     colors: ["White"],
     type: "sales",
-    default_color: "White",  
-    quantities: [1],
+    default_color: "White",
+
     pricing: {
       base: {
         price: 0.00,
@@ -2815,8 +2815,8 @@ export const catalog = [
     fullname: "Single-Faced Stock Message Drape Flag - SPECIALS",
     colors: ["White"],
     type: "sales",
-    default_color: "White",  
-    quantities: [1],
+    default_color: "White",
+
     pricing: {
       base: {
         price: 0.00,
@@ -2829,8 +2829,8 @@ export const catalog = [
     fullname: "Single-Faced Stock Message Drape Flag - USED CARS",
     colors: ["White"],
     type: "sales",
-    default_color: "White",  
-    quantities: [1],
+    default_color: "White",
+
     pricing: {
       base: {
         price: 0.00,
@@ -2843,8 +2843,8 @@ export const catalog = [
     fullname: "Single-Faced Stock Message Drape Flag - USED TRUCKS",
     colors: ["White"],
     type: "sales",
-    default_color: "White",  
-    quantities: [1],
+    default_color: "White",
+
     pricing: {
       base: {
         price: 0.00,
@@ -2857,8 +2857,8 @@ export const catalog = [
     fullname: "Single-Faced Stock Message Drape Flag - WE FINANCE",
     colors: ["White"],
     type: "sales",
-    default_color: "White",  
-    quantities: [1],
+    default_color: "White",
+
     pricing: {
       base: {
         price: 0.00,
@@ -2871,8 +2871,8 @@ export const catalog = [
     fullname: "Single-Faced Stock Message Drape Flag - WELCOME",
     colors: ["White"],
     type: "sales",
-    default_color: "White",  
-    quantities: [1],
+    default_color: "White",
+
     pricing: {
       base: {
         price: 0.00,
@@ -2885,8 +2885,8 @@ export const catalog = [
     fullname: "Single-Faced Free Flying Drape Flag - BUICK",
     colors: ["White"],
     type: "sales",
-    default_color: "White",  
-    quantities: [1],
+    default_color: "White",
+
     pricing: {
       base: {
         price: 0.00,
@@ -2899,8 +2899,8 @@ export const catalog = [
     fullname: "Single-Faced Free Flying Drape Flag - CADILLAC",
     colors: ["White"],
     type: "sales",
-    default_color: "White",  
-    quantities: [1],
+    default_color: "White",
+
     pricing: {
       base: {
         price: 0.00,
@@ -2913,8 +2913,8 @@ export const catalog = [
     fullname: "Single-Faced Free Flying Drape Flag - CHEVROLET",
     colors: ["White"],
     type: "sales",
-    default_color: "White",  
-    quantities: [1],
+    default_color: "White",
+
     pricing: {
       base: {
         price: 0.00,
@@ -2927,8 +2927,8 @@ export const catalog = [
     fullname: "Single-Faced Free Flying Drape Flag - CHEVROLET",
     colors: ["Blue"],
     type: "sales",
-    default_color: "Blue",  
-    quantities: [1],
+    default_color: "Blue",
+
     pricing: {
       base: {
         price: 0.00,
@@ -2941,8 +2941,8 @@ export const catalog = [
     fullname: "Single-Faced Free Flying Drape Flag - CHEVY TRUCKS",
     colors: ["White"],
     type: "sales",
-    default_color: "White",  
-    quantities: [1],
+    default_color: "White",
+
     pricing: {
       base: {
         price: 0.00,
@@ -2955,8 +2955,8 @@ export const catalog = [
     fullname: "Single-Faced Free Flying Drape Flag - CHEVY TRUCKS",
     colors: ["Blue"],
     type: "sales",
-    default_color: "Blue",  
-    quantities: [1],
+    default_color: "Blue",
+
     pricing: {
       base: {
         price: 0.00,
@@ -2969,8 +2969,8 @@ export const catalog = [
     fullname: "Single-Faced Free Flying Drape Flag - CHRYSLER",
     colors: ["Black"],
     type: "sales",
-    default_color: "Black",  
-    quantities: [1],
+    default_color: "Black",
+
     pricing: {
       base: {
         price: 0.00,
@@ -2983,8 +2983,8 @@ export const catalog = [
     fullname: "Single-Faced Free Flying Drape Flag - DODGE",
     colors: ["Black"],
     type: "sales",
-    default_color: "Black",  
-    quantities: [1],
+    default_color: "Black",
+
     pricing: {
       base: {
         price: 0.00,
@@ -2997,8 +2997,8 @@ export const catalog = [
     fullname: "Single-Faced Free Flying Drape Flag - DODGE",
     colors: ["White"],
     type: "sales",
-    default_color: "White",  
-    quantities: [1],
+    default_color: "White",
+
     pricing: {
       base: {
         price: 0.00,
@@ -3011,8 +3011,8 @@ export const catalog = [
     fullname: "Single-Faced Free Flying Drape Flag - RAM TRUCKS",
     colors: ["White"],
     type: "sales",
-    default_color: "White",  
-    quantities: [1],
+    default_color: "White",
+
     pricing: {
       base: {
         price: 0.00,
@@ -3025,8 +3025,8 @@ export const catalog = [
     fullname: "Single-Faced Free Flying Drape Flag - FORD",
     colors: ["White"],
     type: "sales",
-    default_color: "White",  
-    quantities: [1],
+    default_color: "White",
+
     pricing: {
       base: {
         price: 0.00,
@@ -3039,8 +3039,8 @@ export const catalog = [
     fullname: "Single-Faced Free Flying Drape Flag - FORD TRUCKS",
     colors: ["White"],
     type: "sales",
-    default_color: "White",  
-    quantities: [1],
+    default_color: "White",
+
     pricing: {
       base: {
         price: 0.00,
@@ -3053,8 +3053,8 @@ export const catalog = [
     fullname: "Single-Faced Free Flying Drape Flag - GMC",
     colors: ["White"],
     type: "sales",
-    default_color: "White",  
-    quantities: [1],
+    default_color: "White",
+
     pricing: {
       base: {
         price: 0.00,
@@ -3067,8 +3067,8 @@ export const catalog = [
     fullname: "Single-Faced Free Flying Drape Flag - HYUNDAI",
     colors: ["White"],
     type: "sales",
-    default_color: "White",  
-    quantities: [1],
+    default_color: "White",
+
     pricing: {
       base: {
         price: 0.00,
@@ -3081,8 +3081,8 @@ export const catalog = [
     fullname: "Single-Faced Free Flying Drape Flag - JEEP",
     colors: ["White"],
     type: "sales",
-    default_color: "White",  
-    quantities: [1],
+    default_color: "White",
+
     pricing: {
       base: {
         price: 0.00,
@@ -3095,8 +3095,8 @@ export const catalog = [
     fullname: "Single-Faced Free Flying Drape Flag - KIA",
     colors: ["White"],
     type: "sales",
-    default_color: "White",  
-    quantities: [1],
+    default_color: "White",
+
     pricing: {
       base: {
         price: 0.00,
@@ -3109,8 +3109,8 @@ export const catalog = [
     fullname: "Single-Faced Free Flying Drape Flag - LINCOLN",
     colors: ["White"],
     type: "sales",
-    default_color: "White",  
-    quantities: [1],
+    default_color: "White",
+
     pricing: {
       base: {
         price: 0.00,
@@ -3123,8 +3123,8 @@ export const catalog = [
     fullname: "Single-Faced Free Flying Drape Flag - MAZDA",
     colors: ["White"],
     type: "sales",
-    default_color: "White",  
-    quantities: [1],
+    default_color: "White",
+
     pricing: {
       base: {
         price: 0.00,
@@ -3137,8 +3137,8 @@ export const catalog = [
     fullname: "Single-Faced Free Flying Drape Flag - MITSUBISHI",
     colors: ["White"],
     type: "sales",
-    default_color: "White",  
-    quantities: [1],
+    default_color: "White",
+
     pricing: {
       base: {
         price: 0.00,
@@ -3151,8 +3151,8 @@ export const catalog = [
     fullname: "Single-Faced Free Flying Drape Flag - SUBARU",
     colors: ["White"],
     type: "sales",
-    default_color: "White",  
-    quantities: [1],
+    default_color: "White",
+
     pricing: {
       base: {
         price: 0.00,
@@ -3165,8 +3165,8 @@ export const catalog = [
     fullname: "Single-Faced Free Flying Drape Flag - TOYOTA",
     colors: ["White"],
     type: "sales",
-    default_color: "White",  
-    quantities: [1],
+    default_color: "White",
+
     pricing: {
       base: {
         price: 0.00,
@@ -3179,8 +3179,8 @@ export const catalog = [
     fullname: "Swooper Flag - 4 x 4",
     colors: ["Blue"],
     type: "sales",
-    default_color: "Blue",  
-    quantities: [1],
+    default_color: "Blue",
+
     pricing: {
       base: {
         price: 0.00,
@@ -3193,8 +3193,8 @@ export const catalog = [
     fullname: "Swooper Flag - BUY HERE/PAY HERE",
     colors: ["Red"],
     type: "sales",
-    default_color: "Red",  
-    quantities: [1],
+    default_color: "Red",
+
     pricing: {
       base: {
         price: 0.00,
@@ -3207,36 +3207,36 @@ export const catalog = [
     fullname: "Swooper Flag - CERTIFIED PRE-OWNED",
     colors: ["Red"],
     type: "sales",
-    default_color: "Red",  
-    quantities: [1],
+    default_color: "Red",
+
     pricing: {
       base: {
         price: 0.00,
       },
     },
-  },  
+  },
   {
     code: "GP831EMWTBK",
     name: "Swooper Flag",
     fullname: "Swooper Flag - CHECKERED FLAG (BLACK & WHITE)",
     colors: ["Black"],
     type: "sales",
-    default_color: "Black",  
-    quantities: [1],
+    default_color: "Black",
+
     pricing: {
       base: {
         price: 0.00,
       },
     },
-  }, 
+  },
   {
     code: "GP831FN",
     name: "Swooper Flag",
     fullname: "Swooper Flag - CHECKERED FLAG (BLACK & YELLOW)",
     colors: ["Black"],
     type: "sales",
-    default_color: "Black",  
-    quantities: [1],
+    default_color: "Black",
+
     pricing: {
       base: {
         price: 0.00,
@@ -3249,22 +3249,22 @@ export const catalog = [
     fullname: "Swooper Flag - CHECKERED FLAG (BLUE & WHITE)",
     colors: ["Blue"],
     type: "sales",
-    default_color: "Blue",  
-    quantities: [1],
+    default_color: "Blue",
+
     pricing: {
       base: {
         price: 0.00,
       },
     },
-  }, 
+  },
   {
     code: "GP831BL",
     name: "Swooper Flag",
     fullname: "Swooper Flag - SOLID BLUE",
     colors: ["Blue"],
     type: "sales",
-    default_color: "Blue",  
-    quantities: [1],
+    default_color: "Blue",
+
     pricing: {
       base: {
         price: 0.00,
@@ -3277,8 +3277,8 @@ export const catalog = [
     fullname: "Swooper Flag - SOLID RED",
     colors: ["Red"],
     type: "sales",
-    default_color: "Red",  
-    quantities: [1],
+    default_color: "Red",
+
     pricing: {
       base: {
         price: 0.00,
@@ -3291,50 +3291,50 @@ export const catalog = [
     fullname: "Swooper Flag - WHITE",
     colors: ["White"],
     type: "sales",
-    default_color: "White",  
-    quantities: [1],
+    default_color: "White",
+
     pricing: {
       base: {
         price: 0.00,
       },
     },
-  }, 
+  },
   {
     code: "GP831YL",
     name: "Swooper Flag",
     fullname: "Swooper Flag - SOLID YELLOW",
     colors: ["Yellow"],
     type: "sales",
-    default_color: "Yellow",  
-    quantities: [1],
+    default_color: "Yellow",
+
     pricing: {
       base: {
         price: 0.00,
       },
     },
-  },       
+  },
   {
     code: "GP831CBBL",
     name: "Swooper Flag",
     fullname: "Swooper Flag - CHRYSLER",
     colors: ["Black"],
     type: "sales",
-    default_color: "Black",  
-    quantities: [1],
+    default_color: "Black",
+
     pricing: {
       base: {
         price: 0.00,
       },
     },
-  }, 
+  },
   {
     code: "GP831DY",
     name: "Swooper Flag",
     fullname: "Swooper Flag - DODGE",
     colors: ["Black"],
     type: "sales",
-    default_color: "Black",  
-    quantities: [1],
+    default_color: "Black",
+
     pricing: {
       base: {
         price: 0.00,
@@ -3347,8 +3347,8 @@ export const catalog = [
     fullname: "Swooper Flag - EASY FINANCE",
     colors: ["Blue"],
     type: "sales",
-    default_color: "Blue",  
-    quantities: [1],
+    default_color: "Blue",
+
     pricing: {
       base: {
         price: 0.00,
@@ -3361,106 +3361,106 @@ export const catalog = [
     fullname: "Swooper Flag - FORD",
     colors: ["Blue"],
     type: "sales",
-    default_color: "Blue",  
-    quantities: [1],
+    default_color: "Blue",
+
     pricing: {
       base: {
         price: 0.00,
       },
     },
-  },  
+  },
   {
     code: "GP831BEBL",
     name: "Swooper Flag",
     fullname: "Swooper Flag - HONDA",
     colors: ["Blue"],
     type: "sales",
-    default_color: "Blue",  
-    quantities: [1],
+    default_color: "Blue",
+
     pricing: {
       base: {
         price: 0.00,
       },
     },
-  }, 
+  },
   {
     code: "GP831DLRDYL",
     name: "Swooper Flag",
     fullname: "Swooper Flag - HOT BUYS",
     colors: ["Blue"],
     type: "sales",
-    default_color: "Blue",  
-    quantities: [1],
+    default_color: "Blue",
+
     pricing: {
       base: {
         price: 0.00,
       },
     },
-  }, 
+  },
   {
     code: "GP831BDWTRD",
     name: "Swooper Flag",
     fullname: "Swooper Flag - KIA",
     colors: ["Red"],
     type: "sales",
-    default_color: "Red",  
-    quantities: [1],
+    default_color: "Red",
+
     pricing: {
       base: {
         price: 0.00,
       },
     },
-  }, 
+  },
   {
     code: "GP831BY",
     name: "Swooper Flag",
     fullname: "Swooper Flag - LINCOLN",
     colors: ["Black"],
     type: "sales",
-    default_color: "Black",  
-    quantities: [1],
+    default_color: "Black",
+
     pricing: {
       base: {
         price: 0.00,
       },
     },
-  }, 
+  },
   {
     code: "GP831BMBLWT",
     name: "Swooper Flag",
     fullname: "Swooper Flag - MAZDA",
     colors: ["Strong Blue"],
     type: "sales",
-    default_color: "Strong Blue",  
-    quantities: [1],
+    default_color: "Strong Blue",
+
     pricing: {
       base: {
         price: 0.00,
       },
     },
-  }, 
+  },
   {
     code: "GP831EXRD",
     name: "Swooper Flag",
     fullname: "Swooper Flag - NISSAN ",
     colors: ["Red"],
     type: "sales",
-    default_color: "Red",  
-    quantities: [1],
+    default_color: "Red",
+
     pricing: {
       base: {
         price: 0.00,
       },
     },
-  }, 
+  },
   {
     code: "GP831CPRDYL",
     name: "Swooper Flag",
     fullname: "Swooper Flag - SALE (RED/YELLOW) ",
     colors: ["Red"],
     type: "sales",
-    default_color: "Red",  
-    quantities: [1],
+    default_color: "Red",
+
     pricing: {
       base: {
         price: 0.00,
@@ -3473,8 +3473,8 @@ export const catalog = [
     fullname: "Swooper Flag - SALE (BLUE/WHITE) ",
     colors: ["Blue"],
     type: "sales",
-    default_color: "Blue",  
-    quantities: [1],
+    default_color: "Blue",
+
     pricing: {
       base: {
         price: 0.00,
@@ -3487,8 +3487,8 @@ export const catalog = [
     fullname: "Swooper Flag - SALE (RED/WHITE) ",
     colors: ["Red"],
     type: "sales",
-    default_color: "Red",  
-    quantities: [1],
+    default_color: "Red",
+
     pricing: {
       base: {
         price: 0.00,
@@ -3501,8 +3501,8 @@ export const catalog = [
     fullname: "Swooper Flag - SE HABLA ESPANOL ",
     colors: ["White"],
     type: "sales",
-    default_color: "White",  
-    quantities: [1],
+    default_color: "White",
+
     pricing: {
       base: {
         price: 0.00,
@@ -3515,8 +3515,8 @@ export const catalog = [
     fullname: "Swooper Flag - STOP SAVE NOW ",
     colors: ["Yellow"],
     type: "sales",
-    default_color: "Yellow",  
-    quantities: [1],
+    default_color: "Yellow",
+
     pricing: {
       base: {
         price: 0.00,
@@ -3529,22 +3529,22 @@ export const catalog = [
     fullname: "Swooper Flag - TOYOTA ",
     colors: ["White"],
     type: "sales",
-    default_color: "White",  
-    quantities: [1],
+    default_color: "White",
+
     pricing: {
       base: {
         price: 0.00,
       },
     },
-  },    
+  },
   {
     code: "GP831AWBLWT",
     name: "Swooper Flag",
     fullname: "Swooper Flag - TRUCKS (BLUE/WHITE)",
     colors: ["Blue"],
     type: "sales",
-    default_color: "Blue",  
-    quantities: [1],
+    default_color: "Blue",
+
     pricing: {
       base: {
         price: 0.00,
@@ -3557,8 +3557,8 @@ export const catalog = [
     fullname: "Swooper Flag - TRUCKS (RED/WHITE)",
     colors: ["Red"],
     type: "sales",
-    default_color: "Red",  
-    quantities: [1],
+    default_color: "Red",
+
     pricing: {
       base: {
         price: 0.00,
@@ -3571,8 +3571,8 @@ export const catalog = [
     fullname: "Swooper Flag - USED CARS (BLUE/WHITE)",
     colors: ["Blue"],
     type: "sales",
-    default_color: "Blue",  
-    quantities: [1],
+    default_color: "Blue",
+
     pricing: {
       base: {
         price: 0.00,
@@ -3585,8 +3585,8 @@ export const catalog = [
     fullname: "Swooper Flag - USED CARS (RED/WHITE)",
     colors: ["Red"],
     type: "sales",
-    default_color: "Red",  
-    quantities: [1],
+    default_color: "Red",
+
     pricing: {
       base: {
         price: 0.00,
@@ -3599,36 +3599,36 @@ export const catalog = [
     fullname: "Swooper Flag - USED CARS (RED/WHITE/BLUE)",
     colors: ["Blue"],
     type: "sales",
-    default_color: "Blue",  
-    quantities: [1],
+    default_color: "Blue",
+
     pricing: {
       base: {
         price: 0.00,
       },
     },
   },
-   {
+  {
     code: "GP831CKGNYL",
     name: "Swooper Flag",
     fullname: "Swooper Flag - WE FINANCE",
     colors: ["Green"],
     type: "sales",
-    default_color: "Green",  
-    quantities: [1],
+    default_color: "Green",
+
     pricing: {
       base: {
         price: 0.00,
       },
     },
   },
-   {
+  {
     code: "GP831CNRWB",
     name: "Swooper Flag",
     fullname: "Swooper Flag - WELCOME",
     colors: ["Blue"],
     type: "sales",
-    default_color: "Blue",  
-    quantities: [1],
+    default_color: "Blue",
+
     pricing: {
       base: {
         price: 0.00,
@@ -3641,8 +3641,8 @@ export const catalog = [
     fullname: "Swooper Flag - 0% FINANCE",
     colors: ["Blue"],
     type: "sales",
-    default_color: "Blue",  
-    quantities: [1],
+    default_color: "Blue",
+
     pricing: {
       base: {
         price: 0.00,
@@ -3655,21 +3655,21 @@ export const catalog = [
     fullname: "Swooper Flag - CERTIFIED USED VEHICLES",
     colors: ["White"],
     type: "sales",
-    default_color: "White",  
-    quantities: [1],
+    default_color: "White",
+
     pricing: {
       base: {
         price: 0.00,
       },
     },
-  },                                             
+  },
   {
     code: "30BKHP",
     name: "7.5 in. Numbers - Bk/Htpk",
     fullname: "7.5 in. Numbers - Black/Hot Pink (12 per pack)",
-    colors: ["BKHP0","BKHP1","BKHP2","BKHP3","BKHP4","BKHP5","BKHP6","BKHP7","BKHP8","BKHP9","BKHPS","BKHPD","BKHPP"],
+    colors: ["BKHP0", "BKHP1", "BKHP2", "BKHP3", "BKHP4", "BKHP5", "BKHP6", "BKHP7", "BKHP8", "BKHP9", "BKHPS", "BKHPD", "BKHPP"],
     type: "sales",
-    default_color: "BKHP0",    
+    default_color: "BKHP0",
     pricing: {
       base: {
         price: 0.00,
@@ -3680,9 +3680,9 @@ export const catalog = [
     code: "30SLBK",
     name: "7.5 in. Numbers - Slv/Blk",
     fullname: "7.5 in. Numbers - Silver/Black (12 per pack)",
-    colors: ["SLBK0","SLBK1","SLBK2","SLBK3","SLBK4","SLBK5","SLBK6","SLBK7","SLBK8","SLBK9","SLBKS","SLBKD","SLBKP"],
+    colors: ["SLBK0", "SLBK1", "SLBK2", "SLBK3", "SLBK4", "SLBK5", "SLBK6", "SLBK7", "SLBK8", "SLBK9", "SLBKS", "SLBKD", "SLBKP"],
     type: "sales",
-    default_color: "SLBK0",    
+    default_color: "SLBK0",
     pricing: {
       base: {
         price: 0.00,
@@ -3693,9 +3693,9 @@ export const catalog = [
     code: "30GDBK",
     name: "7.5 in. Numbers - Gld/Blk",
     fullname: "7.5 in. Numbers - Gold/Black (12 per pack)",
-    colors: ["GDBK0","GDBK1","GDBK2","GDBK3","GDBK4","GDBK5","GDBK6","GDBK7","GDBK8","GDBK9","GDBKS","GDBKD","GDBKP"],
+    colors: ["GDBK0", "GDBK1", "GDBK2", "GDBK3", "GDBK4", "GDBK5", "GDBK6", "GDBK7", "GDBK8", "GDBK9", "GDBKS", "GDBKD", "GDBKP"],
     type: "sales",
-    default_color: "GDBK0",    
+    default_color: "GDBK0",
     pricing: {
       base: {
         price: 0.00,
@@ -3706,9 +3706,9 @@ export const catalog = [
     code: "30CBK",
     name: "7.5 in. Numbers - Char/Blk",
     fullname: "7.5 in. Numbers - Chartreuse/Black (12 per pack)",
-    colors: ["CBK0","CBK1","CBK2","CBK3","CBK4","CBK5","CBK6","CBK7","CBK8","CBK9","CBKS","CBKP"],
+    colors: ["CBK0", "CBK1", "CBK2", "CBK3", "CBK4", "CBK5", "CBK6", "CBK7", "CBK8", "CBK9", "CBKS", "CBKP"],
     type: "sales",
-    default_color: "CBK0",    
+    default_color: "CBK0",
     pricing: {
       base: {
         price: 0.00,
@@ -3719,9 +3719,9 @@ export const catalog = [
     code: "30YBK",
     name: "7.5 in. Numbers - Ylw/Blk",
     fullname: "7.5 in. Numbers - Yellow/Black (12 per pack)",
-    colors: ["YBK0","YBK1","YBK2","YBK3","YBK4","YBK5","YBK6","YBK7","YBK8","YBK9","YBKS","YBKP", "YBKD"],
+    colors: ["YBK0", "YBK1", "YBK2", "YBK3", "YBK4", "YBK5", "YBK6", "YBK7", "YBK8", "YBK9", "YBKS", "YBKP", "YBKD"],
     type: "sales",
-    default_color: "YBK0",    
+    default_color: "YBK0",
     pricing: {
       base: {
         price: 0.00,
@@ -3732,22 +3732,22 @@ export const catalog = [
     code: "30YR",
     name: "7.5 in. Numbers - Yllw/Red",
     fullname: "7.5 in. Numbers - Yellow/Red (12 per pack)",
-    colors: ["YR0","YR1","YR2","YR3","YR4","YR5","YR6","YR7","YR8","YR9","YRS","YRP","YRD"],
+    colors: ["YR0", "YR1", "YR2", "YR3", "YR4", "YR5", "YR6", "YR7", "YR8", "YR9", "YRS", "YRP", "YRD"],
     type: "sales",
-    default_color: "YR0",    
+    default_color: "YR0",
     pricing: {
       base: {
         price: 0.00,
       },
     },
   },
-   {
+  {
     code: "30YGR",
     name: "7.5 in. Numbers - Yllw/Grn",
     fullname: "7.5 in. Numbers - Yellow/Green (12 per pack)",
-    colors: ["YGR0","YGR1","YGR2","YGR3","YGR4","YGR5","YGR6","YGR7","YGR8","YGR9","YGRS","YGRP","YGRD"],
+    colors: ["YGR0", "YGR1", "YGR2", "YGR3", "YGR4", "YGR5", "YGR6", "YGR7", "YGR8", "YGR9", "YGRS", "YGRP", "YGRD"],
     type: "sales",
-    default_color: "YGR0",    
+    default_color: "YGR0",
     pricing: {
       base: {
         price: 0.00,
@@ -3758,9 +3758,9 @@ export const catalog = [
     code: "30YB",
     name: "7.5 in. Number - Yllw/Blue",
     fullname: "7.5 in. Numbers - Yellow/Blue (12 per pack)",
-    colors: ["YB0","YB1","YB2","YB3","YB4","YB5","YB6","YB7","YB8","YB9","YBS","YBP","YBD"],
+    colors: ["YB0", "YB1", "YB2", "YB3", "YB4", "YB5", "YB6", "YB7", "YB8", "YB9", "YBS", "YBP", "YBD"],
     type: "sales",
-    default_color: "YB0",    
+    default_color: "YB0",
     pricing: {
       base: {
         price: 0.00,
@@ -3771,9 +3771,9 @@ export const catalog = [
     code: "30WB",
     name: "7.5 in. Number - Wht/Blue",
     fullname: "7.5 in. Numbers - White/Blue (12 per pack)",
-    colors: ["WB0","WB1","WB2","WB3","WB4","WB5","WB6","WB7","WB8","WB9","WBS","WBP","WBD"],
+    colors: ["WB0", "WB1", "WB2", "WB3", "WB4", "WB5", "WB6", "WB7", "WB8", "WB9", "WBS", "WBP", "WBD"],
     type: "sales",
-    default_color: "WB0",    
+    default_color: "WB0",
     pricing: {
       base: {
         price: 0.00,
@@ -3784,9 +3784,9 @@ export const catalog = [
     code: "30BLW",
     name: "7.5 in. Number - Blue/Wht",
     fullname: "7.5 in. Numbers - Blue/White (12 per pack)",
-    colors: ["BLW0","BLW1","BLW2","BLW3","BLW4","BLW5","BLW6","BLW7","BLW8","BLW9","BLWS","BLWP","BLWD"],
+    colors: ["BLW0", "BLW1", "BLW2", "BLW3", "BLW4", "BLW5", "BLW6", "BLW7", "BLW8", "BLW9", "BLWS", "BLWP", "BLWD"],
     type: "sales",
-    default_color: "BLW0",    
+    default_color: "BLW0",
     pricing: {
       base: {
         price: 0.00,
@@ -3797,9 +3797,9 @@ export const catalog = [
     code: "30RW",
     name: "7.5 in. Numbers - Red/Wht",
     fullname: "7.5 in. Numbers - Red/White (12 per pack)",
-    colors: ["RW0","RW1","RW2","RW3","RW4","RW5","RW6","RW7","RW8","RW9","RWS","RWD","RWP"],
+    colors: ["RW0", "RW1", "RW2", "RW3", "RW4", "RW5", "RW6", "RW7", "RW8", "RW9", "RWS", "RWD", "RWP"],
     type: "sales",
-    default_color: "RW0",    
+    default_color: "RW0",
     pricing: {
       base: {
         price: 0.00,
@@ -3810,9 +3810,9 @@ export const catalog = [
     code: "90CBK",
     name: "9.5 in. Numbers - Char/Blk",
     fullname: "9.5 in. Numbers - Chartreuse/Black (12 per pack)",
-    colors: ["CBK0","CBK1","CBK2","CBK3","CBK4","CBK5","CBK6","CBK7","CBK8","CBK9","CBKS","CBKD"],
+    colors: ["CBK0", "CBK1", "CBK2", "CBK3", "CBK4", "CBK5", "CBK6", "CBK7", "CBK8", "CBK9", "CBKS", "CBKD"],
     type: "sales",
-    default_color: "CBK0",    
+    default_color: "CBK0",
     pricing: {
       base: {
         price: 0.00,
@@ -3823,9 +3823,9 @@ export const catalog = [
     code: "90BKHP",
     name: "9.5 in. Numbers - Bk/Htpk",
     fullname: "9.5 in. Numbers - Black/Hot Pink (12 per pack)",
-    colors: ["BKHP0","BKHP1","BKHP2","BKHP3","BKHP4","BKHP5","BKHP6","BKHP7","BKHP8","BKHP9","BKHPS","BKHPD","BKHPP"],
+    colors: ["BKHP0", "BKHP1", "BKHP2", "BKHP3", "BKHP4", "BKHP5", "BKHP6", "BKHP7", "BKHP8", "BKHP9", "BKHPS", "BKHPD", "BKHPP"],
     type: "sales",
-    default_color: "BKHP0",    
+    default_color: "BKHP0",
     pricing: {
       base: {
         price: 0.00,
@@ -3836,9 +3836,9 @@ export const catalog = [
     code: "90YB",
     name: "9.5 in. Numbers - Yllw/Blue",
     fullname: "9.5 in. Numbers - Yellow/Blue (12 per pack)",
-    colors: ["YB0","YB1","YB2","YB3","YB4","YB5","YB6","YB7","YB8","YB9","YBS","YBP","YBD"],
+    colors: ["YB0", "YB1", "YB2", "YB3", "YB4", "YB5", "YB6", "YB7", "YB8", "YB9", "YBS", "YBP", "YBD"],
     type: "sales",
-    default_color: "YB0",    
+    default_color: "YB0",
     pricing: {
       base: {
         price: 0.00,
@@ -3849,9 +3849,9 @@ export const catalog = [
     code: "90YR",
     name: "9.5 in. Numbers - Yllw/Red",
     fullname: "9.5 in. Numbers - Yellow/Red (12 per pack)",
-    colors: ["YR0","YR1","YR2","YR3","YR4","YR5","YR6","YR7","YR8","YR9","YRS","YRP","YRD"],
+    colors: ["YR0", "YR1", "YR2", "YR3", "YR4", "YR5", "YR6", "YR7", "YR8", "YR9", "YRS", "YRP", "YRD"],
     type: "sales",
-    default_color: "YR0",    
+    default_color: "YR0",
     pricing: {
       base: {
         price: 0.00,
@@ -3862,9 +3862,9 @@ export const catalog = [
     code: "11CBK",
     name: "11.5 in. Numbers - Chr/Blk",
     fullname: "11.5 in. Numbers - Chartreuse/Black (12 per pack)",
-    colors: ["CBK0","CBK1","CBK2","CBK3","CBK4","CBK5","CBK6","CBK7","CBK8","CBK9","CBKS","CBKP"],
+    colors: ["CBK0", "CBK1", "CBK2", "CBK3", "CBK4", "CBK5", "CBK6", "CBK7", "CBK8", "CBK9", "CBKS", "CBKP"],
     type: "sales",
-    default_color: "CBK0",    
+    default_color: "CBK0",
     pricing: {
       base: {
         price: 0.00,
@@ -3875,9 +3875,9 @@ export const catalog = [
     code: "11YB",
     name: "11.5 in. Number - Yllw/Blue",
     fullname: "11.5 in. Numbers - Yellow/Blue (12 per pack)",
-    colors: ["YB0","YB1","YB2","YB3","YB4","YB5","YB6","YB7","YB8","YB9","YBS","YBP","YBD"],
+    colors: ["YB0", "YB1", "YB2", "YB3", "YB4", "YB5", "YB6", "YB7", "YB8", "YB9", "YBS", "YBP", "YBD"],
     type: "sales",
-    default_color: "YB0",    
+    default_color: "YB0",
     pricing: {
       base: {
         price: 0.00,
@@ -3888,9 +3888,9 @@ export const catalog = [
     code: "11YR",
     name: "11.5 in. Number - Yllw/Red",
     fullname: "11.5 in. Numbers - Yellow/Red (12 per pack)",
-    colors: ["YR0","YR1","YR2","YR3","YR4","YR5","YR6","YR7","YR8","YR9","YRS","YRP","YRD"],
+    colors: ["YR0", "YR1", "YR2", "YR3", "YR4", "YR5", "YR6", "YR7", "YR8", "YR9", "YRS", "YRP", "YRD"],
     type: "sales",
-    default_color: "YR0",    
+    default_color: "YR0",
     pricing: {
       base: {
         price: 0.00,
@@ -3901,9 +3901,9 @@ export const catalog = [
     code: "GP199",
     name: "Arch Slogans",
     fullname: "Arch Slogans - 2.75in. x 14in. (12 per pack)",
-    colors: ["Slogans","Red Yellow","Blue Yellow","Gold Black","Silver Black"],
+    colors: ["Slogans", "Red Yellow", "Blue Yellow", "Gold Black", "Silver Black"],
     type: "sales",
-    default_color: "Slogans",    
+    default_color: "Slogans",
     pricing: {
       base: {
         price: 0.00,
@@ -3914,9 +3914,9 @@ export const catalog = [
     code: "B17",
     name: "17 in. Latex Balloons",
     fullname: "17 in. Latex Balloons (72 per bag)",
-    colors: ["Black","Blue","Green","Orange","Red","Yellow","Pink","Purple","White","Gold","Silver","Assorted"],
+    colors: ["Black", "Blue", "Green", "Orange", "Red", "Yellow", "Pink", "Purple", "White", "Gold", "Silver", "Assorted"],
     type: "sales",
-    default_color: "Black",   
+    default_color: "Black",
     pricing: {
       base: {
         price: 0.00,
@@ -3927,9 +3927,9 @@ export const catalog = [
     code: "B36",
     name: "36 in. Latex Balloons",
     fullname: "36 in. Latex Balloons (10 per bag)",
-    colors: ["Blue","Green","Orange","Red","Yellow","White"],
+    colors: ["Blue", "Green", "Orange", "Red", "Yellow", "White"],
     type: "sales",
-    default_color: "Blue",    
+    default_color: "Blue",
     pricing: {
       base: {
         price: 0.00,
@@ -3940,10 +3940,10 @@ export const catalog = [
     code: "CB55",
     name: "5.5 in. Rubber Balloons",
     fullname: "5.5 in. Rubber Chloroprene Balloons (1 ea)",
-    colors: ["Blue","Green","Orange","Purple","Red","White","Yellow"],
+    colors: ["Blue", "Green", "Orange", "Purple", "Red", "White", "Yellow"],
     type: "sales",
-    default_color: "Blue",    
-    quantities: [1],
+    default_color: "Blue",
+
     pricing: {
       base: {
         price: 0.00,
@@ -3954,10 +3954,10 @@ export const catalog = [
     code: "RIBBON",
     name: "Balloon Ribbon (500 yrds)",
     fullname: "Balloon Ribbon (500 yards)",
-    colors: ["Silver","White"],
+    colors: ["Silver", "White"],
     type: "sales",
-    default_color: "Silver",    
-    quantities: [1],
+    default_color: "Silver",
+
     pricing: {
       base: {
         price: 0.00,
@@ -3970,8 +3970,8 @@ export const catalog = [
     fullname: "Cone of Balloon String - 1500 yards",
     colors: ["White"],
     type: "sales",
-    default_color: "White",    
-    quantities: [1],
+    default_color: "White",
+
     pricing: {
       base: {
         price: 0.00,
@@ -3982,10 +3982,10 @@ export const catalog = [
     code: "PENLIN",
     name: "Triangle Pennants (100 FT)",
     fullname: "Triangle Pennants 48 - 12 in. x 18 in.",
-    colors: ["Assorted","RWB"],
+    colors: ["Assorted", "RWB"],
     type: "sales",
-    default_color: "Assorted",    
-    quantities: [1],
+    default_color: "Assorted",
+
     pricing: {
       base: {
         price: 0.00,
@@ -4009,13 +4009,13 @@ export const catalog = [
     ],
     halfColors: ["Red Grn"],
     type: "sales",
-    default_color: "Blue",   
+    default_color: "Blue",
     pricing: {
       base: {
         price: 0.00,
       },
     },
-  },  
+  },
   {
     code: "BOW30",
     name: "30 in. Giant Bow",
@@ -4033,20 +4033,20 @@ export const catalog = [
     ],
     halfColors: ["Red Grn"],
     type: "sales",
-    default_color: "Blue",   
+    default_color: "Blue",
     pricing: {
       base: {
         price: 0.00,
       },
     },
-  },  
+  },
   {
     code: "HANG-HT-RDBK-TF",
     name: "Hang Tag - Red Tag Special",
     fullname: "Stock Hang Tags - Red Tag Special - 9in x 12in (50 per pack)",
     colors: ["Fluorr"],
     type: "sales",
-    default_color: "Fluorr",   
+    default_color: "Fluorr",
     pricing: {
       base: {
         price: 0.00,
@@ -4059,7 +4059,7 @@ export const catalog = [
     fullname: "Stock Hang Tags - Red Tag Sale - 9in x 12in (50 per pack)",
     colors: ["Fluorr"],
     type: "sales",
-    default_color: "Fluorr",    
+    default_color: "Fluorr",
     pricing: {
       base: {
         price: 0.00,
@@ -4070,9 +4070,9 @@ export const catalog = [
     code: "HANG-BB",
     name: "Hang Tag - As Advertised",
     fullname: "Stock Hang Tags - As Advertised - 9in x 12in (50 per pack)",
-    colors: ["Fluorg","Fluorp","Fluorr","Fluory"],
+    colors: ["Fluorg", "Fluorp", "Fluorr", "Fluory"],
     type: "sales",
-    default_color: "Fluorg",    
+    default_color: "Fluorg",
     pricing: {
       base: {
         price: 0.00,
@@ -4083,9 +4083,9 @@ export const catalog = [
     code: "HANG-FF",
     name: "Hang Tag - Financing Available",
     fullname: "Stock Hang Tags - Financing Available - 9in x 12in (50 per pack)",
-    colors: ["Fluorg","Fluorp","Fluorr","Fluory"],
+    colors: ["Fluorg", "Fluorp", "Fluorr", "Fluory"],
     type: "sales",
-    default_color: "Fluorg",    
+    default_color: "Fluorg",
     pricing: {
       base: {
         price: 0.00,
@@ -4096,9 +4096,9 @@ export const catalog = [
     code: "HANG-SG",
     name: "Hang Tag - Was Now",
     fullname: "Stock Hang Tags - Was Now - 9in x 12in (50 per pack)",
-    colors: ["Fluorg","Fluorp","Fluorr","Fluory"],
+    colors: ["Fluorg", "Fluorp", "Fluorr", "Fluory"],
     type: "sales",
-    default_color: "Fluorg",   
+    default_color: "Fluorg",
     pricing: {
       base: {
         price: 0.00,
@@ -4109,9 +4109,9 @@ export const catalog = [
     code: "HANG-MH",
     name: "Hang Tag - Sale",
     fullname: "Stock Hang Tags - Sale - 9in x 12in (50 per pack)",
-    colors: ["Fluorg","Fluorp","Fluorr","Fluory"],
+    colors: ["Fluorg", "Fluorp", "Fluorr", "Fluory"],
     type: "sales",
-    default_color: "Fluorg",   
+    default_color: "Fluorg",
     pricing: {
       base: {
         price: 0.00,
@@ -4122,9 +4122,9 @@ export const catalog = [
     code: "HANG-CG",
     name: "Hang Tag - Clearance",
     fullname: "Stock Hang Tags - Clearance - 9in x 12in (50 per pack)",
-    colors: ["Fluorg","Fluorp","Fluorr","Fluory"],
+    colors: ["Fluorg", "Fluorp", "Fluorr", "Fluory"],
     type: "sales",
-    default_color: "Fluorg",   
+    default_color: "Fluorg",
     pricing: {
       base: {
         price: 0.00,
@@ -4135,9 +4135,9 @@ export const catalog = [
     code: "HANG-HG",
     name: "Hang Tag - Like New",
     fullname: "Stock Hang Tags - Like New - 9in x 12in (50 per pack)",
-    colors: ["Fluorg","Fluorp","Fluorr","Fluory"],
+    colors: ["Fluorg", "Fluorp", "Fluorr", "Fluory"],
     type: "sales",
-    default_color: "Fluorg",   
+    default_color: "Fluorg",
     pricing: {
       base: {
         price: 0.00,
@@ -4148,9 +4148,9 @@ export const catalog = [
     code: "HANG-LD",
     name: "Hang Tag - Per Month",
     fullname: "Stock Hang Tags - Per Month - 9in x 12in (50 per pack)",
-    colors: ["Fluorg","Fluorp","Fluorr","Fluory"],
+    colors: ["Fluorg", "Fluorp", "Fluorr", "Fluory"],
     type: "sales",
-    default_color: "Fluorg",   
+    default_color: "Fluorg",
     pricing: {
       base: {
         price: 0.00,
@@ -4161,9 +4161,9 @@ export const catalog = [
     code: "HANG-SH",
     name: "Hang Tag - List Price",
     fullname: "Stock Hang Tags - List Price - 9in x 12in (50 per pack)",
-    colors: ["Fluorg","Fluorp","Fluorr","Fluory"],
+    colors: ["Fluorg", "Fluorp", "Fluorr", "Fluory"],
     type: "sales",
-    default_color: "Fluorg",   
+    default_color: "Fluorg",
     pricing: {
       base: {
         price: 0.00,
@@ -4174,9 +4174,9 @@ export const catalog = [
     code: "HANG-NH",
     name: "Hang Tag - Special",
     fullname: "Stock Hang Tags - Special - 9in x 12in (50 per pack)",
-    colors: ["Fluorg","Fluorp","Fluorr","Fluory"],
+    colors: ["Fluorg", "Fluorp", "Fluorr", "Fluory"],
     type: "sales",
-    default_color: "Fluorg",   
+    default_color: "Fluorg",
     pricing: {
       base: {
         price: 0.00,
@@ -4187,7 +4187,7 @@ export const catalog = [
     code: "HANG-TA",
     name: "Hang Tag - Blank w/outline",
     fullname: "Stock Hang Tags - Blank with outline - 9in x 12in (50 per pack)",
-    colors: ["Fluorg","Fluorp","Fluorr","Fluory"],
+    colors: ["Fluorg", "Fluorp", "Fluorr", "Fluory"],
     type: "sales",
     default_color: "Fluorg",
     pricing: {
@@ -4200,9 +4200,9 @@ export const catalog = [
     code: "HANG-TE",
     name: "Hang Tag - Blank",
     fullname: "Stock Hang Tags - Blank - 9in x 12in (50 per pack)",
-    colors: ["Fluorg","Fluorp","Fluorr","Fluory"],
+    colors: ["Fluorg", "Fluorp", "Fluorr", "Fluory"],
     type: "sales",
-    default_color: "Fluorg",   
+    default_color: "Fluorg",
     pricing: {
       base: {
         price: 0.00,
@@ -4213,9 +4213,9 @@ export const catalog = [
     code: "HANG-ME",
     name: "Hang Tag - Rebate",
     fullname: "Stock Hang Tags - Rebate - 9in x 12in (50 per pack)",
-    colors: ["Fluorg","Fluorp","Fluorr","Fluory"],
+    colors: ["Fluorg", "Fluorp", "Fluorr", "Fluory"],
     type: "sales",
-    default_color: "Fluorg",   
+    default_color: "Fluorg",
     pricing: {
       base: {
         price: 0.00,
@@ -4226,9 +4226,9 @@ export const catalog = [
     code: "HANG-MF",
     name: "Hang Tag - Reduced",
     fullname: "Stock Hang Tags - Reduced - 9in x 12in (50 per pack)",
-    colors: ["Fluorg","Fluorp","Fluorr","Fluory"],
+    colors: ["Fluorg", "Fluorp", "Fluorr", "Fluory"],
     type: "sales",
-    default_color: "Fluorg",   
+    default_color: "Fluorg",
     pricing: {
       base: {
         price: 0.00,
@@ -4239,8 +4239,8 @@ export const catalog = [
     code: "310",
     name: "File Number Labels",
     fullname: "File Right Number Labels (500/box)",
-    colors: ["Number 0","Number 1","Number 2","Number 3","Number 4",
-      "Number 5","Number 6","Number 7","Number 8","Number 9"],
+    colors: ["Number 0", "Number 1", "Number 2", "Number 3", "Number 4",
+      "Number 5", "Number 6", "Number 7", "Number 8", "Number 9"],
     type: "sales",
     default_color: "Number 0",
     quantities: [500],
@@ -4254,11 +4254,10 @@ export const catalog = [
     code: "ALPLBL",
     name: "ABC Filing Labels",
     fullname: "Alphabetic File Right Labels (270/sheet)",
-    colors: ["A","B","C","D","E","F","G","H","I","J","K","L","M",
-      "N","O","P","Q","R","S","T","U","V","W","X","Y","Z","Mc"],
+    colors: ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M",
+      "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "Mc"],
     type: "sales",
-    default_color: "A",    
-    quantities: [1],
+    default_color: "A",
     pricing: {
       base: {
         price: 0.00,
@@ -4269,10 +4268,10 @@ export const catalog = [
     code: "MONLBL",
     name: "Month Filing Labels",
     fullname: "File Right Month Labels (270/sheet)",
-    colors: ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"],
+    colors: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
     type: "sales",
-    default_color: "Jan",    
-    quantities: [1],
+    default_color: "Jan",
+
     pricing: {
       base: {
         price: 0.00,
@@ -4283,9 +4282,9 @@ export const catalog = [
     code: "3196",
     name: "Certified Ovals",
     fullname: "Certified Ovals (12/pk)",
-    colors: ["Style A","Style B","Style C","Style D","Style E","Style F"],
+    colors: ["Style A", "Style B", "Style C", "Style D", "Style E", "Style F"],
     type: "sales",
-    default_color: "Style A",    
+    default_color: "Style A",
     quantities: [12],
     pricing: {
       base: {
@@ -4297,7 +4296,7 @@ export const catalog = [
     code: "GP3185",
     name: "5 in. Stars",
     fullname: "5 in. Stars #GP3185 (12/pk)",
-    colors: ["Blk Char","Blk Htpk","Blk Yllw","Blu Wht","Prp Char","Red Wht"],
+    colors: ["Blk Char", "Blk Htpk", "Blk Yllw", "Blu Wht", "Prp Char", "Red Wht"],
     type: "sales",
     default_color: "Blk Char",
     quantities: [12],
@@ -4306,56 +4305,56 @@ export const catalog = [
         price: 0.00,
       },
     },
-  }, 
+  },
   {
     code: "3192",
     name: "Blue Explosion Years",
     fullname: "7 in. x 9 in. Bright Blue Bursts (2000-2026 avail - 12/pk)",
-    colors: ["Blue24", "Blue25","Blue26"],
+    colors: ["Blue24", "Blue25", "Blue26"],
     type: "sales",
-    default_color: "Blue26",    
+    default_color: "Blue26",
     quantities: [12],
     pricing: {
       base: {
         price: 0.00,
       },
     },
-  }, 
+  },
   {
     code: "3193",
     name: "Chartreuse Bursts",
     fullname: "9 in. x 11 in. Chartreuse Bursts (2000-2026 avail - 12/pk)",
-    colors: ["Char24","Char25","Char26"],
+    colors: ["Char24", "Char25", "Char26"],
     type: "sales",
-    default_color: "Char26",    
+    default_color: "Char26",
     quantities: [12],
     pricing: {
       base: {
         price: 0.00,
       },
     },
-  },  
+  },
   {
     code: "3184",
     name: "6 in. Happy Face",
     fullname: "6 in. Happy Face (12/pk)",
     colors: ["Happy"],
     type: "sales",
-    default_color: "Happy",    
+    default_color: "Happy",
     quantities: [12],
     pricing: {
       base: {
         price: 0.00,
       },
     },
-  }, 
+  },
   {
     code: "GP150",
     name: "Happy Face Sunglasses",
     fullname: "6 in. Happy Face w/sunglasses (12/pk)",
     colors: ["Sunglasses"],
     type: "sales",
-    default_color: "Sunglasses",    
+    default_color: "Sunglasses",
     quantities: [12],
     pricing: {
       base: {
@@ -4369,49 +4368,49 @@ export const catalog = [
     fullname: "Numbers Box (holds 7.5 in x 9.5 in. numbers)",
     colors: ["White"],
     type: "sales",
-    default_color: "White",    
-    quantities: [1],
+    default_color: "White",
+
     pricing: {
       base: {
         price: 0.00,
       },
     },
-  }, 
+  },
   {
     code: "GP788",
     name: "Sticker",
     fullname: "Vehicle Not for Sale Sticker (100/pk)",
     colors: ["Yellow"],
     type: "sales",
-    default_color: "Yellow",   
+    default_color: "Yellow",
     quantities: [100],
     pricing: {
       base: {
         price: 0.00,
       },
     },
-  },  
+  },
   {
     code: "GP790",
     name: "Sticker",
     fullname: "Vehicle Not for Sale Sticker (100/pk)",
     colors: ["Yellow"],
     type: "sales",
-    default_color: "Yellow",   
+    default_color: "Yellow",
     quantities: [100],
     pricing: {
       base: {
         price: 0.0,
       },
     },
-  }, 
+  },
   {
     code: "AN651V1",
     name: "Sticker",
     fullname: "Vehicle Not for Sale Sticker (250/pk)",
     colors: ["Yellow"],
     type: "sales",
-    default_color: "Yellow",    
+    default_color: "Yellow",
     quantities: [250],
     pricing: {
       base: {
@@ -4425,7 +4424,7 @@ export const catalog = [
     fullname: "Smog OK Sticker (100/pk)",
     colors: ["White"],
     type: "sales",
-    default_color: "White",   
+    default_color: "White",
     quantities: [100],
     pricing: {
       base: {
@@ -4439,7 +4438,7 @@ export const catalog = [
     fullname: "Safety OK Sticker (100/pk)",
     colors: ["White"],
     type: "sales",
-    default_color: "White",   
+    default_color: "White",
     quantities: [100],
     pricing: {
       base: {
@@ -4453,7 +4452,7 @@ export const catalog = [
     fullname: "Hold/Sold Tag - 8.5 in x 11 in. (50/pk)",
     colors: ["Yellow"],
     type: "sales",
-    default_color: "Yellow",   
+    default_color: "Yellow",
     quantities: [50],
     pricing: {
       base: {
@@ -4467,63 +4466,63 @@ export const catalog = [
     fullname: "Hold/Sold Tag - 8 in x 4 in. (250/pk)",
     colors: ["Yellow"],
     type: "sales",
-    default_color: "Yellow",   
+    default_color: "Yellow",
     quantities: [250],
     pricing: {
       base: {
         price: 0.0,
       },
     },
-  }, 
+  },
   {
     code: "3046",
     name: "Hold/Sold Tag (small)",
     fullname: "Hold/Sold Tag - 4.5 in x 2.5 in. (250/pk)",
     colors: ["Yellow"],
     type: "sales",
-    default_color: "Yellow",    
+    default_color: "Yellow",
     quantities: [250],
     pricing: {
       base: {
         price: 0.0,
       },
     },
-  }, 
+  },
   {
     code: "GP839",
     name: "License Plate Envelope",
     fullname: "License Plate Envelope - 13 in x 6.5 in. (100/box)",
     colors: ["Kraft Paper"],
     type: "sales",
-    default_color: "Kraft Paper",   
+    default_color: "Kraft Paper",
     quantities: [100],
     pricing: {
       base: {
         price: 0.0,
       },
     },
-  }, 
+  },
   {
     code: "PB100",
     name: "Poly Bags",
     fullname: "Temp Tag Cover - Plastic (100/pk)",
     colors: ["Clear Plastic"],
     type: "sales",
-    default_color: "Clear Plastic",   
+    default_color: "Clear Plastic",
     quantities: [100],
     pricing: {
       base: {
         price: 0.0,
       },
     },
-  }, 
+  },
   {
     code: "TH100",
     name: "Temp L/P Protector",
     fullname: "License Plate Protector (100/pk)",
     colors: ["Clear"],
     type: "sales",
-    default_color: "Clear",   
+    default_color: "Clear",
     quantities: [100],
     pricing: {
       base: {
@@ -4535,10 +4534,10 @@ export const catalog = [
     code: "GP955",
     name: "Grease Markers",
     fullname: "Grease Marker (1 each)",
-    colors: ["Blue","Green","Pink","Orange","Purple","Red","White","Yellow"],
+    colors: ["Blue", "Green", "Pink", "Orange", "Purple", "Red", "White", "Yellow"],
     type: "sales",
-    default_color: "Blue",    
-    quantities: [1],
+    default_color: "Blue",
+
     pricing: {
       base: {
         price: 0.00,
@@ -4549,37 +4548,37 @@ export const catalog = [
     code: "957R",
     name: "Uni-Posca Markers (R)",
     fullname: "Regular Uni-Posca Marker (1 each)",
-    colors: ["Green","Orange","Pink","Red","White","Yellow"],
+    colors: ["Green", "Orange", "Pink", "Red", "White", "Yellow"],
     type: "sales",
-    default_color: "Orange",    
-    quantities: [1],
+    default_color: "Orange",
+
     pricing: {
       base: {
         price: 0.00,
       },
     },
-  }, 
+  },
   {
     code: "957L",
     name: "Uni-Posca Markers (L)",
     fullname: "LARGE Uni-Posca Marker (1 each)",
-    colors: ["Blue","Pink","Red","White","Yellow"],
+    colors: ["Blue", "Pink", "Red", "White", "Yellow"],
     type: "sales",
-    default_color: "Blue",    
-    quantities: [1],
+    default_color: "Blue",
+
     pricing: {
       base: {
         price: 0.00,
       },
     },
-  },                                                
+  },
   {
     code: "3088",
     name: "Floor Mats",
     fullname: "Floor Mats/Coated Paper (500/bx)",
     colors: ["White"],
     type: "service",
-    default_color: "White",   
+    default_color: "White",
     quantities: [500],
     pricing: {
       base: {
@@ -4593,7 +4592,7 @@ export const catalog = [
     fullname: "Steering Wheel Covers (500/bx)",
     colors: ["Plastic"],
     type: "service",
-    default_color: "Plastic",    
+    default_color: "Plastic",
     quantities: [500],
     pricing: {
       base: {
@@ -4607,63 +4606,63 @@ export const catalog = [
     fullname: "The Gripper Plastic Seat Covers (250/box)",
     colors: ["Plastic"],
     type: "service",
-    default_color: "Plastic",    
+    default_color: "Plastic",
     quantities: [250],
     pricing: {
       base: {
         price: 0.0,
       },
     },
-  },  
+  },
   {
     code: "600088V",
     name: "Seat Covers (roll)",
     fullname: "No-Slip Plastic Seat Covers (500/roll)",
     colors: ["Plastic"],
     type: "service",
-    default_color: "Plastic",    
+    default_color: "Plastic",
     quantities: [500],
     pricing: {
       base: {
         price: 0.0,
       },
     },
-  }, 
+  },
   {
     code: "6000D",
     name: "Seat Cover Floor Stand",
     fullname: "Seat Cover Floor Stand",
     colors: ["Black"],
     type: "service",
-    default_color: "Black",    
-    quantities: [1],
+    default_color: "Black",
+
     pricing: {
       base: {
         price: 0.0,
       },
     },
-  }, 
+  },
   {
     code: "6000WD",
     name: "Seat Cover Wall Dispenser",
     fullname: "Seat Cover Wall Dispenser",
     colors: ["Black"],
     type: "service",
-    default_color: "Black",    
-    quantities: [1],
+    default_color: "Black",
+
     pricing: {
       base: {
         price: 0.0,
       },
     },
-  }, 
+  },
   {
     code: "3044",
     name: "Spring Rings",
     fullname: "Metal Spring Rings (250 per pack)",
     colors: ["Metal"],
     type: "service",
-    default_color: "Metal",    
+    default_color: "Metal",
     pricing: {
       base: {
         price: 0.00,
@@ -4674,7 +4673,7 @@ export const catalog = [
     code: "EIT50",
     name: "Self-Locking Key Tags",
     fullname: "Self-Locking Key Tags (1000/pk)",
-    colors: ["Blue","Green","Orange","Red","Yellow","White"],
+    colors: ["Blue", "Green", "Orange", "Red", "Yellow", "White"],
     type: "service",
     default_color: "Blue",
     quantities: [1000],
@@ -4683,7 +4682,7 @@ export const catalog = [
         price: 0.00,
       },
     },
-  },         
+  },
   {
     code: "SDNRG",
     name: "Service Hang Numbers",
@@ -4698,12 +4697,12 @@ export const catalog = [
       "5000",
       "6000",
       "7000",
-      "8000", 
+      "8000",
       "9000",
-    ],  
+    ],
     type: "service",
     default_color: "white",
-    description: "Sold in quantities of one, five, and ten boxes", 
+    description: "Sold in quantities of one, five, and ten boxes",
     quantities: [1, 5, 10],
     pricing: {
       base: {
@@ -4715,39 +4714,39 @@ export const catalog = [
     code: "SDNC",
     name: "Service Numbers",
     fullname: "Mirror Hang Service Numbers (1000/bx)",
-    colors: ["Blue","Green","Grey","Lime","Orange","Pink","Purple","Red","Tan","White","Yellow"],  
+    colors: ["Blue", "Green", "Grey", "Lime", "Orange", "Pink", "Purple", "Red", "Tan", "White", "Yellow"],
     type: "service",
-    default_color: "Blue",    
-    quantities: [1],
+    default_color: "Blue",
+
     pricing: {
       base: {
         price: 0.0,
       },
     },
-  }, 
+  },
   {
     code: "SDN0000",
     name: "Service Numbers",
     fullname: "Mirror Hang Service Numbers (1000/bx)",
-    colors: ["_0000","1000","2000","3000","4000","5000",
-      "6000","7000","8000", "9000"],  
+    colors: ["_0000", "1000", "2000", "3000", "4000", "5000",
+      "6000", "7000", "8000", "9000"],
     type: "service",
-    default_color: "1000",    
-    quantities: [1],
+    default_color: "1000",
+
     pricing: {
       base: {
         price: 0.0,
       },
     },
-  }, 
+  },
   {
     code: "SDN999",
     name: "Service Numbers",
     fullname: "Mirror Hang Service Numbers (000-999) (1000/bx)",
-    colors: ["White"],  
+    colors: ["White"],
     type: "service",
-    default_color: "White",    
-    quantities: [1],
+    default_color: "White",
+
     pricing: {
       base: {
         price: 0.0,
@@ -4758,23 +4757,23 @@ export const catalog = [
     code: "230",
     name: "Colored Dispatch Numbers",
     fullname: "Colored Dispatch Numbers (1000/pk)",
-    colors: ["Blue","Green","Red","White","Yellow"],  
+    colors: ["Blue", "Green", "Red", "White", "Yellow"],
     type: "service",
-    default_color: "Blue",    
-    quantities: [1],
+    default_color: "Blue",
+
     pricing: {
       base: {
         price: 0.0,
       },
     },
-  },   
+  },
   {
     code: "BGVinyl",
     name: "Vinyl Sheet",
     fullname: "8.5 x 11 Blank Vinyl Sheet #9300 (100/pk)",
     colors: ["White"],
     type: "sales",
-    default_color: "White",    
+    default_color: "White",
     sizes: ["default"],
     pricing: {
       default: { price: 0.00 },
@@ -4786,7 +4785,7 @@ export const catalog = [
     fullname: "Buyers Guide, Blank Front (100/pk)",
     colors: ["White"],
     type: "sales",
-    default_color: "White",    
+    default_color: "White",
     sizes: ["default"],
     pricing: {
       default: { price: 0.00 },
@@ -4804,7 +4803,7 @@ export const catalog = [
       "2010",
       "2011",
       "2012",
-      "2013",      
+      "2013",
       "2014",
       "2015",
       "2016",
@@ -4825,15 +4824,15 @@ export const catalog = [
       base: {
         price: 0.00,
       },
-   },
-  }, 
+    },
+  },
   {
     code: "3198SB",
     name: "Oval Year Stickers - Silver",
     fullname: "Oval Year Stickers - Silver/Black (12/pk)",
     colors: ["Silver"],
     variations: [
-      "2016", 
+      "2016",
       "2017",
       "2018",
       "2019",
@@ -4841,12 +4840,12 @@ export const catalog = [
       "2021",
       "2022",
       "2023",
-      "2024", 
+      "2024",
       "2025",
       "2026",
-    ],   
+    ],
     type: "sales",
-    default_color: "Silver",    
+    default_color: "Silver",
     pricing: {
       base: {
         price: 0.00,
@@ -4886,7 +4885,7 @@ export const catalog = [
         price: 0.00,
       },
     },
-  },  
+  },
   {
     code: "NDESTOCK",
     name: "Night Drop Envelopes",
@@ -4959,10 +4958,10 @@ export const catalog = [
     code: "TICKETHOLDER",
     name: "Work Ticket Holders",
     fullname: "Neon Stitched Work Ticket Holders",
-    colors: ["Black","Blue","Green","Orange","Pink","Red","Yellow"],
+    colors: ["Black", "Blue", "Green", "Orange", "Pink", "Red", "Yellow"],
     type: "service",
     default_color: "Black",
-    quantities: [1],
+
     pricing: {
       base: {
         price: 0.00,
@@ -4976,7 +4975,7 @@ export const catalog = [
     colors: ["Black"],
     type: "service",
     default_color: "Black",
-    quantities: [1],
+
     pricing: {
       base: {
         price: 0.00,
@@ -4990,7 +4989,7 @@ export const catalog = [
     colors: ["Black"],
     type: "service",
     default_color: "Black",
-    quantities: [1],
+
     pricing: {
       base: {
         price: 0.00,
@@ -5004,7 +5003,7 @@ export const catalog = [
     colors: ["Black"],
     type: "service",
     default_color: "Black",
-    quantities: [1],
+
     pricing: {
       base: {
         price: 0.00,
@@ -5015,10 +5014,10 @@ export const catalog = [
     code: "GCAPS",
     name: "Control Caps",
     fullname: "Magnetic Control Caps 10in. x 10in. x 5 in.",
-    colors: ["Slogans","Black","Blue","Green","Grey","Orange","Purple","Red","Tan","White","Yellow"],
+    colors: ["Slogans", "Black", "Blue", "Green", "Grey", "Orange", "Purple", "Red", "Tan", "White", "Yellow"],
     type: "service",
     default_color: "Slogans",
-    quantities: [1],
+
     pricing: {
       base: {
         price: 0.00,
@@ -5032,7 +5031,7 @@ export const catalog = [
     colors: ["Metal"],
     type: "customs",
     default_color: "Metal",
-    supportedStores: ["GUAPR1","GUAPR2"],
+    supportedStores: ["GUAPR1", "GUAPR2"],
     quantities: [500, 1000, 2500],
     pricing: {
       base: {
@@ -5047,7 +5046,7 @@ export const catalog = [
     colors: ["White"],
     type: "customs",
     default_color: "White",
-    supportedStores: ["GUAPR1","GUAPR2"],
+    supportedStores: ["GUAPR1", "GUAPR2"],
     quantities: [500, 1000, 2500],
     pricing: {
       base: {
@@ -5062,7 +5061,7 @@ export const catalog = [
     colors: ["White"],
     type: "customs",
     default_color: "White",
-    supportedStores: ["GUAPR1","GUAPR2"],
+    supportedStores: ["GUAPR1", "GUAPR2"],
     quantities: [500, 1000, 2500],
     pricing: {
       base: {
