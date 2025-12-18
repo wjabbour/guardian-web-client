@@ -91,14 +91,13 @@ export default function QuantitySelector({ item, setUserSelection, reset }) {
           <thead>
             <tr>
               <th className="p-2 border bg-gray-100 text-xs uppercase text-gray-600">
-                Color \ Size
               </th>
               {effectiveSizes.map((size: string) => (
                 <th
                   key={size}
                   className="p-2 border bg-gray-50 text-xs font-bold uppercase text-center"
                 >
-                  {size}
+                  {size !== SizeOption.BASE ? size : ""}
                 </th>
               ))}
             </tr>
