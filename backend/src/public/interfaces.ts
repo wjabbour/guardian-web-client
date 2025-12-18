@@ -6,31 +6,21 @@ export interface CatalogItem {
   sizes: {};
   default_color: string;
   type:
-    | "mens"
-    | "womens"
-    | "hat"
-    | "accessory"
-    | "customs"
-    | "office"
-    | "service"
-    | "sales"
-    | "tshirts"
-    | "detail"
-    | "bodyshop"
-    | "parts";
+  | "mens"
+  | "womens"
+  | "hat"
+  | "accessory"
+  | "customs"
+  | "office"
+  | "service"
+  | "sales"
+  | "tshirts"
+  | "detail"
+  | "bodyshop"
+  | "parts";
   halfColors?: string[]; // C112 is capable of being two-colored. We need this field to present specially colored divs for the color selector for those colors
   // some items are only purchasble by Service and Parts counter employees only
   restricted?: boolean;
-  /*
-    Customs and decals are ordered in high quantities and should have discounts applied to them when the order
-    quantity reaches specific thresholds
-  */
-  discount?: Discount[];
-}
-
-interface Discount {
-  price: number;
-  quantity: number;
 }
 
 // once an order has been processed and sent to Guardian, we move it to the archived_orders table

@@ -1,84 +1,151 @@
-import { useState } from "react";
-import { ColorOption } from "../../lib/constants";
+import { useEffect, useState } from "react";
+import Select, { SelectChangeEvent } from "@mui/material/Select";
+import MenuItem from "@mui/material/MenuItem";
+import { ColorOption, SizeOption } from "../../lib/constants";
 
-export default function QuantitySelector({
-  item,
-  sizes,
-  customsOrder,
-  setCustomsOrder,
-}) {
-  const colors = item.colors || [item.default_color || ColorOption.DEFAULT];
-  // check if the keys of the sizes are numbers vs strings
-  const shouldUseQuantityBasedOrdering = !isNaN(
-    Number(Object.keys(item.sizes)[0])
-  );
+export default function QuantitySelector({ item, setUserSelection, reset }) {
+  const [selectedQty, setSelectedQty] = useState<number | "">("");
+  const [gridValues, setGridValues] = useState<Record<string, number>>({});
 
-  function Header() {
+  const effectiveSizes =
+    item.sizes && item.sizes.length > 0
+      ? item.sizes
+      : item.colors && item.colors.length > 0 && !item.quantities
+      ? [SizeOption.BASE]
+      : [];
+
+  const activeColor =
+    item.colors?.[0] || item.default_color || ColorOption.DEFAULT;
+
+  useEffect(() => {
+    if (item.quantities && item.quantities.length > 0) {
+      // if there are multiple quantities, this prevents the select option always reverting to the first option each time the
+      // user adds item to cart
+      if (selectedQty) {
+        setUserSelection({
+          [`${SizeOption.BASE},${activeColor}`]: selectedQty,
+        });
+      } else {
+        const firstQty = Number(item.quantities[0]);
+        setSelectedQty(firstQty);
+        setUserSelection({ [`${SizeOption.BASE},${activeColor}`]: firstQty });
+      }
+    } else {
+      setGridValues({});
+      setSelectedQty("");
+    }
+  }, [item.quantities, activeColor, setUserSelection, reset]);
+
+  const handleSelectionChange = (event: SelectChangeEvent) => {
+    const value = Number(event.target.value);
+    setSelectedQty(value);
+    setUserSelection({ [`${SizeOption.BASE},${activeColor}`]: value });
+  };
+
+  const handleGridChange = (size: string, color: string, value: string) => {
+    // Just parse it. If it's not a number, default to 0.
+    const qty = parseInt(value, 10) || 0;
+    const key = `${size},${color}`;
+
+    setGridValues((prev) => {
+      const updated = { ...prev, [key]: qty };
+      setUserSelection(updated);
+      return updated;
+    });
+  };
+
+  const handleSingleInputChange = (value: string) => {
+    const qty = parseInt(value, 10) || 0;
+    setSelectedQty(qty);
+    setUserSelection({ [`${SizeOption.BASE},${activeColor}`]: qty });
+  };
+
+  // 1. PRE-DEFINED QUANTITIES (Dropdown)
+  if (item.quantities && item.quantities.length > 0) {
     return (
-      <thead>
-        <tr>
-          <th scope="col"></th>
-          {sizes.map((size) => {
-            return <th scope="col">{size}</th>;
-          })}
-        </tr>
-      </thead>
+      <div className="flex flex-col gap-2 mt-4">
+        <label className="text-sm font-bold text-gray-700">
+          Select Quantity:
+        </label>
+        <Select
+          value={selectedQty}
+          onChange={handleSelectionChange}
+          sx={{ width: "120px", height: "40px", backgroundColor: "white" }}
+          size="small"
+        >
+          {item.quantities.map((q) => (
+            <MenuItem key={q} value={Number(q)}>
+              {q}
+            </MenuItem>
+          ))}
+        </Select>
+      </div>
     );
   }
 
-  function QuantityOptions() {
-    const [order, setOrder] = useState(structuredClone(customsOrder));
+  // 2. SIZE/COLOR GRID
+  if (effectiveSizes.length > 0 && item.colors && item.colors.length > 0) {
     return (
-      <tbody>
-        {colors.map((color) => {
-          return (
+      <div className="mt-6 overflow-x-auto">
+        <table className="w-full border-collapse">
+          <thead>
             <tr>
-              <th scope="row">{color === ColorOption.DEFAULT ? "" : color}</th>
-              {sizes.map((size) => {
-                return (
-                  <td className="p-[2px]">
-                    {shouldUseQuantityBasedOrdering && (
-                      <input
-                        className="border-2 border-solid border-gray-600 rounded-md p-1"
-                        type="text"
-                        value={order[`${size},${color}`]?.quantity || 0}
-                        onChange={(e) => {
-                          setOrder((old) => {
-                            const newOne = structuredClone(old);
-                            newOne[`${size},${color}`] = {
-                              quantity: Number(e.target.value),
-                              color,
-                            };
-
-                            return newOne;
-                          });
-                        }}
-                        onBlur={() => {
-                          setCustomsOrder(order);
-                        }}
-                      ></input>
-                    )}
-                    {!shouldUseQuantityBasedOrdering && (
-                      <input
-                        className="border-2 border-solid border-gray-600 rounded-md p-1"
-                        type="text"
-                      ></input>
-                    )}
-                  </td>
-                );
-              })}
+              <th className="p-2 border bg-gray-100 text-xs uppercase text-gray-600">
+                Color \ Size
+              </th>
+              {effectiveSizes.map((size: string) => (
+                <th
+                  key={size}
+                  className="p-2 border bg-gray-50 text-xs font-bold uppercase text-center"
+                >
+                  {size}
+                </th>
+              ))}
             </tr>
-          );
-        })}
-      </tbody>
+          </thead>
+          <tbody>
+            {item.colors.map((color: string) => (
+              <tr key={color}>
+                <td className="p-2 border bg-gray-50 text-xs font-bold uppercase text-gray-700">
+                  {color}
+                </td>
+                {effectiveSizes.map((size: string) => {
+                  const key = `${size},${color}`;
+                  return (
+                    <td key={key} className="p-2 border">
+                      <input
+                        type="text"
+                        inputMode="numeric"
+                        value={gridValues[key] || ""}
+                        className="w-16 p-1 border rounded text-center focus:outline-none focus:ring-1 focus:ring-black"
+                        onChange={(e) =>
+                          handleGridChange(size, color, e.target.value)
+                        }
+                        placeholder="0"
+                      />
+                    </td>
+                  );
+                })}
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
     );
   }
+
+  // 3. SINGLE TEXT INPUT
   return (
-    <div className="">
-      <table id="table">
-        <Header />
-        <QuantityOptions />
-      </table>
+    <div className="flex flex-col gap-2 mt-4">
+      <label className="text-sm font-bold text-gray-700">Input Quantity:</label>
+      <input
+        type="text"
+        inputMode="numeric"
+        value={selectedQty}
+        className="w-32 p-2 border rounded focus:outline-none focus:ring-1 focus:ring-black"
+        onChange={(e) => handleSingleInputChange(e.target.value)}
+        placeholder="0"
+      />
     </div>
   );
 }

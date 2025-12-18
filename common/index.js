@@ -59,7 +59,6 @@ const allConfigs = [
   MattbowersConfig,
   JcmortgageConfig,
   McdonaldConfig,
- 
 ];
 
 export function getStoreCode(companyName, storeAddress) {
@@ -127,12 +126,11 @@ export function getWebCatalog() {
   } else if (url.includes("friendship")) {
     return FriendshipCatalog;
   } else if (url.includes("mattbowers")) {
-    return MattbowersCatalog; 
+    return MattbowersCatalog;
   } else if (url.includes("jcmortgage")) {
     return JcmortgageCatalog;
   } else if (url.includes("mcdonald")) {
-    return McdonaldCatalog;      
-  
+    return McdonaldCatalog;
   }
 }
 
@@ -205,7 +203,7 @@ export function getWebConfigValue(val) {
   } else if (url.includes("hoffman")) {
     return HoffmanConfig[val];
   } else if (url.includes("tommycar")) {
-    return TommycarConfig[val]; 
+    return TommycarConfig[val];
   } else if (url.includes("vaughn")) {
     return VaughnConfig[val];
   } else if (url.includes("friendship")) {
@@ -216,7 +214,6 @@ export function getWebConfigValue(val) {
     return JcmortgageConfig[val];
   } else if (url.includes("mcdonald")) {
     return McdonaldConfig[val];
-
   } else {
     // when the user is on gpc81.com landing page we need to display a string in the browser tab
     return DEFAULT_CONFIG[val];
@@ -247,7 +244,7 @@ export function getConfigValue(val, config) {
     case "Hoffman":
       return HoffmanConfig[val];
     case "Tommycar":
-      return TommycarConfig[val]; 
+      return TommycarConfig[val];
     case "Vaughn":
       return VaughnConfig[val];
     case "Friendship":
@@ -255,8 +252,8 @@ export function getConfigValue(val, config) {
     case "Mattbowers":
       return MattbowersConfig[val];
     case "Jcmortgage":
-      return JcmortgageConfig[val]; 
+      return JcmortgageConfig[val];
     case "Mcdonald":
-      return McdonaldConfig[val];     
+      return McdonaldConfig[val];
   }
 }

@@ -6,8 +6,9 @@ export const catalog = [
     colors: ["Navy"],
     type: "hat",
     default_color: "Navy",
-    sizes: {
-      OSFA: 8.49,      
+    sizes: ["OSFA"],
+    pricing: {
+      OSFA: { price: 8.49 },
     },
   },
   {
@@ -17,14 +18,15 @@ export const catalog = [
     colors: ["Black","Peacoat","Smoked Pearl"],
     type: "mens",
     default_color: "Black",
-    sizes: {
-      Small: 42.99,
-      Medium: 42.99,
-      Large: 42.99,
-      XLarge: 42.99,
-      "2XLarge": 43.99,
-      "3XLarge": 44.99,
-      "4XLarge": 45.99,
+    sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge", "3XLarge", "4XLarge"],
+    pricing: {
+      Small: { price: 42.99 },
+      Medium: { price: 42.99 },
+      Large: { price: 42.99 },
+      XLarge: { price: 42.99 },
+      "2XLarge": { price: 43.99 },
+      "3XLarge": { price: 44.99 },
+      "4XLarge": { price: 45.99 },
     },
   },
   {
@@ -34,13 +36,14 @@ export const catalog = [
     colors: ["Black","Peacoat","Smoked Pearl"],
     type: "womens",
     default_color: "Black",
-    sizes: {
-      Small: 42.99,
-      Medium: 42.99,
-      Large: 42.99,
-      XLarge: 42.99,
-      "2XLarge": 43.99,
-      "3XLarge": 44.99,      
+    sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge", "3XLarge"],
+    pricing: {
+      Small: { price: 42.99 },
+      Medium: { price: 42.99 },
+      Large: { price: 42.99 },
+      XLarge: { price: 42.99 },
+      "2XLarge": { price: 43.99 },
+      "3XLarge": { price: 44.99 },
     },
   },
   {
@@ -50,14 +53,15 @@ export const catalog = [
     colors: ["Black","Peacoat","Smoked Pearl"],
     type: "mens",
     default_color: "Black",
-    sizes: {
-      Small: 46.99,
-      Medium: 46.99,
-      Large: 46.99,
-      XLarge: 46.99,
-      "2XLarge": 47.99,
-      "3XLarge": 48.99,
-      "4XLarge": 49.99,
+    sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge", "3XLarge", "4XLarge"],
+    pricing: {
+      Small: { price: 46.99 },
+      Medium: { price: 46.99 },
+      Large: { price: 46.99 },
+      XLarge: { price: 46.99 },
+      "2XLarge": { price: 47.99 },
+      "3XLarge": { price: 48.99 },
+      "4XLarge": { price: 49.99 },
     },
   },
   {
@@ -67,13 +71,14 @@ export const catalog = [
     colors: ["Peacoat"],
     type: "womens",
     default_color: "Peacoat",
-    sizes: {
-      Small: 46.99,
-      Medium: 46.99,
-      Large: 46.99,
-      XLarge: 46.99,
-      "2XLarge": 47.99,
-      "3XLarge": 48.99,
+    sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge", "3XLarge"],
+    pricing: {
+      Small: { price: 46.99 },
+      Medium: { price: 46.99 },
+      Large: { price: 46.99 },
+      XLarge: { price: 46.99 },
+      "2XLarge": { price: 47.99 },
+      "3XLarge": { price: 48.99 },
     },
   },
   {
@@ -83,14 +88,15 @@ export const catalog = [
     colors: ["Blacktop","Navy","Rogue Grey"],
     type: "womens",
     default_color: "Blacktop",
-    sizes: {
-      Small: 34.99,
-      Medium: 34.99,
-      Large: 34.99,
-      XLarge: 34.99,
-      "2XLarge": 35.99,
-      "3XLarge": 36.99,
-      "4XLarge": 37.99,
+    sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge", "3XLarge", "4XLarge"],
+    pricing: {
+      Small: { price: 34.99 },
+      Medium: { price: 34.99 },
+      Large: { price: 34.99 },
+      XLarge: { price: 34.99 },
+      "2XLarge": { price: 35.99 },
+      "3XLarge": { price: 36.99 },
+      "4XLarge": { price: 37.99 },
     },
   },
   {
@@ -100,14 +106,15 @@ export const catalog = [
     colors: ["Jet Black"],
     type: "mens",
     default_color: "Jet Black",
-    sizes: {
-      Small: 15.99,
-      Medium: 15.99,
-      Large: 15.99,
-      XLarge: 15.99,
-      "2XLarge": 17.99,
-      "3XLarge": 18.99,
-      "4XLarge": 19.99,      
+    sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge", "3XLarge", "4XLarge"],
+    pricing: {
+      Small: { price: 15.99 },
+      Medium: { price: 15.99 },
+      Large: { price: 15.99 },
+      XLarge: { price: 15.99 },
+      "2XLarge": { price: 17.99 },
+      "3XLarge": { price: 18.99 },
+      "4XLarge": { price: 19.99 },
     },
   },
   {
@@ -117,15 +124,16 @@ export const catalog = [
     colors: ["Black","Navy"],
     type: "mens",
     default_color: "Black",
-    sizes: {
-      Small: 24.99,
-      Medium: 24.99,
-      Large: 24.99,
-      XLarge: 24.99,
-      "2XLarge": 25.99,
-      "3XLarge": 26.99,
-      "4XLarge": 27.99,
-      "5XLarge": 28.99,
+    sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge", "3XLarge", "4XLarge", "5XLarge"],
+    pricing: {
+      Small: { price: 24.99 },
+      Medium: { price: 24.99 },
+      Large: { price: 24.99 },
+      XLarge: { price: 24.99 },
+      "2XLarge": { price: 25.99 },
+      "3XLarge": { price: 26.99 },
+      "4XLarge": { price: 27.99 },
+      "5XLarge": { price: 28.99 },
     },
   },
   {
@@ -135,14 +143,15 @@ export const catalog = [
     colors: ["Blacktop"],
     type: "mens",
     default_color: "Blacktop",
-    sizes: {
-      Small: 79.99,
-      Medium: 79.99,
-      Large: 79.99,
-      XLarge: 79.99,
-      "2XLarge": 81.99,
-      "3XLarge": 83.99,
-      "4XLarge": 84.99,
+    sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge", "3XLarge", "4XLarge"],
+    pricing: {
+      Small: { price: 79.99 },
+      Medium: { price: 79.99 },
+      Large: { price: 79.99 },
+      XLarge: { price: 79.99 },
+      "2XLarge": { price: 81.99 },
+      "3XLarge": { price: 83.99 },
+      "4XLarge": { price: 84.99 },
     },
   },
   {
@@ -152,14 +161,15 @@ export const catalog = [
     colors: ["Blacktop"],
     type: "womens",
     default_color: "Blacktop",
-    sizes: {
-      Small: 79.99,
-      Medium: 79.99,
-      Large: 79.99,
-      XLarge: 79.99,
-      "2XLarge": 81.99,
-      "3XLarge": 83.99,
-      "4XLarge": 84.99,
+    sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge", "3XLarge", "4XLarge"],
+    pricing: {
+      Small: { price: 79.99 },
+      Medium: { price: 79.99 },
+      Large: { price: 79.99 },
+      XLarge: { price: 79.99 },
+      "2XLarge": { price: 81.99 },
+      "3XLarge": { price: 83.99 },
+      "4XLarge": { price: 84.99 },
     },
   },  
   {
@@ -169,8 +179,11 @@ export const catalog = [
     colors: ["White"],
     type: "accessory",
     default_color: "White",
-    sizes: {
-      5000: .45,
+    quantities: [5000],
+    pricing: {
+      base: {
+        price: 0.45,
+      },
     },
   },
   {
@@ -180,13 +193,14 @@ export const catalog = [
     colors: ["Silver"],
     type: "accessory",
     default_color: "Silver",
-    discount: [
-      { quantity: 1000, price: 3.65 },  
-      { quantity: 1500, price: 3.49 },      
-    ],
-    sizes: {
-      1000: 3.65, 
-      1500: 3.49,     
+    quantities: [1000, 1500],
+    pricing: {
+      base: {
+        price: 3.65,
+        discount: {
+          1500: 3.49,
+        },
+      },
     },
   },
    {
@@ -196,11 +210,11 @@ export const catalog = [
     colors: ["White"],
     type: "accessory",
     default_color: "White",
-    discount: [
-      { quantity: 2000, price: 1.69 },             
-    ],
-    sizes: {
-      2000: 1.69,          
+    quantities: [2000],
+    pricing: {
+      base: {
+        price: 1.69,
+      },
     },
   },
   {
@@ -211,8 +225,11 @@ export const catalog = [
     type: "customs",
     default_color: "Black",
     supportedStores: ["HOFAPA"],
-    sizes: {
-      5000: 0.49,      
+    quantities: [5000],
+    pricing: {
+      base: {
+        price: 0.49,
+      },
     },
   },
   {
@@ -223,9 +240,14 @@ export const catalog = [
     type: "customs",
     default_color: "Black Metal",
     supportedStores: ["HOFAPA"],
-    sizes: {
-      300: 6.99, 
-      500: 6.49,      
+    quantities: [300, 500],
+    pricing: {
+      base: {
+        price: 6.99,
+        discount: {
+          500: 6.49,
+        },
+      },
     },
   },
   {
@@ -236,9 +258,14 @@ export const catalog = [
     type: "customs",
     default_color: "Black",
     supportedStores: ["HOFAPA"],
-    sizes: {
-      300: 6.99, 
-      500: 6.49,      
+    quantities: [300, 500],
+    pricing: {
+      base: {
+        price: 6.99,
+        discount: {
+          500: 6.49,
+        },
+      },
     },
   },
   {
@@ -248,11 +275,11 @@ export const catalog = [
     colors: ["White"],
     type: "sales",
     default_color: "White",
-    discount: [
-      { quantity: 2500, price: 1.19 },     
-    ],
-    sizes: {
-      2500: 1.19,           
+    quantities: [2500],
+    pricing: {
+      base: {
+        price: 1.19,
+      },
     },
   },
    {
@@ -262,13 +289,14 @@ export const catalog = [
     colors: ["White"],
     type: "sales",
     default_color: "White",
-    discount: [
-      { quantity: 2500, price: 1.19 },
-      { quantity: 5000, price: 1.09 },      
-    ],
-    sizes: {
-      2500: 1.19,
-      5000: 1.09,           
+    quantities: [2500, 5000],
+    pricing: {
+      base: {
+        price: 1.19,
+        discount: {
+          5000: 1.09,
+        },
+      },
     },
   },
 ]
