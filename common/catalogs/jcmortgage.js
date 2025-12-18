@@ -845,9 +845,9 @@ export const catalog = [
     colors: ["Grey Heather","Navy Heather"],
     type: "accessory",
     default_color: "Grey Heather",
-    description: 
-    `POLYESTER; Adjustable, padded shoulder strap. Large front side zippered pocket for easy decoration. 
-  Luggage trolley strap on back. Laptop sleeve dimensions 8h x 15w. Fits most 15 in. laptops.`,
+    description: `POLYESTER; Adjustable, padded shoulder strap. Large front side zippered pocket for easy decoration. 
+    Luggage trolley strap on back. Laptop sleeve dimensions 8h x 15w. Fits most 15 in. laptops.
+    `,
     sizes: {
       "1": 34.50,      
     },
