@@ -4066,11 +4066,6 @@ export const catalog = [
     type: "service",
     default_color: "white",
     description: "Sold in quantities of one, five, and ten boxes", 
-    discount: [
-      { quantity: 1, price: 0.00 },
-      { quantity: 5, price: 0.00 },
-      { quantity: 10, price: 0.00 },
-    ],    
     sizes: {
       "1": 0.00,
       "5": 0.00,

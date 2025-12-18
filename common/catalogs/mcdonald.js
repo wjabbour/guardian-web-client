@@ -29,11 +29,6 @@ export const catalog = [
     type: "customs",
     default_color: "Black",
     description: "Enter '1' for a shipment of 250, 500 or 1000 frames",
-    discount: [
-      { quantity: 250, price: .50 },  
-      { quantity: 500, price: .50 }, 
-      { quantity: 1000, price: .50 },     
-    ],
     sizes: {
       250: .50, 
       500: .50,
@@ -48,11 +43,6 @@ export const catalog = [
     type: "customs",
     default_color: "Black",
     description: "Enter '1' for a shipment of 250, 500 or 1000 frames",
-    discount: [
-      { quantity: 250, price: 1.99 },  
-      { quantity: 500, price: 1.99 }, 
-      { quantity: 1000, price: 1.99 },     
-    ],
     sizes: {
       250: 1.99, 
       500: 1.99,
@@ -67,11 +57,6 @@ export const catalog = [
     type: "customs",
     default_color: "Chrome",
     description: "Enter '1' for a shipment of 250, 500 or 1000 nameplates",
-    discount: [
-      { quantity: 250, price: .49 },  
-      { quantity: 500, price: .49 }, 
-      { quantity: 1000, price: .49 },     
-    ],
     sizes: {
       250: .49, 
       500: .49,
@@ -86,11 +71,6 @@ export const catalog = [
     type: "customs",
     default_color: "Black",
     description: "Enter '1' for a shipment of 250, 500 or 1000 nameplates",
-    discount: [
-      { quantity: 250, price: .49 },  
-      { quantity: 500, price: .49 }, 
-      { quantity: 1000, price: .49 },     
-    ],
     sizes: {
       250: .49, 
       500: .49,
@@ -105,11 +85,6 @@ export const catalog = [
     type: "customs",
     default_color: "White",
     description: "Enter '1' for a shipment of 250, 500 or 1000 plates",
-    discount: [
-      { quantity: 250, price: .50 },  
-      { quantity: 500, price: .50 }, 
-      { quantity: 1000, price: .50 },     
-    ],
     sizes: {
       250: .50, 
       500: .50,
@@ -124,11 +99,6 @@ export const catalog = [
     type: "customs",
     default_color: "White",
     description: "Enter '1' for a shipment of 250, 500 or 1000 plates",
-    discount: [
-      { quantity: 250, price: .50 },  
-      { quantity: 500, price: .50 }, 
-      { quantity: 1000, price: .50 },     
-    ],
     sizes: {
       250: .50, 
       500: .50,
@@ -143,11 +113,6 @@ export const catalog = [
     type: "customs",
     default_color: "White",
     description: "Enter '1' for a shipment of 250, 500 or 1000 plates",
-    discount: [
-      { quantity: 250, price: .50 },  
-      { quantity: 500, price: .50 }, 
-      { quantity: 1000, price: .50 },     
-    ],
     sizes: {
       250: .50, 
       500: .50,
@@ -162,11 +127,6 @@ export const catalog = [
     type: "customs",
     default_color: "White",
     description: "Enter '1' for a shipment of 250, 500 or 1000 plates",
-    discount: [
-      { quantity: 250, price: .50 },  
-      { quantity: 500, price: .50 }, 
-      { quantity: 1000, price: .50 },     
-    ],
     sizes: {
       250: .50, 
       500: .50,
@@ -181,11 +141,6 @@ export const catalog = [
     type: "customs",
     default_color: "White",
     description: "Enter '1' for a shipment of 250, 500 or 1000 plates",
-    discount: [
-      { quantity: 250, price: .50 },  
-      { quantity: 500, price: .50 }, 
-      { quantity: 1000, price: .50 },     
-    ],
     sizes: {
       250: .50, 
       500: .50,
@@ -200,11 +155,6 @@ export const catalog = [
     type: "customs",
     default_color: "White",
     description: "Enter '1' for a shipment of 250, 500 or 1000 plates",
-    discount: [
-      { quantity: 250, price: .50 },  
-      { quantity: 500, price: .50 }, 
-      { quantity: 1000, price: .50 },     
-    ],
     sizes: {
       250: .50, 
       500: .50,
@@ -219,11 +169,6 @@ export const catalog = [
     type: "customs",
     default_color: "White",
     description: "Enter '1' for a shipment of 250, 500 or 1000 plates",
-    discount: [
-      { quantity: 250, price: .50 },  
-      { quantity: 500, price: .50 }, 
-      { quantity: 1000, price: .50 },     
-    ],
     sizes: {
       250: .50, 
       500: .50,
@@ -238,11 +183,6 @@ export const catalog = [
     type: "customs",
     default_color: "White",
     description: "Enter '1' for a shipment of 250, 500 or 1000 plates",
-    discount: [
-      { quantity: 250, price: .50 },  
-      { quantity: 500, price: .50 }, 
-      { quantity: 1000, price: .50 },     
-    ],
     sizes: {
       250: .50, 
       500: .50,
@@ -257,11 +197,6 @@ export const catalog = [
     type: "customs",
     default_color: "White",
     description: "Enter '1' for a shipment of 250, 500 or 1000 plates",
-    discount: [
-      { quantity: 250, price: .50 },  
-      { quantity: 500, price: .50 }, 
-      { quantity: 1000, price: .50 },     
-    ],
     sizes: {
       250: .50, 
       500: .50,
@@ -276,11 +211,6 @@ export const catalog = [
     type: "customs",
     default_color: "White",
     description: "Enter '1' for a shipment of 250, 500 or 1000 plates",
-    discount: [
-      { quantity: 250, price: .50 },  
-      { quantity: 500, price: .50 }, 
-      { quantity: 1000, price: .50 },     
-    ],
     sizes: {
       250: .50, 
       500: .50,
@@ -295,11 +225,6 @@ export const catalog = [
     type: "customs",
     default_color: "White",
     description: "Enter '1' for a shipment of 250, 500 or 1000 plates",
-    discount: [
-      { quantity: 250, price: .50 },  
-      { quantity: 500, price: .50 }, 
-      { quantity: 1000, price: .50 },     
-    ],
     sizes: {
       250: .50, 
       500: .50,
@@ -314,11 +239,6 @@ export const catalog = [
     type: "customs",
     default_color: "White",
     description: "Enter '1' for a shipment of 250, 500 or 1000 plates",
-    discount: [
-      { quantity: 250, price: .50 },  
-      { quantity: 500, price: .50 }, 
-      { quantity: 1000, price: .50 },     
-    ],
     sizes: {
       250: .50, 
       500: .50,

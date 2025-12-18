@@ -312,9 +312,6 @@ export const catalog = [
     type: "service",
     default_color: "white",
     description: "Enter a qty of '1' to order one box of 1000",     
-    discount: [
-      { quantity: 1, price: 51.00 },
-    ],    
     sizes: {
       "# boxes": 51.00,      
     },

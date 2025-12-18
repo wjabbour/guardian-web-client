@@ -15,7 +15,6 @@ export const catalog = [
     fullname: "Floor Mats/Coated Paper (500/bx)",
     type: "service",
     default_color: "White",
-    discount: [{ quantity: 500, price: 76.44 }],
     sizes: {
       "# boxes": 76.44,
     },
@@ -26,7 +25,6 @@ export const catalog = [
     fullname: "8.5 x 11 Blank Vinyl Sheet #9300 (100/pk)",
     type: "sales",
     default_color: "White",
-    discount: [{ quantity: 1, price: 135.0 }],
     sizes: {
       "# packs": 135.0,
     },
@@ -37,7 +35,6 @@ export const catalog = [
     fullname: "Buyers Guide, Blank Front (100/pk)",
     type: "sales",
     default_color: "White",
-    discount: [{ quantity: 1, price: 74.95 }],
     sizes: {
       "# packs": 74.95,
     },
@@ -70,7 +67,6 @@ export const catalog = [
     ],
     type: "sales",
     default_color: "Blue",
-    discount: [{ quantity: 1, price: 10.99 }],
     sizes: {
       "# packs": 10.99,
     },
@@ -94,7 +90,6 @@ export const catalog = [
     ],
     type: "sales",
     default_color: "Silver",
-    discount: [{ quantity: 1, price: 10.99 }],
     sizes: {
       "# packs": 10.99,
     },
@@ -115,7 +110,6 @@ export const catalog = [
     ],
     type: "sales",
     default_color: "Blue",
-    discount: [{ quantity: 1, price: 10.69 }],
     sizes: {
       1: 10.69,
     },
@@ -138,7 +132,6 @@ export const catalog = [
     ],
     type: "sales",
     default_color: "Blue",
-    discount: [{ quantity: 1, price: 36.95 }],
     sizes: {
       "# boxes": 36.95,
     },
@@ -171,7 +164,6 @@ export const catalog = [
     fullname: "Sticker - Vehicle Not for Sale (100/pk)",
     type: "sales",
     default_color: "Yellow",
-    discount: [{ quantity: 1, price: 27.95 }],
     sizes: {
       "# packs": 27.95,
     },
@@ -1342,8 +1334,8 @@ export const catalog = [
       base: {
         price: 0.89,
         discount: {
-          1000: 0.69,
-        },
+          1000: 0.69
+        }
       },
     },
   },
@@ -1358,8 +1350,8 @@ export const catalog = [
       base: {
         price: 0.89,
         discount: {
-          2500: 0.69,
-        },
+          2500: 0.69
+        }
       },
     },
   },
