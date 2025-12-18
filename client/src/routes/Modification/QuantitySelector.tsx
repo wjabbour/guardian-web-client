@@ -11,7 +11,7 @@ export default function QuantitySelector({ item, setUserSelection, reset }) {
     item.sizes && item.sizes.length > 0
       ? item.sizes
       : item.colors && item.colors.length > 0 && !item.quantities
-      ? [SizeOption.DEFAULT]
+      ? [SizeOption.BASE]
       : [];
 
   const activeColor =
