@@ -96,7 +96,7 @@ export default function Modification() {
     const new_cart = structuredClone(cart);
 
     // ensure that the user actually ordered something
-
+    console.log(userSelection)
     // key is size + color, value is object containing quantity
     for (const [key, quantity] of Object.entries(userSelection)) {
       addCustomsToCart(
@@ -113,126 +113,9 @@ export default function Modification() {
       sessionStorage.setItem("cart", JSON.stringify(new_cart));
     }
 
-    // TODO: shouldnt this be broken out to a function?
-    // if (shouldUseCustomQuantityBasedOrdering) {
-    //   const items: { [key: string]: number } = {};
-
-    //   Object.keys(customsOrder).forEach((k: string) => {
-    //     // the keys of customsOrder are the quantity chosen and the color, like "1,Blue"
-    //     const quantity = parseInt(k.split(",")[0]);
-    //     // object representing quantity and color selected
-    //     const orderInfo = customsOrder[k];
-
-    //     /*
-    //       if the user ordered 2x500 and 1x1000 then we need to add them together
-    //     */
-    //     if (items[orderInfo.color]) {
-    //       items[orderInfo.color] += quantity * orderInfo.quantity;
-    //     } else {
-    //       items[orderInfo.color] = quantity * orderInfo.quantity;
-    //     }
-    //   });
-
-    //   for (const [color, quantity] of Object.entries(items)) {
-    //     addCustomsToCart(
-    //       item,
-    //       quantity,
-    //       color,
-    //       new_cart,
-    //       firstEmbroidery,
-    //       secondEmbroidery,
-    //       lowestPricedItemVariation
-    //     );
-    //   }
-
-    //   set_cart(new_cart);
-    //   sessionStorage.setItem("cart", JSON.stringify(new_cart));
     setSnackbarOpen(true);
     setUserSelection({});
     return;
-    // }
-
-    let any_input_has_value = false;
-    let invalid_input = false;
-
-    const hasEmbroideryOptions = embroideries.length > 0;
-    const embroideryTypes = ["mens", "womens", "accessory"];
-    const placementTypes = ["mens", "womens", "tshirts", "hat"];
-
-    if (
-      hasEmbroideryOptions &&
-      embroideryTypes.includes(item.type) &&
-      !firstEmbroidery
-    ) {
-      setErrorSnackbarOpen(true);
-      setErrorSnackbarText("Must select an embroidery");
-      return;
-    }
-
-    const table = document.getElementById("table") as any;
-    // the first row is the table headers, skip it
-    for (let i = 1; i < table.rows.length; i++) {
-      const inputs = table.rows[i].getElementsByTagName("input");
-      for (let j = 0; j < inputs.length; j++) {
-        if (inputs[j].value) {
-          any_input_has_value = true;
-          const isNum = /^\d+$/.test(inputs[j].value);
-
-          if (!isNum) {
-            inputs[j].value = "";
-            continue;
-          }
-
-          if (item.type === "accessory" && Number(inputs[j].value) < 12) {
-            invalid_input = true;
-            setErrorSnackbarOpen(true);
-            setErrorSnackbarText("Must order at least 12 units");
-            continue;
-          }
-
-          const cart_item: CartItem = {
-            price: item.sizes[sizes[j]],
-            quantity: Number(inputs[j].value),
-            size: sizes[j],
-            color: item.colors
-              ? item.colors[i - 1]
-              : item.default_color || ColorOption.DEFAULT,
-            code: item.code,
-            placement: placementTypes.includes(item.type)
-              ? firstPlacement
-              : null,
-            embroidery: firstEmbroidery,
-          };
-
-          let key = `${item.code},${Object.keys(item.sizes)[j]},${item.colors
-            ? item.colors[i - 1]
-            : item.default_color || ColorOption.DEFAULT
-            },${firstEmbroidery}`;
-
-          if (secondEmbroidery) {
-            cart_item["secondEmbroidery"] = secondEmbroidery;
-            cart_item["secondPlacement"] = secondPlacement;
-            key += `,${secondEmbroidery}`;
-          }
-
-          if (new_cart[key]) {
-            new_cart[key].quantity += cart_item.quantity;
-          } else {
-            new_cart[key] = cart_item;
-          }
-        }
-        inputs[j].value = "";
-      }
-    }
-
-    if (!any_input_has_value || invalid_input) {
-    } else {
-      setFirstEmbroidery("");
-      setSecondEmbroidery("");
-      set_cart(new_cart);
-      sessionStorage.setItem("cart", JSON.stringify(new_cart));
-      setSnackbarOpen(true);
-    }
   }
 
   return (
