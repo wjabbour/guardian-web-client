@@ -96,7 +96,7 @@ export function getRoutePrefix(password) {
 export function getWebCatalog() {
   const url = window.location.href;
   if (url.includes("localhost:3000")) {
-    return HennessyCatalog;
+    return JcmortgageCatalog;
   } else if (url.includes("newcustomer")) {
     return NewCustomerCatalog;
   } else if (url.includes("stivers")) {
@@ -179,7 +179,7 @@ export function getCatalog(companyName) {
 export function getWebConfigValue(val) {
   const url = window.location.href;
   if (url.includes("localhost:3000")) {
-    return HennessyConfig[val];
+    return JcmortgageConfig[val];
   } else if (url.includes("newcustomer")) {
     return NewCustomerConfig[val];
   } else if (url.includes("stivers")) {
