@@ -32,6 +32,7 @@ export default function EmbroiderySelector({
         <p className="font-bold text-[14px]">Want to add a second logo?</p>
         <SvgIcon
           onClick={() => {
+            handleSecondEmbroideryChange("");
             setSecondLogo(true);
           }}
           fontSize="inherit"
@@ -54,7 +55,7 @@ export default function EmbroiderySelector({
           onClick={() => {
             setSecondLogo(false);
             // hack to replicate structure of native HTML event
-            handleSecondEmbroideryChange({ target: { value: "" } });
+            handleSecondEmbroideryChange(null);
           }}
           fontSize="inherit"
           className="relative top-1 cursor-pointer"
@@ -78,9 +79,9 @@ export default function EmbroiderySelector({
             label="embroidery"
             onChange={(e) => {
               if (embroideryPlace === "first") {
-                handleFirstEmbroideryChange(e);
+                handleFirstEmbroideryChange(e.target.value);
               } else {
-                handleSecondEmbroideryChange(e);
+                handleSecondEmbroideryChange(e.target.value);
               }
             }}
           >
@@ -116,9 +117,9 @@ export default function EmbroiderySelector({
               label="placement"
               onChange={(e) => {
                 if (embroideryPlace === "first") {
-                  handleFirstPlacementChange(e);
+                  handleFirstPlacementChange(e.target.value);
                 } else {
-                  handleSecondPlacementChange(e);
+                  handleSecondPlacementChange(e.target.value);
                 }
               }}
             >

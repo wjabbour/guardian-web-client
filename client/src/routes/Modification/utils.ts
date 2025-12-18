@@ -1,4 +1,4 @@
-import { SizeOption } from "../../lib/constants";
+import { PlacementOption, SizeOption } from "../../lib/constants";
 
 export function createCartItem(
   itemConfiguration,
@@ -94,12 +94,14 @@ export function verifyEmbroidery(
   embroideries: string[],
   firstEmbroidery: string,
   secondEmbroidery: string
-) {
-  if (embroideries.length === 0) return true;
+): string {
+  if (embroideries.length === 0) return "";
 
-  if (!firstEmbroidery) return false;
+  if (!firstEmbroidery) return "No embroidery/logo selected";
 
-  return true;
+  if (secondEmbroidery === "") return "No second embroidery/logo selected";
+
+  return "";
 }
 
 export function verifyQuantity(userSelection) {
@@ -107,4 +109,16 @@ export function verifyQuantity(userSelection) {
   if (Object.values(userSelection).every((value) => value === 0)) return false;
 
   return true;
+}
+
+export function verifyPlacement(
+  firstPlacement: string,
+  secondPlacement: string,
+  secondEmbroidery: string
+): string {
+  if (firstPlacement === PlacementOption.DEFAULT) return "";
+  if (firstPlacement === secondPlacement && secondEmbroidery !== null)
+    return "First and second placement must be different";
+
+  return "";
 }
