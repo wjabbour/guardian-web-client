@@ -17,7 +17,6 @@ export default function CartItems() {
           item.color === ColorOption.DEFAULT ||
           item.color === itemConfiguration.default_color;
         const isDefaultSize = item.size === SizeOption.DEFAULT;
-
         const imagePath = isDefaultColor
           ? `/images/${item.code}.jpg`
           : `/images/${item.code}_${item.color
@@ -41,7 +40,7 @@ export default function CartItems() {
               <p>
                 <b>{item.price} each</b>
               </p>
-              {!isDefaultColor && (
+              {!(item.color === ColorOption.DEFAULT) && (
                 <p>
                   <b>Color:</b> {item.color}
                 </p>

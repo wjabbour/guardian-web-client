@@ -33,9 +33,7 @@ export function createCartItem(
       ? { placement: firstPlacement }
       : {}),
     ...(firstEmbroidery !== null ? { embroidery: firstEmbroidery } : {}),
-    ...(secondEmbroidery !== null
-      ? { secondLogo: secondEmbroidery, secondPlacement }
-      : {}),
+    ...(secondEmbroidery !== null ? { secondEmbroidery, secondPlacement } : {}),
   };
 
   if (cart[key]) {
