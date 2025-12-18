@@ -10,7 +10,7 @@ import QuantitySelector from "./QuantitySelector";
 import EmbroiderySelector from "./EmbroiderySelector";
 import { getWebConfigValue } from "guardian-common";
 import Description from "./Description";
-import { createCartItem, verifyEmbroidery } from "./utils";
+import { createCartItem, verifyEmbroidery, verifyQuantity } from "./utils";
 
 type UserSelection = {
   [key: string]: {
@@ -94,6 +94,12 @@ export default function Modification() {
       !verifyEmbroidery(item, embroideries, firstEmbroidery, secondEmbroidery)
     ) {
       setErrorSnackbarText("Must select an embroidery/logo");
+      setErrorSnackbarOpen(true);
+      return;
+    }
+
+    if (!verifyQuantity(userSelection)) {
+      setErrorSnackbarText("Must select a quantity");
       setErrorSnackbarOpen(true);
       return;
     }

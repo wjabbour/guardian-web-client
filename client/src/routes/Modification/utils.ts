@@ -101,3 +101,12 @@ export function verifyEmbroidery(
 
   return true;
 }
+
+export function verifyQuantity(userSelection) {
+  console.log(userSelection);
+
+  if (Object.keys(userSelection).length === 0) return false;
+  if (Object.values(userSelection).every((value) => value === 0)) return false;
+
+  return true;
+}
