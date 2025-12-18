@@ -1534,7 +1534,9 @@ export const catalog = [
     code: "BOWHSL-1830-490972A",
     name: "Service Due Sticker",
     fullname: "White Vinyl Service Due Sticker w/black imprint (1.5 in. x 2.25 in.)",
-    description: "GREY DOES NOT PRINT; 2500 per box",
+    description: 
+    `GREY DOES NOT PRINT. Sold in quantities of 2500; 
+    Enter '1' for one shipment of 2500`, 
     colors: ["White"],
     type: "service",
     default_color: "White",    
@@ -1587,7 +1589,8 @@ export const catalog = [
     ],  
     type: "service",
     default_color: "white",
-    description: "Sold in quantities of 1, 5 or 10 boxes", 
+    description: 
+    `Sold in quantities of 1, 5 or 10 boxes. Enter '1' for a shipment of one box, etc.`, 
     discount: [
       { quantity: 1, price: 84.99 },
       { quantity: 5, price: 83.99 },
