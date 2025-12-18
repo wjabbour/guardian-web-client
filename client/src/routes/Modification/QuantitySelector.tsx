@@ -1,89 +1,137 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import Select, { SelectChangeEvent } from "@mui/material/Select";
 import MenuItem from "@mui/material/MenuItem";
 import { ColorOption } from "../../lib/constants";
 
+const hideArrowsStyle = `
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
+  input[type=number] { -moz-appearance: textfield; }
+`;
+
 export default function QuantitySelector({
   item,
   setUserSelection,
-  selectedQuantity,
-  setSelectedQuantity,
 }) {
+  const [selectedQty, setSelectedQty] = useState<number | "">("");
+  const [gridValues, setGridValues] = useState<Record<string, number>>({});
+
+  // Normalize sizes: if no sizes but colors exist, provide a default dimension
+  const effectiveSizes = (item.sizes && item.sizes.length > 0)
+    ? item.sizes
+    : (item.colors && item.colors.length > 0 && !item.quantities)
+      ? ["Default"]
+      : [];
+
   const activeColor =
     item.colors?.[0] || item.default_color || ColorOption.DEFAULT;
 
-  // Auto-populate the first option on mount if quantities exist
   useEffect(() => {
     if (item.quantities && item.quantities.length > 0) {
-      const firstQty = item.quantities[0];
-
-      // Update the local UI state
-      setSelectedQuantity((prev) => ({
-        ...prev,
-        base: firstQty,
-      }));
-
-      // Update the parent's customsOrder
-      const initialOrder = {
-        [`${activeColor}`]: firstQty,
-      };
-      setUserSelection(initialOrder);
+      const firstQty = Number(item.quantities[0]);
+      setSelectedQty(firstQty);
+      setUserSelection({ [`${activeColor}`]: firstQty });
     }
-  }, [item.quantities, activeColor, setSelectedQuantity, setUserSelection]);
+  }, [item.quantities, activeColor, setUserSelection]);
 
-  /**
-   * Updates the parent's customsOrder object on manual change.
-   */
   const handleSelectionChange = (event: SelectChangeEvent) => {
     const value = Number(event.target.value);
-
-    setSelectedQuantity((prev) => ({
-      ...prev,
-      base: value,
-    }));
-
-    const newOrder = {
-      [`${activeColor}`]: value,
-    };
-
-    setUserSelection(newOrder);
+    setSelectedQty(value);
+    setUserSelection({ [`${activeColor}`]: value });
   };
 
-  function QuantitySelect() {
+  const handleGridChange = (size: string, color: string, value: string) => {
+    const qty = value === "" ? 0 : Number(value);
+    const key = `${size},${color}`;
+
+    setGridValues((prev) => {
+      const updated = { ...prev, [key]: qty };
+      setUserSelection(updated);
+      return updated;
+    });
+  };
+
+  const handleSingleInputChange = (value: string) => {
+    const qty = value === "" ? 0 : Number(value);
+    setSelectedQty(qty);
+    setUserSelection({ [`${activeColor}`]: qty });
+  };
+
+  // 1. PRE-DEFINED QUANTITIES (Dropdown)
+  if (item.quantities && item.quantities.length > 0) {
     return (
       <div className="flex flex-col gap-2 mt-4">
-        <label className="text-sm font-bold text-gray-700">
-          Select Quantity:
-        </label>
+        <label className="text-sm font-bold text-gray-700">Select Quantity:</label>
         <Select
-          value={"" + selectedQuantity.base}
+          value={selectedQty}
           onChange={handleSelectionChange}
-          sx={{
-            width: "120px",
-            height: "40px",
-            backgroundColor: "white",
-          }}
+          sx={{ width: "120px", height: "40px", backgroundColor: "white" }}
           size="small"
         >
           {item.quantities.map((q) => (
-            <MenuItem key={q} value={q}>
-              {q}
-            </MenuItem>
+            <MenuItem key={q} value={Number(q)}>{q}</MenuItem>
           ))}
         </Select>
       </div>
     );
   }
 
-  if (item.quantities) {
-    return <QuantitySelect />;
+  // 2. SIZE/COLOR GRID (Now handles 1D and 2D grids)
+  if (effectiveSizes.length > 0 && item.colors && item.colors.length > 0) {
+    return (
+      <div className="mt-6 overflow-x-auto">
+        <style dangerouslySetInnerHTML={{ __html: hideArrowsStyle }} />
+        <table className="w-full border-collapse">
+          <thead>
+            <tr>
+              <th className="p-2 border bg-gray-100 text-xs uppercase text-gray-600">Color \ Size</th>
+              {effectiveSizes.map((size: string) => (
+                <th key={size} className="p-2 border bg-gray-50 text-xs font-bold uppercase text-center">
+                  {size}
+                </th>
+              ))}
+            </tr>
+          </thead>
+          <tbody>
+            {item.colors.map((color: string) => (
+              <tr key={color}>
+                <td className="p-2 border bg-gray-50 text-xs font-bold uppercase text-gray-700">
+                  {color}
+                </td>
+                {effectiveSizes.map((size: string) => {
+                  const key = `${size},${color}`;
+                  return (
+                    <td key={key} className="p-2 border">
+                      <input
+                        type="number"
+                        value={gridValues[key] || ""}
+                        className="w-16 p-1 border rounded text-center focus:outline-none focus:ring-1 focus:ring-black"
+                        onChange={(e) => handleGridChange(size, color, e.target.value)}
+                        placeholder="0"
+                      />
+                    </td>
+                  );
+                })}
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    );
   }
 
+  // 3. SINGLE TEXT INPUT (Fallback for items with no colors/sizes/quantities)
   return (
-    <div className="mt-4 p-2 bg-gray-50 rounded-md border border-dashed border-gray-300">
-      <p className="text-sm italic text-gray-500">
-        Enter quantity in the table above for {item.fullname}
-      </p>
+    <div className="flex flex-col gap-2 mt-4">
+      <style dangerouslySetInnerHTML={{ __html: hideArrowsStyle }} />
+      <label className="text-sm font-bold text-gray-700">Input Quantity:</label>
+      <input
+        type="number"
+        value={selectedQty}
+        className="w-32 p-2 border rounded focus:outline-none focus:ring-1 focus:ring-black"
+        onChange={(e) => handleSingleInputChange(e.target.value)}
+        placeholder="0"
+      />
     </div>
   );
 }

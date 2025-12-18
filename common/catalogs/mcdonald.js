@@ -11,14 +11,15 @@ export const catalog = [
     ],
     type: "mens",
     default_color: "Black",
-    sizes: {
-      Small: 0.00,
-      Medium: 0.00,
-      Large: 0.00,
-      XLarge: 0.00,
-      "2XLarge": 0.00,
-      "3XLarge": 0.00,
-      "4XLarge": 0.00,
+    sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge", "3XLarge", "4XLarge"],
+    pricing: {
+      Small: { price: 0.00 },
+      Medium: { price: 0.00 },
+      Large: { price: 0.00 },
+      XLarge: { price: 0.00 },
+      "2XLarge": { price: 0.00 },
+      "3XLarge": { price: 0.00 },
+      "4XLarge": { price: 0.00 },
    },
   },
   {
@@ -29,10 +30,11 @@ export const catalog = [
     type: "customs",
     default_color: "Black",
     description: "Enter '1' for a shipment of 250, 500 or 1000 frames",
-    sizes: {
-      250: .50, 
-      500: .50,
-      1000: .50,      
+    quantities: [250, 500, 1000],
+    pricing: {
+      base: {
+        price: 0.50,
+      },
     },
   },
   {
@@ -43,10 +45,11 @@ export const catalog = [
     type: "customs",
     default_color: "Black",
     description: "Enter '1' for a shipment of 250, 500 or 1000 frames",
-    sizes: {
-      250: 1.99, 
-      500: 1.99,
-      1000: 1.99,      
+    quantities: [250, 500, 1000],
+    pricing: {
+      base: {
+        price: 1.99,
+      },
     },
   },
   {
@@ -57,10 +60,11 @@ export const catalog = [
     type: "customs",
     default_color: "Chrome",
     description: "Enter '1' for a shipment of 250, 500 or 1000 nameplates",
-    sizes: {
-      250: .49, 
-      500: .49,
-      1000: .49,      
+    quantities: [250, 500, 1000],
+    pricing: {
+      base: {
+        price: 0.49,
+      },
     },
   },
   {
@@ -71,10 +75,11 @@ export const catalog = [
     type: "customs",
     default_color: "Black",
     description: "Enter '1' for a shipment of 250, 500 or 1000 nameplates",
-    sizes: {
-      250: .49, 
-      500: .49,
-      1000: .49,      
+    quantities: [250, 500, 1000],
+    pricing: {
+      base: {
+        price: 0.49,
+      },
     },
   },
   {
@@ -85,10 +90,11 @@ export const catalog = [
     type: "customs",
     default_color: "White",
     description: "Enter '1' for a shipment of 250, 500 or 1000 plates",
-    sizes: {
-      250: .50, 
-      500: .50,
-      1000: .50,      
+    quantities: [250, 500, 1000],
+    pricing: {
+      base: {
+        price: 0.50,
+      },
     },
   },
   {
@@ -99,10 +105,11 @@ export const catalog = [
     type: "customs",
     default_color: "White",
     description: "Enter '1' for a shipment of 250, 500 or 1000 plates",
-    sizes: {
-      250: .50, 
-      500: .50,
-      1000: .50,      
+    quantities: [250, 500, 1000],
+    pricing: {
+      base: {
+        price: 0.50,
+      },
     },
   },
   {
@@ -113,10 +120,11 @@ export const catalog = [
     type: "customs",
     default_color: "White",
     description: "Enter '1' for a shipment of 250, 500 or 1000 plates",
-    sizes: {
-      250: .50, 
-      500: .50,
-      1000: .50,      
+    quantities: [250, 500, 1000],
+    pricing: {
+      base: {
+        price: 0.50,
+      },
     },
   },  
   {
@@ -127,10 +135,11 @@ export const catalog = [
     type: "customs",
     default_color: "White",
     description: "Enter '1' for a shipment of 250, 500 or 1000 plates",
-    sizes: {
-      250: .50, 
-      500: .50,
-      1000: .50,      
+    quantities: [250, 500, 1000],
+    pricing: {
+      base: {
+        price: 0.50,
+      },
     },
   },
   {
@@ -141,10 +150,11 @@ export const catalog = [
     type: "customs",
     default_color: "White",
     description: "Enter '1' for a shipment of 250, 500 or 1000 plates",
-    sizes: {
-      250: .50, 
-      500: .50,
-      1000: .50,      
+    quantities: [250, 500, 1000],
+    pricing: {
+      base: {
+        price: 0.50,
+      },
     },
   },  
   {
@@ -155,10 +165,11 @@ export const catalog = [
     type: "customs",
     default_color: "White",
     description: "Enter '1' for a shipment of 250, 500 or 1000 plates",
-    sizes: {
-      250: .50, 
-      500: .50,
-      1000: .50,      
+    quantities: [250, 500, 1000],
+    pricing: {
+      base: {
+        price: 0.50,
+      },
     },
   },
   {
@@ -169,10 +180,11 @@ export const catalog = [
     type: "customs",
     default_color: "White",
     description: "Enter '1' for a shipment of 250, 500 or 1000 plates",
-    sizes: {
-      250: .50, 
-      500: .50,
-      1000: .50,      
+    quantities: [250, 500, 1000],
+    pricing: {
+      base: {
+        price: 0.50,
+      },
     },
   },  
   {
@@ -183,10 +195,11 @@ export const catalog = [
     type: "customs",
     default_color: "White",
     description: "Enter '1' for a shipment of 250, 500 or 1000 plates",
-    sizes: {
-      250: .50, 
-      500: .50,
-      1000: .50,      
+    quantities: [250, 500, 1000],
+    pricing: {
+      base: {
+        price: 0.50,
+      },
     },
   },
   {
@@ -197,10 +210,11 @@ export const catalog = [
     type: "customs",
     default_color: "White",
     description: "Enter '1' for a shipment of 250, 500 or 1000 plates",
-    sizes: {
-      250: .50, 
-      500: .50,
-      1000: .50,      
+    quantities: [250, 500, 1000],
+    pricing: {
+      base: {
+        price: 0.50,
+      },
     },
   },
   {
@@ -211,10 +225,11 @@ export const catalog = [
     type: "customs",
     default_color: "White",
     description: "Enter '1' for a shipment of 250, 500 or 1000 plates",
-    sizes: {
-      250: .50, 
-      500: .50,
-      1000: .50,      
+    quantities: [250, 500, 1000],
+    pricing: {
+      base: {
+        price: 0.50,
+      },
     },
   },
   {
@@ -225,10 +240,11 @@ export const catalog = [
     type: "customs",
     default_color: "White",
     description: "Enter '1' for a shipment of 250, 500 or 1000 plates",
-    sizes: {
-      250: .50, 
-      500: .50,
-      1000: .50,      
+    quantities: [250, 500, 1000],
+    pricing: {
+      base: {
+        price: 0.50,
+      },
     },
   },
   {
@@ -239,10 +255,11 @@ export const catalog = [
     type: "customs",
     default_color: "White",
     description: "Enter '1' for a shipment of 250, 500 or 1000 plates",
-    sizes: {
-      250: .50, 
-      500: .50,
-      1000: .50,      
+    quantities: [250, 500, 1000],
+    pricing: {
+      base: {
+        price: 0.50,
+      },
     },
   },
   {
@@ -252,8 +269,10 @@ export const catalog = [
     colors: ["White"],
     type: "service",
     default_color: "White",    
-    sizes: {
-      "# boxes": 46.00,
+    pricing: {
+      base: {
+        price: 46.00,
+      },
     },
   },
   {
@@ -263,8 +282,10 @@ export const catalog = [
     colors: ["Plastic"],
     type: "service",
     default_color: "Plastic",
-    sizes: {
-      "# rolls": 48.00,
+    pricing: {
+      base: {
+        price: 48.00,
+      },
     },
   },
   {
@@ -286,8 +307,10 @@ export const catalog = [
     ],  
     type: "service",
     default_color: "white",        
-    sizes: {
-      "# boxes": 51.00,      
+    pricing: {
+      base: {
+        price: 51.00,
+      },
     },
   },
   {
@@ -297,8 +320,10 @@ export const catalog = [
     colors: ["Metal"],
     type: "service",
     default_color: "Metal",      
-    sizes: {
-      "# packs": 6.95,      
+    pricing: {
+      base: {
+        price: 6.95,
+      },
     },
   },
   {
@@ -308,8 +333,10 @@ export const catalog = [
     colors: ["Plastic"],
     type: "service",
     default_color: "Plastic",    
-    sizes: {
-      "# boxes": 51.99,
+    pricing: {
+      base: {
+        price: 51.99,
+      },
     },
   },
   {
@@ -326,8 +353,10 @@ export const catalog = [
     ],
     type: "service",
     default_color: "Blue",
-    sizes: {
-      "# packs": 19.99,
+    pricing: {
+      base: {
+        price: 19.99,
+      },
     },
   },
   {
@@ -348,8 +377,10 @@ export const catalog = [
     ],
     type: "sales",
     default_color: "Blue",    
-    sizes: {
-      "# boxes": 19.99,
+    pricing: {
+      base: {
+        price: 19.99,
+      },
     },
   }, 
   {
@@ -366,8 +397,10 @@ export const catalog = [
     ],
     type: "sales",
     default_color: "Blue",    
-    sizes: {
-      "# packs": 9.99,
+    pricing: {
+      base: {
+        price: 9.99,
+      },
     },
   }, 
   {
@@ -388,8 +421,10 @@ export const catalog = [
     ],
     type: "office",
     default_color: "Blue",
-    sizes: {
-      "# boxes": 89.99,      
+    pricing: {
+      base: {
+        price: 89.99,
+      },
     },
   },
   {
@@ -399,8 +434,10 @@ export const catalog = [
     colors: ["Yellow"],
     type: "sales",
     default_color: "Yellow",   
-    sizes: {
-      "# packs": 24.99,
+    pricing: {
+      base: {
+        price: 24.99,
+      },
     },
   }, 
   {
@@ -432,8 +469,10 @@ export const catalog = [
     ],
     type: "sales",
     default_color: "Blue",
-    sizes: {
-      "# packs": 2.99,
+    pricing: {
+      base: {
+        price: 2.99,
+      },
    },
   }, 
   {
@@ -462,8 +501,10 @@ export const catalog = [
     ],   
     type: "sales",
     default_color: "Silver",    
-    sizes: {
-      "# packs": 2.99,
+    pricing: {
+      base: {
+        price: 2.99,
+      },
     },
   },
   {
@@ -494,8 +535,10 @@ export const catalog = [
     ],
     type: "sales",
     default_color: "Yellow",
-    sizes: {
-      "# packs": 2.99,
+    pricing: {
+      base: {
+        price: 2.99,
+      },
     },
   },
   {
@@ -516,8 +559,10 @@ export const catalog = [
     halfColors: ["Red Grn"],
     type: "sales",
     default_color: "Blue",   
-    sizes: {
-      "pk of 2": 32.99,
+    pricing: {
+      base: {
+        price: 32.99,
+      },
     },
   },  
 ]
