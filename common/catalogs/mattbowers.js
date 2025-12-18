@@ -803,7 +803,9 @@ export const catalog = [
     colors: ["Chrome"],
     type: "customs",
     default_color: "Chrome",
-    description: "Sold in quantities of 1000, 1500 and 2500; Enter '1' for shipment of 1000, etc.",
+    description: 
+    `Sold in quantities of 1000, 1500 and 2500; Enter '1' 
+    for a shipment of 1000 frames, etc.`,
     supportedStores: ["BOWIME"],
     sizes: {
       "1000": 1.61,
@@ -818,7 +820,9 @@ export const catalog = [
     colors: ["Black"],
     type: "customs",
     default_color: "Black",
-    description: "Sold in quantities of 1000, 1500 and 2500; Enter '1' for shipment of 1000, etc.",
+    description: 
+    `Sold in quantities of 1000, 1500 and 2500; Enter '1' 
+    for a shipment of 1000 plates, etc.`,
     supportedStores: ["BOWIME"],
     sizes: {
       "1000": .49,
@@ -833,7 +837,9 @@ export const catalog = [
     colors: ["Black","White"],
     type: "customs",
     default_color: "Black",
-    description: "BLACK WILL NOT SHOW ON WHITE DECAL; Sold in quantities of 1000, 1500 & 2500",
+    description: 
+    `BLACK WILL NOT SHOW ON WHITE DECAL; Sold in quantities of 
+    1000, 1500 & 2500. Enter '1' for a shipment of 1000 decals, etc.`,
     supportedStores: ["BOWIME"],
     sizes: {
       "1000": .64,
@@ -848,7 +854,9 @@ export const catalog = [
     colors: ["Chrome"],
     type: "customs",
     default_color: "Chrome",
-    description: "Sold in quantities of 1000, 1500 and 2500; Enter '1' for shipment of 1000, etc.",
+    description: 
+    `Sold in quantities of 1000, 1500 and 2500; Enter '1' 
+    for a shipment of 1000 plates, etc.`,
     supportedStores: ["MATFME"],
     sizes: {
       "1000": .39,
@@ -858,12 +866,14 @@ export const catalog = [
   },
   {
     code: "MATFME-33P-401384A",
-    name: "15 Gauge Vinyl Plate",
-    fullname: "15 Gauge Vinyl Plate - White w/294 blue imprint",
+    name: ".15 Gauge Vinyl Plate",
+    fullname: ".15 Gauge Vinyl Plate - White w/294 blue imprint",
     colors: ["Blue"],
     type: "customs",
     default_color: "Blue",
-    description: "Sold in quantities of 1000, 1500 and 2500; Enter '1' for shipment of 1000, etc.",
+    description: 
+    `Sold in quantities of 1000, 1500 and 2500; Enter '1' 
+    for a shipment of 1000 plates, etc.`,
     supportedStores: ["MATFME"],
     sizes: {
       "1000": .49,
@@ -878,7 +888,9 @@ export const catalog = [
     colors: ["Black","White"],
     type: "customs",
     default_color: "Black",    
-    description: "BLACK WILL NOT SHOW ON WHITE DECAL; Sold in quantities of 1000, 1500 & 2500",
+   description: 
+    `BLACK WILL NOT SHOW ON WHITE DECAL; Sold in quantities of 
+    1000, 1500 & 2500. Enter '1' for a shipment of 1000 decals, etc.`,
     supportedStores: ["MATFME"],
     sizes: {
       "1000": .64,
@@ -893,7 +905,9 @@ export const catalog = [
     colors: ["Black","White"],
     type: "customs",
     default_color: "Black",
-    description: "BLACK WILL NOT SHOW ON WHITE DECAL; Sold in quantities of 1000, 1500 & 2500",
+    description: 
+    `BLACK WILL NOT SHOW ON WHITE DECAL; Sold in quantities of 
+    1000, 1500 & 2500. Enter '1' for a shipment of 1000 decals, etc.`,
     supportedStores: ["MATFME"],
     sizes: {
       "1000": .64,
@@ -908,7 +922,9 @@ export const catalog = [
     colors: ["Black"],
     type: "customs",
     default_color: "Black",
-    description: "Sold in quantities of 1000, 1500 and 2500; Enter '1' for shipment of 1000, etc.",
+    description: 
+    `Sold in quantities of 1000, 1500 and 2500; Enter '1' 
+    for a shipment of 1000 frames, etc.`,
     supportedStores: ["BOWHSL"],
     sizes: {
       "1000": .59,
@@ -918,12 +934,14 @@ export const catalog = [
   },
   {
     code: "BOWHSL-33P-518072A",
-    name: "15 Gauge Vinyl Plate",
-    fullname: "15 Gauge Vinyl Plate - White w/reflex blue imprint",
+    name: ".15 Gauge Vinyl Plate",
+    fullname: ".15 Gauge Vinyl Plate - White w/reflex blue imprint",
     colors: ["Blue"],
     type: "customs",
     default_color: "Blue",
-    description: "Sold in quantities of 1000, 1500 and 2500; Enter '1' for shipment of 1000, etc.",
+    description: 
+    `Sold in quantities of 1000, 1500 and 2500; Enter '1' 
+    for a shipment of 1000 plates, etc.`,
     supportedStores: ["BOWHSL"],
     sizes: {
       "1000": .49,
@@ -938,7 +956,9 @@ export const catalog = [
     colors: ["Black","White"],
     type: "customs",
     default_color: "Black",
-    description: "BLACK WILL NOT SHOW ON WHITE DECAL; Sold in quantities of 1000, 1500 & 2500",
+    description: 
+    `BLACK WILL NOT SHOW ON WHITE DECAL; Sold in quantities
+    of 1000, 1500 & 2500. Enter '1' for a shipment of 1000 decals, etc.`,
     supportedStores: ["BOWHSL"],
     sizes: {
       "1000": .64,
@@ -953,7 +973,9 @@ export const catalog = [
     colors: ["Black"],
     type: "customs",
     default_color: "Black",
-    description: "Sold in quantities of 1000, 1500 and 2500; Enter '1' for shipment of 1000, etc.",
+    description: 
+    `Sold in quantities of 1000, 1500 and 2500; Enter '1' 
+    for a shipment of 1000 frames, etc.`,
     supportedStores: ["BOWCSL"],
     sizes: {
       "1000": .59,
@@ -963,12 +985,14 @@ export const catalog = [
   },
   {
     code: "BOWCSL-33GT-450935Z",
-    name: "15 Gauge Vinyl Plate",
-    fullname: "15 Gauge Vinyl Plate - White w/4CP imprint",
+    name: ".15 Gauge Vinyl Plate",
+    fullname: ".15 Gauge Vinyl Plate - White w/4CP imprint",
     colors: ["Blue"],
     type: "customs",
     default_color: "Blue",
-    description: "Sold in quantities of 1000, 1500 and 2500; Enter '1' for shipment of 1000, etc.",
+    description: 
+    `Sold in quantities of 1000, 1500 and 2500; Enter '1' 
+    for a shipment of 1000 plates, etc.`,
     supportedStores: ["BOWCSL"],
     sizes: {
       "1000": .49,
@@ -983,7 +1007,9 @@ export const catalog = [
     colors: ["Black","White"],
     type: "customs",
     default_color: "Black",
-    description: "BLACK WILL NOT SHOW ON WHITE DECAL; Sold in quantities of 1000, 1500 & 2500",
+    description: 
+    `BLACK WILL NOT SHOW ON WHITE DECAL; Sold in quantities
+    of 1000, 1500 & 2500. Enter '1' for a shipment of 1000 decals, etc.`,
     supportedStores: ["BOWCSL"],
     sizes: {
       "1000": .64,
@@ -998,7 +1024,9 @@ export const catalog = [
     colors: ["Black"],
     type: "customs",
     default_color: "Black",
-    description: "Sold in quantities of 1000, 1500 and 2500; Enter '1' for shipment of 1000, etc.",
+    description: 
+    `Sold in quantities of 1000, 1500 and 2500; Enter '1' 
+    for a shipment of 1000 frames, etc.`,
     supportedStores: ["BOWCME"],
     sizes: {
       "1000": .59,
@@ -1008,12 +1036,14 @@ export const catalog = [
   },
   {
     code: "BOWCME-33GT-451336Z",
-    name: "15 Gauge Vinyl Plate",
-    fullname: "15 Gauge Vinyl Plate - White w/4CP imprint",
+    name: ".15 Gauge Vinyl Plate",
+    fullname: ".15 Gauge Vinyl Plate - White w/4CP imprint",
     colors: ["Blue"],
     type: "customs",
     default_color: "Blue",
-    description: "Sold in quantities of 1000, 1500 and 2500; Enter '1' for shipment of 1000, etc.",
+    description: 
+    `Sold in quantities of 1000, 1500 and 2500; Enter '1' 
+    for a shipment of 1000 plates, etc.`,
     supportedStores: ["BOWCME"],
     sizes: {
       "1000": .49,
@@ -1028,7 +1058,9 @@ export const catalog = [
     colors: ["Black","White"],
     type: "customs",
     default_color: "Black",
-    description: "BLACK WILL NOT SHOW ON WHITE DECAL; Sold in quantities of 1000, 1500 & 2500",
+    description: 
+    `BLACK WILL NOT SHOW ON WHITE DECAL; Sold in quantities of 1000, 
+    1500 & 2500. Enter '1' for a shipment of 1000 decals, etc.`,
     supportedStores: ["BOWCME"],
     sizes: {
       "1000": .64,
@@ -1043,7 +1075,7 @@ export const catalog = [
     colors: ["Blue"],
     type: "customs",
     default_color: "Blue",
-    description: "Sold in quantities of 1000; Enter '1' for one shipment of 1000",
+    description: `Sold in quantities of 1000; Enter '1' for one shipment of 1000 covers`,
     supportedStores: ["BOWCME"],
     sizes: {
       "1000": .61,      
@@ -1056,7 +1088,9 @@ export const catalog = [
     colors: ["Black"],
     type: "customs",
     default_color: "Black",
-    description: "Sold in quantities of 1000, 1500 and 2500; Enter '1' for shipment of 1000, etc.",
+    description: 
+    `Sold in quantities of 1000, 1500 and 2500; Enter 
+    '1' for shipment of 1000 frames, etc.`,
     supportedStores: ["BOWHME"],
     sizes: {
       "1000": .59,
@@ -1066,12 +1100,14 @@ export const catalog = [
   },
   {
     code: "BOWHME-33P-518960",
-    name: "15 Gauge Vinyl Plate",
-    fullname: "15 Gauge Vinyl Plate - White w/288 blue imprint",
+    name: ".15 Gauge Vinyl Plate",
+    fullname: ".15 Gauge Vinyl Plate - White w/288 blue imprint",
     colors: ["Blue"],
     type: "customs",
     default_color: "Blue",
-    description: "Sold in quantities of 1000, 1500 and 2500; Enter '1' for shipment of 1000, etc.",
+    description: 
+    `Sold in quantities of 1000, 1500 and 2500; Enter 
+    '1' for a shipment of 1000 plates, etc.`,
     supportedStores: ["BOWHME"],
     sizes: {
       "1000": .49,
@@ -1086,7 +1122,9 @@ export const catalog = [
     colors: ["Black","White"],
     type: "customs",
     default_color: "Black",
-    description: "BLACK WILL NOT SHOW ON WHITE DECAL; Sold in quantities of 1000, 1500 & 2500",
+    description: 
+    `BLACK WILL NOT SHOW ON WHITE DECAL; Sold in quantities of 1000, 
+    1500 & 2500. Enter '1' for a shipment of 1000 decals, etc.`,
     supportedStores: ["BOWHME"],
     sizes: {
       "1000": .64,
@@ -1101,7 +1139,7 @@ export const catalog = [
     colors: ["White"],
     type: "accessory",
     default_color: "White", 
-    description: "Sold in boxes of 1000; Enter '1' for shipment of 1000",   
+    description: "Sold in boxes of 1000; Enter '1' for shipment of 1000 key rings.",   
     sizes: {
        "1000": 1.29,
     },
@@ -1141,7 +1179,7 @@ export const catalog = [
     colors: ["Clear"],
     type: "accessory",
     default_color: "Clear",
-    description: "Sold in quantities of 1000; Enter '1' for one shipment of 1000",    
+    description: "Sold in quantities of 1000; Enter '1' for one shipment of 1000 totes.",    
     sizes: {
       "1000": 3.50,      
     },
@@ -1153,7 +1191,7 @@ export const catalog = [
     colors: ["Blue"],
     type: "accessory",
     default_color: "Blue",
-    description: "Sold in quantities of 500; Enter '1' for shipment of 500, etc.",    
+    description: "Sold in quantities of 500; Enter '1' for shipment of 500 totes.",    
     sizes: {
        "500": 1.85,       
    },
@@ -1245,7 +1283,7 @@ export const catalog = [
     ],   
     type: "sales",
     default_color: "Beige",
-    description: "Sold in quantities of 1, 5 or 10 boxes", 
+    description: "Sold in quantities of 1, 5 or 10 boxes; Enter '1' for a shipment of one box, etc.", 
     sizes: {
       "1": 67.99,
       "5": 67.99,
@@ -1255,7 +1293,7 @@ export const catalog = [
   {
     code: "GP200",
     name: "Stock Key Tags",
-    fullname: "Self-Protecting Key Tags (250 per box)",
+    fullname: "Self-Protecting Key Tags (250/box)",
     colors: [
       "Blue",
       "Gray",
@@ -1284,7 +1322,7 @@ export const catalog = [
     colors: ["Blue", "Green", "Orange", "Red", "White", "Yellow"],
     type: "sales",
     default_color: "Blue",
-    description: "Sold in quantities of 1, 5 or 10 packs",    
+    description: "Sold in quantities of 1, 5 or 10 packs; Enter '1' for a shipment of one pack, etc.",    
     sizes: {
       "1": 15.99,
       "5": 15.99,
@@ -1409,7 +1447,7 @@ export const catalog = [
     colors: ["White"],
     type: "sales",
     default_color: "White",
-    description: "Sold in quantities of 1000; Enter '1' for shipment of 1000",    
+    description: "Sold in quantities of 1000; Enter '1' for shipment of 1000 folders.",    
     sizes: {
        "1000": 1.75,       
    },
@@ -1432,7 +1470,7 @@ export const catalog = [
     ],
     type: "sales",
     default_color: "Blue",
-    description: "Sold in quantities of 1,5 or 10 boxes", 
+    description: "Sold in quantities of 1, 5 or 10 boxes; Enter '1' for a box of 500, etc.", 
     sizes: {
       "1": 115.76,
       "5": 115.76,
@@ -1446,7 +1484,7 @@ export const catalog = [
     colors: ["Blue","White"],
     type: "sales",
     default_color: "Blue",
-    description: "Sold in quantities of 1000, 1500 and 2500",    
+    description: "Sold in quantities of 1000, 1500 and 2500; Enter '1' for a shipment of 1000, etc. ",    
     sizes: {
        "1000": .44,
        "1500": .44,
@@ -1535,8 +1573,7 @@ export const catalog = [
     name: "Service Due Sticker",
     fullname: "White Vinyl Service Due Sticker w/black imprint (1.5 in. x 2.25 in.)",
     description: 
-    `GREY DOES NOT PRINT. Sold in quantities of 2500; 
-    Enter '1' for one shipment of 2500`, 
+    `GREY DOES NOT PRINT. Sold in quantities of 2500; Enter '1' for one shipment of 2500.`, 
     colors: ["White"],
     type: "service",
     default_color: "White",    
@@ -1551,7 +1588,7 @@ export const catalog = [
     colors: ["Metal"],
     type: "service",
     default_color: "Metal",
-    description: "Sold in quantities of 1, 5 or 10 packs",    
+    description: "Sold in quantities of 1, 5 or 10 packs; Enter '1' for one pack of 250, etc.",    
     sizes: {
       "1": 16.99,
       "5": 12.99,
@@ -1565,7 +1602,7 @@ export const catalog = [
     colors: ["White"],
     type: "service",
     default_color: "White",
-    description: "GREY DOES NOT PRINT. Sold in quantities of 2500; Enter '1' for one shipment of 2500",    
+    description: "GREY DOES NOT PRINT. Sold in quantities of 2500; Enter '1' for one shipment of 2500 stickers.",    
     sizes: {
       "2500": .15,      
     },
