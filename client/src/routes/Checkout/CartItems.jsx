@@ -1,7 +1,6 @@
 import DeleteIcon from "@mui/icons-material/Delete";
 import { useOutletContext } from "react-router-dom";
 import { ColorOption, SizeOption } from "../../lib/constants";
-import { getCatalogItem } from "../../lib/utils";
 
 export default function CartItems() {
   const [cart, set_cart] = useOutletContext();
@@ -12,20 +11,11 @@ export default function CartItems() {
       </div>
       {Object.keys(cart).map((k) => {
         const item = cart[k];
-        const itemConfiguration = getCatalogItem(item.code);
-        const isDefaultColor =
-          item.color === ColorOption.DEFAULT ||
-          item.color === itemConfiguration.default_color;
         const isDefaultSize = item.size === SizeOption.DEFAULT;
-        const imagePath = isDefaultColor
-          ? `/images/${item.code}.jpg`
-          : `/images/${item.code}_${item.color
-            .split(" ")
-            .join("_")
-            .toLowerCase()}.jpg`;
-        const formatter = new Intl.NumberFormat('en-US', {
-          style: 'currency',
-          currency: 'USD',
+
+        const formatter = new Intl.NumberFormat("en-US", {
+          style: "currency",
+          currency: "USD",
         });
 
         // Usage
@@ -43,9 +33,13 @@ export default function CartItems() {
               />
             </div>
 
-            <div className="flex flex-col w-[200px] p-1 text-sm">
+            <div className="flex flex-col p-1 text-sm">
               <p>
-                <b>{priceDisplay} each</b>
+                <b>{item.name}</b>
+              </p>
+              <p>
+                <b>Price: </b>
+                {priceDisplay} each
               </p>
               {!(item.color === ColorOption.DEFAULT) && (
                 <p>
@@ -83,9 +77,6 @@ export default function CartItems() {
               <p>
                 <b>Quantity:</b> {item.quantity}
               </p>
-            </div>
-            <div className="h-[140px]">
-              <img className="h-[120px]" src={imagePath}></img>
             </div>
           </div>
         );
