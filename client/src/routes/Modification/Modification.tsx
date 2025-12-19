@@ -3,16 +3,26 @@ import { getWebCatalog } from "guardian-common";
 import { useLoaderData, useOutletContext } from "react-router-dom";
 import { useState } from "react";
 import Snackbar from "@mui/material/Snackbar";
-import MenuItem from "@mui/material/MenuItem";
 import Alert from "@mui/material/Alert";
 import { getEmbroidery } from "../../lib/utils";
 import ColorSelector from "./ColorSelector";
 import QuantitySelector from "./QuantitySelector";
-import { CartItem } from "../../lib/interfaces";
 import EmbroiderySelector from "./EmbroiderySelector";
 import { getWebConfigValue } from "guardian-common";
 import Description from "./Description";
-import { ColorOption } from "../../lib/constants";
+import {
+  createCartItem,
+  verifyEmbroidery,
+  verifyPlacement,
+  verifyQuantity,
+} from "./utils";
+import { PlacementOption } from "../../lib/constants";
+
+type UserSelection = {
+  [key: string]: {
+    quantity: number;
+  };
+};
 
 export async function loader({ params }) {
   return getWebCatalog().find((i) => i.code === params.id);
@@ -37,40 +47,52 @@ export default function Modification() {
   const [snackbarText] = useState("Item added to cart");
   const [errorSnackbarOpen, setErrorSnackbarOpen] = useState(false);
   const [errorSnackbarText, setErrorSnackbarText] = useState("");
-  const sizes = Object.keys(item.sizes);
-  const colors = item.colors;
-  const [selected_size] = useState(sizes[0]);
-  const [price] = useState(item.sizes[selected_size]);
+  /*
+    this value is used for two things
+
+    1) for displaying some text in the price overview: "starts at $x"
+    2) discount calculation
+  */
+  const lowestPricedItemVariation = Math.min(
+    ...Object.values(item.pricing).map((i: any) => i.price)
+  );
+
   const [firstEmbroidery, setFirstEmbroidery] = useState("");
-  const [secondEmbroidery, setSecondEmbroidery] = useState("");
+  const [secondEmbroidery, setSecondEmbroidery] = useState(null);
   const logo_placements = getWebConfigValue("logo_placements")[item.type] || [];
   const embroideries = getEmbroidery(item.sub_category || item.type) || [];
+  const [reset, setReset] = useState(Date.now());
 
   const description = item.description || "";
 
+  /*
+    if an item type has no placements, then we set as default, but really this is just a special
+    value that we will use to process the item differently, we prob want N/A to end up on the order data
+  */
   const [firstPlacement, setFirstPlacement] = useState(
-    logo_placements[0] || "Left Chest"
+    logo_placements[0] || PlacementOption.DEFAULT
   );
 
   const [secondPlacement, setSecondPlacement] = useState(
-    logo_placements[0] || "Left Chest"
+    logo_placements[0] || PlacementOption.DEFAULT
   );
-  const [customsOrder, setCustomsOrder] = useState({});
 
-  const handleFirstEmbroideryChange = (event) => {
-    setFirstEmbroidery(event.target.value);
+  const [userSelection, setUserSelection] = useState<UserSelection>({});
+
+  const handleFirstEmbroideryChange = (embroidery: string) => {
+    setFirstEmbroidery(embroidery);
   };
 
-  const handleSecondEmbroideryChange = (event) => {
-    setSecondEmbroidery(event.target.value);
+  const handleSecondEmbroideryChange = (embroidery: string) => {
+    setSecondEmbroidery(embroidery);
   };
 
-  const handleFirstPlacementChange = (event) => {
-    setFirstPlacement(event.target.value);
+  const handleFirstPlacementChange = (placement: string) => {
+    setFirstPlacement(placement);
   };
 
-  const handleSecondPlacementChange = (event) => {
-    setSecondPlacement(event.target.value);
+  const handleSecondPlacementChange = (placement: string) => {
+    setSecondPlacement(placement);
   };
 
   function handleSnackbarClose() {
@@ -79,180 +101,60 @@ export default function Modification() {
   }
 
   function addItemToCart() {
-    const new_cart = {
-      ...cart,
-    };
-
-    // check if the keys of the sizes are numbers vs strings
-    const shouldUseQuantityBasedOrdering = !isNaN(
-      Number(Object.keys(item.sizes)[0])
+    const embroideryErrMessage = verifyEmbroidery(
+      item,
+      embroideries,
+      firstEmbroidery,
+      secondEmbroidery
     );
-
-    // TODO: shouldnt this be broken out to a function?
-    if (shouldUseQuantityBasedOrdering) {
-      // check order not empty
-      const noCustoms =
-        Object.keys(customsOrder).length === 0
-          ? true
-          : Object.values(customsOrder).every(
-              (arr: string[]) => arr.length === 0
-            );
-
-      if (noCustoms) {
-        setErrorSnackbarOpen(true);
-        setErrorSnackbarText("Must make a selection");
-        return;
-      }
-
-      const items: { [key: string]: number } = {};
-
-      Object.keys(customsOrder).forEach((k: string) => {
-        // the keys of customsOrder are the quantity chosen and the color, like "1,Blue"
-        const quantity = parseInt(k.split(",")[0]);
-        // object representing quantity and color selected
-        const orderInfo = customsOrder[k];
-        /*
-          if the user ordered 2x500 and 1x1000 then we need to add them together
-        */
-        if (items[orderInfo.color]) {
-          items[orderInfo.color] += quantity * orderInfo.quantity;
-        } else {
-          items[orderInfo.color] = quantity * orderInfo.quantity;
-        }
-      });
-
-      for (const [color, quantity] of Object.entries(items)) {
-        addCustomsToCart(quantity, color, new_cart);
-      }
-
-      set_cart(new_cart);
-      sessionStorage.setItem("cart", JSON.stringify(new_cart));
-      setSnackbarOpen(true);
-      setCustomsOrder({});
-      return;
-    }
-
-    let any_input_has_value = false;
-    let invalid_input = false;
-
-    const hasEmbroideryOptions = embroideries.length > 0;
-    const embroideryTypes = ["mens", "womens", "accessory"];
-    const placementTypes = ["mens", "womens", "tshirts", "hat"];
-
-    if (
-      hasEmbroideryOptions &&
-      embroideryTypes.includes(item.type) &&
-      !firstEmbroidery
-    ) {
+    if (embroideryErrMessage) {
+      setErrorSnackbarText(embroideryErrMessage);
       setErrorSnackbarOpen(true);
-      setErrorSnackbarText("Must select an embroidery");
       return;
     }
 
-    const table = document.getElementById("table") as any;
-    // the first row is the table headers, skip it
-    for (let i = 1; i < table.rows.length; i++) {
-      const inputs = table.rows[i].getElementsByTagName("input");
-      for (let j = 0; j < inputs.length; j++) {
-        if (inputs[j].value) {
-          any_input_has_value = true;
-          const isNum = /^\d+$/.test(inputs[j].value);
-
-          if (!isNum) {
-            inputs[j].value = "";
-            continue;
-          }
-
-          if (item.type === "accessory" && Number(inputs[j].value) < 12) {
-            invalid_input = true;
-            setErrorSnackbarOpen(true);
-            setErrorSnackbarText("Must order at least 12 units");
-            continue;
-          }
-
-          const cart_item: CartItem = {
-            price: item.sizes[sizes[j]],
-            quantity: Number(inputs[j].value),
-            size: sizes[j],
-            color: colors
-              ? colors[i - 1]
-              : item.default_color || ColorOption.DEFAULT,
-            code: item.code,
-            placement: placementTypes.includes(item.type)
-              ? firstPlacement
-              : null,
-            embroidery: firstEmbroidery,
-          };
-
-          let key = `${item.code},${Object.keys(item.sizes)[j]},${
-            colors ? colors[i - 1] : item.default_color || ColorOption.DEFAULT
-          },${firstEmbroidery}`;
-
-          if (secondEmbroidery) {
-            cart_item["secondEmbroidery"] = secondEmbroidery;
-            cart_item["secondPlacement"] = secondPlacement;
-            key += `,${secondEmbroidery}`;
-          }
-
-          if (new_cart[key]) {
-            new_cart[key].quantity += cart_item.quantity;
-          } else {
-            new_cart[key] = cart_item;
-          }
-        }
-        inputs[j].value = "";
-      }
+    if (!verifyQuantity(userSelection)) {
+      setErrorSnackbarText("Must select a quantity");
+      setErrorSnackbarOpen(true);
+      return;
     }
 
-    if (!any_input_has_value || invalid_input) {
-    } else {
-      setFirstEmbroidery("");
-      setSecondEmbroidery("");
+    const placementErrMessage = verifyPlacement(
+      firstPlacement,
+      secondPlacement,
+      secondEmbroidery
+    );
+    if (placementErrMessage) {
+      setErrorSnackbarText(placementErrMessage);
+      setErrorSnackbarOpen(true);
+      return;
+    }
+
+    const new_cart = structuredClone(cart);
+
+    // key is size + color, value is object containing quantity
+    for (const [key, quantity] of Object.entries(userSelection)) {
+      createCartItem(
+        item,
+        quantity,
+        key,
+        new_cart,
+        firstEmbroidery,
+        secondEmbroidery,
+        firstPlacement,
+        secondPlacement,
+        lowestPricedItemVariation
+      );
+
       set_cart(new_cart);
       sessionStorage.setItem("cart", JSON.stringify(new_cart));
-      setSnackbarOpen(true);
-    }
-  }
-
-  function addCustomsToCart(quantity, color, cart) {
-    const key = `${item.code},${color}`;
-    const cart_item = {
-      type: item.type,
-      name: item.fullname,
-      price: getPriceWithDiscount(Number(quantity), 1),
-      quantity: Number(quantity),
-      size: "default",
-      color: color,
-      code: item.code,
-      placement: null,
-      embroidery: firstEmbroidery,
-    };
-
-    if (secondEmbroidery) {
-      cart_item["secondEmbroidery"] = secondEmbroidery;
     }
 
-    if (cart[key]) {
-      cart[key].quantity += cart_item.quantity;
-      cart[key].price = getPriceWithDiscount(cart[key].quantity, price);
-    } else {
-      cart[key] = cart_item;
-    }
-  }
-
-  function getPriceWithDiscount(cartQuantity: number, fallbackPrice: number) {
-    const sortedSizes = Object.keys(item.sizes).sort(
-      (a, b) => Number(a) - Number(b)
-    );
-
-    let price = fallbackPrice;
-    for (const size of sortedSizes) {
-      if (cartQuantity >= Number(size)) {
-        price = item.sizes[size];
-      }
-    }
-
-    return price;
+    setSnackbarOpen(true);
+    setUserSelection({});
+    // reset quantities in UI
+    setReset(Date.now());
+    return;
   }
 
   return (
@@ -266,9 +168,10 @@ export default function Modification() {
           <div className={styles.name}>{item.fullname}</div>
           {item.type !== "customs" && (
             <div className="font-bold text-[16px] mb-[20px]">
-              Starts at ${price} each
+              Starts at ${lowestPricedItemVariation} each
             </div>
           )}
+
           <Description description={description} />
 
           <div className="mt-[10px] flex gap-[50px]">
@@ -295,9 +198,8 @@ export default function Modification() {
 
           <QuantitySelector
             item={item}
-            sizes={sizes}
-            customsOrder={customsOrder}
-            setCustomsOrder={setCustomsOrder}
+            setUserSelection={setUserSelection}
+            reset={reset}
           />
 
           <div className="mt-auto pt-[20px] flex justify-end">

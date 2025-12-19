@@ -8,8 +8,11 @@ export const catalog = [
     default_color: "Chrome", 
     description: "Maximum one box (enter '1' in the box below - 250/bx)",
     supportedStores: ["FRICBT"],   
-    sizes: {
-      250: 1.50,       
+    quantities: [250],
+    pricing: {
+      base: {
+        price: 1.50,
+      },
     },
   },
   {
@@ -21,8 +24,11 @@ export const catalog = [
     default_color: "Chrome",
     description: "Maximum one box (enter '1' in the box below - 250/bx)",
     supportedStores: ["FRICBT"],    
-    sizes: {
-      250: 1.50,     
+    quantities: [250],
+    pricing: {
+      base: {
+        price: 1.50,
+      },
     },
   },
   {
@@ -34,8 +40,11 @@ export const catalog = [
     default_color: "Black",
     description: "Maximum one box (enter '1' in the box below)",
     supportedStores: ["FRICBT"],    
-    sizes: {
-      250: 0.69,          
+    quantities: [250],
+    pricing: {
+      base: {
+        price: 0.69,
+      },
     },
   },
   {
@@ -47,8 +56,11 @@ export const catalog = [
     default_color: "White",
     description: "Minumum three boxes (enter '3' in the box below - 500/bx)",
     supportedStores: ["FRICBT"],    
-    sizes: {
-      500: 0.23,          
+    quantities: [500],
+    pricing: {
+      base: {
+        price: 0.23,
+      },
     },
   },
   {
@@ -60,8 +72,11 @@ export const catalog = [
     default_color: "Aluminum",
     description: "Maximum one box (enter '1' in the box below - 50/bx)",
     supportedStores: ["FRICBT"],     
-    sizes: {
-      50: 3.65,            
+    quantities: [50],
+    pricing: {
+      base: {
+        price: 3.65,
+      },
     },
   },
   {
@@ -73,8 +88,11 @@ export const catalog = [
     default_color: "Yellow",
     description: "Maximum one box (enter '1' in the box below - 250/bx)",
     supportedStores: ["FRICBT"],     
-    sizes: {
-      250: 0.75,           
+    quantities: [250],
+    pricing: {
+      base: {
+        price: 0.75,
+      },
     },
   },
   {
@@ -84,8 +102,9 @@ export const catalog = [
     colors: ["Athletic Oxford","Athletic Red", "Athletic Royal", "Black","Navy","Neon Green","White"],
     type: "hat",
     default_color: "Athletic Oxford",
-    sizes: {
-      OSFA: 0.00,
+    sizes: ["OSFA"],
+    pricing: {
+      OSFA: { price: 0.00 },
     },
   },
   {
@@ -95,8 +114,9 @@ export const catalog = [
     colors: ["Black","Graphite","Navy"],
     type: "hat",
     default_color: "Black",
-    sizes: {
-      OSFA: 0.00,
+    sizes: ["OSFA"],
+    pricing: {
+      OSFA: { price: 0.00 },
     },
   },
   {
@@ -106,8 +126,9 @@ export const catalog = [
     colors: ["Black","Graphite","Grey","Deep Navywt"],
     type: "hat",
     default_color: "Black",
-    sizes: {
-      OSFA: 0.00,
+    sizes: ["OSFA"],
+    pricing: {
+      OSFA: { price: 0.00 },
     },
   },
   {
@@ -137,8 +158,9 @@ export const catalog = [
     ],
     type: "hat",
     default_color: "Athletic Gold",
-    sizes: {
-      OSFA: 0.00,
+    sizes: ["OSFA"],
+    pricing: {
+      OSFA: { price: 0.00 },
     },
   },
   {
@@ -168,14 +190,15 @@ export const catalog = [
     ],
     type: "tshirts",
     default_color: "Atomic Blue",
-    sizes: {
-      Small: 0.00,
-      Medium: 0.00,
-      Large: 0.00,
-      XLarge: 0.00,
-      "2XLarge": 0.00,
-      "3XLarge": 0.00,
-      "4XLarge": 0.00,
+    sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge", "3XLarge", "4XLarge"],
+    pricing: {
+      Small: { price: 0.00 },
+      Medium: { price: 0.00 },
+      Large: { price: 0.00 },
+      XLarge: { price: 0.00 },
+      "2XLarge": { price: 0.00 },
+      "3XLarge": { price: 0.00 },
+      "4XLarge": { price: 0.00 },
     },
   },
   {
@@ -204,16 +227,17 @@ export const catalog = [
     ],
     type: "tshirts",
     default_color: "Athletic Heather",
-    sizes: {
-      Small: 0.00,
-      Medium: 0.00,
-      Large: 0.00,
-      XLarge: 0.00,
-      "2XLarge": 0.00,
-      "3XLarge": 0.00,
-      "4XLarge": 0.00,
-      "5XLarge": 0.00,
-      "6XLarge": 0.00,
+    sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge", "3XLarge", "4XLarge", "5XLarge", "6XLarge"],
+    pricing: {
+      Small: { price: 0.00 },
+      Medium: { price: 0.00 },
+      Large: { price: 0.00 },
+      XLarge: { price: 0.00 },
+      "2XLarge": { price: 0.00 },
+      "3XLarge": { price: 0.00 },
+      "4XLarge": { price: 0.00 },
+      "5XLarge": { price: 0.00 },
+      "6XLarge": { price: 0.00 },
     },
   },
   {
@@ -223,14 +247,15 @@ export const catalog = [
     colors: ["Charcoal","Jet Black","Navy","Red","Royal","White"],
     type: "tshirts",
     default_color: "Jet Black",
-    sizes: {
-      Small: 0.00,
-      Medium: 0.00,
-      Large: 0.00,
-      XLarge: 0.00,
-      "2XLarge": 0.00,
-      "3XLarge": 0.00,
-      "4XLarge": 0.00,      
+    sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge", "3XLarge", "4XLarge"],
+    pricing: {
+      Small: { price: 0.00 },
+      Medium: { price: 0.00 },
+      Large: { price: 0.00 },
+      XLarge: { price: 0.00 },
+      "2XLarge": { price: 0.00 },
+      "3XLarge": { price: 0.00 },
+      "4XLarge": { price: 0.00 },
     },
   },
   {
@@ -258,16 +283,17 @@ export const catalog = [
     ],
     type: "mens",
     default_color: "Black",
-    sizes: {
-      Small: 0.00,
-      Medium: 0.00,
-      Large: 0.00,
-      XLarge: 0.00,
-      "2XLarge": 0.00,
-      "3XLarge": 0.00,
-      "4XLarge": 0.00,
-      "5XLarge": 0.00,
-      "6XLarge": 0.00,
+    sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge", "3XLarge", "4XLarge", "5XLarge", "6XLarge"],
+    pricing: {
+      Small: { price: 0.00 },
+      Medium: { price: 0.00 },
+      Large: { price: 0.00 },
+      XLarge: { price: 0.00 },
+      "2XLarge": { price: 0.00 },
+      "3XLarge": { price: 0.00 },
+      "4XLarge": { price: 0.00 },
+      "5XLarge": { price: 0.00 },
+      "6XLarge": { price: 0.00 },
     },
   },
   {
@@ -295,16 +321,17 @@ export const catalog = [
     ],
     type: "womens",
     default_color: "Black",
-    sizes: {
-      Small: 0.00,
-      Medium: 0.00,
-      Large: 0.00,
-      XLarge: 0.00,
-      "2XLarge": 0.00,
-      "3XLarge": 0.00,
-      "4XLarge": 0.00,
-      "5XLarge": 0.00,
-      "6XLarge": 0.00,
+    sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge", "3XLarge", "4XLarge", "5XLarge", "6XLarge"],
+    pricing: {
+      Small: { price: 0.00 },
+      Medium: { price: 0.00 },
+      Large: { price: 0.00 },
+      XLarge: { price: 0.00 },
+      "2XLarge": { price: 0.00 },
+      "3XLarge": { price: 0.00 },
+      "4XLarge": { price: 0.00 },
+      "5XLarge": { price: 0.00 },
+      "6XLarge": { price: 0.00 },
     },
   },
   {
@@ -335,12 +362,13 @@ export const catalog = [
     ],
     type: "womens",
     default_color: "Anthracite",
-    sizes: {
-      Small: 0.00,
-      Medium: 0.00,
-      Large: 0.00,
-      XLarge: 0.00,
-      "2XLarge": 0.00,
+    sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge"],
+    pricing: {
+      Small: { price: 0.00 },
+      Medium: { price: 0.00 },
+      Large: { price: 0.00 },
+      XLarge: { price: 0.00 },
+      "2XLarge": { price: 0.00 },
     },
   },
   {
@@ -371,14 +399,15 @@ export const catalog = [
     ],
     type: "mens",
     default_color: "Anthracite",
-    sizes: {
-      Small: 0.00,
-      Medium: 0.00,
-      Large: 0.00,
-      XLarge: 0.00,
-      "2XLarge": 0.00,
-      "3XLarge": 0.00,
-      "4XLarge": 0.00,
+    sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge", "3XLarge", "4XLarge"],
+    pricing: {
+      Small: { price: 0.00 },
+      Medium: { price: 0.00 },
+      Large: { price: 0.00 },
+      XLarge: { price: 0.00 },
+      "2XLarge": { price: 0.00 },
+      "3XLarge": { price: 0.00 },
+      "4XLarge": { price: 0.00 },
    },
   },
   {
@@ -398,12 +427,13 @@ export const catalog = [
     ],
     type: "mens",
     default_color: "Anthracite",
-    sizes: {
-       LT: 0.00,
-       XLT: 0.00,
-      "2XLT": 0.00,
-      "3XLT": 0.00,
-      "4XLT": 0.00,
+    sizes: ["LT", "XLT", "2XLT", "3XLT", "4XLT"],
+    pricing: {
+       LT: { price: 0.00 },
+       XLT: { price: 0.00 },
+      "2XLT": { price: 0.00 },
+      "3XLT": { price: 0.00 },
+      "4XLT": { price: 0.00 },
     },
   },
   {
@@ -413,12 +443,11 @@ export const catalog = [
     colors: ["Black","Blue","Burgundy","Gold","Green","Orange","Pink","Purple","Red","Silver"],
     type: "accessory",
     default_color: "Black",   
-    sizes: {
-       100: 0.00,
-       250: 0.00,
-       500: 0.00,
-      1000: 0.00,
-      1500: 0.00,
+    quantities: [100, 250, 500, 1000, 1500],
+    pricing: {
+      base: {
+        price: 0.00,
+      },
     },
   },
   {
@@ -428,12 +457,11 @@ export const catalog = [
     colors: ["Black", "Brown"],
     type: "accessory",
     default_color: "Black",   
-    sizes: {
-       100: 0.00,
-       250: 0.00,
-       500: 0.00,
-      1000: 0.00,
-      1500: 0.00,
+    quantities: [100, 250, 500, 1000, 1500],
+    pricing: {
+      base: {
+        price: 0.00,
+      },
     },
   },
   {
@@ -443,10 +471,11 @@ export const catalog = [
     colors: ["Black", "Blue", "Burgundy","Red"],
     type: "accessory",
     default_color: "Black",   
-    sizes: {
-       100: 0.00,
-       250: 0.00,
-       500: 0.00,     
+    quantities: [100, 250, 500],
+    pricing: {
+      base: {
+        price: 0.00,
+      },
     },
   }, 
   {
@@ -456,10 +485,11 @@ export const catalog = [
     colors: ["Blue","Grey","Green","Red"],
     type: "accessory",
     default_color: "Grey",   
-    sizes: {
-       100: 0.00,
-       250: 0.00,
-       500: 0.00,     
+    quantities: [100, 250, 500],
+    pricing: {
+      base: {
+        price: 0.00,
+      },
     },
   },
   {
@@ -469,9 +499,11 @@ export const catalog = [
     colors: ["Black","Blue","Green","Red"],
     type: "accessory",
     default_color: "Black",    
-    sizes: {
-       100: 0.00,
-       250: 0.00,    
+    quantities: [100, 250],
+    pricing: {
+      base: {
+        price: 0.00,
+      },
     },
   },
   {
@@ -481,9 +513,11 @@ export const catalog = [
     colors: ["Black","Blue","Lime Green","Orange","Pink","Red"],
     type: "accessory",
     default_color: "Black",    
-    sizes: {
-       100: 0.00,
-       250: 0.00,     
+    quantities: [100, 250],
+    pricing: {
+      base: {
+        price: 0.00,
+      },
     },
   },
   {
@@ -510,10 +544,11 @@ export const catalog = [
     ],
     type: "accessory",
     default_color: "Black",   
-    sizes: {
-       100: 0.00,
-       250: 0.00,
-       500: 0.00,         
+    quantities: [100, 250, 500],
+    pricing: {
+      base: {
+        price: 0.00,
+      },
     },
   },  
   {
@@ -523,10 +558,11 @@ export const catalog = [
     colors: ["Black","Cobalt Blue","Green","Lilac","Red","Royal","White"],
     type: "accessory",
     default_color: "Black",    
-    sizes: {
-       100: 0.00,
-       250: 0.00,
-       500: 0.00,    
+    quantities: [100, 250, 500],
+    pricing: {
+      base: {
+        price: 0.00,
+      },
     },
   },  
   {
@@ -547,9 +583,11 @@ export const catalog = [
     ],
     type: "sales",
     default_color: "Blue",
-    sizes: {
-      100: 0.00,
-      500: 0.00,
+    quantities: [100, 500],
+    pricing: {
+      base: {
+        price: 0.00,
+      },
     },
   },
   {
@@ -559,9 +597,11 @@ export const catalog = [
     colors: ["Blue", "Buff", "Green", "Lavender", "Pink", "White"],
     type: "sales",
     default_color: "Buff",
-    sizes: {
-      100: 0.0,
-      500: 0.0,
+    quantities: [100, 500],
+    pricing: {
+      base: {
+        price: 0.0,
+      },
     },
   },
   {
@@ -582,8 +622,10 @@ export const catalog = [
     ],
     type: "sales",
     default_color: "White",    
-    sizes: {
-      "# boxes": 0.0,
+    pricing: {
+      base: {
+        price: 0.0,
+      },
     },
   },
   {
@@ -595,8 +637,11 @@ export const catalog = [
     default_color: "White",
     description: "Maximum quantity allowed per order is three boxes. Enter 1, 2, or 3 in the quantity box.",   
     supportedStores: ["FRICBT"],    
-    sizes: {
-      500: 0.23,          
+    quantities: [500],
+    pricing: {
+      base: {
+        price: 0.23,
+      },
     },
   },
   {
@@ -606,8 +651,11 @@ export const catalog = [
     colors: ["Black"],
     type: "service",
     default_color: "Black",    
-    sizes: {
-      1: 0.0,
+    quantities: [1],
+    pricing: {
+      base: {
+        price: 0.0,
+      },
     },
   }, 
   {
@@ -617,8 +665,10 @@ export const catalog = [
     colors: ["Metal"],
     type: "service",
     default_color: "Metal",    
-    sizes: {
-      "# packs": 0.00,
+    pricing: {
+      base: {
+        price: 0.00,
+      },
     },
   },
   {
@@ -628,8 +678,10 @@ export const catalog = [
     colors: ["Blue","Green","Orange","Red","Yellow","White"],
     type: "service",
     default_color: "Blue",
-    sizes: {
-      "# packs": 0.00,
+    pricing: {
+      base: {
+        price: 0.00,
+      },
     },
   },         
   {
@@ -639,8 +691,10 @@ export const catalog = [
     colors: ["Blue","Green","Grey","Lime","Orange","Pink","Purple","Red","Tan","White","Yellow"],  
     type: "service",
     default_color: "Blue",    
-    sizes: {
-      "# boxes": 0.0,
+    pricing: {
+      base: {
+        price: 0.0,
+      },
     },
   }, 
 ];
