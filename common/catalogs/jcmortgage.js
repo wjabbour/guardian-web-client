@@ -1141,8 +1141,8 @@ Laptop sleeve dimensions 8h x 15w. Fits most 15 in. laptops.
     type: "accessory",
     default_color: "Blacktop",
     description: `POLYESTER; Dedicated laptop and tablet sleeves. Webbing haul handles.
-    Removable, adjustable webbing shoulder strap. Dimensions 11h x 16.75w x 1.5d.
-    Fits most 16 in. laptops.`,
+Removable, adjustable webbing shoulder strap. Dimensions 11h x 16.75w x 1.5d.
+Fits most 16 in. laptops.`,
     pricing: {
       base: { price: 52.0 },
     },
