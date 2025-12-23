@@ -1,8 +1,8 @@
 export const catalog = [
     {    
     code: "NKDC1963",
-    name: "Nike® Dri-FIT Polo #NKDC1963",
-    fullname: "Nike® Dri-FIT Micro Pique 2.0 Polo (NKDC1963)",
+    name: "Nike Dri-FIT Polo #NKDC1963",
+    fullname: "Nike Dri-FIT Micro Pique 2.0 Polo (NKDC1963)",
     colors: [
         "Black",             
         "Game Royal",        
