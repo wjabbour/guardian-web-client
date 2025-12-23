@@ -16,7 +16,7 @@ export const catalog = [
     type: "hat",
     default_color: "Black",
     description: `One size fits all; Minimum order of 12 required.
-12-23: $14.99; 24-49: $13.99; 50-99: $12.99; 100+: $12.00`,
+(12-23) $14.99; (24-49) $13.99; (50-99) $12.99; (100+) $12.00`,
     halfColors: [
       "Black Tan",
       "FlameRed Black",
@@ -45,7 +45,7 @@ export const catalog = [
     type: "hat",
     default_color: "Black Red",
     description: `One size fits all; Minimum order of 12 required.
-12-23: $11.25; 24+: $10.99;`,
+(12-23) $11.25; (24+) $10.99;`,
     halfColors: ["Black Red", "Black ShockBlue", "Black Silver"],    
     pricing: {
       base: {
@@ -83,7 +83,7 @@ export const catalog = [
     type: "hat",
     default_color: "Black",
     description: `Minimum order of 12 required.
-12-23: $13.99; 24-49: $12.99; 50+: $11.99`, 
+(12-23) $13.99; (24-49) $12.99; (50+) $11.99`, 
     pricing: {
       base: {
         price: 13.99,
@@ -110,7 +110,7 @@ export const catalog = [
     type: "hat",
     default_color: "Black",
     description: `One size fits all; Miminum order of 12 required.
-12-23: $10.99; 24-49: $10.50; 50-99: $10.00; 100+: $8.99`,    
+(12-23) $10.99; (24-49) $10.50; (50-99) $10.00; (100+) $8.99`,    
     pricing: {
       base: {
         price: 10.99,
@@ -137,7 +137,7 @@ export const catalog = [
     type: "hat",
     default_color: "Black",
     description: `One size fits all; Minimum order of 12 required.
-12-23: $13.99; 24-49: $12.75; 50-99: $12.00; 100+: $11.00`,    
+(12-23) $13.99; (24-49) $12.75; (50-99) $12.00; (100+) $11.00`,    
     pricing: {
       base: {
         price: 13.99,
