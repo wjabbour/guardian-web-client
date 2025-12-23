@@ -56,6 +56,19 @@ export const catalog = [
     },
   },
   {
+    code: "CANFCL-5400-513016Z",
+    name: "All-Weather Floor Mat 4pc Set",
+    fullname: "All-Weather Floor Mat 4PC Set (150 per pallet)",
+    description: "Pallet Pricing, includes delivery.",
+    colors: ["Black"],
+    type: "accessory",
+    default_color: "Black",    
+    quantities: [150, 300],
+    pricing: {
+      base: { price: 26.10 },
+    },
+  },
+  {
     code: "GP546",
     name: "Deal Jackets",
     fullname: "9 in. x 12 in. Deal Jacket (500/box)",
