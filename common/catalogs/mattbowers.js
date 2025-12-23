@@ -15,7 +15,7 @@ export const catalog = [
     ],
     type: "hat",
     default_color: "Black",
-    description: "One size fits all",
+    description: `One size fits all; Minimum order of 12 required.`,
     halfColors: [
       "Black Tan",
       "FlameRed Black",
@@ -43,9 +43,8 @@ export const catalog = [
     colors: ["Black Red", "Black ShockBlue", "Black Silver"],
     type: "hat",
     default_color: "Black Red",
-    description: "One size fits all",
-    halfColors: ["Black Red", "Black ShockBlue", "Black Silver"],
-    quantities: [12, 24],
+    description: "One size fits all; Minimum order of 12 required.",
+    halfColors: ["Black Red", "Black ShockBlue", "Black Silver"],    
     pricing: {
       base: {
         price: 11.25,
