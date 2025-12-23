@@ -510,7 +510,7 @@ export const catalog = [
   },
   {
     code: "CGM441",
-    name: "Callawy Ottoman Polo #CGM441",
+    name: "Callaway Ottoman Polo #CGM441",
     fullname: "Callaway Ottoman Polo (CGM441)",
     colors: [
       "Black",
@@ -1204,7 +1204,7 @@ export const catalog = [
   {
     code: "BOWIME-31DD-488642A",
     name: "Thermo Die Cut Decal",
-    fullname: "Thermo Die Cut Decal (5 in x 1.77 in.)",
+    fullname: "Thermo Die Cut Decal (5 in. x 1.77 in.)",
     colors: ["Black", "White"],
     type: "customs",
     default_color: "Black",
@@ -1250,7 +1250,7 @@ export const catalog = [
   {
     code: "MATFME-31DD-402399A",
     name: "Thermo Die Cut Decal",
-    fullname: "Thermo Die Cut Decal (3.75 in x 1.33 in.)",
+    fullname: "Thermo Die Cut Decal (3.75 in. x 1.33 in.)",
     colors: ["Black", "White"],
     type: "customs",
     default_color: "Black",
@@ -1266,11 +1266,11 @@ export const catalog = [
   {
     code: "MATFME-31DD-486762A",
     name: "Theromo Die Cut Decal",
-    fullname: "Thermo Die Cut Decal (5 in x 1.61 in.)",
+    fullname: "Thermo Die Cut Decal (5 in. x 1.61 in.)",
     colors: ["Black", "White"],
     type: "customs",
     default_color: "Black",
-    description: `Black will not show on white decal`,
+    description: `Black will not show on white decal.`,
     supportedStores: ["MATFME"],
     quantities: [1000, 1500, 2500],
     pricing: {
@@ -1312,7 +1312,7 @@ export const catalog = [
   {
     code: "BOWHSL-31DD-487075A",
     name: "Thermo Die Cut Decal",
-    fullname: "Thermo Die Cut Decal (5 in x 1.77 in.)",
+    fullname: "Thermo Die Cut Decal (5 in. x 1.77 in.)",
     colors: ["Black", "White"],
     type: "customs",
     default_color: "Black",
@@ -1358,7 +1358,7 @@ export const catalog = [
   {
     code: "BOWCSL-31DD-450936A",
     name: "Thermo Die Cut Decal",
-    fullname: "Thermo Die Cut Decal (5 in x .72 in.)",
+    fullname: "Thermo Die Cut Decal (5 in. x .72 in.)",
     colors: ["Black", "White"],
     type: "customs",
     default_color: "Black",
@@ -1404,7 +1404,7 @@ export const catalog = [
   {
     code: "BOWCME-31DD-451310A",
     name: "Thermo Die Cut Decal",
-    fullname: "Thermo Die Cut Decal (6 in x .80 in.)",
+    fullname: "Thermo Die Cut Decal (6 in. x .80 in.)",
     colors: ["Black", "White"],
     type: "customs",
     default_color: "Black",
@@ -1466,12 +1466,58 @@ export const catalog = [
   {
     code: "BOWHME-31DD-498932A",
     name: "Thermo Die Cut Decal",
-    fullname: "Thermo Die Cut Decal (6 in x .80 in.)",
+    fullname: "Thermo Die Cut Decal (6 in. x .80 in.)",
     colors: ["Black", "White"],
     type: "customs",
     default_color: "Black",
     description: `Black will not show on white decal.`,
     supportedStores: ["BOWHME"],
+    quantities: [1000, 1500, 2500],
+    pricing: {
+      base: {
+        price: 0.64,
+      },
+    },
+  },
+  {
+    code: "BOWCBA-34PEU-431621A",
+    name: "Black Plastic Frame",
+    fullname: "Black Plastic Frame w/white imprint",
+    colors: ["Black"],
+    type: "customs",
+    default_color: "Black",    
+    supportedStores: ["BOWHME"],
+    quantities: [1000, 1500, 2500],
+    pricing: {
+      base: {
+        price: 0.59,
+      },
+    },
+  },
+  {
+    code: "BOWCBA-33GT-431619Z",
+    name: ".15 Gauge Vinyl Plate",
+    fullname: ".15 Gauge 4CP White Plastic Plate",
+    colors: ["White"],
+    type: "customs",
+    default_color: "White",    
+    supportedStores: ["BOWCBA"],
+    quantities: [1000, 1500, 2500],
+    pricing: {
+      base: {
+        price: 0.49,
+      },
+    },
+  },
+  {
+    code: "BOWCBA-31DD-431617A",
+    name: "Thermo Die Cut Decal",
+    fullname: "Thermo Die Cut Decal (4.75 in. x 1.28 in.)",
+    colors: ["Black", "White"],
+    type: "customs",
+    default_color: "Black",
+    description: `Black will not show on white decal.`,
+    supportedStores: ["BOWCBA"],
     quantities: [1000, 1500, 2500],
     pricing: {
       base: {
@@ -1795,7 +1841,7 @@ export const catalog = [
   {
     code: "280SH",
     name: "Hold/Sold Tag",
-    fullname: "Hold/Sold Tag - 8.5 in x 11 in. (50/pk)",
+    fullname: "Hold/Sold Tag - 8.5 in. x 11 in. (50/pk)",
     colors: ["Yellow"],
     type: "sales",
     default_color: "Yellow",
@@ -1808,7 +1854,7 @@ export const catalog = [
   {
     code: "GP839",
     name: "License Plate Envelope",
-    fullname: "License Plate Envelope - 13 in x 6.5 in. (100/pk)",
+    fullname: "License Plate Envelope - 13 in. x 6.5 in. (100/pk)",
     colors: ["Kraft Paper"],
     type: "sales",
     default_color: "Kraft Paper",
