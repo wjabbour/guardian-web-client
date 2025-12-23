@@ -1177,8 +1177,7 @@ export const catalog = [
     fullname: "Chrome Faced Black Plastic Frame",
     colors: ["Chrome"],
     type: "customs",
-    default_color: "Chrome",
-    description: `Sold in quantities of 1000, 1500 and 2500; Enter '1' for a shipment of 1000 frames, etc.`,
+    default_color: "Chrome",    
     supportedStores: ["BOWIME"],
     quantities: [1000, 1500, 2500],
     pricing: {
@@ -1189,12 +1188,11 @@ export const catalog = [
   },
   {
     code: "BOWIME-33P-488640A",
-    name: "15 Gauge Vinyl Plate",
-    fullname: "15 Gauge Vinyl Plate - White w/black imprint",
+    name: ".15 Gauge Vinyl Plate",
+    fullname: ".15 Gauge Vinyl Plate - White w/black imprint",
     colors: ["Black"],
     type: "customs",
-    default_color: "Black",
-    description: `Sold in quantities of 1000, 1500 and 2500; Enter '1' for a shipment of 1000 plates, etc.`,
+    default_color: "Black",    
     supportedStores: ["BOWIME"],
     quantities: [1000, 1500, 2500],
     pricing: {
@@ -1210,7 +1208,7 @@ export const catalog = [
     colors: ["Black", "White"],
     type: "customs",
     default_color: "Black",
-    description: `BLACK WILL NOT SHOW ON WHITE DECAL; Sold in quantities of 1000, 1500 & 2500. Enter '1' for a shipment of 1000 decals, etc.`,
+    description: `Black will not show on white decal.`,
     supportedStores: ["BOWIME"],
     quantities: [1000, 1500, 2500],
     pricing: {
@@ -1225,8 +1223,7 @@ export const catalog = [
     fullname: "Screen Printed Chrome Plated Frame w/black imprint",
     colors: ["Chrome"],
     type: "customs",
-    default_color: "Chrome",
-    description: `Sold in quantities of 1000, 1500 and 2500; Enter '1' for a shipment of 1000 plates, etc.`,
+    default_color: "Chrome",    
     supportedStores: ["MATFME"],
     quantities: [1000, 1500, 2500],
     pricing: {
@@ -1241,8 +1238,7 @@ export const catalog = [
     fullname: ".15 Gauge Vinyl Plate - White w/294 blue imprint",
     colors: ["Blue"],
     type: "customs",
-    default_color: "Blue",
-    description: `Sold in quantities of 1000, 1500 and 2500; Enter '1' for a shipment of 1000 plates, etc.`,
+    default_color: "Blue",    
     supportedStores: ["MATFME"],
     quantities: [1000, 1500, 2500],
     pricing: {
@@ -1258,7 +1254,7 @@ export const catalog = [
     colors: ["Black", "White"],
     type: "customs",
     default_color: "Black",
-    description: `BLACK WILL NOT SHOW ON WHITE DECAL; Sold in quantities of 1000, 1500 & 2500. Enter '1' for a shipment of 1000 decals, etc.`,
+    description: `Black will not show on white decal.`,
     supportedStores: ["MATFME"],
     quantities: [1000, 1500, 2500],
     pricing: {
@@ -1274,7 +1270,7 @@ export const catalog = [
     colors: ["Black", "White"],
     type: "customs",
     default_color: "Black",
-    description: `BLACK WILL NOT SHOW ON WHITE DECAL; Sold in quantities of 1000, 1500 & 2500. Enter '1' for a shipment of 1000 decals, etc.`,
+    description: `Black will not show on white decal`,
     supportedStores: ["MATFME"],
     quantities: [1000, 1500, 2500],
     pricing: {
@@ -1289,8 +1285,7 @@ export const catalog = [
     fullname: "Black Plastic Frame w/white imprint",
     colors: ["Black"],
     type: "customs",
-    default_color: "Black",
-    description: `Sold in quantities of 1000, 1500 and 2500; Enter '1' for a shipment of 1000 frames, etc.`,
+    default_color: "Black",   
     supportedStores: ["BOWHSL"],
     quantities: [1000, 1500, 2500],
     pricing: {
@@ -1305,8 +1300,7 @@ export const catalog = [
     fullname: ".15 Gauge Vinyl Plate - White w/reflex blue imprint",
     colors: ["Blue"],
     type: "customs",
-    default_color: "Blue",
-    description: `Sold in quantities of 1000, 1500 and 2500; Enter '1' for a shipment of 1000 plates, etc.`,
+    default_color: "Blue",    
     supportedStores: ["BOWHSL"],
     quantities: [1000, 1500, 2500],
     pricing: {
@@ -1322,7 +1316,7 @@ export const catalog = [
     colors: ["Black", "White"],
     type: "customs",
     default_color: "Black",
-    description: `BLACK WILL NOT SHOW ON WHITE DECAL; Sold in quantities of 1000, 1500 & 2500. Enter '1' for a shipment of 1000 decals, etc.`,
+    description: `Black will not show on white decal.`,
     supportedStores: ["BOWHSL"],
     quantities: [1000, 1500, 2500],
     pricing: {
@@ -1337,8 +1331,7 @@ export const catalog = [
     fullname: "Black Plastic Frame w/white imprint",
     colors: ["Black"],
     type: "customs",
-    default_color: "Black",
-    description: `Sold in quantities of 1000, 1500 and 2500; Enter '1' for a shipment of 1000 frames, etc.`,
+    default_color: "Black",    
     supportedStores: ["BOWCSL"],
     quantities: [1000, 1500, 2500],
     pricing: {
@@ -1353,8 +1346,7 @@ export const catalog = [
     fullname: ".15 Gauge Vinyl Plate - White w/4CP imprint",
     colors: ["Blue"],
     type: "customs",
-    default_color: "Blue",
-    description: `Sold in quantities of 1000, 1500 and 2500; Enter '1' for a shipment of 1000 plates, etc.`,
+    default_color: "Blue",    
     supportedStores: ["BOWCSL"],
     quantities: [1000, 1500, 2500],
     pricing: {
@@ -1370,7 +1362,7 @@ export const catalog = [
     colors: ["Black", "White"],
     type: "customs",
     default_color: "Black",
-    description: `BLACK WILL NOT SHOW ON WHITE DECAL; Sold in quantities of 1000, 1500 & 2500. Enter '1' for a shipment of 1000 decals, etc.`,
+    description: `Black will not show on white decal.`,
     supportedStores: ["BOWCSL"],
     quantities: [1000, 1500, 2500],
     pricing: {
@@ -1385,8 +1377,7 @@ export const catalog = [
     fullname: "Black Plastic Frame w/white imprint",
     colors: ["Black"],
     type: "customs",
-    default_color: "Black",
-    description: `Sold in quantities of 1000, 1500 and 2500; Enter '1' for a shipment of 1000 frames, etc.`,
+    default_color: "Black",    
     supportedStores: ["BOWCME"],
     quantities: [1000, 1500, 2500],
     pricing: {
@@ -1401,8 +1392,7 @@ export const catalog = [
     fullname: ".15 Gauge Vinyl Plate - White w/4CP imprint",
     colors: ["Blue"],
     type: "customs",
-    default_color: "Blue",
-    description: `Sold in quantities of 1000, 1500 and 2500; Enter '1' for a shipment of 1000 plates, etc.`,
+    default_color: "Blue",    
     supportedStores: ["BOWCME"],
     quantities: [1000, 1500, 2500],
     pricing: {
@@ -1418,7 +1408,7 @@ export const catalog = [
     colors: ["Black", "White"],
     type: "customs",
     default_color: "Black",
-    description: `BLACK WILL NOT SHOW ON WHITE DECAL; Sold in quantities of 1000, 1500 & 2500. Enter '1' for a shipment of 1000 decals, etc.`,
+    description: `Black will not show on white decal.`,
     supportedStores: ["BOWCME"],
     quantities: [1000, 1500, 2500],
     pricing: {
@@ -1434,8 +1424,7 @@ export const catalog = [
       "White Domecal Trailer Hitch Cover w/reflex blue & 877 metallic silver imprint",
     colors: ["Blue"],
     type: "customs",
-    default_color: "Blue",
-    description: `Sold in quantities of 1000; Enter '1' for one shipment of 1000 covers`,
+    default_color: "Blue",    
     supportedStores: ["BOWCME"],
     quantities: [1000],
     pricing: {
@@ -1450,8 +1439,7 @@ export const catalog = [
     fullname: "Black Plastic Frame w/white imprint",
     colors: ["Black"],
     type: "customs",
-    default_color: "Black",
-    description: `Sold in quantities of 1000, 1500 and 2500; Enter '1' for shipment of 1000 frames, etc.`,
+    default_color: "Black",    
     supportedStores: ["BOWHME"],
     quantities: [1000, 1500, 2500],
     pricing: {
@@ -1466,8 +1454,7 @@ export const catalog = [
     fullname: ".15 Gauge Vinyl Plate - White w/288 blue imprint",
     colors: ["Blue"],
     type: "customs",
-    default_color: "Blue",
-    description: `Sold in quantities of 1000, 1500 and 2500; Enter '1' for a shipment of 1000 plates, etc.`,
+    default_color: "Blue",    
     supportedStores: ["BOWHME"],
     quantities: [1000, 1500, 2500],
     pricing: {
@@ -1483,7 +1470,7 @@ export const catalog = [
     colors: ["Black", "White"],
     type: "customs",
     default_color: "Black",
-    description: `BLACK WILL NOT SHOW ON WHITE DECAL; Sold in quantities of 1000, 1500 & 2500. Enter '1' for a shipment of 1000 decals, etc.`,
+    description: `Black will not show on white decal.`,
     supportedStores: ["BOWHME"],
     quantities: [1000, 1500, 2500],
     pricing: {
@@ -1498,9 +1485,7 @@ export const catalog = [
     fullname: "Metal Key Ring w/reflex blue imprint",
     colors: ["White"],
     type: "accessory",
-    default_color: "White",
-    description:
-      "Sold in boxes of 1000; Enter '1' for shipment of 1000 key rings.",
+    default_color: "White",    
     quantities: [1000],
     pricing: {
       base: { price: 1.29 },
@@ -1512,9 +1497,7 @@ export const catalog = [
     fullname: "Metal Color Series Key Ring w/white imprint",
     colors: ["Blue"],
     type: "accessory",
-    default_color: "Blue",
-    description:
-      "Sold in quantities of 1000, 1500 and 2500; Enter '1' for shipment of 1000, etc.",
+    default_color: "Blue",    
     quantities: [1000, 1500, 2500],
     pricing: {
       base: {
@@ -1532,9 +1515,7 @@ export const catalog = [
     fullname: "Laser Engraved Zinc Leather Strap Key Tag (2-sided)",
     colors: ["Black"],
     type: "accessory",
-    default_color: "Black",
-    description:
-      "Sold in quantities of 1000, 1500 and 2500; Enter '1' for shipment of 1000, etc.",
+    default_color: "Black",    
     quantities: [1000, 1500, 2500],
     pricing: {
       base: {
@@ -1552,13 +1533,11 @@ export const catalog = [
     fullname: "Clear Eva Reflective Tote Bag w/black imprint (12 in. x 12 in.)",
     colors: ["Clear"],
     type: "accessory",
-    default_color: "Clear",
-    description:
-      "Sold in quantities of 1000; Enter '1' for one shipment of 1000 totes.",
+    default_color: "Clear",    
     quantities: [1000],
     pricing: {
       base: {
-        price: 3.5,
+        price: 3.50,
       },
     },
   },
@@ -1568,9 +1547,7 @@ export const catalog = [
     fullname: "Royal Blue Non-Woven Shopper Tote w/871 gold & white imprint ",
     colors: ["Blue"],
     type: "accessory",
-    default_color: "Blue",
-    description:
-      "Sold in quantities of 500; Enter '1' for shipment of 500 totes.",
+    default_color: "Blue",    
     quantities: [500],
     pricing: {
       base: {
@@ -1587,8 +1564,6 @@ export const catalog = [
     colors: ["Clear"],
     type: "accessory",
     default_color: "Clear",
-    description:
-      "Sold in quantities of 250, 500 and 1000; Enter '1' for shipment of 250 bags, etc.",
     quantities: [250, 500, 1000],
     pricing: {
       base: {
@@ -1602,9 +1577,7 @@ export const catalog = [
     fullname: "Javalina Pen w/white imprint",
     colors: ["Blue"],
     type: "accessory",
-    default_color: "Blue",
-    description:
-      "Sold in quantities of 1000, 1500 and 2500; Enter '1' for shipment of 1000, etc.",
+    default_color: "Blue",    
     quantities: [1000, 1500, 2500],
     pricing: {
       base: {
@@ -1624,9 +1597,7 @@ export const catalog = [
       "Box - silver foil; Pen - black; Fob - black leather/white stitch, black color fill",
     colors: ["Black"],
     type: "accessory",
-    default_color: "Black",
-    description:
-      "Sold in quantities of 250, 500 and 1000; Enter '1' for shipment of 250 boxsets, etc.",
+    default_color: "Black",   
     quantities: [250, 500, 1000],
     pricing: {
       base: {
@@ -1640,9 +1611,7 @@ export const catalog = [
     fullname: "Black 30 oz. Intrepid Recycled Tumbler w/laser engraved imprint",
     colors: ["Black"],
     type: "accessory",
-    default_color: "Black",
-    description:
-      "Sold in quantities of 250; Enter '1' for shipment of 250 tumblers.",
+    default_color: "Black",    
     quantities: [250],
     pricing: {
       base: {
@@ -1656,16 +1625,14 @@ export const catalog = [
     fullname: "Work Order Holder #GP254",
     colors: ["Black"],
     type: "sales",
-    default_color: "Black",
-    description:
-      "Sold in quantities of 10, 50 and 100 packs. Enter '1' for a shipment of 10 packs, etc.",
+    default_color: "Black",    
     quantities: [10, 50, 100],
     pricing: {
       base: {
-        price: 4.5,
+        price: 4.50,
         discount: {
-          50: 4.0,
-          100: 3.5,
+          50: 4.00,
+          100: 3.50,
         },
       },
     },
@@ -1686,9 +1653,7 @@ export const catalog = [
       "Yellow",
     ],
     type: "sales",
-    default_color: "Beige",
-    description:
-      "Sold in quantities of 1, 5 or 10 boxes; Enter '1' for a shipment of one box, etc.",
+    default_color: "Beige",   
     quantities: [1, 5, 10],
     pricing: {
       base: {
@@ -1716,9 +1681,7 @@ export const catalog = [
       "Yellow",
     ],
     type: "sales",
-    default_color: "Blue",
-    description:
-      "Sold in quantities of 1, 5 or 10 boxes; Enter '1' for a shipment of one box, etc.",
+    default_color: "Blue",    
     quantities: [1, 5, 10],
     pricing: {
       base: {
@@ -1736,9 +1699,7 @@ export const catalog = [
     fullname: "Kleer-Back Stock Stickers Versa #400 (100/pk)",
     colors: ["Blue", "Green", "Orange", "Red", "White", "Yellow"],
     type: "sales",
-    default_color: "Blue",
-    description:
-      "Sold in quantities of 1, 5 or 10 packs; Enter '1' for a shipment of one pack, etc.",
+    default_color: "Blue",    
     quantities: [1, 5, 10],
     pricing: {
       base: {
@@ -1777,9 +1738,7 @@ export const catalog = [
       "2026",
     ],
     type: "sales",
-    default_color: "Blue",
-    description:
-      "Sold in quantities of 1, 5, or 10 packs; Enter '1' for one shipment of one pack, etc.",
+    default_color: "Blue",    
     quantities: [1, 5, 10],
     pricing: {
       base: {
@@ -1796,9 +1755,7 @@ export const catalog = [
     fullname: "Stock Hang Tags - Was Now - 9in x 12in (50/pk)",
     colors: ["Fluorg", "Fluorp", "Fluorr", "Fluory"],
     type: "sales",
-    default_color: "Fluorg",
-    description:
-      "Sold in quantities of 1, 5, or 10 packs; Enter '1' for one pack of 50 tags, etc.",
+    default_color: "Fluorg",    
     quantities: [1, 5, 10],
     pricing: {
       base: {
@@ -1812,7 +1769,7 @@ export const catalog = [
   {
     code: "GP788",
     name: "Not For Sale Sticker",
-    fullname: "LARGE - Vehicle Not for Sale Sticker (100 per pack)",
+    fullname: "LARGE - Vehicle Not for Sale Sticker (100/pk)",
     colors: ["Yellow"],
     type: "sales",
     default_color: "Yellow",
@@ -1825,7 +1782,7 @@ export const catalog = [
   {
     code: "GP790",
     name: "Not For Sale Sticker",
-    fullname: "Vehicle Not for Sale Sticker (100 per pack)",
+    fullname: "Vehicle Not for Sale Sticker (100/pk)",
     colors: ["Yellow"],
     type: "sales",
     default_color: "Yellow",
@@ -1838,7 +1795,7 @@ export const catalog = [
   {
     code: "280SH",
     name: "Hold/Sold Tag",
-    fullname: "Hold/Sold Tag - 8.5 in x 11 in. (50 per pack)",
+    fullname: "Hold/Sold Tag - 8.5 in x 11 in. (50/pk)",
     colors: ["Yellow"],
     type: "sales",
     default_color: "Yellow",
@@ -1851,7 +1808,7 @@ export const catalog = [
   {
     code: "GP839",
     name: "License Plate Envelope",
-    fullname: "License Plate Envelope - 13 in x 6.5 in. (100 per pack)",
+    fullname: "License Plate Envelope - 13 in x 6.5 in. (100/pk)",
     colors: ["Kraft Paper"],
     type: "sales",
     default_color: "Kraft Paper",
@@ -1867,8 +1824,7 @@ export const catalog = [
     fullname: "Royal Blue Guesseted Vinyl doc Folder w/white imprint",
     colors: ["Royal Blue"],
     type: "sales",
-    default_color: "Royal Blue",
-    description: "Sold in quantities of 1000; Enter '1' for shipment of 1000",
+    default_color: "Royal Blue",    
     quantities: [1000],
     pricing: {
       base: {
@@ -1883,9 +1839,7 @@ export const catalog = [
       "White Quick Ship Folder w/reflex blue & 872 metallic gold imprint",
     colors: ["White"],
     type: "sales",
-    default_color: "White",
-    description:
-      "Sold in quantities of 1000; Enter '1' for shipment of 1000 folders.",
+    default_color: "White",    
     quantities: [1000],
     pricing: {
       base: {
@@ -1910,9 +1864,7 @@ export const catalog = [
       "Yellow",
     ],
     type: "sales",
-    default_color: "Blue",
-    description:
-      "Sold in quantities of 1, 5 or 10 boxes; Enter '1' for a box of 500, etc.",
+    default_color: "Blue",   
     quantities: [1, 5, 10],
     pricing: {
       base: {
@@ -1929,9 +1881,7 @@ export const catalog = [
     fullname: "Custom Deal Jacket (DSA-500)",
     colors: ["Blue", "White"],
     type: "sales",
-    default_color: "Blue",
-    description:
-      "Sold in quantities of 1000, 1500 and 2500; Enter '1' for a shipment of 1000, etc.",
+    default_color: "Blue",    
     quantities: [1000, 1500, 2500],
     pricing: {
       base: {
@@ -1942,7 +1892,7 @@ export const catalog = [
   {
     code: "S4G2",
     name: "Buyers Guide",
-    fullname: "Buyers Guide - Outside Vehicle (100 per pack) #8252",
+    fullname: "Buyers Guide - Outside Vehicle (100/pk) #8252",
     colors: ["White"],
     type: "sales",
     default_color: "White",
@@ -1955,7 +1905,7 @@ export const catalog = [
   {
     code: "BGE12-AL",
     name: "Buyers Guide Blank - Inside Vehicle",
-    fullname: "Buyers Guide, Blank Front (100 per pack) #82550-2017",
+    fullname: "Buyers Guide, Blank Front (100/pk) #82550-2017",
     colors: ["White"],
     type: "sales",
     default_color: "White",
@@ -1968,7 +1918,7 @@ export const catalog = [
   {
     code: "3114",
     name: "Buyers Guide - Inside Vehicle",
-    fullname: "Buyers Guide, Inside Vehicle (100 per pack) #8250",
+    fullname: "Buyers Guide, Inside Vehicle (100/pk) #8250",
     colors: ["White"],
     type: "sales",
     default_color: "White",
@@ -1982,7 +1932,7 @@ export const catalog = [
     code: "BGVinyl",
     name: "Vinyl Sheet - Outside Vehicle",
     fullname:
-      "8.5 x 11 Blank Vinyl Sheet, Outside Vehicle (100 per pack) #9300",
+      "8.5 x 11 Blank Vinyl Sheet, Outside Vehicle (100/pk) #9300",
     colors: ["White"],
     type: "sales",
     default_color: "White",
@@ -1995,7 +1945,7 @@ export const catalog = [
   {
     code: "S4GB",
     name: "Blank Forms - Adhesive",
-    fullname: "Blank Forms - Adhesive (100 per pack) #S4GB",
+    fullname: "Blank Forms - Adhesive (100/pk) #S4GB",
     colors: ["White"],
     type: "sales",
     default_color: "White",
@@ -2008,7 +1958,7 @@ export const catalog = [
   {
     code: "BOW30",
     name: "30 in. Giant Bow",
-    fullname: "30 in. Giant Magnetic Car Bow (sold in pairs, same color)",
+    fullname: "30 in. Giant Magnetic Car Bow (2/pk)",
     colors: [
       "Blue",
       "Gold",
@@ -2021,11 +1971,12 @@ export const catalog = [
       "Red Grn",
     ],
     halfColors: ["Red Grn"],
+    description: `Sold in pairs of the same color.`,
     type: "sales",
     default_color: "Blue",
     pricing: {
       base: {
-        price: 80.0,
+        price: 80.00,
       },
     },
   },
@@ -2034,7 +1985,7 @@ export const catalog = [
     name: "Service Due Sticker",
     fullname:
       "White Vinyl Service Due Sticker w/black imprint (1.5 in. x 2.25 in.)",
-    description: `GREY DOES NOT PRINT. Sold in quantities of 2500; Enter '1' for one shipment of 2500.`,
+    description: `Grey does not print.`,
     colors: ["White"],
     type: "service",
     default_color: "White",
@@ -2052,8 +2003,6 @@ export const catalog = [
     colors: ["Metal"],
     type: "service",
     default_color: "Metal",
-    description:
-      "Sold in quantities of 1, 5 or 10 packs; Enter '1' for one pack of 250, etc.",
     quantities: [1, 5, 10],
     pricing: {
       base: {
@@ -2072,8 +2021,7 @@ export const catalog = [
     colors: ["White"],
     type: "service",
     default_color: "White",
-    description:
-      "GREY DOES NOT PRINT. Sold in quantities of 2500; Enter '1' for one shipment of 2500 stickers.",
+    description: `Grey does not print.`,
     quantities: [2500],
     pricing: {
       base: {
@@ -2099,8 +2047,7 @@ export const catalog = [
       "9000",
     ],
     type: "service",
-    default_color: "white",
-    description: `Sold in quantities of 1, 5 or 10 boxes. Enter '1' for a shipment of one box, etc.`,
+    default_color: "white",    
     quantities: [1, 5, 10],
     pricing: {
       base: {
