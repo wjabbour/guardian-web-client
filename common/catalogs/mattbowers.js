@@ -24,14 +24,14 @@ export const catalog = [
       "PatriotBlue White",
       "Purple White",
     ],
-    quantities: [12, 24, 50, 100],
-    pricing: {
+      pricing: {
       base: {
         price: 14.99,
         discount: {
+          12: 14.99,
           24: 13.99,
           50: 12.99,
-          100: 12.0,
+          100: 12.00,
         },
       },
     },
@@ -77,7 +77,7 @@ export const catalog = [
   {
     code: "CP80",
     name: "Port & Co™ Six-Panel Cap #CP80",
-    fullname: "Port & Co™ Six-Panel Twill Cap",
+    fullname: "Port & Co™ Six-Panel Twill Cap (CP80)",
     colors: ["Black", "Purple", "Red", "Royal", "White"],
     type: "hat",
     default_color: "Black",
