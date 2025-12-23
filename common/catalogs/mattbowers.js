@@ -1526,6 +1526,21 @@ export const catalog = [
     },
   },
   {
+    code: "INDCDJ-34PE-518572A",
+    name: "Black Plastic Frame",
+    fullname: "Black Plastic Frame w/white imprint",
+    colors: ["Black"],
+    type: "customs",
+    default_color: "Black",    
+    supportedStores: ["INDCDJ"],
+    quantities: [1000, 1500],
+    pricing: {
+      base: {
+        price: 0.59,
+      },
+    },
+  },
+  {
     code: "MATFME-RCM-446180A",
     name: "Metal Key Ring",
     fullname: "Metal Key Ring w/reflex blue imprint",
