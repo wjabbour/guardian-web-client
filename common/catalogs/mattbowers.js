@@ -1486,7 +1486,7 @@ export const catalog = [
     colors: ["Black"],
     type: "customs",
     default_color: "Black",    
-    supportedStores: ["BOWHME"],
+    supportedStores: ["BOWCBA"],
     quantities: [1000, 1500, 2500],
     pricing: {
       base: {
@@ -2135,7 +2135,7 @@ export const catalog = [
   {
     code: "G10D",
     name: "Hex Screws for Frames",
-    fullname: "Self-Tapping #14 x 3/4 Hex Slot Head Screw (EZ244)",
+    fullname: "Self-Tapping #14 x 3/4 Hex Slot Head Screw (100/bx) #EZ244",
     colors: ["Zinc Plated"],
     type: "service",
     default_color: "Zinc Plated",    
@@ -2146,28 +2146,15 @@ export const catalog = [
     },
   },
   {
-    code: "G10D",
+    code: "G10I",
     name: "Hex Screws for Plates",
-    fullname: "Metric Screw #6 x 3/4 Phillips Pan Head (EZ246)",
+    fullname: "Metric Screw #6 x 3/4 Phillips Pan Head (100/bx) #EZ246",
     colors: ["Zinc Plated"],
     type: "service",
-    default_color: "Zinc Plated",    
+    default_color: "Zinc Plated",      
     pricing: {
       base: {
         price: 15.99,        
-      },
-    },
-  },
-  {
-    code: "GP-731",
-    name: "5-n-1 Static Cling Ribbon",
-    fullname: "5-n-1 Static Cling Ribbon (GP-731)",
-    colors: ["Black"],
-    type: "service",
-    default_color: "Black",    
-    pricing: {
-      base: {
-        price: 17.00,        
       },
     },
   },
@@ -2189,6 +2176,19 @@ export const catalog = [
       },
     },
   },
+  {
+    code: "GP-731",
+    name: "5-n-1 Static Cling Ribbon",
+    fullname: "5-n-1 Static Cling Ribbon (GP-731)",
+    colors: ["Black"],
+    type: "service",
+    default_color: "Black",    
+    pricing: {
+      base: {
+        price: 17.00,        
+      },
+    },
+  },  
   {
     code: "SDNC",
     name: "Service Numbers",
