@@ -1666,6 +1666,24 @@ export const catalog = [
     },
   },
   {
+    code: "TH100",
+    name: "Temp L/P Protector",
+    fullname: "License Plate Protector (100/pk)",
+    colors: ["Clear"],
+    type: "sales",
+    default_color: "Clear",
+    quantities: [1, 5, 10],
+    pricing: {
+      base: {
+        price: 129.45,
+        discount: {
+          5: 100.45,
+          10: 85.45,
+        }, 
+      },
+    },
+  },
+  {
     code: "GP254",
     name: "Work Order Holder",
     fullname: "Work Order Holder #GP254",
@@ -1834,7 +1852,7 @@ export const catalog = [
     default_color: "Yellow",
     pricing: {
       base: {
-        price: 27.99,
+        price: 29.99,
       },
     },
   },
@@ -2027,6 +2045,50 @@ export const catalog = [
     },
   },
   {
+    code: "3088",
+    name: "Floor Mats",
+    fullname: "Floor Mats/Coated Paper (500/bx)",
+    colors: ["White"],
+    type: "service",
+    default_color: "White",
+    description: `17 in. x 22 in.`,    
+    pricing: {
+      base: {
+        price: 69.99,
+      },
+    },
+  },
+  {
+    code: "600088V",
+    name: "Seat Covers (roll)",
+    fullname: "No-Slip Plastic Seat Covers (500/roll)",
+    colors: ["Plastic"],
+    type: "service",
+    default_color: "Plastic",    
+    pricing: {
+      base: {
+        price: 69.99,
+      },
+    },
+  },
+  {
+    code: "EIT50",
+    name: "Self-Locking Key Tags",
+    fullname: "Self-Locking Key Tags (1000/pk)",
+    colors: ["Blue", "Green", "Orange", "Red", "Yellow", "White"],
+    type: "service",
+    default_color: "Blue",
+    quantities: [1, 2],
+    pricing: {
+      base: {
+        price: 35.00,
+        discount: {
+          2: 29.99,
+        },
+      },
+    },
+  },
+  {
     code: "BOWHSL-1830-490972A",
     name: "Service Due Sticker",
     fullname:
@@ -2039,6 +2101,73 @@ export const catalog = [
     pricing: {
       base: {
         price: 0.15,
+      },
+    },
+  },  
+  {
+    code: "BOWCME-1830-491490Z",
+    name: "Service Due Sticker",
+    fullname: "White Vinyl Service Due Sticker w/full color imprint (250/pk)",
+    colors: ["White"],
+    type: "service",
+    default_color: "White",
+    description: `Grey does not print.`,
+    quantities: [2500],
+    pricing: {
+      base: {
+        price: 0.15,
+      },
+    },
+  },
+  {
+    code: "NDESTOCK",
+    name: "Night Drop Envelopes",
+    fullname: "Night Drop Envelopes (500/bx)",
+    colors: ["White"],
+    type: "service",
+    default_color: "White",
+    pricing: {
+      base: {
+        price: 99.00,
+      },
+    },
+  },
+  {
+    code: "G10D",
+    name: "Hex Screws for Frames",
+    fullname: "Self-Tapping #14 x 3/4 Hex Slot Head Screw (EZ244)",
+    colors: ["Zinc Plated"],
+    type: "service",
+    default_color: "Zinc Plated",    
+    pricing: {
+      base: {
+        price: 15.99,        
+      },
+    },
+  },
+  {
+    code: "G10D",
+    name: "Hex Screws for Plates",
+    fullname: "Metric Screw #6 x 3/4 Phillips Pan Head (EZ246)",
+    colors: ["Zinc Plated"],
+    type: "service",
+    default_color: "Zinc Plated",    
+    pricing: {
+      base: {
+        price: 15.99,        
+      },
+    },
+  },
+  {
+    code: "GP-731",
+    name: "5-n-1 Static Cling Ribbon",
+    fullname: "5-n-1 Static Cling Ribbon (GP-731)",
+    colors: ["Black"],
+    type: "service",
+    default_color: "Black",    
+    pricing: {
+      base: {
+        price: 17.00,        
       },
     },
   },
@@ -2061,17 +2190,15 @@ export const catalog = [
     },
   },
   {
-    code: "BOWCME-1830-491490Z",
-    name: "Service Due Sticker",
-    fullname: "White Vinyl Service Due Sticker w/full color imprint (250/pk)",
-    colors: ["White"],
+    code: "SDNC",
+    name: "Service Numbers",
+    fullname: "Mirror Hang Service Numbers (1000/bx)",
+    colors: ["Blue", "Green", "Grey", "Lime", "Orange", "Pink", "Purple", "Red", "Tan", "White", "Yellow"],
     type: "service",
-    default_color: "White",
-    description: `Grey does not print.`,
-    quantities: [2500],
+    default_color: "Blue",
     pricing: {
       base: {
-        price: 0.15,
+        price: 93.00,
       },
     },
   },
