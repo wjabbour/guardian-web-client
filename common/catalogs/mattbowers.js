@@ -1703,7 +1703,7 @@ export const catalog = [
     name: "Work Order Holder",
     fullname: "Work Order Holder #GP254",
     colors: ["Black"],
-    type: "sales",
+    type: "service",
     default_color: "Black",    
     quantities: [10, 50, 100],
     pricing: {
@@ -2062,8 +2062,7 @@ export const catalog = [
   {
     code: "3088",
     name: "Floor Mats",
-    fullname: "Floor Mats/Coated Paper (500/bx)",
-    colors: ["White"],
+    fullname: "Floor Mats/Coated Paper (500/bx)",    
     type: "service",
     default_color: "White",
     description: `17 in. x 22 in.`,    
@@ -2076,8 +2075,7 @@ export const catalog = [
   {
     code: "600088V",
     name: "Seat Covers (roll)",
-    fullname: "No-Slip Plastic Seat Covers (500/roll)",
-    colors: ["Plastic"],
+    fullname: "No-Slip Plastic Seat Covers (500/roll)",    
     type: "service",
     default_color: "Plastic",    
     pricing: {
@@ -2091,8 +2089,7 @@ export const catalog = [
     name: "Self-Locking Key Tags",
     fullname: "Self-Locking Key Tags (1000/pk)",
     colors: ["Blue", "Green", "Orange", "Red", "Yellow", "White"],
-    type: "service",
-    default_color: "Blue",
+    type: "service",    
     quantities: [1, 2],
     pricing: {
       base: {
