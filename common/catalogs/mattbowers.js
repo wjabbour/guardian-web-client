@@ -2089,7 +2089,8 @@ export const catalog = [
     name: "Self-Locking Key Tags",
     fullname: "Self-Locking Key Tags (1000/pk)",
     colors: ["Blue", "Green", "Orange", "Red", "Yellow", "White"],
-    type: "service",    
+    type: "service", 
+    default_color: "Blue",   
     quantities: [1, 2],
     pricing: {
       base: {
