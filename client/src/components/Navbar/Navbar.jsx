@@ -2,8 +2,9 @@ import styles from "./Navbar.module.scss";
 import { useNavigate } from "react-router-dom";
 import { getWebConfigValue } from "guardian-common";
 import { getDomainAwarePath } from "../../lib/utils";
+import CartDrawer from "../CartDrawer";
 
-export default function Navbar(props) {
+export default function Navbar({ cart, setCart }) {
   const navigate = useNavigate();
 
   return (
@@ -14,14 +15,7 @@ export default function Navbar(props) {
       >
         <div className={styles.cart}>View Orders</div>
       </div>
-      <div
-        className={`${styles.container} ${styles.cart__container}`}
-        onClick={() => navigate(getDomainAwarePath("/checkout"))}
-      >
-        <div className={styles.cart}>
-          Cart ({Object.keys(props.cart).length})
-        </div>
-      </div>
+      <CartDrawer cart={cart} setCart={setCart} />
       <div className={styles.guardian}>
         <img
           className={styles.logo}

@@ -20,7 +20,7 @@ export default function Root() {
   const [cart, set_cart] = useState(rehydrate());
   const [user, setUser] = useState({ isLoggedIn: false });
   const [isModalOpen, setModalOpen] = useState(false);
-  const conditionalNavigation = [];
+
   function rehydrate() {
     if (sessionStorage.getItem("cart")) {
       return JSON.parse(sessionStorage.getItem("cart"));
@@ -72,7 +72,7 @@ export default function Root() {
               </div>
             </div>
           )}
-          {!useRouting && <Navbar cart={cart} />}
+          {!useRouting && <Navbar cart={cart} setCart={set_cart} />}
           <Outlet context={[cart, set_cart]} />
         </UserContext.Provider>
       </CartContext.Provider>
