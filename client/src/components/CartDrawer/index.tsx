@@ -1,14 +1,16 @@
 import { useState } from "react";
-import { useOutletContext } from "react-router-dom";
 import Drawer from "@mui/material/Drawer";
+import { useNavigate } from "react-router-dom";
 import IconButton from "@mui/material/IconButton";
 import Badge from "@mui/material/Badge";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import CloseIcon from "@mui/icons-material/Close";
 import DeleteIcon from "@mui/icons-material/Delete";
 import { ColorOption, SizeOption } from "../../lib/constants";
+import { getDomainAwarePath } from "../../lib/utils";
 
 export default function CartDrawer({ cart, setCart }) {
+  const navigate = useNavigate();
   const [isOpen, setIsOpen] = useState(false);
 
   // Calculate total items for the badge count
@@ -17,16 +19,17 @@ export default function CartDrawer({ cart, setCart }) {
     0
   );
 
-  const toggleDrawer = (open: boolean) => (event: React.KeyboardEvent | React.MouseEvent) => {
-    if (
-      event.type === "keydown" &&
-      ((event as React.KeyboardEvent).key === "Tab" ||
-        (event as React.KeyboardEvent).key === "Shift")
-    ) {
-      return;
-    }
-    setIsOpen(open);
-  };
+  const toggleDrawer =
+    (open: boolean) => (event: React.KeyboardEvent | React.MouseEvent) => {
+      if (
+        event.type === "keydown" &&
+        ((event as React.KeyboardEvent).key === "Tab" ||
+          (event as React.KeyboardEvent).key === "Shift")
+      ) {
+        return;
+      }
+      setIsOpen(open);
+    };
 
   const handleDelete = (key: string) => {
     // Create a shallow copy to avoid mutating state directly
@@ -97,14 +100,13 @@ export default function CartDrawer({ cart, setCart }) {
                     <div className="flex flex-col text-sm pr-6">
                       <p className="font-bold text-lg mb-1">{item.name}</p>
 
-                      <p className="text-gray-600 mb-2">
-                        {priceDisplay} each
-                      </p>
+                      <p className="text-gray-600 mb-2">{priceDisplay} each</p>
 
                       <div className="text-gray-700 space-y-1">
                         {item.color && item.color !== ColorOption.DEFAULT && (
                           <p>
-                            <span className="font-semibold">Color:</span> {item.color}
+                            <span className="font-semibold">Color:</span>{" "}
+                            {item.color}
                           </p>
                         )}
 
@@ -112,7 +114,9 @@ export default function CartDrawer({ cart, setCart }) {
                           <p>
                             <span className="font-semibold">Embroidery:</span>{" "}
                             {item.embroidery}
-                            {item.secondEmbroidery ? ` / ${item.secondEmbroidery}` : ""}
+                            {item.secondEmbroidery
+                              ? ` / ${item.secondEmbroidery}`
+                              : ""}
                           </p>
                         )}
 
@@ -120,18 +124,22 @@ export default function CartDrawer({ cart, setCart }) {
                           <p>
                             <span className="font-semibold">Placement:</span>{" "}
                             {item.placement}
-                            {item.secondPlacement ? ` / ${item.secondPlacement}` : ""}
+                            {item.secondPlacement
+                              ? ` / ${item.secondPlacement}`
+                              : ""}
                           </p>
                         )}
 
                         {!isDefaultSize && (
                           <p>
-                            <span className="font-semibold">Size:</span> {item.size}
+                            <span className="font-semibold">Size:</span>{" "}
+                            {item.size}
                           </p>
                         )}
 
                         <p className="mt-2 pt-2 border-t border-gray-300">
-                          <span className="font-semibold">Quantity:</span> {item.quantity}
+                          <span className="font-semibold">Quantity:</span>{" "}
+                          {item.quantity}
                         </p>
                       </div>
                     </div>
@@ -144,7 +152,13 @@ export default function CartDrawer({ cart, setCart }) {
           {/* Optional Footer (Checkout Button placeholder) */}
           {Object.keys(cart).length > 0 && (
             <div className="pt-4 border-t-2 border-gray-200">
-              <button className="w-full bg-black text-white py-3 font-bold uppercase tracking-wider hover:bg-gray-800 transition">
+              <button
+                onClick={() => {
+                  navigate(getDomainAwarePath("/checkout"));
+                  setIsOpen(false);
+                }}
+                className="w-full bg-black text-white py-3 font-bold uppercase tracking-wider hover:bg-gray-800 transition"
+              >
                 Checkout
               </button>
             </div>

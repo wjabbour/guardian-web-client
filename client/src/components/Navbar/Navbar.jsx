@@ -31,7 +31,7 @@ export default function Navbar({ cart, setCart }) {
         />
       </div>
 
-      {/* Stivers/Company Logo */}
+      {/* Company Logo */}
       <div className="absolute top-[25px] right-[15%] cursor-pointer">
         <img
           className="h-[120px]"
