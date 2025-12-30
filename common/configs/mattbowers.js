@@ -147,11 +147,6 @@ export const config = {
       code: "BOWHSL",
     },
     {
-      name: "Indy CDJR (Slidell)",
-      address: "38450 Sunny Days Lane, Slidell, LA 70461",
-      code: "INDCDJ",
-    },
-    {
       name: "Matt Bowers CDJR (Baton Rouge)",
       address: "13939 Airline Hwy, Baton Rouge, LA 70817",
       code: "BOWCBA",
