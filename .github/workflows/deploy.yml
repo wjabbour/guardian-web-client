@@ -13,19 +13,21 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      # 1. NEW STEP: Check if backend files changed
-      - name: Check for backend changes
+      # 1. UPDATED STEP: Checks backend OR common
+      - name: Check for backend or common changes
         uses: dorny/paths-filter@v3
         id: changes
         with:
           filters: |
             backend:
               - 'backend/**'
+              - 'common/**'
 
       - name: Setup Terraform
-        # Optimization: Only setup Terraform if backend actually changed
         if: steps.changes.outputs.backend == 'true'
         uses: hashicorp/setup-terraform@v3
+
+      # --- CLIENT STEPS (Running unconditionally) ---
 
       - name: Configure AWS Credentials (Cannon)
         uses: aws-actions/configure-aws-credentials@v4
@@ -72,21 +74,21 @@ jobs:
         env:
           CI: false
 
-      # ---------------------------------------------------------
-      # BACKEND STEPS (Conditional)
-      # ---------------------------------------------------------
-      
+      # --- BACKEND STEPS (Conditional) ---
+
       - name: Install backend dependencies
+        # This will now run if backend/ OR common/ changed
         if: steps.changes.outputs.backend == 'true'
         run: npm install
         working-directory: ./backend
 
       - name: Deploy server
+        # This will now run if backend/ OR common/ changed
         if: steps.changes.outputs.backend == 'true'
         run: npm run deploy
         working-directory: ./backend
         env:
           CI: false
-          # Pass keys explicitly if Terraform requires them as env vars
-          AWS_ACCESS_KEY_ID: ${{ secrets.CANNON_KEY }} 
+          # Explicitly passing Cannon keys in case they are needed by Terraform
+          AWS_ACCESS_KEY_ID: ${{ secrets.CANNON_KEY }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.CANNON_SECRET }}
