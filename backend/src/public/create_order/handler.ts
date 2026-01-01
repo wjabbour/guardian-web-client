@@ -1,7 +1,7 @@
 import { APIGatewayProxyResult, APIGatewayEvent } from "aws-lambda";
 import {
   logger,
-  addCors,
+  buildResponse,
   getCatalogItemDescription,
   sendEmail,
 } from "../utils";
@@ -27,11 +27,7 @@ export const handler = async (
     logger.info({ message: "Received body", body });
 
     if (!body.email.includes("@")) {
-      return {
-        statusCode: 400,
-        body: JSON.stringify({ message: "Please use a valid email" }),
-        headers: addCors(),
-      };
+      return buildResponse(400, { message: "Please use a valid email" });
     }
 
     const email = body.email;
@@ -43,13 +39,10 @@ export const handler = async (
 
     if (!company_name) {
       logger.warn({ message: "Unrecognized company name" });
-      return {
-        statusCode: 400,
-        body: JSON.stringify({
-          message:
-            "Unrecognized company name. Please contact your account representative.",
-        }),
-      };
+      return buildResponse(400, {
+        message:
+          "Unrecognized company name. Please contact your account representative.",
+      });
     }
 
     const store = getStoreCode(company_name, body.store);
@@ -57,14 +50,10 @@ export const handler = async (
 
     if (!store) {
       logger.warn({ message: "Unrecognized store" });
-      return {
-        statusCode: 400,
-        body: JSON.stringify({
-          message:
-            "Unrecognized store. Please contact your account representative.",
-        }),
-        headers: addCors(),
-      };
+      return buildResponse(400, {
+        message:
+          "Unrecognized store. Please contact your account representative.",
+      });
     }
 
     const cart = construct_cart(body.cart, customer_po, company_name);
@@ -81,11 +70,9 @@ export const handler = async (
       // this prevents Tameron client being able to submit arbitrary orders
       if (!body.bypassPaypal) {
         logger.warn("All Tameron orders should have bypassPaypal as true");
-        return {
-          statusCode: 400,
-          body: JSON.stringify({ message: "Must enter code to place order" }),
-          headers: addCors(),
-        };
+        return buildResponse(400, {
+          message: "Must enter code to place order",
+        });
       }
 
       logger.info({ message: "Tameron order, sending immediately" });
@@ -111,10 +98,7 @@ export const handler = async (
         "archived_orders"
       );
       await sendEmail([order], "Tameron", email);
-      return {
-        statusCode: 200,
-        headers: addCors(),
-      };
+      return buildResponse(200, {});
     }
 
     if (body.bypassPaypal) {
@@ -142,10 +126,7 @@ export const handler = async (
         "archived_orders"
       );
       await sendEmail([order], company_name, email);
-      return {
-        statusCode: 200,
-        headers: addCors(),
-      };
+      return buildResponse(200, {});
     }
 
     // bypassPaypal = false
@@ -168,18 +149,10 @@ export const handler = async (
       "orders"
     );
 
-    return {
-      statusCode: 200,
-      body: JSON.stringify({ order_id }),
-      headers: addCors(),
-    };
+    return buildResponse(200, { order_id });
   } catch (e) {
     logger.error(e);
-    return {
-      statusCode: 500,
-      body: JSON.stringify({ message: "Failed to create order" }),
-      headers: addCors(),
-    };
+    return buildResponse(500, { message: "Failed to create order" });
   }
 };
 
@@ -197,8 +170,10 @@ function construct_cart(cart: any, customer_po: string, company_name: string) {
 
     if (cart_item["embroidery"]) obj["embroidery"] = cart_item["embroidery"];
     if (cart_item["placement"]) obj["placement"] = cart_item["placement"];
-    if (cart_item["secondEmbroidery"]) obj["secondEmbroidery"] = cart_item["secondEmbroidery"];
-    if (cart_item["secondPlacement"]) obj["secondPlacement"] = cart_item["secondPlacement"];
+    if (cart_item["secondEmbroidery"])
+      obj["secondEmbroidery"] = cart_item["secondEmbroidery"];
+    if (cart_item["secondPlacement"])
+      obj["secondPlacement"] = cart_item["secondPlacement"];
     obj["description"] = getCatalogItemDescription(
       cart_item["code"],
       company_name

@@ -1,5 +1,5 @@
 import { APIGatewayProxyResult } from "aws-lambda";
-import { addCors, logger } from "../utils";
+import { logger, buildResponse } from "../utils";
 import { Dynamo } from "./dynamo";
 
 const dynamo = new Dynamo();
@@ -10,9 +10,7 @@ export const handler = async (event): Promise<APIGatewayProxyResult> => {
     const company_name = body.companyName;
 
     if (!company_name) {
-      return {
-        statusCode: 400,
-      };
+      return buildResponse(400, { message: "Missing companyName" });
     }
 
     const currentOrders = await dynamo.getCurrentOrders(company_name);
@@ -21,15 +19,11 @@ export const handler = async (event): Promise<APIGatewayProxyResult> => {
     const archivedOrders = await dynamo.getArchivedOrders(company_name);
     logger.info({ message: "Retrieved archived orders", archivedOrders });
 
-    return {
-      statusCode: 200,
-      body: JSON.stringify({ orders: [...currentOrders, ...archivedOrders] }),
-      headers: addCors(),
-    };
+    return buildResponse(200, {
+      orders: [...currentOrders, ...archivedOrders],
+    });
   } catch (e) {
     logger.error(e);
-    return {
-      statusCode: 500,
-    };
+    return buildResponse(500, { message: "Failed to retrieve orders" });
   }
 };

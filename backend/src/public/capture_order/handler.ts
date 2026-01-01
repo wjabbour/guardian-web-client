@@ -1,5 +1,5 @@
 import { APIGatewayProxyResult, APIGatewayEvent } from "aws-lambda";
-import { logger, addCors, sendEmail } from "../utils";
+import { logger, sendEmail, buildResponse } from "../utils";
 import axios from "axios";
 import qs from "qs";
 import {
@@ -52,9 +52,7 @@ export const handler = async (
 
     if (!company_name) {
       logger.warn({ message: "Unrecognized company name" });
-      return {
-        statusCode: 400,
-      };
+      return buildResponse(400, { message: "Unrecognized company name" });
     }
 
     logger.info({ message: "Determined company name", company_name });
@@ -72,18 +70,10 @@ export const handler = async (
 
     await sendEmail([order], company_name, email);
 
-    return {
-      statusCode: 200,
-      body: JSON.stringify({ order_id }),
-      headers: addCors(),
-    };
+    return buildResponse(200, { order_id });
   } catch (e) {
     logger.error(e);
-    return {
-      statusCode: 500,
-      body: JSON.stringify({ message: "Failed to create order" }),
-      headers: addCors(),
-    };
+    return buildResponse(500, { message: "Failed to create order" });
   }
 };
 

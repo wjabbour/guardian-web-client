@@ -3,15 +3,24 @@ import dayjs from "dayjs";
 import { SendRawEmailCommand, SESClient } from "@aws-sdk/client-ses";
 import { getStore, getConfigValue } from "guardian-common";
 import { getCatalog } from "guardian-common";
+import { APIGatewayProxyResult } from "aws-lambda";
 
 export const logger = pino();
 
-export function addCors() {
-  const headers = {};
-  headers["Access-Control-Allow-Origin"] = "*";
-
-  return headers;
-}
+export const buildResponse = (
+  statusCode: number,
+  body: any
+): APIGatewayProxyResult => {
+  return {
+    statusCode,
+    body: JSON.stringify(body),
+    headers: {
+      "Content-Type": "application/json",
+      "Access-Control-Allow-Origin": "*",
+      "Access-Control-Allow-Credentials": true,
+    },
+  };
+};
 
 export function getCatalogItemPrice(item_code, size, company_name) {
   const item = getCatalog(company_name).find((i) => {

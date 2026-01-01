@@ -1,5 +1,5 @@
 import { APIGatewayProxyResult } from "aws-lambda";
-import { addCors, logger } from "../utils";
+import { logger, buildResponse } from "../utils";
 import { Dynamo } from "./dynamo";
 
 const dynamo = new Dynamo();
@@ -11,14 +11,9 @@ export const handler = async (event): Promise<APIGatewayProxyResult> => {
 
     await dynamo.updateOrderData(body.email, body.created_at, body.cart);
 
-    return {
-      statusCode: 200,
-      headers: addCors(),
-    };
+    return buildResponse(200, {});
   } catch (e) {
     logger.error(e);
-    return {
-      statusCode: 500,
-    };
+    return buildResponse(500, { message: "Failed to update order" });
   }
 };
