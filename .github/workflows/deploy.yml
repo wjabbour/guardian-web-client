@@ -55,11 +55,22 @@ jobs:
         run: npm install
         working-directory: ./client
 
-      - name: Deploy client (Cannon)
-        run: npm run deploy-cannon
+      - name: Build client
+        run: npm run build
         working-directory: ./client
         env:
           CI: false
+
+      - name: Configure AWS Credentials (Cannon)
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-access-key-id: ${{ secrets.CANNON_KEY }}
+          aws-secret-access-key: ${{ secrets.CANNON_SECRET }}
+          aws-region: us-east-1
+
+      - name: Upload to Cannon
+        run: npm run upload-cannon
+        working-directory: ./client
 
       - name: Configure AWS Credentials (GPC)
         uses: aws-actions/configure-aws-credentials@v4
@@ -68,11 +79,9 @@ jobs:
           aws-secret-access-key: ${{ secrets.GPC_SECRET }}
           aws-region: us-east-1
 
-      - name: Deploy client (GPC)
-        run: npm run deploy-gpc81
+      - name: Upload to GPC
+        run: npm run upload-gpc81
         working-directory: ./client
-        env:
-          CI: false
 
       # --- BACKEND STEPS (Conditional) ---
 
