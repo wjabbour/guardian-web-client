@@ -89,6 +89,3 @@ jobs:
         working-directory: ./backend
         env:
           CI: false
-          # Explicitly passing Cannon keys in case they are needed by Terraform
-          AWS_ACCESS_KEY_ID: ${{ secrets.CANNON_KEY }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.CANNON_SECRET }}
