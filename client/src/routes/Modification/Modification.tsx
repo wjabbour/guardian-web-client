@@ -19,9 +19,7 @@ import {
 import { PlacementOption } from "../../lib/constants";
 
 type UserSelection = {
-  [key: string]: {
-    quantity: number;
-  };
+  [key: string]: number;
 };
 
 export async function loader({ params }) {
@@ -37,9 +35,9 @@ export default function Modification() {
   const [image_source, set_image_source] = useState(
     item.colors
       ? `/images/${item.code}_${selected_color
-        .toLowerCase()
-        .split(" ")
-        .join("_")}.jpg`
+          .toLowerCase()
+          .split(" ")
+          .join("_")}.jpg`
       : `/images/${item.code}.jpg`
   );
   const [cart, set_cart] = useOutletContext<any>();

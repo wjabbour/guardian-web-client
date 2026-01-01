@@ -9,7 +9,7 @@ const isMany = (arr?: string[]) => (arr ? arr.length >= 2 : false);
 interface Props {
   item: any; // Ideally replace 'any' with your Product interface
   setUserSelection: (selection: Record<string, number>) => void;
-  reset: boolean;
+  reset: number;
 }
 
 export default function QuantitySelector({
