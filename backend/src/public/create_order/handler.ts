@@ -256,7 +256,6 @@ async function create_paypal_order(price) {
           currency_code: "USD",
           value: `${price}`,
         },
-        // TODO: create uuid
         reference_id: "123",
       },
     ],
