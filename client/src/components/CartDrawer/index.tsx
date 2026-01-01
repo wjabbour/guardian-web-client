@@ -8,13 +8,23 @@ import CloseIcon from "@mui/icons-material/Close";
 import DeleteIcon from "@mui/icons-material/Delete";
 import { ColorOption, SizeOption } from "../../lib/constants";
 import { getDomainAwarePath } from "../../lib/utils";
+import { CartItem } from "guardian-common";
 
-export default function CartDrawer({ cart, setCart }) {
+interface Cart {
+  [key: string]: CartItem;
+}
+
+interface Props {
+  cart: Cart;
+  setCart: React.Dispatch<React.SetStateAction<Cart>>;
+}
+
+export default function CartDrawer({ cart, setCart }: Props) {
   const navigate = useNavigate();
   const [isOpen, setIsOpen] = useState(false);
 
   // Calculate total items for the badge count
-  const cartItemCount = Object.values(cart || {}).reduce(
+  const cartItemCount: number = Object.values(cart || {}).reduce(
     (acc: number, item: any) => acc + (Number(item.quantity) || 0),
     0
   );

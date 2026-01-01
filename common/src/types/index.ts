@@ -6,18 +6,18 @@ export interface CatalogItem {
   sizes: {};
   default_color: string;
   type:
-  | "mens"
-  | "womens"
-  | "hat"
-  | "accessory"
-  | "customs"
-  | "office"
-  | "sales"
-  | "detail"
-  | "bodyshop"
-  | "parts"
-  | "tshirts"
-  | "service";
+    | "mens"
+    | "womens"
+    | "hat"
+    | "accessory"
+    | "customs"
+    | "office"
+    | "sales"
+    | "detail"
+    | "bodyshop"
+    | "parts"
+    | "tshirts"
+    | "service";
 
   halfColors?: string[]; // C112 is capable of being two-colored. We need this field to present specially colored divs for the color selector for those colors
   // some items are only purchasble by Service and Parts counter employees only
@@ -27,4 +27,14 @@ export interface CatalogItem {
    * wont be shown when viewing the customs items for that store.
    */
   supportedStores?: string[];
+}
+
+export interface CartItem {
+  code: string;
+  color: string;
+  quantity: number;
+  size: string;
+  price: number;
+  placement: string;
+  embroidery: string;
 }
