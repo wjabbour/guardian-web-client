@@ -35,7 +35,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "upload-cannon": "cross-env AWS_PROFILE=cannon aws s3 sync build s3://cannonemployeestore.com/ --delete --size-only && cross-env AWS_PROFILE=cannon aws cloudfront create-invalidation --distribution-id E14D6FK2VK66GQ --paths \"/*\"",
+    "upload-cannon": "cross-env AWS_PROFILE=cannon aws s3 sync build s3://cannonemployeestore.com/ --delete --size-only && aws cloudfront create-invalidation --distribution-id E14D6FK2VK66GQ --paths \"/*\"",
     "upload-gpc81": "aws s3 sync build s3://gpc81.com/ --delete --size-only && aws cloudfront create-invalidation --distribution-id E1R5RLNLHZTA8G --paths \"/*\"",
     "deploy": "npm run build && npm run upload-cannon && npm run upload-gpc81"
   },
