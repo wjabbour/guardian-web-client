@@ -42,7 +42,6 @@
     "pino": "^8.14.1",
     "qs": "^6.11.2",
     "stripe": "^12.4.0",
-    "uuid": "^9.0.0",
     "guardian-common": "file:../common"
   },
   "workspaces": [
