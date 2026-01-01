@@ -103,7 +103,7 @@ function constructEmail(recipient: string, companyName: string, csv: string) {
   let ses_mail = "From: orders@gpc81.com\n";
   ses_mail += `To: ${recipient}\n`;
   ses_mail += `Subject: Weekly ${companyName} Orders\n`;
-  ses_mail += `Content-Type: text/plain; name="${date_str}-orders.csv"\n`;
+  ses_mail += `Content-Type: text/csv; name="${date_str}-orders.csv"\n`;
   ses_mail += `Content-Disposition: attachment; filename="${date_str}-orders.csv"\n`;
   ses_mail += "Content-Transfer-Encoding: base64\n";
   ses_mail += "\n"; // separate email headers from body
