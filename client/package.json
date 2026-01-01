@@ -33,7 +33,7 @@
   "scripts": {
     "deploy": "npm run deploy-cannon && npm run deploy-gpc81",
     "deploy-cannon": "cross-env AWS_PROFILE=cannon npm run build && aws s3 sync build s3://cannonemployeestore.com/ --delete --size-only && aws cloudfront create-invalidation --distribution-id E14D6FK2VK66GQ --paths \"/*\"",
-    "deploy-gpc81": "npm run build && aws s3 sync build s3://gpc81.com/ --delete && aws cloudfront create-invalidation --distribution-id E1R5RLNLHZTA8G --paths \"/*\"",
+    "deploy-gpc81": "npm run build && aws s3 sync build s3://gpc81.com/ --delete --size-only && aws cloudfront create-invalidation --distribution-id E1R5RLNLHZTA8G --paths \"/*\"",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
