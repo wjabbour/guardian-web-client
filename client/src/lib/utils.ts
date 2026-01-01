@@ -1,4 +1,4 @@
-import { getWebCatalog, getWebConfigValue } from "guardian-common";
+import { getWebCatalog, getWebConfigValue, CatalogItem } from "guardian-common";
 
 /*
   on the gpc81 site, when a user logs in they are logging in for a specific company.
@@ -37,7 +37,7 @@ export function getEmbroidery(type) {
   return getWebConfigValue("embroideries")[type];
 }
 
-export function getCatalogItem(code) {
+export function getCatalogItem(code): CatalogItem {
   return getWebCatalog().find((i) => {
     return i.code === code;
   });
