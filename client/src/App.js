@@ -11,7 +11,7 @@ import Checkout from "./routes/Checkout/Checkout";
 import StoreSelection from "./routes/StoreSelection/StoreSelection";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Success from "./routes/Success/Success";
-import { Helmet } from "react-helmet";
+import { HelmetProvider } from "react-helmet-async";
 import { getWebConfigValue } from "guardian-common";
 import { useNextGenRouting } from "./hooks/useNextGenRouting";
 
@@ -77,9 +77,9 @@ function App() {
 
   return (
     <div className="main__page">
-      <Helmet>
+      <HelmetProvider>
         <title>{getWebConfigValue("title")}</title>
-      </Helmet>
+      </HelmetProvider>
       <RouterProvider router={router}></RouterProvider>
     </div>
   );
