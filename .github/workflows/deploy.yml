@@ -13,10 +13,21 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
+      # 1. NEW STEP: Check if backend files changed
+      - name: Check for backend changes
+        uses: dorny/paths-filter@v3
+        id: changes
+        with:
+          filters: |
+            backend:
+              - 'backend/**'
+
       - name: Setup Terraform
+        # Optimization: Only setup Terraform if backend actually changed
+        if: steps.changes.outputs.backend == 'true'
         uses: hashicorp/setup-terraform@v3
 
-      - name: Configure AWS Credentials
+      - name: Configure AWS Credentials (Cannon)
         uses: aws-actions/configure-aws-credentials@v4
         with:
           aws-access-key-id: ${{ secrets.CANNON_KEY }}
@@ -42,31 +53,40 @@ jobs:
         run: npm install
         working-directory: ./client
 
-      - name: Deploy client
+      - name: Deploy client (Cannon)
         run: npm run deploy-cannon
         working-directory: ./client
         env:
           CI: false
 
-      - name: Configure AWS Credentials
+      - name: Configure AWS Credentials (GPC)
         uses: aws-actions/configure-aws-credentials@v4
         with:
           aws-access-key-id: ${{ secrets.GPC_KEY }}
           aws-secret-access-key: ${{ secrets.GPC_SECRET }}
           aws-region: us-east-1
 
-      - name: Deploy client
+      - name: Deploy client (GPC)
         run: npm run deploy-gpc81
         working-directory: ./client
         env:
           CI: false
 
+      # ---------------------------------------------------------
+      # BACKEND STEPS (Conditional)
+      # ---------------------------------------------------------
+      
       - name: Install backend dependencies
+        if: steps.changes.outputs.backend == 'true'
         run: npm install
         working-directory: ./backend
 
       - name: Deploy server
+        if: steps.changes.outputs.backend == 'true'
         run: npm run deploy
         working-directory: ./backend
         env:
           CI: false
+          # Pass keys explicitly if Terraform requires them as env vars
+          AWS_ACCESS_KEY_ID: ${{ secrets.CANNON_KEY }} 
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.CANNON_SECRET }}
