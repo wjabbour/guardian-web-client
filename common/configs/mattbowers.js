@@ -151,6 +151,11 @@ export const config = {
       address: "13939 Airline Hwy, Baton Rouge, LA 70817",
       code: "BOWCBA",
     },
+    {
+      name: "Matt Bowers Hyundai (Gulfport)",
+      address: "11457 Northpark Drive, Gulfport, MS 39503",
+      code: "BOWHGU",
+    },
     
         
     ],

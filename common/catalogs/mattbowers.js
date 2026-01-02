@@ -1217,6 +1217,68 @@ export const catalog = [
       },
     },
   },
+   {
+    code: "BOWHGU-34PE-449908A",
+    name: "Black Plastic Frame",
+    fullname: "Black Plastic Frame w/white imprint",
+    colors: ["Black"],
+    type: "customs",
+    default_color: "Black",   
+    supportedStores: ["BOWHGU"],
+    quantities: [1000],
+    pricing: {
+      base: {
+        price: 0.59,
+      },
+    },
+  },
+  {
+    code: "BOWHGU-33P-449910A",
+    name: ".15 Gauge Vinyl Plate",
+    fullname: ".15 Gauge Vinyl Plate - White w/reflex blue imprint",
+    colors: ["Blue"],
+    type: "customs",
+    default_color: "Blue",    
+    supportedStores: ["BOWHGU"],
+    quantities: [1000],
+    pricing: {
+      base: {
+        price: 0.49,
+      },
+    },
+  },
+  {
+    code: "BOWHGU-31DD-484892A",
+    name: "Thermo Die Cut Decal",
+    fullname: "Thermo Die Cut Decal (5.75 in. x 1.02 in.)",
+    colors: ["Black", "White"],
+    type: "customs",
+    default_color: "Black",
+    description: `Black will not show on white decal.`,
+    supportedStores: ["BOWHGU"],
+    quantities: [1000],
+    pricing: {
+      base: {
+        price: 0.64,
+      },
+    },
+  }, 
+  {
+    code: "BOWHGU-31DD-519517A",
+    name: "Thermo Die Cut Decal",
+    fullname: "Thermo Die Cut Decal (5.75 in. x 1 in.)",
+    colors: ["White"],
+    type: "customs",
+    default_color: "White",
+    description: `Grey will not show on white decal.`,
+    supportedStores: ["BOWHGU"],
+    quantities: [1000],
+    pricing: {
+      base: {
+        price: 0.64,
+      },
+    },
+  }, 
   {
     code: "MATFME-34CPSS-452477A",
     name: "Chrome Plated Plate",
@@ -2129,6 +2191,20 @@ export const catalog = [
     pricing: {
       base: {
         price: 0.15,
+      },
+    },
+  },
+  {
+    code: "BOWHGU-3200-500034B",
+    name: "Addendum Form",
+    fullname: "4-1/4 in. x 11 in. Addendum Form w/black & reflex blue imprint",
+    colors: ["Blue"],
+    type: "service",
+    default_color: "Blue",    
+    quantities: [500],
+    pricing: {
+      base: {
+        price: 0.56,
       },
     },
   },
