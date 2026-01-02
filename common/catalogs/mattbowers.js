@@ -755,7 +755,7 @@ export const catalog = [
   },
   {
     code: "ST657",
-    name: "Sport-Tek LS Polo",
+    name: "Sport-Tek LS Polo #ST657",
     fullname: "Sport-Tek® Long Sleeve Micropique Polo",
     colors: ["Black","White"],
     type: "mens",
@@ -824,9 +824,9 @@ export const catalog = [
     code: "29M",
     name: "Jerzees® Dri-Power® Tee #29M",
     fullname: "Jerzees® Dri-Power® 50/50 Cotton/Poly T-Shirt (29M)",
-    colors: ["Charcoal Grey", "JNavy", "Royal"],
+    colors: ["Black", "Charcoal Grey", "JNavy", "Royal"],
     type: "tshirts",
-    default_color: "Charcoal Grey",
+    default_color: "Black",
     sizes: [
       "Small",
       "Medium",
