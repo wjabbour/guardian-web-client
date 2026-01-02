@@ -1,3 +1,5 @@
+import { CatalogItem } from "./types";
+
 // @ts-ignore - JS config files don't have type declarations
 import { config as CannonConfig } from "../configs/cannon";
 // @ts-ignore
@@ -131,7 +133,7 @@ export function getRoutePrefix(password: string): string | undefined {
 }
 
 // TODO: consolidate web and server config and catalog retrieval functions
-export function getWebCatalog() {
+export function getWebCatalog(): any {
   const url = window.location.href;
   if (url.includes("localhost:3000")) {
     return HennessyCatalog;
@@ -177,7 +179,7 @@ export function getWebCatalog() {
 
   e.g. a config must have title: "Cannon", "Guardian", etc
 */
-export function getCatalog(companyName: string) {
+export function getCatalog(companyName: string): any {
   switch (companyName) {
     case "Cannon":
       return CannonCatalog;
