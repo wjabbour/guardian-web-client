@@ -52,12 +52,19 @@ export interface AccountRep {
   phone: string;
 }
 
+export interface Store {
+  name: string;
+  address: string;
+  code: string;
+  password?: string;
+}
+
 export interface Config {
   title: string; // VERY IMPORTANT: this value is passed to the backend in every API so the backend can perform company specific logic... this is also the text that will appear in the browser tab
   company_logo: string; // the name of the image file to render in the navbar
-  logo_placements: string[]; // the text values in the logo select on the item modification page
+  logo_placements: string[] | { [key: string]: string[] }; // the text values in the logo select on the item modification page
   embroideries: Embroidery; // the text values in the placement select on the item modification page
-  stores: string[]; // the text values in the stores select on the checkout screen
+  stores: Store[]; // the text values in the stores select on the checkout screen
   show_modification_thumbnail: boolean;
   minimum_apparel_order: boolean;
   render_logo_preview: boolean;
