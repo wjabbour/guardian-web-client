@@ -1974,6 +1974,20 @@ export const catalog = [
     },
   },
   {
+    code: "BOWHGU-0201-504644A",
+    name: "Paper Document Folder",
+    fullname: "9.875 in. x 6 in. Non-expandable Blue Marble Crush Cardstock w/white imprint",
+    colors: ["Blue"],
+    type: "sales",
+    default_color: "Blue",    
+    quantities: [500],
+    pricing: {
+      base: {
+        price: 1.57,
+      },
+    },
+  },
+  {
     code: "BOWCME-0801-474526B",
     name: "White Quick Ship Folder",
     fullname:
