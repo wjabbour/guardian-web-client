@@ -28,8 +28,7 @@ export const catalog = [
     fullname: "Black Plastic Frame w/white imprint",
     colors: ["Black"],
     type: "customs",
-    default_color: "Black",
-    description: "Enter '1' for a shipment of 250, 500 or 1000 frames",
+    default_color: "Black",    
     quantities: [250, 500, 1000],
     pricing: {
       base: {
@@ -43,8 +42,7 @@ export const catalog = [
     fullname: "Black Powder Coated Zinc Metal Frame w/ white imprint",
     colors: ["Black"],
     type: "customs",
-    default_color: "Black",
-    description: "Enter '1' for a shipment of 250, 500 or 1000 frames",
+    default_color: "Black",    
     quantities: [250, 500, 1000],
     pricing: {
       base: {
@@ -58,8 +56,7 @@ export const catalog = [
     fullname: "Chrome-Plated Plastic Nameplates",
     colors: ["Chrome"],
     type: "customs",
-    default_color: "Chrome",
-    description: "Enter '1' for a shipment of 250, 500 or 1000 nameplates",
+    default_color: "Chrome",    
     quantities: [250, 500, 1000],
     pricing: {
       base: {
@@ -73,8 +70,7 @@ export const catalog = [
     fullname: "Black Plastic Nameplates",
     colors: ["Black"],
     type: "customs",
-    default_color: "Black",
-    description: "Enter '1' for a shipment of 250, 500 or 1000 nameplates",
+    default_color: "Black",    
     quantities: [250, 500, 1000],
     pricing: {
       base: {
@@ -88,8 +84,7 @@ export const catalog = [
     fullname: ".20 Gauge White Plastic Plate",
     colors: ["White"],
     type: "customs",
-    default_color: "White",
-    description: "Enter '1' for a shipment of 250, 500 or 1000 plates",
+    default_color: "White",    
     quantities: [250, 500, 1000],
     pricing: {
       base: {
@@ -103,8 +98,7 @@ export const catalog = [
     fullname: ".20 Gauge White Plastic Plate",
     colors: ["White"],
     type: "customs",
-    default_color: "White",
-    description: "Enter '1' for a shipment of 250, 500 or 1000 plates",
+    default_color: "White",    
     quantities: [250, 500, 1000],
     pricing: {
       base: {
@@ -118,8 +112,7 @@ export const catalog = [
     fullname: ".20 Gauge White Plastic Plate (4CP)",
     colors: ["White"],
     type: "customs",
-    default_color: "White",
-    description: "Enter '1' for a shipment of 250, 500 or 1000 plates",
+    default_color: "White",    
     quantities: [250, 500, 1000],
     pricing: {
       base: {
@@ -133,8 +126,7 @@ export const catalog = [
     fullname: ".20 Gauge White Plastic Plate (4CP)",
     colors: ["White"],
     type: "customs",
-    default_color: "White",
-    description: "Enter '1' for a shipment of 250, 500 or 1000 plates",
+    default_color: "White",    
     quantities: [250, 500, 1000],
     pricing: {
       base: {
@@ -148,8 +140,7 @@ export const catalog = [
     fullname: ".20 Gauge White Plastic Plate",
     colors: ["White"],
     type: "customs",
-    default_color: "White",
-    description: "Enter '1' for a shipment of 250, 500 or 1000 plates",
+    default_color: "White",    
     quantities: [250, 500, 1000],
     pricing: {
       base: {
@@ -163,8 +154,7 @@ export const catalog = [
     fullname: ".20 Gauge White Plastic Plate (4CP)",
     colors: ["White"],
     type: "customs",
-    default_color: "White",
-    description: "Enter '1' for a shipment of 250, 500 or 1000 plates",
+    default_color: "White",    
     quantities: [250, 500, 1000],
     pricing: {
       base: {
@@ -178,8 +168,7 @@ export const catalog = [
     fullname: ".20 Gauge White Plastic Plate (4CP)",
     colors: ["White"],
     type: "customs",
-    default_color: "White",
-    description: "Enter '1' for a shipment of 250, 500 or 1000 plates",
+    default_color: "White",    
     quantities: [250, 500, 1000],
     pricing: {
       base: {
@@ -193,8 +182,7 @@ export const catalog = [
     fullname: ".20 Gauge White Plastic Plate (4CP)",
     colors: ["White"],
     type: "customs",
-    default_color: "White",
-    description: "Enter '1' for a shipment of 250, 500 or 1000 plates",
+    default_color: "White",    
     quantities: [250, 500, 1000],
     pricing: {
       base: {
@@ -208,8 +196,7 @@ export const catalog = [
     fullname: ".20 Gauge White Plastic Plate (4CP)",
     colors: ["White"],
     type: "customs",
-    default_color: "White",
-    description: "Enter '1' for a shipment of 250, 500 or 1000 plates",
+    default_color: "White",    
     quantities: [250, 500, 1000],
     pricing: {
       base: {
@@ -223,8 +210,7 @@ export const catalog = [
     fullname: ".20 Gauge White Plastic Plate (4CP)",
     colors: ["White"],
     type: "customs",
-    default_color: "White",
-    description: "Enter '1' for a shipment of 250, 500 or 1000 plates",
+    default_color: "White",    
     quantities: [250, 500, 1000],
     pricing: {
       base: {
@@ -238,8 +224,7 @@ export const catalog = [
     fullname: ".20 Gauge White Plastic Plate (4CP)",
     colors: ["White"],
     type: "customs",
-    default_color: "White",
-    description: "Enter '1' for a shipment of 250, 500 or 1000 plates",
+    default_color: "White",    
     quantities: [250, 500, 1000],
     pricing: {
       base: {
@@ -253,8 +238,7 @@ export const catalog = [
     fullname: ".20 Gauge White Plastic Plate (4CP)",
     colors: ["White"],
     type: "customs",
-    default_color: "White",
-    description: "Enter '1' for a shipment of 250, 500 or 1000 plates",
+    default_color: "White",    
     quantities: [250, 500, 1000],
     pricing: {
       base: {
