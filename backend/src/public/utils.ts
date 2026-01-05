@@ -100,7 +100,7 @@ function constructEmail(recipient: string, companyName: string, csv: string) {
   const date = dayjs();
   const date_str = date.format("MM-DD-YYYY");
   const buffer = Buffer.from(csv);
-  let ses_mail = "From: orders@gpc81.com\n";
+  let ses_mail = "From: doubleujabbour@gmail.com\n";
   ses_mail += `To: ${recipient}\n`;
   ses_mail += `Subject: Weekly ${companyName} Orders\n`;
   ses_mail += `Content-Type: text/csv; name="${date_str}-orders.csv"\n`;
