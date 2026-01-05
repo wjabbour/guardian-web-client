@@ -1943,6 +1943,19 @@ export const catalog = [
     },
   },
   {
+    code: "957R",
+    name: "Uni-Posca Markers (R)",
+    fullname: "Regular Uni-Posca Marker (1 each)",
+    colors: ["Green", "Orange", "Pink", "Red", "White", "Yellow"],
+    type: "sales",
+    default_color: "Orange",
+    pricing: {
+      base: {
+        price: 10.25,
+      },
+    },
+  },
+  {
     code: "VT400",
     name: "Stock Windshield Sticker",
     fullname: "Kleer-Back Stock Stickers Versa #400 (100/pk)",

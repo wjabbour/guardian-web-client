@@ -39,7 +39,7 @@ export const catalog = [
   },
   {
     code: "MCDONALD-MFRAMEI",
-    name: "Chrome Metal Frame",
+    name: "Black Metal Frame",
     fullname: "Black Powder Coated Zinc Metal Frame w/ white imprint",
     colors: ["Black"],
     type: "customs",
