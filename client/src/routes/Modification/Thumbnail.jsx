@@ -13,7 +13,7 @@ export default function Thumbnail({ img }) {
     <div
       className={`${styles.logo_thumbnail} ${show ? styles.show : styles.hide}`}
     >
-      {img && <img className={styles.logo} src={getImagePath(img)} alt={img}></img>}
+      {img && <img className={styles.logo} src={getImagePath(img)}></img>}
     </div>
   );
 }

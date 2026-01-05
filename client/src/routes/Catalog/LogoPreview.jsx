@@ -14,7 +14,6 @@ export default function LogoPreview({ catalogType }) {
           key={l}
           className={styles.large__picture}
           src={`/images/${l}.png`}
-          alt={l}
         ></img>
       );
     } else if (l === "quicklane") {
@@ -23,11 +22,10 @@ export default function LogoPreview({ catalogType }) {
           key={l}
           className={styles.quicklane}
           src={`/images/${l}.png`}
-          alt={l}
         ></img>
       );
     } else {
-      return <img key={l} src={`/images/${l}.png`} alt={l}></img>;
+      return <img key={l} src={`/images/${l}.png`}></img>;
     }
   });
 

@@ -69,7 +69,6 @@ export default function Checkout() {
       renderButtons();
       set_script_loaded(true);
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   function build_request_body() {
@@ -162,6 +161,9 @@ export default function Checkout() {
           color: "gold",
           layout: "vertical",
           tagline: false,
+        },
+        onError: (error) => {
+          console.warn(error);
         },
       })
       .render(paypalRef.current);

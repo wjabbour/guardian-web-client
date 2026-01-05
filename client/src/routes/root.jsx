@@ -60,7 +60,6 @@ export default function Root() {
                 <img
                   src="/images/guardian_nav.jpg"
                   className="w-full h-full"
-                  alt="Guardian Navigation"
                 ></img>
                 <div
                   onClick={() => {
