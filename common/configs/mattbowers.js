@@ -5,7 +5,7 @@ export const config = {
     mens: ["Left Chest","Left Sleeve","Right Sleeve"],
     womens: ["Left Chest","Left Sleeve","Right Sleeve"],
     hat: ["Front Center"],
-    tshirts: ["Left Chest", "Front Center Chest"],
+    tshirts: ["Left Chest", "Front Center Chest","Full Front"],
   },
   show_image_preview: true,
   minimum_apparel_order: false,
@@ -97,7 +97,7 @@ export const config = {
       "Matt Bowers Chevy Slidell",
       "Matt Bowers Chevy Metairie",
       "Matt B Ford Met Blue",
-      "Matt B Ford Metairie", 
+      "Matt Bowers Ford Metairie", 
       "Matt Bowers Hyundai Slidell",
       "Matt Bowers Hyundai Metairie",
       "Matt Bowers Infiniti Metairie",
@@ -156,7 +156,11 @@ export const config = {
       address: "11457 Northpark Drive, Gulfport, MS 39503",
       code: "BOWHGU",
     },
-    
+    {
+      name: "Matt Bowers Nissan (South Mississippi)",
+      address: "11600 Bobby Eleuterius Blvd, D'Iberville, MS 39540",
+      code: "BOWNSO",
+    },   
         
     ],
   bypass_codes: ["MATTB"],
