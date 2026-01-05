@@ -1328,7 +1328,7 @@ export const catalog = [
   }, 
   {
     code: "MATFME-34CPSS-452477A",
-    name: "Chrome Plated Plate",
+    name: "Chrome Plated Frame  ",
     fullname: "Screen Printed Chrome Plated Frame w/black imprint",
     colors: ["Chrome"],
     type: "customs",
@@ -1646,6 +1646,67 @@ export const catalog = [
     pricing: {
       base: {
         price: 0.59,
+      },
+    },
+  },
+  {
+    code: "BOWNSO-34PE-488638A",
+    name: "Black Plastic Frame",
+    fullname: "Black Plastic Frame w/white imprint",
+    colors: ["Black"],
+    type: "customs",
+    default_color: "Black",    
+    supportedStores: ["BOWNSO"],
+    quantities: [1000],
+    pricing: {
+      base: {
+        price: 0.59,
+      },
+    },
+  },
+  {
+    code: "BOWNSO-33P-489757A",
+    name: ".30 Gauge Vinyl Plate",
+    fullname: ".30 Gauge White Plastic Plate w/black imprint",
+    colors: ["Black"],
+    type: "customs",
+    default_color: "Black",    
+    supportedStores: ["BOWNSO"],
+    quantities: [1000],
+    pricing: {
+      base: {
+        price: 0.49,
+      },
+    },
+  },
+  {
+    code: "BOWNSO-31DD-489756A",
+    name: "Vinyl Die Cut Decal",
+    fullname: "Vinyl Die Cut Decal (5 in. x 2.35 in.)",
+    colors: ["Black"],
+    type: "customs",
+    default_color: "Black",    
+    supportedStores: ["BOWNSO"],
+    quantities: [1000],
+    pricing: {
+      base: {
+        price: 0.64,
+      },
+    },
+  },
+  {
+    code: "BOWNSO-31DD-519521A",
+    name: "Vinyl Die Cut Decal",
+    fullname: "Vinyl Die Cut Decal (5 in. x 2.37 in.)",
+    colors: ["White"],
+    type: "customs",
+    default_color: "White",
+    description: `Grey will not show on white decal.`,
+    supportedStores: ["BOWNSO"],
+    quantities: [1000],
+    pricing: {
+      base: {
+        price: 0.64,
       },
     },
   },
@@ -2035,6 +2096,20 @@ export const catalog = [
     },
   },
   {
+    code: "BOWNSO-0201-508858A",
+    name: "Paper Document Folder",
+    fullname: "9.875 in. x 6 in. Non-expandable Black Cardstock w/silver foil imprint",
+    colors: ["Black"],
+    type: "sales",
+    default_color: "Black",    
+    quantities: [1000],
+    pricing: {
+      base: {
+        price: 1.34,
+      },
+    },
+  },
+  {
     code: "BOWCME-0801-474526B",
     name: "White Quick Ship Folder",
     fullname:
@@ -2196,6 +2271,20 @@ export const catalog = [
     },
   },
   {
+    code: "BOWNSO-5400-510497Z",
+    name: "All Weather Floor Mats",
+    fullname: "Black All Weather Floor Mats w/full color dome insert",    
+    type: "service",
+    default_color: "Black",
+    description: `Insert Size 7 in. x 2 in.; Pricing includes shipping`,
+    quantities: [100],    
+    pricing: {
+      base: {
+        price: 28.80,
+      },
+    },
+  },
+  {
     code: "600088V",
     name: "Seat Covers (roll)",
     fullname: "No-Slip Plastic Seat Covers (500/roll)",    
@@ -2206,24 +2295,7 @@ export const catalog = [
         price: 69.99,
       },
     },
-  },
-  {
-    code: "EIT50",
-    name: "Self-Locking Key Tags",
-    fullname: "Self-Locking Key Tags (1000/pk)",
-    colors: ["Blue", "Green", "Orange", "Red", "Yellow", "White"],
-    type: "service", 
-    default_color: "Blue",   
-    quantities: [1, 2],
-    pricing: {
-      base: {
-        price: 35.00,
-        discount: {
-          2: 29.99,
-        },
-      },
-    },
-  },
+  },  
   {
     code: "BOWHSL-1830-490972A",
     name: "Service Due Sticker",
@@ -2255,6 +2327,38 @@ export const catalog = [
       },
     },
   },
+  {
+    code: "BOWNSO-STKR-497619A",
+    name: "Service Due Sticker",
+    fullname:
+      "White Vinyl Service Due Sticker w/black imprint (1.5 in. x 2.25 in.)",
+    description: `Grey does not print.`,
+    colors: ["White"],
+    type: "service",
+    default_color: "White",
+    quantities: [2500],
+    pricing: {
+      base: {
+        price: 0.09,
+      },
+    },
+  },
+  {
+    code: "BOWNSO-STICKER-509947B",
+    name: "Pre Owned Vehicles Sticker",
+    fullname:
+      "White Sticker w/black & process blue imprint (16 in. x 6.5 in.)",
+    description: `Removable adhesive`,
+    colors: ["Black"],
+    type: "service",
+    default_color: "Black",
+    quantities: [500],
+    pricing: {
+      base: {
+        price: 3.72,
+      },
+    },
+  },    
   {
     code: "BOWHGU-3200-500034B",
     name: "Addendum Form",
@@ -2336,6 +2440,23 @@ export const catalog = [
     pricing: {
       base: {
         price: 17.00,        
+      },
+    },
+  },
+  {
+    code: "EIT50",
+    name: "Self-Locking Key Tags",
+    fullname: "Self-Locking Key Tags (1000/pk)",
+    colors: ["Blue", "Green", "Orange", "Red", "Yellow", "White"],
+    type: "service", 
+    default_color: "Blue",   
+    quantities: [1, 2],
+    pricing: {
+      base: {
+        price: 35.00,
+        discount: {
+          2: 29.99,
+        },
       },
     },
   },  
