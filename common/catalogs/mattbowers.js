@@ -1883,25 +1883,7 @@ export const catalog = [
         }, 
       },
     },
-  },
-  {
-    code: "GP254",
-    name: "Work Order Holder",
-    fullname: "Work Order Holder #GP254",
-    colors: ["Black"],
-    type: "service",
-    default_color: "Black",    
-    quantities: [10, 50, 100],
-    pricing: {
-      base: {
-        price: 4.50,
-        discount: {
-          50: 4.00,
-          100: 3.50,
-        },
-      },
-    },
-  },
+  },  
   {
     code: "226",
     name: "Combo Key Tags",
@@ -2417,6 +2399,42 @@ export const catalog = [
     },
   },
   {
+    code: "GP254",
+    name: "Work Order Holder",
+    fullname: "Work Order Holder #GP254",
+    colors: ["Black"],
+    type: "service",
+    default_color: "Black",    
+    quantities: [10, 50, 100],
+    pricing: {
+      base: {
+        price: 4.50,
+        discount: {
+          50: 4.00,
+          100: 3.50,
+        },
+      },
+    },
+  },
+  {
+    code: "3044",
+    name: "Spring Rings",
+    fullname: "Metal Spring Rings (250/pk)",
+    colors: ["Metal"],
+    type: "service",
+    default_color: "Metal",
+    quantities: [1, 5, 10],
+    pricing: {
+      base: {
+        price: 16.99,
+        discount: {
+          5: 12.99,
+          10: 10.99,
+        },
+      },
+    },
+  },
+  {
     code: "G10D",
     name: "Hex Screws for Frames",
     fullname: "Self-Tapping #14 x 3/4 Hex Slot Head Screw (100/bx) #EZ244",
@@ -2441,25 +2459,7 @@ export const catalog = [
         price: 15.99,        
       },
     },
-  },
-  {
-    code: "3044",
-    name: "Spring Rings",
-    fullname: "Metal Spring Rings (250/pk)",
-    colors: ["Metal"],
-    type: "service",
-    default_color: "Metal",
-    quantities: [1, 5, 10],
-    pricing: {
-      base: {
-        price: 16.99,
-        discount: {
-          5: 12.99,
-          10: 10.99,
-        },
-      },
-    },
-  },
+  },  
   {
     code: "GP-731",
     name: "5-n-1 Static Cling Ribbon",
