@@ -1716,7 +1716,7 @@ export const catalog = [
     fullname: "Black All Weather Floor Mats w/full color dome insert",    
     type: "customs",
     default_color: "Black",
-    description: `Insert Size 7 in. x 2 in.; Pricing includes shipping`,
+    description: `Insert Size 7 in. x 2 in.; Pricing includes shipping.`,
     supportedStores: ["BOWNSO"],
     quantities: [100],    
     pricing: {
@@ -2297,7 +2297,21 @@ export const catalog = [
         price: 69.99,
       },
     },
-  },  
+  }, 
+  {
+    code: "BOWNSO-5400-510497Z",
+    name: "All Weather Floor Mats",
+    fullname: "Black All Weather Floor Mats w/full color dome insert",    
+    type: "service",
+    default_color: "Black",
+    description: `Insert Size 7 in. x 2 in.; Pricing includes shipping`,    
+    quantities: [100],    
+    pricing: {
+      base: {
+        price: 28.80,
+      },
+    },
+  }, 
   {
     code: "600088V",
     name: "Seat Covers (roll)",
