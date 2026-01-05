@@ -1713,7 +1713,8 @@ export const catalog = [
   {
     code: "BOWNSO-5400-510497Z",
     name: "All Weather Floor Mats",
-    fullname: "Black All Weather Floor Mats w/full color dome insert",    
+    fullname: "Black All Weather Floor Mats w/full color dome insert",
+    colors: ["Black"],    
     type: "customs",
     default_color: "Black",
     description: `Insert Size 7 in. x 2 in.; Pricing includes shipping.`,
@@ -2301,7 +2302,8 @@ export const catalog = [
   {
     code: "BOWNSO-5400-510497Z",
     name: "All Weather Floor Mats",
-    fullname: "Black All Weather Floor Mats w/full color dome insert",    
+    fullname: "Black All Weather Floor Mats w/full color dome insert",
+    colors: ["Black"],    
     type: "service",
     default_color: "Black",
     description: `Insert Size 7 in. x 2 in.; Pricing includes shipping`,    
