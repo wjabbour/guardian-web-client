@@ -19,7 +19,7 @@ export default function ClothingIcon(props) {
     >
       {isLoading &&
         <div className="absolute animate-pulse bg-gray-400 z-10 h-full w-full"></div>}
-      {props.no_space != true && (
+      {props.no_space !== true && (
         <div className="bg-white" style={{ height: 150 - heightOffset }}></div>
       )}
 
@@ -33,11 +33,12 @@ export default function ClothingIcon(props) {
             setLoading(false)
           }}
           src={props.img}
+          alt={props.label || ""}
         ></img>
       </div>
 
       {
-        props.no_space != true && (
+        props.no_space !== true && (
           <div className="bg-white" style={{ height: 150 - heightOffset }}></div>
         )
       }

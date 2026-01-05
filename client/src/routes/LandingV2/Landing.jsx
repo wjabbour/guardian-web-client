@@ -7,7 +7,7 @@ function Category(props) {
       }}
     >
       <div className="h-[375px] w-[300px]  shadow-lg">
-        <img src={props.photo_url} className="h-full w-full"></img>
+        <img src={props.photo_url} className="h-full w-full" alt={props.title}></img>
       </div>
       <div className="flex justify-center mt-3">
         <p className="text-2xl text-[#f54242] font-[700]">{props.title}</p>

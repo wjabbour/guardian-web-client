@@ -21,7 +21,7 @@ export default function PasswordEntryDialog({
 
   useEffect(() => {
     onPasswordChange(password, setPassword);
-  }, [password]);
+  }, [password, onPasswordChange]);
 
   return (
     <Dialog open={isModalOpen} onClose={handleClose}>

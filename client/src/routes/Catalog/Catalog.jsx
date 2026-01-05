@@ -1,12 +1,11 @@
 import styles from "./Catalog.module.scss";
 import ClothingIcon from "../../components/ClothingIcon/ClothingIcon";
 import { useState, useEffect } from "react";
-import { useNavigate, useLocation, useParams } from "react-router-dom";
+import { useLocation, useParams } from "react-router-dom";
 import LogoPreview from "./LogoPreview";
 import { getWebCatalog, getWebConfigValue } from "guardian-common";
 
 export default function ClothingCatalog() {
-  const navigate = useNavigate();
   const location = useLocation();
   const params = useParams();
   const stores = getWebConfigValue("stores");
@@ -44,7 +43,7 @@ export default function ClothingCatalog() {
     } else if (location.pathname.includes("/womens")) {
       setCatalogType("womens");
     }
-  }, []);
+  }, [location.pathname]);
 
   useEffect(() => {
     const newCatalog = getWebCatalog().filter(
