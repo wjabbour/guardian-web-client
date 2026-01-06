@@ -1731,8 +1731,9 @@ export const catalog = [
     name: "Metal Key Ring",
     fullname: "Metal Key Ring w/reflex blue imprint",
     colors: ["White"],
-    type: "accessory",
-    default_color: "White",    
+    type: "customs",
+    default_color: "White",
+    supportedStores: ["MATFME"],    
     quantities: [1000],
     pricing: {
       base: { price: 1.29 },
@@ -1743,8 +1744,9 @@ export const catalog = [
     name: "Metal Key Ring",
     fullname: "Metal Color Series Key Ring w/white imprint",
     colors: ["Blue"],
-    type: "accessory",
+    type: "customs",
     default_color: "Blue",
+    supportedStores: ["MATFME"],
     description: '1000 @ $2.05/ 1500 @ $1.99/ 2500 @ 1.55',    
     quantities: [1000, 1500, 2500],
     pricing: {
@@ -1762,9 +1764,10 @@ export const catalog = [
     name: "Leather Strap Key Tag",
     fullname: "Laser Engraved Zinc Leather Strap Key Tag (2-sided)",
     colors: ["Black"],
-    type: "accessory",
+    type: "customs",
     default_color: "Black",
-    description: '1000 @ $2.99/ 1500 @ $2.75/ 2500 @ 2.25',    
+    description: '1000 @ $2.99/ 1500 @ $2.75/ 2500 @ 2.25', 
+    supportedStores: ["MATFME"],   
     quantities: [1000, 1500, 2500],
     pricing: {
       base: {
@@ -1781,8 +1784,9 @@ export const catalog = [
     name: "Reflective Tote Bag",
     fullname: "Clear Eva Reflective Tote Bag w/black imprint (12 in. x 12 in.)",
     colors: ["Clear"],
-    type: "accessory",
-    default_color: "Clear",    
+    type: "customs",
+    default_color: "Clear",
+    supportedStores: ["MATFME"],    
     quantities: [1000],
     pricing: {
       base: {
@@ -1795,8 +1799,9 @@ export const catalog = [
     name: "Non-Woven Shopper Tote",
     fullname: "Royal Blue Non-Woven Shopper Tote w/871 gold & white imprint ",
     colors: ["Blue"],
-    type: "accessory",
-    default_color: "Blue",    
+    type: "customs",
+    default_color: "Blue",
+    supportedStores: ["BOWCME"],   
     quantities: [500],
     pricing: {
       base: {
@@ -1811,8 +1816,9 @@ export const catalog = [
       "Clear Reflective Shopper Tote Bag w/black imprint (black handles) ",
     description: "12 in. x 12 in. x 6 in.",
     colors: ["Clear"],
-    type: "accessory",
-    default_color: "Clear",    
+    type: "customs",
+    default_color: "Clear",
+    supportedStores: ["BOWIME"],    
     quantities: [250, 500, 1000],
     pricing: {
       base: {
@@ -1825,8 +1831,9 @@ export const catalog = [
     name: "Javalina Executive Pen",
     fullname: "Javalina Pen w/white imprint",
     colors: ["Blue"],
-    type: "accessory",
+    type: "customs",
     default_color: "Blue",
+    supportedStores: ["MATFME"],
     description: '1000 @ $0.61/ 1500 @ $0.59/ 2500 @ 0.54',    
     quantities: [1000, 1500, 2500],
     pricing: {
@@ -1846,8 +1853,9 @@ export const catalog = [
     description:
       "Box - silver foil; Pen - black; Fob - black leather/white stitch, black color fill",
     colors: ["Black"],
-    type: "accessory",
-    default_color: "Black",   
+    type: "customs",
+    default_color: "Black",
+    supportedStores: ["BOWIME"],   
     quantities: [250, 500, 1000],
     pricing: {
       base: {
@@ -1860,8 +1868,9 @@ export const catalog = [
     name: "30 oz. Engraved Tumbler",
     fullname: "Black 30 oz. Intrepid Recycled Tumbler w/laser engraved imprint",
     colors: ["Black"],
-    type: "accessory",
-    default_color: "Black",    
+    type: "customs",
+    default_color: "Black",
+    supportedStores: ["BOWIME"],    
     quantities: [250],
     pricing: {
       base: {
@@ -1906,6 +1915,7 @@ export const catalog = [
     type: "sales",
     default_color: "Beige",   
     quantities: [1, 5, 10],
+    description: '1-9 boxes: $67.99 / 10+ boxes: $62.99',
     pricing: {
       base: {
         price: 67.99,
