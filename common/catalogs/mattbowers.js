@@ -2122,6 +2122,27 @@ export const catalog = [
     },
   },
   {
+    code: "GP3185",
+    name: "5 in. Stars",
+    fullname: "5 in. Stars #GP3185 (12/pk)",
+    colors: ["Black Chartreuse", "Black HotPink", "Black Yellow", "Blue White", "Purple Chartreuse", "Red White"],
+    type: "sales",
+    default_color: "Blk Char",
+    halfColors: [
+      "Black Chartreuse",
+      "Black HotPink", 
+      "Black Yellow", 
+      "Blue White", 
+      "Purple Chartreuse", 
+      "Red White",
+    ],    
+    pricing: {
+      base: {
+        price: 9.99,
+      },
+    },
+  },
+  {
     code: "GP788",
     name: "Not For Sale Sticker",
     fullname: "LARGE - Vehicle Not for Sale Sticker (100/pk)",
