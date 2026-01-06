@@ -1744,7 +1744,8 @@ export const catalog = [
     fullname: "Metal Color Series Key Ring w/white imprint",
     colors: ["Blue"],
     type: "accessory",
-    default_color: "Blue",    
+    default_color: "Blue",
+    description: '1000 @ $2.05/ 1500 @ $1.99/ 2500 @ 1.55',    
     quantities: [1000, 1500, 2500],
     pricing: {
       base: {
@@ -1762,7 +1763,8 @@ export const catalog = [
     fullname: "Laser Engraved Zinc Leather Strap Key Tag (2-sided)",
     colors: ["Black"],
     type: "accessory",
-    default_color: "Black",    
+    default_color: "Black",
+    description: '1000 @ $2.99/ 1500 @ $2.75/ 2500 @ 2.25',    
     quantities: [1000, 1500, 2500],
     pricing: {
       base: {
@@ -1810,7 +1812,7 @@ export const catalog = [
     description: "12 in. x 12 in. x 6 in.",
     colors: ["Clear"],
     type: "accessory",
-    default_color: "Clear",
+    default_color: "Clear",    
     quantities: [250, 500, 1000],
     pricing: {
       base: {
@@ -1824,7 +1826,8 @@ export const catalog = [
     fullname: "Javalina Pen w/white imprint",
     colors: ["Blue"],
     type: "accessory",
-    default_color: "Blue",    
+    default_color: "Blue",
+    description: '1000 @ $0.61/ 1500 @ $0.59/ 2500 @ 0.54',    
     quantities: [1000, 1500, 2500],
     pricing: {
       base: {
@@ -1873,9 +1876,7 @@ export const catalog = [
     colors: ["Clear"],
     type: "sales",
     default_color: "Clear",
-    description:`1 pack: $129
-5 packs: $105
-10 packs: $85 `,
+    description: '1 pack: $129 / 5 packs: $105 / 10 packs: $85',
     quantities: [1, 5, 10],
     pricing: {
       base: {
@@ -1933,6 +1934,7 @@ export const catalog = [
     type: "sales",
     default_color: "Blue",    
     quantities: [1, 5, 10],
+    description: '1 box: $33.99 / 5 boxes: $31.99 / 10 boxes: $29.99',
     pricing: {
       base: {
         price: 33.99,
@@ -1964,6 +1966,7 @@ export const catalog = [
     type: "sales",
     default_color: "Blue",    
     quantities: [1, 5, 10],
+    description: '1-9 packs: $15.99 / 10+ packs: $12.99',
     pricing: {
       base: {
         price: 15.99,
@@ -2020,6 +2023,7 @@ export const catalog = [
     type: "sales",
     default_color: "Fluorg",    
     quantities: [1, 5, 10],
+    description: '1-9 packs: $29.45 / 10+ packs: $27.45',
     pricing: {
       base: {
         price: 29.45,
@@ -2157,6 +2161,7 @@ export const catalog = [
     type: "sales",
     default_color: "Blue",   
     quantities: [1, 5, 10],
+    description: '1-9 boxes: $115.76 / 10+ packs: $105',
     pricing: {
       base: {
         price: 115.76,
@@ -2409,6 +2414,7 @@ export const catalog = [
     type: "service",
     default_color: "Metal",
     quantities: [1, 5, 10],
+    description: '1 pack: $16.99 / 5 packs: $12.99 / 10 packs: $10.99',
     pricing: {
       base: {
         price: 16.99,
@@ -2482,7 +2488,8 @@ export const catalog = [
     fullname: "Self-Locking Key Tags (1000/pk)",
     colors: ["Blue", "Green", "Orange", "Red", "Yellow", "White"],
     type: "service", 
-    default_color: "Blue",   
+    default_color: "Blue", 
+    description: '1 pack: $35 / 2 packs: $29.99',  
     quantities: [1, 2],
     pricing: {
       base: {
@@ -2526,6 +2533,7 @@ export const catalog = [
     type: "service",
     default_color: "white",    
     quantities: [1, 5, 10],
+    description: '1 box: $84.99 / 5 boxes: $83.99 / 10 boxes: $79.99',
     pricing: {
       base: {
         price: 84.99,
