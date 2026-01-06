@@ -1250,8 +1250,8 @@ export const catalog = [
   },
   {
     code: "BOWIME-31DD-488642A",
-    name: "Thermo Die Cut Decal",
-    fullname: "Thermo Die Cut Decal (5 in. x 1.77 in.)",
+    name: "Vinyl Die Cut Decals ",
+    fullname: "Vinyl Die Cut Decal (5 in. x 1.77 in.)",
     colors: ["Black", "White"],
     type: "customs",
     default_color: "Black",
@@ -1296,8 +1296,8 @@ export const catalog = [
   },
   {
     code: "BOWHGU-31DD-484892A",
-    name: "Thermo Die Cut Decal",
-    fullname: "Thermo Die Cut Decal (5.75 in. x 1.02 in.)",
+    name: "Vinyl Die Cut Decals",
+    fullname: "Vinyl Die Cut Decal (5.75 in. x 1.02 in.)",
     colors: ["Black", "White"],
     type: "customs",
     default_color: "Black",
@@ -1312,7 +1312,7 @@ export const catalog = [
   }, 
   {
     code: "BOWHGU-31DD-519517A",
-    name: "Vinyl Die Cut Decal",
+    name: "Vinyl Die Cut Decals",
     fullname: "Vinyl Die Cut Decal (5.75 in. x 1 in.)",
     colors: ["White"],
     type: "customs",
@@ -1358,8 +1358,8 @@ export const catalog = [
   },
   {
     code: "MATFME-31DD-402399A",
-    name: "Thermo Die Cut Decal",
-    fullname: "Thermo Die Cut Decal (3.75 in. x 1.33 in.)",
+    name: "Vinyl Die Cut Decals",
+    fullname: "Vinyl Die Cut Decal (3.75 in. x 1.33 in.)",
     colors: ["Black", "White"],
     type: "customs",
     default_color: "Black",
@@ -1374,8 +1374,8 @@ export const catalog = [
   },
   {
     code: "MATFME-31DD-486762A",
-    name: "Theromo Die Cut Decal",
-    fullname: "Thermo Die Cut Decal (5 in. x 1.61 in.)",
+    name: "Vinyl Die Cut Decals",
+    fullname: "Vinyl Die Cut Decal (5 in. x 1.61 in.)",
     colors: ["Black", "White"],
     type: "customs",
     default_color: "Black",
@@ -1420,8 +1420,8 @@ export const catalog = [
   },
   {
     code: "BOWHSL-31DD-487075A",
-    name: "Thermo Die Cut Decal",
-    fullname: "Thermo Die Cut Decal (5 in. x 1.77 in.)",
+    name: "Vinyl Die Cut Decals",
+    fullname: "Vinyl Die Cut Decal (5 in. x 1.77 in.)",
     colors: ["Black", "White"],
     type: "customs",
     default_color: "Black",
@@ -1466,8 +1466,8 @@ export const catalog = [
   },
   {
     code: "BOWCSL-31DD-450936A",
-    name: "Thermo Die Cut Decal",
-    fullname: "Thermo Die Cut Decal (5 in. x .72 in.)",
+    name: "Vinyl Die Cut Decals",
+    fullname: "Vinyl Die Cut Decal (5 in. x .72 in.)",
     colors: ["Black", "White"],
     type: "customs",
     default_color: "Black",
@@ -1512,8 +1512,8 @@ export const catalog = [
   },
   {
     code: "BOWCME-31DD-451310A",
-    name: "Thermo Die Cut Decal",
-    fullname: "Thermo Die Cut Decal (6 in. x .80 in.)",
+    name: "Vinyl Die Cut Decals",
+    fullname: "Vinyl Die Cut Decal (6 in. x .80 in.)",
     colors: ["Black", "White"],
     type: "customs",
     default_color: "Black",
@@ -1574,8 +1574,8 @@ export const catalog = [
   },
   {
     code: "BOWHME-31DD-498932A",
-    name: "Thermo Die Cut Decal",
-    fullname: "Thermo Die Cut Decal (6 in. x .80 in.)",
+    name: "Vinyl Die Cut Decals",
+    fullname: "Vinyl Die Cut Decal (6 in. x .80 in.)",
     colors: ["Black", "White"],
     type: "customs",
     default_color: "Black",
@@ -1620,8 +1620,8 @@ export const catalog = [
   },
   {
     code: "BOWCBA-31DD-431617A",
-    name: "Thermo Die Cut Decal",
-    fullname: "Thermo Die Cut Decal (4.75 in. x 1.28 in.)",
+    name: "Vinyl Die Cut Decals",
+    fullname: "Vinyl Die Cut Decal (4.75 in. x 1.28 in.)",
     colors: ["Black", "White"],
     type: "customs",
     default_color: "Black",
@@ -1681,7 +1681,7 @@ export const catalog = [
   },
   {
     code: "BOWNSO-31DD-489756A",
-    name: "Vinyl Die Cut Decal",
+    name: "Vinyl Die Cut Decals",
     fullname: "Vinyl Die Cut Decal (5 in. x 2.35 in.)",
     colors: ["Black"],
     type: "customs",
@@ -1696,7 +1696,7 @@ export const catalog = [
   },
   {
     code: "BOWNSO-31DD-519521A",
-    name: "Vinyl Die Cut Decal",
+    name: "Vinyl Die Cut Decals",
     fullname: "Vinyl Die Cut Decal (5 in. x 2.37 in.)",
     colors: ["White"],
     type: "customs",
@@ -1873,13 +1873,16 @@ export const catalog = [
     colors: ["Clear"],
     type: "sales",
     default_color: "Clear",
+    description:`1 pack: $129
+5 packs: $105
+10 packs: $85 `,
     quantities: [1, 5, 10],
     pricing: {
       base: {
-        price: 129.45,
+        price: 129.00,
         discount: {
-          5: 100.45,
-          10: 85.45,
+          5: 105.00,
+          10: 85.00,
         }, 
       },
     },
@@ -2397,25 +2400,7 @@ export const catalog = [
         price: 99.00,
       },
     },
-  },
-  {
-    code: "GP254",
-    name: "Work Order Holder",
-    fullname: "Work Order Holder #GP254",
-    colors: ["Black"],
-    type: "service",
-    default_color: "Black",    
-    quantities: [10, 50, 100],
-    pricing: {
-      base: {
-        price: 4.50,
-        discount: {
-          50: 4.00,
-          100: 3.50,
-        },
-      },
-    },
-  },
+  }, 
   {
     code: "3044",
     name: "Spring Rings",
@@ -2457,6 +2442,24 @@ export const catalog = [
     pricing: {
       base: {
         price: 15.99,        
+      },
+    },
+  },
+   {
+    code: "GP254",
+    name: "Work Order Holder",
+    fullname: "Work Order Holder #GP254",
+    colors: ["Black"],
+    type: "service",
+    default_color: "Black",    
+    quantities: [10, 50, 100],
+    pricing: {
+      base: {
+        price: 4.50,
+        discount: {
+          50: 4.00,
+          100: 3.50,
+        },
       },
     },
   },  
