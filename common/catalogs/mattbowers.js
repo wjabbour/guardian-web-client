@@ -1759,6 +1759,36 @@ export const catalog = [
     },
   },
   {
+    code: "TH100",
+    name: "Temp L/P Protector",
+    fullname: "License Plate Protector (100/pk)",
+    colors: ["Clear"],
+    type: "customs",
+    default_color: "Clear",
+    description: '1 pack: $129 / 5 packs: $105 / 10 packs: $85',
+    supportedStores: [
+    "MATFME", 
+    "BOWCME", 
+    "BOWHME", 
+    "BOWIME", 
+    "BOWCSL", 
+    "BOWHSL", 
+    "BOWCBA", 
+    "BOWHGU", 
+    "BOWNSO"
+    ],    
+    quantities: [1, 5, 10],
+    pricing: {
+      base: {
+        price: 129.00,
+        discount: {
+          5: 105.00,
+          10: 85.00,
+        }, 
+      },
+    },
+  },  
+  {
     code: "BOWNSO-5400-510497Z",
     name: "All Weather Floor Mats",
     fullname: "Black All Weather Floor Mats w/full color dome insert",
@@ -2148,8 +2178,9 @@ export const catalog = [
     name: "Vinyl Document Folder",
     fullname: "Royal Blue Guesseted Vinyl doc Folder w/white imprint",
     colors: ["Royal Blue"],
-    type: "sales",
-    default_color: "Royal Blue",    
+    type: "customs",
+    default_color: "Royal Blue", 
+    supportedStores: ["MATFME"],   
     quantities: [1000],
     pricing: {
       base: {
@@ -2162,8 +2193,9 @@ export const catalog = [
     name: "Paper Document Folder",
     fullname: "9.875 in. x 6 in. Non-expandable Blue Marble Crush Cardstock w/white imprint",
     colors: ["Blue"],
-    type: "sales",
-    default_color: "Blue",    
+    type: "customs",
+    default_color: "Blue",
+    supportedStores: ["BOWHGU"],    
     quantities: [500],
     pricing: {
       base: {
@@ -2176,8 +2208,9 @@ export const catalog = [
     name: "Paper Document Folder",
     fullname: "9.875 in. x 6 in. Non-expandable Black Cardstock w/silver foil imprint",
     colors: ["Black"],
-    type: "sales",
-    default_color: "Black",    
+    type: "customs",
+    default_color: "Black",
+    supportedStores: ["BOWNSO"],    
     quantities: [1000],
     pricing: {
       base: {
@@ -2191,8 +2224,9 @@ export const catalog = [
     fullname:
       "White Quick Ship Folder w/reflex blue & 872 metallic gold imprint",
     colors: ["White"],
-    type: "sales",
-    default_color: "White",    
+    type: "customs",
+    default_color: "White",
+    supportedStores: ["BOWCME"],     
     quantities: [1000],
     pricing: {
       base: {
@@ -2234,8 +2268,9 @@ export const catalog = [
     name: "Custom Deal Jacket",
     fullname: "Custom Deal Jacket (DSA-500)",
     colors: ["Blue", "White"],
-    type: "sales",
-    default_color: "Blue",    
+    type: "customs",
+    default_color: "Blue",
+    supportedStores: ["MATFME"],     
     quantities: [1000, 1500, 2500],
     pricing: {
       base: {
