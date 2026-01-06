@@ -4296,10 +4296,17 @@ export const catalog = [
     code: "GP3185",
     name: "5 in. Stars",
     fullname: "5 in. Stars #GP3185 (12/pk)",
-    colors: ["Blk Char", "Blk Htpk", "Blk Yllw", "Blu Wht", "Prp Char", "Red Wht"],
+    colors: ["Black Chartreuse", "Black HotPink", "Black Yellow", "Blue White", "Purple Chartreuse", "Red White"],
     type: "sales",
-    default_color: "Blk Char",
-    quantities: [12],
+    default_color: "Black Chartreuse",
+    halfColors: [
+      "Black Chartreuse",
+      "Black HotPink", 
+      "Black Yellow", 
+      "Blue White", 
+      "Purple Chartreuse", 
+      "Red White",
+    ],    
     pricing: {
       base: {
         price: 0.00,
