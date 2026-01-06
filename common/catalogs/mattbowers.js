@@ -1711,6 +1711,54 @@ export const catalog = [
     },
   },
   {
+    code: "G10D",
+    name: "Hex Screws for Frames",
+    fullname: "Self-Tapping #14 x 3/4 Hex Slot Head Screw (100/bx) #EZ244",
+    colors: ["Zinc Plated"],
+    type: "customs",
+    default_color: "Zinc Plated", 
+    supportedStores: [
+    "MATFME", 
+    "BOWCME", 
+    "BOWHME", 
+    "BOWIME", 
+    "BOWCSL", 
+    "BOWHSL", 
+    "BOWCBA", 
+    "BOWHGU", 
+    "BOWNSO"
+    ], 
+    pricing: {
+      base: {
+        price: 15.99,        
+      },
+    },
+  },
+  {
+    code: "G10I",
+    name: "Hex Screws for Plates",
+    fullname: "Metric Screw #6 x 3/4 Phillips Pan Head (100/bx) #EZ246",
+    colors: ["Zinc Plated"],
+    type: "customs",
+    default_color: "Zinc Plated",
+    supportedStores: [
+    "MATFME", 
+    "BOWCME", 
+    "BOWHME", 
+    "BOWIME", 
+    "BOWCSL", 
+    "BOWHSL", 
+    "BOWCBA", 
+    "BOWHGU", 
+    "BOWNSO"
+    ],       
+    pricing: {
+      base: {
+        price: 15.99,        
+      },
+    },
+  },
+  {
     code: "BOWNSO-5400-510497Z",
     name: "All Weather Floor Mats",
     fullname: "Black All Weather Floor Mats w/full color dome insert",
@@ -2298,22 +2346,7 @@ export const catalog = [
         price: 69.99,
       },
     },
-  }, 
-  {
-    code: "BOWNSO-5400-510497Z",
-    name: "All Weather Floor Mats",
-    fullname: "Black All Weather Floor Mats w/full color dome insert",
-    colors: ["Black"],    
-    type: "service",
-    default_color: "Black",
-    description: `Insert Size 7 in. x 2 in.; Pricing includes shipping`,    
-    quantities: [100],    
-    pricing: {
-      base: {
-        price: 28.80,
-      },
-    },
-  }, 
+  },   
   {
     code: "600088V",
     name: "Seat Covers (roll)",
@@ -2333,8 +2366,9 @@ export const catalog = [
       "White Vinyl Service Due Sticker w/black imprint (1.5 in. x 2.25 in.)",
     description: `Grey does not print.`,
     colors: ["White"],
-    type: "service",
+    type: "customs",
     default_color: "White",
+    supportedStores: ["BOWHSL"],
     quantities: [2500],
     pricing: {
       base: {
@@ -2347,9 +2381,10 @@ export const catalog = [
     name: "Service Due Sticker",
     fullname: "White Vinyl Service Due Sticker w/full color imprint (250/pk)",
     colors: ["White"],
-    type: "service",
+    type: "customs",
     default_color: "White",
     description: `Grey does not print.`,
+    supportedStores: ["BOWCME"],
     quantities: [2500],
     pricing: {
       base: {
@@ -2364,8 +2399,9 @@ export const catalog = [
       "White Vinyl Service Due Sticker w/black imprint (1.5 in. x 2.25 in.)",
     description: `Grey does not print.`,
     colors: ["White"],
-    type: "service",
+    type: "customs",
     default_color: "White",
+    supportedStores: ["BOWNSO"],
     quantities: [2500],
     pricing: {
       base: {
@@ -2394,8 +2430,9 @@ export const catalog = [
     name: "Addendum Form",
     fullname: "4-1/4 in. x 11 in. Addendum Form w/black & reflex blue imprint",
     colors: ["Blue"],
-    type: "service",
-    default_color: "Blue",    
+    type: "custom",
+    default_color: "Blue",
+    supportedStores: ["BOWHGU"],   
     quantities: [500],
     pricing: {
       base: {
