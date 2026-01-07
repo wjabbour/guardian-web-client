@@ -946,8 +946,8 @@ export const catalog = [
       Large: { price: 10.99 },
       XLarge: { price: 10.99 },
       "2XLarge": { price: 12.99 },
-      "3XLarge": { price: 13.99 },
-      "4XLarge": { price: 14.99 },
+      "3XLarge": { price: 14.99 },
+      "4XLarge": { price: 16.99 },
     },
   },
   {
@@ -975,7 +975,7 @@ export const catalog = [
       XLarge: { price: 12.80},
       "2XLarge": { price: 14.80 },
       "3XLarge": { price: 15.80 },
-      "4XLarge": { price: 16.80 },
+      "4XLarge": { price: 18.99 },
     },
   },
   {
@@ -2090,7 +2090,7 @@ export const catalog = [
     type: "sales",
     default_color: "Beige",   
     quantities: [1, 5, 10],
-    description: '1-9 boxes: $67.99 / 10+ boxes: $62.99',
+    description: '1 box: $67.99 / 5 boxes: $67.99 / 10 boxes: $62.99',
     pricing: {
       base: {
         price: 67.99,
@@ -2150,8 +2150,7 @@ export const catalog = [
     colors: ["Blue", "Green", "Orange", "Red", "White", "Yellow"],
     type: "sales",
     default_color: "Blue",    
-    quantities: [1, 5, 10],
-    description: '1-9 packs: $15.99 / 10+ packs: $12.99',
+    quantities: [1, 5, 10],    
     pricing: {
       base: {
         price: 17.95,        
@@ -2188,6 +2187,7 @@ export const catalog = [
     type: "sales",
     default_color: "Blue",    
     quantities: [1, 5, 10],
+    description: `1 pack: $11.99 / 5 packs: $10.99 / 10 packs: $10.99`,
     pricing: {
       base: {
         price: 11.99,
@@ -2218,7 +2218,7 @@ export const catalog = [
     type: "sales",
     default_color: "Fluorg",    
     quantities: [1, 5, 10],
-    description: '1-9 packs: $29.45 / 10+ packs: $27.45',
+    description: '1 pack: $29.45 / 5 packs: $29.45 / 10 packs: $27.45',
     pricing: {
       base: {
         price: 29.45,
@@ -2381,7 +2381,7 @@ export const catalog = [
     type: "sales",
     default_color: "Blue",   
     quantities: [1, 5, 10],
-    description: '1-9 boxes: $115.76 / 10+ packs: $105',
+    description: '1 box: $115.76 / 5 packs: $115.76 / 10+ packs: $105',
     pricing: {
       base: {
         price: 115.76,
