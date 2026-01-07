@@ -2,8 +2,8 @@ export const config = {
   title: "Mattbowers",
   company_logo: "matt_bowers.png",
   logo_placements: {
-    mens: ["Left Chest","Left Sleeve","Right Sleeve"],
-    womens: ["Left Chest","Left Sleeve","Right Sleeve"],
+    mens: ["Left Chest","Left Sleeve","Right Sleeve","Yoke"],
+    womens: ["Left Chest","Left Sleeve","Right Sleeve","Yoke"],
     hat: ["Front Center"],
     tshirts: ["Left Chest", "Front Center Chest","Full Front"],
   },
