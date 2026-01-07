@@ -2475,8 +2475,10 @@ export const catalog = [
   {
     code: "D236-EX",
     name: "Crazy Flag - Nissan",
-    fullname: "Crazy Flag - Nissan",    
-    type: "sales",    
+    fullname: "Crazy Flag - Nissan", 
+    colors: ["White"],   
+    type: "sales", 
+    default_color: "White",   
     pricing: {
       base: {
         price: 72.77,
