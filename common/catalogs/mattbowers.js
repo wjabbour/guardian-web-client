@@ -411,12 +411,12 @@ export const catalog = [
       "4XLarge",
     ],
     pricing: {
-      Small: { price: 37.5 },
-      Medium: { price: 37.5 },
-      Large: { price: 37.5 },
-      XLarge: { price: 37.5 },
-      "2XLarge": { price: 38.5 },
-      "3XLarge": { price: 42.5 },
+      Small: { price: 38.25 },
+      Medium: { price: 38.25 },
+      Large: { price: 38.25 },
+      XLarge: { price: 38.25 },
+      "2XLarge": { price: 40.40 },
+      "3XLarge": { price: 42.50},
       "4XLarge": { price: 44.99 },
     },
   },
@@ -436,13 +436,13 @@ export const catalog = [
       "3XLarge",
       "4XLarge",
     ],
-    pricing: {
-      Small: { price: 37.5 },
-      Medium: { price: 37.5 },
-      Large: { price: 37.5 },
-      XLarge: { price: 37.5 },
-      "2XLarge": { price: 38.5 },
-      "3XLarge": { price: 42.5 },
+   pricing: {
+      Small: { price: 38.25 },
+      Medium: { price: 38.25 },
+      Large: { price: 38.25 },
+      XLarge: { price: 38.25 },
+      "2XLarge": { price: 40.40 },
+      "3XLarge": { price: 42.50},
       "4XLarge": { price: 44.99 },
     },
   },
@@ -907,10 +907,10 @@ export const catalog = [
       "5XLarge",
     ],
     pricing: {
-      Small: { price: 8.49 },
-      Medium: { price: 8.49 },
-      Large: { price: 8.49 },
-      XLarge: { price: 8.49 },
+      Small: { price: 8.75 },
+      Medium: { price: 8.75 },
+      Large: { price: 8.75 },
+      XLarge: { price: 8.75 },
       "2XLarge": { price: 11.25 },
       "3XLarge": { price: 13.99 },
       "4XLarge": { price: 14.99 },
@@ -2154,10 +2154,7 @@ export const catalog = [
     description: '1-9 packs: $15.99 / 10+ packs: $12.99',
     pricing: {
       base: {
-        price: 15.99,
-        discount: {
-          10: 12.99,
-        },
+        price: 17.95,        
       },
     },
   },
@@ -2209,7 +2206,7 @@ export const catalog = [
     default_color: "Fluorg",
     pricing: {
       base: {
-        price: 0.00,
+        price: 28.95,
       },
     },
   },
@@ -2509,7 +2506,7 @@ export const catalog = [
     description: `17 in. x 22 in.`,    
     pricing: {
       base: {
-        price: 69.99,
+        price: 76.44,
       },
     },
   },   
@@ -2615,7 +2612,7 @@ export const catalog = [
     default_color: "White",
     pricing: {
       base: {
-        price: 99.00,
+        price: 115.00,
       },
     },
   }, 
@@ -2670,7 +2667,8 @@ export const catalog = [
     fullname: "Work Order Holder #GP254",
     colors: ["Black"],
     type: "service",
-    default_color: "Black",    
+    default_color: "Black", 
+    description: `10 holders: $4.50ea / 50 holders: $4.00ea / 100 holders: $3.50ea`,   
     quantities: [10, 50, 100],
     pricing: {
       base: {
@@ -2745,15 +2743,10 @@ export const catalog = [
     ],
     type: "service",
     default_color: "white",    
-    quantities: [1, 5, 10],
-    description: '1 box: $84.99 / 5 boxes: $83.99 / 10 boxes: $79.99',
+    quantities: [1, 5, 10],    
     pricing: {
       base: {
-        price: 84.99,
-        discount: {
-          5: 83.99,
-          10: 79.99,
-        },
+        price: 85.00,        
       },
     },
   },
