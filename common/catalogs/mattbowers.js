@@ -2473,6 +2473,17 @@ export const catalog = [
     },
   },
   {
+    code: "D236-EX",
+    name: "Crazy Flag - Nissan",
+    fullname: "Crazy Flag - Nissan",    
+    type: "sales",    
+    pricing: {
+      base: {
+        price: 72.77,
+      },
+    },
+  },
+  {
     code: "BOW30",
     name: "30 in. Giant Bow",
     fullname: "30 in. Giant Magnetic Car Bow (2/pk)",
