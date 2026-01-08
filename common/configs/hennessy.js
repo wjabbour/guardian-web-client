@@ -57,12 +57,12 @@ export const config = {
     service: [],
   },
   email_recipients: [
-    "lbudbill@gpcorp.com",
-    "webportalorders@gpcorp.com",
-    "shanell@gpcorp.com",
-    "asarazua@gpcorp.com",
-    "jboston@gpcorp.com",
-    "Zwarner@hennessyauto.com",
+    // "lbudbill@gpcorp.com",
+    // "webportalorders@gpcorp.com",
+    // "shanell@gpcorp.com",
+    // "asarazua@gpcorp.com",
+    // "jboston@gpcorp.com",
+    // "Zwarner@hennessyauto.com",
     "doubleujabbour@gmail.com",
   ],
 
