@@ -1,168 +1,131 @@
-import IconButton from "@mui/material/IconButton";
-import TableRow from "@mui/material/TableRow";
-import TableCell from "@mui/material/TableCell";
-import TableBody from "@mui/material/TableBody";
+import { useState, Fragment } from "react";
+import moment from "moment";
+import {
+  Box,
+  Collapse,
+  IconButton,
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableRow,
+  Typography,
+} from "@mui/material";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
-import { useState, Fragment } from "react";
-import Table from "@mui/material/Table";
-import TableHead from "@mui/material/TableHead";
-import Box from "@mui/material/Box";
-import moment from "moment";
-import EditIcon from "@mui/icons-material/Edit";
-import { SvgIcon } from "@mui/material";
-import Collapse from "@mui/material/Collapse";
-import TextField from "@mui/material/TextField";
 import { update_historical_order } from "../../lib/http";
 import { getStore } from "guardian-common";
+import OrderLineItem from "./OrderLineItem";
 
 export default function Row({ order, editClick, isAdmin }) {
-  const cart = [];
-  order.order.forEach((order) => {
-    cart.push({ ...order });
-  });
-
   const [open, setOpen] = useState(false);
-  const [edit, setEdit] = useState(false);
-  const [po, setPo] = useState("N/A");
-  const [customer_po, set_customer_po] = useState("N/A");
-  const [est_ship_date, set_est_ship_date] = useState("N/A");
-  const [last_clicked_idx, set_last_clicked_idx] = useState(null);
+  const [orderItems, setOrderItems] = useState(order.order || []);
 
-  function handleEstShipDate(e) {
-    set_est_ship_date(e.target.value);
-  }
+  const handleItemSave = async (updatedItem, index) => {
+    const newItems = [...orderItems];
+    newItems[index] = updatedItem;
 
-  function handlePo(e) {
-    setPo(e.target.value);
-  }
-
-  function handleCustomerPo(e) {
-    set_customer_po(e.target.value);
-  }
-
-  async function handleEditClick(e, i) {
-    // confirming the edit
-    // set the fields first before popping password modal so that values can be passed to textfield on next render
-    if (edit) {
-      order.order[i].po = po;
-      order.order[i].customer_po = customer_po;
-      order.order[i].est_ship_date = est_ship_date;
-      await update_historical_order(order.email, order.created_at, order.order);
+    try {
+      await update_historical_order(order.email, order.created_at, newItems);
+      setOrderItems(newItems);
+    } catch (err) {
+      console.error("Failed to update order", err);
     }
-    set_last_clicked_idx(i);
-    setPo(cart[i].po);
-    set_est_ship_date(cart[i].est_ship_date);
-    set_customer_po(cart[i].customer_po);
-    editClick();
-    if (edit) {
-      setEdit(false);
-    } else {
-      setEdit(true);
-    }
-    if (!isAdmin) return;
-  }
+  };
+
+  const formattedDate = moment(parseInt(order.created_at)).format(
+    "MMMM DD, YYYY"
+  );
+  const storeName =
+    getStore(order.company_name, order.store) ?? order.company_name;
 
   return (
     <Fragment>
-      <TableRow sx={{ "& > *": { borderBottom: "unset" } }}>
+      <TableRow
+        hover
+        onClick={() => setOpen(!open)}
+        sx={{
+          "& > *": { borderBottom: "unset" },
+          cursor: "pointer",
+          userSelect: "none",
+          // Prevent focus outline on the main row
+          outline: "none",
+        }}
+      >
         <TableCell>
           <IconButton
             aria-label="expand row"
             size="small"
-            onClick={() => setOpen(!open)}
+            onClick={(e) => {
+              e.stopPropagation();
+              setOpen(!open);
+            }}
           >
             {open ? <KeyboardArrowUpIcon /> : <KeyboardArrowDownIcon />}
           </IconButton>
         </TableCell>
         <TableCell align="center">{order.customer_po || "N/A"}</TableCell>
-        <TableCell align="center">
-          {moment(parseInt(order.created_at)).format("MMMM DD, YYYY")}
-        </TableCell>
+        <TableCell align="center">{formattedDate}</TableCell>
         <TableCell align="center">{`${order.first_name} ${order.last_name}`}</TableCell>
-        <TableCell align="center">{`${
-          getStore(order.company_name, order.store) ?? order.company_name
-        }`}</TableCell>
+        <TableCell align="center">{storeName}</TableCell>
       </TableRow>
-      <TableRow style={{ backgroundColor: "#fdf1bb" }}>
-        <TableCell style={{ paddingBottom: 0, paddingTop: 0 }} colSpan={9}>
+
+      <TableRow sx={{ backgroundColor: "#fdf1bb" }}>
+        <TableCell style={{ paddingBottom: 0, paddingTop: 0 }} colSpan={6}>
           <Collapse in={open} timeout="auto" unmountOnExit>
-            <Box>
-              <Table style={{ marginBottom: "35px" }}>
+            <Box
+              margin={1}
+              sx={{
+                userSelect: "none",
+              }}
+            >
+              <Typography
+                variant="h6"
+                gutterBottom
+                component="div"
+                sx={{ fontSize: "1rem", fontWeight: "bold" }}
+              >
+                Order Details
+              </Typography>
+              <Table
+                size="small"
+                aria-label="purchases"
+                sx={{ marginBottom: 2 }}
+              >
                 <TableHead>
-                  <TableCell />
-                  <TableCell style={{ fontWeight: "bold" }}>
-                    Item Code
-                  </TableCell>
-                  <TableCell style={{ fontWeight: "bold" }}>Quantity</TableCell>
-                  <TableCell style={{ fontWeight: "bold" }}>Price</TableCell>
-                  <TableCell style={{ fontWeight: "bold" }}>
-                    Description
-                  </TableCell>
-                  <TableCell style={{ fontWeight: "bold" }}>Size</TableCell>
-                  <TableCell style={{ fontWeight: "bold" }}>Color</TableCell>
-                  <TableCell style={{ fontWeight: "bold" }}>
-                    Embroidery
-                  </TableCell>
-                  <TableCell style={{ fontWeight: "bold" }}>
-                    Customer PO
-                  </TableCell>
-                  <TableCell style={{ fontWeight: "bold" }}>PO</TableCell>
-                  <TableCell style={{ fontWeight: "bold" }}>
-                    Est. Ship Date
-                  </TableCell>
+                  <TableRow>
+                    <TableCell />
+                    <TableCell sx={{ fontWeight: "bold" }}>Item Code</TableCell>
+                    <TableCell sx={{ fontWeight: "bold" }}>Qty</TableCell>
+                    <TableCell sx={{ fontWeight: "bold" }}>Price</TableCell>
+                    <TableCell sx={{ fontWeight: "bold" }}>
+                      Description
+                    </TableCell>
+                    <TableCell sx={{ fontWeight: "bold" }}>Size</TableCell>
+                    <TableCell sx={{ fontWeight: "bold" }}>Color</TableCell>
+                    <TableCell sx={{ fontWeight: "bold" }}>
+                      Embroidery
+                    </TableCell>
+                    <TableCell sx={{ fontWeight: "bold" }}>
+                      Customer PO
+                    </TableCell>
+                    <TableCell sx={{ fontWeight: "bold" }}>PO</TableCell>
+                    <TableCell sx={{ fontWeight: "bold" }}>
+                      Est. Ship Date
+                    </TableCell>
+                  </TableRow>
                 </TableHead>
                 <TableBody>
-                  {cart.map((row, i) => (
-                    <TableRow>
-                      <TableCell>
-                        <SvgIcon
-                          style={{ cursor: "pointer" }}
-                          onClick={(e) => handleEditClick(e, i)}
-                        >
-                          <EditIcon />
-                        </SvgIcon>
-                      </TableCell>
-                      <TableCell>{row.code}</TableCell>
-                      <TableCell>{row.quantity}</TableCell>
-                      <TableCell>{`$${row.price ?? 0.0}`}</TableCell>
-                      <TableCell>{row.description}</TableCell>
-                      <TableCell>{row.size}</TableCell>
-                      <TableCell>{row.color}</TableCell>
-
-                      <TableCell>{row.embroidery}</TableCell>
-
-                      {edit && isAdmin && last_clicked_idx === i && (
-                        <Fragment>
-                          <TableCell>
-                            <TextField
-                              value={customer_po}
-                              onChange={handleCustomerPo}
-                            ></TextField>
-                          </TableCell>
-                          <TableCell>
-                            <TextField
-                              value={po}
-                              onChange={handlePo}
-                            ></TextField>
-                          </TableCell>
-                          <TableCell>
-                            <TextField
-                              value={est_ship_date}
-                              onChange={handleEstShipDate}
-                            ></TextField>
-                          </TableCell>
-                        </Fragment>
-                      )}
-
-                      {(!edit || i !== last_clicked_idx) && (
-                        <Fragment>
-                          <TableCell>{row.customer_po || "N/A"}</TableCell>
-                          <TableCell>{row.po || "N/A"}</TableCell>
-                          <TableCell>{row.est_ship_date || "N/A"}</TableCell>
-                        </Fragment>
-                      )}
-                    </TableRow>
+                  {orderItems.map((item, index) => (
+                    <OrderLineItem
+                      key={`${item.code}-${index}`}
+                      item={item}
+                      isAdmin={isAdmin}
+                      onEditRequest={editClick}
+                      onSave={(updatedData) =>
+                        handleItemSave(updatedData, index)
+                      }
+                    />
                   ))}
                 </TableBody>
               </Table>
