@@ -6,14 +6,97 @@ on:
       - main
 
 jobs:
-  build:
+  client:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      # 1. UPDATED STEP: Checks backend OR common
+      - name: Check for client or common changes
+        uses: dorny/paths-filter@v3
+        id: changes
+        with:
+          filters: |
+            frontend:
+              - 'client/**'
+              - 'common/**'
+
+      - name: Setup Node.js
+        if: steps.changes.outputs.frontend == 'true'
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Cache common dependencies
+        if: steps.changes.outputs.frontend == 'true'
+        id: cache-common-npm
+        uses: actions/cache@v4
+        with:
+          path: ./common/node_modules
+          key: ${{ runner.os }}-node-common-${{ hashFiles('./common/package-lock.json') }}
+
+      - name: Install common dependencies
+        if: steps.changes.outputs.frontend == 'true' && steps.cache-common-npm.outputs.cache-hit != 'true'
+        run: npm ci
+        working-directory: ./common
+
+      - name: Build common package
+        if: steps.changes.outputs.frontend == 'true'
+        run: npm run build
+        working-directory: ./common
+
+      - name: Cache client dependencies
+        if: steps.changes.outputs.frontend == 'true'
+        id: cache-client-npm
+        uses: actions/cache@v4
+        with:
+          path: ./client/node_modules
+          key: ${{ runner.os }}-node-client-${{ hashFiles('./client/package-lock.json') }}
+
+      - name: Install client dependencies
+        if: steps.changes.outputs.frontend == 'true' && steps.cache-client-npm.outputs.cache-hit != 'true'
+        run: npm ci
+        working-directory: ./client
+
+      - name: Build client
+        if: steps.changes.outputs.frontend == 'true'
+        run: npm run build
+        working-directory: ./client
+        env:
+          CI: false
+
+      - name: Configure AWS Credentials (Cannon)
+        if: steps.changes.outputs.frontend == 'true'
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-access-key-id: ${{ secrets.CANNON_KEY }}
+          aws-secret-access-key: ${{ secrets.CANNON_SECRET }}
+          aws-region: us-east-1
+
+      - name: Upload to Cannon
+        if: steps.changes.outputs.frontend == 'true'
+        run: npm run upload-cannon
+        working-directory: ./client
+
+      - name: Configure AWS Credentials (GPC)
+        if: steps.changes.outputs.frontend == 'true'
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-access-key-id: ${{ secrets.GPC_KEY }}
+          aws-secret-access-key: ${{ secrets.GPC_SECRET }}
+          aws-region: us-east-1
+
+      - name: Upload to GPC
+        if: steps.changes.outputs.frontend == 'true'
+        run: npm run upload-gpc81
+        working-directory: ./client
+
+  backend:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
       - name: Check for backend or common changes
         uses: dorny/paths-filter@v3
         id: changes
@@ -27,73 +110,44 @@ jobs:
         if: steps.changes.outputs.backend == 'true'
         uses: hashicorp/setup-terraform@v3
 
-      # --- CLIENT STEPS (Running unconditionally) ---
-
       - name: Setup Node.js
+        if: steps.changes.outputs.backend == 'true'
         uses: actions/setup-node@v4
         with:
           node-version: "20"
+      
+      - name: Cache common dependencies
+        if: steps.changes.outputs.backend == 'true'
+        id: cache-common-npm
+        uses: actions/cache@v4
+        with:
+          path: ./common/node_modules
+          key: ${{ runner.os }}-node-common-${{ hashFiles('./common/package-lock.json') }}
 
       - name: Install common dependencies
-        run: npm install
+        if: steps.changes.outputs.backend == 'true' && steps.cache-common-npm.outputs.cache-hit != 'true'
+        run: npm ci
         working-directory: ./common
 
       - name: Build common package
+        if: steps.changes.outputs.backend == 'true'
         run: npm run build
         working-directory: ./common
 
-      - name: Cache Node.js modules
-        id: cache-npm
+      - name: Cache backend dependencies
+        if: steps.changes.outputs.backend == 'true'
+        id: cache-backend-npm
         uses: actions/cache@v4
         with:
-          path: ./client/node_modules
-          key: ${{ runner.os }}-node-${{ hashFiles('./client/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-node-
-
-      - name: Install client dependencies
-        if: steps.cache-npm.outputs.cache-hit != 'true'
-        run: npm install
-        working-directory: ./client
-
-      - name: Build client
-        run: npm run build
-        working-directory: ./client
-        env:
-          CI: false
-
-      - name: Configure AWS Credentials (Cannon)
-        uses: aws-actions/configure-aws-credentials@v4
-        with:
-          aws-access-key-id: ${{ secrets.CANNON_KEY }}
-          aws-secret-access-key: ${{ secrets.CANNON_SECRET }}
-          aws-region: us-east-1
-
-      - name: Upload to Cannon
-        run: npm run upload-cannon
-        working-directory: ./client
-
-      - name: Configure AWS Credentials (GPC)
-        uses: aws-actions/configure-aws-credentials@v4
-        with:
-          aws-access-key-id: ${{ secrets.GPC_KEY }}
-          aws-secret-access-key: ${{ secrets.GPC_SECRET }}
-          aws-region: us-east-1
-
-      - name: Upload to GPC
-        run: npm run upload-gpc81
-        working-directory: ./client
-
-      # --- BACKEND STEPS (Conditional) ---
+          path: ./backend/node_modules
+          key: ${{ runner.os }}-node-backend-${{ hashFiles('./backend/package-lock.json') }}
 
       - name: Install backend dependencies
-        # This will now run if backend/ OR common/ changed
-        if: steps.changes.outputs.backend == 'true'
-        run: npm install
+        if: steps.changes.outputs.backend == 'true' && steps.cache-backend-npm.outputs.cache-hit != 'true'
+        run: npm ci
         working-directory: ./backend
 
       - name: Deploy server
-        # This will now run if backend/ OR common/ changed
         if: steps.changes.outputs.backend == 'true'
         run: npm run deploy
         working-directory: ./backend
