@@ -14,11 +14,18 @@ import {
   CircularProgress,
   Box,
   Typography,
+  AlertColor,
 } from "@mui/material";
 import Row from "./Row";
 import PasswordEntryDialog from "../../components/PasswordEntryDialog";
 import StoreSelect from "./StoreSelect";
 import { getStore, getStoreCode } from "guardian-common";
+
+interface SnackbarState {
+  open: boolean;
+  message: string;
+  severity: AlertColor;
+}
 
 export default function OrdersTable() {
   // --- State Management ---
@@ -27,8 +34,7 @@ export default function OrdersTable() {
   const [isLoading, setIsLoading] = useState(true);
 
   // UI State
-  const [errorSnackbarOpen, setErrorSnackbarOpen] = useState(false);
-  const [errorSnackbarText, setErrorSnackbarText] = useState("");
+  const [snackbar, setSnackbar] = useState<SnackbarState>({ open: false, message: "", severity: "info" });
   const [isAdmin, setIsAdmin] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -41,8 +47,7 @@ export default function OrdersTable() {
       setIsLoading(false);
 
       if (!res.success) {
-        setErrorSnackbarText(res.error?.message || "Failed to load orders");
-        setErrorSnackbarOpen(true);
+        setSnackbar({ open: true, message: res.error?.message || "Failed to load orders", severity: "error" });
         return;
       }
 
@@ -83,6 +88,24 @@ export default function OrdersTable() {
     }
   }, [isAdmin]);
 
+  const handleResendEmail = useCallback(async (email, created_at) => {
+    const result = await http.resend_order_email(email, created_at);
+    if (result.success) {
+      setSnackbar({
+        open: true,
+        message: "Order email has been resent successfully!",
+        severity: "success",
+      });
+    } else {
+      setSnackbar({
+        open: true,
+        message: `Failed to resend email: ${result.error.message}`,
+        severity: "error",
+      });
+    }
+    return result.success;
+  }, []);
+
   const handleFilterChange = (store) => {
     setSelectedStore(store || null);
   };
@@ -93,8 +116,11 @@ export default function OrdersTable() {
       setIsAdmin(true);
       setIsModalOpen(false);
     } else {
-      setErrorSnackbarText("Incorrect password");
-      setErrorSnackbarOpen(true);
+      setSnackbar({
+        open: true,
+        message: "Incorrect password",
+        severity: "error",
+      });
     }
   };
 
@@ -130,6 +156,7 @@ export default function OrdersTable() {
               <TableCell align="center" sx={{ fontWeight: "bold" }}>
                 Paid w/ Paypal
               </TableCell>
+              <TableCell />
             </TableRow>
           </TableHead>
           <TableBody>
@@ -141,6 +168,7 @@ export default function OrdersTable() {
                   order={order}
                   editClick={handleEditClick}
                   isAdmin={isAdmin}
+                  handleResendEmail={handleResendEmail}
                 />
               ))
             ) : (
@@ -157,12 +185,15 @@ export default function OrdersTable() {
       </TableContainer>
 
       <Snackbar
-        open={errorSnackbarOpen}
+        open={snackbar.open}
         autoHideDuration={4000}
-        onClose={() => setErrorSnackbarOpen(false)}
+        onClose={() => setSnackbar({ ...snackbar, open: false })}
       >
-        <Alert severity="error" onClose={() => setErrorSnackbarOpen(false)}>
-          {errorSnackbarText}
+        <Alert
+          severity={snackbar.severity}
+          onClose={() => setSnackbar({ ...snackbar, open: false })}
+        >
+          {snackbar.message}
         </Alert>
       </Snackbar>
 

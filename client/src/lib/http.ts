@@ -67,3 +67,17 @@ export async function update_historical_order(email, created_at, cart) {
     return handleError(e);
   }
 }
+
+export async function resend_order_email(email, created_at) {
+  const body = { email, created_at };
+
+  try {
+    const response = await axios.post(
+      `${getWebConfigValue("server_hostname")}/v1/resend-order-email`,
+      body
+    );
+    return { success: { data: response.data }, error: null };
+  } catch (e) {
+    return handleError(e, "Failed to resend order email.");
+  }
+}

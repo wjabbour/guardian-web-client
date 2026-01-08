@@ -10,6 +10,9 @@ import {
   TableHead,
   TableRow,
   Typography,
+  Button,
+  Tooltip,
+  CircularProgress,
 } from "@mui/material";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
@@ -19,9 +22,10 @@ import { update_historical_order } from "../../lib/http";
 import { getStore } from "guardian-common";
 import OrderLineItem from "./OrderLineItem";
 
-export default function Row({ order, editClick, isAdmin }) {
+export default function Row({ order, editClick, isAdmin, handleResendEmail }) {
   const [open, setOpen] = useState(false);
   const [orderItems, setOrderItems] = useState(order.order || []);
+  const [isResending, setIsResending] = useState(false);
 
   // Logic for the main row column
   const isPaypal = order.paid === 1 && order.bypass === 0;
@@ -36,6 +40,17 @@ export default function Row({ order, editClick, isAdmin }) {
     } catch (err) {
       console.error("Failed to update order", err);
     }
+  };
+
+  const onResendClick = async () => {
+    if (!isAdmin) {
+      editClick();
+      return;
+    }
+
+    setIsResending(true);
+    await handleResendEmail(order.email, order.created_at);
+    setIsResending(false);
   };
 
   const formattedDate = moment(parseInt(order.created_at)).format(
@@ -75,6 +90,24 @@ export default function Row({ order, editClick, isAdmin }) {
 
         {/* NEW MAIN COLUMN HERE */}
         <TableCell align="center">{isPaypal ? "Yes" : "No"}</TableCell>
+        <TableCell align="right">
+          <Tooltip title={isAdmin ? "Resend order confirmation email" : "Login to resend email"}>
+            <span>
+              <Button
+                variant="outlined"
+                size="small"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  onResendClick();
+                }}
+                disabled={isResending}
+                sx={{ whiteSpace: 'nowrap' }}
+              >
+                {isResending ? <CircularProgress size={24} /> : "Resend Email"}
+              </Button>
+            </span>
+          </Tooltip>
+        </TableCell>
       </TableRow>
 
       <TableRow sx={{ backgroundColor: "#fdf1bb" }}>
