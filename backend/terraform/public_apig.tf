@@ -11,16 +11,12 @@ resource "aws_api_gateway_deployment" "this" {
 
   triggers = {
     redeployment = sha1(jsonencode([
-      module.create_order_route,
-      module.retrieve_orders_route,
-      module.capture_order_route,
-      module.update_historical_order,
-      module.resend_order_email_route
+      module.create_order.source_code_hash,
+      module.retrieve_orders.source_code_hash,
+      module.capture_order.source_code_hash,
+      module.update_historical_order.source_code_hash,
+      module.resend_order_email.source_code_hash
     ]))
-  }
-
-  variables = {
-    deployed_at = "${timestamp()}"
   }
 
   lifecycle {
