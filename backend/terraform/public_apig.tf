@@ -11,11 +11,11 @@ resource "aws_api_gateway_deployment" "this" {
 
   triggers = {
     redeployment = sha1(jsonencode([
-      module.create_order.source_code_hash,
-      module.retrieve_orders.source_code_hash,
-      module.capture_order.source_code_hash,
-      module.update_historical_order.source_code_hash,
-      module.resend_order_email.source_code_hash
+      module.create_order.lambda_function_source_code_hash,
+      module.retrieve_orders.lambda_function_source_code_hash,
+      module.capture_order.lambda_function_source_code_hash,
+      module.update_historical_order.lambda_function_source_code_hash,
+      module.resend_order_email.lambda_function_source_code_hash
     ]))
   }
 
