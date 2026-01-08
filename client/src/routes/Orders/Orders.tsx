@@ -182,7 +182,6 @@ export default function OrdersTable() {
       </Snackbar>
 
       <PasswordEntryDialog
-        isAdmin={isAdmin}
         isModalOpen={isModalOpen}
         setIsModalOpen={setIsModalOpen}
         onPasswordChange={handlePasswordChange}
