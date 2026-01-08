@@ -13,6 +13,8 @@ import {
 } from "@mui/material";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
+import CheckIcon from "@mui/icons-material/Check";
+import CloseIcon from "@mui/icons-material/Close";
 import { update_historical_order } from "../../lib/http";
 import { getStore } from "guardian-common";
 import OrderLineItem from "./OrderLineItem";
@@ -20,6 +22,9 @@ import OrderLineItem from "./OrderLineItem";
 export default function Row({ order, editClick, isAdmin }) {
   const [open, setOpen] = useState(false);
   const [orderItems, setOrderItems] = useState(order.order || []);
+
+  // Logic for the main row column
+  const isPaypal = order.paid === 1 && order.bypass === 0;
 
   const handleItemSave = async (updatedItem, index) => {
     const newItems = [...orderItems];
@@ -48,7 +53,7 @@ export default function Row({ order, editClick, isAdmin }) {
           "& > *": { borderBottom: "unset" },
           cursor: "pointer",
           userSelect: "none",
-          outline: "none", // Prevent focus outline
+          outline: "none",
         }}
       >
         <TableCell>
@@ -67,19 +72,23 @@ export default function Row({ order, editClick, isAdmin }) {
         <TableCell align="center">{formattedDate}</TableCell>
         <TableCell align="center">{`${order.first_name} ${order.last_name}`}</TableCell>
         <TableCell align="center">{storeName}</TableCell>
+
+        {/* NEW MAIN COLUMN HERE */}
+        <TableCell align="center">{isPaypal ? "Yes" : "No"}</TableCell>
       </TableRow>
 
       <TableRow sx={{ backgroundColor: "#fdf1bb" }}>
-        <TableCell style={{ paddingBottom: 0, paddingTop: 0 }} colSpan={6}>
+        <TableCell style={{ paddingBottom: 0, paddingTop: 0 }} colSpan={7}>
+          {/* Note: colSpan increased to 7 to account for the new column in main row */}
           <Collapse in={open} timeout="auto" unmountOnExit>
             <Box
               margin={1}
               sx={{
                 userSelect: "none",
-                caretColor: "transparent", // Hides cursor on container
-                outline: "none", // Hides focus ring
+                caretColor: "transparent",
+                outline: "none",
                 "&:focus": { outline: "none" },
-                "& input": { caretColor: "auto" }, // Restores cursor for inputs
+                "& input": { caretColor: "auto" },
               }}
             >
               <Typography
@@ -109,12 +118,7 @@ export default function Row({ order, editClick, isAdmin }) {
                     <TableCell sx={{ fontWeight: "bold" }}>
                       Embroidery
                     </TableCell>
-
-                    {/* New Header */}
-                    <TableCell sx={{ fontWeight: "bold" }} align="center">
-                      Used Paypal
-                    </TableCell>
-
+                    {/* Removed "Used Paypal" header from here */}
                     <TableCell sx={{ fontWeight: "bold" }}>
                       Customer PO
                     </TableCell>
@@ -129,7 +133,7 @@ export default function Row({ order, editClick, isAdmin }) {
                     <OrderLineItem
                       key={`${item.code}-${index}`}
                       item={item}
-                      order={order} // Passing the full order object
+                      // Removed `order` prop
                       isAdmin={isAdmin}
                       onEditRequest={editClick}
                       onSave={(updatedData) =>
