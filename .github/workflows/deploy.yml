@@ -147,7 +147,15 @@ jobs:
         run: npm ci
         working-directory: ./backend
 
-      - name: Deploy server
+      - name: Configure AWS Credentials (GPC)
+        if: steps.changes.outputs.backend == 'true'
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-access-key-id: ${{ secrets.GPC_KEY }}
+          aws-secret-access-key: ${{ secrets.GPC_SECRET }}
+          aws-region: us-east-1
+
+      - name: Deploy server (Standard)
         if: steps.changes.outputs.backend == 'true'
         run: npm run deploy
         working-directory: ./backend
