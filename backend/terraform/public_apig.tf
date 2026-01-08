@@ -15,6 +15,7 @@ resource "aws_api_gateway_deployment" "this" {
       module.retrieve_orders_route,
       module.capture_order_route,
       module.update_historical_order,
+      module.resend_order_email_route
     ]))
   }
 
@@ -63,5 +64,13 @@ module "capture_order_route" {
   http_method = "POST"
   path_part   = "capture-order"
   uri         = module.capture_order.lambda_function_invoke_arn
+  api_gateway = aws_api_gateway_rest_api.this
+}
+
+module "resend_order_email_route" {
+  source      = "./api_gateway_route"
+  http_method = "POST"
+  path_part   = "resend-order-email"
+  uri         = module.resend_order_email.lambda_function_invoke_arn
   api_gateway = aws_api_gateway_rest_api.this
 }
