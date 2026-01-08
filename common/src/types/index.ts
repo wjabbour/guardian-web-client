@@ -87,6 +87,9 @@ export interface Order {
   order: CartItem[];
   order_id: string;
   paid: 0 | 1;
-  paid_at: number;
+  paid_at: string;
   store: string;
+  bypass: 0 | 1;
+  company_name: string;
+  customer_po: string;
 }

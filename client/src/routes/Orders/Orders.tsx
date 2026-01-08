@@ -18,17 +18,7 @@ import {
 import Row from "./Row";
 import PasswordEntryDialog from "../../components/PasswordEntryDialog";
 import StoreSelect from "./StoreSelect";
-import { getStore, getStoreCode } from "guardian-common";
-
-// 1. Define Types for better safety
-interface Order {
-  id: string | number; // Assuming an ID exists
-  created_at: number; // or string, depending on backend
-  paid: number;
-  company_name: string;
-  store: string;
-  [key: string]: any; // Catch-all for other props passed to Row
-}
+import { getStore, getStoreCode, Order } from "guardian-common";
 
 interface ApiResponse {
   success?: {
@@ -42,7 +32,6 @@ interface ApiResponse {
 }
 
 export default function OrdersTable() {
-  // 2. State Management
   const [orders, setOrders] = useState<Order[]>([]);
   const [selectedStore, setSelectedStore] = useState<string | null>(null);
   const [isLoading, setIsLoading] = useState<boolean>(true);
@@ -53,7 +42,6 @@ export default function OrdersTable() {
   const [isAdmin, setIsAdmin] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  // 3. Data Fetching
   useEffect(() => {
     let isMounted = true;
 
@@ -72,7 +60,7 @@ export default function OrdersTable() {
       // Filter unpaid and sort by date descending
       const processedOrders = rawOrders
         .filter((order) => order.paid !== 0)
-        .sort((a, b) => b.created_at - a.created_at);
+        .sort((a, b) => b.created_at.localeCompare(a.created_at));
 
       setOrders(processedOrders);
     });
@@ -82,15 +70,12 @@ export default function OrdersTable() {
     };
   }, []);
 
-  // 4. Derived State (Performance Optimization)
-  // Calculate options only when orders change, not on every render
   const storeOptions = useMemo(() => {
     return [
       ...new Set(orders.map((o) => getStore(o.company_name ?? "", o.store))),
     ];
   }, [orders]);
 
-  // Filter logic handled via useMemo rather than duplicated state
   const displayedOrders = useMemo(() => {
     if (!selectedStore) return orders;
 
@@ -101,7 +86,6 @@ export default function OrdersTable() {
     return orders.filter((i) => i.store === code);
   }, [orders, selectedStore]);
 
-  // 5. Handlers
   const handleEditClick = useCallback(() => {
     if (!isAdmin) {
       setIsModalOpen(true);
@@ -151,8 +135,7 @@ export default function OrdersTable() {
             {displayedOrders.length > 0 ? (
               displayedOrders.map((order, index) => (
                 <Row
-                  // 6. Critical: Add a unique Key
-                  key={order.id || index}
+                  key={order.order_id || index}
                   order={order}
                   editClick={handleEditClick}
                   isAdmin={isAdmin}
