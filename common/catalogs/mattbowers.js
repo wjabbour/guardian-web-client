@@ -1862,7 +1862,7 @@ export const catalog = [
     colors: ["Clear"],
     type: "customs",
     default_color: "Clear",
-    description: '1 pack: $129 / 5 packs: $105 / 10 packs: $85',
+    description: '1 pack: $129 ea / 5 packs: $105 ea / 10 packs: $85 ea',
     supportedStores: [
     "MATFME", 
     "BOWCME", 
@@ -1922,7 +1922,7 @@ export const catalog = [
     type: "customs",
     default_color: "Blue",
     supportedStores: ["MATFME"],
-    description: '1000 @ $2.05/ 1500 @ $1.99/ 2500 @ 1.55',    
+    description: '1000 @ $2.05 ea/ 1500 @ $1.99 ea/ 2500 @ $1.55 ea',    
     quantities: [1000, 1500, 2500],
     pricing: {
       base: {
@@ -1941,7 +1941,7 @@ export const catalog = [
     colors: ["Black"],
     type: "customs",
     default_color: "Black",
-    description: '1000 @ $2.99/ 1500 @ $2.75/ 2500 @ 2.25', 
+    description: '1000 @ $2.99 ea/ 1500 @ $2.75 ea/ 2500 @ $2.25 ea', 
     supportedStores: ["MATFME"],   
     quantities: [1000, 1500, 2500],
     pricing: {
@@ -2009,7 +2009,7 @@ export const catalog = [
     type: "customs",
     default_color: "Blue",
     supportedStores: ["MATFME"],
-    description: '1000 @ $0.61/ 1500 @ $0.59/ 2500 @ 0.54',    
+    description: '1000 @ $0.61 ea/ 1500 @ $0.59 ea/ 2500 @ $0.54 ea',    
     quantities: [1000, 1500, 2500],
     pricing: {
       base: {
@@ -2060,7 +2060,7 @@ export const catalog = [
     colors: ["Clear"],
     type: "sales",
     default_color: "Clear",
-    description: '1 pack: $129 / 5 packs: $105 / 10 packs: $85',
+    description: '1 pack: $129 ea / 5 packs: $105 ea / 10 packs: $85 ea',
     quantities: [1, 5, 10],
     pricing: {
       base: {
@@ -2069,6 +2069,19 @@ export const catalog = [
           5: 105.00,
           10: 85.00,
         }, 
+      },
+    },
+  },
+  {
+    code: "D236-EX",
+    name: "Crazy Flag - Nissan",
+    fullname: "Crazy Flag - Nissan", 
+    colors: ["White"],   
+    type: "sales", 
+    default_color: "White",   
+    pricing: {
+      base: {
+        price: 72.77,
       },
     },
   },  
@@ -2090,7 +2103,7 @@ export const catalog = [
     type: "sales",
     default_color: "Beige",   
     quantities: [1, 5, 10],
-    description: '1 box: $67.99 / 5 boxes: $67.99 / 10 boxes: $62.99',
+    description: '1 box: $67.99 ea / 5 boxes: $67.99 ea / 10 boxes: $62.99 ea',
     pricing: {
       base: {
         price: 67.99,
@@ -2119,7 +2132,7 @@ export const catalog = [
     type: "sales",
     default_color: "Blue",    
     quantities: [1, 5, 10],
-    description: '1 box: $33.99 / 5 boxes: $31.99 / 10 boxes: $29.99',
+    description: '1 box: $33.99 ea / 5 boxes: $31.99 ea / 10 boxes: $29.99 ea',
     pricing: {
       base: {
         price: 33.99,
@@ -2187,7 +2200,7 @@ export const catalog = [
     type: "sales",
     default_color: "Blue",    
     quantities: [1, 5, 10],
-    description: `1 pack: $11.99 / 5 packs: $10.99 / 10 packs: $10.99`,
+    description: `1 pack: $11.99 ea / 5 packs: $10.99 ea / 10 packs: $10.99 ea`,
     pricing: {
       base: {
         price: 11.99,
@@ -2218,7 +2231,7 @@ export const catalog = [
     type: "sales",
     default_color: "Fluorg",    
     quantities: [1, 5, 10],
-    description: '1 pack: $29.45 / 5 packs: $29.45 / 10 packs: $27.45',
+    description: '1 pack: $29.45 ea / 5 packs: $29.45 ea / 10 packs: $27.45 ea',
     pricing: {
       base: {
         price: 29.45,
@@ -2381,7 +2394,7 @@ export const catalog = [
     type: "sales",
     default_color: "Blue",   
     quantities: [1, 5, 10],
-    description: '1 box: $115.76 / 5 packs: $115.76 / 10+ packs: $105',
+    description: '1 box: $115.76 ea / 5 boxes: $115.76 ea / 10 boxes: $105 ea',
     pricing: {
       base: {
         price: 115.76,
@@ -2471,20 +2484,7 @@ export const catalog = [
         price: 39.99,
       },
     },
-  },
-  {
-    code: "D236-EX",
-    name: "Crazy Flag - Nissan",
-    fullname: "Crazy Flag - Nissan", 
-    colors: ["White"],   
-    type: "sales", 
-    default_color: "White",   
-    pricing: {
-      base: {
-        price: 72.77,
-      },
-    },
-  },
+  },  
   {
     code: "BOW30",
     name: "30 in. Giant Bow",
@@ -2637,7 +2637,7 @@ export const catalog = [
     type: "service",
     default_color: "Metal",
     quantities: [1, 5, 10],
-    description: '1 pack: $16.99 / 5 packs: $12.99 / 10 packs: $10.99',
+    description: '1 pack: $16.99 ea / 5 packs: $12.99 ea / 10 packs: $10.99 ea',
     pricing: {
       base: {
         price: 16.99,
@@ -2681,7 +2681,7 @@ export const catalog = [
     colors: ["Black"],
     type: "service",
     default_color: "Black", 
-    description: `10 holders: $4.50ea / 50 holders: $4.00ea / 100 holders: $3.50ea`,   
+    description: `10 holders: $4.50 ea / 50 holders: $4.00 ea / 100 holders: $3.50 ea`,   
     quantities: [10, 50, 100],
     pricing: {
       base: {
