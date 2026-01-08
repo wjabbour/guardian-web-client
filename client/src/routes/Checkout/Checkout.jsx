@@ -105,6 +105,7 @@ export default function Checkout() {
         },
       });
       set_cart({});
+      sessionStorage.removeItem("cart");
     }
 
     setLoading(false);
@@ -154,6 +155,7 @@ export default function Checkout() {
               },
             });
             set_cart({});
+            sessionStorage.removeItem("cart");
           }
         },
         style: {
