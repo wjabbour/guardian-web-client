@@ -1332,8 +1332,8 @@ export const catalog = [
   },
   {
     code: "BOWIME-33P-488640A",
-    name: ".15 Gauge Vinyl Plate",
-    fullname: ".15 Gauge Vinyl Plate - White w/black imprint",
+    name: ".35 Gauge Vinyl Plate",
+    fullname: ".35 Gauge Vinyl Plate - White w/black imprint",
     colors: ["Black"],
     type: "customs",
     default_color: "Black",    
@@ -1362,7 +1362,7 @@ export const catalog = [
     },
   },
    {
-    code: "BOWHGU-34PE-449908A",
+    code: "BOWHGU-34PEU-449908A",
     name: "Black Plastic Frame",
     fullname: "Black Plastic Frame w/white imprint",
     colors: ["Black"],
@@ -1392,7 +1392,7 @@ export const catalog = [
     },
   },
   {
-    code: "BOWHGU-31DD-484892A",
+    code: "BOWHGU-31DD484892A",
     name: "Vinyl Die Cut Decals",
     fullname: "Vinyl Die Cut Decal (5.75 in. x 1.02 in.)",
     colors: ["Black", "White"],
@@ -1408,7 +1408,7 @@ export const catalog = [
     },
   }, 
   {
-    code: "BOWHGU-31DD-519517A",
+    code: "BOWHGU-31DD519517A",
     name: "Vinyl Die Cut Decals",
     fullname: "Vinyl Die Cut Decal (5.75 in. x 1 in.)",
     colors: ["White"],
@@ -1424,8 +1424,8 @@ export const catalog = [
     },
   }, 
   {
-    code: "MATFME-34CPSS-452477A",
-    name: "Chrome Plated Frame  ",
+    code: "MATFME-34CPS-452477A",
+    name: "Chrome Plated Frame",
     fullname: "Screen Printed Chrome Plated Frame w/black imprint",
     colors: ["Chrome"],
     type: "customs",
@@ -1486,7 +1486,7 @@ export const catalog = [
     },
   },
   {
-    code: "BOWHSL-34PE-487072A",
+    code: "BOWHSL-34PEU-487072A",
     name: "Black Plastic Frame",
     fullname: "Black Plastic Frame w/white imprint",
     colors: ["Black"],
@@ -1593,7 +1593,7 @@ export const catalog = [
     },
   },
   {
-    code: "BOWCME-33GT-451336Z",
+    code: "BOWCME-33GT-451317Z",
     name: ".15 Gauge Vinyl Plate",
     fullname: ".15 Gauge Vinyl Plate - White w/4CP imprint",
     colors: ["Blue"],
@@ -1762,7 +1762,7 @@ export const catalog = [
     },
   },
   {
-    code: "BOWNSO-33P-489757A",
+    code: "BOWNSO-33P30-489757A",
     name: ".30 Gauge Vinyl Plate",
     fullname: ".30 Gauge White Plastic Plate w/black imprint",
     colors: ["Black"],
@@ -1777,7 +1777,7 @@ export const catalog = [
     },
   },
   {
-    code: "BOWNSO-31DD-489756A",
+    code: "BOWNSO-31DD489756A",
     name: "Vinyl Die Cut Decals",
     fullname: "Vinyl Die Cut Decal (5 in. x 2.35 in.)",
     colors: ["Black"],
@@ -1792,7 +1792,7 @@ export const catalog = [
     },
   },
   {
-    code: "BOWNSO-31DD-519521A",
+    code: "BOWNSO-31DD519521A",
     name: "Vinyl Die Cut Decals",
     fullname: "Vinyl Die Cut Decal (5 in. x 2.37 in.)",
     colors: ["White"],
