@@ -48,8 +48,7 @@ export default function Row({ order, editClick, isAdmin }) {
           "& > *": { borderBottom: "unset" },
           cursor: "pointer",
           userSelect: "none",
-          // Prevent focus outline on the main row
-          outline: "none",
+          outline: "none", // Prevent focus outline
         }}
       >
         <TableCell>
@@ -77,6 +76,10 @@ export default function Row({ order, editClick, isAdmin }) {
               margin={1}
               sx={{
                 userSelect: "none",
+                caretColor: "transparent", // Hides cursor on container
+                outline: "none", // Hides focus ring
+                "&:focus": { outline: "none" },
+                "& input": { caretColor: "auto" }, // Restores cursor for inputs
               }}
             >
               <Typography
@@ -106,6 +109,12 @@ export default function Row({ order, editClick, isAdmin }) {
                     <TableCell sx={{ fontWeight: "bold" }}>
                       Embroidery
                     </TableCell>
+
+                    {/* New Header */}
+                    <TableCell sx={{ fontWeight: "bold" }} align="center">
+                      Used Paypal
+                    </TableCell>
+
                     <TableCell sx={{ fontWeight: "bold" }}>
                       Customer PO
                     </TableCell>
@@ -120,6 +129,7 @@ export default function Row({ order, editClick, isAdmin }) {
                     <OrderLineItem
                       key={`${item.code}-${index}`}
                       item={item}
+                      order={order} // Passing the full order object
                       isAdmin={isAdmin}
                       onEditRequest={editClick}
                       onSave={(updatedData) =>

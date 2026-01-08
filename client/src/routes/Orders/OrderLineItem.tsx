@@ -10,15 +10,21 @@ import {
 import EditIcon from "@mui/icons-material/Edit";
 import SaveIcon from "@mui/icons-material/Save";
 import CancelIcon from "@mui/icons-material/Cancel";
+import CheckIcon from "@mui/icons-material/Check";
+import CloseIcon from "@mui/icons-material/Close";
 
 export default function OrderLineItem({
   item,
+  order, // <--- New Prop
   isAdmin,
   onEditRequest,
   onSave,
 }) {
   const [isEditing, setIsEditing] = useState(false);
   const [isSaving, setIsSaving] = useState(false);
+
+  // Logic for the new column
+  const isPaypal = order.paid === 1 && order.bypass === 0;
 
   const [formData, setFormData] = useState({
     po: item.po || "",
@@ -91,10 +97,7 @@ export default function OrderLineItem({
   };
 
   return (
-    <TableRow
-      // Added userSelect: "none" to prevent text selection/cursor blinking on static text
-      sx={{ userSelect: "none" }}
-    >
+    <TableRow sx={{ userSelect: "none" }}>
       <TableCell sx={{ width: "90px" }}>{renderActionButtons()}</TableCell>
 
       <TableCell>{item.code}</TableCell>
@@ -104,6 +107,15 @@ export default function OrderLineItem({
       <TableCell>{item.size}</TableCell>
       <TableCell>{item.color}</TableCell>
       <TableCell>{item.embroidery}</TableCell>
+
+      {/* New "Used Paypal" Column */}
+      <TableCell align="center">
+        {isPaypal ? (
+          <CheckIcon color="success" fontSize="small" />
+        ) : (
+          <CloseIcon color="error" fontSize="small" />
+        )}
+      </TableCell>
 
       {isEditing ? (
         <>
