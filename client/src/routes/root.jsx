@@ -91,13 +91,13 @@ export default function Root() {
       <PasswordEntryDialog
         isModalOpen={isModalOpen}
         setIsModalOpen={setModalOpen}
-        onPasswordChange={(password, setPassword) => {
+        onPasswordChange={(password) => {
+          console.log('hey')
           const prefix = getRoutePrefix(password);
           if (prefix) {
             setUser({ isLoggedIn: true });
             setModalOpen(false);
             navigate(prefix);
-            setPassword("");
           }
         }}
       />
