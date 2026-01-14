@@ -4,7 +4,7 @@ module "create_order" {
 
   function_name = "create-order"
   handler       = "handler.handler"
-  runtime       = "nodejs16.x"
+  runtime       = "nodejs20.x"
   timeout       = 20
 
   create_package         = true

@@ -4,7 +4,7 @@ module "send_order_data" {
 
   function_name = "send-order-data"
   handler       = "handler.handler"
-  runtime       = "nodejs16.x"
+  runtime       = "nodejs20.x"
   timeout       = 20
 
   create_package         = true

@@ -4,7 +4,7 @@ module "update_historical_order" {
 
   function_name = "update-historical-order"
   handler       = "handler.handler"
-  runtime       = "nodejs16.x"
+  runtime       = "nodejs20.x"
   timeout       = 20
 
   create_package         = true
