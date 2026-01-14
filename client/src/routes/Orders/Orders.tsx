@@ -157,7 +157,10 @@ export default function OrdersTable() {
 
   return (
     <div>
-      <StoreSelect stores={storeOptions} onChange={handleFilterChange} />
+      <div className="ml-4">
+        <StoreSelect stores={storeOptions} onChange={handleFilterChange} />
+      </div>
+
       <TableContainer component={Paper} sx={{ marginTop: 2 }}>
         <Table aria-label="orders table">
           <TableHead>
