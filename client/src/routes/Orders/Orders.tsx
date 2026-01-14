@@ -134,9 +134,9 @@ export default function OrdersTable() {
     []
   );
 
-  const handlePasswordChange = (password) => {
-    // SECURITY NOTE: This validation should ideally happen on the server.
-    if (password === "Louis123") {
+  const handlePasswordChange = async (password) => {
+    const result = await http.validate_password(password);
+    if (result.success) {
       setIsAdmin(true);
       setIsModalOpen(false);
     } else {

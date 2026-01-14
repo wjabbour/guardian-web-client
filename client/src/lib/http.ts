@@ -95,3 +95,17 @@ export async function delete_order(email, created_at) {
     return handleError(e, "Failed to delete order.");
   }
 }
+
+export async function validate_password(password) {
+  const body = { password };
+
+  try {
+    const response = await axios.post(
+      `${getWebConfigValue("server_hostname")}/v1/validate-password`,
+      body
+    );
+    return { success: { data: response.data }, error: null };
+  } catch (e) {
+    return handleError(e, "Failed to validate password.");
+  }
+}
