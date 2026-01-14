@@ -19,6 +19,7 @@ import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 import { update_historical_order, delete_order } from "../../lib/http";
 import { getStore } from "guardian-common";
 import OrderLineItem from "./OrderLineItem";
+import ConfirmationDialog from "../../components/ConfirmationDialog";
 
 export default function Row({
   order,
@@ -31,6 +32,7 @@ export default function Row({
   const [orderItems, setOrderItems] = useState(order.order || []);
   const [isResending, setIsResending] = useState(false);
   const [isDeleting, setIsDeleting] = useState(false);
+  const [isDeleteModalOpen, setIsDeleteModalOpen] = useState(false);
 
   // Logic for the main row column
   const isPaypal = order.paid === 1 && order.bypass === 0;
@@ -58,14 +60,18 @@ export default function Row({
     setIsResending(false);
   };
 
-  const onDeleteClick = async () => {
+  const onDeleteClick = () => {
     if (!isAdmin) {
       editClick();
       return;
     }
+    setIsDeleteModalOpen(true);
+  };
 
+  const handleConfirmDelete = async () => {
+    setIsDeleteModalOpen(false);
     setIsDeleting(true);
-    const result = await delete_order(order.order_id);
+    const result = await delete_order(order.email, order.created_at);
     if (result.success) {
       onOrderDeleted(order.order_id, "Order deleted successfully!", "success");
     } else {
@@ -228,6 +234,13 @@ export default function Row({
           </Collapse>
         </TableCell>
       </TableRow>
+      <ConfirmationDialog
+        open={isDeleteModalOpen}
+        onClose={() => setIsDeleteModalOpen(false)}
+        onConfirm={handleConfirmDelete}
+        title="Are you sure?"
+        message="This action is permanent and cannot be undone."
+      />
     </Fragment>
   );
 }

@@ -4,7 +4,6 @@ import {
   buildResponse,
 } from "../utils";
 import { dynamoClient } from "../dynamoClient";
-import { QueryCommand } from "@aws-sdk/lib-dynamodb";
 
 export const handler = async (
   event: APIGatewayEvent
@@ -13,30 +12,11 @@ export const handler = async (
     const body = JSON.parse(event.body) || "{}";
     logger.info({ message: "Received body", body });
 
-    const { order_id } = body;
+    const { email, created_at } = body;
 
-    if (!order_id) {
-      return buildResponse(400, { message: "order_id is required" });
+    if (!email || !created_at) {
+      return buildResponse(400, { message: "email and created_at are required" });
     }
-
-    const command = new QueryCommand({
-      Select: "ALL_ATTRIBUTES",
-      ExpressionAttributeValues: {
-        ":order_id": order_id,
-      },
-      KeyConditionExpression: "order_id = :order_id",
-      TableName: "orders",
-      IndexName: "order-id-index",
-    });
-
-    const response = await dynamoClient.documentClient.send(command);
-
-    if (response.Items.length === 0) {
-      return buildResponse(404, { message: "Order not found" });
-    }
-
-    const item = response.Items[0];
-    const { email, created_at } = item;
 
     await dynamoClient.deleteOrder(created_at, email);
 

@@ -82,8 +82,8 @@ export async function resend_order_email(email, created_at) {
   }
 }
 
-export async function delete_order(order_id) {
-  const body = { order_id };
+export async function delete_order(email, created_at) {
+  const body = { email, created_at };
 
   try {
     const response = await axios.post(

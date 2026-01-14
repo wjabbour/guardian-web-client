@@ -27,13 +27,11 @@ module "delete_order" {
 data "aws_iam_policy_document" "delete_order" {
   statement {
     actions = [
-      "dynamodb:DeleteItem",
-      "dynamodb:Query"
+      "dynamodb:DeleteItem"
     ]
 
     resources = [
-      aws_dynamodb_table.orders_table.arn,
-      "${aws_dynamodb_table.orders_table.arn}/index/order-id-index"
+      aws_dynamodb_table.orders_table.arn
     ]
   }
 }
