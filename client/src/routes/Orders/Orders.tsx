@@ -1,5 +1,4 @@
 import { useEffect, useState, useMemo, useCallback } from "react";
-import styles from "./Orders.module.scss";
 import * as http from "../../lib/http";
 import {
   Table,
@@ -157,9 +156,8 @@ export default function OrdersTable() {
   }
 
   return (
-    <div className={styles.container}>
+    <div>
       <StoreSelect stores={storeOptions} onChange={handleFilterChange} />
-
       <TableContainer component={Paper} sx={{ marginTop: 2 }}>
         <Table aria-label="orders table">
           <TableHead>
