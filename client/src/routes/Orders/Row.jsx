@@ -19,7 +19,7 @@ import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 import { update_historical_order, delete_order } from "../../lib/http";
 import { getStore } from "guardian-common";
 import OrderLineItem from "./OrderLineItem";
-import ConfirmationDialog from "../../components/ConfirmationDialog";
+import ConfirmationDialog from "../../components/ConfirmationDialog/ConfirmationDialog";
 
 export default function Row({
   order,

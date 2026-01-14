@@ -6,7 +6,7 @@ import Backdrop from "@mui/material/Backdrop";
 import Navbar from "../components/Navbar/Navbar";
 import Footer from "../components/Footer/Footer";
 import { useState, createContext } from "react";
-import PasswordEntryDialog from "../components/PasswordEntryDialog";
+import PasswordEntryDialog from "../components/PasswordEntryDialog/PasswordEntryDialog";
 import { useNextGenRouting } from "../hooks/useNextGenRouting";
 import { getRoutePrefix } from "guardian-common";
 

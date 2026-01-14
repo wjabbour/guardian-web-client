@@ -16,7 +16,7 @@ import {
   AlertColor,
 } from "@mui/material";
 import Row from "./Row";
-import PasswordEntryDialog from "../../components/PasswordEntryDialog";
+import PasswordEntryDialog from "../../components/PasswordEntryDialog/PasswordEntryDialog";
 import StoreSelect from "./StoreSelect";
 import { getStore, getStoreCode } from "guardian-common";
 

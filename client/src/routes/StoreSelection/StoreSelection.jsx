@@ -4,7 +4,7 @@ import { SvgIcon } from "@mui/material";
 import ArrowBackIcon from "@mui/icons-material/ArrowBack";
 import { getDomainAwarePath } from "../../lib/utils";
 import { getWebConfigValue } from "guardian-common";
-import PasswordEntryDialog from "../../components/PasswordEntryDialog";
+import PasswordEntryDialog from "../../components/PasswordEntryDialog/PasswordEntryDialog";
 
 export default function StoreSelection() {
   const navigate = useNavigate();
