@@ -63,7 +63,6 @@ export const config = {
     "asarazua@gpcorp.com",
     "jboston@gpcorp.com",
     "Zwarner@hennessyauto.com",
-    "doubleujabbour@gmail.com",
   ],
 
   stores: [
