@@ -1,5 +1,6 @@
 module "create_order" {
   source = "terraform-aws-modules/lambda/aws"
+  version = "8.2.0"
 
   function_name = "create-order"
   handler       = "handler.handler"

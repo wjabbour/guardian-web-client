@@ -1,5 +1,6 @@
 module "resend_order_email" {
   source = "terraform-aws-modules/lambda/aws"
+  version = "8.2.0"
 
   function_name = "resend-order-email"
   handler       = "handler.handler"

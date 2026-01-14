@@ -1,5 +1,6 @@
 module "retrieve_orders" {
   source = "terraform-aws-modules/lambda/aws"
+  version = "8.2.0"
 
   function_name = "retrieve-orders"
   handler       = "handler.handler"

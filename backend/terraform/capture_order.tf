@@ -1,5 +1,6 @@
 module "capture_order" {
   source = "terraform-aws-modules/lambda/aws"
+  version = "8.2.0"
 
   function_name = "capture-order"
   handler       = "handler.handler"

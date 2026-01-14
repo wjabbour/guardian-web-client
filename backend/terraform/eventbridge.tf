@@ -1,5 +1,6 @@
 module "eventbridge" {
   source = "terraform-aws-modules/eventbridge/aws"
+  version = "4.3.0"
 
   create_bus = false
 

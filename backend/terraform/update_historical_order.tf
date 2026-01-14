@@ -1,5 +1,6 @@
 module "update_historical_order" {
   source = "terraform-aws-modules/lambda/aws"
+  version = "8.2.0"
 
   function_name = "update-historical-order"
   handler       = "handler.handler"

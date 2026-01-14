@@ -1,5 +1,6 @@
 module "send_order_data" {
   source = "terraform-aws-modules/lambda/aws"
+  version = "8.2.0"
 
   function_name = "send-order-data"
   handler       = "handler.handler"
