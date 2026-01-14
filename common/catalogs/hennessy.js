@@ -86,6 +86,12 @@ export const catalog = [
     name: "Oval Year Stickers - Silver",
     fullname: "Oval Year Stickers - Silver/Black (12/pk)",
     variations: [
+      "2010",
+      "2011",
+      "2012",
+      "2013",
+      "2014",
+      "2015",
       "2016",
       "2017",
       "2018",

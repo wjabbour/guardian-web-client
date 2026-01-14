@@ -108,7 +108,7 @@ export const catalog = [
   {
     code: "301-100",
     name: "Plain File Folders - #301-100",
-    fullname: "Plain File Folders - Color Code (100 per box) #301-100",
+    fullname: "Plain File Folders - Color Code (100/box) #301-100",
     colors: ["Plain"],
     type: "office",
     default_color: "Plain",
@@ -172,9 +172,10 @@ export const catalog = [
   {
     code: "BOW30",
     name: "30 in. Giant Bow #BOW30",
-    fullname: "30 in. Giant Magnetic Car Bow (2 ea)",
+    fullname: "30 in. Giant Magnetic Car Bow (2/pk)",
     colors: ["Blue","Gold","Green","Patriotic","Pink","Red","Silver","White","Red Grn"],
     type: "sales",
+    description: `Sold in pairs of the same color.`,
     default_color: "Blue",   
     pricing: {
       base: {
@@ -268,7 +269,7 @@ export const catalog = [
   },
   {
     code: "BB18002C",
-    name: "Regular Long Sleeve",
+    name: "Regular Long Sleeve #BB18002",
     fullname: "Brooks Brothers® Wrinkle-Free Stretch Nailhead Shirt (BB18002)",
     colors: ["White"],
     default_color: "White",
@@ -287,7 +288,7 @@ export const catalog = [
   },
   {
     code: "TLS608",
-    name: " Tall Long Sleeve",
+    name: " TALL Long Sleeve Shirt #TLS608",
     fullname: "Port Authority® Tall Long Sleeve Easy Care Shirt (TLS608)",
     colors: ["White"],
     default_color: "White",
@@ -303,7 +304,7 @@ export const catalog = [
   },
   {
     code: "S608ES",
-    name: "Extended Size Long Sleeve",
+    name: "Extended Size Long Sleeve Shirt #S608ES",
     fullname: "Port Authority® Extended Size Long Sleeve Easy Care Shirt (S608ES)",
     colors: ["White"],
     default_color: "White",
