@@ -31,7 +31,8 @@ data "aws_iam_policy_document" "delete_order" {
     ]
 
     resources = [
-      aws_dynamodb_table.orders_table.arn
+      aws_dynamodb_table.orders_table.arn,
+      aws_dynamodb_table.archived_orders_table.arn
     ]
   }
 }
