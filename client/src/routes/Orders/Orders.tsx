@@ -34,7 +34,11 @@ export default function OrdersTable() {
   const [isLoading, setIsLoading] = useState(true);
 
   // UI State
-  const [snackbar, setSnackbar] = useState<SnackbarState>({ open: false, message: "", severity: "info" });
+  const [snackbar, setSnackbar] = useState<SnackbarState>({
+    open: false,
+    message: "",
+    severity: "info",
+  });
   const [isAdmin, setIsAdmin] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -47,7 +51,11 @@ export default function OrdersTable() {
       setIsLoading(false);
 
       if (!res.success) {
-        setSnackbar({ open: true, message: res.error?.message || "Failed to load orders", severity: "error" });
+        setSnackbar({
+          open: true,
+          message: res.error?.message || "Failed to load orders",
+          severity: "error",
+        });
         return;
       }
 
@@ -110,14 +118,21 @@ export default function OrdersTable() {
     setSelectedStore(store || null);
   };
 
-  const handleOrderDeleted = useCallback((orderId, message, severity) => {
-    setOrders((prevOrders) => prevOrders.filter((o) => o.order_id !== orderId));
-    setSnackbar({
-      open: true,
-      message,
-      severity,
-    });
-  }, []);
+  const handleOrderDeleted = useCallback(
+    (email, createdAt, message, severity) => {
+      setOrders((prevOrders) =>
+        prevOrders.filter(
+          (o) => o.email !== email && o.created_at !== createdAt
+        )
+      );
+      setSnackbar({
+        open: true,
+        message,
+        severity,
+      });
+    },
+    []
+  );
 
   const handlePasswordChange = (password) => {
     // SECURITY NOTE: This validation should ideally happen on the server.

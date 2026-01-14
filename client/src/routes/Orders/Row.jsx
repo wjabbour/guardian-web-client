@@ -68,16 +68,23 @@ export default function Row({
     setIsDeleteModalOpen(true);
   };
 
+  // execute this logic after successful deletion confirmation
   const handleConfirmDelete = async () => {
     setIsDeleteModalOpen(false);
     setIsDeleting(true);
     const result = await delete_order(order.email, order.created_at);
     if (result.success) {
-      onOrderDeleted(order.order_id, "Order deleted successfully!", "success");
+      onOrderDeleted(
+        order.email,
+        order.created_at,
+        "Order deleted successfully!",
+        "success"
+      );
     } else {
       onOrderDeleted(
-        order.order_id,
-        `Failed to delete order: ${result.error.message}`,
+        order.email,
+        order.created_at,
+        `${result.error.message}`,
         "error"
       );
     }
