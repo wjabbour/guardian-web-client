@@ -45,15 +45,9 @@ export default function Modification() {
   const [snackbarText] = useState("Item added to cart");
   const [errorSnackbarOpen, setErrorSnackbarOpen] = useState(false);
   const [errorSnackbarText, setErrorSnackbarText] = useState("");
-  /*
-    this value is used for two things
-
-    1) for displaying some text in the price overview: "starts at $x"
-    2) discount calculation
-  */
-  const lowestPricedItemVariation = Math.min(
-    ...Object.values(item.pricing).map((i: any) => i.price)
-  );
+  const sizes = Object.keys(item.pricing);
+  const smallestSize = sizes.sort((a, b) => Number(a) - Number(b))[0];
+  const startsAtPrice = item.pricing[smallestSize].price;
 
   const [firstEmbroidery, setFirstEmbroidery] = useState("");
   const [secondEmbroidery, setSecondEmbroidery] = useState(null);
@@ -62,11 +56,10 @@ export default function Modification() {
   const [reset, setReset] = useState(Date.now());
 
   const description = item.description || "";
-
   /*
-    if an item type has no placements, then we set as default, but really this is just a special
-    value that we will use to process the item differently, we prob want N/A to end up on the order data
-  */
+      if an item type has no placements, then we set as default, but really this is just a special
+      value that we will use to process the item differently, we prob want N/A to end up on the order data
+    */
   const [firstPlacement, setFirstPlacement] = useState(
     logo_placements[0] || PlacementOption.DEFAULT
   );
@@ -140,8 +133,7 @@ export default function Modification() {
         firstEmbroidery,
         secondEmbroidery,
         firstPlacement,
-        secondPlacement,
-        lowestPricedItemVariation
+        secondPlacement
       );
 
       set_cart(new_cart);
@@ -166,12 +158,11 @@ export default function Modification() {
           <div className={styles.name}>{item.fullname}</div>
           {item.type !== "customs" && (
             <div className="font-bold text-[16px] mb-[20px]">
-              Starts at ${lowestPricedItemVariation} each
+              Starts at ${startsAtPrice} each
             </div>
           )}
 
           <Description description={description} />
-
           <div className="mt-[10px] flex gap-[50px]">
             <EmbroiderySelector
               item={item}
@@ -185,7 +176,7 @@ export default function Modification() {
               handleSecondEmbroideryChange={handleSecondEmbroideryChange}
               handleFirstPlacementChange={handleFirstPlacementChange}
               handleSecondPlacementChange={handleSecondPlacementChange}
-            />
+            />{" "}
             <ColorSelector
               item={item}
               set_selected_color={set_selected_color}

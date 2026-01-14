@@ -8,8 +8,7 @@ export function createCartItem(
   firstEmbroidery: string,
   secondEmbroidery: string,
   firstPlacement: string,
-  secondPlacement: string,
-  fallbackPrice: number
+  secondPlacement: string
 ) {
   const selection = userSelectionValue.split(",");
   const size = selection[0];
@@ -19,12 +18,7 @@ export function createCartItem(
   const cart_item = {
     type: itemConfiguration.type,
     name: itemConfiguration.fullname,
-    price: getPriceWithDiscount(
-      itemConfiguration,
-      size,
-      quantity,
-      fallbackPrice
-    ),
+    price: getPriceWithDiscount(itemConfiguration, size, quantity),
     quantity,
     size: size === "base" ? SizeOption.DEFAULT : size,
     color,
@@ -41,8 +35,7 @@ export function createCartItem(
     cart[key].price = getPriceWithDiscount(
       itemConfiguration,
       size,
-      cart[key].quantity,
-      fallbackPrice
+      cart[key].quantity
     );
   } else {
     cart[key] = cart_item;
@@ -52,10 +45,10 @@ export function createCartItem(
 function getPriceWithDiscount(
   itemConfiguration,
   size: number,
-  cartQuantity: number,
-  fallbackPrice: number
+  cartQuantity: number
 ) {
-  if (!itemConfiguration.pricing[size].discount) return fallbackPrice;
+  let price = itemConfiguration.pricing[size].price;
+  if (!itemConfiguration.pricing[size].discount) return price;
 
   /*
     the discount object is a mapping of quantity -> price where it is assumed that
@@ -77,7 +70,6 @@ function getPriceWithDiscount(
     itemConfiguration.pricing[size].discount
   ).sort((a, b) => Number(a) - Number(b));
 
-  let price = fallbackPrice;
   for (const quantity of sortedDiscountQuantites) {
     if (cartQuantity >= Number(quantity)) {
       price = itemConfiguration.pricing[size].discount[quantity];
