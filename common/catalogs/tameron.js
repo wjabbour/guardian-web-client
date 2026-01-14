@@ -299,9 +299,9 @@ export const catalog = [
     code: "NE1100",
     name: "New Era Interception Cap #NE1100",
     fullname: "New Era Interception Cap (NE1100)",
-    colors: ["Graphite_Black"],
+    colors: ["Graphite Black"],
     type: "hat",
-    default_color: "Graphite_Black",
+    default_color: "Graphite Black",
     halfColors: ['Graphite Black'],
     sizes: ["Small", "Medium", "Large"],
     pricing: {

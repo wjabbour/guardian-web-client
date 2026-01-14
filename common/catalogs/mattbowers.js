@@ -57,7 +57,7 @@ export const catalog = [
     type: "hat",
     default_color: "Black Red",
     description: `One size fits all; Minimum order of 12 required.
-(12-23) $12.15; (24+) $11.87;`,
+(12-23) $12.15; (24+) $11.87`,
     halfColors: ["Black Red", "Black ShockBlue", "Black Silver"],    
     pricing: {
       base: {
