@@ -106,7 +106,7 @@ class Dynamo {
   }
 
   async deleteOrder(created_at: string, email: string) {
-    const deleteItem = new DeleteCommand({
+    const deleteOrder = new DeleteCommand({
       Key: {
         created_at,
         email,
@@ -116,7 +116,7 @@ class Dynamo {
 
     logger.info("Deleted order");
 
-    await this.documentClient.send(deleteItem);
+    await this.documentClient.send(deleteOrder);
 
     const deleteArchivedOrder = new DeleteCommand({
       Key: {
@@ -125,6 +125,8 @@ class Dynamo {
       },
       TableName: "archived_orders",
     });
+
+    await this.documentClient.send(deleteArchivedOrder);
 
     logger.info("Deleted archived order");
   }
