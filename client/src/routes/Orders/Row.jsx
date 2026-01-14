@@ -16,16 +16,21 @@ import {
 } from "@mui/material";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
-import CheckIcon from "@mui/icons-material/Check";
-import CloseIcon from "@mui/icons-material/Close";
-import { update_historical_order } from "../../lib/http";
+import { update_historical_order, delete_order } from "../../lib/http";
 import { getStore } from "guardian-common";
 import OrderLineItem from "./OrderLineItem";
 
-export default function Row({ order, editClick, isAdmin, handleResendEmail }) {
+export default function Row({
+  order,
+  editClick,
+  isAdmin,
+  handleResendEmail,
+  onOrderDeleted,
+}) {
   const [open, setOpen] = useState(false);
   const [orderItems, setOrderItems] = useState(order.order || []);
   const [isResending, setIsResending] = useState(false);
+  const [isDeleting, setIsDeleting] = useState(false);
 
   // Logic for the main row column
   const isPaypal = order.paid === 1 && order.bypass === 0;
@@ -51,6 +56,26 @@ export default function Row({ order, editClick, isAdmin, handleResendEmail }) {
     setIsResending(true);
     await handleResendEmail(order.email, order.created_at);
     setIsResending(false);
+  };
+
+  const onDeleteClick = async () => {
+    if (!isAdmin) {
+      editClick();
+      return;
+    }
+
+    setIsDeleting(true);
+    const result = await delete_order(order.order_id);
+    if (result.success) {
+      onOrderDeleted(order.order_id, "Order deleted successfully!", "success");
+    } else {
+      onOrderDeleted(
+        order.order_id,
+        `Failed to delete order: ${result.error.message}`,
+        "error"
+      );
+    }
+    setIsDeleting(false);
   };
 
   const formattedDate = moment(parseInt(order.created_at)).format(
@@ -91,7 +116,13 @@ export default function Row({ order, editClick, isAdmin, handleResendEmail }) {
         {/* NEW MAIN COLUMN HERE */}
         <TableCell align="center">{isPaypal ? "Yes" : "No"}</TableCell>
         <TableCell align="right">
-          <Tooltip title={isAdmin ? "Resend order confirmation email" : "Login to resend email"}>
+          <Tooltip
+            title={
+              isAdmin
+                ? "Resend order confirmation email"
+                : "Login to resend email"
+            }
+          >
             <span>
               <Button
                 variant="outlined"
@@ -101,9 +132,26 @@ export default function Row({ order, editClick, isAdmin, handleResendEmail }) {
                   onResendClick();
                 }}
                 disabled={isResending}
-                sx={{ whiteSpace: 'nowrap' }}
+                sx={{ whiteSpace: "nowrap" }}
               >
                 {isResending ? <CircularProgress size={24} /> : "Resend Email"}
+              </Button>
+            </span>
+          </Tooltip>
+          <Tooltip title="Delete order">
+            <span>
+              <Button
+                variant="outlined"
+                size="small"
+                color="error"
+                onClick={(e) => {
+                  e.stopPropagation();
+                  onDeleteClick();
+                }}
+                disabled={isDeleting}
+                sx={{ whiteSpace: "nowrap", ml: 1 }}
+              >
+                {isDeleting ? <CircularProgress size={24} /> : "Delete"}
               </Button>
             </span>
           </Tooltip>

@@ -81,3 +81,17 @@ export async function resend_order_email(email, created_at) {
     return handleError(e, "Failed to resend order email.");
   }
 }
+
+export async function delete_order(order_id) {
+  const body = { order_id };
+
+  try {
+    const response = await axios.post(
+      `${getWebConfigValue("server_hostname")}/v1/delete-order`,
+      body
+    );
+    return { success: { data: response.data }, error: null };
+  } catch (e) {
+    return handleError(e, "Failed to delete order.");
+  }
+}

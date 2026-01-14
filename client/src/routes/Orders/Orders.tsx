@@ -110,6 +110,15 @@ export default function OrdersTable() {
     setSelectedStore(store || null);
   };
 
+  const handleOrderDeleted = useCallback((orderId, message, severity) => {
+    setOrders((prevOrders) => prevOrders.filter((o) => o.order_id !== orderId));
+    setSnackbar({
+      open: true,
+      message,
+      severity,
+    });
+  }, []);
+
   const handlePasswordChange = (password) => {
     // SECURITY NOTE: This validation should ideally happen on the server.
     if (password === "Louis123") {
@@ -169,6 +178,7 @@ export default function OrdersTable() {
                   editClick={handleEditClick}
                   isAdmin={isAdmin}
                   handleResendEmail={handleResendEmail}
+                  onOrderDeleted={handleOrderDeleted}
                 />
               ))
             ) : (

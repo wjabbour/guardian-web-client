@@ -15,7 +15,8 @@ resource "aws_api_gateway_deployment" "this" {
       module.retrieve_orders.lambda_function_source_code_hash,
       module.capture_order.lambda_function_source_code_hash,
       module.update_historical_order.lambda_function_source_code_hash,
-      module.resend_order_email.lambda_function_source_code_hash
+      module.resend_order_email.lambda_function_source_code_hash,
+      module.delete_order.lambda_function_source_code_hash
     ]))
   }
 
@@ -68,5 +69,13 @@ module "resend_order_email_route" {
   http_method = "POST"
   path_part   = "resend-order-email"
   uri         = module.resend_order_email.lambda_function_invoke_arn
+  api_gateway = aws_api_gateway_rest_api.this
+}
+
+module "delete_order_route" {
+  source      = "./api_gateway_route"
+  http_method = "POST"
+  path_part   = "delete-order"
+  uri         = module.delete_order.lambda_function_invoke_arn
   api_gateway = aws_api_gateway_rest_api.this
 }
