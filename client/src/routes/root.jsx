@@ -10,6 +10,8 @@ import PasswordEntryDialog from "../components/PasswordEntryDialog/PasswordEntry
 import { useNextGenRouting } from "../hooks/useNextGenRouting";
 import { getRoutePrefix } from "guardian-common";
 
+import Gpc81Navbar from "../components/Gpc81Navbar/Gpc81Navbar";
+
 export const UserContext = createContext({ isLoggedIn: false });
 const CartContext = createContext({});
 
@@ -49,29 +51,7 @@ export default function Root() {
 
       <CartContext.Provider>
         <UserContext.Provider user={user}>
-          {useRouting && (
-            <div>
-              <div className="flex items-center justify-center bg-[#0324fc] h-[70px] cursor-default">
-                <p className="text-white text-4xl drop-shadow-lg">
-                  Contact us at 800-727-7222 or email us at support@gpcorp.com
-                </p>
-              </div>
-              <div className="relative h-[190px]">
-                <img
-                  src="/images/guardian_nav.jpg"
-                  className="w-full h-full"
-                ></img>
-                <div
-                  onClick={() => {
-                    setModalOpen(true);
-                  }}
-                  className="absolute right-10 top-12 h-[70px] w-[220px] bg-[#0324fc] flex items-center justify-center text-5xl text-white drop-shadow-lg cursor-pointer rounded-md"
-                >
-                  LOGIN
-                </div>
-              </div>
-            </div>
-          )}
+          {useRouting && <Gpc81Navbar setModalOpen={setModalOpen} />}
           {!useRouting && <Navbar cart={cart} setCart={set_cart} />}
           <Outlet context={[cart, set_cart]} />
         </UserContext.Provider>
@@ -92,7 +72,6 @@ export default function Root() {
         isModalOpen={isModalOpen}
         setIsModalOpen={setModalOpen}
         onPasswordChange={(password) => {
-          console.log('hey')
           const prefix = getRoutePrefix(password);
           if (prefix) {
             setUser({ isLoggedIn: true });
