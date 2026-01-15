@@ -129,45 +129,43 @@ export default function Row({
         {/* NEW MAIN COLUMN HERE */}
         <TableCell align="center">{isPaypal ? "Yes" : "No"}</TableCell>
         <TableCell align="right">
-          <Tooltip
-            title={
-              isAdmin
-                ? "Resend order confirmation email"
-                : "Login to resend email"
-            }
-          >
-            <span>
-              <Button
-                variant="outlined"
-                size="small"
-                onClick={(e) => {
-                  e.stopPropagation();
-                  onResendClick();
-                }}
-                disabled={isResending}
-                sx={{ whiteSpace: "nowrap" }}
-              >
-                {isResending ? <CircularProgress size={24} /> : "Resend Email"}
-              </Button>
-            </span>
-          </Tooltip>
-          <Tooltip title="Delete order">
-            <span>
-              <Button
-                variant="outlined"
-                size="small"
-                color="error"
-                onClick={(e) => {
-                  e.stopPropagation();
-                  onDeleteClick();
-                }}
-                disabled={isDeleting}
-                sx={{ whiteSpace: "nowrap", ml: 1 }}
-              >
-                {isDeleting ? <CircularProgress size={24} /> : "Delete"}
-              </Button>
-            </span>
-          </Tooltip>
+          {isAdmin && (
+            <>
+              <Tooltip title="Resend order confirmation email">
+                <span>
+                  <Button
+                    variant="outlined"
+                    size="small"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      onResendClick();
+                    }}
+                    disabled={isResending}
+                    sx={{ whiteSpace: "nowrap" }}
+                  >
+                    {isResending ? <CircularProgress size={24} /> : "Resend Email"}
+                  </Button>
+                </span>
+              </Tooltip>
+              <Tooltip title="Delete order">
+                <span>
+                  <Button
+                    variant="outlined"
+                    size="small"
+                    color="error"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      onDeleteClick();
+                    }}
+                    disabled={isDeleting}
+                    sx={{ whiteSpace: "nowrap", ml: 1 }}
+                  >
+                    {isDeleting ? <CircularProgress size={24} /> : "Delete"}
+                  </Button>
+                </span>
+              </Tooltip>
+            </>
+          )}
         </TableCell>
       </TableRow>
 

@@ -50,7 +50,7 @@ export default function Root() {
       </div>
 
       <CartContext.Provider>
-        <UserContext.Provider user={user}>
+        <UserContext.Provider value={user}>
           {useRouting && <Gpc81Navbar setModalOpen={setModalOpen} />}
           {!useRouting && <Navbar cart={cart} setCart={set_cart} />}
           <Outlet context={[cart, set_cart]} />
@@ -72,9 +72,9 @@ export default function Root() {
         isModalOpen={isModalOpen}
         setIsModalOpen={setModalOpen}
         onSubmit={async (password) => {
+          // this password is used to determine which store the user is accessing, not the admin login password
           const prefix = getRoutePrefix(password);
           if (prefix) {
-            // Refresh user role after login
             const result = await getMe();
             if (result.success && result.success.data) {
               const role = result.success.data.role || "user";

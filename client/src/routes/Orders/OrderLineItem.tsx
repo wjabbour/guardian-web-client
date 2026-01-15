@@ -60,6 +60,11 @@ export default function OrderLineItem({
   };
 
   const renderActionButtons = () => {
+    // Hide edit button if user is not admin
+    if (!isAdmin) {
+      return null;
+    }
+
     if (isSaving) {
       return <CircularProgress size={24} color="primary" />;
     }
@@ -82,7 +87,7 @@ export default function OrderLineItem({
     }
 
     return (
-      <Tooltip title={isAdmin ? "Edit Item" : "Login to Edit"}>
+      <Tooltip title="Edit Item">
         <IconButton size="small" onClick={handleEditClick}>
           <EditIcon />
         </IconButton>

@@ -1,4 +1,4 @@
-import { useEffect, useState, useMemo, useCallback } from "react";
+import { useEffect, useState, useMemo, useCallback, useContext } from "react";
 import * as http from "../../lib/http";
 import {
   Table,
@@ -19,6 +19,7 @@ import Row from "./Row";
 import PasswordEntryDialog from "../../components/PasswordEntryDialog/PasswordEntryDialog";
 import StoreSelect from "./StoreSelect";
 import { getStore, getStoreCode } from "guardian-common";
+import { UserContext } from "../../root";
 
 interface SnackbarState {
   open: boolean;
@@ -27,6 +28,10 @@ interface SnackbarState {
 }
 
 export default function OrdersTable() {
+  // Get user context to check admin role
+  const userContext = useContext(UserContext);
+  const isAdmin = userContext?.role === "admin";
+
   // --- State Management ---
   const [orders, setOrders] = useState([]);
   const [selectedStore, setSelectedStore] = useState(null);
@@ -38,7 +43,6 @@ export default function OrdersTable() {
     message: "",
     severity: "info",
   });
-  const [isAdmin, setIsAdmin] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   // --- Data Fetching ---
