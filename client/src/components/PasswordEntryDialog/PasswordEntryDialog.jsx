@@ -9,7 +9,7 @@ import { useState, useEffect } from "react";
 export default function PasswordEntryDialog({
   isModalOpen,
   setIsModalOpen,
-  onPasswordChange,
+  onSubmit,
 }) {
   const [password, setPassword] = useState("");
 
@@ -24,7 +24,7 @@ export default function PasswordEntryDialog({
   }
 
   function handleSubmit() {
-    onPasswordChange(password);
+    onSubmit(password);
   }
 
   function handleKeyDown(e) {

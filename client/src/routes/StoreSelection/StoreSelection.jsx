@@ -17,7 +17,7 @@ export default function StoreSelection() {
     <div className="flex justify-center">
       <PasswordEntryDialog
         isModalOpen={isModalOpen}
-        onPasswordChange={(password) => {
+        onSubmit={(password) => {
           if (password === requiredPassword) {
             navigate(getDomainAwarePath(`/catalog/${storeCode}/customs`));
           }

@@ -244,7 +244,7 @@ export default function CartDrawer({ cart, setCart }: Props) {
       <PasswordEntryDialog
         isModalOpen={isAdminDialogOpen}
         setIsModalOpen={handleDialogClose}
-        onPasswordChange={handlePasswordSubmit}
+        onSubmit={handlePasswordSubmit}
       />
       <Snackbar
         open={snackbarOpen}

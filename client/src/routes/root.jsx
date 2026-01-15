@@ -70,7 +70,7 @@ export default function Root() {
       <PasswordEntryDialog
         isModalOpen={isModalOpen}
         setIsModalOpen={setModalOpen}
-        onPasswordChange={(password) => {
+        onSubmit={(password) => {
           const prefix = getRoutePrefix(password);
           if (prefix) {
             setUser({ isLoggedIn: true });

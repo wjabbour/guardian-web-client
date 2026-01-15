@@ -226,7 +226,7 @@ export default function OrdersTable() {
       <PasswordEntryDialog
         isModalOpen={isModalOpen}
         setIsModalOpen={setIsModalOpen}
-        onPasswordChange={handlePasswordChange}
+        onSubmit={handlePasswordChange}
       />
     </div>
   );
