@@ -20,13 +20,14 @@ export const handler = async (
   event: APIGatewayEvent
 ): Promise<APIGatewayProxyResult> => {
   try {
+    const origin = event.headers?.origin || event.headers?.Origin || "";
     const body = JSON.parse(event.body) || "{}";
     logger.info({ message: "Received body", body });
 
     const { password } = body;
 
     if (!password) {
-      return buildResponse(400, { message: "password is required" });
+      return buildResponse(400, { message: "password is required" }, origin);
     }
 
     const secret = await sm.send(command);
@@ -50,7 +51,7 @@ export const handler = async (
         host.includes("127.0.0.1");
 
       // Build response with http-only cookie
-      const response = buildResponse(200, { message: "Password is valid" });
+      const response = buildResponse(200, { message: "Password is valid" }, origin);
 
       // Set the http-only admin cookie
       // HttpOnly prevents JavaScript access, Secure ensures HTTPS only (skip for localhost), SameSite prevents CSRF
@@ -60,10 +61,10 @@ export const handler = async (
 
       return response;
     } else {
-      return buildResponse(401, { message: "Incorrect password" });
+      return buildResponse(401, { message: "Incorrect password" }, origin);
     }
   } catch (e) {
     logger.error(e);
-    return buildResponse(500, { message: "Failed to validate password" });
+    return buildResponse(500, { message: "Failed to validate password" }, origin);
   }
 };

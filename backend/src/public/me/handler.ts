@@ -5,6 +5,7 @@ export const handler = async (
     event: APIGatewayEvent
 ): Promise<APIGatewayProxyResult> => {
     try {
+        const origin = event.headers?.origin || event.headers?.Origin || "";
         // Check for admin_session cookie in the request
         const cookies = event.headers?.Cookie || event.headers?.cookie || "";
         const hasAdminSession = cookies.includes("admin_session=");
@@ -14,9 +15,10 @@ export const handler = async (
 
         logger.info({ message: "User role determined", role, hasAdminSession });
 
-        return buildResponse(200, { role });
+        return buildResponse(200, { role }, origin);
     } catch (e) {
         logger.error(e);
-        return buildResponse(500, { message: "Failed to get user info", role: "user" });
+        const origin = event.headers?.origin || event.headers?.Origin || "";
+        return buildResponse(500, { message: "Failed to get user info", role: "user" }, origin);
     }
 };

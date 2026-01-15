@@ -17,6 +17,7 @@ export const handler = async (
   event: APIGatewayEvent
 ): Promise<APIGatewayProxyResult> => {
   try {
+    const origin = event.headers?.origin || event.headers?.Origin || "";
     logger.info({ message: "Retrieving credential" });
     const secret = await sm.send(command);
     const config = JSON.parse(secret.SecretString);
@@ -52,7 +53,7 @@ export const handler = async (
 
     if (!company_name) {
       logger.warn({ message: "Unrecognized company name" });
-      return buildResponse(400, { message: "Unrecognized company name" });
+      return buildResponse(400, { message: "Unrecognized company name" }, origin);
     }
 
     logger.info({ message: "Determined company name", company_name });
@@ -70,10 +71,11 @@ export const handler = async (
 
     await sendEmail([order], company_name, email);
 
-    return buildResponse(200, { order_id });
+    return buildResponse(200, { order_id }, origin);
   } catch (e) {
     logger.error(e);
-    return buildResponse(500, { message: "Failed to create order" });
+    const origin = event.headers?.origin || event.headers?.Origin || "";
+    return buildResponse(500, { message: "Failed to create order" }, origin);
   }
 };
 

@@ -8,6 +8,7 @@ export const handler = async (
   event: APIGatewayEvent
 ): Promise<APIGatewayProxyResult> => {
   try {
+    const origin = event.headers?.origin || event.headers?.Origin || "";
     const body = JSON.parse(event.body) || "{}";
     logger.info({ message: "Received body", body });
 
@@ -16,7 +17,7 @@ export const handler = async (
     if (!email || !created_at) {
       return buildResponse(400, {
         message: "Email and created_at are required",
-      });
+      }, origin);
     }
 
     let order = await dynamo.getOrder(email, created_at, "orders");
@@ -26,14 +27,15 @@ export const handler = async (
     }
 
     if (!order) {
-      return buildResponse(404, { message: "Order not found" });
+      return buildResponse(404, { message: "Order not found" }, origin);
     }
 
     await sendEmail([order], order.company_name, order.email);
 
-    return buildResponse(200, { message: "Email resent successfully" });
+    return buildResponse(200, { message: "Email resent successfully" }, origin);
   } catch (e) {
     logger.error(e);
-    return buildResponse(500, { message: "Failed to resend email" });
+    const origin = event.headers?.origin || event.headers?.Origin || "";
+    return buildResponse(500, { message: "Failed to resend email" }, origin);
   }
 };

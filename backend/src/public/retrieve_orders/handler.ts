@@ -6,11 +6,12 @@ const dynamo = new Dynamo();
 
 export const handler = async (event): Promise<APIGatewayProxyResult> => {
   try {
+    const origin = event.headers?.origin || event.headers?.Origin || "";
     const body = JSON.parse(event.body) || "{}";
     const company_name = body.companyName;
 
     if (!company_name) {
-      return buildResponse(400, { message: "Missing companyName" });
+      return buildResponse(400, { message: "Missing companyName" }, origin);
     }
 
     const currentOrders = await dynamo.getCurrentOrders(company_name);
@@ -21,9 +22,10 @@ export const handler = async (event): Promise<APIGatewayProxyResult> => {
 
     return buildResponse(200, {
       orders: [...currentOrders, ...archivedOrders],
-    });
+    }, origin);
   } catch (e) {
     logger.error(e);
-    return buildResponse(500, { message: "Failed to retrieve orders" });
+    const origin = event.headers?.origin || event.headers?.Origin || "";
+    return buildResponse(500, { message: "Failed to retrieve orders" }, origin);
   }
 };

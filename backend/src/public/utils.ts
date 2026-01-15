@@ -7,16 +7,36 @@ import { APIGatewayProxyResult } from "aws-lambda";
 
 export const logger = pino();
 
+const ALLOWED_ORIGINS = [
+  "http://localhost:3000",
+  "https://gpc81.com",
+  "https://cannonemployeestore.com",
+  "https://gpstivers.com",
+  "https://gptameron.com",
+];
+
 export const buildResponse = (
   statusCode: number,
-  body: any
+  body: any,
+  origin?: string
 ): APIGatewayProxyResult => {
+  // Determine which origin to allow based on the provided origin
+  let allowedOrigin = ALLOWED_ORIGINS[0]; // Default to first allowed origin
+
+  if (origin) {
+    // Check if the provided origin is in the allowed list
+    const normalizedOrigin = origin.trim();
+    if (ALLOWED_ORIGINS.includes(normalizedOrigin)) {
+      allowedOrigin = normalizedOrigin;
+    }
+  }
+
   return {
     statusCode,
     body: JSON.stringify(body),
     headers: {
       "Content-Type": "application/json",
-      "Access-Control-Allow-Origin": "http://localhost:3000,https://gpc81.com,https://cannonemployeestore.com,https://gpstivers.com,https://gptameron.com",
+      "Access-Control-Allow-Origin": allowedOrigin,
       "Access-Control-Allow-Credentials": true,
     },
   };

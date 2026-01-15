@@ -23,11 +23,12 @@ export const handler = async (
   event: APIGatewayEvent
 ): Promise<APIGatewayProxyResult> => {
   try {
+    const origin = event.headers?.origin || event.headers?.Origin || "";
     const body = JSON.parse(event.body) || "{}";
     logger.info({ message: "Received body", body });
 
     if (!body.email.includes("@")) {
-      return buildResponse(400, { message: "Please use a valid email" });
+      return buildResponse(400, { message: "Please use a valid email" }, origin);
     }
 
     const email = body.email;
@@ -42,7 +43,7 @@ export const handler = async (
       return buildResponse(400, {
         message:
           "Unrecognized company name. Please contact your account representative.",
-      });
+      }, origin);
     }
 
     const store = getStoreCode(company_name, body.store);
@@ -53,7 +54,7 @@ export const handler = async (
       return buildResponse(400, {
         message:
           "Unrecognized store. Please contact your account representative.",
-      });
+      }, origin);
     }
 
     const cart = construct_cart(body.cart, customer_po, company_name);
@@ -72,7 +73,7 @@ export const handler = async (
         logger.warn("All Tameron orders should have bypassPaypal as true");
         return buildResponse(400, {
           message: "Must enter code to place order",
-        });
+        }, origin);
       }
 
       logger.info({ message: "Tameron order, sending immediately" });
@@ -98,7 +99,7 @@ export const handler = async (
         "archived_orders"
       );
       await sendEmail([order], "Tameron", email);
-      return buildResponse(200, {});
+      return buildResponse(200, {}, origin);
     }
 
     if (body.bypassPaypal) {
@@ -126,7 +127,7 @@ export const handler = async (
         "archived_orders"
       );
       await sendEmail([order], company_name, email);
-      return buildResponse(200, {});
+      return buildResponse(200, {}, origin);
     }
 
     // bypassPaypal = false
@@ -149,10 +150,11 @@ export const handler = async (
       "orders"
     );
 
-    return buildResponse(200, { order_id });
+    return buildResponse(200, { order_id }, origin);
   } catch (e) {
     logger.error(e);
-    return buildResponse(500, { message: "Failed to create order" });
+    const origin = event.headers?.origin || event.headers?.Origin || "";
+    return buildResponse(500, { message: "Failed to create order" }, origin);
   }
 };
 
