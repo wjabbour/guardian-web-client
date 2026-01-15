@@ -3,7 +3,7 @@ import dayjs from "dayjs";
 import { SendRawEmailCommand, SESClient } from "@aws-sdk/client-ses";
 import { getStore, getConfigValue } from "guardian-common";
 import { getCatalog } from "guardian-common";
-import { APIGatewayProxyResult } from "aws-lambda";
+import { APIGatewayProxyResult, APIGatewayEvent } from "aws-lambda";
 
 export const logger = pino();
 
@@ -14,6 +14,36 @@ const ALLOWED_ORIGINS = [
   "https://gpstivers.com",
   "https://gptameron.com",
 ];
+
+export const handleOptionsRequest = (
+  event: APIGatewayEvent
+): APIGatewayProxyResult | null => {
+  if (event.httpMethod !== "OPTIONS") {
+    return null;
+  }
+
+  const origin = event.headers?.origin || event.headers?.Origin || "";
+  let allowedOrigin = ALLOWED_ORIGINS[0]; // Default to first allowed origin
+
+  if (origin) {
+    const normalizedOrigin = origin.trim();
+    if (ALLOWED_ORIGINS.includes(normalizedOrigin)) {
+      allowedOrigin = normalizedOrigin;
+    }
+  }
+
+  return {
+    statusCode: 200,
+    body: "",
+    headers: {
+      "Access-Control-Allow-Origin": allowedOrigin,
+      "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, OPTIONS",
+      "Access-Control-Allow-Headers": "Content-Type, Authorization, X-Requested-With",
+      "Access-Control-Allow-Credentials": "true",
+      "Access-Control-Max-Age": "86400", // 24 hours
+    },
+  };
+};
 
 export const buildResponse = (
   statusCode: number,

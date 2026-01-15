@@ -1,10 +1,18 @@
-import { APIGatewayProxyResult } from "aws-lambda";
-import { logger, buildResponse } from "../utils";
+import { APIGatewayProxyResult, APIGatewayEvent } from "aws-lambda";
+import { logger, buildResponse, handleOptionsRequest } from "../utils";
 import { Dynamo } from "./dynamo";
 
 const dynamo = new Dynamo();
 
-export const handler = async (event?): Promise<APIGatewayProxyResult> => {
+export const handler = async (event?: APIGatewayEvent): Promise<APIGatewayProxyResult> => {
+  // Handle OPTIONS preflight request
+  if (event) {
+    const optionsResponse = handleOptionsRequest(event);
+    if (optionsResponse) {
+      return optionsResponse;
+    }
+  }
+
   try {
     const origin = event?.headers?.origin || event?.headers?.Origin || "";
     /*

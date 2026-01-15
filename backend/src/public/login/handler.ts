@@ -1,5 +1,5 @@
 import { APIGatewayProxyResult, APIGatewayEvent } from "aws-lambda";
-import { logger, buildResponse } from "../utils";
+import { logger, buildResponse, handleOptionsRequest } from "../utils";
 import {
   SecretsManagerClient,
   GetSecretValueCommand,
@@ -19,6 +19,12 @@ function generateAdminToken(): string {
 export const handler = async (
   event: APIGatewayEvent
 ): Promise<APIGatewayProxyResult> => {
+  // Handle OPTIONS preflight request
+  const optionsResponse = handleOptionsRequest(event);
+  if (optionsResponse) {
+    return optionsResponse;
+  }
+
   try {
     const origin = event.headers?.origin || event.headers?.Origin || "";
     const body = JSON.parse(event.body) || "{}";

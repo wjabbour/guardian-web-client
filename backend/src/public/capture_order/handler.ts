@@ -1,5 +1,5 @@
 import { APIGatewayProxyResult, APIGatewayEvent } from "aws-lambda";
-import { logger, sendEmail, buildResponse } from "../utils";
+import { logger, sendEmail, buildResponse, handleOptionsRequest } from "../utils";
 import axios from "axios";
 import qs from "qs";
 import {
@@ -16,6 +16,12 @@ const command = new GetSecretValueCommand({
 export const handler = async (
   event: APIGatewayEvent
 ): Promise<APIGatewayProxyResult> => {
+  // Handle OPTIONS preflight request
+  const optionsResponse = handleOptionsRequest(event);
+  if (optionsResponse) {
+    return optionsResponse;
+  }
+
   try {
     const origin = event.headers?.origin || event.headers?.Origin || "";
     logger.info({ message: "Retrieving credential" });

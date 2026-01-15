@@ -4,6 +4,7 @@ import {
   buildResponse,
   getCatalogItemDescription,
   sendEmail,
+  handleOptionsRequest,
 } from "../utils";
 import axios from "axios";
 import qs from "qs";
@@ -22,6 +23,12 @@ const command = new GetSecretValueCommand({
 export const handler = async (
   event: APIGatewayEvent
 ): Promise<APIGatewayProxyResult> => {
+  // Handle OPTIONS preflight request
+  const optionsResponse = handleOptionsRequest(event);
+  if (optionsResponse) {
+    return optionsResponse;
+  }
+
   try {
     const origin = event.headers?.origin || event.headers?.Origin || "";
     const cookies = event.headers?.Cookie || event.headers?.cookie || "";
