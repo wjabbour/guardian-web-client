@@ -1,5 +1,5 @@
 {
-  "name": "validate_password",
+  "name": "login",
   "version": "1.0.0",
   "scripts": {
     "build": "esbuild --platform=node --bundle --minify --outdir=build handler.ts"

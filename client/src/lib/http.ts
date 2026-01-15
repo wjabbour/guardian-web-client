@@ -96,16 +96,17 @@ export async function delete_order(email, created_at) {
   }
 }
 
-export async function validate_password(password) {
+export async function login(password) {
   const body = { password };
 
   try {
     const response = await axios.post(
-      `${getWebConfigValue("server_hostname")}/v1/validate-password`,
-      body
+      `${getWebConfigValue("server_hostname")}/v1/login`,
+      body,
+      { withCredentials: true }
     );
     return { success: { data: response.data }, error: null };
   } catch (e) {
-    return handleError(e, "Failed to validate password.");
+    return handleError(e, "Failed to login.");
   }
 }

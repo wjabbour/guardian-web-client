@@ -14,7 +14,7 @@ import { ColorOption, SizeOption } from "../../lib/constants";
 import { getDomainAwarePath } from "../../lib/utils";
 import { CartItem } from "guardian-common";
 import PasswordEntryDialog from "../PasswordEntryDialog/PasswordEntryDialog";
-import { validate_password } from "../../lib/http";
+import { login } from "../../lib/http";
 
 interface Cart {
   [key: string]: CartItem;
@@ -81,7 +81,7 @@ export default function CartDrawer({ cart, setCart }: Props) {
 
   const handlePasswordSubmit = async (password: string) => {
     try {
-      const response = await validate_password(password);
+      const response = await login(password);
 
       if (response.success) {
         navigate(getDomainAwarePath("/admin"));

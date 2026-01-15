@@ -134,7 +134,7 @@ export default function OrdersTable() {
   );
 
   const handlePasswordChange = async (password) => {
-    const result = await http.validate_password(password);
+    const result = await http.login(password);
     if (result.success) {
       setIsAdmin(true);
       setIsModalOpen(false);

@@ -17,7 +17,7 @@ resource "aws_api_gateway_deployment" "this" {
       module.update_historical_order.lambda_function_source_code_hash,
       module.resend_order_email.lambda_function_source_code_hash,
       module.delete_order.lambda_function_source_code_hash,
-      module.validate_password.lambda_function_source_code_hash
+      module.login.lambda_function_source_code_hash
     ]))
   }
 
@@ -81,10 +81,10 @@ module "delete_order_route" {
   api_gateway = aws_api_gateway_rest_api.this
 }
 
-module "validate_password_route" {
+module "login_route" {
   source      = "./api_gateway_route"
   http_method = "POST"
-  path_part   = "validate-password"
-  uri         = module.validate_password.lambda_function_invoke_arn
+  path_part   = "login"
+  uri         = module.login.lambda_function_invoke_arn
   api_gateway = aws_api_gateway_rest_api.this
 }
