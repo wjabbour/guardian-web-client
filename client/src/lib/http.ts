@@ -61,7 +61,8 @@ export async function update_historical_order(email, created_at, cart) {
   try {
     const response = await axios.post(
       `${getWebConfigValue("server_hostname")}/v1/update-historical-order`,
-      body
+      body,
+      { withCredentials: true }
     );
     return { success: { data: response.data }, error: null };
   } catch (e) {
@@ -75,7 +76,8 @@ export async function resend_order_email(email, created_at) {
   try {
     const response = await axios.post(
       `${getWebConfigValue("server_hostname")}/v1/resend-order-email`,
-      body
+      body,
+      { withCredentials: true }
     );
     return { success: { data: response.data }, error: null };
   } catch (e) {
@@ -89,7 +91,8 @@ export async function delete_order(email, created_at) {
   try {
     const response = await axios.post(
       `${getWebConfigValue("server_hostname")}/v1/delete-order`,
-      body
+      body,
+      { withCredentials: true }
     );
     return { success: { data: response.data }, error: null };
   } catch (e) {

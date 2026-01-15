@@ -10,6 +10,15 @@ export const handler = async (
 ): Promise<APIGatewayProxyResult> => {
   try {
     const origin = event.headers?.origin || event.headers?.Origin || "";
+    const cookies = event.headers?.Cookie || event.headers?.cookie || "";
+    const isAdmin = cookies.includes("admin_session=");
+
+    if (!isAdmin) {
+      return buildResponse(401, {
+        message: "Unauthorized: Admin access required",
+      }, origin);
+    }
+
     const body = JSON.parse(event.body) || "{}";
     logger.info({ message: "Received body", body });
 
