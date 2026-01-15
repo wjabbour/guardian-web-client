@@ -12,7 +12,7 @@ import { getRoutePrefix } from "guardian-common";
 import Gpc81Navbar from "./components/Gpc81Navbar/Gpc81Navbar";
 import { getMe } from "./lib/http";
 
-export const UserContext = createContext({ isLoggedIn: false, role: "user" });
+export const UserContext = createContext({ role: "user" });
 const CartContext = createContext({});
 
 export default function Root() {
@@ -20,7 +20,7 @@ export default function Root() {
   const navigate = useNavigate();
   const useRouting = useNextGenRouting() && window.location.pathname === "/";
   const [cart, set_cart] = useState(rehydrate());
-  const [user, setUser] = useState({ isLoggedIn: false, role: "user" });
+  const [user, setUser] = useState({ role: "user" });
   const [isModalOpen, setModalOpen] = useState(false);
 
   function rehydrate() {
@@ -78,7 +78,7 @@ export default function Root() {
             const result = await getMe();
             if (result.success && result.success.data) {
               const role = result.success.data.role || "user";
-              setUser({ isLoggedIn: role === "admin", role });
+              setUser({ role });
             }
             setModalOpen(false);
             navigate(prefix);
