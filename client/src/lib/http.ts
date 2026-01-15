@@ -19,7 +19,8 @@ export async function create_order(order) {
   try {
     const response = await axios.post(
       `${getWebConfigValue("server_hostname")}/v1/create-order`,
-      body
+      body,
+      { withCredentials: true }
     );
     return { success: { data: response.data }, error: null };
   } catch (e) {

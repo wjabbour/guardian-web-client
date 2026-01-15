@@ -24,8 +24,10 @@ export const handler = async (
 ): Promise<APIGatewayProxyResult> => {
   try {
     const origin = event.headers?.origin || event.headers?.Origin || "";
+    const cookies = event.headers?.Cookie || event.headers?.cookie || "";
+    const isAdmin = cookies.includes("admin_session=");
     const body = JSON.parse(event.body) || "{}";
-    logger.info({ message: "Received body", body });
+    logger.info({ message: "Received body", body, isAdmin });
 
     if (!body.email.includes("@")) {
       return buildResponse(400, { message: "Please use a valid email" }, origin);
@@ -98,7 +100,7 @@ export const handler = async (
         created_at,
         "archived_orders"
       );
-      await sendEmail([order], "Tameron", email);
+      await sendEmail([order], "Tameron", email, isAdmin);
       return buildResponse(200, {}, origin);
     }
 
@@ -126,7 +128,7 @@ export const handler = async (
         created_at,
         "archived_orders"
       );
-      await sendEmail([order], company_name, email);
+      await sendEmail([order], company_name, email, isAdmin);
       return buildResponse(200, {}, origin);
     }
 

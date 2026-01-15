@@ -142,20 +142,31 @@ function constructEmail(recipient: string, companyName: string, csv: string) {
 /*
   recipient is an optional email to also send the order to. This is used
   for Cannon to send the user who just placed the order an order email
+  adminOnly: if true, only send to recipient and skip config email recipients
 */
 export async function sendEmail(
   orders: {},
   companyName: string,
-  recipient?: string
+  recipient?: string,
+  adminOnly?: boolean
 ) {
   logger.info("Creating orders csv");
   const csv = createOrderCsv(orders);
   logger.info(`Created orders csv: ${csv}`);
   const ses = new SESClient({});
-  const recipients: string[] = getConfigValue("email_recipients", companyName);
+  const recipients: string[] = [];
 
-  if (recipient) {
-    recipients.push(recipient);
+  if (adminOnly) {
+    // Admin mode: only send to the recipient (order email), not config emails
+    if (recipient) {
+      recipients.push(recipient);
+    }
+  } else {
+    // Normal mode: send to config recipients and optionally add recipient
+    recipients.push(...getConfigValue("email_recipients", companyName));
+    if (recipient) {
+      recipients.push(recipient);
+    }
   }
 
   for (const recipient of recipients) {
