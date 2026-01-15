@@ -17,7 +17,8 @@ resource "aws_api_gateway_deployment" "this" {
       module.update_historical_order.lambda_function_source_code_hash,
       module.resend_order_email.lambda_function_source_code_hash,
       module.delete_order.lambda_function_source_code_hash,
-      module.login.lambda_function_source_code_hash
+      module.login.lambda_function_source_code_hash,
+      module.me.lambda_function_source_code_hash
     ]))
   }
 
@@ -86,5 +87,13 @@ module "login_route" {
   http_method = "POST"
   path_part   = "login"
   uri         = module.login.lambda_function_invoke_arn
+  api_gateway = aws_api_gateway_rest_api.this
+}
+
+module "me_route" {
+  source      = "./api_gateway_route"
+  http_method = "GET"
+  path_part   = "me"
+  uri         = module.me.lambda_function_invoke_arn
   api_gateway = aws_api_gateway_rest_api.this
 }

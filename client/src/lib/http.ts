@@ -110,3 +110,15 @@ export async function login(password) {
     return handleError(e, "Failed to login.");
   }
 }
+
+export async function getMe() {
+  try {
+    const response = await axios.get(
+      `${getWebConfigValue("server_hostname")}/v1/me`,
+      { withCredentials: true }
+    );
+    return { success: { data: response.data }, error: null };
+  } catch (e) {
+    return handleError(e, "Failed to get user info.");
+  }
+}

@@ -5,13 +5,14 @@ import Box from "@mui/material/Box";
 import Backdrop from "@mui/material/Backdrop";
 import Navbar from "../components/Navbar/Navbar";
 import Footer from "../components/Footer/Footer";
-import { useState, createContext } from "react";
+import { useState, createContext, useEffect } from "react";
 import PasswordEntryDialog from "../components/PasswordEntryDialog/PasswordEntryDialog";
 import { useNextGenRouting } from "../hooks/useNextGenRouting";
 import { getRoutePrefix } from "guardian-common";
 import Gpc81Navbar from "../components/Gpc81Navbar/Gpc81Navbar";
+import { getMe } from "../lib/http";
 
-export const UserContext = createContext({ isLoggedIn: false });
+export const UserContext = createContext({ isLoggedIn: false, role: "user" });
 const CartContext = createContext({});
 
 export default function Root() {
@@ -19,7 +20,7 @@ export default function Root() {
   const navigate = useNavigate();
   const useRouting = useNextGenRouting() && window.location.pathname === "/";
   const [cart, set_cart] = useState(rehydrate());
-  const [user, setUser] = useState({ isLoggedIn: false });
+  const [user, setUser] = useState({ isLoggedIn: false, role: "user" });
   const [isModalOpen, setModalOpen] = useState(false);
 
   function rehydrate() {
@@ -70,10 +71,15 @@ export default function Root() {
       <PasswordEntryDialog
         isModalOpen={isModalOpen}
         setIsModalOpen={setModalOpen}
-        onSubmit={(password) => {
+        onSubmit={async (password) => {
           const prefix = getRoutePrefix(password);
           if (prefix) {
-            setUser({ isLoggedIn: true });
+            // Refresh user role after login
+            const result = await getMe();
+            if (result.success && result.success.data) {
+              const role = result.success.data.role || "user";
+              setUser({ isLoggedIn: role === "admin", role });
+            }
             setModalOpen(false);
             navigate(prefix);
           }

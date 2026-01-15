@@ -136,8 +136,8 @@ export default function OrdersTable() {
   const handlePasswordChange = async (password) => {
     const result = await http.login(password);
     if (result.success) {
-      setIsAdmin(true);
-      setIsModalOpen(false);
+      // Refresh the page to update user context with new role
+      window.location.reload();
     } else {
       setSnackbar({
         open: true,

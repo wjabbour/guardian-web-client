@@ -84,9 +84,8 @@ export default function CartDrawer({ cart, setCart }: Props) {
       const response = await login(password);
 
       if (response.success) {
-        navigate(getDomainAwarePath("/admin"));
-        handleDialogClose();
-        setIsOpen(false);
+        // Refresh the page to update user context with new role
+        window.location.reload();
       } else {
         setSnackbarMessage("Invalid password");
         setSnackbarSeverity("error");
