@@ -2317,7 +2317,7 @@ export const catalog = [
   {
     code: "MATFME-284-515528A",
     name: "Vinyl Document Folder",
-    fullname: "Royal Blue Guesseted Vinyl doc Folder w/white imprint",
+    fullname: "Royal Blue Guesseted Vinyl Doc Folder w/white imprint",
     colors: ["Royal Blue"],
     type: "customs",
     default_color: "Royal Blue", 
