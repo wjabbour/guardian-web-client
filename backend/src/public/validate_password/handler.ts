@@ -4,11 +4,17 @@ import {
   SecretsManagerClient,
   GetSecretValueCommand,
 } from "@aws-sdk/client-secrets-manager";
+import { randomBytes } from "crypto";
 
 const sm = new SecretsManagerClient({ region: "us-east-1" });
 const command = new GetSecretValueCommand({
   SecretId: "admin_password",
 });
+
+// Generate a secure random token for the admin session
+function generateAdminToken(): string {
+  return randomBytes(32).toString("hex");
+}
 
 export const handler = async (
   event: APIGatewayEvent
@@ -27,7 +33,31 @@ export const handler = async (
     const storedPassword = JSON.parse(secret.SecretString).password;
 
     if (password === storedPassword) {
-      return buildResponse(200, { message: "Password is valid" });
+      // Generate a secure admin token
+      const adminToken = generateAdminToken();
+
+      // Set cookie expiration to 24 hours from now
+      const expires = new Date();
+      expires.setTime(expires.getTime() + 24 * 60 * 60 * 1000);
+
+      // Check if request is from localhost
+      const origin = event.headers?.origin || event.headers?.Origin || "";
+      const host = event.headers?.host || event.headers?.Host || "";
+      const isLocalhost =
+        origin.includes("localhost") ||
+        origin.includes("127.0.0.1") ||
+        host.includes("localhost") ||
+        host.includes("127.0.0.1");
+
+      // Build response with http-only cookie
+      const response = buildResponse(200, { message: "Password is valid" });
+
+      // Set the http-only admin cookie
+      // HttpOnly prevents JavaScript access, Secure ensures HTTPS only (skip for localhost), SameSite prevents CSRF
+      const secureFlag = isLocalhost ? "" : "Secure; ";
+      response.headers["Set-Cookie"] = `admin_session=${adminToken}; HttpOnly; ${secureFlag}SameSite=Strict; Path=/; Expires=${expires.toUTCString()}`;
+
+      return response;
     } else {
       return buildResponse(401, { message: "Incorrect password" });
     }
