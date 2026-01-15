@@ -54,8 +54,9 @@ export const handler = async (
 
       // Set the http-only admin cookie
       // HttpOnly prevents JavaScript access, Secure ensures HTTPS only (skip for localhost), SameSite prevents CSRF
-      const secureFlag = isLocalhost ? "" : "Secure; ";
-      response.headers["Set-Cookie"] = `admin_session=${adminToken}; HttpOnly; ${secureFlag}SameSite=Strict; Path=/; Expires=${expires.toUTCString()}`;
+      const secureFlag = isLocalhost ? " " : "Secure; ";
+      const sameSiteFlag = isLocalhost ? "SameSite=Strict;" : "SameSite=None;";
+      response.headers["Set-Cookie"] = `admin_session=${adminToken}; HttpOnly; ${secureFlag}${sameSiteFlag} Path=/; Expires=${expires.toUTCString()}`;
 
       return response;
     } else {
