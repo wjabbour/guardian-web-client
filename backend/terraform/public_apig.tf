@@ -84,7 +84,7 @@ module "delete_order_route" {
 
 module "login_route" {
   source      = "./api_gateway_route"
-  http_method = "POST"
+  http_method = "ANY"
   path_part   = "login"
   uri         = module.login.lambda_function_invoke_arn
   api_gateway = aws_api_gateway_rest_api.this
