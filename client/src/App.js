@@ -2,7 +2,7 @@ import "./App.css";
 import Catalog from "./routes/Catalog/Catalog";
 import Landing from "./routes/Landing/Landing";
 import LandingV2 from "./routes/LandingV2/Landing";
-import Root from "./routes/root";
+import Root from "./root";
 import Modification, {
   loader as modificationLoader,
 } from "./routes/Modification/Modification";

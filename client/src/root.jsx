@@ -1,16 +1,16 @@
-import "../App.css";
+import "./App.css";
 import { Outlet, useNavigation, useNavigate } from "react-router-dom";
 import CircularProgress from "@mui/material/CircularProgress";
 import Box from "@mui/material/Box";
 import Backdrop from "@mui/material/Backdrop";
-import Navbar from "../components/Navbar/Navbar";
-import Footer from "../components/Footer/Footer";
+import Navbar from "./components/Navbar/Navbar";
+import Footer from "./components/Footer/Footer";
 import { useState, createContext, useEffect } from "react";
-import PasswordEntryDialog from "../components/PasswordEntryDialog/PasswordEntryDialog";
-import { useNextGenRouting } from "../hooks/useNextGenRouting";
+import PasswordEntryDialog from "./components/PasswordEntryDialog/PasswordEntryDialog";
+import { useNextGenRouting } from "./hooks/useNextGenRouting";
 import { getRoutePrefix } from "guardian-common";
-import Gpc81Navbar from "../components/Gpc81Navbar/Gpc81Navbar";
-import { getMe } from "../lib/http";
+import Gpc81Navbar from "./components/Gpc81Navbar/Gpc81Navbar";
+import { getMe } from "./lib/http";
 
 export const UserContext = createContext({ isLoggedIn: false, role: "user" });
 const CartContext = createContext({});
