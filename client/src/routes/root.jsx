@@ -9,7 +9,6 @@ import { useState, createContext } from "react";
 import PasswordEntryDialog from "../components/PasswordEntryDialog/PasswordEntryDialog";
 import { useNextGenRouting } from "../hooks/useNextGenRouting";
 import { getRoutePrefix } from "guardian-common";
-
 import Gpc81Navbar from "../components/Gpc81Navbar/Gpc81Navbar";
 
 export const UserContext = createContext({ isLoggedIn: false });

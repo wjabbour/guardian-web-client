@@ -3,12 +3,17 @@ import Drawer from "@mui/material/Drawer";
 import { useNavigate } from "react-router-dom";
 import IconButton from "@mui/material/IconButton";
 import Badge from "@mui/material/Badge";
+import Tooltip from "@mui/material/Tooltip";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import CloseIcon from "@mui/icons-material/Close";
+import Snackbar from "@mui/material/Snackbar";
+import Alert from "@mui/material/Alert";
 import DeleteIcon from "@mui/icons-material/Delete";
+import PersonIcon from "@mui/icons-material/Person";
 import { ColorOption, SizeOption } from "../../lib/constants";
 import { getDomainAwarePath } from "../../lib/utils";
 import { CartItem } from "guardian-common";
+import PasswordEntryDialog from "../PasswordEntryDialog/PasswordEntryDialog";
 
 interface Cart {
   [key: string]: CartItem;
@@ -22,6 +27,10 @@ interface Props {
 export default function CartDrawer({ cart, setCart }: Props) {
   const navigate = useNavigate();
   const [isOpen, setIsOpen] = useState(false);
+  const [isAdminDialogOpen, setIsAdminDialogOpen] = useState(false);
+  const [snackbarOpen, setSnackbarOpen] = useState(false);
+  const [snackbarMessage, setSnackbarMessage] = useState("");
+  const [snackbarSeverity, setSnackbarSeverity] = useState<"success" | "error">("success");
 
   // Calculate total items for the badge count
   const cartItemCount: number = Object.values(cart || {}).reduce(
@@ -49,6 +58,51 @@ export default function CartDrawer({ cart, setCart }: Props) {
     // Update Storage and State
     sessionStorage.setItem("cart", JSON.stringify(newCart));
     setCart(newCart);
+  };
+
+  const handleAdminLoginClick = () => {
+    setIsAdminDialogOpen(true);
+  };
+
+  const handleDialogClose = () => {
+    setIsAdminDialogOpen(false);
+  };
+
+  const handleSnackbarClose = (
+    event?: React.SyntheticEvent | Event,
+    reason?: string
+  ) => {
+    if (reason === "clickaway") {
+      return;
+    }
+    setSnackbarOpen(false);
+  };
+
+  const handlePasswordSubmit = async (password: string) => {
+    try {
+      const response = await fetch(getDomainAwarePath("/validate_password"), {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ password }),
+      });
+
+      if (response.ok) {
+        navigate(getDomainAwarePath("/admin"));
+        handleDialogClose();
+        setIsOpen(false);
+      } else {
+        setSnackbarMessage("Invalid password");
+        setSnackbarSeverity("error");
+        setSnackbarOpen(true);
+      }
+    } catch (error) {
+      console.error("Error validating password:", error);
+      setSnackbarMessage("Error validating password");
+      setSnackbarSeverity("error");
+      setSnackbarOpen(true);
+    }
   };
 
   return (
@@ -173,8 +227,38 @@ export default function CartDrawer({ cart, setCart }: Props) {
               </button>
             </div>
           )}
+
+          <div className="flex justify-center pt-4 border-t-2 border-gray-200">
+            <Tooltip title="Admin Login">
+              <IconButton
+                onClick={handleAdminLoginClick}
+                aria-label="admin-login"
+                className="mr-1"
+              >
+                <PersonIcon className="text-gray-700" fontSize="medium" />
+              </IconButton>
+            </Tooltip>
+          </div>
         </div>
       </Drawer>
+      <PasswordEntryDialog
+        isModalOpen={isAdminDialogOpen}
+        setIsModalOpen={handleDialogClose}
+        onPasswordChange={handlePasswordSubmit}
+      />
+      <Snackbar
+        open={snackbarOpen}
+        autoHideDuration={6000}
+        onClose={handleSnackbarClose}
+      >
+        <Alert
+          onClose={handleSnackbarClose}
+          severity={snackbarSeverity}
+          sx={{ width: "100%" }}
+        >
+          {snackbarMessage}
+        </Alert>
+      </Snackbar>
     </>
   );
 }
