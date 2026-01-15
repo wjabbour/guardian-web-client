@@ -16,7 +16,7 @@ export const buildResponse = (
     body: JSON.stringify(body),
     headers: {
       "Content-Type": "application/json",
-      "Access-Control-Allow-Origin": "localhost:3000",
+      "Access-Control-Allow-Origin": "localhost:3000,gpc81.com,cannonemployeestore.com,gpstivers.com,gptameron.com",
       "Access-Control-Allow-Credentials": true,
     },
   };
