@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 import Drawer from "@mui/material/Drawer";
 import { useNavigate } from "react-router-dom";
 import IconButton from "@mui/material/IconButton";
@@ -10,11 +10,13 @@ import Snackbar from "@mui/material/Snackbar";
 import Alert from "@mui/material/Alert";
 import DeleteIcon from "@mui/icons-material/Delete";
 import PersonIcon from "@mui/icons-material/Person";
+import AdminPanelSettingsIcon from "@mui/icons-material/AdminPanelSettings";
 import { ColorOption, SizeOption } from "../../lib/constants";
 import { getDomainAwarePath } from "../../lib/utils";
 import { CartItem } from "guardian-common";
 import PasswordEntryDialog from "../PasswordEntryDialog/PasswordEntryDialog";
 import { login } from "../../lib/http";
+import { UserContext } from "../../root";
 
 interface Cart {
   [key: string]: CartItem;
@@ -27,6 +29,8 @@ interface Props {
 
 export default function CartDrawer({ cart, setCart }: Props) {
   const navigate = useNavigate();
+  const userContext = useContext(UserContext);
+  const isAdmin = userContext?.role === "admin";
   const [isOpen, setIsOpen] = useState(false);
   const [isAdminDialogOpen, setIsAdminDialogOpen] = useState(false);
   const [snackbarOpen, setSnackbarOpen] = useState(false);
@@ -223,13 +227,17 @@ export default function CartDrawer({ cart, setCart }: Props) {
           )}
 
           <div className="flex justify-center pt-4 border-t-2 border-gray-200">
-            <Tooltip title="Admin Login">
+            <Tooltip title={isAdmin ? "Admin Panel" : "Admin Login"}>
               <IconButton
                 onClick={handleAdminLoginClick}
                 aria-label="admin-login"
                 className="mr-1"
               >
-                <PersonIcon className="text-gray-700" fontSize="medium" />
+                {isAdmin ? (
+                  <AdminPanelSettingsIcon className="text-gray-700" fontSize="medium" />
+                ) : (
+                  <PersonIcon className="text-gray-700" fontSize="medium" />
+                )}
               </IconButton>
             </Tooltip>
           </div>
