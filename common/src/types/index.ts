@@ -1,30 +1,75 @@
+/**
+ * Pricing structure for a specific size.
+ * Keys in the discount object represent quantity thresholds, values represent the price at that threshold.
+ * Discounts are assumed to decrease as quantity increases.
+ */
+export interface SizePricing {
+  price: number;
+  discount?: {
+    [quantity: number]: number; // quantity threshold -> price
+  };
+}
+
+/**
+ * Pricing structure for catalog items.
+ * Keys can be "base" (for items without sizes) or size names (e.g., "Small", "Medium", "OSFA").
+ */
+export interface Pricing {
+  [size: string]: SizePricing;
+}
+
 export interface CatalogItem {
   code: string;
   name: string;
   fullname: string;
-  colors: string[];
-  sizes: {};
+  colors?: string[]; // Optional - some items (like service items) don't have colors
+  sizes?: string[]; // Optional array of size names (e.g., ["Small", "Medium", "Large"] or ["OSFA"])
   default_color: string;
   type:
-    | "mens"
-    | "womens"
-    | "hat"
-    | "accessory"
-    | "customs"
-    | "office"
-    | "sales"
-    | "detail"
-    | "bodyshop"
-    | "parts"
-    | "tshirts"
-    | "service";
-
-  halfColors?: string[]; // C112 is capable of being two-colored. We need this field to present specially colored divs for the color selector for those colors
-  // some items are only purchasble by Service and Parts counter employees only
+  | "mens"
+  | "womens"
+  | "hat"
+  | "accessory"
+  | "customs"
+  | "office"
+  | "sales"
+  | "detail"
+  | "bodyshop"
+  | "parts"
+  | "tshirts"
+  | "service";
+  /**
+   * Pricing structure for the item.
+   * Keys are size names or "base" for items without sizes.
+   * Each size can have a base price and optional quantity-based discounts.
+   */
+  pricing: Pricing;
+  /**
+   * Sub-category of the item (e.g., "tshirt").
+   * Used to determine which embroideries/logos are available on the modification page.
+   */
+  sub_category?: string;
+  /**
+   * Product description text displayed on the modification page.
+   * Can use backticks for multi-line formatting.
+   */
+  description?: string;
+  /**
+   * Array of variation options (e.g., year stickers: ["2007", "2008", "2009", ...]).
+   */
+  variations?: string[];
+  /**
+   * Subset of colors that should have their color preview set as a half-colored box.
+   * Currently only used for hats. Each option must contain exactly two colors.
+   */
+  halfColors?: string[];
+  /**
+   * Some items are only purchasable by Service and Parts counter employees only.
+   */
   restricted?: boolean;
   /**
-   * An array of addresses of the stores which are able to order this particular item. If a store is not in this array, then this item
-   * wont be shown when viewing the customs items for that store.
+   * An array of addresses of the stores which are able to order this particular item.
+   * If a store is not in this array, then this item won't be shown when viewing the customs items for that store.
    */
   supportedStores?: string[];
 }
@@ -92,4 +137,9 @@ export interface Order {
   bypass: 0 | 1;
   company_name: string;
   customer_po: string;
+  /**
+   * PayPal transaction ID for orders paid via PayPal.
+   * Only present when paid === 1 and bypass === 0.
+   */
+  transaction_id?: string;
 }
