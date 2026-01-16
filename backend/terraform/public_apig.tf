@@ -19,8 +19,10 @@ resource "aws_api_gateway_deployment" "this" {
       module.resend_order_email.lambda_function_source_code_hash,
       module.delete_order.lambda_function_source_code_hash,
       module.login.lambda_function_source_code_hash,
-      module.me.lambda_function_source_code_hash
+      module.me.lambda_function_source_code_hash,
 
+      aws_api_gateway_integration.login.id,
+      aws_api_gateway_method.login.id
     ]))
   }
 
@@ -99,7 +101,27 @@ module "delete_order_route" {
 
 # --- MANUAL LOGIN ROUTE (Bypassing Module for Pure Proxy) ---
 
+resource "aws_api_gateway_resource" "login" {
+  rest_api_id = aws_api_gateway_rest_api.this.id
+  parent_id   = aws_api_gateway_rest_api.this.root_resource_id
+  path_part   = "login"
+}
 
+resource "aws_api_gateway_method" "login" {
+  rest_api_id   = aws_api_gateway_rest_api.this.id
+  resource_id   = aws_api_gateway_resource.login.id
+  http_method   = "ANY"
+  authorization = "NONE"
+}
+
+resource "aws_api_gateway_integration" "login" {
+  rest_api_id             = aws_api_gateway_rest_api.this.id
+  resource_id             = aws_api_gateway_resource.login.id
+  http_method             = aws_api_gateway_method.login.http_method
+  integration_http_method = "POST" 
+  type                    = "AWS_PROXY"
+  uri                     = module.login.lambda_function_invoke_arn
+}
 
 # --- End Manual Route ---
 
