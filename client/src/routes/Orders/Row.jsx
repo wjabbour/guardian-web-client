@@ -34,8 +34,8 @@ export default function Row({
   const [isDeleting, setIsDeleting] = useState(false);
   const [isDeleteModalOpen, setIsDeleteModalOpen] = useState(false);
 
-  // Logic for the main row column
-  const isPaypal = order.paid === 1 && order.bypass === 0;
+  // Get PayPal transaction ID or N/A
+  const paypalTransactionId = order.transaction_id || "N/A";
 
   const handleItemSave = async (updatedItem, index) => {
     const newItems = [...orderItems];
@@ -126,8 +126,8 @@ export default function Row({
         <TableCell align="center">{`${order.first_name} ${order.last_name}`}</TableCell>
         <TableCell align="center">{storeName}</TableCell>
 
-        {/* NEW MAIN COLUMN HERE */}
-        <TableCell align="center">{isPaypal ? "Yes" : "No"}</TableCell>
+        {/* PayPal Transaction ID */}
+        <TableCell align="center">{paypalTransactionId}</TableCell>
         <TableCell align="right">
           {isAdmin && (
             <>

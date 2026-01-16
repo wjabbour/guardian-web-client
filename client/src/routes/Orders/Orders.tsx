@@ -183,7 +183,7 @@ export default function OrdersTable() {
                 Store
               </TableCell>
               <TableCell align="center" sx={{ fontWeight: "bold" }}>
-                Paid w/ Paypal
+                PayPal Transaction ID
               </TableCell>
               <TableCell />
             </TableRow>
