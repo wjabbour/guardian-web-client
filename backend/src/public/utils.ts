@@ -8,7 +8,7 @@ import { APIGatewayProxyResult, APIGatewayEvent } from "aws-lambda";
 export const logger = pino();
 
 const ALLOWED_ORIGINS = [
-  "http://localhost:3000",
+  "https://localhost:3000",
   "https://gpc81.com",
   "https://cannonemployeestore.com",
   "https://gpstivers.com",
