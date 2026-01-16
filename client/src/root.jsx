@@ -19,16 +19,33 @@ export default function Root() {
   const navigation = useNavigation();
   const navigate = useNavigate();
   const useRouting = useNextGenRouting() && window.location.pathname === "/";
-  const [cart, set_cart] = useState(rehydrate());
-  const [user, setUser] = useState({ role: "user" });
-  const [isModalOpen, setModalOpen] = useState(false);
-
-  function rehydrate() {
+  const [cart, set_cart] = useState(() => {
+    // Rehydrate cart from sessionStorage
     if (sessionStorage.getItem("cart")) {
       return JSON.parse(sessionStorage.getItem("cart"));
     }
     return {};
-  }
+  });
+  const [user, setUser] = useState({ role: "user" });
+  const [isModalOpen, setModalOpen] = useState(false);
+
+  // Rehydrate user context on mount
+  useEffect(() => {
+    async function rehydrateUser() {
+      try {
+        const result = await getMe();
+        if (result.success && result.success.data) {
+          const role = result.success.data.role || "user";
+          setUser({ role });
+        }
+      } catch (error) {
+        console.error("Failed to rehydrate user context:", error);
+        // Keep default role "user" on error
+      }
+    }
+
+    rehydrateUser();
+  }, []);
 
   return (
     <div className="app">
