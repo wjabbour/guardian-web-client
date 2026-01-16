@@ -1,5 +1,7 @@
 import axios from "axios";
 import { getWebConfigValue } from "guardian-common";
+ 
+const hostname = process.env.NODE_ENV === "development" ? "" : getWebConfigValue("server_hostname");
 
 function handleError(e, error_message?) {
   const message =
@@ -18,7 +20,7 @@ export async function create_order(order) {
 
   try {
     const response = await axios.post(
-      `${getWebConfigValue("server_hostname")}/v1/create-order`,
+      `${hostname}/v1/create-order`,
       body,
       { withCredentials: true }
     );
@@ -32,7 +34,7 @@ export async function retrieve_orders() {
   const body = { companyName: getWebConfigValue("title") };
   try {
     const response = await axios.post(
-      `${getWebConfigValue("server_hostname")}/v1/retrieve-orders`,
+      `${hostname}/v1/retrieve-orders`,
       body
     );
     return { success: { data: response.data }, error: null };
@@ -46,7 +48,7 @@ export async function capture_order(order_id) {
 
   try {
     const response = await axios.post(
-      `${getWebConfigValue("server_hostname")}/v1/capture-order`,
+      `${hostname}/v1/capture-order`,
       body
     );
     return { success: { data: response.data }, error: null };
@@ -60,7 +62,7 @@ export async function update_historical_order(email, created_at, cart) {
 
   try {
     const response = await axios.post(
-      `${getWebConfigValue("server_hostname")}/v1/update-historical-order`,
+      `${hostname}/v1/update-historical-order`,
       body,
       { withCredentials: true }
     );
@@ -75,7 +77,7 @@ export async function resend_order_email(email, created_at) {
 
   try {
     const response = await axios.post(
-      `${getWebConfigValue("server_hostname")}/v1/resend-order-email`,
+      `${hostname}/v1/resend-order-email`,
       body,
       { withCredentials: true }
     );
@@ -90,7 +92,7 @@ export async function delete_order(email, created_at) {
 
   try {
     const response = await axios.post(
-      `${getWebConfigValue("server_hostname")}/v1/delete-order`,
+      `${hostname}/v1/delete-order`,
       body,
       { withCredentials: true }
     );
@@ -105,7 +107,7 @@ export async function login(password) {
 
   try {
     const response = await axios.post(
-      `${getWebConfigValue("server_hostname")}/v1/login`,
+      `${hostname}/v1/login`,
       body,
       { withCredentials: true }
     );
@@ -118,7 +120,7 @@ export async function login(password) {
 export async function getMe() {
   try {
     const response = await axios.get(
-      `${getWebConfigValue("server_hostname")}/v1/me`,
+      `${hostname}/v1/me`,
       { withCredentials: true }
     );
     return { success: { data: response.data }, error: null };
