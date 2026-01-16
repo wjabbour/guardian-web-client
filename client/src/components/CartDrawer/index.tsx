@@ -66,7 +66,9 @@ export default function CartDrawer({ cart, setCart }: Props) {
   };
 
   const handleAdminLoginClick = () => {
-    setIsAdminDialogOpen(true);
+    if (!isAdmin) {
+      setIsAdminDialogOpen(true);
+    }
   };
 
   const handleDialogClose = () => {
@@ -227,7 +229,7 @@ export default function CartDrawer({ cart, setCart }: Props) {
           )}
 
           <div className="flex justify-center pt-4 border-t-2 border-gray-200">
-            <Tooltip title={isAdmin ? "Admin Panel" : "Admin Login"}>
+            <Tooltip title={isAdmin ? "You are an admin" : "Admin Login"}>
               <IconButton
                 onClick={handleAdminLoginClick}
                 aria-label="admin-login"
