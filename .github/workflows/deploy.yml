@@ -58,6 +58,11 @@ jobs:
         run: npm ci
         working-directory: ./client
 
+      - name: Run tests
+        if: steps.changes.outputs.frontend == 'true'
+        run: npm test -- --watchAll=false --coverage=false
+        working-directory: ./client
+
       - name: Build client
         if: steps.changes.outputs.frontend == 'true'
         run: npm run build
