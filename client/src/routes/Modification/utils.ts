@@ -1,10 +1,11 @@
 import { PlacementOption, SizeOption } from "../../lib/constants";
+import { CatalogItem, CartItem } from "guardian-common";
 
 export function createCartItem(
-  itemConfiguration,
-  quantity,
-  userSelectionValue,
-  cart,
+  itemConfiguration: CatalogItem,
+  quantity: number,
+  userSelectionValue: string,
+  cart: { [key: string]: CartItem },
   firstEmbroidery: string,
   secondEmbroidery: string,
   firstPlacement: string,
@@ -43,12 +44,22 @@ export function createCartItem(
 }
 
 function getPriceWithDiscount(
-  itemConfiguration,
-  size: number,
+  itemConfiguration: CatalogItem,
+  size: string | number,
   cartQuantity: number
-) {
-  let price = itemConfiguration.pricing[size].price;
-  if (!itemConfiguration.pricing[size].discount) return price;
+): number {
+  // Handle string sizes (e.g., "Small", "Medium", "OSFA", "base")
+  const sizeKey = typeof size === "number" ? size.toString() : size;
+
+  const sizePricing = itemConfiguration.pricing[sizeKey];
+  if (!sizePricing) {
+    console.warn(`No pricing found for size "${sizeKey}" in item ${itemConfiguration.code}`);
+    return 0;
+  }
+
+  let price = sizePricing.price;
+  const discount = sizePricing.discount;
+  if (!discount) return price;
 
   /*
     the discount object is a mapping of quantity -> price where it is assumed that
@@ -66,13 +77,15 @@ function getPriceWithDiscount(
     cart quantity of this item is greater than or equal to the discount quantity, and if so updates the price, applying
     the discount
   */
-  const sortedDiscountQuantites = Object.keys(
-    itemConfiguration.pricing[size].discount
-  ).sort((a, b) => Number(a) - Number(b));
+  const sortedDiscountQuantities = Object.keys(discount).sort(
+    (a, b) => Number(a) - Number(b)
+  );
 
-  for (const quantity of sortedDiscountQuantites) {
-    if (cartQuantity >= Number(quantity)) {
-      price = itemConfiguration.pricing[size].discount[quantity];
+  for (const quantityStr of sortedDiscountQuantities) {
+    const quantity = Number(quantityStr);
+    if (cartQuantity >= quantity) {
+      // Access discount using the numeric key
+      price = discount[quantity];
     } else {
       // if 499 < 500 then we dont need to check if 499 < 1000
       break;
@@ -83,10 +96,10 @@ function getPriceWithDiscount(
 }
 
 export function verifyEmbroidery(
-  itemConfiguration,
+  itemConfiguration: CatalogItem,
   embroideries: string[],
   firstEmbroidery: string,
-  secondEmbroidery: string
+  secondEmbroidery: string | null
 ): string {
   if (embroideries.length === 0) return "";
 
@@ -97,7 +110,7 @@ export function verifyEmbroidery(
   return "";
 }
 
-export function verifyQuantity(userSelection) {
+export function verifyQuantity(userSelection: { [key: string]: number }): boolean {
   if (Object.keys(userSelection).length === 0) return false;
   if (Object.values(userSelection).every((value) => value === 0)) return false;
 
@@ -107,7 +120,7 @@ export function verifyQuantity(userSelection) {
 export function verifyPlacement(
   firstPlacement: string,
   secondPlacement: string,
-  secondEmbroidery: string
+  secondEmbroidery: string | null
 ): string {
   if (firstPlacement === PlacementOption.DEFAULT) return "";
   if (firstPlacement === secondPlacement && secondEmbroidery !== null)
