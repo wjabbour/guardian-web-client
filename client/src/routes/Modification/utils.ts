@@ -1,6 +1,51 @@
 import { PlacementOption, SizeOption } from "../../lib/constants";
 import { CatalogItem, CartItem } from "guardian-common";
 
+/**
+ * Gets the total quantity of all items in the cart that share the same code and size.
+ * This is used for calculating discounts based on aggregated quantities.
+ */
+function getTotalQuantityForCodeAndSize(
+  cart: { [key: string]: CartItem },
+  code: string,
+  size: string
+): number {
+  // Cart keys use the original size (e.g., "base" or "Small"), not the normalized size
+  const prefix = `${code},${size},`;
+
+  return Object.entries(cart)
+    .filter(([key]) => key.startsWith(prefix))
+    .reduce((total, [, item]) => total + item.quantity, 0);
+}
+
+/**
+ * Updates prices for all cart items that share the same code and size.
+ * This ensures discounts are applied consistently when quantities change.
+ */
+function updatePricesForCodeAndSize(
+  cart: { [key: string]: CartItem },
+  itemConfiguration: CatalogItem,
+  code: string,
+  size: string
+): void {
+  // Cart keys use the original size (e.g., "base" or "Small"), not the normalized size
+  const prefix = `${code},${size},`;
+  const totalQuantity = getTotalQuantityForCodeAndSize(cart, code, size);
+
+  // Use the original size for pricing lookup (pricing keys are "base" or size names like "Small", "Medium")
+  const sizeForPricing = size;
+
+  Object.entries(cart).forEach(([key, item]) => {
+    if (key.startsWith(prefix) && item.code === code) {
+      item.price = getPriceWithDiscount(
+        itemConfiguration,
+        sizeForPricing,
+        totalQuantity
+      );
+    }
+  });
+}
+
 export function createCartItem(
   itemConfiguration: CatalogItem,
   quantity: number,
@@ -16,11 +61,16 @@ export function createCartItem(
   const color = selection[1];
 
   const key = `${itemConfiguration.code},${size},${color},${firstEmbroidery},${secondEmbroidery},${firstPlacement},${secondPlacement}`;
+
+  // Get existing quantity for this specific cart item
+  const existingQuantity = cart[key]?.quantity || 0;
+  const newQuantity = existingQuantity + quantity;
+
   const cart_item = {
     type: itemConfiguration.type,
     name: itemConfiguration.fullname,
-    price: getPriceWithDiscount(itemConfiguration, size, quantity),
-    quantity,
+    price: 0, // Will be set by updatePricesForCodeAndSize
+    quantity: newQuantity,
     size: size === "base" ? SizeOption.DEFAULT : size,
     color,
     code: itemConfiguration.code,
@@ -31,16 +81,11 @@ export function createCartItem(
     ...(secondEmbroidery !== null ? { secondEmbroidery, secondPlacement } : {}),
   };
 
-  if (cart[key]) {
-    cart[key].quantity += cart_item.quantity;
-    cart[key].price = getPriceWithDiscount(
-      itemConfiguration,
-      size,
-      cart[key].quantity
-    );
-  } else {
-    cart[key] = cart_item;
-  }
+  cart[key] = cart_item;
+
+  // Update prices for all items with the same code + size to reflect the new aggregated quantity
+  // This will recalculate based on the updated cart and set prices correctly
+  updatePricesForCodeAndSize(cart, itemConfiguration, itemConfiguration.code, size);
 }
 
 function getPriceWithDiscount(
