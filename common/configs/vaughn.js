@@ -27,7 +27,7 @@ export const config = {
   },
   show_image_preview: true,
   embroideries: {
-    hat: ["Vaughn Automotive", "GMC"],
+    hat: ["Vaughn Automotive", "GMC","Vaughn Automotive Chevrolet 270 Hat.EMB"],
     mens: [
       "Chevrolet Bowtie Stacked",
       "Ford",
