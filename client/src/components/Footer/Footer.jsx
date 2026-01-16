@@ -8,7 +8,7 @@ export default function Footer() {
     })
     .join(" & ");
   return (
-    <div className="flex justify-center text-[28px] font-bold">
+    <div className="flex justify-center text-[28px] font-bold py-8 mt-auto">
       <div className="flex flex-col items-center">
         <h1>Guardian Main Line: 800-727-7222</h1>
         <h1>Account Reps: {accountRepString}</h1>

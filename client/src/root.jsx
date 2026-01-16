@@ -68,9 +68,11 @@ export default function Root() {
 
       <CartContext.Provider>
         <UserContext.Provider value={user}>
-          {useRouting && <Gpc81Navbar setModalOpen={setModalOpen} />}
-          {!useRouting && <Navbar cart={cart} setCart={set_cart} />}
-          <Outlet context={[cart, set_cart]} />
+          <div className="app__content">
+            {useRouting && <Gpc81Navbar setModalOpen={setModalOpen} />}
+            {!useRouting && <Navbar cart={cart} setCart={set_cart} />}
+            <Outlet context={[cart, set_cart]} />
+          </div>
         </UserContext.Provider>
       </CartContext.Provider>
 
