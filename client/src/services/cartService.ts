@@ -117,6 +117,10 @@ export class CartService {
      * Use this when you need to modify cart items without affecting the original.
      */
     static cloneCart(cart: Cart): Cart {
-        return structuredClone(cart);
+        // Use structuredClone if available (modern browsers), otherwise fall back to JSON
+        if (typeof structuredClone !== "undefined") {
+            return structuredClone(cart);
+        }
+        return JSON.parse(JSON.stringify(cart));
     }
 }
