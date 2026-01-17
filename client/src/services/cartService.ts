@@ -1,4 +1,6 @@
-import { Cart } from "guardian-common";
+import { Cart, CartItem } from "guardian-common";
+import { recalculateDiscountsForCodeAndSize } from "../utils/discountUtils";
+import { getCatalogItem } from "../lib/utils";
 
 const CART_STORAGE_KEY = "cart";
 
@@ -48,14 +50,33 @@ export class CartService {
     /**
      * Removes an item from the cart by key.
      * Updates both state and sessionStorage.
+     * Also recalculates discounts for remaining items with the same code and size.
      */
     static removeItem(
         cart: Cart,
         setCart: React.Dispatch<React.SetStateAction<Cart>>,
         key: string
     ): void {
-        const newCart = { ...cart };
+        // Extract code and size from the cart key before removal
+        // Cart key format: "code,size,color,firstEmbroidery,secondEmbroidery,firstPlacement,secondPlacement"
+        const removedItem = cart[key];
+        if (!removedItem) {
+            console.warn(`Item with key "${key}" not found in cart`);
+            return;
+        }
+
+        const keyParts = key.split(",");
+        const removedItemCode = removedItem.code || keyParts[0];
+        const removedItemSize = keyParts[1]; // Original size from cart key (e.g., "base" or "Small")
+
+        // Create a deep copy to avoid mutating the original cart
+        const newCart = this.cloneCart(cart);
         delete newCart[key];
+
+        // Recalculate discounts for remaining items with the same code and size
+        // This must happen after the item is removed so the quantity calculation is correct
+        recalculateDiscountsForCodeAndSize(newCart, removedItemCode, removedItemSize, getCatalogItem);
+
         this.updateCart(newCart, setCart);
     }
 
