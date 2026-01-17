@@ -88,6 +88,14 @@ export interface CartItem {
   secondPlacement?: string;
 }
 
+/**
+ * Cart structure mapping cart item keys to CartItem objects.
+ * Keys are typically formatted as: "code,size,color,firstEmbroidery,secondEmbroidery,firstPlacement,secondPlacement"
+ */
+export interface Cart {
+  [key: string]: CartItem;
+}
+
 export interface Embroidery {
   [key: string]: string[];
 }

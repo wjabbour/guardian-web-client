@@ -1,12 +1,12 @@
 import { PlacementOption, SizeOption } from "../../lib/constants";
-import { CatalogItem, CartItem } from "guardian-common";
+import { CatalogItem, CartItem, Cart } from "guardian-common";
 
 /**
  * Gets the total quantity of all items in the cart that share the same code and size.
  * This is used for calculating discounts based on aggregated quantities.
  */
 function getTotalQuantityForCodeAndSize(
-  cart: { [key: string]: CartItem },
+  cart: Cart,
   code: string,
   size: string
 ): number {
@@ -23,7 +23,7 @@ function getTotalQuantityForCodeAndSize(
  * This ensures discounts are applied consistently when quantities change.
  */
 function updatePricesForCodeAndSize(
-  cart: { [key: string]: CartItem },
+  cart: Cart,
   itemConfiguration: CatalogItem,
   code: string,
   size: string
@@ -50,7 +50,7 @@ export function createCartItem(
   itemConfiguration: CatalogItem,
   quantity: number,
   userSelectionValue: string,
-  cart: { [key: string]: CartItem },
+  cart: Cart,
   firstEmbroidery: string,
   secondEmbroidery: string,
   firstPlacement: string,

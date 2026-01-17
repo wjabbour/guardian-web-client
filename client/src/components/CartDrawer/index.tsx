@@ -13,14 +13,10 @@ import PersonIcon from "@mui/icons-material/Person";
 import AdminPanelSettingsIcon from "@mui/icons-material/AdminPanelSettings";
 import { ColorOption, SizeOption } from "../../lib/constants";
 import { getDomainAwarePath } from "../../lib/utils";
-import { CartItem } from "guardian-common";
+import { CartItem, Cart } from "guardian-common";
 import PasswordEntryDialog from "../PasswordEntryDialog/PasswordEntryDialog";
 import { login } from "../../lib/http";
 import { UserContext } from "../../root";
-
-interface Cart {
-  [key: string]: CartItem;
-}
 
 interface Props {
   cart: Cart;

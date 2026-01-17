@@ -1,4 +1,4 @@
-import { getWebCatalog, getWebConfigValue, CatalogItem } from "guardian-common";
+import { getWebCatalog, getWebConfigValue, CatalogItem, Cart } from "guardian-common";
 
 /*
   on the gpc81 site, when a user logs in they are logging in for a specific company.
@@ -13,7 +13,7 @@ export function getDomainAwarePath(destination) {
   return shouldPrefixRoute ? prefix + destination : destination;
 }
 
-export function calculate_item_count(cart) {
+export function calculate_item_count(cart: Cart) {
   let count = 0;
 
   Object.keys(cart).forEach((k) => {
@@ -23,7 +23,7 @@ export function calculate_item_count(cart) {
   return count;
 }
 
-export function calculate_item_price(cart) {
+export function calculate_item_price(cart: Cart) {
   let price = 0;
 
   Object.keys(cart).forEach((k) => {

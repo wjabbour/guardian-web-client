@@ -4,7 +4,7 @@ import {
   verifyQuantity,
   verifyPlacement,
 } from "./utils";
-import { CatalogItem, CartItem } from "guardian-common";
+import { CatalogItem, CartItem, Cart } from "guardian-common";
 import { PlacementOption, SizeOption } from "../../lib/constants";
 
 describe("Modification Utils", () => {
@@ -48,7 +48,7 @@ describe("Modification Utils", () => {
     });
 
     it("should create a new cart item with correct properties", () => {
-      const cart: { [key: string]: CartItem } = {};
+      const cart: Cart = {};
       const quantity = 5;
       const userSelectionValue = "Small,Black";
 
@@ -74,7 +74,7 @@ describe("Modification Utils", () => {
     });
 
     it("should apply discount when total quantity reaches threshold", () => {
-      const cart: { [key: string]: CartItem } = {};
+      const cart: Cart = {};
       const quantity1 = 10;
       const quantity2 = 5; // Total will be 15, which is >= 12
 
@@ -113,7 +113,7 @@ describe("Modification Utils", () => {
     });
 
     it("should apply higher discount for larger aggregated quantities", () => {
-      const cart: { [key: string]: CartItem } = {};
+      const cart: Cart = {};
 
       // Add items to reach 25 total quantity
       createCartItem(
@@ -146,7 +146,7 @@ describe("Modification Utils", () => {
     });
 
     it("should not apply discount when quantity is below threshold", () => {
-      const cart: { [key: string]: CartItem } = {};
+      const cart: Cart = {};
 
       createCartItem(
         mockItemConfiguration,
@@ -164,7 +164,7 @@ describe("Modification Utils", () => {
     });
 
     it("should handle base size correctly", () => {
-      const cart: { [key: string]: CartItem } = {};
+      const cart: Cart = {};
 
       createCartItem(
         mockItemConfiguration,
@@ -184,7 +184,7 @@ describe("Modification Utils", () => {
     });
 
     it("should aggregate quantities for base size across different colors", () => {
-      const cart: { [key: string]: CartItem } = {};
+      const cart: Cart = {};
 
       createCartItem(
         mockItemConfiguration,
@@ -216,7 +216,7 @@ describe("Modification Utils", () => {
     });
 
     it("should not aggregate quantities for different sizes", () => {
-      const cart: { [key: string]: CartItem } = {};
+      const cart: Cart = {};
 
       createCartItem(
         mockItemConfiguration,
@@ -249,7 +249,7 @@ describe("Modification Utils", () => {
     });
 
     it("should update existing cart item quantity", () => {
-      const cart: { [key: string]: CartItem } = {};
+      const cart: Cart = {};
 
       createCartItem(
         mockItemConfiguration,
@@ -279,7 +279,7 @@ describe("Modification Utils", () => {
     });
 
     it("should include embroidery and placement in cart key", () => {
-      const cart: { [key: string]: CartItem } = {};
+      const cart: Cart = {};
 
       createCartItem(
         mockItemConfiguration,
@@ -311,7 +311,7 @@ describe("Modification Utils", () => {
         },
       };
 
-      const cart: { [key: string]: CartItem } = {};
+      const cart: Cart = {};
 
       createCartItem(
         itemWithoutDiscount,
