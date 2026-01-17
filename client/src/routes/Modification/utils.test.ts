@@ -58,12 +58,13 @@ describe("Modification Utils", () => {
         userSelectionValue,
         cart,
         "",
-        "",
+        null,
         PlacementOption.DEFAULT,
-        PlacementOption.DEFAULT
+        PlacementOption.DEFAULT,
+        ""
       );
 
-      const key = "C402,Small,Black,,,Default,Default";
+      const key = "C402,Small,Black,,,,Default,Default";
       expect(cart[key]).toBeDefined();
       expect(cart[key].code).toBe("C402");
       expect(cart[key].quantity).toBe(5);
@@ -85,9 +86,10 @@ describe("Modification Utils", () => {
         "Small,Black",
         cart,
         "",
-        "",
+        null,
         PlacementOption.DEFAULT,
-        PlacementOption.DEFAULT
+        PlacementOption.DEFAULT,
+        ""
       );
 
       // Add second item with same code and size but different color
@@ -97,13 +99,14 @@ describe("Modification Utils", () => {
         "Small,Red",
         cart,
         "",
-        "",
+        null,
         PlacementOption.DEFAULT,
-        PlacementOption.DEFAULT
+        PlacementOption.DEFAULT,
+        ""
       );
 
-      const key1 = "C402,Small,Black,,,Default,Default";
-      const key2 = "C402,Small,Red,,,Default,Default";
+      const key1 = "C402,Small,Black,,,,Default,Default";
+      const key2 = "C402,Small,Red,,,,Default,Default";
 
       // Both should have discounted price (18.0) because total quantity is 15 >= 12
       expect(cart[key1].price).toBe(18.0);
@@ -122,9 +125,10 @@ describe("Modification Utils", () => {
         "Small,Black",
         cart,
         "",
-        "",
+        null,
         PlacementOption.DEFAULT,
-        PlacementOption.DEFAULT
+        PlacementOption.DEFAULT,
+        ""
       );
       createCartItem(
         mockItemConfiguration,
@@ -132,13 +136,14 @@ describe("Modification Utils", () => {
         "Small,Red",
         cart,
         "",
-        "",
+        null,
         PlacementOption.DEFAULT,
-        PlacementOption.DEFAULT
+        PlacementOption.DEFAULT,
+        ""
       );
 
-      const key1 = "C402,Small,Black,,,Default,Default";
-      const key2 = "C402,Small,Red,,,Default,Default";
+      const key1 = "C402,Small,Black,,,,Default,Default";
+      const key2 = "C402,Small,Red,,,,Default,Default";
 
       // Total is 25, which is >= 24, so price should be 16.0
       expect(cart[key1].price).toBe(16.0);
@@ -154,12 +159,13 @@ describe("Modification Utils", () => {
         "Small,Black",
         cart,
         "",
-        "",
+        null,
         PlacementOption.DEFAULT,
-        PlacementOption.DEFAULT
+        PlacementOption.DEFAULT,
+        ""
       );
 
-      const key = "C402,Small,Black,,,Default,Default";
+      const key = "C402,Small,Black,,,,Default,Default";
       expect(cart[key].price).toBe(20.0); // Base price, no discount
     });
 
@@ -172,12 +178,13 @@ describe("Modification Utils", () => {
         "base,Black",
         cart,
         "",
-        "",
+        null,
         PlacementOption.DEFAULT,
-        PlacementOption.DEFAULT
+        PlacementOption.DEFAULT,
+        ""
       );
 
-      const key = "C402,base,Black,,,Default,Default";
+      const key = "C402,base,Black,,,,Default,Default";
       expect(cart[key]).toBeDefined();
       expect(cart[key].size).toBe(SizeOption.DEFAULT);
       expect(cart[key].price).toBe(15.0); // Base pricing
@@ -192,9 +199,10 @@ describe("Modification Utils", () => {
         "base,Black",
         cart,
         "",
-        "",
+        null,
         PlacementOption.DEFAULT,
-        PlacementOption.DEFAULT
+        PlacementOption.DEFAULT,
+        ""
       );
       createCartItem(
         mockItemConfiguration,
@@ -202,13 +210,14 @@ describe("Modification Utils", () => {
         "base,Red",
         cart,
         "",
-        "",
+        null,
         PlacementOption.DEFAULT,
-        PlacementOption.DEFAULT
+        PlacementOption.DEFAULT,
+        ""
       );
 
-      const key1 = "C402,base,Black,,,Default,Default";
-      const key2 = "C402,base,Red,,,Default,Default";
+      const key1 = "C402,base,Black,,,,Default,Default";
+      const key2 = "C402,base,Red,,,,Default,Default";
 
       // Total is 15, which is >= 10, so price should be 13.0
       expect(cart[key1].price).toBe(13.0);
@@ -224,9 +233,10 @@ describe("Modification Utils", () => {
         "Small,Black",
         cart,
         "",
-        "",
+        null,
         PlacementOption.DEFAULT,
-        PlacementOption.DEFAULT
+        PlacementOption.DEFAULT,
+        ""
       );
       createCartItem(
         mockItemConfiguration,
@@ -234,13 +244,14 @@ describe("Modification Utils", () => {
         "Medium,Black",
         cart,
         "",
-        "",
+        null,
         PlacementOption.DEFAULT,
-        PlacementOption.DEFAULT
+        PlacementOption.DEFAULT,
+        ""
       );
 
-      const key1 = "C402,Small,Black,,,Default,Default";
-      const key2 = "C402,Medium,Black,,,Default,Default";
+      const key1 = "C402,Small,Black,,,,Default,Default";
+      const key2 = "C402,Medium,Black,,,,Default,Default";
 
       // Small should have discount (15 >= 12), Medium should have discount (15 >= 12)
       // But they're calculated separately
@@ -257,9 +268,10 @@ describe("Modification Utils", () => {
         "Small,Black",
         cart,
         "",
-        "",
+        null,
         PlacementOption.DEFAULT,
-        PlacementOption.DEFAULT
+        PlacementOption.DEFAULT,
+        ""
       );
 
       createCartItem(
@@ -268,12 +280,13 @@ describe("Modification Utils", () => {
         "Small,Black",
         cart,
         "",
-        "",
+        null,
         PlacementOption.DEFAULT,
-        PlacementOption.DEFAULT
+        PlacementOption.DEFAULT,
+        ""
       );
 
-      const key = "C402,Small,Black,,,Default,Default";
+      const key = "C402,Small,Black,,,,Default,Default";
       expect(cart[key].quantity).toBe(15);
       expect(cart[key].price).toBe(18.0); // Discounted price for 15 items
     });
@@ -289,10 +302,11 @@ describe("Modification Utils", () => {
         "Logo1",
         "Logo2",
         "Front",
-        "Back"
+        "Back",
+        ""
       );
 
-      const key = "C402,Small,Black,Logo1,Logo2,Front,Back";
+      const key = "C402,Small,Black,,Logo1,Logo2,Front,Back";
       expect(cart[key]).toBeDefined();
       expect(cart[key].embroidery).toBe("Logo1");
       expect(cart[key].secondEmbroidery).toBe("Logo2");
@@ -319,12 +333,13 @@ describe("Modification Utils", () => {
         "Small,Black",
         cart,
         "",
-        "",
+        null,
         PlacementOption.DEFAULT,
-        PlacementOption.DEFAULT
+        PlacementOption.DEFAULT,
+        ""
       );
 
-      const key = "C402,Small,Black,,,Default,Default";
+      const key = "C402,Small,Black,,,,Default,Default";
       expect(cart[key].price).toBe(20.0); // Base price, no discount applied
     });
   });

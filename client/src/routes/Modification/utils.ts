@@ -20,9 +20,13 @@ export function createCartItem(
   // Include sapVariation in the cart key if it exists
   // Format: "code,size,color,sapVariation,firstEmbroidery,secondEmbroidery,firstPlacement,secondPlacement"
   // or: "code,size,color,,firstEmbroidery,secondEmbroidery,firstPlacement,secondPlacement" if no sapVariation
-  const key = sapVariation
-    ? `${itemConfiguration.code},${size},${color},${sapVariation},${firstEmbroidery},${secondEmbroidery},${firstPlacement},${secondPlacement}`
-    : `${itemConfiguration.code},${size},${color},,${firstEmbroidery},${secondEmbroidery},${firstPlacement},${secondPlacement}`;
+  // Convert null values to empty strings to avoid "null" strings in keys
+  const sapVar = sapVariation || "";
+  const firstEmb = firstEmbroidery || "";
+  const secondEmb = secondEmbroidery || "";
+  const firstPlace = firstPlacement || "";
+  const secondPlace = secondPlacement || "";
+  const key = `${itemConfiguration.code},${size},${color},${sapVar},${firstEmb},${secondEmb},${firstPlace},${secondPlace}`;
 
   // Get existing quantity for this specific cart item
   const existingQuantity = cart[key]?.quantity || 0;
