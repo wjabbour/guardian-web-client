@@ -10,13 +10,19 @@ export function createCartItem(
   firstEmbroidery: string,
   secondEmbroidery: string,
   firstPlacement: string,
-  secondPlacement: string
+  secondPlacement: string,
+  sapVariation?: string | null
 ) {
   const selection = userSelectionValue.split(",");
   const size = selection[0];
   const color = selection[1];
 
-  const key = `${itemConfiguration.code},${size},${color},${firstEmbroidery},${secondEmbroidery},${firstPlacement},${secondPlacement}`;
+  // Include sapVariation in the cart key if it exists
+  // Format: "code,size,color,sapVariation,firstEmbroidery,secondEmbroidery,firstPlacement,secondPlacement"
+  // or: "code,size,color,,firstEmbroidery,secondEmbroidery,firstPlacement,secondPlacement" if no sapVariation
+  const key = sapVariation
+    ? `${itemConfiguration.code},${size},${color},${sapVariation},${firstEmbroidery},${secondEmbroidery},${firstPlacement},${secondPlacement}`
+    : `${itemConfiguration.code},${size},${color},,${firstEmbroidery},${secondEmbroidery},${firstPlacement},${secondPlacement}`;
 
   // Get existing quantity for this specific cart item
   const existingQuantity = cart[key]?.quantity || 0;
@@ -30,6 +36,7 @@ export function createCartItem(
     size: size === "base" ? SizeOption.DEFAULT : size,
     color,
     code: itemConfiguration.code,
+    ...(sapVariation ? { sapVariation } : {}),
     ...(firstPlacement !== PlacementOption.DEFAULT
       ? { placement: firstPlacement }
       : {}),

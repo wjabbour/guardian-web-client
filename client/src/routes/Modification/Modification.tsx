@@ -32,15 +32,29 @@ export default function Modification() {
   const [selected_color, set_selected_color] = useState(
     item.default_color || ""
   );
-
-  const [image_source, set_image_source] = useState(
-    item.colors
-      ? `/images/${item.code}_${selected_color
-          .toLowerCase()
-          .split(" ")
-          .join("_")}.jpg`
-      : `/images/${item.code}.jpg`
+  
+  // Handle sapVariations: initialize with first variation if available
+  const initialSapVariation = item.sapVariations && item.sapVariations.length > 0
+    ? item.sapVariations[0].code
+    : null;
+  const [selected_sapVariation, set_selected_sapVariation] = useState(
+    initialSapVariation
   );
+  
+  // Initialize image source based on sapVariations or colors
+  const initialImageSource = item.sapVariations && item.sapVariations.length > 0
+    ? `/images/${item.code}_${item.sapVariations[0].color
+        .toLowerCase()
+        .split(" ")
+        .join("_")}.jpg`
+    : item.colors
+    ? `/images/${item.code}_${selected_color
+        .toLowerCase()
+        .split(" ")
+        .join("_")}.jpg`
+    : `/images/${item.code}.jpg`;
+
+  const [image_source, set_image_source] = useState(initialImageSource);
   const [cart, set_cart] = useOutletContext<any>();
   const [snackbarOpen, setSnackbarOpen] = useState(false);
   const [snackbarText] = useState("Item added to cart");
@@ -124,7 +138,7 @@ export default function Modification() {
 
     const new_cart = CartService.cloneCart(cart);
 
-    // key is size + color, value is object containing quantity
+    // key is size + color (or size + color + sapVariation), value is object containing quantity
     for (const [key, quantity] of Object.entries(userSelection)) {
       createCartItem(
         item,
@@ -134,7 +148,8 @@ export default function Modification() {
         firstEmbroidery,
         secondEmbroidery,
         firstPlacement,
-        secondPlacement
+        secondPlacement,
+        selected_sapVariation
       );
     }
 
@@ -183,6 +198,9 @@ export default function Modification() {
               set_selected_color={set_selected_color}
               selected_color={selected_color}
               set_image_source={set_image_source}
+              sapVariations={item.sapVariations}
+              selected_sapVariation={selected_sapVariation}
+              set_selected_sapVariation={set_selected_sapVariation}
             />
           </div>
 

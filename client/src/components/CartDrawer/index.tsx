@@ -162,6 +162,13 @@ export default function CartDrawer({ cart, setCart }: Props) {
                           </p>
                         )}
 
+                        {item.sapVariation && (
+                          <p>
+                            <span className="font-semibold">SAP Variation:</span>{" "}
+                            {item.sapVariation}
+                          </p>
+                        )}
+
                         {item.embroidery && (
                           <p>
                             <span className="font-semibold">Embroidery:</span>{" "}

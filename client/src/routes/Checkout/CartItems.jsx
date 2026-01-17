@@ -45,6 +45,11 @@ export default function CartItems() {
                   <b>Color:</b> {item.color}
                 </p>
               )}
+              {item.sapVariation && (
+                <p>
+                  <b>SAP Variation:</b> {item.sapVariation}
+                </p>
+              )}
               {item.embroidery && (
                 <>
                   {item.secondEmbroidery && (

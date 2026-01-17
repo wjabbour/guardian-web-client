@@ -111,7 +111,7 @@ function createOrderCsv(orders): string {
   }
 
   csv +=
-    "Date,Store Code,Store Name,First Name,Last Name,Item,Quantity,Description,Size,Color,Logo,Placement,Second Logo,Second Placement,Price,usedStoreCode,transactionId\n";
+    "Date,Store Code,Store Name,First Name,Last Name,Item,Quantity,Description,Size,Color,SAP Variation,Logo,Placement,Second Logo,Second Placement,Price,usedStoreCode,transactionId\n";
 
   for (let i = 0; i < orders.length; i++) {
     const order = orders[i];
@@ -132,6 +132,7 @@ function createOrderCsv(orders): string {
         description: item.description,
         size: item.size || "",
         color: item.color,
+        sapVariation: item.sapVariation || "",
         logo: item.embroidery || "",
         placement: item.placement || "",
         secondLogo: item.secondEmbroidery || "",

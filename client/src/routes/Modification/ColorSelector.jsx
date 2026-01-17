@@ -5,7 +5,53 @@ export default function ColorSelector({
   set_selected_color,
   selected_color,
   set_image_source,
+  sapVariations,
+  selected_sapVariation,
+  set_selected_sapVariation,
 }) {
+  // If sapVariations exist, render variation blocks instead of color blocks
+  if (item.sapVariations && item.sapVariations.length > 0) {
+    const variationOptions = item.sapVariations.map((variation) => {
+      return (
+        <div
+          className={`h-[32px] w-[38px] cursor-pointer ${variation.color
+            .split(" ")
+            .join("_")} rounded-sm ${
+            variation.code === selected_sapVariation
+              ? "border-[2px] border-yellow-400"
+              : "border-[1px] border-black"
+          } `}
+          key={variation.code}
+          onClick={() => {
+            set_selected_sapVariation(variation.code);
+            set_selected_color(variation.color);
+            set_image_source(
+              `/images/${item.code}_${variation.color
+                .split(" ")
+                .join("_")
+                .toLowerCase()}.jpg`
+            );
+          }}
+        ></div>
+      );
+    });
+
+    // Find the selected variation to display its color name
+    const selectedVariation = item.sapVariations.find(
+      (v) => v.code === selected_sapVariation
+    );
+
+    return (
+      <div className="w-[300px] mt-[25px]">
+        <div className="flex flex-wrap gap-[5px]">{variationOptions}</div>
+        <p className="mt-2 font-medium">
+          <span className="text-[16px] text-gray-400">Color: </span>
+          {selectedVariation ? selectedVariation.color : ""}
+        </p>
+      </div>
+    );
+  }
+
   if (!item.colors) return null;
 
   const halfColors = item.halfColors || [];

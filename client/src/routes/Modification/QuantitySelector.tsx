@@ -26,15 +26,19 @@ export default function QuantitySelector({
 
   const hasQuantities = item.quantities && item.quantities.length > 0;
   const isManySizes = isMany(item.sizes);
-  const isManyColors = isMany(item.colors);
+  // Use sapVariations colors if they exist, otherwise use regular colors
+  const colorsToUse = item.sapVariations && item.sapVariations.length > 0
+    ? item.sapVariations.map((v: { color: string }) => v.color)
+    : item.colors;
+  const isManyColors = isMany(colorsToUse);
 
   // Normalize effective lists for rendering
   const effectiveSizes =
     item.sizes && item.sizes.length > 0 ? item.sizes : [SizeOption.BASE];
 
   const effectiveColors =
-    item.colors && item.colors.length > 0
-      ? item.colors
+    colorsToUse && colorsToUse.length > 0
+      ? colorsToUse
       : [item.default_color || ColorOption.DEFAULT];
 
   useEffect(() => {
@@ -43,8 +47,11 @@ export default function QuantitySelector({
 
     // 2. Determine Defaults
     const defaultSize = item.sizes?.[0] || SizeOption.BASE;
+    const colorsForDefault = item.sapVariations && item.sapVariations.length > 0
+      ? item.sapVariations.map((v: { color: string }) => v.color)
+      : item.colors;
     const defaultColor =
-      item.colors?.[0] || item.default_color || ColorOption.DEFAULT;
+      colorsForDefault?.[0] || item.default_color || ColorOption.DEFAULT;
 
     setSelectedSize(defaultSize);
     setSelectedColor(defaultColor);
@@ -125,7 +132,10 @@ export default function QuantitySelector({
     const qty = parseInt(value, 10) || 0;
     setSelectedQty(qty);
     const s = item.sizes?.[0] || SizeOption.BASE;
-    const c = item.colors?.[0] || item.default_color || ColorOption.DEFAULT;
+    const colorsForInput = item.sapVariations && item.sapVariations.length > 0
+      ? item.sapVariations.map((v: { color: string }) => v.color)
+      : item.colors;
+    const c = colorsForInput?.[0] || item.default_color || ColorOption.DEFAULT;
     setUserSelection({ [`${s},${c}`]: qty });
   };
 

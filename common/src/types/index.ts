@@ -72,6 +72,15 @@ export interface CatalogItem {
    * If a store is not in this array, then this item won't be shown when viewing the customs items for that store.
    */
   supportedStores?: string[];
+  /**
+   * Array of SAP product ID variations.
+   * Each variation has a color (for preview display) and a code (SAP suffix like "BLU", "RED").
+   * If present, these are rendered instead of regular color blocks on the modification page.
+   */
+  sapVariations?: Array<{
+    color: string;
+    code: string;
+  }>;
 }
 
 export interface CartItem {
@@ -86,11 +95,17 @@ export interface CartItem {
   embroidery?: string;
   secondEmbroidery?: string;
   secondPlacement?: string;
+  /**
+   * SAP variation code (e.g., "BLU", "RED") when the item uses sapVariations.
+   * This is included in the cart key to differentiate variations.
+   */
+  sapVariation?: string;
 }
 
 /**
  * Cart structure mapping cart item keys to CartItem objects.
  * Keys are typically formatted as: "code,size,color,firstEmbroidery,secondEmbroidery,firstPlacement,secondPlacement"
+ * For items with sapVariations, the key includes sapVariation: "code,size,color,sapVariation,firstEmbroidery,secondEmbroidery,firstPlacement,secondPlacement"
  */
 export interface Cart {
   [key: string]: CartItem;
