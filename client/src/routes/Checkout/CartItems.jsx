@@ -1,6 +1,7 @@
 import DeleteIcon from "@mui/icons-material/Delete";
 import { useOutletContext } from "react-router-dom";
 import { ColorOption, SizeOption } from "../../lib/constants";
+import { CartService } from "../../services/cartService";
 
 export default function CartItems() {
   const [cart, set_cart] = useOutletContext();
@@ -26,9 +27,7 @@ export default function CartItems() {
               <DeleteIcon
                 style={{ color: "#C70000" }}
                 onClick={() => {
-                  delete cart[k];
-                  sessionStorage.setItem("cart", JSON.stringify(cart));
-                  set_cart({ ...cart });
+                  CartService.removeItem(cart, set_cart, k);
                 }}
               />
             </div>

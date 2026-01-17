@@ -11,6 +11,7 @@ import { useNextGenRouting } from "./hooks/useNextGenRouting";
 import { getRoutePrefix } from "guardian-common";
 import Gpc81Navbar from "./components/Gpc81Navbar/Gpc81Navbar";
 import { getMe } from "./lib/http";
+import { CartService } from "./services/cartService";
 
 export const UserContext = createContext({ role: "user" });
 const CartContext = createContext({});
@@ -20,11 +21,8 @@ export default function Root() {
   const navigate = useNavigate();
   const useRouting = useNextGenRouting() && window.location.pathname === "/";
   const [cart, set_cart] = useState(() => {
-    // Rehydrate cart from sessionStorage
-    if (sessionStorage.getItem("cart")) {
-      return JSON.parse(sessionStorage.getItem("cart"));
-    }
-    return {};
+    // Rehydrate cart from sessionStorage using cart service
+    return CartService.loadCart();
   });
   const [user, setUser] = useState({ role: "user" });
   const [isModalOpen, setModalOpen] = useState(false);

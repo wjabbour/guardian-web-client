@@ -13,6 +13,7 @@ import {
   getDomainAwarePath,
 } from "../../lib/utils";
 import * as http from "../../lib/http";
+import { CartService } from "../../services/cartService";
 import Snackbar from "@mui/material/Snackbar";
 import Alert from "@mui/material/Alert";
 import InfoOutlinedIcon from "@mui/icons-material/InfoOutlined";
@@ -104,8 +105,7 @@ export default function Checkout() {
           cart: { ...cart },
         },
       });
-      set_cart({});
-      sessionStorage.removeItem("cart");
+      CartService.clearCart(set_cart);
     }
 
     setLoading(false);
@@ -154,8 +154,7 @@ export default function Checkout() {
                 cart: { ...cart },
               },
             });
-            set_cart({});
-            sessionStorage.removeItem("cart");
+            CartService.clearCart(set_cart);
           }
         },
         style: {

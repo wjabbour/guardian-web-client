@@ -17,6 +17,7 @@ import {
   verifyQuantity,
 } from "./utils";
 import { PlacementOption } from "../../lib/constants";
+import { CartService } from "../../services/cartService";
 
 type UserSelection = {
   [key: string]: number;
@@ -121,7 +122,7 @@ export default function Modification() {
       return;
     }
 
-    const new_cart = structuredClone(cart);
+    const new_cart = CartService.cloneCart(cart);
 
     // key is size + color, value is object containing quantity
     for (const [key, quantity] of Object.entries(userSelection)) {
@@ -135,10 +136,10 @@ export default function Modification() {
         firstPlacement,
         secondPlacement
       );
-
-      set_cart(new_cart);
-      sessionStorage.setItem("cart", JSON.stringify(new_cart));
     }
+
+    // Update cart using service (handles both state and sessionStorage)
+    CartService.updateCart(new_cart, set_cart);
 
     setSnackbarOpen(true);
     setUserSelection({});

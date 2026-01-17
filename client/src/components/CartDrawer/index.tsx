@@ -17,6 +17,7 @@ import { CartItem, Cart } from "guardian-common";
 import PasswordEntryDialog from "../PasswordEntryDialog/PasswordEntryDialog";
 import { login } from "../../lib/http";
 import { UserContext } from "../../root";
+import { CartService } from "../../services/cartService";
 
 interface Props {
   cart: Cart;
@@ -34,10 +35,7 @@ export default function CartDrawer({ cart, setCart }: Props) {
   const [snackbarSeverity, setSnackbarSeverity] = useState<"success" | "error">("success");
 
   // Calculate total items for the badge count
-  const cartItemCount: number = Object.values(cart || {}).reduce(
-    (acc: number, item: any) => acc + (Number(item.quantity) || 0),
-    0
-  );
+  const cartItemCount: number = CartService.getCartItemCount(cart);
 
   const toggleDrawer =
     (open: boolean) => (event: React.KeyboardEvent | React.MouseEvent) => {
@@ -52,13 +50,7 @@ export default function CartDrawer({ cart, setCart }: Props) {
     };
 
   const handleDelete = (key: string) => {
-    // Create a shallow copy to avoid mutating state directly
-    const newCart = { ...cart };
-    delete newCart[key];
-
-    // Update Storage and State
-    sessionStorage.setItem("cart", JSON.stringify(newCart));
-    setCart(newCart);
+    CartService.removeItem(cart, setCart, key);
   };
 
   const handleAdminLoginClick = () => {
