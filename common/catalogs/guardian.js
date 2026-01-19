@@ -4851,6 +4851,7 @@ export const catalog = [
     ],
     type: "sales",
     default_color: "2007",
+    quantities: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
     pricing: {
       base: {
         price: 0.00,
