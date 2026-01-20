@@ -1,7 +1,10 @@
 import axios from "axios";
 import { getWebConfigValue } from "guardian-common";
- 
-const hostname = process.env.NODE_ENV === "development" ? "" : getWebConfigValue("server_hostname");
+
+const hostname =
+  process.env.NODE_ENV === "development"
+    ? ""
+    : getWebConfigValue("server_hostname");
 
 function handleError(e, error_message?) {
   const message =
@@ -19,11 +22,7 @@ export async function create_order(order) {
   const body = { ...order, companyName: getWebConfigValue("title") };
 
   try {
-    const response = await axios.post(
-      `${hostname}/v1/create-order`,
-      body,
-      { withCredentials: true }
-    );
+    const response = await axios.post(`${hostname}/v1/create-order`, body);
     return { success: { data: response.data }, error: null };
   } catch (e) {
     return handleError(e);
@@ -33,10 +32,7 @@ export async function create_order(order) {
 export async function retrieve_orders() {
   const body = { companyName: getWebConfigValue("title") };
   try {
-    const response = await axios.post(
-      `${hostname}/v1/retrieve-orders`,
-      body
-    );
+    const response = await axios.post(`${hostname}/v1/retrieve-orders`, body);
     return { success: { data: response.data }, error: null };
   } catch (e) {
     return handleError(e);
@@ -47,10 +43,7 @@ export async function capture_order(order_id) {
   const body = { order_id, companyName: getWebConfigValue("title") };
 
   try {
-    const response = await axios.post(
-      `${hostname}/v1/capture-order`,
-      body
-    );
+    const response = await axios.post(`${hostname}/v1/capture-order`, body);
     return { success: { data: response.data }, error: null };
   } catch (e) {
     return handleError(e);
@@ -64,7 +57,7 @@ export async function update_historical_order(email, created_at, cart) {
     const response = await axios.post(
       `${hostname}/v1/update-historical-order`,
       body,
-      { withCredentials: true }
+      { withCredentials: true },
     );
     return { success: { data: response.data }, error: null };
   } catch (e) {
@@ -79,7 +72,7 @@ export async function resend_order_email(email, created_at) {
     const response = await axios.post(
       `${hostname}/v1/resend-order-email`,
       body,
-      { withCredentials: true }
+      { withCredentials: true },
     );
     return { success: { data: response.data }, error: null };
   } catch (e) {
@@ -91,11 +84,9 @@ export async function delete_order(email, created_at) {
   const body = { email, created_at };
 
   try {
-    const response = await axios.post(
-      `${hostname}/v1/delete-order`,
-      body,
-      { withCredentials: true }
-    );
+    const response = await axios.post(`${hostname}/v1/delete-order`, body, {
+      withCredentials: true,
+    });
     return { success: { data: response.data }, error: null };
   } catch (e) {
     return handleError(e, "Failed to delete order.");
@@ -106,11 +97,9 @@ export async function login(password) {
   const body = { password };
 
   try {
-    const response = await axios.post(
-      `${hostname}/v1/login`,
-      body,
-      { withCredentials: true }
-    );
+    const response = await axios.post(`${hostname}/v1/login`, body, {
+      withCredentials: true,
+    });
     return { success: { data: response.data }, error: null };
   } catch (e) {
     return handleError(e, "Failed to login.");
@@ -119,10 +108,9 @@ export async function login(password) {
 
 export async function getMe() {
   try {
-    const response = await axios.get(
-      `${hostname}/v1/me`,
-      { withCredentials: true }
-    );
+    const response = await axios.get(`${hostname}/v1/me`, {
+      withCredentials: true,
+    });
     return { success: { data: response.data }, error: null };
   } catch (e) {
     return handleError(e, "Failed to get user info.");
