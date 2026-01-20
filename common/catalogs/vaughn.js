@@ -414,8 +414,8 @@ export const catalog = [
       "Yellow",
     ],
     type: "sales",
-    default_color: "Blue",
-    description: "Sold in quantities of 1 or 10 boxes",
+    default_color: "Blue", 
+    description: '1 box: $36.95, 10 boxes: $30.00',   
     quantities: [1, 10],
     pricing: {
       base: {
@@ -433,7 +433,7 @@ export const catalog = [
     colors: ["Blue", "Green", "Orange", "Red", "White", "Yellow"],
     type: "sales",
     default_color: "Blue",
-    description: "Sold in quantities of 1 or 10 packs",
+    description: '1 pack: $17.95, 10 packs: $12.00',
     quantities: [1, 10],
     pricing: {
       base: {
@@ -501,7 +501,7 @@ export const catalog = [
     colors: ["Clear"],
     type: "sales",
     default_color: "Clear",
-    description: "Sold in quantities of 1 or 10 packs",
+    description: '1 pack: $99.00, 10 packs: $80.00',
     quantities: [1, 10],
     pricing: {
       base: {
