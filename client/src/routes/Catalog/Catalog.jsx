@@ -1,4 +1,3 @@
-import styles from "./Catalog.module.scss";
 import ClothingIcon from "../../components/ClothingIcon/ClothingIcon";
 import { useState, useEffect } from "react";
 import { useNavigate, useLocation, useParams } from "react-router-dom";
@@ -55,13 +54,13 @@ export default function ClothingCatalog() {
   }, [catalogType]);
 
   return (
-    <div className={styles.landing}>
+    <div className="flex items-center flex-col justify-center pb-[45px] gap-[25px] mb-[150px]">
       {location.pathname.includes("accessories") && (
-        <div className={styles.text__wrapper}>
-          <p>Must order at least 12 units</p>
+        <div className="border border-gray-500 rounded-[10px] h-[40px] flex justify-center items-center px-[5px]">
+          <p className="text-2xl font-bold">Must order at least 12 units</p>
         </div>
       )}
-      <div className={styles.grid}>
+      <div className="flex flex-wrap justify-center gap-[90px] max-w-[900px] min-h-[500px] p-[15px]">
         {catalog.map((item) => {
           // dont filter out customs items if there are no stores for this company (some companies have no stores for some reason)
           if (

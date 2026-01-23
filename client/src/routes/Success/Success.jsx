@@ -1,4 +1,3 @@
-import styles from "./Success.module.scss";
 import { useLocation } from "react-router-dom";
 import { ColorOption } from "../../lib/constants";
 import { getCatalogItem } from "../../lib/utils";
@@ -10,12 +9,12 @@ export default function Success() {
   const cart_keys = Object.keys(cart);
 
   return (
-    <div className={styles.container}>
-      <div className={styles.card}>
+    <div className="flex justify-center p-[100px]">
+      <div className="flex flex-col bg-white w-[800px] p-[15px] gap-[15px] border border-gray-500">
         <div className="flex justify-center text-xl font-bold mb-4">
           <h1>Order Placed Successfully</h1>
         </div>
-        <div className={styles.scrollable}>
+        <div className="relative overflow-y-auto overflow-x-hidden">
           {cart_keys.map((k) => {
             const item = cart[k];
             const itemConfiguration = getCatalogItem(item.code);
@@ -31,30 +30,30 @@ export default function Success() {
                   .toLowerCase()}.jpg`;
 
             return (
-              <div key={k} className={styles.line__item}>
-                <div className={styles.image__container}>
+              <div key={k} className="relative flex h-[320px] mt-[15px]">
+                <div className="flex items-center justify-center w-[300px] min-h-[300px]">
                   <img
-                    className={`${
+                    className={`max-w-[270px] max-h-[270px] ${
                       ["1240", "2240", "1640"].includes(item.code)
-                        ? styles.small
+                        ? "max-h-[100px]"
                         : ""
                     }`}
                     src={imagePath}
                     alt={item.name}
                   />
                 </div>
-                <div className={styles.information__panel}>
-                  <div className={styles.name}>{item.name}</div>
-                  <div className={styles.price}>${item.price} each</div>
+                <div className="absolute top-[40px] left-[300px]">
+                  <div className="text-2xl font-bold mb-[10px]">{item.name}</div>
+                  <div className="font-bold text-lg mb-[15px]">${item.price} each</div>
 
                   {!isDefaultColor && (
-                    <div className={styles.color__title}>
+                    <div className="relative bottom-[10px] font-medium text-lg">
                       Color: {item.color}
                     </div>
                   )}
 
                   {item.embroidery && (
-                    <div className={styles.color__title}>
+                    <div className="relative bottom-[10px] font-medium text-lg">
                       <p>
                         Embroidery: {item.embroidery}
                         {item.secondEmbroidery && ` / ${item.secondEmbroidery}`}
@@ -63,7 +62,7 @@ export default function Success() {
                   )}
 
                   {item.placement && (
-                    <div className={styles.color__title}>
+                    <div className="relative bottom-[10px] font-medium text-lg">
                       Placement: {item.placement}
                       {item.secondPlacement && ` / ${item.secondPlacement}`}
                     </div>
@@ -71,10 +70,10 @@ export default function Success() {
 
                   {/* Only show size if it's not a customs/accessory item where size might be "default" */}
                   {item.size && item.size !== "default" && (
-                    <div className={styles.size}>Size: {item.size}</div>
+                    <div className="relative bottom-[10px] font-medium text-lg">Size: {item.size}</div>
                   )}
 
-                  <div className={styles.quantity}>
+                  <div className="relative bottom-[10px] font-medium text-lg">
                     Quantity: {item.quantity}
                   </div>
                 </div>

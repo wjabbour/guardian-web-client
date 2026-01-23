@@ -1,5 +1,4 @@
 import React, { useMemo } from "react";
-import styles from "./Landing.module.scss";
 import ClothingIcon from "../../components/ClothingIcon/ClothingIcon";
 import { getWebCatalog, getWebConfigValue } from "guardian-common";
 
@@ -70,8 +69,8 @@ export default function Landing() {
   };
 
   return (
-    <div className={styles.landing}>
-      <div className={styles.catalog}>
+    <div className="flex justify-center content-center flex-col mb-[250px] gap-[120px]">
+      <div className="flex flex-wrap justify-center gap-[105px]">
         {CATEGORIES.map((cat) => {
           if (!activeTypes.has(cat.id)) return null;
 

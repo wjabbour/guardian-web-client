@@ -1,4 +1,3 @@
-import styles from "./Thumbnail.module.scss";
 import { getWebConfigValue } from "guardian-common";
 
 export default function Thumbnail({ img }) {
@@ -11,9 +10,9 @@ export default function Thumbnail({ img }) {
 
   return (
     <div
-      className={`${styles.logo_thumbnail} ${show ? styles.show : styles.hide}`}
+      className={`w-[200px] relative ml-[15px] ${show ? "block" : "hidden"}`}
     >
-      {img && <img className={styles.logo} src={getImagePath(img)}></img>}
+      {img && <img className="max-w-[180px]" src={getImagePath(img)}></img>}
     </div>
   );
 }

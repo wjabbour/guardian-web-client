@@ -1,4 +1,3 @@
-import styles from "./Modification.module.scss";
 import { getWebCatalog } from "guardian-common";
 import { useLoaderData, useOutletContext } from "react-router-dom";
 import { useState } from "react";
@@ -166,12 +165,12 @@ export default function Modification() {
   return (
     <div className="flex justify-center">
       <div className="flex gap-[50px] bg-white p-[25px] min-w-[1000px] border border-gray-400">
-        <div className={styles.image__container}>
-          <img src={image_source} alt={item.fullname} />
+        <div className="flex items-center justify-center max-h-[520px] min-w-[400px] max-w-[450px]">
+          <img className="max-h-full max-w-[450px] aspect-auto" src={image_source} alt={item.fullname} />
         </div>
 
-        <div className={`${styles.information__panel} flex flex-col flex-1`}>
-          <div className={styles.name}>{item.fullname}</div>
+        <div className="relative top-[50px] pb-[35px] flex flex-col flex-1">
+          <div className="text-2xl font-bold">{item.fullname}</div>
           {item.type !== "customs" && (
             <div className="font-bold text-[16px] mb-[20px]">
               Starts at ${startsAtPrice} each

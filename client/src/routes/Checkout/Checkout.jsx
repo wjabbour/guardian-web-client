@@ -1,4 +1,3 @@
-import styles from "./Checkout.module.scss";
 import { useOutletContext, useNavigate } from "react-router-dom";
 import { useState, useRef, useEffect } from "react";
 import TextField from "@mui/material/TextField";
@@ -213,7 +212,7 @@ export default function Checkout() {
           <CartItems />
           <TextField
             inputRef={first_name_ref}
-            className={styles.text__field}
+            className="w-[225px]"
             onChange={handle_first_name}
             id=""
             label="First Name"
@@ -221,7 +220,7 @@ export default function Checkout() {
           />
           <TextField
             inputRef={last_name_ref}
-            className={styles.text__field}
+            className="w-[225px]"
             onChange={handle_last_name}
             id=""
             label="Last Name"
@@ -229,7 +228,7 @@ export default function Checkout() {
           />
           <TextField
             inputRef={email_ref}
-            className={styles.text__field}
+            className="w-[225px]"
             onChange={handle_email}
             id=""
             label="Email"
@@ -237,7 +236,7 @@ export default function Checkout() {
           />
           <TextField
             inputRef={customer_po_ref}
-            className={styles.text__field}
+            className="w-[225px]"
             onChange={handle_customer_po}
             id=""
             label="Customer PO"
@@ -245,8 +244,7 @@ export default function Checkout() {
           />
           <FormControl
             inputRef={store_ref}
-            id={styles.move}
-            className={styles.text__field}
+            className="w-[225px] relative right-[10px]"
             variant="filled"
             sx={{ m: 1, minWidth: 120 }}
           >
@@ -264,20 +262,20 @@ export default function Checkout() {
             </Select>
           </FormControl>
           <TextField
-            className={styles.text__field}
+            className="w-[225px]"
             onChange={handle_code}
             label="Code"
             variant="filled"
           />
         </div>
 
-        <div className={styles.subtotal__container}>
-          <div className={styles.subtotal}>
+        <div className="relative h-[150px] border-t border-black">
+          <div className="absolute text-lg top-[15px] left-0 font-medium">
             Subtotal ({calculate_item_count(cart)} items): $
             {calculate_item_price(cart)}
           </div>
           <div className={bypass_paypal || !isPayPalSupported ? "hidden" : ""}>
-            <div className={styles.checkout__container} ref={paypalRef}></div>
+            <div className="relative left-[350px] mt-[15px] w-[400px]" ref={paypalRef}></div>
             <div className="absolute top-2 left-[310px]">
               <Tooltip
                 title={
@@ -299,10 +297,10 @@ export default function Checkout() {
           </div>
 
           <div
-            className={`${styles.bypass__paypal__checkout} ${
+            className={`absolute top-[15px] right-[75px] ${
               !(bypass_paypal || !isPayPalSupported)
-                ? styles.hidden
-                : styles.visible
+                ? "invisible opacity-0 transition-opacity duration-500"
+                : "visible opacity-100"
             }`}
           >
             <LoadingButton
