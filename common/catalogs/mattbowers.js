@@ -1808,6 +1808,23 @@ export const catalog = [
     },
   },
   {
+    code: "BOWNSO-STKR-509947B",
+    name: "Pre Owned Vehicles Sticker",
+    fullname:
+      "White Sticker w/black & process blue imprint (16 in. x 6.5 in.)",
+    description: `Removable adhesive`,
+    colors: ["Black"],
+    type: "customs",
+    supportedStores: ["BOWNSO"],
+    default_color: "Black",
+    quantities: [500],
+    pricing: {
+      base: {
+        price: 3.72,
+      },
+    },
+  },    
+  {
     code: "G10D",
     name: "Hex Screws for Frames",
     fullname: "Self-Tapping #14 x 3/4 Hex Slot Head Screw (100/bx) #EZ244",
@@ -2600,30 +2617,13 @@ export const catalog = [
         price: 3.72,
       },
     },
-  },
-  {
-    code: "BOWNSO-STKR-509947B",
-    name: "Pre Owned Vehicles Sticker",
-    fullname:
-      "White Sticker w/black & process blue imprint (16 in. x 6.5 in.)",
-    description: `Removable adhesive`,
-    colors: ["Black"],
-    type: "custom",
-    supportedStores: ["BOWNSO"],
-    default_color: "Black",
-    quantities: [500],
-    pricing: {
-      base: {
-        price: 3.72,
-      },
-    },
-  },        
+  },      
   {
     code: "BOWHGU-3200-500034B",
     name: "Addendum Form",
     fullname: "4-1/4 in. x 11 in. Addendum Form w/black & reflex blue imprint",
     colors: ["Blue"],
-    type: "custom",
+    type: "customs",
     default_color: "Blue",
     supportedStores: ["BOWHGU"],   
     quantities: [500],
