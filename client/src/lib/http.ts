@@ -97,9 +97,7 @@ export async function login(password) {
   const body = { password };
 
   try {
-    const response = await axios.post(`${hostname}/v1/login`, body, {
-      withCredentials: true,
-    });
+    const response = await axios.post(`${hostname}/v1/login`, body);
     return { success: { data: response.data }, error: null };
   } catch (e) {
     return handleError(e, "Failed to login.");
