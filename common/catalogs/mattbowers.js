@@ -2569,7 +2569,7 @@ export const catalog = [
     },
   },
   {
-    code: "BOWNSO-STKR-497619A",
+    code: "BOWNSO-1820-497619A",
     name: "Service Due Sticker",
     fullname:
       "White Vinyl Service Due Sticker w/black imprint (1.5 in. x 2.25 in.)",
@@ -2581,12 +2581,12 @@ export const catalog = [
     quantities: [2500],
     pricing: {
       base: {
-        price: 0.09,
+        price: 0.16,
       },
     },
   },
   {
-    code: "BOWNSO-STICKER-509947B",
+    code: "BOWNSO-STKR-509947B",
     name: "Pre Owned Vehicles Sticker",
     fullname:
       "White Sticker w/black & process blue imprint (16 in. x 6.5 in.)",
@@ -2600,7 +2600,24 @@ export const catalog = [
         price: 3.72,
       },
     },
-  },    
+  },
+  {
+    code: "BOWNSO-STKR-509947B",
+    name: "Pre Owned Vehicles Sticker",
+    fullname:
+      "White Sticker w/black & process blue imprint (16 in. x 6.5 in.)",
+    description: `Removable adhesive`,
+    colors: ["Black"],
+    type: "custom",
+    supportedStores: ["BOWNSO"],
+    default_color: "Black",
+    quantities: [500],
+    pricing: {
+      base: {
+        price: 3.72,
+      },
+    },
+  },        
   {
     code: "BOWHGU-3200-500034B",
     name: "Addendum Form",
