@@ -1434,7 +1434,7 @@ export const catalog = [
     quantities: [1000, 1500, 2500],
     pricing: {
       base: {
-        price: 0.39,
+        price: 1.99,
       },
     },
   },
@@ -2034,7 +2034,7 @@ export const catalog = [
     quantities: [250, 500, 1000],
     pricing: {
       base: {
-        price: 8.99,
+        price: 9.99,
       },
     },
   },
