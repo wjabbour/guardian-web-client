@@ -2609,7 +2609,7 @@ export const catalog = [
       "White Sticker w/black & process blue imprint (16 in. x 6.5 in.)",
     description: `Removable adhesive`,
     colors: ["Black"],
-    type: "service",
+    type: "sales",
     default_color: "Black",
     quantities: [500],
     pricing: {
