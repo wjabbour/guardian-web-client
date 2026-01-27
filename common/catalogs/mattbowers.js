@@ -2279,6 +2279,22 @@ export const catalog = [
       },
     },
   },
+   {
+    code: "BOWNSO-STKR-509947B",
+    name: "Pre Owned Vehicles Sticker",
+    fullname:
+      "White Sticker w/black & process blue imprint (16 in. x 6.5 in.)",
+    description: `Removable adhesive`,
+    colors: ["Black"],
+    type: "sales",
+    default_color: "Black",
+    quantities: [500],
+    pricing: {
+      base: {
+        price: 3.72,
+      },
+    },
+  },      
   {
     code: "GP788",
     name: "Not For Sale Sticker",
@@ -2601,23 +2617,7 @@ export const catalog = [
         price: 0.16,
       },
     },
-  },
-  {
-    code: "BOWNSO-STKR-509947B",
-    name: "Pre Owned Vehicles Sticker",
-    fullname:
-      "White Sticker w/black & process blue imprint (16 in. x 6.5 in.)",
-    description: `Removable adhesive`,
-    colors: ["Black"],
-    type: "sales",
-    default_color: "Black",
-    quantities: [500],
-    pricing: {
-      base: {
-        price: 3.72,
-      },
-    },
-  },      
+  }, 
   {
     code: "BOWHGU-3200-500034B",
     name: "Addendum Form",
