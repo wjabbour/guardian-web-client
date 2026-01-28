@@ -495,6 +495,91 @@ export const catalog = [
     },
   },
   {
+    code: "EIT50",
+    name: "Self-Locking Key Tags",
+    fullname: "Self-Locking Key Tags (#EIT50)",
+    colors: ["Blue", "Green", "Orange", "Red", "Yellow", "White"],
+    description: '1000 per pack',
+    type: "service",
+    default_color: "Blue",
+    quantities: [1,2,3,4,5,6,7,8,9,10],
+    pricing: {
+      base: {
+        price: 36.99,
+      },
+    },
+  },
+  {
+    code: "600088V",
+    name: "Seat Covers (roll)",
+    fullname: "No-Slip Plastic Seat Covers (#600088V)",
+    description: '500 seat covers per roll',
+    colors: ["Plastic"],
+    type: "service",
+    default_color: "Plastic",    
+    pricing: {
+      base: {
+        price: 73.50,
+      },
+    },
+  },
+  {
+    code: "55-010",
+    name: "Steering Wheel Covers",
+    fullname: "Steering Wheel Covers (#55-010)",
+    description:'500 covers per box',
+    colors: ["Plastic"],
+    type: "service",
+    default_color: "Plastic",    
+    pricing: {
+      base: {
+        price: 59.99,
+      },
+    },
+  },
+  {
+    code: "3044",
+    name: "Spring Rings",
+    fullname: "Metal Spring Rings (#3044)",
+    description: '250 rings per pack',
+    colors: ["Metal"],
+    type: "service",
+    default_color: "Metal",
+    pricing: {
+      base: {
+        price: 15.99,
+      },
+    },
+  },
+  {
+    code: "3088",
+    name: "Floor Mats",
+    fullname: "Floor Mats/Coated Paper (#3088)",
+    description: '500 mats per box',
+    colors: ["White"],
+    type: "service",
+    default_color: "White",    
+    pricing: {
+      base: {
+        price: 76.44,
+      },
+    },
+  },
+  {
+    code: "NDESTOCK",
+    name: "Night Drop Envelopes",
+    fullname: "Night Drop Envelopes (#NDESTOCK)",
+    description:'500 per box',
+    colors: ["White"],
+    type: "service",
+    default_color: "White",
+    pricing: {
+      base: {
+        price: 99.00,
+      },
+    },
+  },
+  {
     code: "TH100",
     name: "Temp L/P Protector #TH100",
     fullname: "License Plate Protector (100/pk)",

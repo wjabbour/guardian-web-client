@@ -294,7 +294,7 @@ export const catalog = [
     },
   },
   {
-    code: "55010",
+    code: "55-010",
     name: "Steering Wheel Covers",
     fullname: "Steering Wheel Covers (500/bx)",
     description: "Enter a qty of '1' to order one box", 

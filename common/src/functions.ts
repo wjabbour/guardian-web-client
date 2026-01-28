@@ -34,6 +34,8 @@ import { config as MattbowersConfig } from "../configs/mattbowers";
 import { config as JcmortgageConfig } from "../configs/jcmortgage";
 // @ts-ignore
 import { config as McdonaldConfig } from "../configs/mcdonald";
+// @ts-ignore
+import { config as RossdowningConfig } from "../configs/rossdowning";
 
 // @ts-ignore - JS catalog files don't have type declarations
 import { catalog as CannonCatalog } from "../catalogs/cannon";
@@ -69,6 +71,8 @@ import { catalog as MattbowersCatalog } from "../catalogs/mattbowers";
 import { catalog as JcmortgageCatalog } from "../catalogs/jcmortgage";
 // @ts-ignore
 import { catalog as McdonaldCatalog } from "../catalogs/mcdonald";
+// @ts-ignore
+import { catalog as RossdowningCatalog } from "../catalogs/rossdowning";
 
 const DEFAULT_CONFIG = {
   title: "Guardian",
@@ -95,6 +99,7 @@ const allConfigs: any[] = [
   MattbowersConfig,
   JcmortgageConfig,
   McdonaldConfig,
+  RossdowningConfig,
 ];
 
 export function getStoreCode(companyName: string, storeAddress: string): string | undefined {
@@ -171,6 +176,8 @@ export function getWebCatalog(): any {
     return JcmortgageCatalog;
   } else if (url.includes("mcdonald")) {
     return McdonaldCatalog;
+  } else if (url.includes("rossdowning")) {
+    return RossdowningCatalog;
   }
 }
 
@@ -213,6 +220,8 @@ export function getCatalog(companyName: string): any {
       return JcmortgageCatalog;
     case "Mcdonald":
       return McdonaldCatalog;
+    case "Rossdowning":
+      return RossdowningCatalog;
   }
 }
 
@@ -254,6 +263,8 @@ export function getWebConfigValue(val: string): any {
     return (JcmortgageConfig as any)[val];
   } else if (url.includes("mcdonald")) {
     return (McdonaldConfig as any)[val];
+  } else if (url.includes("rossdowning")) {
+    return (RossdowningConfig as any)[val];
   } else {
     // when the user is on gpc81.com landing page we need to display a string in the browser tab
     return (DEFAULT_CONFIG as any)[val];
@@ -295,6 +306,8 @@ export function getConfigValue(val: string, config: string): any {
       return (JcmortgageConfig as any)[val];
     case "Mcdonald":
       return (McdonaldConfig as any)[val];
+    case "Rossdowning":
+      return (RossdowningConfig as any)[val];
   }
 }
 

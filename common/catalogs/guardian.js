@@ -4594,7 +4594,7 @@ export const catalog = [
     },
   },
   {
-    code: "55010",
+    code: "55-010",
     name: "Steering Wheel Covers",
     fullname: "Steering Wheel Covers (500/bx)",
     colors: ["Plastic"],

@@ -1,0 +1,66 @@
+export const config = {
+  title: "Rossdowning",
+  company_logo: "ross_downing.png",
+  logo_placements: {
+    mens: ["Left Chest"],
+    womens: ["Left Chest"],
+    hat: [],
+    tshirts: ["Left Chest"],
+  },
+  show_image_preview: true,
+  minimum_apparel_order: false,
+  enable_customs_store_picker: true,
+  embroideries: {
+    mens: [],
+    womens: [],
+    tshirts: [],
+    hat:  [],
+    customs: [],
+    office: [],
+    service: [],
+    sales: [],
+    detail: [],
+    bodyshop: [],
+    parts: [],
+    accessory: [],        
+  },
+  email_recipients: [
+    "rgreenberg@gpcorp.com",       
+    "shanell@gpcorp.com",
+    "webportalorders@gpcorp.com",    
+  ],
+  stores: [
+    {
+      name: "Ross Downing CDJR (Mobile)",
+      address: "1150 Schillinger Rd S, Mobile, AL 36695",
+      code: "DOWCMO",
+    },
+    {
+      name: "Ross Downing Chevrolet (Hammond)",
+      address: "600 S Morrison Blvd, Hammond, LA 70403",
+      code: "DOWCHA",
+    },
+    {
+      name: "Ross Downing Buick GMC (Hammond)",
+      address: "1301 S Morrison Blvd, Hammond, LA 70403",
+      code: "ROSBHA",
+    },
+    {
+      name: "Ross Downing Buick GMC (Gonzales)",
+      address: "2522 S Burnside Avenue, Gonzales, LA 70737",
+      code: "DOWBGO",
+    },
+    {
+      name: "Ross Downing CDJR (Hammond)",
+      address: "500 Westin Oaks Drive, Hammond, LA 70403",
+      code: "DOWDHA", 
+    },    
+            
+    ],
+  bypass_codes: ["ROSSDOWNING"],
+  server_hostname: "https://mxfj3q6m01.execute-api.us-east-1.amazonaws.com",
+  account_reps: [{ name: "Richard Greenberg", phone: "678-287-1635" },],   
+  route_prefix: "/rossdowning",
+  paypal_not_supported: true,
+  password: "RossdowninG",
+};
