@@ -186,7 +186,7 @@ export const catalog = [
       "3XLarge": { price: 0.00 },
       "4XLarge": { price: 0.00 },
     },
-  },
+  },  
   {
     code: "PC61",
     name: "Port & Company® Tee",
