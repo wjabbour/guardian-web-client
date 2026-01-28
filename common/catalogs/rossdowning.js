@@ -430,7 +430,7 @@ export const catalog = [
     code: "ST350",
     name: "Sport-Tek PosiCharge Tee",
     fullname: "Sport-Tek PosiCharge Competitor Tee",
-    description: 'Up to size 4XL only: Forest Green, Kelly Green, Neon Pink, Purple',
+    description: '*Up to size 4XL only: Forest Green, Kelly Green, Neon Pink, Purple',
     colors: [
       "Black",   
       "Forest Green",
