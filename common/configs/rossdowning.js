@@ -1,6 +1,6 @@
 export const config = {
   title: "Rossdowning",
-  company_logo: "ross_downing.png",
+  company_logo: "ross_downing1.png",
   logo_placements: {
     mens: ["Left Chest"],
     womens: ["Left Chest"],
