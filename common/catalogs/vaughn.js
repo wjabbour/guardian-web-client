@@ -399,8 +399,8 @@ export const catalog = [
   },
   {
     code: "GP200",
-    name: "Key Tags #GP200",
-    fullname: "Self-Protecting Key Tags #200 (250/bx)",
+    name: "Key Tags",
+    fullname: "Self-Protecting Key Tags (#GP200)",    
     colors: [
       "Blue",
       "Gray",
@@ -415,7 +415,7 @@ export const catalog = [
     ],
     type: "sales",
     default_color: "Blue", 
-    description: '1 box: $36.95, 10 boxes: $30.00',   
+    description: '250/box; 1 box: $36.95, 10 boxes: $30.00',   
     quantities: [1, 10],
     pricing: {
       base: {
@@ -428,12 +428,12 @@ export const catalog = [
   },
   {
     code: "VT400",
-    name: "Stock Stickers #VT400",
-    fullname: "Kleer-Back Stock Stickers Versa #400 (100/pk)",
+    name: "Stock Stickers",
+    fullname: "Kleer-Back Stock Stickers Versa (#VT400)",    
     colors: ["Blue", "Green", "Orange", "Red", "White", "Yellow"],
     type: "sales",
     default_color: "Blue",
-    description: '1 pack: $17.95, 10 packs: $12.00',
+    description: '100/pk; 1 pack: $17.95, 10 packs: $12.00',
     quantities: [1, 10],
     pricing: {
       base: {
@@ -446,8 +446,9 @@ export const catalog = [
   },
   {
     code: "SDNRG",
-    name: "Service Hang Numbers #SDNRG",
-    fullname: "Service Hang Numbers (1000/bx)",
+    name: "Service Hang Numbers",
+    fullname: "Service Hang Numbers (#SDNRG)",
+    description: '1000 per box',
     colors: ["White"],
     variations: [
       "0000",
@@ -471,8 +472,9 @@ export const catalog = [
   },
   {
     code: "SDNC",
-    name: "Service Numbers #SDNC",
-    fullname: "Mirror Hang Service Numbers (1000/bx)",
+    name: "Service Numbers",
+    fullname: "Mirror Hang Service Numbers (#SDNC)",
+    description:'1000 per box',
     colors: [
       "Blue",
       "Green",
