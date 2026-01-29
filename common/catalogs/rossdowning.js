@@ -549,7 +549,7 @@ export const catalog = [
   },
   {
     code: "ROSBHA-34CF-492025A",
-    name: "Chrome Faced Plastic Frame",
+    name: "Chrome Faced Frame",
     fullname: "Chrome Faced Plastic Frame",
     colors: ["Chrome Faced"],
     type: "customs",
@@ -619,6 +619,121 @@ export const catalog = [
         discount: {
           2500: .63,
           5000: .60,
+        }, 
+      },
+    },
+  },
+  {
+    code: "DOWCMO-33GT-518391Z",
+    name: ".15 Gauge Plastic Plate",
+    fullname: ".15 Gauge 4CP White Plastic Plate",
+    colors: ["White"],
+    type: "customs",
+    supportedStores: ["DOWCMO"],
+    default_color: "White",    
+    quantities: [1500, 2500, 5000],
+    pricing: {
+      base: {
+        price: .70,
+        discount: {
+          2500: .63,
+          5000: .60,
+        }, 
+      },
+    },
+  },
+  {
+    code: "DOWBGO-33GT-506329Z",
+    name: ".15 Gauge Plastic Plate",
+    fullname: ".15 Gauge 4CP White Plastic Plate",
+    colors: ["White"],
+    type: "customs",
+    supportedStores: ["DOWBGO"],
+    default_color: "White",    
+    quantities: [1500, 2500, 5000],
+    pricing: {
+      base: {
+        price: .70,
+        discount: {
+          2500: .63,
+          5000: .60,
+        }, 
+      },
+    },
+  },
+  {
+    code: "ROSBHA-33GT-506328Z",
+    name: ".15 Gauge Plastic Plate",
+    fullname: ".15 Gauge 4CP White Plastic Plate",
+    colors: ["White"],
+    type: "customs",
+    supportedStores: ["ROSBHA"],
+    default_color: "White",    
+    quantities: [1500, 2500, 5000],
+    pricing: {
+      base: {
+        price: .70,
+        discount: {
+          2500: .63,
+          5000: .60,
+        }, 
+      },
+    },
+  },
+  {
+    code: "DOWCHA-31DD-520514A",
+    name: "Block Decal - White",
+    fullname: "Block Decal (White - No Outline) - 5 in. x .5125 in.",
+    description: 'Grey does not print.',
+    colors: ["White"],
+    type: "customs",
+    supportedStores: ["DOWCHA"],
+    default_color: "White",    
+    quantities: [1000, 2500, 5000],
+    pricing: {
+      base: {
+        price: .60,
+        discount: {
+          2500: .55,
+          5000: .50,
+        }, 
+      },
+    },
+  },
+  {
+    code: "DOWCHA-31DD-491422A",
+    name: "Block Decal - Black",
+    fullname: "Block Decal (Black - No Outline) - 5 in. x .5125 in.",
+    colors: ["Black"],
+    type: "customs",
+    supportedStores: ["DOWCHA"],
+    default_color: "Black",    
+    quantities: [1000, 2500, 5000],
+    pricing: {
+      base: {
+        price: .60,
+        discount: {
+          2500: .55,
+          5000: .50,
+        }, 
+      },
+    },
+  },
+  {
+    code: "DOWCHA-31DD-433238A",
+    name: "Cursive Decal - Black",
+    fullname: "Black Cursive Decal - 8.5 in. x 1.41 in.",
+    colors: ["Black"],
+    type: "customs",
+    supportedStores: ["DOWCHA"],
+    default_color: "Black",    
+    quantities: [1000, 2500, 5000],
+    pricing: {
+      base: {
+        price: .60,
+        discount: {
+          2500: .55,
+          5000: .50,
         }, 
       },
     },
