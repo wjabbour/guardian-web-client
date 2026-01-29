@@ -528,4 +528,23 @@ export const catalog = [
       "4XLarge": { price: 20.25 },
     },
   },
+  {
+    code: "DOWCHA-34PEU-431961A",
+    name: "Black Plastic Frame",
+    fullname: "Black Plastic Frame w/white imprint",
+    colors: ["Black"],
+    type: "customs",
+    supportedStores: ["DOWCHA"],
+    default_color: "Black",    
+    quantities: [1500, 2500, 5000],
+    pricing: {
+      base: {
+        price: .75,
+        discount: {
+          2500: .65,
+          5000: .60,
+        }, 
+      },
+    },
+  },
 ];
