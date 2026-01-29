@@ -743,6 +743,7 @@ export const catalog = [
     name: "Cursive Decal - White",
     fullname: "White Cursive Decal - 8.5 in. x 1.41 in.",
     colors: ["White"],
+    description: 'Grey does not print.',
     type: "customs",
     supportedStores: ["DOWCHA"],
     default_color: "White",    
@@ -783,7 +784,7 @@ export const catalog = [
     colors: ["White"],
     type: "customs",
     supportedStores: ["DOWCHA"],
-        
+    default_color: "White",    
     quantities: [1000, 2500, 5000],
     pricing: {
       base: {
@@ -791,6 +792,105 @@ export const catalog = [
         discount: {
           2500: .55,
           5000: .50,
+        }, 
+      },
+    },
+  },
+  {
+    code: "DOWCHA-31DD-520511A",
+    name: "Block Decal - White",
+    fullname: "Outlined White Decal - 6 in. x .64 in.",
+    colors: ["White"],
+    type: "customs",
+    supportedStores: ["DOWCHA"],
+    default_color: "White",    
+    quantities: [1000, 2500, 5000],
+    pricing: {
+      base: {
+        price: .60,
+        discount: {
+          2500: .55,
+          5000: .50,
+        }, 
+      },
+    },
+  },
+  {
+    code: "DOWCHA-31DD-496997A",
+    name: "Block Decal - Black",
+    fullname: "Outlined Black Decal - 6 in. x .64 in.",
+    description: 'Grey does not print.',
+    colors: ["Black"],
+    type: "customs",
+    supportedStores: ["DOWCHA"],
+    default_color: "Black",    
+    quantities: [1000, 2500, 5000],
+    pricing: {
+      base: {
+        price: .60,
+        discount: {
+          2500: .55,
+          5000: .50,
+        }, 
+      },
+    },
+  },
+  {
+    code: "DOWCHA-5310-520505A",
+    name: "Deal Jacket - Yellow",
+    fullname: "Deal Jacket - Yellow",
+    description: '500 per box',
+    colors: ["Yellow"],
+    type: "customs",
+    supportedStores: ["DOWCHA"],
+    default_color: "Yellow",    
+    quantities: [500, 1000, 2500],
+    pricing: {
+      base: {
+        price: .42,
+        discount: {
+          1000: .32,
+          2500: .30,
+        }, 
+      },
+    },
+  },
+  {
+    code: "DOWCHM-533-520506A",
+    name: "Deal Jacket - Green",
+    fullname: "Deal Jacket - Green",
+    description: '500 per box',
+    colors: ["Green"],
+    type: "customs",
+    supportedStores: ["DOWCHM"],
+    default_color: "Green",    
+    quantities: [500, 1000, 2500],
+    pricing: {
+      base: {
+        price: .42,
+        discount: {
+          1000: .32,
+          2500: .30,
+        }, 
+      },
+    },
+  },
+  {
+    code: "DOWDHA-536-520509A",
+    name: "Deal Jacket - Purple",
+    fullname: "Deal Jacket - Purple",
+    description: '500 per box',
+    colors: ["Purple"],
+    type: "customs",
+    supportedStores: ["DOWDHA"],
+    default_color: "Purple",    
+    quantities: [500, 1000, 2500],
+    pricing: {
+      base: {
+        price: .42,
+        discount: {
+          1000: .32,
+          2500: .30,
         }, 
       },
     },
