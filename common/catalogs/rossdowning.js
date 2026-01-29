@@ -936,11 +936,11 @@ export const catalog = [
     name: "Maintenance Folio",
     fullname: "White/Red Marble Crush Cardstock Doc Folder w/black imprint",
     description: '9.875 in. x 6 in.',    
-    colors: ["White Red"],
+    colors: ["WhiteRed"],
     halfcolors: ["White Red"],
     type: "customs",
     supportedStores: ["DOWCHA"],
-    default_color: "White Red",    
+    default_color: "WhiteRed",    
     quantities: [500, 1000, 2500],
     pricing: {
       base: {
