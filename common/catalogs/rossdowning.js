@@ -738,4 +738,61 @@ export const catalog = [
       },
     },
   },
+  {
+    code: "DOWCHA-31DD-520517A",
+    name: "Cursive Decal - White",
+    fullname: "White Cursive Decal - 8.5 in. x 1.41 in.",
+    colors: ["White"],
+    type: "customs",
+    supportedStores: ["DOWCHA"],
+    default_color: "White",    
+    quantities: [1000, 2500, 5000],
+    pricing: {
+      base: {
+        price: .60,
+        discount: {
+          2500: .55,
+          5000: .50,
+        }, 
+      },
+    },
+  },
+  {
+    code: "DOWCHA-31DD-496593A",
+    name: "Cursive Decal - Black",
+    fullname: "Black Cursive Decal - 6 in. x 1.21 in.",
+    colors: ["Black"],
+    type: "customs",
+    supportedStores: ["DOWCHA"],
+    default_color: "Black",    
+    quantities: [1000, 2500, 5000],
+    pricing: {
+      base: {
+        price: .60,
+        discount: {
+          2500: .55,
+          5000: .50,
+        }, 
+      },
+    },
+  },
+  {
+    code: "DOWCHA-31DD-520504A",
+    name: "Cursive Decal - White",
+    fullname: "White Cursive Decal - 6 in. x 1.21 in.",
+    colors: ["White"],
+    type: "customs",
+    supportedStores: ["DOWCHA"],
+        
+    quantities: [1000, 2500, 5000],
+    pricing: {
+      base: {
+        price: .60,
+        discount: {
+          2500: .55,
+          5000: .50,
+        }, 
+      },
+    },
+  },
 ];
