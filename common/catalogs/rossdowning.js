@@ -547,4 +547,80 @@ export const catalog = [
       },
     },
   },
+  {
+    code: "ROSBHA-34CF-492025A",
+    name: "Black Plastic Frame",
+    fullname: "Chrome Faced Plastic Frame",
+    colors: ["Chrome Faced"],
+    type: "customs",
+    supportedStores: ["ROSBHA"],
+    default_color: "Chrome Faced",    
+    quantities: [500, 1000, 2500],
+    pricing: {
+      base: {
+        price: 1.40,
+        discount: {
+          1000: 1.39,
+          2500: 1.36,
+        }, 
+      },
+    },
+  },
+  {
+    code: "DOWCHA-33P-432413B",
+    name: ".15 Gauge White Plastic Plate",
+    fullname: ".15 Gauge White Plastic Plate w/534 blue & 186 red",
+    colors: ["White"],
+    type: "customs",
+    supportedStores: ["DOWCHA"],
+    default_color: "White",    
+    quantities: [1500, 2500, 5000],
+    pricing: {
+      base: {
+        price: .70,
+        discount: {
+          2500: .63,
+          5000: .60,
+        }, 
+      },
+    },
+  },
+  {
+    code: "ROSBHA-33GT-506328Z",
+    name: ".15 Gauge White Plastic Plate",
+    fullname: ".15 Gauge White Plastic Plate w/full color imprint",
+    colors: ["White"],
+    type: "customs",
+    supportedStores: ["ROSBHA"],
+    default_color: "White",    
+    quantities: [1500, 2500, 5000],
+    pricing: {
+      base: {
+        price: .70,
+        discount: {
+          2500: .63,
+          5000: .60,
+        }, 
+      },
+    },
+  },
+  {
+    code: "DOWDHA-33GT-492348Z",
+    name: ".15 Gauge White Plastic Plate",
+    fullname: ".15 Gauge 4CP White Plastic Plate",
+    colors: ["White"],
+    type: "customs",
+    supportedStores: ["DOWDHA"],
+    default_color: "White",    
+    quantities: [1500, 2500, 5000],
+    pricing: {
+      base: {
+        price: .70,
+        discount: {
+          2500: .63,
+          5000: .60,
+        }, 
+      },
+    },
+  },
 ];

@@ -1286,24 +1286,20 @@
   background-color: #000000;
 }
 
-.Mediterranean_Blue {
-  background-color: #063e72;
-}
-
-.Metal {
-  background-color: rgb(151, 151, 151);
-}
-
-.Metallic {
-  background-color: rgb(151, 151, 151);
-}
-
 .Maroon {
   background-color: #421111;
 }
 
 .Marshmallow {
   background-color: #f5ecec;
+}
+
+.Matte_Silver {
+  background-color: #bdb6b6;
+}
+
+.Mediterranean_Blue {
+  background-color: #063e72;
 }
 
 .Medium_Blue {
@@ -1322,8 +1318,16 @@
   background-color: #5b5e5c;
 }
 
+.Metal {
+  background-color: rgb(151, 151, 151);
+}
+
 .Metal_Blue_Hthr {
   background-color: #9fc5f0;
+}
+
+.Metallic {
+  background-color: rgb(151, 151, 151);
 }
 
 .Midas {
