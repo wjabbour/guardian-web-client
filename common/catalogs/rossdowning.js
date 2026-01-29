@@ -781,6 +781,7 @@ export const catalog = [
     code: "DOWCHA-31DD-520504A",
     name: "Cursive Decal - White",
     fullname: "White Cursive Decal - 6 in. x 1.21 in.",
+    description: 'Grey does not print.',
     colors: ["White"],
     type: "customs",
     supportedStores: ["DOWCHA"],
@@ -838,8 +839,7 @@ export const catalog = [
   {
     code: "DOWCHA-5310-520505A",
     name: "Deal Jacket - Yellow",
-    fullname: "Deal Jacket - Yellow",
-    description: '500 per box',
+    fullname: "Deal Jacket - Yellow (500 per box)",    
     colors: ["Yellow"],
     type: "customs",
     supportedStores: ["DOWCHA"],
@@ -858,8 +858,7 @@ export const catalog = [
   {
     code: "DOWCHM-533-520506A",
     name: "Deal Jacket - Green",
-    fullname: "Deal Jacket - Green",
-    description: '500 per box',
+    fullname: "Deal Jacket - Green (500 per box)",    
     colors: ["Green"],
     type: "customs",
     supportedStores: ["DOWCHM"],
@@ -878,8 +877,7 @@ export const catalog = [
   {
     code: "DOWDHA-536-520509A",
     name: "Deal Jacket - Purple",
-    fullname: "Deal Jacket - Purple",
-    description: '500 per box',
+    fullname: "Deal Jacket - Purple (500 per box)",    
     colors: ["Purple"],
     type: "customs",
     supportedStores: ["DOWDHA"],
@@ -891,6 +889,65 @@ export const catalog = [
         discount: {
           1000: .32,
           2500: .30,
+        }, 
+      },
+    },
+  },
+  {
+    code: "DOWCMO-5330-520510A",
+    name: "Deal Jacket - Red",
+    fullname: "Deal Jacket - Red (500 per box)",    
+    colors: ["Red"],
+    type: "customs",
+    supportedStores: ["DOWCMO"],
+    default_color: "Red",    
+    quantities: [500, 1000, 2500],
+    pricing: {
+      base: {
+        price: .42,
+        discount: {
+          1000: .32,
+          2500: .30,
+        }, 
+      },
+    },
+  },
+  {
+    code: "DOWBGO-532-520507A",
+    name: "Deal Jacket - Blue",
+    fullname: "Deal Jacket - Blue (500 per box)",    
+    colors: ["Blue"],
+    type: "customs",
+    supportedStores: ["DOWBGO"],
+    default_color: "Blue",    
+    quantities: [500, 1000, 2500],
+    pricing: {
+      base: {
+        price: .42,
+        discount: {
+          1000: .32,
+          2500: .30,
+        }, 
+      },
+    },
+  },
+  {
+    code: "DOWCHA-0201-470224A",
+    name: "Maintenance Folio",
+    fullname: "White/Red Marble Crush Cardstock Doc Folder w/black imprint",
+    description: '9.875 in. x 6 in.',    
+    colors: ["White Red"],
+    halfcolors: ["White Red"],
+    type: "customs",
+    supportedStores: ["DOWCHA"],
+    default_color: "White Red",    
+    quantities: [500, 1000, 2500],
+    pricing: {
+      base: {
+        price: 1.35,
+        discount: {
+          1000: 1.09,
+          2500: .99,
         }, 
       },
     },
