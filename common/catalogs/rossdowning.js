@@ -937,7 +937,7 @@ export const catalog = [
     fullname: "White/Red Marble Crush Cardstock Doc Folder w/black imprint",
     description: '9.875 in. x 6 in.',    
     colors: ["WhiteRed"],
-    halfcolors: ["White Red"],
+    halfColors: ["White Red"],
     type: "customs",
     supportedStores: ["DOWCHA"],
     default_color: "WhiteRed",    
