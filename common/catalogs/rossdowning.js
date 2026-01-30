@@ -952,4 +952,46 @@ export const catalog = [
       },
     },
   },
+  {
+    code: "ROSBHA-0201-435361A",
+    name: "Maintenance Folio",
+    fullname: "White/Black Marble Crush Cardstock Doc Folder w/black imprint",
+    description: '9.875 in. x 6 in.',    
+    colors: ["White Black"],
+    halfColors: ["White Black"],
+    type: "customs",
+    supportedStores: ["DOWCHA"],
+    default_color: "White Black",    
+    quantities: [500, 1000, 2500],
+    pricing: {
+      base: {
+        price: 1.35,
+        discount: {
+          1000: 1.09,
+          2500: .99,
+        }, 
+      },
+    },
+  },
+  {
+    code: "DOWDHA-0201-492366A",
+    name: "Maintenance Folio",
+    fullname: "White/Red Marble Crush Cardstock Doc Folder w/black imprint",
+    description: '9.875 in. x 6 in.',    
+    colors: ["White Red"],
+    halfColors: ["White Red"],
+    type: "customs",
+    supportedStores: ["DOWCHA"],
+    default_color: "White Red",    
+    quantities: [500, 1000, 2500],
+    pricing: {
+      base: {
+        price: 1.35,
+        discount: {
+          1000: 1.09,
+          2500: .99,
+        }, 
+      },
+    },
+  },
 ];
