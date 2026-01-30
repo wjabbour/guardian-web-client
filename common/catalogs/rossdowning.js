@@ -994,4 +994,124 @@ export const catalog = [
       },
     },
   },
+  {
+    code: "DOWCMO-0201-518398A",
+    name: "Maintenance Folio",
+    fullname: "White/Red Marble Crush Cardstock Doc Folder w/black imprint",
+    description: '9.875 in. x 6 in.',    
+    colors: ["White Red"],
+    halfColors: ["White Red"],
+    type: "customs",
+    supportedStores: ["DOWCMO"],
+    default_color: "White Red",    
+    quantities: [500, 1000, 2500],
+    pricing: {
+      base: {
+        price: 1.35,
+        discount: {
+          1000: 1.09,
+          2500: .99,
+        }, 
+      },
+    },
+  },
+  {
+    code: "DOWBGO-0201-506330A",
+    name: "Maintenance Folio",
+    fullname: "White/Red Marble Crush Cardstock Doc Folder w/black imprint",
+    description: '9.875 in. x 6 in.',    
+    colors: ["White Red"],
+    halfColors: ["White Red"],
+    type: "customs",
+    supportedStores: ["DOWBGO"],
+    default_color: "White Red",    
+    quantities: [500, 1000, 2500],
+    pricing: {
+      base: {
+        price: 1.35,
+        discount: {
+          1000: 1.09,
+          2500: .99,
+        }, 
+      },
+    },
+  },
+  {
+    code: "ROSBHA-0201-500896A",
+    name: "Maintenance Folio",
+    fullname: "White/Red Marble Crush Cardstock Doc Folder w/black imprint",
+    description: '9.875 in. x 6 in.',    
+    colors: ["White Red"],
+    halfColors: ["White Red"],
+    type: "customs",
+    supportedStores: ["ROSBHA"],
+    default_color: "White Red",    
+    quantities: [500, 1000, 2500],
+    pricing: {
+      base: {
+        price: 1.35,
+        discount: {
+          1000: 1.09,
+          2500: .99,
+        }, 
+      },
+    },
+  },
+  {
+    code: "DOWDHA-DUCK-520521A",
+    name: "2 in. Duck - Red",
+    fullname: "2 in. Rubber Duck w/white imprint - Red",        
+    colors: ["Red"],    
+    type: "customs",
+    supportedStores: ["DOWDHA"],
+    default_color: "Red",    
+    quantities: [125, 250, 500],
+    pricing: {
+      base: {
+        price: 1.75,
+        discount: {
+          250: 1.50,
+          500: 1.25,
+        }, 
+      },
+    },
+  },
+  {
+    code: "DOWDHA-DUCK-520522A",
+    name: "2 in. Duck - Purple",
+    fullname: "2 in. Rubber Duck w/white imprint - Purple",        
+    colors: ["Purple"],    
+    type: "customs",
+    supportedStores: ["DOWDHA"],
+    default_color: "Purple",    
+    quantities: [125, 250, 500],
+    pricing: {
+      base: {
+        price: 1.75,
+        discount: {
+          250: 1.50,
+          500: 1.25,
+        }, 
+      },
+    },
+  },
+  {
+    code: "DOWDHA-DUCK-520525A",
+    name: "2 in. Duck - Gold",
+    fullname: "2 in. Rubber Duck w/white imprint - Gold",        
+    colors: ["Gold"],    
+    type: "customs",
+    supportedStores: ["DOWDHA"],
+    default_color: "Gold",    
+    quantities: [125, 250, 500],
+    pricing: {
+      base: {
+        price: 1.75,
+        discount: {
+          250: 1.50,
+          500: 1.25,
+        }, 
+      },
+    },
+  },
 ];
