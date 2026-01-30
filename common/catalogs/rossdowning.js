@@ -960,7 +960,7 @@ export const catalog = [
     colors: ["White Black"],
     halfColors: ["White Black"],
     type: "customs",
-    supportedStores: ["DOWCHA"],
+    supportedStores: ["ROSBHA"],
     default_color: "White Black",    
     quantities: [500, 1000, 2500],
     pricing: {
@@ -981,7 +981,7 @@ export const catalog = [
     colors: ["White Red"],
     halfColors: ["White Red"],
     type: "customs",
-    supportedStores: ["DOWCHA"],
+    supportedStores: ["DOWDHA"],
     default_color: "White Red",    
     quantities: [500, 1000, 2500],
     pricing: {
