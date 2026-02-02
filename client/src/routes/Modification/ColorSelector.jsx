@@ -9,6 +9,11 @@ export default function ColorSelector({
   selected_sapVariation,
   set_selected_sapVariation,
 }) {
+  // If color selector is disabled, don't render
+  if (item.disableColorSelector) {
+    return null;
+  }
+
   // If sapVariations exist, render variation blocks instead of color blocks
   if (item.sapVariations && item.sapVariations.length > 0) {
     const variationOptions = item.sapVariations.map((variation) => {
@@ -16,11 +21,10 @@ export default function ColorSelector({
         <div
           className={`h-[32px] w-[38px] cursor-pointer ${variation.color
             .split(" ")
-            .join("_")} rounded-sm ${
-            variation.code === selected_sapVariation
+            .join("_")} rounded-sm ${variation.code === selected_sapVariation
               ? "border-[2px] border-yellow-400"
               : "border-[1px] border-black"
-          } `}
+            } `}
           key={variation.code}
           onClick={() => {
             set_selected_sapVariation(variation.code);
@@ -62,11 +66,10 @@ export default function ColorSelector({
       return (
         // TODO: refactor to component
         <div
-          className={`relative h-[32px] w-[38px] cursor-pointer rounded-sm ${
-            color === selected_color
-              ? "border-[2px] border-yellow-400"
-              : "border-[1px] border-black"
-          }`}
+          className={`relative h-[32px] w-[38px] cursor-pointer rounded-sm ${color === selected_color
+            ? "border-[2px] border-yellow-400"
+            : "border-[1px] border-black"
+            }`}
           key={color}
           onClick={() => {
             set_selected_color(color);
@@ -87,11 +90,10 @@ export default function ColorSelector({
         <div
           className={`h-[32px] w-[38px] cursor-pointer ${color
             .split(" ")
-            .join("_")} rounded-sm ${
-            color === selected_color
+            .join("_")} rounded-sm ${color === selected_color
               ? "border-[2px] border-yellow-400"
               : "border-[1px] border-black"
-          } `}
+            } `}
           key={color}
           onClick={() => {
             set_selected_color(color);

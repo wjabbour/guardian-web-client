@@ -81,6 +81,11 @@ export interface CatalogItem {
     color: string;
     code: string;
   }>;
+  /**
+   * If true, the color selector will not be rendered on the modification page.
+   * Useful for items where color selection is not applicable or handled differently.
+   */
+  disableColorSelector?: boolean;
 }
 
 export interface CartItem {
