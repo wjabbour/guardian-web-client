@@ -185,6 +185,8 @@ function construct_cart(cart: any, customer_po: string, company_name: string) {
       obj["secondEmbroidery"] = cart_item["secondEmbroidery"];
     if (cart_item["secondPlacement"])
       obj["secondPlacement"] = cart_item["secondPlacement"];
+    if (cart_item["sapVariation"])
+      obj["sapVariation"] = cart_item["sapVariation"];
     obj["description"] = getCatalogItemDescription(
       cart_item["code"],
       company_name

@@ -2,6 +2,7 @@ import DeleteIcon from "@mui/icons-material/Delete";
 import { useOutletContext } from "react-router-dom";
 import { ColorOption, SizeOption } from "../../lib/constants";
 import { CartService } from "../../services/cartService";
+import { getCatalogItem } from "../../lib/utils";
 
 export default function CartItems() {
   const [cart, set_cart] = useOutletContext();
@@ -13,6 +14,8 @@ export default function CartItems() {
       {Object.keys(cart).map((k) => {
         const item = cart[k];
         const isDefaultSize = item.size === SizeOption.DEFAULT;
+        const catalogItem = getCatalogItem(item.code);
+        const shouldShowColor = catalogItem && !catalogItem.disableColorSelector;
 
         const formatter = new Intl.NumberFormat("en-US", {
           style: "currency",
@@ -40,7 +43,7 @@ export default function CartItems() {
                 <b>Price: </b>
                 {priceDisplay} each
               </p>
-              {!(item.color === ColorOption.DEFAULT) && (
+              {shouldShowColor && !(item.color === ColorOption.DEFAULT) && (
                 <p>
                   <b>Color:</b> {item.color}
                 </p>

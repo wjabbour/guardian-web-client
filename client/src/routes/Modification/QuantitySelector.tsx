@@ -10,12 +10,16 @@ interface Props {
   item: any; // Ideally replace 'any' with your Product interface
   setUserSelection: (selection: Record<string, number>) => void;
   reset: number;
+  selected_sapVariation?: string | null;
+  set_selected_sapVariation?: (code: string) => void;
 }
 
 export default function QuantitySelector({
   item,
   setUserSelection,
   reset,
+  selected_sapVariation,
+  set_selected_sapVariation,
 }: Props) {
   // State holds 'number' or empty string ""
   const [selectedQty, setSelectedQty] = useState<number | "">("");
@@ -109,7 +113,16 @@ export default function QuantitySelector({
   };
 
   const handleColorChange = (event: SelectChangeEvent) => {
-    handleCompositeChange(selectedSize, event.target.value, selectedQty);
+    const newColor = event.target.value;
+    // If sapVariations exist, find the corresponding code and update image preview
+    // (The actual sapVariation code for cart items will be looked up from the color when creating cart items)
+    if (item.sapVariations && item.sapVariations.length > 0 && set_selected_sapVariation) {
+      const variation = item.sapVariations.find((v: { color: string }) => v.color === newColor);
+      if (variation) {
+        set_selected_sapVariation(variation.code);
+      }
+    }
+    handleCompositeChange(selectedSize, newColor, selectedQty);
   };
 
   const handleGridChange = (
@@ -120,6 +133,15 @@ export default function QuantitySelector({
     // Parse input to number safely
     const qty = typeof value === "string" ? parseInt(value, 10) || 0 : value;
     const key = `${size},${color}`;
+
+    // If sapVariations exist, find the corresponding code and update image preview
+    // (The actual sapVariation code for cart items will be looked up from the color when creating cart items)
+    if (item.sapVariations && item.sapVariations.length > 0 && set_selected_sapVariation) {
+      const variation = item.sapVariations.find((v: { color: string }) => v.color === color);
+      if (variation) {
+        set_selected_sapVariation(variation.code);
+      }
+    }
 
     setGridValues((prev) => {
       const updated = { ...prev, [key]: qty };

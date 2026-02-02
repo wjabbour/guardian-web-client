@@ -31,27 +31,28 @@ export default function Modification() {
   const [selected_color, set_selected_color] = useState(
     item.default_color || ""
   );
-  
+
   // Handle sapVariations: initialize with first variation if available
+  // This is for IMAGE PREVIEW only (used by ColorSelector)
   const initialSapVariation = item.sapVariations && item.sapVariations.length > 0
     ? item.sapVariations[0].code
     : null;
   const [selected_sapVariation, set_selected_sapVariation] = useState(
     initialSapVariation
   );
-  
+
   // Initialize image source based on sapVariations or colors
   const initialImageSource = item.sapVariations && item.sapVariations.length > 0
     ? `/images/${item.code}_${item.sapVariations[0].color
-        .toLowerCase()
-        .split(" ")
-        .join("_")}.jpg`
+      .toLowerCase()
+      .split(" ")
+      .join("_")}.jpg`
     : item.colors
-    ? `/images/${item.code}_${selected_color
+      ? `/images/${item.code}_${selected_color
         .toLowerCase()
         .split(" ")
         .join("_")}.jpg`
-    : `/images/${item.code}.jpg`;
+      : `/images/${item.code}.jpg`;
 
   const [image_source, set_image_source] = useState(initialImageSource);
   const [cart, set_cart] = useOutletContext<any>();
@@ -139,6 +140,19 @@ export default function Modification() {
 
     // key is size + color (or size + color + sapVariation), value is object containing quantity
     for (const [key, quantity] of Object.entries(userSelection)) {
+      // Parse the key to get the color
+      const selection = key.split(",");
+      const selectedColor = selection[1];
+
+      // Find the sapVariation code for this color if sapVariations exist
+      let sapVarForCart: string | null = null;
+      if (item.sapVariations && item.sapVariations.length > 0) {
+        const variation = item.sapVariations.find((v: { color: string }) => v.color === selectedColor);
+        if (variation) {
+          sapVarForCart = variation.code;
+        }
+      }
+
       createCartItem(
         item,
         quantity,
@@ -148,7 +162,7 @@ export default function Modification() {
         secondEmbroidery,
         firstPlacement,
         secondPlacement,
-        selected_sapVariation
+        sapVarForCart
       );
     }
 
@@ -207,6 +221,8 @@ export default function Modification() {
             item={item}
             setUserSelection={setUserSelection}
             reset={reset}
+            selected_sapVariation={selected_sapVariation}
+            set_selected_sapVariation={set_selected_sapVariation}
           />
 
           <div className="mt-auto pt-[20px] flex justify-end">

@@ -12,7 +12,7 @@ import DeleteIcon from "@mui/icons-material/Delete";
 import PersonIcon from "@mui/icons-material/Person";
 import AdminPanelSettingsIcon from "@mui/icons-material/AdminPanelSettings";
 import { ColorOption, SizeOption } from "../../lib/constants";
-import { getDomainAwarePath } from "../../lib/utils";
+import { getDomainAwarePath, getCatalogItem } from "../../lib/utils";
 import { CartItem, Cart } from "guardian-common";
 import PasswordEntryDialog from "../PasswordEntryDialog/PasswordEntryDialog";
 import { login } from "../../lib/http";
@@ -126,6 +126,8 @@ export default function CartDrawer({ cart, setCart }: Props) {
               Object.keys(cart).map((k) => {
                 const item = cart[k];
                 const isDefaultSize = item.size === SizeOption.DEFAULT; // Adjust based on your actual SizeOption import
+                const catalogItem = getCatalogItem(item.code);
+                const shouldShowColor = catalogItem && !catalogItem.disableColorSelector;
 
                 const formatter = new Intl.NumberFormat("en-US", {
                   style: "currency",
@@ -155,7 +157,7 @@ export default function CartDrawer({ cart, setCart }: Props) {
                       <p className="text-gray-600 mb-2">{priceDisplay} each</p>
 
                       <div className="text-gray-700 space-y-1">
-                        {item.color && item.color !== ColorOption.DEFAULT && (
+                        {shouldShowColor && item.color && item.color !== ColorOption.DEFAULT && (
                           <p>
                             <span className="font-semibold">Color:</span>{" "}
                             {item.color}
