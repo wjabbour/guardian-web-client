@@ -532,6 +532,7 @@ export const catalog = [
     code: "DOWCHA-34PEU-431961A",
     name: "Black Plastic Frame",
     fullname: "Black Plastic Frame w/white imprint",
+    description: '1500 @ $0.75 ea / 2500 @ $0.65 ea / 5000 @ $0.60 ea', 
     colors: ["Black"],
     type: "customs",
     supportedStores: ["DOWCHA"],
