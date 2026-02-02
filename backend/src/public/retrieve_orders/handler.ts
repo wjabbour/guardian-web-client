@@ -17,7 +17,7 @@ export const handler = async (event: APIGatewayEvent): Promise<APIGatewayProxyRe
     const company_name = body.companyName;
 
     if (!company_name) {
-      return buildResponse(400, { message: "Missing companyName" }, origin);
+      return await buildResponse(400, { message: "Missing companyName" }, origin, event);
     }
 
     const currentOrders = await dynamo.getCurrentOrders(company_name);
@@ -26,12 +26,12 @@ export const handler = async (event: APIGatewayEvent): Promise<APIGatewayProxyRe
     const archivedOrders = await dynamo.getArchivedOrders(company_name);
     logger.info({ message: "Retrieved archived orders", archivedOrders });
 
-    return buildResponse(200, {
+    return await buildResponse(200, {
       orders: [...currentOrders, ...archivedOrders],
-    }, origin);
+    }, origin, event);
   } catch (e) {
     logger.error(e);
     const origin = event.headers?.origin || event.headers?.Origin || "";
-    return buildResponse(500, { message: "Failed to retrieve orders" }, origin);
+    return await buildResponse(500, { message: "Failed to retrieve orders" }, origin, event);
   }
 };

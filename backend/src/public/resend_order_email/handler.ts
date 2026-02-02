@@ -19,9 +19,9 @@ export const handler = async (
     const isAdmin = cookies.includes("admin_session=");
 
     if (!isAdmin) {
-      return buildResponse(401, {
+      return await buildResponse(401, {
         message: "Unauthorized: Admin access required",
-      }, origin);
+      }, origin, event);
     }
 
     const body = JSON.parse(event.body) || "{}";
@@ -30,9 +30,9 @@ export const handler = async (
     const { email, created_at } = body;
 
     if (!email || !created_at) {
-      return buildResponse(400, {
+      return await buildResponse(400, {
         message: "Email and created_at are required",
-      }, origin);
+      }, origin, event);
     }
 
     let order = await dynamo.getOrder(email, created_at, "orders");
@@ -42,15 +42,15 @@ export const handler = async (
     }
 
     if (!order) {
-      return buildResponse(404, { message: "Order not found" }, origin);
+      return await buildResponse(404, { message: "Order not found" }, origin, event);
     }
 
     await sendEmail([order], order.company_name, order.email);
 
-    return buildResponse(200, { message: "Email resent successfully" }, origin);
+    return await buildResponse(200, { message: "Email resent successfully" }, origin, event);
   } catch (e) {
     logger.error(e);
     const origin = event.headers?.origin || event.headers?.Origin || "";
-    return buildResponse(500, { message: "Failed to resend email" }, origin);
+    return await buildResponse(500, { message: "Failed to resend email" }, origin, event);
   }
 };

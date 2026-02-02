@@ -21,9 +21,9 @@ export const handler = async (
     const isAdmin = cookies.includes("admin_session=");
 
     if (!isAdmin) {
-      return buildResponse(401, {
+      return await buildResponse(401, {
         message: "Unauthorized: Admin access required",
-      }, origin);
+      }, origin, event);
     }
 
     const body = JSON.parse(event.body) || "{}";
@@ -32,15 +32,15 @@ export const handler = async (
     const { email, created_at } = body;
 
     if (!email || !created_at) {
-      return buildResponse(400, { message: "email and created_at are required" }, origin);
+      return await buildResponse(400, { message: "email and created_at are required" }, origin, event);
     }
 
     await dynamoClient.deleteOrder(created_at, email);
 
-    return buildResponse(200, { message: "Order deleted successfully" }, origin);
+    return await buildResponse(200, { message: "Order deleted successfully" }, origin, event);
   } catch (e) {
     logger.error(e);
     const origin = event.headers?.origin || event.headers?.Origin || "";
-    return buildResponse(500, { message: "Failed to delete order" }, origin);
+    return await buildResponse(500, { message: "Failed to delete order" }, origin, event);
   }
 };

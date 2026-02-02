@@ -59,7 +59,7 @@ export const handler = async (
 
     if (!company_name) {
       logger.warn({ message: "Unrecognized company name" });
-      return buildResponse(400, { message: "Unrecognized company name" }, origin);
+      return await buildResponse(400, { message: "Unrecognized company name" }, origin, event);
     }
 
     logger.info({ message: "Determined company name", company_name });
@@ -77,11 +77,11 @@ export const handler = async (
 
     await sendEmail([order], company_name, email);
 
-    return buildResponse(200, { order_id }, origin);
+    return await buildResponse(200, { order_id }, origin, event);
   } catch (e) {
     logger.error(e);
     const origin = event.headers?.origin || event.headers?.Origin || "";
-    return buildResponse(500, { message: "Failed to create order" }, origin);
+    return await buildResponse(500, { message: "Failed to create order" }, origin, event);
   }
 };
 

@@ -33,14 +33,14 @@ export const handler = async (
     const { password } = body;
 
     if (!password) {
-      return buildResponse(400, { message: "password is required" }, origin);
+      return await buildResponse(400, { message: "password is required" }, origin, event);
     }
 
     const secret = await sm.send(command);
     const storedPassword = JSON.parse(secret.SecretString).password;
 
     if (password !== storedPassword) {
-      return buildResponse(401, { message: "Incorrect password" }, origin);
+      return await buildResponse(401, { message: "Incorrect password" }, origin, event);
     }
 
     // Generate a secure admin token
@@ -51,12 +51,13 @@ export const handler = async (
     expires.setTime(expires.getTime() + 24 * 60 * 60 * 1000);
 
     // Build response with http-only cookie
-    const response = buildResponse(200, { message: "Password is valid" }, origin);
+    const response = await buildResponse(200, { message: "Password is valid" }, origin, event);
 
     response.headers["Set-Cookie"] = `admin_session=${adminToken}; HttpOnly; Secure; SameSite=None; Path=/; Expires=${expires.toUTCString()}`;
     return response;
   } catch (e) {
     logger.error(e);
-    return buildResponse(500, { message: "Failed to validate password" }, origin);
+    const origin = event.headers?.origin || event.headers?.Origin || "";
+    return await buildResponse(500, { message: "Failed to validate password" }, origin, event);
   }
 };

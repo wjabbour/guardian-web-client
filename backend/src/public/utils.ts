@@ -45,11 +45,80 @@ export const handleOptionsRequest = (
   };
 };
 
-export const buildResponse = (
+async function sendErrorNotification(
   statusCode: number,
   body: any,
-  origin?: string
-): APIGatewayProxyResult => {
+  event?: APIGatewayEvent
+): Promise<void> {
+  try {
+    const adminEmail = "doubleujabbour@gmail.com";
+    const ses = new SESClient({});
+
+    const errorType = statusCode >= 500 ? "5xx Server Error" : "4xx Client Error";
+    const path = event?.path || "unknown";
+    const method = event?.httpMethod || "unknown";
+    let requestBody = null;
+    try {
+      requestBody = event?.body ? JSON.parse(event.body) : null;
+    } catch (e) {
+      requestBody = event?.body || "Unable to parse request body";
+    }
+    const errorMessage = body?.message || JSON.stringify(body);
+    const timestamp = dayjs().format("YYYY-MM-DD HH:mm:ss");
+
+    const emailBody = `
+Backend Error Notification
+
+Error Type: ${errorType}
+Status Code: ${statusCode}
+Timestamp: ${timestamp}
+
+Endpoint: ${method} ${path}
+Error Message: ${errorMessage}
+
+Request Details:
+${requestBody ? JSON.stringify(requestBody, null, 2) : "No request body"}
+
+Headers:
+${event?.headers ? JSON.stringify(event.headers, null, 2) : "No headers"}
+    `.trim();
+
+    let ses_mail = `From: orders@gpc81.com\n`;
+    ses_mail += `To: ${adminEmail}\n`;
+    ses_mail += `Subject: [${errorType}] ${statusCode} Error - ${path}\n`;
+    ses_mail += `Content-Type: text/plain; charset=utf-8\n`;
+    ses_mail += "\n";
+    ses_mail += emailBody;
+
+    const input = {
+      RawMessage: {
+        Data: Buffer.from(ses_mail),
+      },
+    };
+
+    const command = new SendRawEmailCommand(input);
+    await ses.send(command);
+    logger.info(`Error notification email sent to ${adminEmail}`);
+  } catch (error) {
+    // Don't fail the request if email sending fails
+    logger.error({ message: "Failed to send error notification email", error });
+  }
+}
+
+export const buildResponse = async (
+  statusCode: number,
+  body: any,
+  origin?: string,
+  event?: APIGatewayEvent
+): Promise<APIGatewayProxyResult> => {
+  // Send error notification for 4xx and 5xx errors
+  if (statusCode >= 400 && event) {
+    // Fire and forget - don't wait for email to send
+    sendErrorNotification(statusCode, body, event).catch((error) => {
+      logger.error({ message: "Error sending notification email", error });
+    });
+  }
+
   // Determine which origin to allow based on the provided origin
   let allowedOrigin = ALLOWED_ORIGINS[0]; // Default to first allowed origin
 

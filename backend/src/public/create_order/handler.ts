@@ -37,7 +37,7 @@ export const handler = async (
     logger.info({ message: "Received body", body, isAdmin });
 
     if (!body.email.includes("@")) {
-      return buildResponse(400, { message: "Please use a valid email" }, origin);
+      return await buildResponse(400, { message: "Please use a valid email" }, origin, event);
     }
 
     const email = body.email;
@@ -49,10 +49,10 @@ export const handler = async (
 
     if (!company_name) {
       logger.warn({ message: "Unrecognized company name" });
-      return buildResponse(400, {
+      return await buildResponse(400, {
         message:
           "Unrecognized company name. Please contact your account representative.",
-      }, origin);
+      }, origin, event);
     }
 
     const store = getStoreCode(company_name, body.store);
@@ -60,10 +60,10 @@ export const handler = async (
 
     if (!store) {
       logger.warn({ message: "Unrecognized store" });
-      return buildResponse(400, {
+      return await buildResponse(400, {
         message:
           "Unrecognized store. Please contact your account representative.",
-      }, origin);
+      }, origin, event);
     }
 
     const cart = construct_cart(body.cart, customer_po, company_name);
@@ -80,9 +80,9 @@ export const handler = async (
       // this prevents Tameron client being able to submit arbitrary orders
       if (!body.bypassPaypal) {
         logger.warn("All Tameron orders should have bypassPaypal as true");
-        return buildResponse(400, {
+        return await buildResponse(400, {
           message: "Must enter code to place order",
-        }, origin);
+        }, origin, event);
       }
 
       logger.info({ message: "Tameron order, sending immediately" });
@@ -108,7 +108,7 @@ export const handler = async (
         "archived_orders"
       );
       await sendEmail([order], "Tameron", email, isAdmin);
-      return buildResponse(200, {}, origin);
+      return await buildResponse(200, {}, origin, event);
     }
 
     if (body.bypassPaypal) {
@@ -136,7 +136,7 @@ export const handler = async (
         "archived_orders"
       );
       await sendEmail([order], company_name, email, isAdmin);
-      return buildResponse(200, {}, origin);
+      return await buildResponse(200, {}, origin, event);
     }
 
     // bypassPaypal = false
@@ -159,11 +159,11 @@ export const handler = async (
       "orders"
     );
 
-    return buildResponse(200, { order_id }, origin);
+    return await buildResponse(200, { order_id }, origin, event);
   } catch (e) {
     logger.error(e);
     const origin = event.headers?.origin || event.headers?.Origin || "";
-    return buildResponse(500, { message: "Failed to create order" }, origin);
+    return await buildResponse(500, { message: "Failed to create order" }, origin, event);
   }
 };
 

@@ -26,10 +26,10 @@ export const handler = async (event?: APIGatewayEvent): Promise<APIGatewayProxyR
     await dynamo.deleteOldUnpaidOrders();
     logger.info("deleted old unpaid orders");
 
-    return buildResponse(200, {}, origin);
+    return await buildResponse(200, {}, origin, event);
   } catch (e) {
     logger.error(e);
     const origin = event?.headers?.origin || event?.headers?.Origin || "";
-    return buildResponse(500, { message: "Failed to run job" }, origin);
+    return await buildResponse(500, { message: "Failed to run job" }, origin, event);
   }
 };

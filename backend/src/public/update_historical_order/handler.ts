@@ -17,9 +17,9 @@ export const handler = async (event: APIGatewayEvent): Promise<APIGatewayProxyRe
     const isAdmin = cookies.includes("admin_session=");
 
     if (!isAdmin) {
-      return buildResponse(401, {
+      return await buildResponse(401, {
         message: "Unauthorized: Admin access required",
-      }, origin);
+      }, origin, event);
     }
 
     const body = JSON.parse(event.body) || "{}";
@@ -27,10 +27,10 @@ export const handler = async (event: APIGatewayEvent): Promise<APIGatewayProxyRe
 
     await dynamo.updateOrderData(body.email, body.created_at, body.cart);
 
-    return buildResponse(200, {}, origin);
+    return await buildResponse(200, {}, origin, event);
   } catch (e) {
     logger.error(e);
     const origin = event.headers?.origin || event.headers?.Origin || "";
-    return buildResponse(500, { message: "Failed to update order" }, origin);
+    return await buildResponse(500, { message: "Failed to update order" }, origin, event);
   }
 };

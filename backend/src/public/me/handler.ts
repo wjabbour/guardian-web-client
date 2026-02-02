@@ -21,10 +21,10 @@ export const handler = async (
 
         logger.info({ message: "User role determined", role, hasAdminSession });
 
-        return buildResponse(200, { role }, origin);
+        return await buildResponse(200, { role }, origin, event);
     } catch (e) {
         logger.error(e);
         const origin = event.headers?.origin || event.headers?.Origin || "";
-        return buildResponse(500, { message: "Failed to get user info", role: "user" }, origin);
+        return await buildResponse(500, { message: "Failed to get user info", role: "user" }, origin, event);
     }
 };
