@@ -4827,6 +4827,7 @@ export const catalog = [
     ],
     type: "sales",
     default_color: "2007",
+    disableColorSelector: true,
     quantities: [1, 2, 3, 4, 5],
     pricing: {
       base: {

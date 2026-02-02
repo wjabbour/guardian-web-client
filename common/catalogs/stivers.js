@@ -629,9 +629,9 @@ export const catalog = [
     quantities: [2500, 5000],
     pricing: {
       base: {
-        price: 0.59,
+        price: 0.64,
         discount: {
-          5000: 0.49,
+          5000: 0.54,
         }
       },
     },
@@ -647,9 +647,9 @@ export const catalog = [
     quantities: [2500, 5000],
     pricing: {
       base: {
-        price: 1.39,
+        price: 1.44,
         discount: {
-          5000: 1.25,
+          5000: 1.29,
         }
       },
     },
@@ -665,9 +665,9 @@ export const catalog = [
     quantities: [2500, 5000],
     pricing: {
       base: {
-        price: 0.87,
+        price: 0.92,
         discount: {
-          5000: 0.79,
+          5000: 0.84,
         }
       },
     },
@@ -683,9 +683,9 @@ export const catalog = [
     quantities: [2500, 5000],
     pricing: {
       base: {
-        price: 0.87,
+        price: 0.92,
         discount: {
-          5000: 0.79,
+          5000: 0.85,
         }
       },
     },
@@ -701,9 +701,9 @@ export const catalog = [
     quantities: [250, 500],
     pricing: {
       base: {
-        price: 4.67,
+        price: 4.74,
         discount: {
-          500: 3.99,
+          500: 4.09,
         }
       },
     },
@@ -719,7 +719,7 @@ export const catalog = [
     quantities: [500],
     pricing: {
       base: {
-        price: 1.46,
+        price: 1.49,
       },
     },
   },
@@ -734,9 +734,9 @@ export const catalog = [
     quantities: [250, 500],
     pricing: {
       base: {
-        price: 5.98,
+        price: 6.09,
         discount: {
-          500: 5.79,
+          500: 5.84,
         }
       },
     },
@@ -752,7 +752,7 @@ export const catalog = [
     quantities: [500],
     pricing: {
       base: {
-        price: 1.26,
+        price: 1.34,
       },
     },
   },
@@ -785,9 +785,9 @@ export const catalog = [
     quantities: [2500, 5000],
     pricing: {
       base: {
-        price: 0.85,
+        price: 0.92,
         discount: {
-          5000: 0.79,
+          5000: 0.85,
         }
       },
     },
@@ -803,9 +803,9 @@ export const catalog = [
     quantities: [500, 1000],
     pricing: {
       base: {
-        price: 0.69,
+        price: 0.74,
         discount: {
-          1000: 0.59,
+          1000: 0.64,
         }
       },
     },
@@ -821,9 +821,9 @@ export const catalog = [
     quantities: [2500, 5000],
     pricing: {
       base: {
-        price: 1.09,
+        price: 1.19,
         discount: {
-          5000: 0.99,
+          5000: 1.09,
         }
       },
     },
@@ -839,9 +839,9 @@ export const catalog = [
     quantities: [500, 1000],
     pricing: {
       base: {
-        price: 3.64,
+        price: 3.74,
         discount: {
-          1000: 3.29,
+          1000: 3.39,
         }
       },
     },
@@ -857,9 +857,9 @@ export const catalog = [
     quantities: [500, 1000],
     pricing: {
       base: {
-        price: 2.75,
+        price: 2.79,
         discount: {
-          1000: 2.29,
+          1000: 2.39,
         }
       },
     },
