@@ -11,9 +11,9 @@ export const config = {
   minimum_apparel_order: false,
   enable_customs_store_picker: true,
   embroideries: {
-    mens: ["Ross Downing Auto Group"],
-    womens: ["Ross Downing Auto Group"],
-    tshirts: ["Ross Downing Auto Group"],
+    mens: ["Ross Downing Auto Group", "Ross Downing Auto Group2"],
+    womens: ["Ross Downing Auto Group","Ross Downing Auto Group2"],
+    tshirts: ["Ross Downing Auto Group","Ross Downing Auto Group2"],
     hat:  [],
     customs: [],
     office: [],
