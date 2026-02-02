@@ -586,9 +586,9 @@ export const catalog = [
     },
   },
   {
-    code: "ROSBHA-33P-492024A",
+    code: "ROSBHA-33P15-492024A",
     name: ".15 Gauge Plastic Plate",
-    fullname: ".15 Gauge White Plastic Plate w/full color imprint",
+    fullname: ".15 Gauge White Plastic Plate w/black imprint",
     colors: ["White"],
     type: "customs",
     supportedStores: ["ROSBHA"],

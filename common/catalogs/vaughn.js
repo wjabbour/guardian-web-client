@@ -703,4 +703,24 @@ export const catalog = [
       },
     },
   },
+  {
+    code: "VAUCBU-31DD-521386A",
+    name: "Vinyl Die Cut Decals ",
+    fullname: "White Vinyl Die Cut Decal (12 in. x 1.71 in.)",
+    description: 'Grey does not print.',
+    colors: ["White"],
+    type: "customs",
+    supportedStores: ["VAUCBU"],
+    default_color: "White",    
+    quantities: [1000, 1500, 2500],
+    pricing: {
+      base: {
+        price: .42,
+        discount: {
+          1500: .40,
+          2500: .38,
+        }, 
+      },
+    },
+  },
 ]
