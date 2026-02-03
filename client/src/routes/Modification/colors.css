@@ -454,6 +454,14 @@
   background-color: black;
 }
 
+.Black_Block_No_Outline {
+  background-color: black;
+}
+
+.Black_Cursive {
+  background-color: black;
+}
+
 .Black_Green_Stitch {
   background-color: black;
 }
@@ -2063,6 +2071,14 @@
 }
 
 .White {
+  background-color: #ffffff;
+}
+
+.White_Cursive {
+  background-color: #ffffff;
+}
+
+.White_Block_No_Outline {
   background-color: #ffffff;
 }
 
