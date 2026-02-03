@@ -182,7 +182,7 @@ function createOrderCsv(orders): string {
   }
 
   csv +=
-    "Date,Store Code,Store Name,First Name,Last Name,Item,Quantity,Description,Size,Color,SAP Variation,Logo,Placement,Second Logo,Second Placement,Price,usedStoreCode,transactionId\n";
+    "Date,Store Code,Store Name,First Name,Last Name,Item,Quantity,Description,Size,Color,Logo,Placement,Second Logo,Second Placement,Price,usedStoreCode,transactionId\n";
 
   for (let i = 0; i < orders.length; i++) {
     const order = orders[i];
@@ -192,18 +192,20 @@ function createOrderCsv(orders): string {
       const item = order.order[j];
       const time = dayjs(Number(order.created_at));
       const formatted_time = time.format("MM/DD/YYYY");
+      const itemCode = item.sapVariation 
+        ? `${item.code}${item.sapVariation}` 
+        : item.code;
       save({
         date: formatted_time,
         store_code: order.store,
         store_name: getStore(order.company_name, order.store),
         first_name: order.first_name,
         last_name: order.last_name,
-        item: item.code,
+        item: itemCode,
         quantity: item.quantity,
         description: item.description,
         size: item.size || "",
         color: item.color,
-        sapVariation: item.sapVariation || "",
         logo: item.embroidery || "",
         placement: item.placement || "",
         secondLogo: item.secondEmbroidery || "",
