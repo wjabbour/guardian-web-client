@@ -1164,9 +1164,9 @@ export const catalog = [
     type: "customs",
     supportedStores: ["DOWDHA"],
     sapVariations: [
-      {code: '520521A', color:'red'},
-      {code: '520522A', color:'purple'},
-      {code: '520525A', color:'gold'},
+      {code: '520521A', color:'Red'},
+      {code: '520522A', color:'Purple'},
+      {code: '520525A', color:'Gold'},
     ],
     default_color: "Red",    
     quantities: [125, 250, 500],
