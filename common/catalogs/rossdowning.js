@@ -770,34 +770,18 @@ export const catalog = [
     },
   },
   {
-    code: "DOWCHA-31DD-520514A",
-    name: "Block Decal - White",
-    fullname: "Block Decal (White - No Outline) - 5 in. x .5125 in.",
+    code: "DOWCHA-31DD",
+    name: "Block Decal",
+    fullname: "Block Decal (No Outline) - 5 in. x .5125 in.",
     description: '1000 @ $0.60 ea / 2500 @ $0.55 ea / 5000 @ $0.50 ea; Grey does not print.',    
-    colors: ["White"],
+    colors: ["White","Black"],
     type: "customs",
     supportedStores: ["DOWCHA","DOWCMO","ROSBHA","DOWBGO","DOWDHA"],
-    default_color: "White",    
-    quantities: [1000, 2500, 5000],
-    pricing: {
-      base: {
-        price: .60,
-        discount: {
-          2500: .55,
-          5000: .50,
-        }, 
-      },
-    },
-  },
-  {
-    code: "DOWCHA-31DD-491422A",
-    name: "Block Decal - Black",
-    fullname: "Block Decal (Black - No Outline) - 5 in. x .5125 in.",
-    description: '1000 @ $0.60 ea / 2500 @ $0.55 ea / 5000 @ $0.50 ea',
-    colors: ["Black"],
-    type: "customs",
-    supportedStores: ["DOWCHA","DOWCMO","ROSBHA","DOWBGO","DOWDHA"],
-    default_color: "Black",    
+    default_color: "White",
+     sapVariations: [
+      {code: '-520514A', color:'White'},
+      {code: '-491422A', color:'Black'},  
+     ],   
     quantities: [1000, 2500, 5000],
     pricing: {
       base: {
