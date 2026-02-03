@@ -1162,7 +1162,7 @@ export const catalog = [
     description: '125 @ $1.75 ea / 250 @ $1.50 ea / 500 @ $1.25 ea',       
     colors: ["Red","Purple","Gold"],    
     type: "customs",
-    supportedStores: ["DOWDHA"],
+    supportedStores: ["DOWCHA","DOWCMO","ROSBHA","DOWBGO","DOWDHA"],
     sapVariations: [
       {code: '-520521A', color:'Red'},
       {code: '-520522A', color:'Purple'},
@@ -1179,45 +1179,5 @@ export const catalog = [
         }, 
       },
     },
-  },
-  {
-    code: "DOWDHA-DUCK-520522A",
-    name: "2 in. Duck - Purple",
-    fullname: "2 in. Rubber Duck w/white imprint - Purple",
-    description: '125 @ $1.75 ea / 250 @ $1.50 ea / 500 @ $1.25 ea',        
-    colors: ["Purple"],    
-    type: "customs",
-    supportedStores: ["DOWDHA"],
-    default_color: "Purple",    
-    quantities: [125, 250, 500],
-    pricing: {
-      base: {
-        price: 1.75,
-        discount: {
-          250: 1.50,
-          500: 1.25,
-        }, 
-      },
-    },
-  },
-  {
-    code: "DOWDHA-DUCK-520525A",
-    name: "2 in. Duck - Gold",
-    fullname: "2 in. Rubber Duck w/white imprint - Gold",
-    description: '125 @ $1.75 ea / 250 @ $1.50 ea / 500 @ $1.25 ea',        
-    colors: ["Gold"],    
-    type: "customs",
-    supportedStores: ["DOWDHA"],
-    default_color: "Gold",    
-    quantities: [125, 250, 500],
-    pricing: {
-      base: {
-        price: 1.75,
-        discount: {
-          250: 1.50,
-          500: 1.25,
-        }, 
-      },
-    },
-  },
+  }, 
 ];
