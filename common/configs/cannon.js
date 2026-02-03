@@ -49,9 +49,9 @@ export const config = {
       code: "CANCOX",
     },
     {
-      name: "Cannon Honda",
+      name: "Cannon Honda Vicksburg",
       address: "",
-      code: "CANHPO",
+      code: "CANHVI",
     },
     {
       name: "Cannon CDJR of Cleveland",

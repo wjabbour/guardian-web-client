@@ -774,19 +774,21 @@ export const catalog = [
     name: "Block Decal",
     fullname: "Block Decal (No Outline) - 5 in. x .5125 in.",
     description: `1000 @ $0.60 ea / 2500 @ $0.55 ea / 5000 @ $0.50 ea 
-Grey does not print.
+*Grey does not print.
 Block No Outline (5 in. x .5125 in.)
 Cursive decals (8.5 in. x 1.4 in.)`
   ,    
     colors: ["White","Black"],
     type: "customs",
     supportedStores: ["DOWCHA","DOWCMO","ROSBHA","DOWBGO","DOWDHA"],
+    disableColorSelector: true,
     default_color: "White",
      sapVariations: [
       {code: '-520514A', color:'White Block No Outline'},
+      {code: '-520517A', color:'White Cursive'},
       {code: '-491422A', color:'Black Block No Outline'}, 
       {code: '-433238A', color:'Black Cursive'}, 
-      {code: '-520517A', color:'White Cursive'}, 
+       
      ],   
     quantities: [1000, 2500, 5000],
     pricing: {
