@@ -57,7 +57,7 @@ export const config = {
     },    
             
     ],
-  bypass_codes: ["ROSSDOWNING"],
+  bypass_codes: ["ROSSDOWN"],
   server_hostname: "https://mxfj3q6m01.execute-api.us-east-1.amazonaws.com",
   account_reps: [{ name: "Richard Greenberg", phone: "678-287-1635" },],   
   route_prefix: "/rossdowning",
