@@ -636,7 +636,7 @@ export const catalog = [
     description: '500 @ $1.40 ea / 1000 @ $1.39 ea / 2500 @ $1.36 ea',
     colors: ["Chrome Faced"],
     type: "customs",
-    supportedStores: ["DOWCHA","DOWCMO","ROSBHA","DOWBGO","DOWDHA"],
+    supportedStores: ["ROSBHA"],
     default_color: "Chrome Faced",    
     quantities: [500, 1000, 2500],
     pricing: {
@@ -1157,8 +1157,8 @@ export const catalog = [
   },
   {
     code: "DOWDHA-DUCK",
-    name: "2 in. Duck - Red",
-    fullname: "2 in. Rubber Duck w/white imprint - Red",
+    name: "2 in. Rubber Duck",
+    fullname: "2 in. Rubber Duck w/white imprint",
     description: '125 @ $1.75 ea / 250 @ $1.50 ea / 500 @ $1.25 ea',       
     colors: ["Red","Purple","Gold"],    
     type: "customs",
