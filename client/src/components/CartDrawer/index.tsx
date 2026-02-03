@@ -129,6 +129,11 @@ export default function CartDrawer({ cart, setCart }: Props) {
                 const catalogItem = getCatalogItem(item.code);
                 const shouldShowColor = catalogItem && !catalogItem.disableColorSelector;
 
+                // Look up the color value for the sapVariation code
+                const sapVariationDisplay = item.sapVariation && catalogItem?.sapVariations
+                  ? catalogItem.sapVariations.find((v) => v.code === item.sapVariation)?.color || item.sapVariation
+                  : item.sapVariation;
+
                 const formatter = new Intl.NumberFormat("en-US", {
                   style: "currency",
                   currency: "USD",
@@ -166,8 +171,10 @@ export default function CartDrawer({ cart, setCart }: Props) {
 
                         {item.sapVariation && (
                           <p>
-                            <span className="font-semibold">SAP Variation:</span>{" "}
-                            {item.sapVariation}
+                            <span className="font-semibold">
+                              {catalogItem?.variationTextOverride || "Type:"}
+                            </span>{" "}
+                            {sapVariationDisplay}
                           </p>
                         )}
 

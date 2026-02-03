@@ -86,6 +86,12 @@ export interface CatalogItem {
    * Useful for items where color selection is not applicable or handled differently.
    */
   disableColorSelector?: boolean;
+  /**
+   * Optional text override for the "Type:" label when displaying sapVariation in cart and checkout.
+   * For example, "Color" or "Year" instead of "Type:".
+   * Defaults to "Type:" if not specified.
+   */
+  variationTextOverride?: string;
 }
 
 export interface CartItem {
