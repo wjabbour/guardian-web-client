@@ -12,6 +12,7 @@ interface Props {
   reset: number;
   selected_sapVariation?: string | null;
   set_selected_sapVariation?: (code: string) => void;
+  set_image_source?: (src: string) => void;
 }
 
 export default function QuantitySelector({
@@ -20,6 +21,7 @@ export default function QuantitySelector({
   reset,
   selected_sapVariation,
   set_selected_sapVariation,
+  set_image_source,
 }: Props) {
   // State holds 'number' or empty string ""
   const [selectedQty, setSelectedQty] = useState<number | "">("");
@@ -120,6 +122,15 @@ export default function QuantitySelector({
       const variation = item.sapVariations.find((v: { color: string }) => v.color === newColor);
       if (variation) {
         set_selected_sapVariation(variation.code);
+        // Update image source when variation changes
+        if (set_image_source) {
+          set_image_source(
+            `/images/${item.code}_${newColor
+              .toLowerCase()
+              .split(" ")
+              .join("_")}.jpg`
+          );
+        }
       }
     }
     handleCompositeChange(selectedSize, newColor, selectedQty);
@@ -140,6 +151,15 @@ export default function QuantitySelector({
       const variation = item.sapVariations.find((v: { color: string }) => v.color === color);
       if (variation) {
         set_selected_sapVariation(variation.code);
+        // Update image source when variation changes in grid
+        if (set_image_source) {
+          set_image_source(
+            `/images/${item.code}_${color
+              .toLowerCase()
+              .split(" ")
+              .join("_")}.jpg`
+          );
+        }
       }
     }
 
@@ -288,11 +308,14 @@ export default function QuantitySelector({
 
     // Case B: Color Dropdown + Qty Dropdown (0-1 Size, 2+ Colors)
     if (isManyColors) {
+      const colorLabel = item.sapVariations && item.sapVariations.length > 0
+        ? (item.variationTextOverride || "Type")
+        : "Color";
       return (
         <div className="flex flex-col gap-4 mt-4">
           <div className="flex gap-4">
             <div className="flex flex-col gap-1">
-              <label className="text-sm font-bold text-gray-700">Color</label>
+              <label className="text-sm font-bold text-gray-700">{colorLabel}</label>
               <Select
                 value={selectedColor}
                 onChange={handleColorChange}

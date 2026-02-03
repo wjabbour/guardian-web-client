@@ -49,7 +49,9 @@ export default function ColorSelector({
       <div className="w-[300px] mt-[25px]">
         <div className="flex flex-wrap gap-[5px]">{variationOptions}</div>
         <p className="mt-2 font-medium">
-          <span className="text-[16px] text-gray-400">Color: </span>
+          <span className="text-[16px] text-gray-400">
+            {item.variationTextOverride || "Color:"}{" "}
+          </span>
           {selectedVariation ? selectedVariation.color : ""}
         </p>
       </div>

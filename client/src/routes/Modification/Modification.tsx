@@ -1,6 +1,6 @@
 import { getWebCatalog } from "guardian-common";
 import { useLoaderData, useOutletContext } from "react-router-dom";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Snackbar from "@mui/material/Snackbar";
 import Alert from "@mui/material/Alert";
 import { getEmbroidery } from "../../lib/utils";
@@ -56,6 +56,22 @@ export default function Modification() {
 
   const [image_source, set_image_source] = useState(initialImageSource);
   const [cart, set_cart] = useOutletContext<any>();
+
+  // Update image source when selected_sapVariation changes (e.g., from ColorSelector)
+  useEffect(() => {
+    if (item.sapVariations && item.sapVariations.length > 0 && selected_sapVariation) {
+      const variation = item.sapVariations.find((v: { code: string }) => v.code === selected_sapVariation);
+      if (variation) {
+        set_image_source(
+          `/images/${item.code}_${variation.color
+            .toLowerCase()
+            .split(" ")
+            .join("_")}.jpg`
+        );
+      }
+    }
+  }, [selected_sapVariation, item.sapVariations, item.code]);
+
   const [snackbarOpen, setSnackbarOpen] = useState(false);
   const [snackbarText] = useState("Item added to cart");
   const [errorSnackbarOpen, setErrorSnackbarOpen] = useState(false);
@@ -223,6 +239,7 @@ export default function Modification() {
             reset={reset}
             selected_sapVariation={selected_sapVariation}
             set_selected_sapVariation={set_selected_sapVariation}
+            set_image_source={set_image_source}
           />
 
           <div className="mt-auto pt-[20px] flex justify-end">
