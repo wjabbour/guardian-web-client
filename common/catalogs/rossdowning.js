@@ -616,7 +616,7 @@ export const catalog = [
     description: '1500 @ $0.75 ea / 2500 @ $0.65 ea / 5000 @ $0.60 ea', 
     colors: ["Black"],
     type: "customs",
-    supportedStores: ["DOWCHA"],
+    supportedStores: ["DOWCHA","DOWCMO","ROSBHA","DOWBGO","DOWDHA"],
     default_color: "Black",    
     quantities: [1500, 2500, 5000],
     pricing: {
@@ -636,7 +636,7 @@ export const catalog = [
     description: '500 @ $1.40 ea / 1000 @ $1.39 ea / 2500 @ $1.36 ea',
     colors: ["Chrome Faced"],
     type: "customs",
-    supportedStores: ["ROSBHA"],
+    supportedStores: ["DOWCHA","DOWCMO","ROSBHA","DOWBGO","DOWDHA"],
     default_color: "Chrome Faced",    
     quantities: [500, 1000, 2500],
     pricing: {
@@ -776,7 +776,7 @@ export const catalog = [
     description: '1000 @ $0.60 ea / 2500 @ $0.55 ea / 5000 @ $0.50 ea; Grey does not print.',    
     colors: ["White"],
     type: "customs",
-    supportedStores: ["DOWCHA"],
+    supportedStores: ["DOWCHA","DOWCMO","ROSBHA","DOWBGO","DOWDHA"],
     default_color: "White",    
     quantities: [1000, 2500, 5000],
     pricing: {
@@ -796,7 +796,7 @@ export const catalog = [
     description: '1000 @ $0.60 ea / 2500 @ $0.55 ea / 5000 @ $0.50 ea',
     colors: ["Black"],
     type: "customs",
-    supportedStores: ["DOWCHA"],
+    supportedStores: ["DOWCHA","DOWCMO","ROSBHA","DOWBGO","DOWDHA"],
     default_color: "Black",    
     quantities: [1000, 2500, 5000],
     pricing: {
@@ -816,7 +816,7 @@ export const catalog = [
     description: '1000 @ $0.60 ea / 2500 @ $0.55 ea / 5000 @ $0.50 ea',
     colors: ["Black"],
     type: "customs",
-    supportedStores: ["DOWCHA"],
+    supportedStores: ["DOWCHA","DOWCMO","ROSBHA","DOWBGO","DOWDHA"],
     default_color: "Black",    
     quantities: [1000, 2500, 5000],
     pricing: {
@@ -836,7 +836,7 @@ export const catalog = [
     description: '1000 @ $0.60 ea / 2500 @ $0.55 ea / 5000 @ $0.50 ea; Grey does not print',
     colors: ["White"],    
     type: "customs",
-    supportedStores: ["DOWCHA"],
+    supportedStores: ["DOWCHA","DOWCMO","ROSBHA","DOWBGO","DOWDHA"],
     default_color: "White",    
     quantities: [1000, 2500, 5000],
     pricing: {
@@ -856,7 +856,7 @@ export const catalog = [
     description: '1000 @ $0.60 ea / 2500 @ $0.55 ea / 5000 @ $0.50 ea',
     colors: ["Black"],
     type: "customs",
-    supportedStores: ["DOWCHA"],
+    supportedStores: ["DOWCHA","DOWCMO","ROSBHA","DOWBGO","DOWDHA"],
     default_color: "Black",    
     quantities: [1000, 2500, 5000],
     pricing: {
@@ -876,7 +876,7 @@ export const catalog = [
     description: '1000 @ $0.60 ea / 2500 @ $0.55 ea / 5000 @ $0.50 ea; Grey does not print.',    
     colors: ["White"],
     type: "customs",
-    supportedStores: ["DOWCHA"],
+    supportedStores: ["DOWCHA","DOWCMO","ROSBHA","DOWBGO","DOWDHA"],
     default_color: "White",    
     quantities: [1000, 2500, 5000],
     pricing: {
@@ -896,7 +896,7 @@ export const catalog = [
     description: '1000 @ $0.60 ea / 2500 @ $0.55 ea / 5000 @ $0.50 ea',
     colors: ["White"],
     type: "customs",
-    supportedStores: ["DOWCHA"],
+    supportedStores: ["DOWCHA","DOWCMO","ROSBHA","DOWBGO","DOWDHA"],
     default_color: "White",    
     quantities: [1000, 2500, 5000],
     pricing: {
@@ -916,7 +916,7 @@ export const catalog = [
     description: '1000 @ $0.60 ea / 2500 @ $0.55 ea / 5000 @ $0.50 ea; Grey does not print.',    
     colors: ["Black"],
     type: "customs",
-    supportedStores: ["DOWCHA"],
+    supportedStores: ["DOWCHA","DOWCMO","ROSBHA","DOWBGO","DOWDHA"],
     default_color: "Black",    
     quantities: [1000, 2500, 5000],
     pricing: {
@@ -1156,13 +1156,18 @@ export const catalog = [
     },
   },
   {
-    code: "DOWDHA-DUCK-520521A",
+    code: "DOWDHA-DUCK",
     name: "2 in. Duck - Red",
     fullname: "2 in. Rubber Duck w/white imprint - Red",
     description: '125 @ $1.75 ea / 250 @ $1.50 ea / 500 @ $1.25 ea',       
-    colors: ["Red"],    
+    colors: ["Red","Purple","Gold"],    
     type: "customs",
     supportedStores: ["DOWDHA"],
+    sapVariations: [
+      {code: '520521A', color:'red'},
+      {code: '520522A', color:'purple'},
+      {code: '520525A', color:'gold'},
+    ],
     default_color: "Red",    
     quantities: [125, 250, 500],
     pricing: {
