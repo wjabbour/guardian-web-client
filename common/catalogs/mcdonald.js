@@ -175,7 +175,21 @@ export const catalog = [
         price: 0.50,
       },
     },
-  },  
+  }, 
+  {
+    code: "MCDMLI-33GT-513169Z",
+    name: ".20 Gauge Plastic Plate",
+    fullname: ".20 Gauge White Plastic Plate (4CP)",
+    colors: ["White"],
+    type: "customs",
+    default_color: "White",    
+    quantities: [500],
+    pricing: {
+      base: {
+        price: 0.50,
+      },
+    },
+  },   
   {
     code: "MCDHLI-33GT-513176Z",
     name: ".20 Gauge Plastic Plate",
