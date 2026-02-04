@@ -4803,8 +4803,8 @@ export const catalog = [
     name: "Oval Year Stickers - Blue",
     fullname: "Oval Year Stickers - White/Blue (12/pk)",       
     sapVariations: [
-      {code: '07i', year:'2007'},
-      {code: '08i', year:'2008'},
+      {code: '07i', color:'2007'},
+      {code: '08i', color:'2008'},
       {code: '09i', color:'2009'},
       {code: '10i', color:'2010'},
       {code: '11i', color:'2011'},
@@ -4824,7 +4824,6 @@ export const catalog = [
       {code: '25i', color:'2025'},
       {code: '26i', color:'2026'},      
     ],
-    variationTextOverride: true,
     type: "sales",    
     disableColorSelector: true,
     quantities: [1, 2, 3, 4, 5],
