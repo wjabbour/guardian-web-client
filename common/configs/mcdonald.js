@@ -12,14 +12,14 @@ export const config = {
   embroideries: {
     hat: [],
     mens: [  
-      "McDonald Automotive.EMB",
-      "Volvo Text Only.EMB",      
+      "Audi Parker.EMB",
+      "Audi Denver 2 Color 3in.EMB",
       "Genesis Littleton.EMB",
+      "McDonald Automotive.EMB",           
       "McDonald Mazda.EMB",      
       "McDonald Toyota.EMB",
       "McDonald Volkswagen.EMB",
-      "Audi Denver 2 Color 3in.EMB",
-      "Audi Parker.EMB",
+      "Volvo Text Only.EMB",
     ],
     womens: [    
       "Audi Parker.EMB",
