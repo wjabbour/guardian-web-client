@@ -771,21 +771,19 @@ export const catalog = [
   },
   {
     code: "DOWCHA-31DD",
-    name: "Block Decal",
+    name: "Decals - Multiple Options Avail.",
     fullname: "Decals - MULTIPLE OPTIONS - Block (With/Without Outline), Cursive, Website ",
     description: `1000 @ $0.60 ea / 2500 @ $0.55 ea / 5000 @ $0.50 ea 
-*Grey does not print on white decals.
+GREY DOES NOT PRINT ON DECALS.
 Block No Outline (5 in. x .5125 in.)
 Block with Outline (6 in. x .64 in.)
 Cursive (6 in. x 1.21 in.)
 Cursive Website decals (8.5 in. x 1.4 in.)`
   ,    
-    colors: ["White","Black"],
     type: "customs",
     supportedStores: ["DOWCHA","DOWCMO","ROSBHA","DOWBGO","DOWDHA"],
-    disableColorSelector: true,
-    default_color: "White",
-     sapVariations: [
+    disableColorSelector: true,    
+    sapVariations: [
       {code: '-520514A', color:'White Block No Outline'},
       {code: '-520504A', color:'White Cursive'},
       {code: '-520511A', color:'White Block with Outline'},
@@ -794,8 +792,7 @@ Cursive Website decals (8.5 in. x 1.4 in.)`
       {code: '-491422A', color:'Black Block No Outline'},      
       {code: '-496593A', color:'Black Cursive'},
       {code: '-496997A', color:'Black Block with Outline'},      
-      {code: '-433238A', color:'Black Website Cursive'},  
-       
+      {code: '-433238A', color:'Black Website Cursive'},         
      ],   
     quantities: [1000, 2500, 5000],
     pricing: {
