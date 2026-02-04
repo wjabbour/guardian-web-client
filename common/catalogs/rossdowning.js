@@ -771,7 +771,7 @@ export const catalog = [
   },
   {
     code: "DOWCHA-31DD",
-    name: "Decals - Multiple Options Avail.",
+    name: "Decals - Multiple Options",
     fullname: "Decals - MULTIPLE OPTIONS - Block (With/Without Outline), Cursive, Website ",
     description: `1000 @ $0.60 ea / 2500 @ $0.55 ea / 5000 @ $0.50 ea 
 GREY DOES NOT PRINT ON DECALS.
@@ -804,127 +804,7 @@ Cursive Website decals (8.5 in. x 1.4 in.)`
         }, 
       },
     },
-  },
-  {
-    code: "DOWCHA-31DD-433238A",
-    name: "Cursive Decal - Black",
-    fullname: "Black Cursive Decal - 8.5 in. x 1.41 in.",
-    description: '1000 @ $0.60 ea / 2500 @ $0.55 ea / 5000 @ $0.50 ea',
-    colors: ["Black"],
-    type: "customs",
-    supportedStores: ["DOWCHA","DOWCMO","ROSBHA","DOWBGO","DOWDHA"],
-    default_color: "Black",    
-    quantities: [1000, 2500, 5000],
-    pricing: {
-      base: {
-        price: .60,
-        discount: {
-          2500: .55,
-          5000: .50,
-        }, 
-      },
-    },
-  },
-  {
-    code: "DOWCHA-31DD-520517A",
-    name: "Cursive Decal - White",
-    fullname: "White Cursive Decal - 8.5 in. x 1.41 in.",
-    description: '1000 @ $0.60 ea / 2500 @ $0.55 ea / 5000 @ $0.50 ea; Grey does not print',
-    colors: ["White"],    
-    type: "customs",
-    supportedStores: ["DOWCHA","DOWCMO","ROSBHA","DOWBGO","DOWDHA"],
-    default_color: "White",    
-    quantities: [1000, 2500, 5000],
-    pricing: {
-      base: {
-        price: .60,
-        discount: {
-          2500: .55,
-          5000: .50,
-        }, 
-      },
-    },
-  },
-  {
-    code: "DOWCHA-31DD-496593A",
-    name: "Cursive Decal - Black",
-    fullname: "Black Cursive Decal - 6 in. x 1.21 in.",
-    description: '1000 @ $0.60 ea / 2500 @ $0.55 ea / 5000 @ $0.50 ea',
-    colors: ["Black"],
-    type: "customs",
-    supportedStores: ["DOWCHA","DOWCMO","ROSBHA","DOWBGO","DOWDHA"],
-    default_color: "Black",    
-    quantities: [1000, 2500, 5000],
-    pricing: {
-      base: {
-        price: .60,
-        discount: {
-          2500: .55,
-          5000: .50,
-        }, 
-      },
-    },
-  },
-  {
-    code: "DOWCHA-31DD-520504A",
-    name: "Cursive Decal - White",
-    fullname: "White Cursive Decal - 6 in. x 1.21 in.",
-    description: '1000 @ $0.60 ea / 2500 @ $0.55 ea / 5000 @ $0.50 ea; Grey does not print.',    
-    colors: ["White"],
-    type: "customs",
-    supportedStores: ["DOWCHA","DOWCMO","ROSBHA","DOWBGO","DOWDHA"],
-    default_color: "White",    
-    quantities: [1000, 2500, 5000],
-    pricing: {
-      base: {
-        price: .60,
-        discount: {
-          2500: .55,
-          5000: .50,
-        }, 
-      },
-    },
-  },
-  {
-    code: "DOWCHA-31DD-520511A",
-    name: "Block Decal - White",
-    fullname: "Outlined White Decal - 6 in. x .64 in.",
-    description: '1000 @ $0.60 ea / 2500 @ $0.55 ea / 5000 @ $0.50 ea',
-    colors: ["White"],
-    type: "customs",
-    supportedStores: ["DOWCHA","DOWCMO","ROSBHA","DOWBGO","DOWDHA"],
-    default_color: "White",    
-    quantities: [1000, 2500, 5000],
-    pricing: {
-      base: {
-        price: .60,
-        discount: {
-          2500: .55,
-          5000: .50,
-        }, 
-      },
-    },
-  },
-  {
-    code: "DOWCHA-31DD-496997A",
-    name: "Block Decal - Black",
-    fullname: "Outlined Black Decal - 6 in. x .64 in.",
-    description: '1000 @ $0.60 ea / 2500 @ $0.55 ea / 5000 @ $0.50 ea; Grey does not print.',    
-    colors: ["Black"],
-    type: "customs",
-    supportedStores: ["DOWCHA","DOWCMO","ROSBHA","DOWBGO","DOWDHA"],
-    default_color: "Black",    
-    quantities: [1000, 2500, 5000],
-    pricing: {
-      base: {
-        price: .60,
-        discount: {
-          2500: .55,
-          5000: .50,
-        }, 
-      },
-    },
-  },
+  },  
   {
     code: "DOWCHA-5310-520505A",
     name: "Deal Jacket - Yellow",
