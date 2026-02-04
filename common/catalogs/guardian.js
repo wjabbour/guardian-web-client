@@ -4826,7 +4826,7 @@ export const catalog = [
     ],
     type: "sales",    
     disableColorSelector: true,
-    variationTextOverride: 'Year',
+    variationTextOverride: 'Year:',
     quantities: [1, 2, 3, 4, 5],
     pricing: {
       base: {
