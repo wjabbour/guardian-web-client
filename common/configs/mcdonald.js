@@ -41,7 +41,7 @@ export const config = {
     parts: [],
   },
   email_recipients: [
-    "jcallahan@gpcorp.com",
+    "jcallahan@gpcorp.com",    
     "webportalorders@gpcorp.com",
     "shanell@gpcorp.com",
   ],
@@ -124,7 +124,10 @@ export const config = {
   ],
   bypass_codes: ["MCDONALD"],
   server_hostname: "https://mxfj3q6m01.execute-api.us-east-1.amazonaws.com",
-  account_reps: [{ name: "Jim Callahan", phone: "678-287-1605" }],
+  account_reps: [
+    { name: "Jim Callahan", phone: "678-287-1605" },
+    { name: "Buz Matteson", phone: "602-499-5126" },  
+  ],
   route_prefix: "/mcdonald",
   paypal_not_supported: true,
   password: "McdonalD",
