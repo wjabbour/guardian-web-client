@@ -433,7 +433,7 @@ export const catalog = [
     colors: ["Blue", "Green", "Orange", "Red", "White", "Yellow"],
     type: "sales",
     default_color: "Blue",
-    description: '100/pk; 1 pack: $17.95, 10 packs: $12.00',
+    description: '100 per pk; 1 pack: $17.95, 10 packs: $12.00',
     quantities: [1, 10],
     pricing: {
       base: {
@@ -704,6 +704,58 @@ export const catalog = [
     },
   },
   {
+    code: "VAUCBU-34PEU-521637B",
+    name: "Black Plastic Frame",
+    fullname: "Black Plastic Frame w/white & 186 red imprint",
+    colors: ["Black"],
+    type: "customs",
+    default_color: "Black",
+    description: '3000: $0.65 ea',
+    supportedStores: ["VAUCBU"],
+    quantities: [3000],
+    pricing: {
+      base: {
+        price: .65,        
+      }
+    }
+  },
+  {
+    code: "VAUCBU-33MRE-521638B",
+    name: "White Aluminum Plate",
+    fullname: "Painted White Aluminum Plate w/black & 186 red imprint",
+    colors: ["Black Red"],
+    type: "customs",
+    default_color: "Black Red",
+    description: '1000: $2.05 ea, 2500: $1.95 ea',
+    halfColors: ["Black Red"],
+    supportedStores: ["VAUCBU"],
+    quantities: [1000, 2500],
+     pricing: {
+      base: {
+        price: 2.05,
+        discount: {
+          2500: 1.95,          
+        }
+      }
+    }
+  },
+  {
+    code: "VAUCBU-33P-521639A",
+    name: "White Plastic Plate",
+    fullname: "White Plastic Frame w/021 orange imprint",
+    colors: ["Orange"],
+    type: "customs",
+    default_color: "Orange",
+    description: '2000 plates: $0.65 ea',
+    supportedStores: ["VAUCBU"],
+    quantities: [2000],
+    pricing: {
+      base: {
+        price: .65,        
+      }
+    }
+  },
+  {
     code: "VAUCBU-31DD-521386A",
     name: "Vinyl Die Cut Decals ",
     fullname: "White Vinyl Die Cut Decal (12 in. x 1.71 in.)",
@@ -711,7 +763,8 @@ export const catalog = [
     colors: ["White"],
     type: "customs",
     supportedStores: ["VAUCBU"],
-    default_color: "White",    
+    default_color: "White", 
+    description: '1000: $0.42 ea, 1500: $0.40 ea, 2500: $0.38 ea',   
     quantities: [1000, 1500, 2500],
     pricing: {
       base: {
