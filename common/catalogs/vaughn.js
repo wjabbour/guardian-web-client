@@ -706,11 +706,12 @@ export const catalog = [
   {
     code: "VAUCBU-34PEU-521637B",
     name: "Black Plastic Frame",
-    fullname: "Black Plastic Frame w/white & 186 red imprint",
-    colors: ["Black"],
+    fullname: "Black Plastic Frame w/186 red & white imprint",
+    colors: ["Red White"],
     type: "customs",
-    default_color: "Black",
+    default_color: "Red White",
     description: '3000: $0.65 ea',
+    halfColors: ["Red White"],
     supportedStores: ["VAUCBU"],
     quantities: [3000],
     pricing: {
