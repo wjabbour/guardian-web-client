@@ -92,7 +92,17 @@ export const catalog = [
     colors: ["Charcoal", "Jet Black", "Navy"],
     type: "mens",
     default_color: "Jet Black",
-    sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge", "3XLarge", "4XLarge", "5XLarge", "6XLarge"],
+    sizes: [
+      "Small", 
+      "Medium", 
+      "Large", 
+      "XLarge", 
+      "2XLarge", 
+      "3XLarge", 
+      "4XLarge", 
+      "5XLarge", 
+      "6XLarge",
+    ],
     pricing: {
       Small: { price: 12.99 },
       Medium: { price: 12.99 },
@@ -112,7 +122,17 @@ export const catalog = [
     colors: ["Candy Pink", "Charcoal", "Jet Black", "Medium Grey", "Navy"],
     type: "mens",
     default_color: "Jet Black",
-    sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge", "3XLarge", "4XLarge", "5XLarge", "6XLarge"],
+    sizes: [
+      "Small", 
+      "Medium", 
+      "Large", 
+      "XLarge", 
+      "2XLarge", 
+      "3XLarge", 
+      "4XLarge", 
+      "5XLarge", 
+      "6XLarge",
+    ],
     pricing: {
       Small: { price: 9.99 },
       Medium: { price: 9.99 },
@@ -151,7 +171,15 @@ export const catalog = [
     type: "mens",
     sub_category: "tshirt",
     default_color: "Deep Navy",
-    sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge", "3XLarge", "4XLarge"],
+    sizes: [
+      "Small", 
+      "Medium", 
+      "Large", 
+      "XLarge", 
+      "2XLarge", 
+      "3XLarge", 
+      "4XLarge",
+    ],
     pricing: {
       Small: { price: 9.99 },
       Medium: { price: 9.99 },
@@ -169,7 +197,15 @@ export const catalog = [
     colors: ["Black", "Iron Grey", "True Navy", "Neon Pink"],
     type: "mens",
     default_color: "Black",
-    sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge", "3XLarge", "4XLarge"],
+    sizes: [
+      "Small", 
+      "Medium", 
+      "Large", 
+      "XLarge", 
+      "2XLarge", 
+      "3XLarge", 
+      "4XLarge",
+    ],
     pricing: {
       Small: { price: 13.99 },
       Medium: { price: 13.99 },
@@ -195,7 +231,17 @@ export const catalog = [
     ],
     type: "mens",
     default_color: "Black",
-    sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge", "3XLarge", "4XLarge", "5XLarge", "6XLarge"],
+    sizes: [
+      "Small", 
+      "Medium", 
+      "Large", 
+      "XLarge", 
+      "2XLarge", 
+      "3XLarge", 
+      "4XLarge", 
+      "5XLarge", 
+      "6XLarge",
+    ],
     pricing: {
       Small: { price: 25.99 },
       Medium: { price: 25.99 },
@@ -258,104 +304,6 @@ export const catalog = [
       "4XLarge": { price: 28.99 },      
     },
   },
-  // {
-  //   code: 'CP80',
-  //   name: 'Twill Cap',
-  //   fullname: 'Port & Company® Six-Panel Twill Cap',
-  //   colors: ['Black', 'True Red', 'Navy', 'Hunter', 'Royal', 'Charcoal', 'Woodland Brown'],
-  //   type: 'hat',
-  //   default_color: 'Black',
-  //   sizes: {
-  //     'One Size Fits All': 14.29
-  //   }
-  // },
-  {
-    code: "04032",
-    name: "20oz. Revolve Tumbler",
-    fullname: "20 oz. Revolve Tumbler",
-    colors: [
-      "Black",
-      "Blue",
-      "Burgundy",
-      "Green",
-      "Navy",
-      "Red",
-      "Silver",
-      "White",
-    ],
-    type: "accessory",
-    default_color: "Black",
-    sizes: ["20 oz."],
-    pricing: {
-      "20 oz.": { price: 14.99 },
-    },
-  },
-  {
-    code: "04015",
-    name: "10oz. Perfect-Fit Tumbler",
-    fullname: "10 oz. Perfect-Fit Tumbler",
-    colors: ["Black", "Blue", "Burgundy", "Gunmetal", "Navy", "Red"],
-    type: "accessory",
-    default_color: "Black",
-    sizes: ["10 oz."],
-    pricing: {
-      "10 oz.": { price: 12.99 },
-    },
-  },
-  {
-    code: "1640",
-    name: "Logo Key Chain",
-    fullname: "Brushed Zinc/Leather/Big Logo Key Chain",
-    colors: ["Black"],
-    type: "accessory",
-    default_color: "Black",
-    quantities: [1],
-    pricing: {
-      base: {
-        price: 6.99,
-      },
-    },
-  },
-  {
-    code: "1240",
-    name: "Key Tag",
-    fullname: "Zinc Strap Key Tag",
-    colors: ["Grey"],
-    type: "accessory",
-    default_color: "Grey",
-    quantities: [1],
-    pricing: {
-      base: {
-        price: 6.99,
-      },
-    },
-  },
-  {
-    code: "2240",
-    name: "Key Chain",
-    fullname: "Carbon Fiber Strap Metal Key Chain",
-    colors: ["Grey"],
-    type: "accessory",
-    default_color: "Grey",
-    quantities: [1],
-    pricing: {
-      base: {
-        price: 6.99,
-      },
-    },
-  },
-  // {
-  //   code: 'C402',
-  //   name: 'Snapback',
-  //   fullname: 'Port Authority® Snapback Trucker Cap',
-  //   colors: ['Black', 'Navy', 'Black White', 'Patriot Royal', 'Red White', 'Royal White', 'Grey Steel', 'Pink White', 'Woodland Camo', 'Khaki White'],
-  //   type: 'hat',
-  //   halfColors: ['Black White', 'Red White', 'Royal White', 'Pink White', 'Khaki White'],
-  //   default_color: 'Black',
-  //   sizes: {
-  //     'One Size Fits All': 14.29
-  //   }
-  // },
   {
     code: "NKDC1963",
     name: "Nike® Dri-FIT Polo Shirt #NKDC1963",
@@ -472,10 +420,27 @@ export const catalog = [
     code: "JST62",
     name: "Sport-Tek® V-Neck Wind Shirt #JST62",
     fullname: "Sport-Tek® Tipped V-Neck Raglan Wind Shirt",
-    colors: ["Blk Graphite","Blk True Red","Black White","Graphite White","True Navy White","True Royal White"],
+    colors: [
+      "Blk Graphite",
+      "Blk True Red",
+      "Black White",
+      "Graphite White",
+      "True Navy White",
+      "True Royal White",
+    ],
     type: "mens",
     default_color: "Blk Graphite",
-    sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge", "3XLarge", "4XLarge", "5XLarge", "6XLarge"],
+    sizes: [
+      "Small", 
+      "Medium", 
+      "Large", 
+      "XLarge", 
+      "2XLarge", 
+      "3XLarge", 
+      "4XLarge", 
+      "5XLarge", 
+      "6XLarge",
+    ],
     pricing: {
       Small: { price: 31.50 },
       Medium: { price: 31.50 },
@@ -495,7 +460,15 @@ export const catalog = [
     colors: ["Black"],
     type: "womens",
     default_color: "Black",
-    sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge", "3XLarge", "4XLarge"],
+    sizes: [
+      "Small", 
+      "Medium", 
+      "Large", 
+      "XLarge", 
+      "2XLarge", 
+      "3XLarge", 
+      "4XLarge",
+    ],
     pricing: {
       Small: { price: 78.50 },
       Medium: { price: 78.50 },
@@ -513,7 +486,17 @@ export const catalog = [
     colors: ["Black"],
     type: "mens",
     default_color: "Black",
-    sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge", "3XLarge", "4XLarge", "5XLarge", "6XLarge"],
+    sizes: [
+      "Small", 
+      "Medium", 
+      "Large", 
+      "XLarge", 
+      "2XLarge", 
+      "3XLarge", 
+      "4XLarge", 
+      "5XLarge", 
+      "6XLarge",
+    ],
     pricing: {
       Small: { price: 28.99 },
       Medium: { price: 28.99 },
@@ -533,7 +516,15 @@ export const catalog = [
     colors: ["Black", "Battleship Grey"],
     type: "womens",
     default_color: "Black",
-    sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge", "3XLarge", "4XLarge"],
+    sizes: [
+      "Small", 
+      "Medium", 
+      "Large", 
+      "XLarge", 
+      "2XLarge", 
+      "3XLarge", 
+      "4XLarge",
+    ],
     pricing: {
       Small: { price: 44.99 },
       Medium: { price: 44.99 },
@@ -551,7 +542,15 @@ export const catalog = [
     colors: ["Black", "Regatta Blue", "True Navy", "Iron Grey"],
     type: "mens",
     default_color: "Black",
-    sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge", "3XLarge", "4XLarge"],
+    sizes: [
+      "Small", 
+      "Medium", 
+      "Large", 
+      "XLarge", 
+      "2XLarge", 
+      "3XLarge", 
+      "4XLarge",
+    ],
     pricing: {
       Small: { price: 35.99 },
       Medium: { price: 35.99 },
@@ -569,7 +568,17 @@ export const catalog = [
     colors: ["Black", "Battleship Grey"],
     type: "mens",
     default_color: "Black",
-    sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge", "3XLarge", "4XLarge", "5XLarge", "6XLarge"],
+    sizes: [
+      "Small", 
+      "Medium", 
+      "Large", 
+      "XLarge", 
+      "2XLarge", 
+      "3XLarge", 
+      "4XLarge", 
+      "5XLarge", 
+      "6XLarge",
+    ],
     pricing: {
       Small: { price: 44.99 },
       Medium: { price: 44.99 },
@@ -589,7 +598,15 @@ export const catalog = [
     colors: ["Black","Direct Blue"],
     type: "mens",
     default_color: "Black",
-    sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge", "3XLarge", "4XLarge"],
+    sizes: [
+      "Small", 
+      "Medium", 
+      "Large", 
+      "XLarge", 
+      "2XLarge", 
+      "3XLarge", 
+      "4XLarge",
+    ],
     pricing: {
       Small: { price: 78.00 },
       Medium: { price: 78.00 },
@@ -607,7 +624,15 @@ export const catalog = [
     colors: ["Black", "Regatta Blue", "True Navy", "Iron Grey"],
     type: "womens",
     default_color: "Black",
-    sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge", "3XLarge", "4XLarge"],
+    sizes: [
+      "Small", 
+      "Medium", 
+      "Large", 
+      "XLarge", 
+      "2XLarge", 
+      "3XLarge", 
+      "4XLarge",
+    ],
     pricing: {
       Small: { price: 35.99 },
       Medium: { price: 35.99 },
@@ -618,24 +643,105 @@ export const catalog = [
       "4XLarge": { price: 38.99 },
     },
   },
+  // {
+  //   code: 'CP80',
+  //   name: 'Twill Cap',
+  //   fullname: 'Port & Company® Six-Panel Twill Cap',
+  //   colors: ['Black', 'True Red', 'Navy', 'Hunter', 'Royal', 'Charcoal', 'Woodland Brown'],
+  //   type: 'hat',
+  //   default_color: 'Black',
+  //   sizes: {
+  //     'One Size Fits All': 14.29
+  //   }
+  // },
   {
-    code: "STIFMO-STKR-462741B",
-    name: "Vinyl Sticker w/QR code",
-    fullname: "White Vinyl Sticker w/black & reflex blue imprint",
-    colors: ["White"],
-    type: "customs",
-    default_color: "White",
-    supportedStores: ["STIFMO"],
-    quantities: [2500, 5000],
+    code: "04032",
+    name: "20oz. Revolve Tumbler",
+    fullname: "20 oz. Revolve Tumbler",
+    colors: [
+      "Black",
+      "Blue",
+      "Burgundy",
+      "Green",
+      "Navy",
+      "Red",
+      "Silver",
+      "White",
+    ],
+    type: "accessory",
+    default_color: "Black",
+    sizes: ["20 oz."],
+    pricing: {
+      "20 oz.": { price: 14.99 },
+    },
+  },
+  {
+    code: "04015",
+    name: "10oz. Perfect-Fit Tumbler",
+    fullname: "10 oz. Perfect-Fit Tumbler",
+    colors: ["Black", "Blue", "Burgundy", "Gunmetal", "Navy", "Red"],
+    type: "accessory",
+    default_color: "Black",
+    sizes: ["10 oz."],
+    pricing: {
+      "10 oz.": { price: 12.99 },
+    },
+  },
+  {
+    code: "1640",
+    name: "Logo Key Chain",
+    fullname: "Brushed Zinc/Leather/Big Logo Key Chain",
+    colors: ["Black"],
+    type: "accessory",
+    default_color: "Black",
+    quantities: [1],
     pricing: {
       base: {
-        price: 0.64,
-        discount: {
-          5000: 0.54,
-        }
+        price: 6.99,
       },
     },
   },
+  {
+    code: "1240",
+    name: "Key Tag",
+    fullname: "Zinc Strap Key Tag",
+    colors: ["Grey"],
+    type: "accessory",
+    default_color: "Grey",
+    quantities: [1],
+    pricing: {
+      base: {
+        price: 6.99,
+      },
+    },
+  },
+  {
+    code: "2240",
+    name: "Key Chain",
+    fullname: "Carbon Fiber Strap Metal Key Chain",
+    colors: ["Grey"],
+    type: "accessory",
+    default_color: "Grey",
+    quantities: [1],
+    pricing: {
+      base: {
+        price: 6.99,
+      },
+    },
+  },
+  // {
+  //   code: 'C402',
+  //   name: 'Snapback',
+  //   fullname: 'Port Authority® Snapback Trucker Cap',
+  //   colors: ['Black', 'Navy', 'Black White', 'Patriot Royal', 'Red White', 'Royal White', 'Grey Steel', 'Pink White', 'Woodland Camo', 'Khaki White'],
+  //   type: 'hat',
+  //   halfColors: ['Black White', 'Red White', 'Royal White', 'Pink White', 'Khaki White'],
+  //   default_color: 'Black',
+  //   sizes: {
+  //     'One Size Fits All': 14.29
+  //   }
+  // },
+  
   {
     code: "STIFMO-31SD-433769B",
     name: "Chrome Stroke Domecal",
@@ -650,6 +756,60 @@ export const catalog = [
         price: 1.44,
         discount: {
           5000: 1.29,
+        }
+      },
+    },
+  },
+   {
+    code: "STICPR-31SD-423222A",
+    name: "Chrome Stroke Domecal",
+    fullname: "Chrome Stroke Domecal w/black imprint",
+    colors: ["White"],
+    type: "customs",
+    default_color: "White",
+    supportedStores: ["STICPR"],
+    quantities: [2500, 5000],
+    pricing: {
+      base: {
+        price: 1.19,
+        discount: {
+          5000: 1.09,
+        }
+      },
+    },
+  },
+  {
+    code: "STIFSO-THC-509701Z",
+    name: "White Domecal",
+    fullname: "White Domecal THC w/full color imprint",
+    colors: ["White"],
+    type: "customs",
+    default_color: "White",
+    supportedStores: ["STIFSO"],
+    quantities: [250, 500],
+    pricing: {
+      base: {
+        price: 4.74,
+        discount: {
+          500: 4.09,
+        }
+      },
+    },
+  }, 
+   {
+    code: "STIHCO-31SD-436768Z",
+    name: "White Stroke Domecal",
+    fullname: "White Stroke Domecal w/full color imprint",
+    colors: ["White"],
+    type: "customs",
+    default_color: "White",
+    supportedStores: ["STIHCO"],
+    quantities: [500, 1000],
+    pricing: {
+      base: {
+        price: 2.79,
+        discount: {
+          1000: 2.39,
         }
       },
     },
@@ -690,24 +850,96 @@ export const catalog = [
       },
     },
   },
-  {
-    code: "STIFSO-THC-509701Z",
-    name: "White Domecal",
-    fullname: "White Domecal THC w/full color imprint",
+{
+    code:"STIFSO-33GT-504866Z",
+    name: "Drive Out Plate",
+    fullname: "Plastic Drive Out Plate w/full color imprint",
     colors: ["White"],
     type: "customs",
     default_color: "White",
     supportedStores: ["STIFSO"],
-    quantities: [250, 500],
+    quantities: [2500, 5000],
     pricing: {
       base: {
-        price: 4.74,
+        price: 0.92,
         discount: {
-          500: 4.09,
+          5000: 0.85,
         }
       },
     },
   },
+  {
+    code:"STICPR-33GT-423219Z",
+    name: "Drive Out Plate",
+    fullname: "Plastic Drive Out Plate w/full color imprint",
+    colors: ["White"],
+    type: "customs",
+    default_color: "White",
+    supportedStores: ["STICPR"],
+    quantities: [2500, 5000],
+    pricing: {
+      base: {
+        price: 0.92,
+        discount: {
+          5000: 0.85,
+        }
+      },
+    },
+  },  
+  {
+    code: "STIHCO-AT4C-436766Z",
+    name: "Metal Plates",
+    fullname: "White Aluminum Plate w/full color imprint",
+    colors: ["White"],
+    type: "customs",
+    default_color: "White",
+    supportedStores: ["STIHCO"],
+    quantities: [500, 1000],
+    pricing: {
+      base: {
+        price: 3.74,
+        discount: {
+          1000: 3.39,
+        }
+      },
+    },
+  },
+  {
+    code: "STIFMO-STKR-462741B",
+    name: "Vinyl Sticker w/QR code",
+    fullname: "White Vinyl Sticker w/black & reflex blue imprint",
+    colors: ["White"],
+    type: "customs",
+    default_color: "White",
+    supportedStores: ["STIFMO"],
+    quantities: [2500, 5000],
+    pricing: {
+      base: {
+        price: 0.64,
+        discount: {
+          5000: 0.54,
+        }
+      },
+    },
+  }, 
+  {
+    code:"STICPR-ADD101-441065Z",
+    name: "Add Forms",
+    fullname: "White Add Forms w/full color imprint",
+    colors: ["White"],
+    type: "customs",
+    default_color: "White",
+    supportedStores: ["STICPR"],
+    quantities: [500, 1000],
+    pricing: {
+      base: {
+        price: 0.74,
+        discount: {
+          1000: 0.64,
+        }
+      },
+    },
+  },    
   {
     code: "STIFSO-NOTEPAD-509241Z",
     name: "Notepad - 4in. x 6in.",
@@ -755,113 +987,5 @@ export const catalog = [
         price: 1.34,
       },
     },
-  },
-  {
-    code:"STIFSO-33GT-504866Z",
-    name: "Drive Out Plate",
-    fullname: "Plastic Drive Out Plate w/full color imprint",
-    colors: ["White"],
-    type: "customs",
-    default_color: "White",
-    supportedStores: ["STIFSO"],
-    quantities: [2500, 5000],
-    pricing: {
-      base: {
-        price: 0.92,
-        discount: {
-          5000: 0.85,
-        }
-      },
-    },
-  },
-  {
-    code:"STICPR-33GT-423219Z",
-    name: "Drive Out Plate",
-    fullname: "Plastic Drive Out Plate w/full color imprint",
-    colors: ["White"],
-    type: "customs",
-    default_color: "White",
-    supportedStores: ["STICPR"],
-    quantities: [2500, 5000],
-    pricing: {
-      base: {
-        price: 0.92,
-        discount: {
-          5000: 0.85,
-        }
-      },
-    },
-  },
-  {
-    code:"STICPR-ADD101-441065Z",
-    name: "Add Forms",
-    fullname: "White Add Forms w/full color imprint",
-    colors: ["White"],
-    type: "customs",
-    default_color: "White",
-    supportedStores: ["STICPR"],
-    quantities: [500, 1000],
-    pricing: {
-      base: {
-        price: 0.74,
-        discount: {
-          1000: 0.64,
-        }
-      },
-    },
-  },
-  {
-    code: "STICPR-31SD-423222A",
-    name: "Chrome Stroke Domecal",
-    fullname: "Chrome Stroke Domecal w/black imprint",
-    colors: ["White"],
-    type: "customs",
-    default_color: "White",
-    supportedStores: ["STICPR"],
-    quantities: [2500, 5000],
-    pricing: {
-      base: {
-        price: 1.19,
-        discount: {
-          5000: 1.09,
-        }
-      },
-    },
-  },
-  {
-    code: "STIHCO-AT4C-436766Z",
-    name: "Metal Plates",
-    fullname: "White Aluminum Plate w/full color imprint",
-    colors: ["White"],
-    type: "customs",
-    default_color: "White",
-    supportedStores: ["STIHCO"],
-    quantities: [500, 1000],
-    pricing: {
-      base: {
-        price: 3.74,
-        discount: {
-          1000: 3.39,
-        }
-      },
-    },
-  },
-  {
-    code: "STIHCO-31SD-436768Z",
-    name: "White Stroke Domecal",
-    fullname: "White Stroke Domecal w/full color imprint",
-    colors: ["White"],
-    type: "customs",
-    default_color: "White",
-    supportedStores: ["STIHCO"],
-    quantities: [500, 1000],
-    pricing: {
-      base: {
-        price: 2.79,
-        discount: {
-          1000: 2.39,
-        }
-      },
-    },
-  },
+  },  
 ];

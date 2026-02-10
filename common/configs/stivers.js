@@ -2,10 +2,10 @@ export const config = {
   title: "Stivers",
   company_logo: "stivers.png",
   logo_placements: {
-    mens: ["Right Sleeve", "Left Chest"],
-    womens: ["Right Sleeve", "Left Chest"],
+    mens: ["Left Chest", "Right Sleeve"],
+    womens: ["Left Chest", "Right Sleeve"],
     hat: ["Front Center"],
-    tshirts: ["Right Sleeve", "Left Chest"],
+    tshirts: ["Left Chest", "Right Sleeve"],
   },
   show_modification_thumbnail: true,
   minimum_apparel_order: false,
