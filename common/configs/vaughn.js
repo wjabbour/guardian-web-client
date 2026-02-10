@@ -25,7 +25,7 @@ export const config = {
       "Full Front",
     ],
   },
-  show_image_preview: true,
+  show_image_preview: true,  
   embroideries: {
     hat: [
       "Vaughn Automotive", 

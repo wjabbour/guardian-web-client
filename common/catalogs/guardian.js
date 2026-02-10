@@ -4724,7 +4724,31 @@ export const catalog = [
     colors: ["Blue", "Green", "Grey", "Lime", "Orange", "Pink", "Purple", "Red", "Tan", "White", "Yellow"],
     type: "service",
     default_color: "Blue",
-
+    pricing: {
+      base: {
+        price: 0.0,
+      },
+    },
+  },
+  {
+    code: "SDNC",
+    name: "Service Numbers",
+    fullname: "Mirror Hang Service Numbers (1000/bx)",
+    colors: ["Blue", "Green", "Grey", "Lime", "Orange", "Pink", "Purple", "Red", "Tan", "White", "Yellow"],
+    type: "service",
+    default_color: "Blue",
+    sapVariations: [
+      {code:'-BLUE-0000', color: 'Blue 0000'},
+      {code:'-BLUE-1000', color: 'Blue 1000'},
+      {code:'-BLUE-2000', color: 'Blue 2000'},
+      {code:'-BLUE-3000', color: 'Blue 3000'},
+      {code:'-BLUE-4000', color: 'Blue 4000'},
+      {code:'-BLUE-5000', color: 'Blue 5000'},
+      {code:'-BLUE-6000', color: 'Blue 6000'},
+      {code:'-BLUE-7000', color: 'Blue 7000'},
+      {code:'-BLUE-8000', color: 'Blue 8000'},
+      {code:'-BLUE-9000', color: 'Blue 9000'},
+    ],
     pricing: {
       base: {
         price: 0.0,
