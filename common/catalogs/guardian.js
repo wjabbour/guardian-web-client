@@ -4722,7 +4722,7 @@ export const catalog = [
     name: "Service Numbers",
     fullname: "Mirror Hang Service Numbers (1000/bx)",
     colors: ["Blue", "Green", "Grey", "Lime", "Orange", "Pink", "Purple", "Red", "Tan", "White", "Yellow"],
-    type: "womens",
+    type: "service",
     default_color: "Blue",
     pricing: {
       base: {
