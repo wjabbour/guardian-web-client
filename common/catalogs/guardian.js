@@ -4734,9 +4734,7 @@ export const catalog = [
     code: "SDNC",
     name: "Service Numbers",
     fullname: "Mirror Hang Service Numbers (1000/bx)",
-    colors: ["Blue", "Green", "Grey", "Lime", "Orange", "Pink", "Purple", "Red", "Tan", "White", "Yellow"],
-    type: "service",
-    default_color: "Blue",
+    type: "service",    
     disableColorSelector: true,
     sapVariations: [
       {code:'-BLUE-0000', color: 'Blue 0000'},
