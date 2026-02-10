@@ -4737,6 +4737,7 @@ export const catalog = [
     colors: ["Blue", "Green", "Grey", "Lime", "Orange", "Pink", "Purple", "Red", "Tan", "White", "Yellow"],
     type: "service",
     default_color: "Blue",
+    disableColorSelector: true,
     sapVariations: [
       {code:'-BLUE-0000', color: 'Blue 0000'},
       {code:'-BLUE-1000', color: 'Blue 1000'},
@@ -4749,6 +4750,7 @@ export const catalog = [
       {code:'-BLUE-8000', color: 'Blue 8000'},
       {code:'-BLUE-9000', color: 'Blue 9000'},
     ],
+    quantities: [1, 2, 3, 4, 5],
     pricing: {
       base: {
         price: 0.0,
