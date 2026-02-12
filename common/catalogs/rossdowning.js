@@ -676,7 +676,7 @@ export const catalog = [
     description: '1500 @ $0.70 ea / 2500 @ $0.63 ea / 5000 @ $0.60 ea',
     colors: ["White"],
     type: "customs",
-    supportedStores: ["ROSBHA"],
+    supportedStores: ["DOWCHM"],
     default_color: "White",    
     quantities: [1500, 2500, 5000],
     pricing: {
