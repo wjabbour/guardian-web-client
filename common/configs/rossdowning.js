@@ -41,12 +41,12 @@ export const config = {
       code: "DOWCHA",
     },
     {
-      name: "Ross Downing Buick GMC (Hammond)",
+      name: "Ross Downing GMC (Hammond)",
       address: "1301 S Morrison Blvd, Hammond, LA 70403",
       code: "ROSBHA",
     },
     {
-      name: "Ross Downing Buick GMC (Gonzales)",
+      name: "Ross Downing GMC (Gonzales)",
       address: "2522 S Burnside Avenue, Gonzales, LA 70737",
       code: "DOWBGO",
     },
@@ -54,7 +54,12 @@ export const config = {
       name: "Ross Downing CDJR (Hammond)",
       address: "500 Westin Oaks Drive, Hammond, LA 70403",
       code: "DOWDHA", 
-    },    
+    },
+    {
+      name: "Ross Downing Cadillac (Hammond)",
+      address: "1301 S Morrison Blvd, #101, Hammond, LA 70403",
+      code: "DOWCHM", 
+    },     
             
     ],
   bypass_codes: ["ROSSDOWN"],

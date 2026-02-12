@@ -616,7 +616,7 @@ export const catalog = [
     description: '1500 @ $0.75 ea / 2500 @ $0.65 ea / 5000 @ $0.60 ea', 
     colors: ["Black"],
     type: "customs",
-    supportedStores: ["DOWCHA","DOWCMO","ROSBHA","DOWBGO","DOWDHA"],
+    supportedStores: ["DOWCHA","DOWCMO","ROSBHA","DOWBGO","DOWDHA","DOWCHM"],
     default_color: "Black",    
     quantities: [1500, 2500, 5000],
     pricing: {
@@ -781,7 +781,7 @@ Cursive (6 in. x 1.21 in.)
 Cursive Website decals (8.5 in. x 1.4 in.)`
   ,    
     type: "customs",
-    supportedStores: ["DOWCHA","DOWCMO","ROSBHA","DOWBGO","DOWDHA"],
+    supportedStores: ["DOWCHA","DOWCMO","ROSBHA","DOWBGO","DOWDHA", "DOWCHM"],
     disableColorSelector: true,    
     sapVariations: [
       {code: '-520514A', color:'White Block No Outline'},
@@ -1038,7 +1038,7 @@ Cursive Website decals (8.5 in. x 1.4 in.)`
     description: '125 @ $1.75 ea / 250 @ $1.50 ea / 500 @ $1.25 ea',       
     colors: ["Red","Purple","Gold"],    
     type: "customs",
-    supportedStores: ["DOWCHA","DOWCMO","ROSBHA","DOWBGO","DOWDHA"],
+    supportedStores: ["DOWCHA","DOWCMO","ROSBHA","DOWBGO","DOWDHA","DOWCHM"],
     sapVariations: [
       {code: '-520521A', color:'Red'},
       {code: '-520522A', color:'Purple'},
