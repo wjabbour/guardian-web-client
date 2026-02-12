@@ -335,6 +335,7 @@ export const catalog = [
       {code: '-515I', color:'White'},
       {code: '-520I', color:'Yellow'},          
     ],
+    disableColorSelector: true,
     type: "sales", 
     quantities: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],       
     pricing: {
