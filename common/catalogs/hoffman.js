@@ -320,19 +320,7 @@ export const catalog = [
   {
     code: "GP546",
     name: "Deal Jackets",
-    fullname: "Deal Jackets - Plain", 
-     colors: [
-      "Blue",
-      "Buff",
-      "Fuchsia",
-      "Green",
-      "Grey",
-      "Lavender",
-      "Pink",
-      "Salmon",
-      "White",
-      "Yellow",
-    ],
+    fullname: "Deal Jackets - Plain",     
     sapVariations: [
       {code: '-512I', color:'Blue'},
       {code: '-511I', color:'Buff'},
@@ -347,7 +335,8 @@ export const catalog = [
       {code: '-515I', color:'White'},
       {code: '-520I', color:'Yellow'},          
     ],
-    type: "sales",        
+    type: "sales", 
+    quantities: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],       
     pricing: {
       base: {
         price: 75.00,
