@@ -636,7 +636,7 @@ export const catalog = [
     description: '500 @ $1.40 ea / 1000 @ $1.39 ea / 2500 @ $1.36 ea',
     colors: ["Chrome Faced"],
     type: "customs",
-    supportedStores: ["ROSBHA"],
+    supportedStores: ["DOWCHM"],
     default_color: "Chrome Faced",    
     quantities: [500, 1000, 2500],
     pricing: {
@@ -934,7 +934,7 @@ Cursive Website decals (8.5 in. x 1.4 in.)`
     colors: ["White Black"],
     halfColors: ["White Black"],
     type: "customs",
-    supportedStores: ["ROSBHA"],
+    supportedStores: ["DOWCHM"],
     default_color: "White Black",    
     quantities: [500, 1000, 2500],
     pricing: {
