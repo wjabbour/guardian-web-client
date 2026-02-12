@@ -336,6 +336,7 @@ export const catalog = [
       {code: '-520I', color:'Yellow'},          
     ],
     disableColorSelector: true,
+    variationTextOverride: ['Color:'],
     type: "sales", 
     quantities: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],       
     pricing: {
