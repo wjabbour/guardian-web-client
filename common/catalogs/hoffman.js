@@ -317,4 +317,30 @@ export const catalog = [
       },
     },
   },
+  {
+    code: "GP546",
+    name: "Deal Jackets",
+    fullname: "Deal Jackets - Plain",    
+    sapVariations: [
+      {code: '-511I', color:'Buff'},
+      {code: '-5120', color:'Teal'},
+      {code: '-512I', color:'Blue'},
+      {code: '-5130I', color:'Red'},
+      {code: '-513', color:'Green'},
+      {code: '-514I', color:'Pink'},
+      {code: '-515I', color:'White'},
+      {code: '-516I', color:'Lavender'},
+      {code: '-517I', color:'Salmon'},
+      {code: '-518I', color:'Fuchsia'},
+      {code: '-519I', color:'Grey'},
+      {code: '-520I', color:'Yellow'},           
+    ],
+    type: "sales",
+    disableColorSelector: true,    
+    pricing: {
+      base: {
+        price: 75.00,
+      },
+    },
+  },
 ]
