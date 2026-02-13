@@ -566,7 +566,7 @@ export const catalog = [
     fullname: "Steel Quikstik Adhesive Roll Wheel Weights - .25 oz (1280 segments per box)",
     description: `-Quality powder coating protects the entire weight from corrosion. 
 -Pre-segmented
--Metallic effect is designed to match the color ofthe rim.
+-Metallic effect is designed to match the color of the rim.
 -Easy removal`,
     colors: ["Metallic"],
     type: "service",
