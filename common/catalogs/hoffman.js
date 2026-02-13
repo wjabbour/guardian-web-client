@@ -418,4 +418,74 @@ export const catalog = [
       },
     },
   },
+  {
+    code: "GP-A-6780",
+    name: "Heavy Duty Snow Rake",
+    fullname: "Heavy Duty Snow Rake",
+    colors: ["Red"],
+    type: "service",
+    default_color: "Red",
+    quantities: [1, 2, 3, 4, 5],
+    pricing: {
+      base: {
+        price: 23.99,
+      },
+    },
+  },
+  {
+    code: "600088V",
+    name: "No-Slip Seat Covers (roll)",
+    fullname: "No-Slip Plastic Seat Covers (500/roll)",
+    colors: ["Plastic"],
+    type: "service",
+    default_color: "Plastic",
+    quantities: [1, 2, 3, 4, 5],
+    pricing: {
+      base: {
+        price: 65.00,
+      },
+    },
+  },
+  {
+    code: "55-010",
+    name: "Steering Wheel Covers",
+    fullname: "Steering Wheel Covers (500/bx)",
+    colors: ["Plastic"],
+    type: "service",
+    default_color: "Plastic",
+    quantities: [1, 2, 3, 4, 5],
+    pricing: {
+      base: {
+        price: 45.61,
+      },
+    },
+  },
+  {
+    code: "SM100",
+    name: "Sticky Floor Mats",
+    fullname: "Sticky Floor Mats (175/roll)",
+    colors: ["Plastic"],
+    type: "service",
+    default_color: "Plastic",
+    quantities: [1, 2, 3, 4, 5],
+    pricing: {
+      base: {
+        price: 95.00,
+      },
+    },
+  },
+  {
+    code: "3088",
+    name: "Floor Mats",
+    fullname: "Floor Mats/Coated Paper (500/bx)",
+    colors: ["White"],
+    type: "service",
+    default_color: "White",
+    quantities: [1, 2, 3, 4, 5],
+    pricing: {
+      base: {
+        price: 45.72,
+      },
+    },
+  },
 ]
