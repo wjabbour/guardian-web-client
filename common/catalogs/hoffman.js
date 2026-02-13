@@ -492,10 +492,11 @@ export const catalog = [
     code: "RL-78",
     name: "RL-78 Dispatch Numbers",
     fullname: "RL-78 Service Dispatch Numbers - 7 in x 6 in.",
-    description: `Packaged 1000 per set.
-Large BOLD numbers.
-Prints green on front, red on back.
-Back portion has service advisor, repair order number, customer and license information.`, 
+    description: `Packaged 1000 per set
+Hole Size: 1-1/4 in. hole diameter
+Large BOLD numbers
+Prints green on front, red on back
+Back portion has service advisor, repair order number, customer and license information`, 
      sapVariations: [
       {code: '-000', color:'000'},
       {code: '-1000', color:'1000'},
@@ -510,10 +511,52 @@ Back portion has service advisor, repair order number, customer and license info
     ],     
     type: "service",
     disableColorSelector: true,
+    variationTextOverride: ['Series'],
     quantities: [1, 2, 3, 4, 5],
     pricing: {
       base: {
         price: 49.99,
+      },
+    },
+  },
+  {
+    code: "EIT50",
+    name: "Self-Locking Key Tags",
+    fullname: "Self-Locking Key Tags - 1000 per pack",
+    description: "4-1/2 in. x 3/4 in.",
+    sapVariations: [
+      {code: 'B', color:'Blue'},
+      {code: 'G', color:'Green'},
+      {code: 'O', color:'Orange'},
+      {code: 'R', color:'Red'},
+      {code: 'W', color:'White'},      
+      {code: 'Y', color:'Yellow'},                        
+    ],         
+    type: "service",
+    disableColorSelector: true,
+    variationTextOverride: ['Color'],
+    quantities: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+    pricing: {
+      base: {
+        price: 14.35,
+      },
+    },
+  },
+  {
+    code: "78023",
+    name: "Tire Paste Compound",
+    fullname: "Tire Paste Mounting Compound - 6.5 pounds",
+    description: `A wax paste lubricant that works great with low profile, run flat and alloy wheel applications.
+Very slippery and dries tacky
+No mixing or water
+Rust inhibitors`,
+    colors: ["White"],
+    type: "service",
+    default_color: "White",
+    quantities: [1, 2, 3, 4, 5],
+    pricing: {
+      base: {
+        price: 21.35,
       },
     },
   },
