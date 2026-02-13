@@ -287,36 +287,33 @@ export const catalog = [
     },
   },
   {
-    code: "HOFAPA-0201-507790Z",
-    name: "Non-Expandable Cardstock Folder",
-    fullname: "9-7/8 x 6 Non-Expandable White Marble Crush Cardstock w/full color imprint",
-    colors: ["White"],
+    code: "GP790",
+    name: "Sticker",
+    fullname: "Vehicle Not for Sale Sticker (100/pk)",
+    colors: ["Yellow"],
     type: "sales",
-    default_color: "White",
-    quantities: [2500],
+    default_color: "Yellow",
+    quantities: [1, 2, 3, 4, 5],
     pricing: {
       base: {
-        price: 1.19,
+        price: 13.59,
       },
     },
-  },
-   {
-    code: "HOFAPA-0211-489788Z",
-    name: "Expandable Cardstock Folder",
-    fullname: "9-7/8 x 6 White Expandable Marble Crush Cardstock w/full color imprint",
-    colors: ["White"],
+  }, 
+  {
+    code: "280SH",
+    name: "Hold/Sold Tag",
+    fullname: "Hold/Sold Tag - 8.5 in x 11 in. (50/pk)",
+    colors: ["Yellow"],
     type: "sales",
-    default_color: "White",
-    quantities: [2500, 5000],
+    default_color: "Yellow",
+    quantities: [1, 2, 3, 4, 5],
     pricing: {
       base: {
-        price: 1.19,
-        discount: {
-          5000: 1.09,
-        },
+        price: 23.19,
       },
     },
-  },
+  }, 
   {
     code: "GP546",
     name: "Deal Jackets",
@@ -348,8 +345,8 @@ export const catalog = [
   {
     code: "GP200",
     name: "Key Tags",
-    fullname: "Self-Protecting Key Tags #200 (250 per box)",
-     sapVariations: [
+    fullname: "Self-Protecting Key Tags #200 (250/box)",
+    sapVariations: [
       {code: '-BG', color:'Beige'},
       {code: '-BL', color:'Blue'},
       {code: '-GY', color:'Gray'},
@@ -359,24 +356,65 @@ export const catalog = [
       {code: '-RD', color:'Red'},     
       {code: '-WT', color:'White'},
       {code: '-YL', color:'Yellow'},              
-    ],
-    colors: [
-      "Beige",
-      "Blue",    
-      "Gray",
-      "Green",
-      "Lilac",      
-      "Orange",
-      "Red",      
-      "White",
-      "Yellow",
-    ],
+    ],    
     type: "sales",
     disableColorSelector: true,
     quantities: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
     pricing: {
       base: {
         price: 17.50,
+      },
+    },
+  },
+  {
+    code: "VT400",
+    name: "Stock Stickers",
+    fullname: "Kleer-Back Stock Stickers Versa #400 (100/pk)",
+    sapVariations: [
+      {code: 'B', color:'Blue'},
+      {code: 'G', color:'Green'},
+      {code: 'O', color:'Orange'},
+      {code: 'R', color:'Red'},
+      {code: 'W', color:'White'},      
+      {code: 'Y', color:'Yellow'},                   
+    ],
+   type: "sales",
+   disableColorSelector: true,
+   quantities: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+    pricing: {
+      base: {
+        price: 7.00,
+      },
+    },
+  },
+  {
+    code: "HOFAPA-0201-507790Z",
+    name: "Non-Expandable Cardstock Folder",
+    fullname: "9-7/8 x 6 Non-Expandable White Marble Crush Cardstock w/full color imprint",
+    colors: ["White"],
+    type: "sales",
+    default_color: "White",
+    quantities: [2500],
+    pricing: {
+      base: {
+        price: 1.19,
+      },
+    },
+  },
+   {
+    code: "HOFAPA-0211-489788Z",
+    name: "Expandable Cardstock Folder",
+    fullname: "9-7/8 x 6 White Expandable Marble Crush Cardstock w/full color imprint",
+    colors: ["White"],
+    type: "sales",
+    default_color: "White",
+    quantities: [2500, 5000],
+    pricing: {
+      base: {
+        price: 1.19,
+        discount: {
+          5000: 1.09,
+        },
       },
     },
   },
