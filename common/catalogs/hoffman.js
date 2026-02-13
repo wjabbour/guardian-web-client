@@ -492,11 +492,11 @@ export const catalog = [
     code: "RL-78",
     name: "RL-78 Dispatch Numbers",
     fullname: "RL-78 Service Dispatch Numbers - 7 in x 6 in.",
-    description: `Packaged 1000 per set
-Hole Size: 1-1/4 in. hole diameter
-Large BOLD numbers
-Prints green on front, red on back
-Back portion has service advisor, repair order number, customer and license information`, 
+    description: `-Packaged 1000 per set
+-Hole Size: 1-1/4 in. hole diameter
+-Large BOLD numbers
+-Prints green on front, red on back
+-Back portion has service advisor, repair order number, customer and license information`, 
      sapVariations: [
       {code: '-000', color:'000'},
       {code: '-1000', color:'1000'},
@@ -546,10 +546,10 @@ Back portion has service advisor, repair order number, customer and license info
     code: "78023",
     name: "Tire Paste Compound",
     fullname: "Tire Paste Mounting Compound - 6.5 pounds",
-    description: `A wax paste lubricant that works great with low profile, run flat and alloy wheel applications.
-Very slippery and dries tacky
-No mixing or water
-Rust inhibitors`,
+    description: `-A wax paste lubricant that works great with low profile, run flat and alloy wheel applications.
+-Very slippery and dries tacky
+-No mixing or water
+-Rust inhibitors`,
     colors: ["White"],
     type: "service",
     default_color: "White",
@@ -557,6 +557,24 @@ Rust inhibitors`,
     pricing: {
       base: {
         price: 21.35,
+      },
+    },
+  },
+  {
+    code: "78129",
+    name: "Steel Quikstik Wheel Weights",
+    fullname: "Steel Quikstik Adhesive Roll Wheel Weights - .25 oz (1280 segments per box)",
+    description: `-Quality powder coating protects the entire weight from corrosion. 
+-Pre-segmented
+-Metallic effect is designed to match the color ofthe rim.
+-Easy removal`,
+    colors: ["Metallic"],
+    type: "service",
+    default_color: "Metallic",
+    quantities: [1, 2, 3, 4, 5],
+    pricing: {
+      base: {
+        price: 120.99,
       },
     },
   },
