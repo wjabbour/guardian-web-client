@@ -435,7 +435,7 @@ export const catalog = [
   {
     code: "600088V",
     name: "No-Slip Seat Covers (roll)",
-    fullname: "No-Slip Plastic Seat Covers (500/roll)",
+    fullname: "No-Slip Plastic Seat Covers - Roll of 500",    
     colors: ["Plastic"],
     type: "service",
     default_color: "Plastic",
@@ -449,7 +449,7 @@ export const catalog = [
   {
     code: "55-010",
     name: "Steering Wheel Covers",
-    fullname: "Steering Wheel Covers (500/bx)",
+    fullname: "Steering Wheel Covers - Box of 500",
     colors: ["Plastic"],
     type: "service",
     default_color: "Plastic",
@@ -463,7 +463,7 @@ export const catalog = [
   {
     code: "SM100",
     name: "Sticky Floor Mats",
-    fullname: "Sticky Floor Mats (175/roll)",
+    fullname: "Sticky Floor Mats - Roll of 175",
     colors: ["Plastic"],
     type: "service",
     default_color: "Plastic",
@@ -477,7 +477,7 @@ export const catalog = [
   {
     code: "3088",
     name: "Floor Mats",
-    fullname: "Floor Mats/Coated Paper (500/bx)",
+    fullname: "Floor Mats/Coated Paper - Box of 500",
     colors: ["White"],
     type: "service",
     default_color: "White",
@@ -485,6 +485,35 @@ export const catalog = [
     pricing: {
       base: {
         price: 45.72,
+      },
+    },
+  },
+  {
+    code: "RL-78",
+    name: "RL-78 Dispatch Numbers",
+    fullname: "RL-78 Service Dispatch Numbers - 7 in x 6 in.",
+    description: `Packaged 1000 per set.
+Large BOLD numbers.
+Prints green on front, red on back.
+Back portion has service advisor, repair order number, customer and license information.`, 
+     sapVariations: [
+      {code: '-000', color:'000'},
+      {code: '-1000', color:'1000'},
+      {code: '-2000', color:'2000'},
+      {code: '-3000', color:'3000'},
+      {code: '-4000', color:'4000'},      
+      {code: '-5000', color:'5000'},
+      {code: '-6000', color:'6000'},
+      {code: '-7000', color:'7000'},
+      {code: '-8000', color:'8000'},      
+      {code: '-9000', color:'9000'},                   
+    ],     
+    type: "service",
+    disableColorSelector: true,
+    quantities: [1, 2, 3, 4, 5],
+    pricing: {
+      base: {
+        price: 49.99,
       },
     },
   },
