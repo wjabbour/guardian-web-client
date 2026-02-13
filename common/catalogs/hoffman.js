@@ -316,13 +316,14 @@ export const catalog = [
   }, 
   {
     code: "GP546",
-    name: "Deal Jackets",
-    fullname: "Deal Jackets - Plain",     
+    name: "Deal Jackets - Printed",
+    fullname: "Printed Vehicle Deal Jackets - 12 in. x 9 in. - (DSA-546)",
+    description: `Packaged 500 per box`,    
     sapVariations: [
       {code: '-512I', color:'Blue'},
       {code: '-511I', color:'Buff'},
       {code: '-518I', color:'Fuchsia'},
-      {code: '-513', color:'Green'},
+      {code: '-513I', color:'Green'},
       {code: '-519I', color:'Grey'},
       {code: '-516I', color:'Lavender'},
       {code: '-514I', color:'Pink'},
