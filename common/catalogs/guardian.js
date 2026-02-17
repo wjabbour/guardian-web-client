@@ -4720,17 +4720,41 @@ export const catalog = [
         price: 0.00,
       },
     },
-  },
+  },  
   {
     code: "SDNC",
     name: "Service Numbers",
-    fullname: "Mirror Hang Service Numbers (1000/bx)",
-    colors: ["Blue", "Green", "Grey", "Lime", "Orange", "Pink", "Purple", "Red", "Tan", "White", "Yellow"],
-    type: "service",
-    default_color: "Blue",
+    fullname: "Mirror Hang Service Numbers (1000/bx)",    
+     sapVariations: [
+      {code: '-BLUE-0000', color:'Blue0000'},
+      {code: '-BLUE-1000', color:'Blue1000'},
+      {code: '-BLUE-2000', color:'Blue2000'},
+      {code: '-BLUE-3000', color:'Blue3000'},
+      {code: '-BLUE-4000', color:'Blue4000'},
+      {code: '-BLUE-5000', color:'Blue5000'},
+      {code: '-BLUE-6000', color:'Blue6000'},
+      {code: '-BLUE-7000', color:'Blue7000'},
+      {code: '-BLUE-8000', color:'Blue8000'},
+      {code: '-BLUE-9000', color:'Blue9000'},
+      {code: '-511I', color:'Buff'},
+      {code: '-518I', color:'Fuchsia'},
+      {code: '-513I', color:'Green'},
+      {code: '-519I', color:'Grey'},
+      {code: '-516I', color:'Lavender'},
+      {code: '-514I', color:'Pink'},
+      {code: '-5130I', color:'Red'},
+      {code: '-517I', color:'Salmon'},
+      {code: '-5120', color:'Teal'},
+      {code: '-515I', color:'White'},
+      {code: '-520I', color:'Yellow'},          
+    ],
+    disableColorSelector: true,
+    variationTextOverride: ['Series:'],
+    type: "womens", 
+    quantities: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],       
     pricing: {
       base: {
-        price: 0.0,
+        price: 0.00,
       },
     },
   },
@@ -4756,7 +4780,6 @@ export const catalog = [
     colors: ["White"],
     type: "service",
     default_color: "White",
-
     pricing: {
       base: {
         price: 0.0,
@@ -4770,7 +4793,6 @@ export const catalog = [
     colors: ["Blue", "Green", "Red", "White", "Yellow"],
     type: "service",
     default_color: "Blue",
-
     pricing: {
       base: {
         price: 0.0,
