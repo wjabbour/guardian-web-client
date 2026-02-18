@@ -2078,6 +2078,35 @@ export const catalog = [
     },
   },
   {
+    code: "GP418",
+    name: "Clip-On Window Flags",
+    fullname: "Clip-On Window Flag",
+    description: `Made of polyester cloth
+11 in. x 13 in.
+Sewn on a white sleeve.
+20 in. tall durable white plastic staff with molded clip.
+Designed to easily attach to any car or truck window.
+Designed to be used on a stationary vehicle located on a dealership log.`,
+    sapVariations: [
+      {code: '-BG-BK', color:'Acura'},      
+      {code: '-BUICK', color: 'Buick'},
+      {code: '-BMW', color:'BMW'},
+      {code: '-CHEVY', color:'Chevrolet'},
+      {code: '-DZ2', color:'Chrysler Jeep'},      
+      {code: '-DY-BK', color:'Dodge-Black'},
+      {code: '-R', color:'Red'},               
+    ],
+    disableColorSelector: true,
+    variationTextOverride: ['Brand:'],    
+    type: "sales", 
+    quantities: [1, 2, 3, 4, 5],  
+    pricing: {
+      base: {
+        price: 0.00,
+      },
+    },
+  },
+  {
     code: "GP418ACURA",
     name: "Clip-On Window Flag",
     fullname: "Clip-On Window Flag - ACURA",
