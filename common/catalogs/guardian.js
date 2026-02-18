@@ -2046,9 +2046,17 @@ export const catalog = [
     code: "225",
     name: "Top Stripe Key Tags",
     fullname: "Top Stripe Key Tags #225 (250 per pack)",
-    colors: ["Black", "Blue", "Green", "Magenta", "Orange", "Red", "Yellow"],
-    type: "sales",
-    default_color: "Black",
+    sapVariations: [
+      {code: '-BLK', color:'Black'},
+      {code: '-B', color:'Blue'},
+      {code: '-G', color:'Green'},
+      {code: '-M', color:'Magenta'},      
+      {code: '-O', color:'Orange'},
+      {code: '-R', color:'Red'},               
+    ],
+    disableColorSelector: true,
+    variationTextOverride: ['Color:'],    
+    type: "sales",    
     pricing: {
       base: {
         price: 0.00,
