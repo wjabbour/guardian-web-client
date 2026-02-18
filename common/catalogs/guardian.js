@@ -2045,7 +2045,7 @@ export const catalog = [
   {
     code: "225",
     name: "Top Stripe Key Tags",
-    fullname: "Top Stripe Key Tags #225 (250 per pack)",
+    fullname: "Top Stripe Key Tags (250 per pack)",
     sapVariations: [
       {code: '-BLK', color:'Black'},
       {code: '-B', color:'Blue'},
