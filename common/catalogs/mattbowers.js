@@ -2069,6 +2069,282 @@ export const catalog = [
         price: 12.99,
       },
     },
+  },  
+  {
+    code: "MATFME-284-515528A",
+    name: "Vinyl Document Folder",
+    fullname: "Royal Blue Guesseted Vinyl Doc Folder w/white imprint",
+    colors: ["Royal Blue"],
+    type: "customs",
+    default_color: "Royal Blue", 
+    supportedStores: ["MATFME"],   
+    quantities: [1000],
+    pricing: {
+      base: {
+        price: 2.25,
+      },
+    },
+  },
+  {
+    code: "BOWHGU-0201-504644A",
+    name: "Paper Document Folder",
+    fullname: "9.875 in. x 6 in. Non-expandable Blue Marble Crush Cardstock w/white imprint",
+    colors: ["Blue"],
+    type: "customs",
+    default_color: "Blue",
+    supportedStores: ["BOWHGU"],    
+    quantities: [500],
+    pricing: {
+      base: {
+        price: 1.57,
+      },
+    },
+  },
+  {
+    code: "BOWNSO-0201-508858A",
+    name: "Paper Document Folder",
+    fullname: "9.875 in. x 6 in. Non-expandable Black Cardstock w/silver foil imprint",
+    colors: ["Black"],
+    type: "customs",
+    default_color: "Black",
+    supportedStores: ["BOWNSO"],    
+    quantities: [1000],
+    pricing: {
+      base: {
+        price: 1.34,
+      },
+    },
+  },
+  {
+    code: "BOWCME-0801-474526B",
+    name: "White Quick Ship Folder",
+    fullname:
+      "White Quick Ship Folder w/reflex blue & 872 metallic gold imprint",
+    colors: ["White"],
+    type: "customs",
+    default_color: "White",
+    supportedStores: ["BOWCME"],     
+    quantities: [1000],
+    pricing: {
+      base: {
+        price: 1.75,
+      },
+    },
+  },
+  {
+    code: "MATFME-DEALJACKET-502487A",
+    name: "Custom Deal Jacket",
+    fullname: "Custom Deal Jacket (DSA-500)",
+    colors: ["Blue", "White"],
+    type: "customs",
+    default_color: "Blue",
+    supportedStores: ["MATFME"],     
+    quantities: [1000, 1500, 2500],
+    pricing: {
+      base: {
+        price: 0.44,
+      },
+    },
+  },  
+  {
+    code: "BOWHSL-1830-490972A",
+    name: "Service Due Sticker",
+    fullname:
+      "White Vinyl Service Due Sticker w/black imprint (1.5 in. x 2.25 in.)",
+    description: `Grey does not print.`,
+    colors: ["White"],
+    type: "customs",
+    default_color: "White",
+    supportedStores: ["BOWHSL"],
+    quantities: [2500],
+    pricing: {
+      base: {
+        price: 0.15,
+      },
+    },
+  },  
+  {
+    code: "BOWCME-1830-491490Z",
+    name: "Service Due Sticker",
+    fullname: "White Vinyl Service Due Sticker w/full color imprint (250/pk)",
+    colors: ["White"],
+    type: "customs",
+    default_color: "White",
+    description: `Grey does not print.`,
+    supportedStores: ["BOWCME"],
+    quantities: [2500],
+    pricing: {
+      base: {
+        price: 0.15,
+      },
+    },
+  },
+  {
+    code: "BOWNSO-1820-497619A",
+    name: "Service Due Sticker",
+    fullname:
+      "White Vinyl Service Due Sticker w/black imprint (1.5 in. x 2.25 in.)",
+    description: `Grey does not print.`,
+    colors: ["White"],
+    type: "customs",
+    default_color: "White",
+    supportedStores: ["BOWNSO"],
+    quantities: [2500],
+    pricing: {
+      base: {
+        price: 0.16,
+      },
+    },
+  }, 
+  {
+    code: "BOWHGU-3200-500034B",
+    name: "Addendum Form",
+    fullname: "4-1/4 in. x 11 in. Addendum Form w/black & reflex blue imprint",
+    colors: ["Blue"],
+    type: "customs",
+    default_color: "Blue",
+    supportedStores: ["BOWHGU"],   
+    quantities: [500],
+    pricing: {
+      base: {
+        price: 0.56,
+      },
+    },
+  },
+  {
+    code: "BOWHSL-KPB-520966C",
+    name: "Pen & Keychain Boxset",
+    fullname: "Pen & Keychain Boxset",
+    description:
+      "Box - silver foil; Pen - black w/white imprint; Fob - black leather/white stitch, black color fill",
+    colors: ["Black"],
+    type: "customs",
+    default_color: "Black",
+    supportedStores: ["BOWHSL"],   
+    quantities: [250, 500, 1000],
+    pricing: {
+      base: {
+        price: 9.99,         
+      },
+    },
+  },
+  {
+    code: "BOWCSL-KPB-520960C",
+    name: "Pen & Keychain Boxset",
+    fullname: "Pen & Keychain Boxset",
+    description:
+      "Box - silver foil; Pen - black w/white imprint; Fob - black leather/white stitch, black color fill",
+    colors: ["Black"],
+    type: "customs",
+    default_color: "Black",
+    supportedStores: ["BOWCSL"],   
+    quantities: [250, 500, 1000],
+    pricing: {
+      base: {
+        price: 9.99,         
+      },
+    },
+  },
+  {
+    code: "INDCDJ-KPB-520972C",
+    name: "Pen & Keychain Boxset",
+    fullname: "Pen & Keychain Boxset",
+    description:
+      "Box - silver foil; Pen - black w/white imprint; Fob - black leather/white stitch, black color fill",
+    colors: ["Black"],
+    type: "customs",
+    default_color: "Black",
+    supportedStores: ["INDCDJ"],   
+    quantities: [250, 500, 1000],
+    pricing: {
+      base: {
+        price: 9.99,         
+      },
+    },
+  },
+  {
+    code: "BOWHME-KPB-520969C",
+    name: "Pen & Keychain Boxset",
+    fullname: "Pen & Keychain Boxset",
+    description:
+      "Box - silver foil; Pen - black w/white imprint; Fob - black leather/white stitch, black color fill",
+    colors: ["Black"],
+    type: "customs",
+    default_color: "Black",
+    supportedStores: ["BOWHME"],   
+    quantities: [250, 500, 1000],
+    pricing: {
+      base: {
+        price: 9.99,         
+      },
+    },
+  },
+  {
+    code: "BOWCME-KPB-520952C",
+    name: "Pen & Keychain Boxset",
+    fullname: "Pen & Keychain Boxset",
+    description:
+      "Box - silver foil; Pen - black w/white imprint; Fob - black leather/white stitch, black color fill",
+    colors: ["Black"],
+    type: "customs",
+    default_color: "Black",
+    supportedStores: ["BOWCME"],   
+    quantities: [250, 500, 1000],
+    pricing: {
+      base: {
+        price: 9.99,         
+      },
+    },
+  },
+  {
+    code: "BOWCBA-KPB-520963C",
+    name: "Pen & Keychain Boxset",
+    fullname: "Pen & Keychain Boxset",
+    description:
+      "Box - silver foil; Pen - black w/white imprint; Fob - black leather/white stitch, black color fill",
+    colors: ["Black"],
+    type: "customs",
+    default_color: "Black",
+    supportedStores: ["BOWCBA"],   
+    quantities: [250, 500, 1000],
+    pricing: {
+      base: {
+        price: 9.99,         
+      },
+    },
+  },
+  {
+    code: "MATFME-KPB-520949C",
+    name: "Pen & Keychain Boxset",
+    fullname: "Pen & Keychain Boxset",
+    description:
+      "Box - silver foil; Pen - black w/white imprint; Fob - black leather/white stitch, black color fill",
+    colors: ["Black"],
+    type: "customs",
+    default_color: "Black",
+    supportedStores: ["MATFME"],   
+    quantities: [250, 500, 1000],
+    pricing: {
+      base: {
+        price: 9.99,         
+      },
+    },
+  },
+  {
+    code: "BOWHSL-5400-520965Z",
+    name: "All Weather Floor Mats",
+    fullname: "Black All Weather Floor Mats w/full color dome insert",
+    colors: ["Black"],    
+    type: "customs",
+    default_color: "Black",
+    description: `Insert Size 7 in. x 2 in.; Pricing includes shipping.`,
+    supportedStores: ["BOWHSL"],
+    quantities: [100],    
+    pricing: {
+      base: {
+        price: 28.80,
+      },
+    },
   },
   {
     code: "TH100",
@@ -2348,86 +2624,29 @@ export const catalog = [
     },
   },
   {
-    code: "MATFME-284-515528A",
-    name: "Vinyl Document Folder",
-    fullname: "Royal Blue Guesseted Vinyl Doc Folder w/white imprint",
-    colors: ["Royal Blue"],
-    type: "customs",
-    default_color: "Royal Blue", 
-    supportedStores: ["MATFME"],   
-    quantities: [1000],
-    pricing: {
-      base: {
-        price: 2.25,
-      },
-    },
-  },
-  {
-    code: "BOWHGU-0201-504644A",
-    name: "Paper Document Folder",
-    fullname: "9.875 in. x 6 in. Non-expandable Blue Marble Crush Cardstock w/white imprint",
-    colors: ["Blue"],
-    type: "customs",
-    default_color: "Blue",
-    supportedStores: ["BOWHGU"],    
-    quantities: [500],
-    pricing: {
-      base: {
-        price: 1.57,
-      },
-    },
-  },
-  {
-    code: "BOWNSO-0201-508858A",
-    name: "Paper Document Folder",
-    fullname: "9.875 in. x 6 in. Non-expandable Black Cardstock w/silver foil imprint",
-    colors: ["Black"],
-    type: "customs",
-    default_color: "Black",
-    supportedStores: ["BOWNSO"],    
-    quantities: [1000],
-    pricing: {
-      base: {
-        price: 1.34,
-      },
-    },
-  },
-  {
-    code: "BOWCME-0801-474526B",
-    name: "White Quick Ship Folder",
-    fullname:
-      "White Quick Ship Folder w/reflex blue & 872 metallic gold imprint",
-    colors: ["White"],
-    type: "customs",
-    default_color: "White",
-    supportedStores: ["BOWCME"],     
-    quantities: [1000],
-    pricing: {
-      base: {
-        price: 1.75,
-      },
-    },
-  },
-  {
     code: "GP546",
-    name: "Deal Jackets",
-    fullname: "Deal Jackets - Plain (500/bx)",
-    colors: [
-      "Blue",
-      "Buff",
-      "Fuchsia",
-      "Green",
-      "Grey",
-      "Lavender",
-      "Pink",
-      "Salmon",
-      "White",
-      "Yellow",
+    name: "Deal Jackets - Printed",
+    fullname: "Printed Vehicle Deal Jackets - 12 in. x 9 in. - (DSA-546)",
+    description: `-500 per box
+$115.76 ea / 5 boxes: $115.76 ea / 10 boxes: $105 ea`,    
+    sapVariations: [
+      {code: '-512I', color:'Blue'},
+      {code: '-511I', color:'Buff'},
+      {code: '-518I', color:'Fuchsia'},
+      {code: '-513I', color:'Green'},
+      {code: '-519I', color:'Grey'},
+      {code: '-516I', color:'Lavender'},
+      {code: '-514I', color:'Pink'},
+      {code: '-5130I', color:'Red'},
+      {code: '-517I', color:'Salmon'},
+      {code: '-5120', color:'Teal'},
+      {code: '-515I', color:'White'},
+      {code: '-520I', color:'Yellow'},          
     ],
-    type: "sales",
-    default_color: "Blue",   
-    quantities: [1, 5, 10],
-    description: '1 box: $115.76 ea / 5 boxes: $115.76 ea / 10 boxes: $105 ea',
+    disableColorSelector: true,
+    variationTextOverride: ['Color:'],
+    type: "sales", 
+    quantities: [1, 5, 10],    
     pricing: {
       base: {
         price: 115.76,
@@ -2436,22 +2655,7 @@ export const catalog = [
         },
       },
     },
-  },
-  {
-    code: "MATFME-DEALJACKET-502487A",
-    name: "Custom Deal Jacket",
-    fullname: "Custom Deal Jacket (DSA-500)",
-    colors: ["Blue", "White"],
-    type: "customs",
-    default_color: "Blue",
-    supportedStores: ["MATFME"],     
-    quantities: [1000, 1500, 2500],
-    pricing: {
-      base: {
-        price: 0.44,
-      },
-    },
-  },
+  },  
   {
     code: "S4G2",
     name: "Buyers Guide",
@@ -2568,71 +2772,6 @@ export const catalog = [
       },
     },
   },  
-  {
-    code: "BOWHSL-1830-490972A",
-    name: "Service Due Sticker",
-    fullname:
-      "White Vinyl Service Due Sticker w/black imprint (1.5 in. x 2.25 in.)",
-    description: `Grey does not print.`,
-    colors: ["White"],
-    type: "customs",
-    default_color: "White",
-    supportedStores: ["BOWHSL"],
-    quantities: [2500],
-    pricing: {
-      base: {
-        price: 0.15,
-      },
-    },
-  },  
-  {
-    code: "BOWCME-1830-491490Z",
-    name: "Service Due Sticker",
-    fullname: "White Vinyl Service Due Sticker w/full color imprint (250/pk)",
-    colors: ["White"],
-    type: "customs",
-    default_color: "White",
-    description: `Grey does not print.`,
-    supportedStores: ["BOWCME"],
-    quantities: [2500],
-    pricing: {
-      base: {
-        price: 0.15,
-      },
-    },
-  },
-  {
-    code: "BOWNSO-1820-497619A",
-    name: "Service Due Sticker",
-    fullname:
-      "White Vinyl Service Due Sticker w/black imprint (1.5 in. x 2.25 in.)",
-    description: `Grey does not print.`,
-    colors: ["White"],
-    type: "customs",
-    default_color: "White",
-    supportedStores: ["BOWNSO"],
-    quantities: [2500],
-    pricing: {
-      base: {
-        price: 0.16,
-      },
-    },
-  }, 
-  {
-    code: "BOWHGU-3200-500034B",
-    name: "Addendum Form",
-    fullname: "4-1/4 in. x 11 in. Addendum Form w/black & reflex blue imprint",
-    colors: ["Blue"],
-    type: "customs",
-    default_color: "Blue",
-    supportedStores: ["BOWHGU"],   
-    quantities: [500],
-    pricing: {
-      base: {
-        price: 0.56,
-      },
-    },
-  },
   {
     code: "NDESTOCK",
     name: "Night Drop Envelopes",

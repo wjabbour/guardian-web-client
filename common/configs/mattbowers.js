@@ -153,7 +153,12 @@ export const config = {
       name: "Matt Bowers Nissan (South Mississippi)",
       address: "11600 Bobby Eleuterius Blvd, D'Iberville, MS 39540",
       code: "BOWNSO",
-    },   
+    }, 
+    {
+      name: "Indy CDJR (Slidell)",
+      address: "38450 Sunny Days Lane, Slidell, LA 70461",
+      code: "INDCDJ",
+    },  
         
     ],
   bypass_codes: ["MATTB"],
