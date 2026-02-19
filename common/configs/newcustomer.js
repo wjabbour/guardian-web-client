@@ -18,6 +18,11 @@ export const config = {
     customs: [],
     office: [],
   },
+   email_recipients: [
+    "lbudbill@gpcorp.com",    
+    "shanell@gpcorp.com",
+    "webportalorders@gpcorp.com",
+  ],
   stores: [
     {
       name: "Tasca Ford Cranston",
