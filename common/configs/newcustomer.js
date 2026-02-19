@@ -12,8 +12,8 @@ export const config = {
   enable_customs_store_picker: true,
   embroideries: {
     hat: [],
-    mens: [],
-    womens: [],
+    mens: ["Autorent.EMB","Tasca.EMB"],
+    womens: ["Autorent.EMB","Tasca.EMB"],
     accessory: [],
     customs: [],
     office: [],
