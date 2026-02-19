@@ -2347,6 +2347,54 @@ export const catalog = [
     },
   },
   {
+    code: "BOWCSL-5400-520959Z",
+    name: "All Weather Floor Mats",
+    fullname: "Black All Weather Floor Mats w/full color dome insert",
+    colors: ["Black"],    
+    type: "customs",
+    default_color: "Black",
+    description: `Insert Size 7 in. x 2 in.; Pricing includes shipping.`,
+    supportedStores: ["BOWCSL"],
+    quantities: [100],    
+    pricing: {
+      base: {
+        price: 28.80,
+      },
+    },
+  },
+  {
+    code: "BOWHME-5400-520967Z",
+    name: "All Weather Floor Mats",
+    fullname: "Black All Weather Floor Mats w/full color dome insert",
+    colors: ["Black"],    
+    type: "customs",
+    default_color: "Black",
+    description: `Insert Size 7 in. x 2 in.; Pricing includes shipping.`,
+    supportedStores: ["BOWHME"],
+    quantities: [100],    
+    pricing: {
+      base: {
+        price: 28.80,
+      },
+    },
+  },
+  {
+    code: "INCDJ-5400-520970Z",
+    name: "All Weather Floor Mats",
+    fullname: "Black All Weather Floor Mats w/full color dome insert",
+    colors: ["Black"],    
+    type: "customs",
+    default_color: "Black",
+    description: `Insert Size 7 in. x 2 in.; Pricing includes shipping.`,
+    supportedStores: ["INCDJ"],
+    quantities: [100],    
+    pricing: {
+      base: {
+        price: 28.80,
+      },
+    },
+  },
+  {
     code: "TH100",
     name: "Temp L/P Protector",
     fullname: "License Plate Protector (100/pk)",
