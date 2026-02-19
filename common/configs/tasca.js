@@ -34,7 +34,7 @@ export const config = {
   server_hostname: "https://mxfj3q6m01.execute-api.us-east-1.amazonaws.com",
   account_reps: [
     { name: "Louis Budbill", phone: "678-287-1649"}],
-  route_prefix: "/newcustomer",
+  route_prefix: "/tasca",
   paypal_not_supported: true,
   password: "TascA",
   
