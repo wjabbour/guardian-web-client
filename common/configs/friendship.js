@@ -9,9 +9,9 @@ export const config = {
   },
   show_image_preview: true,
   embroideries: {
-    hat: ["Friendship Cars", "Friendship2"],
-    mens: ["Friendship Cars", "Friendship2"],
-    womens: ["Friendship Cars", "Friendship2"],
+    hat: ["Friendship2"],
+    mens: ["Friendship2"],
+    womens: ["Friendship2"],
     tshirts: ["Friendship2"],
     accessory: [],
     customs: [],
