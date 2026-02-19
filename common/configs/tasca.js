@@ -30,12 +30,12 @@ export const config = {
       code: "TASFCR",
     },
   ],
-  bypass_codes: ["NEWCUSTOMER"],
+  bypass_codes: ["TASCA"],
   server_hostname: "https://mxfj3q6m01.execute-api.us-east-1.amazonaws.com",
   account_reps: [
     { name: "Louis Budbill", phone: "678-287-1649"}],
   route_prefix: "/newcustomer",
   paypal_not_supported: true,
-  password: "NewcustomeR",
+  password: "TascA",
   
 };

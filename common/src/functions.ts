@@ -36,6 +36,8 @@ import { config as JcmortgageConfig } from "../configs/jcmortgage";
 import { config as McdonaldConfig } from "../configs/mcdonald";
 // @ts-ignore
 import { config as RossdowningConfig } from "../configs/rossdowning";
+// @ts-ignore
+import { config as TascaConfig } from "../configs/tasca";
 
 // @ts-ignore - JS catalog files don't have type declarations
 import { catalog as CannonCatalog } from "../catalogs/cannon";
@@ -73,6 +75,8 @@ import { catalog as JcmortgageCatalog } from "../catalogs/jcmortgage";
 import { catalog as McdonaldCatalog } from "../catalogs/mcdonald";
 // @ts-ignore
 import { catalog as RossdowningCatalog } from "../catalogs/rossdowning";
+// @ts-ignore
+import { catalog as TascaCatalog } from "../catalogs/tasca";
 
 const DEFAULT_CONFIG = {
   title: "Guardian",
@@ -100,6 +104,7 @@ const allConfigs: any[] = [
   JcmortgageConfig,
   McdonaldConfig,
   RossdowningConfig,
+  TascaConfig,
 ];
 
 export function getStoreCode(companyName: string, storeAddress: string): string | undefined {
@@ -178,6 +183,8 @@ export function getWebCatalog(): any {
     return McdonaldCatalog;
   } else if (url.includes("rossdowning")) {
     return RossdowningCatalog;
+  } else if (url.includes("tasca")) {
+    return TascaCatalog;
   }
 }
 
@@ -222,6 +229,8 @@ export function getCatalog(companyName: string): any {
       return McdonaldCatalog;
     case "Rossdowning":
       return RossdowningCatalog;
+    case "Tasca":
+      return TascaCatalog;
   }
 }
 
@@ -265,6 +274,8 @@ export function getWebConfigValue(val: string): any {
     return (McdonaldConfig as any)[val];
   } else if (url.includes("rossdowning")) {
     return (RossdowningConfig as any)[val];
+  } else if (url.includes("tasca")) {
+    return (TascaConfig as any)[val];
   } else {
     // when the user is on gpc81.com landing page we need to display a string in the browser tab
     return (DEFAULT_CONFIG as any)[val];
@@ -308,6 +319,8 @@ export function getConfigValue(val: string, config: string): any {
       return (McdonaldConfig as any)[val];
     case "Rossdowning":
       return (RossdowningConfig as any)[val];
+    case "Tasca":
+      return (TascaConfig as any)[val];
   }
 }
 
