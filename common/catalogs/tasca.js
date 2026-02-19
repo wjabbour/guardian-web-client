@@ -103,4 +103,169 @@ export const catalog = [
       "4XLarge": { price: 46.99 },
     },
   },
+  {
+    code: "VT400",
+    name: "Stock Windshield Sticker",
+    fullname: "Kleer-Back Stock Stickers Versa #400 (100/pk)",
+    colors: ["Blue", "Green", "Orange", "Red", "White", "Yellow"],
+    type: "sales",
+    default_color: "Blue",    
+    quantities: [1, 5, 10],    
+    pricing: {
+      base: {
+        price: 0.00,        
+      },
+    },
+  },
+  {
+    code: "GP200",
+    name: "Key Tags",
+    fullname: "Self-Protecting Key Tags #200 (250 per box)",
+    colors: [
+      "Blue",
+      "Gray",
+      "Green",
+      "Lilac",
+      "Lime Green",
+      "Orange",
+      "Red",
+      "Tan",
+      "White",
+      "Yellow",
+    ],
+    type: "sales",
+    default_color: "White",
+    pricing: {
+      base: {
+        price: 0.0,
+      },
+    },
+  },
+  {
+    code: "GP790",
+    name: "Sticker",
+    fullname: "Vehicle Not for Sale Sticker (100/pk)",
+    colors: ["Yellow"],
+    type: "sales",
+    default_color: "Yellow",
+    quantities: [100],
+    pricing: {
+      base: {
+        price: 0.0,
+      },
+    },
+  },
+  {
+    code: "600088V",
+    name: "Seat Covers (roll)",
+    fullname: "No-Slip Plastic Seat Covers (500/roll)",
+    colors: ["Plastic"],
+    type: "service",
+    default_color: "Plastic",
+    quantities: [500],
+    pricing: {
+      base: {
+        price: 0.0,
+      },
+    },
+  },
+  {
+    code: "3088",
+    name: "Floor Mats",
+    fullname: "Floor Mats/Coated Paper (500/bx)",
+    colors: ["White"],
+    type: "service",
+    default_color: "White",
+    quantities: [500],
+    pricing: {
+      base: {
+        price: 0.0,
+      },
+    },
+  },
+  {
+    code: "55-010",
+    name: "Steering Wheel Covers",
+    fullname: "Steering Wheel Covers (500/bx)",
+    colors: ["Plastic"],
+    type: "service",
+    default_color: "Plastic",
+    quantities: [500],
+    pricing: {
+      base: {
+        price: 0.0,
+      },
+    },
+  },
+  {
+    code: "GP546",
+    name: "Deal Jackets - Printed",
+    fullname: "Printed Vehicle Deal Jackets - 12 in. x 9 in. - (DSA-546)",
+    description: `Packaged 500 per box`,    
+    sapVariations: [
+      {code: '-512I', color:'Blue'},
+      {code: '-511I', color:'Buff'},
+      {code: '-518I', color:'Fuchsia'},
+      {code: '-513I', color:'Green'},
+      {code: '-519I', color:'Grey'},
+      {code: '-516I', color:'Lavender'},
+      {code: '-514I', color:'Pink'},
+      {code: '-5130I', color:'Red'},
+      {code: '-517I', color:'Salmon'},
+      {code: '-5120', color:'Teal'},
+      {code: '-515I', color:'White'},
+      {code: '-520I', color:'Yellow'},          
+    ],
+    disableColorSelector: true,
+    variationTextOverride: ['Color:'],
+    type: "office", 
+    quantities: [1, 2, 3, 4, 5],       
+    pricing: {
+      base: {
+        price: 0.00,
+      },
+    },
+  },
+  {
+    code: "GUARDFRM",
+    name: "Zinc Metal Frames",
+    fullname: "Zinc Metal Frame",
+    colors: ["Metal"],
+    type: "customs",
+    default_color: "Metal",    
+    quantities: [500, 1000, 2500],
+    pricing: {
+      base: {
+        price: 0.0,
+      },
+    },
+  },
+  {
+    code: "guardianpp",
+    name: "Poly Coated Plates",
+    fullname: "Poly Coated Cardboard w/blue imprint",
+    colors: ["White"],
+    type: "customs",
+    default_color: "White",    
+    quantities: [500, 1000, 2500],
+    pricing: {
+      base: {
+        price: 0.0,
+      },
+    },
+  },
+  {
+    code: "GUARDECAL",
+    name: "Die Cut Decals",
+    fullname: "Vinyl Diecut Decals",
+    colors: ["White"],
+    type: "customs",
+    default_color: "White",    
+    quantities: [500, 1000, 2500],
+    pricing: {
+      base: {
+        price: 0.0,
+      },
+    },
+  },
 ];

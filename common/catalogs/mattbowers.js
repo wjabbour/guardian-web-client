@@ -510,7 +510,14 @@ export const catalog = [
     ],
     type: "womens",
     default_color: "Black",
-    sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge", "3XLarge"],
+    sizes: [
+      "Small", 
+      "Medium", 
+      "Large", 
+      "XLarge", 
+      "2XLarge", 
+      "3XLarge",
+    ],
     pricing: {
       Small: { price: 43.19 },
       Medium: { price: 43.19 },
@@ -679,10 +686,21 @@ export const catalog = [
     name: "Port Authority® TALL Pocket Polo #TLK200P",
     fullname:
       "Port Authority® Tall Wearever Signature Pique Pocket Polo (TLK200P)",
-    colors: ["Deep Black", "Gusty Grey", "Storm Grey", "True Royal"],
+    colors: [
+      "Deep Black", 
+      "Gusty Grey", 
+      "Storm Grey", 
+      "True Royal",
+    ],
     type: "mens",
     default_color: "Deep Black",
-    sizes: ["LT", "XLT", "2XLT", "3XLT", "4XLT"],
+    sizes: [
+      "LT", 
+      "XLT", 
+      "2XLT", 
+      "3XLT", 
+      "4XLT",
+    ],
     pricing: {
       LT: { price: 28.07 },
       XLT: { price: 28.07 },
@@ -801,7 +819,15 @@ export const catalog = [
     colors: ["Black","White"],
     type: "mens",
     default_color: "Black",
-    sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge", "3XLarge", "4XLarge"],
+    sizes: [
+      "Small", 
+      "Medium", 
+      "Large", 
+      "XLarge", 
+      "2XLarge", 
+      "3XLarge", 
+      "4XLarge",
+    ],
     pricing: {
       Small: { price: 35.37 },
       Medium: { price: 35.37 },
@@ -855,7 +881,13 @@ export const catalog = [
     ],
     type: "womens",
     default_color: "Anthracite",
-    sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge"],
+    sizes: [
+      "Small", 
+      "Medium", 
+      "Large", 
+      "XLarge", 
+      "2XLarge"
+    ],
     pricing: {
       Small: { price: 59.39 },
       Medium: { price: 59.39 },
@@ -879,7 +911,15 @@ export const catalog = [
     ],
     type: "womens",
     default_color: "Black",
-    sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge", "3XLarge","4XLarge"],
+    sizes: [
+      "Small", 
+      "Medium", 
+      "Large", 
+      "XLarge", 
+      "2XLarge", 
+      "3XLarge",
+      "4XLarge"
+    ],
     pricing: {
       Small: { price: 40.12 },
       Medium: { price: 40.12 },
@@ -1267,7 +1307,13 @@ export const catalog = [
     code: "J333",
     name: "Port Authority® Jacket #J333",
     fullname: "Port Authority® Torrent Waterproof Jacket (J333)",
-    colors: ["Black", "Deep Red", "Magnet", "True Navy", "True Royal"],
+    colors: [
+      "Black", 
+      "Deep Red", 
+      "Magnet", 
+      "True Navy", 
+      "True Royal"
+    ],
     type: "mens",
     default_color: "Black",
     sizes: [
@@ -1293,7 +1339,13 @@ export const catalog = [
     code: "L333",
     name: "Port Authority® Jacket #L333",
     fullname: "Port Authority® Women's Torrent Waterproof Jacket (L333)",
-    colors: ["Black", "Deep Red", "Magnet", "True Navy", "True Royal"],
+    colors: [
+      "Black", 
+      "Deep Red", 
+      "Magnet", 
+      "True Navy", 
+      "True Royal"
+    ],
     type: "womens",
     default_color: "Black",
     sizes: [
@@ -1840,7 +1892,8 @@ export const catalog = [
     "BOWHSL", 
     "BOWCBA", 
     "BOWHGU", 
-    "BOWNSO"
+    "BOWNSO",
+    "INDCDJ",
     ], 
     pricing: {
       base: {
@@ -1864,7 +1917,8 @@ export const catalog = [
     "BOWHSL", 
     "BOWCBA", 
     "BOWHGU", 
-    "BOWNSO"
+    "BOWNSO",
+    "INDCDJ",
     ],       
     pricing: {
       base: {
@@ -1889,7 +1943,8 @@ export const catalog = [
     "BOWHSL", 
     "BOWCBA", 
     "BOWHGU", 
-    "BOWNSO"
+    "BOWNSO",
+    "INDCDJ",
     ],    
     quantities: [1, 5, 10],
     pricing: {
