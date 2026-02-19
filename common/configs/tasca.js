@@ -1,5 +1,5 @@
 export const config = {
-  title: "New Customer",
+  title: "Tasca",
   company_logo: "tasca.png",
   logo_placements: {
     mens: ["Left Chest", "Right Sleeve","Left Sleeve","Yoke"],
