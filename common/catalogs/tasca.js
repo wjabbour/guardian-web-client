@@ -105,8 +105,8 @@ export const catalog = [
   },
   {
     code: "VT400",
-    name: "Stock Stickers",
-    fullname: "Kleer-Back Stock Stickers Versa #400 (100 per pack)",    
+    name: "Kleer-Back Stock Stickers",
+    fullname: "Kleer-Back Stock Stickers Versa (100 per pack)",    
     sapVariations: [
       {code: 'B', color:'Blue'},
       {code: 'G', color:'Green'},
@@ -127,13 +127,13 @@ export const catalog = [
   },
   {
     code: "GP200",
-    name: "Key Tags",
-    fullname: "Self-Protecting Key Tags #200 (250 per box)",
+    name: "Self-Protecting Key Tags",
+    fullname: "Self-Protecting Key Tags (250 per box)",
     sapVariations: [
       {code: '-BG', color:'Beige'},
       {code: '-BL', color:'Blue'},      
       {code: '-GN', color:'Green'},      
-      {code: '-GY', color:'Grey'},
+      {code: '-GY', color:'Gray'},
       {code: '-LI', color:'Lilac'},
       {code: '-OR', color:'Orange'},
       {code: '-RD', color:'Red'},
@@ -152,12 +152,12 @@ export const catalog = [
   },
   {
     code: "GP790",
-    name: "Sticker",
+    name: "Not for Sale Sticker",
     fullname: "Vehicle Not for Sale Sticker (100/pk)",
     colors: ["Yellow"],
     type: "sales",
     default_color: "Yellow",
-    quantities: [100],
+    quantities: [1, 2, 3, 4, 5],
     pricing: {
       base: {
         price: 0.0,
@@ -166,7 +166,7 @@ export const catalog = [
   },
   {
     code: "600088V",
-    name: "Seat Covers (roll)",
+    name: "Plastic Seat Covers (roll)",
     fullname: "No-Slip Plastic Seat Covers (500/roll)",
     colors: ["Plastic"],
     type: "service",
