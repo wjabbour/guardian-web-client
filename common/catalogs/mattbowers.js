@@ -1799,6 +1799,21 @@ export const catalog = [
     },
   },
   {
+    code: "INDCDJ-33GT-519592Z",
+    name: ".15 Gauge Vinyl Plate",
+    fullname: ".15 Gauge 4CP White Plastic Plate w/ full color imprint",
+    colors: ["White"],
+    type: "customs",
+    default_color: "White",    
+    supportedStores: ["INDCDJ"],
+    quantities: [1000, 1500, 2500],
+    pricing: {
+      base: {
+        price: 0.49,
+      },
+    },
+  },
+  {
     code: "BOWNSO-34PE-488638A",
     name: "Black Plastic Frame",
     fullname: "Black Plastic Frame w/white imprint",
