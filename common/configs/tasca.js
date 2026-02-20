@@ -9,7 +9,7 @@ export const config = {
   },
   show_image_preview: true,
   minimum_apparel_order: false,
-  enable_customs_store_picker: true,
+  enable_customs_store_picker: false,
   embroideries: {
     hat: [],
     mens: ["Autorent.EMB","Tasca.EMB"],
