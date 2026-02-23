@@ -45,7 +45,17 @@ export const catalog = [
     ],
     type: "mens",
     default_color: "Black",
-    sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge", "3XLarge", "4XLarge", "5XLarge", "6XLarge"],
+    sizes: [
+      "Small", 
+      "Medium", 
+      "Large", 
+      "XLarge", 
+      "2XLarge", 
+      "3XLarge", 
+      "4XLarge", 
+      "5XLarge", 
+      "6XLarge"
+    ],
     pricing: {
       Small: { price: 25.00 },
       Medium: { price: 25.00 },
@@ -116,7 +126,15 @@ export const catalog = [
     ],
     type: "womens",
     default_color: "Black",
-    sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge", "3XLarge", "4XLarge"],
+    sizes: [
+      "Small", 
+      "Medium", 
+      "Large", 
+      "XLarge", 
+      "2XLarge", 
+      "3XLarge", 
+      "4XLarge"
+    ],
     pricing: {
       Small: { price: 25.00 },
       Medium: { price: 25.00 },
@@ -144,7 +162,15 @@ export const catalog = [
     ],
     type: "mens",
     default_color: "Black",
-    sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge", "3XLarge", "4XLarge"],
+    sizes: [
+      "Small", 
+      "Medium", 
+      "Large", 
+      "XLarge", 
+      "2XLarge", 
+      "3XLarge", 
+      "4XLarge"
+    ],
     pricing: {
       Small: { price: 29.00 },
       Medium: { price: 29.00 },
@@ -170,7 +196,15 @@ export const catalog = [
     ],
     type: "womens",
     default_color: "Black",
-    sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge", "3XLarge", "4XLarge"],
+    sizes: [
+      "Small", 
+      "Medium", 
+      "Large", 
+      "XLarge", 
+      "2XLarge", 
+      "3XLarge", 
+      "4XLarge"
+    ],
     pricing: {
       Small: { price: 22.00 },
       Medium: { price: 22.00 },
@@ -200,7 +234,17 @@ export const catalog = [
     ],
     type: "mens",
     default_color: "Black",
-    sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge", "3XLarge", "4XLarge", "5XLarge", "6XLarge"],
+    sizes: [
+      "Small", 
+      "Medium", 
+      "Large", 
+      "XLarge", 
+      "2XLarge", 
+      "3XLarge", 
+      "4XLarge", 
+      "5XLarge", 
+      "6XLarge"
+    ],
     pricing: {
       Small: { price: 41.00 },
       Medium: { price: 41.00 },
@@ -231,7 +275,15 @@ export const catalog = [
     ],
     type: "womens",
     default_color: "Black",
-    sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge", "3XLarge", "4XLarge"],
+    sizes: [
+      "Small", 
+      "Medium", 
+      "Large", 
+      "XLarge", 
+      "2XLarge", 
+      "3XLarge", 
+      "4XLarge"
+    ],
     pricing: {
       Small: { price: 41.00 },
       Medium: { price: 41.00 },
@@ -249,7 +301,15 @@ export const catalog = [
     colors: ["Black", "Iron Grey", "Regatta Blue", "True Navy"],
     type: "mens",
     default_color: "Black",
-    sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge", "3XLarge", "4XLarge"],
+    sizes: [
+      "Small", 
+      "Medium", 
+      "Large", 
+      "XLarge", 
+      "2XLarge", 
+      "3XLarge", 
+      "4XLarge"
+    ],
     pricing: {
       Small: { price: 32.00 },
       Medium: { price: 32.00 },
@@ -267,7 +327,15 @@ export const catalog = [
     colors: ["Black", "Iron Grey", "Regatta Blue", "True Navy"],
     type: "womens",
     default_color: "Black",
-    sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge", "3XLarge", "4XLarge"],
+    sizes: [
+      "Small", 
+      "Medium", 
+      "Large", 
+      "XLarge", 
+      "2XLarge", 
+      "3XLarge", 
+      "4XLarge"
+    ],
     pricing: {
       Small: { price: 32.00 },
       Medium: { price: 32.00 },
@@ -285,7 +353,6 @@ export const catalog = [
     colors: ["White"],
     type: "service",
     default_color: "White",
-    description: "Enter a qty of '1' to order one box",   
     quantities: [500],
     pricing: {
       base: {
@@ -296,8 +363,7 @@ export const catalog = [
   {
     code: "55-010",
     name: "Steering Wheel Covers",
-    fullname: "Steering Wheel Covers (500/bx)",
-    description: "Enter a qty of '1' to order one box", 
+    fullname: "Steering Wheel Covers (500/bx)",    
     colors: ["Plastic"],
     type: "service",
     default_color: "Plastic",    
@@ -308,39 +374,40 @@ export const catalog = [
       },
     },
   },
-  {
+   {
     code: "SDNRG",
     name: "Service Hang Numbers",
-    fullname: "Service Hang Numbers (1000/bx)",
-    colors: ["White"],
-    variations: [
-      "0000",
-      "1000",
-      "2000",
-      "3000",
-      "4000",
-      "5000",
-      "6000",
-      "7000",
-      "8000", 
-      "9000",
-    ],  
+    fullname: "Service Hang Numbers (1000/bx)",   
+    sapVariations: [
+      {code: '-0000', color: '0000'},
+      {code: '-1000', color: '1000'},
+      {code: '-2000', color: '2000'},
+      {code: '-3000', color: '3000'},
+      {code: '-4000', color: '4000'},
+      {code: '-5000', color: '5000'},
+      {code: '-6000', color: '6000'},
+      {code: '-7000', color: '7000'},
+      {code: '-8000', color: '8000'},
+      {code: '-9000', color: '9000'},     
+    ],
     type: "service",
-    default_color: "white",
-    description: "Enter a qty of '1' to order one box of 1000",     
+    disableColorSelector: true,
+    variationTextOverride: ['Color:'],       
+    quantities: [1, 2, 3, 4, 5],    
     pricing: {
       base: {
-        price: 51.00,
+        price: 51.00,        
       },
     },
   },
   {
     code: "3044",
     name: "Spring Rings",
-    fullname: "Metal Spring Rings (250 per bag)",
+    fullname: "Metal Spring Rings (250/bag)",
     colors: ["Metal"],
     type: "service",
-    default_color: "Metal",    
+    default_color: "Metal", 
+    quantities: [1, 2, 3, 4, 5],    
     pricing: {
       base: {
         price: 6.95,
@@ -349,11 +416,12 @@ export const catalog = [
   },
   {
     code: "600088V",
-    name: "Seat Covers (roll)",
-    fullname: "No-Slip Plastic Seat Covers (500 per roll)",
+    name: "Plastic Seat Covers (roll)",
+    fullname: "No-Slip Plastic Seat Covers (500/roll)",
     colors: ["Plastic"],
     type: "service",
-    default_color: "Plastic",    
+    default_color: "Plastic", 
+    quantities: [1, 2, 3, 4, 5],    
     pricing: {
       base: {
         price: 48.00,
@@ -364,36 +432,44 @@ export const catalog = [
     code: "EIT50",
     name: "Self-Locking Key Tags",
     fullname: "Self-Locking Key Tags (1000/pk)",
-    description: "Sold in quantities of 1000. Enter '1' for one pack of 1000 tags.", 
-    colors: ["Blue","Green","Orange","Red","Yellow","White"],
+    colors: ["Blue", "Green", "Orange", "Red", "Yellow", "White"],
+    sapVariations: [
+      {code: 'B', color: 'Blue'},
+      {code: 'G', color: 'Green'},
+      {code: 'O', color: 'Orange'},
+      {code: 'R', color: 'Red'},
+      {code: 'W', color: 'White'},
+      {code: 'Y', color: 'Yellow'},        
+    ],
     type: "service",
-    default_color: "Blue",
+    disableColorSelector: true,
+    variationTextOverride: ['Color:'],  
     quantities: [1000],
     pricing: {
       base: {
         price: 19.99,
       },
     },
-  },          
+  },           
   {
     code: "GP200",
-    name: "Key Tags",
-    fullname: "Self-Protecting Key Tags #200 (250 per box)",
-    description: "Sold in quantities of 250. Enter '1' for one box of 250 tags.", 
-    colors: [
-      "Blue",
-      "Gray",
-      "Green",
-      "Lilac",
-      "Lime Green",
-      "Orange",
-      "Red",
-      "Tan",
-      "White",
-      "Yellow",
+    name: "Self-Protecting Key Tags",
+    fullname: "Self-Protecting Key Tags (250/box)",
+    sapVariations: [
+      {code: '-BG', color:'Beige'},
+      {code: '-BL', color:'Blue'},      
+      {code: '-GN', color:'Green'},      
+      {code: '-GY', color:'Gray'},
+      {code: '-LI', color:'Lilac'},
+      {code: '-OR', color:'Orange'},
+      {code: '-RD', color:'Red'},
+      {code: '-WT', color:'White'},
+      {code: '-YL', color:'Yellow'},              
     ],
-    type: "sales",
-    default_color: "Blue",    
+    disableColorSelector: true,
+    variationTextOverride: ['Color:'],
+    type: "sales", 
+    quantities: [1, 2, 3, 4, 5],       
     pricing: {
       base: {
         price: 19.99,
@@ -402,12 +478,20 @@ export const catalog = [
   },
   {
     code: "VT400",
-    name: "Stock Stickers",
-    fullname: "Kleer-Back Stock Stickers Versa #400 (100 per pack)",
-    description: "Sold in quantities of 100. Enter '1' for one pack of 100 stickers.", 
-    colors: ["Blue", "Green", "Orange", "Red", "White", "Yellow"],
-    type: "sales",
-    default_color: "Blue",    
+    name: "Kleer-Back Stock Stickers",
+    fullname: "Kleer-Back Stock Stickers Versa (100/pack)",    
+    sapVariations: [
+      {code: 'B', color:'Blue'},
+      {code: 'G', color:'Green'},
+      {code: 'O', color:'Orange'},     
+      {code: 'R', color:'Red'},
+      {code: 'W', color:'White'},
+      {code: 'Y', color:'Yellow'},          
+    ],
+    disableColorSelector: true,
+    variationTextOverride: ['Color:'],
+    type: "sales", 
+    quantities: [1, 2, 3, 4, 5],       
     pricing: {
       base: {
         price: 9.99,
@@ -436,7 +520,7 @@ export const catalog = [
     disableColorSelector: true,
     variationTextOverride: ['Color:'],
     type: "sales", 
-    quantities: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],       
+    quantities: [1, 2, 3, 4, 5],       
     pricing: {
       base: {
         price: 89.99,
@@ -445,12 +529,13 @@ export const catalog = [
   },
   {
     code: "GP790",
-    name: "Sticker",
+    name: "Not for Sale Sticker",
     fullname: "Vehicle Not for Sale Sticker (100/pk)",
-    description: "Sold in quantities of 100. Enter '1' for one pack of 100 stickers", 
+    description: "Sold in packs of 100", 
     colors: ["Yellow"],
     type: "sales",
-    default_color: "Yellow",   
+    default_color: "Yellow",
+    quantities: [1, 2, 3, 4, 5],   
     pricing: {
       base: {
         price: 24.99,
@@ -486,7 +571,7 @@ export const catalog = [
     type: "sales",    
     disableColorSelector: true,
     variationTextOverride: 'Year:',
-    quantities: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+    quantities: [1, 2, 3, 4, 5],
     pricing: {
       base: {
         price: 7.99,
@@ -524,7 +609,7 @@ export const catalog = [
     type: "sales",    
     disableColorSelector: true,
     variationTextOverride: 'Year:',
-    quantities: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+    quantities: [1, 2, 3, 4, 5],
     pricing: {
       base: {
         price: 7.99,
@@ -560,7 +645,7 @@ export const catalog = [
     type: "sales",    
     disableColorSelector: true,
     variationTextOverride: 'Year:',
-    quantities: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+    quantities: [1, 2, 3, 4, 5],
     pricing: {
       base: {
         price: 7.99,
