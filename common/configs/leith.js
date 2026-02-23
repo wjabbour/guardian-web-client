@@ -66,109 +66,109 @@ export const config = {
   ],
   stores: [
     {
-      name: "Leith Corporate Headquarters",
-      address: "8005 Capital Blvd, Raleigh, NC 27616",
-      code: "LEICRA",
-    },
-    {
-      name: "Chris Leith Automotive",
-      address: "PO Box 1707, Wake Forest, NC 27588",
-      code: "CHRIWA",
-    },
-    {
-      name: "Leith Acura Cary",
-      address: "900 Autopark Blvd, Cary, NC 27511",
-      code: "LEIACA",
-    },
-    {
-      name: "Leith Acura Raleigh",
-      address: "2300 Capital Summit Ct, Raleigh, NC 27616",
-      code: "LEIARA",
-    },
-    {
-      name: "Leith Autopark Kia",
-      address: "5330 Rolesville Rd, Wendell, NC 27591",
-      code: "LEITWE",
-    },    
-    {
-      name: "Leith BMW/Mercedes",
-      address: "5603 Capital Blvd, Raleigh, NC 27616",
-      code: "LEITR2",
-    },
-    {
-      name: "Leith CDJR Aberdeen",
+      name: "Leith CDJR (Aberdeen)",
       address: "11220 N. US HWY 15 501 N, Aberdeen, NC 27603",
       code: "LEICAB",
     },
     {
-      name: "Leith CDJR Wendell",
-      address: "5310 Rolesville Rd, Wendell, NC 27591",
-      code: "LEICWE",
-    },
-    {
-      name: "Leith Chrysler Jeep Cary",
-      address: "400 Autopark Boulevard, Cary, NC 27511",
-      code: "LEICCA",
-    },
-    {
-      name: "Leith Chrysler Jeep Raleigh",
-      address: "5500 Capital Blvd, Raleigh, NC 27616",
-      code: "LEICRB",
-    },    
-    {
-      name: "Leith Ford",
-      address: "PO Box 1809, Wendell, NC 27591",
-      code: "LEIFWE",
-    },
-    {
-      name: "Leith GMC",
-      address: "5320 Rolesville Rd, Wendell, NC 27591",
-      code: "LEIGWE",
-    },
-    {
-      name: "Leith Honda Aberdeen",
+      name: "Leith Honda (Aberdeen)",
       address: "11045 US-15 #501, Aberdeen, NC 28315",
       code: "LEIHAB",
     },
     {
-      name: "Leith Honda Raleigh",
-      address: "3940 Capital Hills Drive, Raleigh, NC 27606",
-      code: "LEIHRA",
+      name: "Leith Acura (Cary)",
+      address: "900 Autopark Blvd, Cary, NC 27511",
+      code: "LEIACA",
     },
     {
-      name: "Leith Lincoln",
-      address: "2350 Capital Summit Ct, Raleigh, NC 27616",
-      code: "LEILRA",
+      name: "Leith Chrysler Jeep (Cary)",
+      address: "400 Autopark Boulevard, Cary, NC 27511",
+      code: "LEICCA",
     },
     {
-      name: "Leith Mercedes",
-      address: "5601 Capital Boulevard, Raleigh, NC 27616",
-      code: "LEITRA",
-    },
-    {
-      name: "Leith Nissan",
+      name: "Leith Nissan (Cary)",
       address: "2100 Auto Park Drive, Cary, NC 27511",
       code: "LEINCA",
-    },    
-    {
-      name: "Leith Toyota",
-      address: "8005 Capital Blvd, Raleigh, NC 27616",
-      code: "LEITRL",
     },
-    {
-      name: "Leith Vinfast",
+     {
+      name: "Leith Vinfast (Cary)",
       address: "200 Auto Park Blvd, Cary, NC 27511",
       code: "LEIVNC",
     },  
     {
-      name: "Leith Volkswagen Cary",
+      name: "Leith Volkswagen (Cary)",
       address: "2300 Auto Park Blvd, Cary, NC 27511",
       code: "LEIVCA",
-    },   
+    },           
     {
-      name: "Leith Volkswagen Raleigh",
+      name: "Leith Acura (Raleigh)",
+      address: "2300 Capital Summit Ct, Raleigh, NC 27616",
+      code: "LEIARA",
+    },    
+    {
+      name: "Leith BMW/Mercedes (Raleigh)",
+      address: "5603 Capital Blvd, Raleigh, NC 27616",
+      code: "LEITR2",
+    },      
+    {
+      name: "Leith Chrysler Jeep (Raleigh)",
+      address: "5500 Capital Blvd, Raleigh, NC 27616",
+      code: "LEICRB",
+    },  
+    {
+      name: "Leith Honda (Raleigh)",
+      address: "3940 Capital Hills Drive, Raleigh, NC 27606",
+      code: "LEIHRA",
+    },
+    {
+      name: "Leith Lincoln (Raleigh)",
+      address: "2350 Capital Summit Ct, Raleigh, NC 27616",
+      code: "LEILRA",
+    },
+    {
+      name: "Leith Mercedes (Releigh)",
+      address: "5601 Capital Boulevard, Raleigh, NC 27616",
+      code: "LEITRA",
+    },       
+    {
+      name: "Leith Toyota (Raleigh)",
+      address: "8005 Capital Blvd, Raleigh, NC 27616",
+      code: "LEITRL",
+    },
+    {
+      name: "Leith Volkswagen (Raleigh)",
       address: "4005 Capital Hills Drive, Raleigh, NC 27616",
       code: "LEIVRA",
+    },
+    {
+      name: "Leith Autopark Kia (Wendell)",
+      address: "5330 Rolesville Rd, Wendell, NC 27591",
+      code: "LEITWE",
+    },
+    {
+      name: "Leith CDJR (Wendell)",
+      address: "5310 Rolesville Rd, Wendell, NC 27591",
+      code: "LEICWE",
+    },
+    {
+      name: "Leith Ford (Wendell)",
+      address: "PO Box 1809, Wendell, NC 27591",
+      code: "LEIFWE",
+    },
+    {
+      name: "Leith GMC (Wendell)",
+      address: "5320 Rolesville Rd, Wendell, NC 27591",
+      code: "LEIGWE",
+    },
+    {
+      name: "Chris Leith Automotive",
+      address: "PO Box 1707, Wake Forest, NC 27588",
+      code: "",
+    },
+    {
+      name: "Leith Corporate Headquarters",
+      address: "8005 Capital Blvd, Raleigh, NC 27616",
+      code: "",
     },    
   ],
   bypass_codes: ["LEITH"],
