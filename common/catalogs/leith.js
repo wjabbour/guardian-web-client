@@ -348,12 +348,13 @@ export const catalog = [
   },
   {
     code: "3088",
-    name: "Floor Mats",
-    fullname: "Floor Mats/Coated Paper (500/bx)",
+    name: "Paper Floor Mats",
+    fullname: "Floor Mats - Coated Paper",
+    description: "Sold in boxes of 500",
     colors: ["White"],
     type: "service",
     default_color: "White",
-    quantities: [500],
+    quantities: [1, 2, 3, 4, 5],
     pricing: {
       base: {
         price: 46.00,
@@ -363,11 +364,12 @@ export const catalog = [
   {
     code: "55-010",
     name: "Steering Wheel Covers",
-    fullname: "Steering Wheel Covers (500/bx)",    
+    fullname: "Steering Wheel Covers", 
+    description: "Sold in boxes of 500",  
     colors: ["Plastic"],
     type: "service",
     default_color: "Plastic",    
-    quantities: [500],
+    quantities: [1, 2, 3, 4, 5],
     pricing: {
       base: {
         price: 51.99,
@@ -377,7 +379,8 @@ export const catalog = [
    {
     code: "SDNRG",
     name: "Service Hang Numbers",
-    fullname: "Service Hang Numbers (1000/bx)",   
+    fullname: "Service Hang Numbers", 
+    description: "Sold in boxes of 1000",  
     sapVariations: [
       {code: '-0000', color: '0000'},
       {code: '-1000', color: '1000'},
@@ -403,7 +406,8 @@ export const catalog = [
   {
     code: "3044",
     name: "Spring Rings",
-    fullname: "Metal Spring Rings (250/bag)",
+    fullname: "Metal Spring Rings",
+    description: "Sold in bags of 250 rings",
     colors: ["Metal"],
     type: "service",
     default_color: "Metal", 
@@ -417,7 +421,8 @@ export const catalog = [
   {
     code: "600088V",
     name: "Plastic Seat Covers (roll)",
-    fullname: "No-Slip Plastic Seat Covers (500/roll)",
+    fullname: "No-Slip Plastic Seat Covers",
+    description: "Sold in rolls of 500",
     colors: ["Plastic"],
     type: "service",
     default_color: "Plastic", 
@@ -431,8 +436,9 @@ export const catalog = [
   {
     code: "EIT50",
     name: "Self-Locking Key Tags",
-    fullname: "Self-Locking Key Tags (1000/pk)",
+    fullname: "Self-Locking Key Tags",
     colors: ["Blue", "Green", "Orange", "Red", "Yellow", "White"],
+    description: "Sold in packs of 1000",
     sapVariations: [
       {code: 'B', color: 'Blue'},
       {code: 'G', color: 'Green'},
@@ -444,7 +450,7 @@ export const catalog = [
     type: "service",
     disableColorSelector: true,
     variationTextOverride: ['Color:'],  
-    quantities: [1000],
+    quantities: [1, 2, 3, 4, 5],
     pricing: {
       base: {
         price: 19.99,
@@ -454,7 +460,8 @@ export const catalog = [
   {
     code: "GP200",
     name: "Self-Protecting Key Tags",
-    fullname: "Self-Protecting Key Tags (250/box)",
+    fullname: "Self-Protecting Key Tags",
+    description: " Sold in boxes of 250",
     sapVariations: [
       {code: '-BG', color:'Beige'},
       {code: '-BL', color:'Blue'},      
@@ -479,7 +486,8 @@ export const catalog = [
   {
     code: "VT400",
     name: "Kleer-Back Stock Stickers",
-    fullname: "Kleer-Back Stock Stickers Versa (100/pack)",    
+    fullname: "Kleer-Back Stock Stickers Versa",
+    description: "Sold in packs of 100",   
     sapVariations: [
       {code: 'B', color:'Blue'},
       {code: 'G', color:'Green'},
@@ -530,7 +538,7 @@ export const catalog = [
   {
     code: "GP790",
     name: "Not for Sale Sticker",
-    fullname: "Vehicle Not for Sale Sticker (100/pk)",
+    fullname: "Vehicle Not for Sale Sticker",
     description: "Sold in packs of 100", 
     colors: ["Yellow"],
     type: "sales",
@@ -581,7 +589,8 @@ export const catalog = [
   {
     code: "3198SB",
     name: "Oval Year Stickers - Silver",
-    fullname: "Oval Year Stickers - Silver/Black (12/pk)",       
+    fullname: "Oval Year Stickers - Silver/Black", 
+    description: "Sold in packs of 12",      
     sapVariations: [
       {code: '03', color:'2003'},      
       {code: '05', color:'2005'},
@@ -619,7 +628,8 @@ export const catalog = [
   {
     code: "3198BKY",
     name: "Oval Year Stickers - Yellow",
-    fullname: "Oval Year Stickers - Yellow/Black (12/pk)",       
+    fullname: "Oval Year Stickers - Yellow/Black", 
+    description: "Sold in packs of 12",       
     sapVariations: [
       {code: '06', color:'2006'},      
       {code: '07', color:'2007'},
@@ -655,7 +665,8 @@ export const catalog = [
   {
     code: "30BKHP",
     name: "7.5 in. Numbers - Bk/Htpk",
-    fullname: "7.5 in. Numbers - Black/Hot Pink (12 per pack)",
+    fullname: "7.5 in. Numbers - Black/Hot Pink",
+    description: "Sold in packs of 12", 
     colors: ["Hot Pink"],
     variations: [
       "0",
@@ -683,7 +694,8 @@ export const catalog = [
   {
     code: "30SLBK",
     name: "7.5 in. Numbers - Slv/Blk",
-    fullname: "7.5 in. Numbers - Silver/Black (12 per pack)",
+    fullname: "7.5 in. Numbers - Silver/Black",
+    description: "Sold in packs of 12", 
     colors: ["Silver"],
     variations: [
       "0",
@@ -711,7 +723,8 @@ export const catalog = [
   {
     code: "30GDBK",
     name: "7.5 in. Numbers - Gld/Blk",
-    fullname: "7.5 in. Numbers - Gold/Black (12 per pack)",
+    fullname: "7.5 in. Numbers - Gold/Black",
+    description: "Sold in packs of 12", 
     colors: ["Gold"],
     variations: [
       "0",
@@ -739,7 +752,8 @@ export const catalog = [
   {
     code: "30CBK",
     name: "7.5 in. Numbers - Char/Blk",
-    fullname: "7.5 in. Numbers - Chartreuse/Black (12 per pack)",
+    fullname: "7.5 in. Numbers - Chartreuse/Black",
+    description: "Sold in packs of 12", 
     colors: ["Chartreuse"],
     variations: [
       "0",
@@ -766,7 +780,8 @@ export const catalog = [
   {
     code: "30YBK",
     name: "7.5 in. Numbers - Ylw/Blk",
-    fullname: "7.5 in. Numbers - Yellow/Black (12 per pack)",
+    fullname: "7.5 in. Numbers - Yellow/Black",
+    description: "Sold in packs of 12", 
     colors: ["Black"],
      variations: [
       "0",
@@ -794,7 +809,8 @@ export const catalog = [
   {
     code: "30YR",
     name: "7.5 in. Numbers - Yllw/Red",
-    fullname: "7.5 in. Numbers - Yellow/Red (12 per pack)",
+    fullname: "7.5 in. Numbers - Yellow/Red",
+    description: "Sold in packs of 12", 
     colors: ["Red"],
     variations: [
       "0",
@@ -822,7 +838,8 @@ export const catalog = [
    {
     code: "30YGR",
     name: "7.5 in. Numbers - Yllw/Grn",
-    fullname: "7.5 in. Numbers - Yellow/Green (12 per pack)",
+    fullname: "7.5 in. Numbers - Yellow/Green",
+    description: "Sold in packs of 12", 
     colors: ["Green"],
     variations: [
       "0",
@@ -850,7 +867,8 @@ export const catalog = [
   {
     code: "30YB",
     name: "7.5 in. Number - Yllw/Blue",
-    fullname: "7.5 in. Numbers - Yellow/Blue (12 per pack)",
+    fullname: "7.5 in. Numbers - Yellow/Blue",
+    description: "Sold in packs of 12", 
     colors: ["Blue"],
     variations: [
       "0",
@@ -878,7 +896,8 @@ export const catalog = [
   {
     code: "30WB",
     name: "7.5 in. Number - Wht/Blue",
-    fullname: "7.5 in. Numbers - White/Blue (12 per pack)",
+    fullname: "7.5 in. Numbers - White/Blue",
+    description: "Sold in packs of 12", 
     colors: ["Blue"],
     variations: [
       "0",
@@ -906,7 +925,8 @@ export const catalog = [
   {
     code: "30BLW",
     name: "7.5 in. Number - Blue/Wht",
-    fullname: "7.5 in. Numbers - Blue/White (12 per pack)",
+    fullname: "7.5 in. Numbers - Blue/White",
+    description: "Sold in packs of 12", 
     colors: ["Blue"],
     variations: [
       "0",
@@ -934,7 +954,8 @@ export const catalog = [
   {
     code: "30RW",
     name: "7.5 in. Numbers - Red/Wht",
-    fullname: "7.5 in. Numbers - Red/White (12 per pack)",
+    fullname: "7.5 in. Numbers - Red/White",
+    description: "Sold in packs of 12", 
     colors: ["Red"],
     variations: [
       "0",
