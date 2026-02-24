@@ -7,7 +7,15 @@ export const catalog = [
       "Jet Black"],
     type: "tshirts",
     default_color: "Ash",
-    sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge", "3XLarge", "4XLarge"],
+    sizes: [
+      "Small", 
+      "Medium", 
+      "Large", 
+      "XLarge", 
+      "2XLarge", 
+      "3XLarge", 
+      "4XLarge"
+    ],
     pricing: {
       Small: { price: 9.50 },
       Medium: { price: 9.50 },
@@ -395,7 +403,7 @@ export const catalog = [
     ],
     type: "service",
     disableColorSelector: true,
-    variationTextOverride: ['Color:'],       
+    variationTextOverride: ['Series:'],       
     quantities: [1, 2, 3, 4, 5],    
     pricing: {
       base: {
@@ -553,7 +561,8 @@ export const catalog = [
   {
     code: "3198WB",
     name: "Oval Year Stickers - Blue",
-    fullname: "Oval Year Stickers - White/Blue (12/pk)",       
+    fullname: "Oval Year Stickers - White/Blue", 
+    description: "Sold in packs of 12",       
     sapVariations: [
       {code: '07i', color:'2007'},
       {code: '08i', color:'2008'},
@@ -668,29 +677,30 @@ export const catalog = [
     fullname: "7.5 in. Numbers - Black/Hot Pink",
     description: "Sold in packs of 12", 
     colors: ["Hot Pink"],
-    variations: [
-      "0",
-      "1",
-      "2",
-      "3",
-      "4",
-      "5",
-      "6",
-      "7",
-      "8",
-      "9",
-      "$",
-      ". decimal",
-      "%",
+    sapVariations: [
+      {code: '$', color:'Black-Hot Pink #$'},      
+      {code: '0', color:'Black-Hot Pink #0'},
+      {code: '1', color:'Black-Hot Pink #1'},
+      {code: '2', color:'Black-Hot Pink #2'},
+      {code: '3', color:'Black-Hot Pink #3'},
+      {code: '4', color:'Black-Hot Pink #4'},
+      {code: '5', color:'Black-Hot Pink #5'},
+      {code: '6', color:'Black-Hot Pink #6'},
+      {code: '7', color:'Black-Hot Pink #7'},
+      {code: '8', color:'Black-Hot Pink #8'},
+      {code: '9', color:'Black-Hot Pink #9'},
+      {code: 'o/o', color:'Black-Hot Pink #%'},                 
     ],
     type: "sales",
-    default_color: "Hot Pink",    
+    disableColorSelector: true,
+    variationTextOverride: 'Color/Number:',
+    quantities: [1, 2, 3, 4, 5],
     pricing: {
       base: {
         price: 2.99,
       },
     },
-  },
+  },  
   {
     code: "30SLBK",
     name: "7.5 in. Numbers - Slv/Blk",
