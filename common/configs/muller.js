@@ -1,0 +1,67 @@
+export const config = {
+  title: "Muller",
+  company_logo: "muller.png",
+  logo_placements: {
+    mens: ["Left Chest"],
+    womens: ["Left Chest"],
+    hat:[],
+    tshirts: ["Left Chest", "Full Back"],
+  },
+  show_image_preview: true,
+  minimum_apparel_order: false,
+  enable_customs_store_picker: true,
+  embroideries: {
+    mens: ["Muller Honda of Gurnee.EMB"],
+    womens: ["Muller Honda of Gurnee.EMB"],
+    tshirts: ["Muller Honda of Gurnee.EMB"],
+    hat:  [],
+    customs: [],
+    office: [],
+    service: [],
+    sales: [],
+    detail: [],
+    bodyshop: [],
+    parts: [],
+    accessory: [],        
+  },
+  email_recipients: [
+    "kcharusch@gpcorp.com", 
+    "lbudbill@gpcorp.com",      
+    "shanell@gpcorp.com",
+    "webportalorders@gpcorp.com",    
+  ],
+  stores: [
+    {
+      name: "Muller Auto Group",
+      address: "1350 Park Avenue West, Highland Park, IL 60035",
+      code: "MULAHI",
+    },
+    {
+      name: "Muller Woodfield Acura",
+      address: "1149 West Golf Rd, Hoffman Estates, IL 60169",
+      code: "MULAHO",
+    },
+    {
+      name: "Muller Acura",
+      address: "3301 West Lincoln Hwy, Merrillville, IN 46410",
+      code: "MULAME",
+    },
+    {
+      name: "Muller Honda",
+      address: "7000 Grand Ave, Gurnee, IL 60031",
+      code: "MULHHI",
+    },
+    {
+      name: "Muller Honda Highland Park",
+      address: "550 Skokie Valley Rd, Highland Park, IL 60035",
+      code: "MULHHP", 
+    },    
+            
+    ],
+  bypass_codes: ["MULLER"],
+  server_hostname: "https://mxfj3q6m01.execute-api.us-east-1.amazonaws.com",
+  account_reps: [{ name: "Katie Charusch", phone: "414-736-4584" },],   
+  route_prefix: "/muller",
+  paypal_not_supported: true,
+  password: "MulleR",
+};
