@@ -676,7 +676,6 @@ export const catalog = [
     name: "7.5 in. Numbers - Bk/Htpk",
     fullname: "7.5 in. Numbers - Black/Hot Pink",
     description: "Sold in packs of 12", 
-    colors: ["Hot Pink"],
     sapVariations: [
       {code: '$', color:'Black-Hot Pink #$'},      
       {code: '0', color:'Black-Hot Pink #0'},
@@ -689,7 +688,7 @@ export const catalog = [
       {code: '7', color:'Black-Hot Pink #7'},
       {code: '8', color:'Black-Hot Pink #8'},
       {code: '9', color:'Black-Hot Pink #9'},
-      {code: 'o/o', color:'Black-Hot Pink #%'},                 
+      {code: 'o/o', color:'Black-Hot Pink %'},                 
     ],
     type: "sales",
     disableColorSelector: true,
