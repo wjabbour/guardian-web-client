@@ -688,7 +688,7 @@ export const catalog = [
       {code: '7', color:'7'},
       {code: '8', color:'8'},
       {code: '9', color:'9'},
-      {code: 'o/o', color:'%'},                 
+      {code: 'o/o', color:'Percent'},                 
     ],
     type: "sales",
     disableColorSelector: true,
