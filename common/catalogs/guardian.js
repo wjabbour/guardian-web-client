@@ -3751,20 +3751,7 @@ Designed to be used on a stationary vehicle located on a dealership log.`,
         price: 0.00,
       },
     },
-  },
-  {
-    code: "30GDBK",
-    name: "7.5 in. Numbers - Gld/Blk",
-    fullname: "7.5 in. Numbers - Gold/Black (12 per pack)",
-    colors: ["GDBK0", "GDBK1", "GDBK2", "GDBK3", "GDBK4", "GDBK5", "GDBK6", "GDBK7", "GDBK8", "GDBK9", "GDBKS", "GDBKD", "GDBKP"],
-    type: "sales",
-    default_color: "GDBK0",
-    pricing: {
-      base: {
-        price: 0.00,
-      },
-    },
-  },
+  },  
   {
     code: "30CBK",
     name: "7.5 in. Numbers - Char/Blk",
