@@ -60,11 +60,11 @@ export const config = {
     ],
     tshirts: [              
       "Matt Bowers Chevy Slidell",
-      "Matt Bowers Hyundai Slidell",
-      "Matt Bowers Hyundai Metairie",
-      "Matt Bowers Hyundai Gulfport",
+      "Matt Bowers Hyundai Slidell LA",
+      "Matt Bowers Hyundai Metairie LA",
+      "Matt Bowers Hyundai Gulfport MS",
       "Matt Bowers Infiniti Metairie",               
-      "Matt Bowers Chevy Metairie",      
+      "Matt Bowers Chevrolet Metairie",      
       "MB Ford Metairie", 
       "MB Hyundai Gulfport MS",
       "MB Hyundai Metairie",  
@@ -155,8 +155,8 @@ export const config = {
       code: "BOWNSO",
     }, 
     {
-      name: "Indy CDJR (Slidell)",
-      address: "38450 Sunny Days Lane, Slidell, LA 70461",
+      name: "Indy CDJR (Brownsburg)",
+      address: "745 E 56th Street, Brownsburg, IN 46112",
       code: "INDCDJ",
     },  
         

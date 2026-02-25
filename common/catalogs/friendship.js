@@ -6,7 +6,7 @@ export const catalog = [
     colors: ["Chrome"],
     type: "customs",
     default_color: "Chrome", 
-    description: "Maximum one box (enter '1' in the box below - 250/bx)",
+    description: "Sold in boxes of 250. Maximum one box.",
     supportedStores: ["FRICBT"],   
     quantities: [250],
     pricing: {
@@ -22,7 +22,7 @@ export const catalog = [
     colors: ["Chrome"],
     type: "customs",
     default_color: "Chrome",
-    description: "Maximum one box (enter '1' in the box below - 250/bx)",
+    description: "Sold in boxes of 250. Maximum one box.",
     supportedStores: ["FRICBT"],    
     quantities: [250],
     pricing: {
@@ -34,11 +34,11 @@ export const catalog = [
   {
     code: "FRIENDSHIP-34PE",
     name: "Black Plastic Frame",
-    fullname: "Black Plastic Frame (250 per box)",
+    fullname: "Black Plastic Frame",
     colors: ["Black"],
     type: "customs",
     default_color: "Black",
-    description: "Maximum one box (enter '1' in the box below)",
+    description: "Sold in boxes of 250. Maximum one box.",
     supportedStores: ["FRICBT"],    
     quantities: [250],
     pricing: {
@@ -54,9 +54,9 @@ export const catalog = [
     colors: ["White"],
     type: "customs",
     default_color: "White",
-    description: "Minumum three boxes (enter '3' in the box below - 500/bx)",
+    description: "Sold in boxes of 500. Minumum three boxes.",
     supportedStores: ["FRICBT"],    
-    quantities: [500],
+    quantities: [1500],
     pricing: {
       base: {
         price: 0.23,
@@ -70,7 +70,7 @@ export const catalog = [
     colors: ["Aluminum"],
     type: "customs",
     default_color: "Aluminum",
-    description: "Maximum one box (enter '1' in the box below - 50/bx)",
+    description: "Sold in boxes of 50. Maximum one box.",
     supportedStores: ["FRICBT"],     
     quantities: [50],
     pricing: {
@@ -86,7 +86,7 @@ export const catalog = [
     colors: ["Yellow"],
     type: "customs",
     default_color: "Yellow",
-    description: "Maximum one box (enter '1' in the box below - 250/bx)",
+    description: "Sold in boxes of 250. Maximum one box.",
     supportedStores: ["FRICBT"],     
     quantities: [250],
     pricing: {
@@ -99,7 +99,15 @@ export const catalog = [
     code: "CP91L",
     name: "Port & Company Beanie",
     fullname: "Port & Company® Fleece-Lined Beanie Cap",
-    colors: ["Athletic Oxford","Athletic Red", "Athletic Royal", "Black","Navy","Neon Green","White"],
+    colors: [
+      "Athletic Oxford",
+      "Athletic Red", 
+      "Athletic Royal", 
+      "Black",
+      "Navy",
+      "Neon Green",
+      "White"
+    ],
     type: "hat",
     default_color: "Athletic Oxford",
     sizes: ["OSFA"],
@@ -190,7 +198,15 @@ export const catalog = [
     ],
     type: "tshirts",
     default_color: "Atomic Blue",
-    sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge", "3XLarge", "4XLarge"],
+    sizes: [
+      "Small", 
+      "Medium", 
+      "Large",
+      "XLarge", 
+      "2XLarge", 
+      "3XLarge", 
+      "4XLarge"
+    ],
     pricing: {
       Small: { price: 0.00 },
       Medium: { price: 0.00 },
@@ -227,7 +243,17 @@ export const catalog = [
     ],
     type: "tshirts",
     default_color: "Athletic Heather",
-    sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge", "3XLarge", "4XLarge", "5XLarge", "6XLarge"],
+    sizes: [
+      "Small", 
+      "Medium", 
+      "Large", 
+      "XLarge", 
+      "2XLarge", 
+      "3XLarge", 
+      "4XLarge", 
+      "5XLarge", 
+      "6XLarge"
+    ],
     pricing: {
       Small: { price: 0.00 },
       Medium: { price: 0.00 },
@@ -247,7 +273,15 @@ export const catalog = [
     colors: ["Charcoal","Jet Black","Navy","Red","Royal","White"],
     type: "tshirts",
     default_color: "Jet Black",
-    sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge", "3XLarge", "4XLarge"],
+    sizes: [
+      "Small", 
+      "Medium", 
+      "Large", 
+      "XLarge", 
+      "2XLarge", 
+      "3XLarge", 
+      "4XLarge"
+    ],
     pricing: {
       Small: { price: 0.00 },
       Medium: { price: 0.00 },
@@ -283,7 +317,17 @@ export const catalog = [
     ],
     type: "mens",
     default_color: "Black",
-    sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge", "3XLarge", "4XLarge", "5XLarge", "6XLarge"],
+    sizes: [
+      "Small", 
+      "Medium", 
+      "Large", 
+      "XLarge", 
+      "2XLarge", 
+      "3XLarge", 
+      "4XLarge", 
+      "5XLarge", 
+      "6XLarge"
+    ],
     pricing: {
       Small: { price: 0.00 },
       Medium: { price: 0.00 },
@@ -321,7 +365,17 @@ export const catalog = [
     ],
     type: "womens",
     default_color: "Black",
-    sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge", "3XLarge", "4XLarge", "5XLarge", "6XLarge"],
+    sizes: [
+      "Small", 
+      "Medium", 
+      "Large", 
+      "XLarge", 
+      "2XLarge", 
+      "3XLarge", 
+      "4XLarge", 
+      "5XLarge", 
+      "6XLarge"
+    ],
     pricing: {
       Small: { price: 0.00 },
       Medium: { price: 0.00 },
@@ -399,7 +453,15 @@ export const catalog = [
     ],
     type: "mens",
     default_color: "Anthracite",
-    sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge", "3XLarge", "4XLarge"],
+    sizes: [
+      "Small", 
+      "Medium", 
+      "Large", 
+      "XLarge", 
+      "2XLarge", 
+      "3XLarge", 
+      "4XLarge"
+    ],
     pricing: {
       Small: { price: 0.00 },
       Medium: { price: 0.00 },
@@ -440,7 +502,18 @@ export const catalog = [
     code: "BOXLIDS",
     name: "Custom Color Lids",
     fullname: "Custom Color Gift Box Lids",
-    colors: ["Black","Blue","Burgundy","Gold","Green","Orange","Pink","Purple","Red","Silver"],
+    colors: [
+      "Black",
+      "Blue",
+      "Burgundy",
+      "Gold",
+      "Green",
+      "Orange",
+      "Pink",
+      "Purple",
+      "Red",
+      "Silver"
+    ],
     type: "accessory",
     default_color: "Black",   
     quantities: [100, 250, 500, 1000, 1500],
@@ -635,7 +708,7 @@ export const catalog = [
     colors: ["White"],
     type: "service",
     default_color: "White",
-    description: "Maximum quantity allowed per order is three boxes. Enter 1, 2, or 3 in the quantity box.",   
+    description: "Maximum quantity allowed per order is three boxes.",   
     supportedStores: ["FRICBT"],    
     quantities: [500],
     pricing: {

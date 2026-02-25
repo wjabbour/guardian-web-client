@@ -114,6 +114,11 @@ export const config = {
       address: "1740 College Ave, Forest City, NC 28043",
       code: "FRICFC",
     },
+    {
+      name: "Friendship Hyundai of Kingsport",
+      address: "1017 W. Stone Drive, Kingsport, TN 37660",
+      code: "FRIHKP",
+    },
   ],
   bypass_codes: ["FRIEND"],
   server_hostname: "https://mxfj3q6m01.execute-api.us-east-1.amazonaws.com",

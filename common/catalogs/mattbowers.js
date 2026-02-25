@@ -1520,23 +1520,7 @@ export const catalog = [
         price: 0.64,
       },
     },
-  },
-  {
-    code: "MATFME-31DD-486762A",
-    name: "Vinyl Die Cut Decals",
-    fullname: "Vinyl Die Cut Decal (5 in. x 1.61 in.)",
-    colors: ["Black", "White"],
-    type: "customs",
-    default_color: "Black",
-    description: `Black will not show on white decal.`,
-    supportedStores: ["MATFME"],
-    quantities: [1000, 1500, 2500],
-    pricing: {
-      base: {
-        price: 0.64,
-      },
-    },
-  },
+  },  
   {
     code: "BOWHSL-34PEU-487072A",
     name: "Black Plastic Frame",
@@ -2000,27 +1984,7 @@ export const catalog = [
     pricing: {
       base: { price: 1.29 },
     },
-  },
-  {
-    code: "MATFME-Q42971-404913A",
-    name: "Metal Key Ring",
-    fullname: "Metal Color Series Key Ring w/white imprint",
-    colors: ["Blue"],
-    type: "customs",
-    default_color: "Blue",
-    supportedStores: ["MATFME"],
-    description: '1000 @ $2.05 ea/ 1500 @ $1.99 ea/ 2500 @ $1.55 ea',    
-    quantities: [1000, 1500, 2500],
-    pricing: {
-      base: {
-        price: 2.05,
-        discount: {
-          1500: 1.99,
-          2500: 1.55,
-        },
-      },
-    },
-  },
+  },  
   {
     code: "MATFME-CG1240-470649L",
     name: "Leather Strap Key Tag",
@@ -2200,22 +2164,7 @@ export const catalog = [
         price: 1.75,
       },
     },
-  },
-  {
-    code: "MATFME-DEALJACKET-502487A",
-    name: "Custom Deal Jacket",
-    fullname: "Custom Deal Jacket (DSA-500)",
-    colors: ["Blue", "White"],
-    type: "customs",
-    default_color: "Blue",
-    supportedStores: ["MATFME"],     
-    quantities: [1000, 1500, 2500],
-    pricing: {
-      base: {
-        price: 0.44,
-      },
-    },
-  },  
+  }, 
   {
     code: "BOWHSL-1830-490972A",
     name: "Service Due Sticker",
@@ -2382,24 +2331,7 @@ export const catalog = [
         price: 9.99,         
       },
     },
-  },
-  {
-    code: "MATFME-KPB-520949C",
-    name: "Pen & Keychain Boxset",
-    fullname: "Pen & Keychain Boxset",
-    description:
-      "Box - silver foil; Pen - black w/white imprint; Fob - black leather/white stitch, black color fill",
-    colors: ["Black"],
-    type: "customs",
-    default_color: "Black",
-    supportedStores: ["MATFME"],   
-    quantities: [250, 500, 1000],
-    pricing: {
-      base: {
-        price: 9.99,         
-      },
-    },
-  },
+  },  
   {
     code: "BOWHSL-5400-520965Z",
     name: "All Weather Floor Mats",
