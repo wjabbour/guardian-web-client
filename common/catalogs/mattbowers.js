@@ -2727,7 +2727,7 @@ export const catalog = [
     code: "GP546",
     name: "Deal Jackets - Printed",
     fullname: "Printed Vehicle Deal Jackets - 12 in. x 9 in. - (DSA-546)",
-    description: `-500 per box
+    description: `Sold in boxes of 500. 
 $115.76 ea / 5 boxes: $115.76 ea / 10 boxes: $105 ea`,    
     sapVariations: [
       {code: '-512I', color:'Blue'},
@@ -3134,7 +3134,7 @@ $115.76 ea / 5 boxes: $115.76 ea / 10 boxes: $105 ea`,
     ],
     type: "service",
     disableColorSelector: true,
-    variationTextOverride: ['Color:'],       
+    variationTextOverride: ['Series:'],       
     quantities: [1, 5, 10],    
     pricing: {
       base: {

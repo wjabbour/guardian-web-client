@@ -124,7 +124,7 @@ export const config = {
   server_hostname: "https://mxfj3q6m01.execute-api.us-east-1.amazonaws.com",
   account_reps: [{ name: "Betsy Kays", phone: "678-287-1636" },
                  { name: "Bob Sugden", phone: "678-287-1620" },
-                 { name: "Hunter Peck", phone: "678-287-1642" },
+                 { name: "Hunter Peck", phone:"678-287-1642" },
   ],
   route_prefix: "/friendship",
   paypal_not_supported: true,
