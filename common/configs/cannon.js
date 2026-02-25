@@ -140,7 +140,7 @@ export const config = {
     },
   ],
   bypass_codes: ["CANNON","NINA","KRISTY"],
-  server_hostname: "https://o1yn7lpenj.execute-api.us-east-1.amazonaws.com",
+  
   account_reps: [
     { name: "Louis Budbill", phone: "678-287-1649" },
     { name: "Glenn Rodney", phone: "678-287-1608" },
