@@ -444,8 +444,7 @@ export const catalog = [
   {
     code: "EIT50",
     name: "Self-Locking Key Tags",
-    fullname: "Self-Locking Key Tags",
-    colors: ["Blue", "Green", "Orange", "Red", "Yellow", "White"],
+    fullname: "Self-Locking Key Tags",    
     description: "Sold in packs of 1000",
     sapVariations: [
       {code: 'B', color: 'Blue'},
@@ -699,7 +698,37 @@ export const catalog = [
         price: 2.99,
       },
     },
-  },  
+  },
+  {
+    code: "30GDBK",
+    name: "7.5 in. Numbers - Gold/Blk",
+    fullname: "7.5 in. Numbers - Gold/Blk",
+    description: "Sold in packs of 12", 
+    sapVariations: [
+      {code: '$', color:'$'},      
+      {code: '0', color:'0'},
+      {code: '1', color:'1'},
+      {code: '2', color:'2'},
+      {code: '3', color:'3'},
+      {code: '4', color:'4'},
+      {code: '5', color:'5'},
+      {code: '6', color:'6'},
+      {code: '7', color:'7'},
+      {code: '8', color:'8'},
+      {code: '9', color:'9'},
+      {code: 'o/o', color:'Percent'},
+      {code: '(.)', color:'Decimal'},                  
+    ],
+    type: "sales",
+    disableColorSelector: true,
+    variationTextOverride: 'Number:',
+    quantities: [1, 2, 3, 4, 5],
+    pricing: {
+      base: {
+        price: 2.99,
+      },
+    },
+  },      
   {
     code: "30SLBK",
     name: "7.5 in. Numbers - Slv/Blk",

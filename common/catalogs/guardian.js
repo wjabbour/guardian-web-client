@@ -4058,7 +4058,8 @@ Designed to be used on a stationary vehicle located on a dealership log.`,
   {
     code: "90CBK",
     name: "9.5 in. Numbers - Char/Blk",
-    fullname: "9.5 in. Numbers - Chartreuse/Black (12 per pack)",
+    fullname: "9.5 in. Numbers - Chartreuse/Black",
+    description: "Sold in packs of 12",
     sapVariations: [
       {code: '$', color:'$'},      
       {code: '0', color:'0'},
@@ -4087,7 +4088,8 @@ Designed to be used on a stationary vehicle located on a dealership log.`,
   {
     code: "90BKHP",
     name: "9.5 in. Numbers - Bk/Htpk",
-    fullname: "9.5 in. Numbers - Black/Hot Pink (12 per pack)",
+    fullname: "9.5 in. Numbers - Black/Hot Pink",
+    description: "Sold in packs of 12",
     sapVariations: [
       {code: '$', color:'$'},      
       {code: '0', color:'0'},
@@ -4116,7 +4118,8 @@ Designed to be used on a stationary vehicle located on a dealership log.`,
   {
     code: "90YB",
     name: "9.5 in. Numbers - Yllw/Blue",
-    fullname: "9.5 in. Numbers - Yellow/Blue (12 per pack)",
+    fullname: "9.5 in. Numbers - Yellow/Blue",
+    description: "Sold in packs of 12",
     sapVariations: [
       {code: '$', color:'$'},      
       {code: '0', color:'0'},
@@ -4145,7 +4148,8 @@ Designed to be used on a stationary vehicle located on a dealership log.`,
   {
     code: "90YR",
     name: "9.5 in. Numbers - Yllw/Red",
-    fullname: "9.5 in. Numbers - Yellow/Red (12 per pack)",
+    fullname: "9.5 in. Numbers - Yellow/Red",
+    description: "Sold in packs of 12",
     sapVariations: [
       {code: '$', color:'$'},      
       {code: '0', color:'0'},
@@ -4174,7 +4178,8 @@ Designed to be used on a stationary vehicle located on a dealership log.`,
   {
     code: "11CBK",
     name: "11.5 in. Numbers - Chr/Blk",
-    fullname: "11.5 in. Numbers - Chartreuse/Black (12 per pack)",
+    fullname: "11.5 in. Numbers - Chartreuse/Black",
+    description: "Sold in packs of 12",
     sapVariations: [
       {code: '$', color:'$'},      
       {code: '0', color:'0'},
@@ -4202,7 +4207,8 @@ Designed to be used on a stationary vehicle located on a dealership log.`,
   {
     code: "11YB",
     name: "11.5 in. Number - Yllw/Blue",
-    fullname: "11.5 in. Numbers - Yellow/Blue (12 per pack)",
+    fullname: "11.5 in. Numbers - Yellow/Blue",
+    description: "Sold in packs of 12",
     sapVariations: [
       {code: '$', color:'$'},      
       {code: '0', color:'0'},
@@ -4231,7 +4237,8 @@ Designed to be used on a stationary vehicle located on a dealership log.`,
   {
     code: "11YR",
     name: "11.5 in. Number - Yllw/Red",
-    fullname: "11.5 in. Numbers - Yellow/Red (12 per pack)",
+    fullname: "11.5 in. Numbers - Yellow/Red",
+    description: "Sold in packs of 12",
     sapVariations: [
       {code: '$', color:'$'},      
       {code: '0', color:'0'},
