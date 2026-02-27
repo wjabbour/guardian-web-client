@@ -3,7 +3,14 @@ export const catalog = [
     code: "CP91L",
     name: "Port & Company Beanie",
     fullname: "Port & Company® Fleece-Lined Beanie Cap",
-    colors: ["Athletic Oxford", "Athletic Red", "Athletic Royal", "Black", "Navy", "Neon Green", "White"],
+    colors: [
+      "Athletic Oxford", 
+      "Athletic Red", 
+      "Athletic Royal", 
+      "Black", "Navy", 
+      "Neon Green", 
+      "White"
+    ],
     type: "hat",
     default_color: "Athletic Oxford",
     sizes: ["OSFA"],
@@ -108,7 +115,13 @@ export const catalog = [
     code: "STC39",
     name: "Sport-Tek® Trucker Cap",
     fullname: "Sport-Tek® YP Classics® Retro Trucker Cap (addt'l logos cost extra)",
-    colors: ["Black", "Graphite", "True Navy True Navy", "True Navy White", "White"],
+    colors: [
+      "Black", 
+      "Graphite",       
+      "True Navy True Navy", 
+      "True Navy White", 
+      "White"
+    ],
     type: "hat",
     default_color: "Black",
     sizes: ["OSFA"],
@@ -120,7 +133,15 @@ export const catalog = [
     code: "112",
     name: "Richardson Trucker Cap",
     fullname: "Richardson Snapback Trucker Cap (addt'l logos cost extra)",
-    colors: ["Amber Gold", "Black", "Charcoal", "Loden", "Maroon", "Navy", "White"],
+    colors: [
+      "Amber Gold", 
+      "Black", 
+      "Charcoal", 
+      "Loden", 
+      "Maroon", 
+      "Navy", 
+      "White"
+    ],
     type: "hat",
     default_color: "Amber Gold",
     sizes: ["OSFA"],
@@ -136,7 +157,17 @@ export const catalog = [
     type: "tshirts",
     sub_category: "tshirt",
     default_color: "Jet Black",
-    sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge", "3XLarge", "4XLarge", "5XLarge", "6XLarge"],
+    sizes: [
+      "Small", 
+      "Medium", 
+      "Large", 
+      "XLarge", 
+      "2XLarge", 
+      "3XLarge", 
+      "4XLarge", 
+      "5XLarge", 
+      "6XLarge"
+    ],
     pricing: {
       Small: { price: 0.00 },
       Medium: { price: 0.00 },
@@ -176,7 +207,15 @@ export const catalog = [
     ],
     type: "tshirts",
     default_color: "Atomic Blue",
-    sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge", "3XLarge", "4XLarge"],
+    sizes: [
+      "Small", 
+      "Medium", 
+      "Large",
+      "XLarge", 
+      "2XLarge", 
+      "3XLarge", 
+      "4XLarge"
+    ],
     pricing: {
       Small: { price: 0.00 },
       Medium: { price: 0.00 },
@@ -213,7 +252,17 @@ export const catalog = [
     ],
     type: "tshirts",
     default_color: "Athletic Heather",
-    sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge", "3XLarge", "4XLarge", "5XLarge", "6XLarge"],
+    sizes: [
+      "Small", 
+      "Medium", 
+      "Large", 
+      "XLarge", 
+      "2XLarge", 
+      "3XLarge", 
+      "4XLarge", 
+      "5XLarge", 
+      "6XLarge"
+    ],
     pricing: {
       Small: { price: 0.00 },
       Medium: { price: 0.00 },
@@ -230,10 +279,25 @@ export const catalog = [
     code: "PC61P",
     name: "Port & Co Pocket Tee",
     fullname: "Port & Company® Essential Pocket Tee",
-    colors: ["Charcoal", "Jet Black", "Navy", "Red", "Royal", "White"],
+    colors: [
+      "Charcoal", 
+      "Jet Black", 
+      "Navy", 
+      "Red", 
+      "Royal", 
+      "White"
+    ],
     type: "tshirts",
     default_color: "Jet Black",
-    sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge", "3XLarge", "4XLarge"],
+    sizes: [
+      "Small", 
+      "Medium", 
+      "Large", 
+      "XLarge", 
+      "2XLarge", 
+      "3XLarge", 
+      "4XLarge"
+    ],
     pricing: {
       Small: { price: 0.00 },
       Medium: { price: 0.00 },
@@ -265,7 +329,15 @@ export const catalog = [
     ],
     type: "tshirts",
     default_color: "Aquatic Blue",
-    sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge", "3XLarge", "4XLarge"],
+    sizes: [
+      "Small", 
+      "Medium", 
+      "Large", 
+      "XLarge", 
+      "2XLarge", 
+      "3XLarge", 
+      "4XLarge"
+    ],
     pricing: {
       Small: { price: 0.00 },
       Medium: { price: 0.00 },
@@ -302,7 +374,15 @@ export const catalog = [
     ],
     type: "tshirts",
     default_color: "Black",
-    sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge", "3XLarge", "4XLarge"],
+    sizes: [
+      "Small", 
+      "Medium", 
+      "Large", 
+      "XLarge", 
+      "2XLarge", 
+      "3XLarge", 
+      "4XLarge"
+    ],
     pricing: {
       Small: { price: 0.00 },
       Medium: { price: 0.00 },
@@ -320,7 +400,15 @@ export const catalog = [
     colors: ["Jet Black"],
     type: "tshirts",
     default_color: "Jet Black",
-    sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge", "3XLarge", "4XLarge"],
+    sizes: [
+      "Small", 
+      "Medium", 
+      "Large", 
+      "XLarge", 
+      "2XLarge", 
+      "3XLarge", 
+      "4XLarge"
+    ],
     pricing: {
       Small: { price: 0.00 },
       Medium: { price: 0.00 },
@@ -338,7 +426,15 @@ export const catalog = [
     colors: ["Jet Black"],
     type: "tshirts",
     default_color: "Jet Black",
-    sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge", "3XLarge", "4XLarge"],
+    sizes: [
+      "Small", 
+      "Medium", 
+      "Large", 
+      "XLarge", 
+      "2XLarge", 
+      "3XLarge", 
+      "4XLarge"
+    ],
     pricing: {
       Small: { price: 0.00 },
       Medium: { price: 0.00 },
@@ -353,10 +449,23 @@ export const catalog = [
     code: "J325",
     name: "Port Authority® Vest",
     fullname: "Port Authority® Core Soft Shell Vest",
-    colors: ["Battleship Grey", "Black", "Black Charcoal Heather", "Dress Blue Navy"],
+    colors: [
+      "Battleship Grey", 
+      "Black", 
+      "Black Charcoal Heather", 
+      "Dress Blue Navy"
+    ],
     type: "mens",
     default_color: "Battleship Grey",
-    sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge", "3XLarge", "4XLarge"],
+    sizes: [
+      "Small", 
+      "Medium", 
+      "Large", 
+      "XLarge", 
+      "2XLarge", 
+      "3XLarge", 
+      "4XLarge"
+    ],
     pricing: {
       Small: { price: 0.00 },
       Medium: { price: 0.00 },
@@ -371,10 +480,24 @@ export const catalog = [
     code: "L325",
     name: "Port Authority® Vest",
     fullname: "Port Authority® Women's Core Soft Shell Vest",
-    colors: ["Battleship Grey", "Black", "Black Charcoal Heather", "Dress Blue Navy", "Marshmallow"],
+    colors: [
+      "Battleship Grey", 
+      "Black", 
+      "Black Charcoal Heather", 
+      "Dress Blue Navy", 
+      "Marshmallow"
+    ],
     type: "womens",
     default_color: "Battleship Grey",
-    sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge", "3XLarge", "4XLarge"],
+    sizes: [
+      "Small", 
+      "Medium", 
+      "Large", 
+      "XLarge", 
+      "2XLarge", 
+      "3XLarge", 
+      "4XLarge"
+    ],
     pricing: {
       Small: { price: 0.00 },
       Medium: { price: 0.00 },
@@ -392,7 +515,15 @@ export const catalog = [
     colors: ["Black Heather", "Grey Heather"],
     type: "mens",
     default_color: "Black Heather",
-    sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge", "3XLarge", "4XLarge"],
+    sizes: [
+      "Small", 
+      "Medium", 
+      "Large", 
+      "XLarge", 
+      "2XLarge", 
+      "3XLarge", 
+      "4XLarge"
+    ],
     pricing: {
       Small: { price: 0.00 },
       Medium: { price: 0.00 },
@@ -410,7 +541,15 @@ export const catalog = [
     colors: ["Black Heather", "Grey Heather"],
     type: "womens",
     default_color: "Black Heather",
-    sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge", "3XLarge", "4XLarge"],
+    sizes: [
+      "Small", 
+      "Medium", 
+      "Large", 
+      "XLarge", 
+      "2XLarge", 
+      "3XLarge", 
+      "4XLarge"
+    ],
     pricing: {
       Small: { price: 0.00 },
       Medium: { price: 0.00 },
@@ -425,10 +564,23 @@ export const catalog = [
     code: "BB18000",
     name: "Brooks Brothers® Shirt",
     fullname: "Brooks Brothers® Wrinkle-Free Stretch Pinpoint Shirt",
-    colors: ["Cobalt Blue", "Deep Black", "Newport Blue", "White"],
+    colors: [
+      "Cobalt Blue", 
+      "Deep Black", 
+      "Newport Blue", 
+      "White"
+    ],
     type: "mens",
     default_color: "Cobalt Blue",
-    sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge", "3XLarge", "4XLarge"],
+    sizes: [
+      "Small", 
+      "Medium", 
+      "Large", 
+      "XLarge", 
+      "2XLarge", 
+      "3XLarge", 
+      "4XLarge"
+    ],
     pricing: {
       Small: { price: 0.00 },
       Medium: { price: 0.00 },
@@ -443,10 +595,25 @@ export const catalog = [
     code: "BB18002",
     name: "Brooks Brothers® Shirt",
     fullname: "Brooks Brothers® Wrinkle-Free Nailhead Shirt",
-    colors: ["Club Green", "Cobalt Blue", "Deep Black", "Navy Blazer", "Newport Blue", "White"],
+    colors: [
+      "Club Green", 
+      "Cobalt Blue", 
+      "Deep Black", 
+      "Navy Blazer", 
+      "Newport Blue", 
+      "White"
+    ],
     type: "mens",
     default_color: "Club Green",
-    sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge", "3XLarge", "4XLarge"],
+    sizes: [
+      "Small", 
+      "Medium", 
+      "Large", 
+      "XLarge", 
+      "2XLarge", 
+      "3XLarge", 
+      "4XLarge"
+    ],
     pricing: {
       Small: { price: 0.00 },
       Medium: { price: 0.00 },
@@ -461,10 +628,25 @@ export const catalog = [
     code: "BB18003",
     name: "Brooks Brothers® Shirt",
     fullname: "Brooks Brothers® Women's Wrinkle-Free Nailhead Shirt",
-    colors: ["Club Green", "Cobalt Blue", "Deep Black", "Navy Blazer", "Newport Blue", "White"],
+    colors: [
+      "Club Green", 
+      "Cobalt Blue", 
+      "Deep Black", 
+      "Navy Blazer", 
+      "Newport Blue", 
+      "White"
+    ],
     type: "womens",
     default_color: "Club Green",
-    sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge", "3XLarge", "4XLarge"],
+    sizes: [
+      "Small", 
+      "Medium", 
+      "Large", 
+      "XLarge", 
+      "2XLarge", 
+      "3XLarge", 
+      "4XLarge"
+    ],
     pricing: {
       Small: { price: 0.00 },
       Medium: { price: 0.00 },
@@ -479,10 +661,23 @@ export const catalog = [
     code: "S659",
     name: "Port Authority® Shirt",
     fullname: "Port Authority® Short Sleeve SuperPro™ Oxford Shirt",
-    colors: ["Black", "Navy", "Oxford Blue", "White"],
+    colors: [
+      "Black", 
+      "Navy", 
+      "Oxford Blue", 
+      "White"
+    ],
     type: "mens",
     default_color: "Black",
-    sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge", "3XLarge", "4XLarge"],
+    sizes: [
+      "Small", 
+      "Medium", 
+      "Large", 
+      "XLarge", 
+      "2XLarge", 
+      "3XLarge", 
+      "4XLarge"
+    ],
     pricing: {
       Small: { price: 0.00 },
       Medium: { price: 0.00 },
@@ -518,7 +713,17 @@ export const catalog = [
     ],
     type: "mens",
     default_color: "Black",
-    sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge", "3XLarge", "4XLarge", "5XLarge", "6XLarge"],
+    sizes: [
+      "Small", 
+      "Medium", 
+      "Large", 
+      "XLarge", 
+      "2XLarge", 
+      "3XLarge", 
+      "4XLarge", 
+      "5XLarge", 
+      "6XLarge"
+    ],
     pricing: {
       Small: { price: 0.00 },
       Medium: { price: 0.00 },
@@ -556,7 +761,17 @@ export const catalog = [
     ],
     type: "womens",
     default_color: "Black",
-    sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge", "3XLarge", "4XLarge", "5XLarge", "6XLarge"],
+    sizes: [
+      "Small", 
+      "Medium", 
+      "Large", 
+      "XLarge", 
+      "2XLarge", 
+      "3XLarge", 
+      "4XLarge", 
+      "5XLarge", 
+      "6XLarge"
+    ],
     pricing: {
       Small: { price: 0.00 },
       Medium: { price: 0.00 },
@@ -573,10 +788,24 @@ export const catalog = [
     code: "LK110",
     name: "Port Authority® Mesh Polo",
     fullname: "Port Authority® Women's Dry Zone® UV Micro-Mesh Polo",
-    colors: ["Deep Black", "Graphite", "True Royal", "Rich Red", "White"],
+    colors: [
+      "Deep Black", 
+      "Graphite", 
+      "True Royal", 
+      "Rich Red", 
+      "White"
+    ],
     type: "womens",
     default_color: "Deep Black",
-    sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge", "3XLarge", "4XLarge"],
+    sizes: [
+      "Small", 
+      "Medium", 
+      "Large", 
+      "XLarge", 
+      "2XLarge", 
+      "3XLarge", 
+      "4XLarge"
+    ],
     pricing: {
       Small: { price: 0.00 },
       Medium: { price: 0.00 },
@@ -594,7 +823,15 @@ export const catalog = [
     colors: ["Black", "Grey Concrete", "Iron Grey", "True Red"],
     type: "womens",
     default_color: "Black",
-    sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge", "3XLarge", "4XLarge"],
+    sizes: [
+      "Small", 
+      "Medium", 
+      "Large", 
+      "XLarge", 
+      "2XLarge", 
+      "3XLarge", 
+      "4XLarge"
+    ],
     pricing: {
       Small: { price: 0.00 },
       Medium: { price: 0.00 },
@@ -632,7 +869,17 @@ export const catalog = [
     ],
     type: "mens",
     default_color: "Black",
-    sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge", "3XLarge", "4XLarge", "5XLarge", "6XLarge"],
+    sizes: [
+      "Small", 
+      "Medium", 
+      "Large", 
+      "XLarge", 
+      "2XLarge", 
+      "3XLarge", 
+      "4XLarge", 
+      "5XLarge", 
+      "6XLarge"
+    ],
     pricing: {
       Small: { price: 0.00 },
       Medium: { price: 0.00 },
@@ -702,7 +949,15 @@ export const catalog = [
     ],
     type: "womens",
     default_color: "Black",
-    sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge", "3XLarge", "4XLarge"],
+    sizes: [
+      "Small", 
+      "Medium", 
+      "Large", 
+      "XLarge", 
+      "2XLarge", 
+      "3XLarge", 
+      "4XLarge"
+    ],
     pricing: {
       Small: { price: 0.00 },
       Medium: { price: 0.00 },
@@ -730,7 +985,15 @@ export const catalog = [
     ],
     type: "mens",
     default_color: "Black",
-    sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge", "3XLarge", "4XLarge"],
+    sizes: [
+      "Small", 
+      "Medium", 
+      "Large", 
+      "XLarge", 
+      "2XLarge", 
+      "3XLarge", 
+      "4XLarge"
+    ],
     pricing: {
       Small: { price: 0.00 },
       Medium: { price: 0.00 },
@@ -756,7 +1019,15 @@ export const catalog = [
     ],
     type: "womens",
     default_color: "Black",
-    sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge", "3XLarge", "4XLarge"],
+    sizes: [
+      "Small", 
+      "Medium", 
+      "Large", 
+      "XLarge", 
+      "2XLarge", 
+      "3XLarge", 
+      "4XLarge"
+    ],
     pricing: {
       Small: { price: 0.00 },
       Medium: { price: 0.00 },
@@ -771,10 +1042,25 @@ export const catalog = [
     code: "267020",
     name: "Nike® Dri-FIT Classic Polo",
     fullname: "Nike® Dri-FIT Classic Polo",
-    colors: ["Black", "Court Blue", "Light Blue", "Midnight Navy", "Varsity Red", "White"],
+    colors: [
+      "Black", 
+      "Court Blue", 
+      "Light Blue", 
+      "Midnight Navy", 
+      "Varsity Red", 
+      "White"
+    ],
     type: "mens",
     default_color: "Black",
-    sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge", "3XLarge", "4XLarge"],
+    sizes: [
+      "Small", 
+      "Medium", 
+      "Large", 
+      "XLarge", 
+      "2XLarge", 
+      "3XLarge", 
+      "4XLarge"
+    ],
     pricing: {
       Small: { price: 0.00 },
       Medium: { price: 0.00 },
@@ -792,7 +1078,13 @@ export const catalog = [
     colors: ["Black", "Light Blue", "White"],
     type: "womens",
     default_color: "Black",
-    sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge"],
+    sizes: [
+      "Small", 
+      "Medium", 
+      "Large", 
+      "XLarge", 
+      "2XLarge"
+    ],
     pricing: {
       Small: { price: 0.00 },
       Medium: { price: 0.00 },
@@ -805,10 +1097,25 @@ export const catalog = [
     code: "883681",
     name: "Nike® Dri-FIT Legacy Polo",
     fullname: "Nike® Dri-FIT Legacy Polo (addt'l logos cost extra)",
-    colors: ["Black", "Dark Grey", "Game Royal", "Gym Red", "Light Photo Blue", "Midnight Navy"],
+    colors: [
+      "Black", 
+      "Dark Grey", 
+      "Game Royal", 
+      "Gym Red", 
+      "Light Photo Blue", 
+      "Midnight Navy"
+    ],
     type: "mens",
     default_color: "Black",
-    sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge", "3XLarge", "4XLarge"],
+    sizes: [
+      "Small", 
+      "Medium", 
+      "Large", 
+      "XLarge", 
+      "2XLarge", 
+      "3XLarge", 
+      "4XLarge"
+    ],
     pricing: {
       Small: { price: 0.00 },
       Medium: { price: 0.00 },
@@ -847,7 +1154,13 @@ export const catalog = [
     ],
     type: "womens",
     default_color: "Anthracite",
-    sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge"],
+    sizes: [
+      "Small", 
+      "Medium", 
+      "Large", 
+      "XLarge", 
+      "2XLarge"
+    ],
     pricing: {
       Small: { price: 0.00 },
       Medium: { price: 0.00 },
@@ -884,7 +1197,15 @@ export const catalog = [
     ],
     type: "mens",
     default_color: "Anthracite",
-    sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge", "3XLarge", "4XLarge"],
+    sizes: [
+      "Small", 
+      "Medium", 
+      "Large", 
+      "XLarge", 
+      "2XLarge", 
+      "3XLarge", 
+      "4XLarge"
+    ],
     pricing: {
       Small: { price: 0.00 },
       Medium: { price: 0.00 },
@@ -925,10 +1246,25 @@ export const catalog = [
     code: "NKAH6266",
     name: "Nike Textured Polo",
     fullname: "Nike Dri-FIT Hex Textured Polo",
-    colors: ["Black", "Court Blue", "Dark Grey", "Game Royal", "Gym Red", "White"],
+    colors: [
+      "Black", 
+      "Court Blue", 
+      "Dark Grey", 
+      "Game Royal", 
+      "Gym Red", 
+      "White"
+    ],
     type: "mens",
     default_color: "Black",
-    sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge", "3XLarge", "4XLarge"],
+    sizes: [
+      "Small", 
+      "Medium", 
+      "Large", 
+      "XLarge", 
+      "2XLarge", 
+      "3XLarge", 
+      "4XLarge"
+    ],
     pricing: {
       Small: { price: 0.00 },
       Medium: { price: 0.00 },
@@ -943,10 +1279,25 @@ export const catalog = [
     code: "NKBV6042",
     name: "Nike® Essential Polo",
     fullname: "Nike® Dry Essential Solid Polo",
-    colors: ["Black", "Game Royal", "Midnight Navy", "University Blue", "University Red", "White"],
+    colors: [
+      "Black", 
+      "Game Royal", 
+      "Midnight Navy", 
+      "University Blue", 
+      "University Red", 
+      "White"
+    ],
     type: "mens",
     default_color: "Black",
-    sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge", "3XLarge", "4XLarge"],
+    sizes: [
+      "Small", 
+      "Medium", 
+      "Large", 
+      "XLarge", 
+      "2XLarge", 
+      "3XLarge", 
+      "4XLarge"
+    ],
     pricing: {
       Small: { price: 0.00 },
       Medium: { price: 0.00 },
@@ -961,10 +1312,22 @@ export const catalog = [
     code: "TM1MY399",
     name: "TravisMathew Polo",
     fullname: "TravisMathew Bayfront Solid Polo",
-    colors: ["Black", "Dark Grey", "Insignia Blue", "Roan Rouge"],
+    colors: [
+      "Black", 
+      "Dark Grey", 
+      "Insignia Blue", 
+      "Roan Rouge"
+    ],
     type: "mens",
     default_color: "Black",
-    sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge", "3XLarge"],
+    sizes: [
+      "Small", 
+      "Medium", 
+      "Large", 
+      "XLarge", 
+      "2XLarge", 
+      "3XLarge"
+    ],
     pricing: {
       Small: { price: 0.00 },
       Medium: { price: 0.00 },
@@ -978,11 +1341,26 @@ export const catalog = [
     code: "TM1MU410",
     name: "TravisMathew Performance Polo",
     fullname: "TravisMathew Coto Performance Polo",
-    colors: ["Beryl Grn Hthr", "Black", "Blue Nights", "Brilliant Blue Hthr", "Federal Blue",
-      "Quiet Shade Gry Hthr", "Quiet Shade Gry Blk", "Vintage Indigo Blk", "White"],
+    colors: [
+      "Beryl Grn Hthr", 
+      "Black", "Blue Nights", 
+      "Brilliant Blue Hthr", 
+      "Federal Blue",
+      "Quiet Shade Gry Hthr", 
+      "Quiet Shade Gry Blk", 
+      "Vintage Indigo Blk", 
+      "White"
+    ],
     type: "mens",
     default_color: "Black",
-    sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge", "3XLarge"],
+    sizes: [
+      "Small", 
+      "Medium", 
+      "Large", 
+      "XLarge", 
+      "2XLarge", 
+      "3XLarge"
+    ],
     pricing: {
       Small: { price: 0.00 },
       Medium: { price: 0.00 },
@@ -999,7 +1377,15 @@ export const catalog = [
     colors: ["Blacktop"],
     type: "mens",
     default_color: "Blacktop",
-    sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge", "3XLarge", "4XLarge"],
+    sizes: [
+      "Small", 
+      "Medium", 
+      "Large", 
+      "XLarge", 
+      "2XLarge", 
+      "3XLarge", 
+      "4XLarge"
+    ],
     pricing: {
       Small: { price: 0.00 },
       Medium: { price: 0.00 },
@@ -1017,7 +1403,15 @@ export const catalog = [
     colors: ["Blacktop"],
     type: "womens",
     default_color: "Blacktop",
-    sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge", "3XLarge", "4XLarge"],
+    sizes: [
+      "Small", 
+      "Medium", 
+      "Large", 
+      "XLarge", 
+      "2XLarge", 
+      "3XLarge", 
+      "4XLarge"
+    ],
     pricing: {
       Small: { price: 0.00 },
       Medium: { price: 0.00 },
@@ -1035,7 +1429,14 @@ export const catalog = [
     colors: ["Black", "Collegiate Red", "Collegiate Royal"],
     type: "womens",
     default_color: "Black",
-    sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge", "3XLarge"],
+    sizes: [
+      "Small", 
+      "Medium", 
+      "Large", 
+      "XLarge", 
+      "2XLarge", 
+      "3XLarge"
+    ],
     pricing: {
       Small: { price: 0.00 },
       Medium: { price: 0.00 },
@@ -1049,10 +1450,23 @@ export const catalog = [
     code: "NKDC2105",
     name: "Nike Long Sleeve Polo",
     fullname: "Nike Women's Dri-FIT Micro Pique 2.0 Long Sleeve Polo",
-    colors: ["Anthracite", "Black", "Game Royal", "Gym Blue", "Navy", "University Red", "White"],
+    colors: [
+      "Anthracite", 
+      "Black", 
+      "Game Royal", 
+      "Gym Blue", 
+      "Navy", 
+      "University Red", 
+      "White"],
     type: "womens",
     default_color: "Black",
-    sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge"],
+    sizes: [
+      "Small", 
+      "Medium", 
+      "Large", 
+      "XLarge", 
+      "2XLarge"
+    ],
     pricing: {
       Small: { price: 0.00 },
       Medium: { price: 0.00 },
@@ -1068,7 +1482,13 @@ export const catalog = [
     colors: ["Black"],
     type: "womens",
     default_color: "Black",
-    sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge"],
+    sizes: [
+      "Small", 
+      "Medium", 
+      "Large", 
+      "XLarge", 
+      "2XLarge"
+    ],
     pricing: {
       Small: { price: 0.00 },
       Medium: { price: 0.00 },
@@ -1084,7 +1504,15 @@ export const catalog = [
     colors: ["Black Melange"],
     type: "womens",
     default_color: "Black Melange",
-    sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge", "3XLarge", "4XLarge"],
+    sizes: [
+      "Small", 
+      "Medium", 
+      "Large", 
+      "XLarge", 
+      "2XLarge", 
+      "3XLarge", 
+      "4XLarge"
+    ],
     pricing: {
       Small: { price: 0.00 },
       Medium: { price: 0.00 },
@@ -1102,7 +1530,14 @@ export const catalog = [
     colors: ["TNF Black"],
     type: "womens",
     default_color: "TNF Black",
-    sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge", "3XLarge"],
+    sizes: [
+      "Small", 
+      "Medium", 
+      "Large", 
+      "XLarge", 
+      "2XLarge", 
+      "3XLarge"
+    ],
     pricing: {
       Small: { price: 0.00 },
       Medium: { price: 0.00 },
@@ -1129,7 +1564,17 @@ export const catalog = [
     ],
     type: "mens",
     default_color: "Deep Black",
-    sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge", "3XLarge", "4XLarge", "5XLarge", "6XLarge"],
+    sizes: [
+      "Small", 
+      "Medium", 
+      "Large", 
+      "XLarge", 
+      "2XLarge", 
+      "3XLarge", 
+      "4XLarge", 
+      "5XLarge", 
+      "6XLarge"
+    ],
     pricing: {
       Small: { price: 0.00 },
       Medium: { price: 0.00 },
@@ -1146,11 +1591,26 @@ export const catalog = [
     code: "ST740",
     name: "Sport-Tek Polo",
     fullname: "Sport-Tek® UV Micropique Polo",
-    colors: ["Black", "Deep Red", "Graphite", "Grey Concrete",
-      "True Navy", "True Royal", "White"],
+    colors: [
+      "Black", 
+      "Deep Red", 
+      "Graphite", 
+      "Grey Concrete",
+      "True Navy", 
+      "True Royal", 
+      "White"
+    ],
     type: "mens",
     default_color: "Black",
-    sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge", "3XLarge", "4XLarge"],
+    sizes: [
+      "Small", 
+      "Medium", 
+      "Large", 
+      "XLarge", 
+      "2XLarge", 
+      "3XLarge", 
+      "4XLarge"
+    ],
     pricing: {
       Small: { price: 0.00 },
       Medium: { price: 0.00 },
@@ -1165,10 +1625,21 @@ export const catalog = [
     code: "A230",
     name: "Adidas Performance Polo",
     fullname: "Adidas Men's Performance Polo",
-    colors: ["Black", "Collegiate Red", "Collegiate Royal"],
+    colors: [
+      "Black", 
+      "Collegiate Red", 
+      "Collegiate Royal"],
     type: "mens",
     default_color: "Black",
-    sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge", "3XLarge", "4XLarge"],
+    sizes: [
+      "Small", 
+      "Medium", 
+      "Large", 
+      "XLarge", 
+      "2XLarge", 
+      "3XLarge", 
+      "4XLarge"
+    ],
     pricing: {
       Small: { price: 0.00 },
       Medium: { price: 0.00 },
@@ -1183,10 +1654,26 @@ export const catalog = [
     code: "NKDC2104",
     name: "Nike Long Sleeve Polo",
     fullname: "Nike Dri-FIT Micro Pique 2.0 Long Sleeve Polo",
-    colors: ["Anthracite", "Black", "Game Royal", "Gym Blue", "Navy", "University Red", "White"],
+    colors: [
+      "Anthracite", 
+      "Black", 
+      "Game Royal", 
+      "Gym Blue", 
+      "Navy", 
+      "University Red", 
+      "White"
+    ],
     type: "mens",
     default_color: "Black",
-    sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge", "3XLarge", "4XLarge"],
+    sizes: [
+      "Small", 
+      "Medium", 
+      "Large", 
+      "XLarge", 
+      "2XLarge", 
+      "3XLarge", 
+      "4XLarge"
+    ],
     pricing: {
       Small: { price: 0.00 },
       Medium: { price: 0.00 },
@@ -1215,7 +1702,15 @@ export const catalog = [
     ],
     type: "tshirts",
     default_color: "Jet Black",
-    sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge", "3XLarge", "4XLarge"],
+    sizes: [
+      "Small", 
+      "Medium", 
+      "Large", 
+      "XLarge", 
+      "2XLarge", 
+      "3XLarge", 
+      "4XLarge"
+    ],
     pricing: {
       Small: { price: 0.00 },
       Medium: { price: 0.00 },
@@ -1230,11 +1725,28 @@ export const catalog = [
     code: "PC90H",
     name: "Hooded Sweatshirt",
     fullname: "Port & Company® Essential Fleece Pullover Hooded Sweatshirt",
-    colors: ["Athletic Heather", "Cardinal", "Charcoal",
-      "Drk Hthr Gry", "Jet Black", "Navy", "Red", "Royal", "White"],
+    colors: [
+      "Athletic Heather", 
+      "Cardinal", 
+      "Charcoal",
+      "Drk Hthr Gry", 
+      "Jet Black", 
+      "Navy", 
+      "Red", 
+      "Royal", 
+      "White"
+    ],
     type: "mens",
     default_color: "Jet Black",
-    sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge", "3XLarge", "4XLarge"],
+    sizes: [
+      "Small", 
+      "Medium", 
+      "Large", 
+      "XLarge", 
+      "2XLarge", 
+      "3XLarge", 
+      "4XLarge"
+    ],
     pricing: {
       Small: { price: 0.00 },
       Medium: { price: 0.00 },
@@ -1252,7 +1764,15 @@ export const catalog = [
     colors: ["Deep Black", "Grey Steel", "True Navy"],
     type: "mens",
     default_color: "Deep Black",
-    sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge", "3XLarge", "4XLarge"],
+    sizes: [
+      "Small", 
+      "Medium", 
+      "Large", 
+      "XLarge", 
+      "2XLarge", 
+      "3XLarge", 
+      "4XLarge"
+    ],
     pricing: {
       Small: { price: 0.00 },
       Medium: { price: 0.00 },
@@ -1267,10 +1787,22 @@ export const catalog = [
     code: "TM1MZ339",
     name: "TravisMathew 1/4-Zip",
     fullname: "TravisMathew Coveside 1/4-Zip",
-    colors: ["Black", "Blue Nights", "Drk Gry Hthr", "Light Blue Hthr"],
+    colors: [
+      "Black", 
+      "Blue Nights", 
+      "Drk Gry Hthr", 
+      "Light Blue Hthr"
+    ],
     type: "mens",
     default_color: "Black",
-    sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge", "3XLarge"],
+    sizes: [
+      "Small", 
+      "Medium", 
+      "Large", 
+      "XLarge", 
+      "2XLarge", 
+      "3XLarge"
+    ],
     pricing: {
       Small: { price: 0.00 },
       Medium: { price: 0.00 },
@@ -1287,7 +1819,15 @@ export const catalog = [
     colors: ["Black", "Iron Grey"],
     type: "mens",
     default_color: "Black",
-    sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge", "3XLarge", "4XLarge"],
+    sizes: [
+      "Small", 
+      "Medium", 
+      "Large", 
+      "XLarge", 
+      "2XLarge", 
+      "3XLarge", 
+      "4XLarge"
+    ],
     pricing: {
       Small: { price: 0.00 },
       Medium: { price: 0.00 },
@@ -1305,7 +1845,15 @@ export const catalog = [
     colors: ["Black Melange"],
     type: "mens",
     default_color: "Black Melange",
-    sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge", "3XLarge", "4XLarge"],
+    sizes: [
+      "Small", 
+      "Medium", 
+      "Large", 
+      "XLarge", 
+      "2XLarge", 
+      "3XLarge", 
+      "4XLarge"
+    ],
     pricing: {
       Small: { price: 0.00 },
       Medium: { price: 0.00 },
@@ -1323,7 +1871,15 @@ export const catalog = [
     colors: ["Black"],
     type: "mens",
     default_color: "Black",
-    sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge", "3XLarge", "4XLarge"],
+    sizes: [
+      "Small", 
+      "Medium", 
+      "Large", 
+      "XLarge", 
+      "2XLarge", 
+      "3XLarge", 
+      "4XLarge"
+    ],
     pricing: {
       Small: { price: 0.00 },
       Medium: { price: 0.00 },
@@ -1341,7 +1897,14 @@ export const catalog = [
     colors: ["TNF Black"],
     type: "mens",
     default_color: "TNF Black",
-    sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge", "3XLarge"],
+    sizes: [
+      "Small", 
+      "Medium", 
+      "Large", 
+      "XLarge", 
+      "2XLarge", 
+      "3XLarge"
+    ],
     pricing: {
       Small: { price: 0.00 },
       Medium: { price: 0.00 },
@@ -1358,7 +1921,14 @@ export const catalog = [
     colors: ["TNF Black"],
     type: "mens",
     default_color: "TNF Black",
-    sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge", "3XLarge"],
+    sizes: [
+      "Small", 
+      "Medium", 
+      "Large", 
+      "XLarge", 
+      "2XLarge", 
+      "3XLarge"
+    ],
     pricing: {
       Small: { price: 0.00 },
       Medium: { price: 0.00 },
@@ -1372,10 +1942,23 @@ export const catalog = [
     code: "L805",
     name: "Port Authority® Pullover",
     fullname: "Port Authority® Women's Vertical Texture Full-Zip Jacket",
-    colors: ["Black", "Iron Grey", "Regatta Blue", "True Navy"],
+    colors: [
+      "Black", 
+      "Iron Grey", 
+      "Regatta Blue", 
+      "True Navy"
+    ],
     type: "womens",
     default_color: "Black",
-    sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge", "3XLarge", "4XLarge"],
+    sizes: [
+      "Small", 
+      "Medium", 
+      "Large", 
+      "XLarge", 
+      "2XLarge", 
+      "3XLarge", 
+      "4XLarge"
+    ],
     pricing: {
       Small: { price: 0.00 },
       Medium: { price: 0.00 },
@@ -1393,7 +1976,17 @@ export const catalog = [
     colors: ["Black", "Battleship Grey"],
     type: "mens",
     default_color: "Black",
-    sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge", "3XLarge", "4XLarge", "5XLarge", "6XLarge"],
+    sizes: [
+      "Small", 
+      "Medium", 
+      "Large", 
+      "XLarge", 
+      "2XLarge", 
+      "3XLarge", 
+      "4XLarge", 
+      "5XLarge", 
+      "6XLarge"
+    ],
     pricing: {
       Small: { price: 0.00 },
       Medium: { price: 0.00 },
@@ -2110,62 +2703,6 @@ Designed to be used on a stationary vehicle located on a dealership log.`,
     variationTextOverride: ['Brand:'],    
     type: "sales", 
     quantities: [1, 2, 3, 4, 5],  
-    pricing: {
-      base: {
-        price: 0.00,
-      },
-    },
-  },
-  {
-    code: "GP418ACURA",
-    name: "Clip-On Window Flag",
-    fullname: "Clip-On Window Flag - ACURA",
-    colors: ["Black"],
-    type: "sales",
-    default_color: "Black",
-
-    pricing: {
-      base: {
-        price: 0.00,
-      },
-    },
-  },
-  {
-    code: "GP418BMW",
-    name: "Clip-On Window Flag",
-    fullname: "Clip-On Window Flag - BMW",
-    colors: ["White"],
-    type: "sales",
-    default_color: "White",
-
-    pricing: {
-      base: {
-        price: 0.00,
-      },
-    },
-  },
-  {
-    code: "GP418BUICK",
-    name: "Clip-On Window Flag",
-    fullname: "Clip-On Window Flag - BUICK",
-    colors: ["White"],
-    type: "sales",
-    default_color: "White",
-
-    pricing: {
-      base: {
-        price: 0.00,
-      },
-    },
-  },
-  {
-    code: "GP418CHEVROLET",
-    name: "Clip-On Window Flag",
-    fullname: "Clip-On Window Flag - CHEVROLET",
-    colors: ["White"],
-    type: "sales",
-    default_color: "White",
-
     pricing: {
       base: {
         price: 0.00,
