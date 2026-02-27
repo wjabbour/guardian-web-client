@@ -2697,7 +2697,12 @@ Designed to be used on a stationary vehicle located on a dealership log.`,
       {code: '-CHEVY', color:'Chevrolet'},
       {code: '-DZ2', color:'Chrysler Jeep'},      
       {code: '-DY-BK', color:'Dodge-Black'},
-      {code: '-R', color:'Red'},               
+      {code: '-AJ', color:'Ford'},
+      {code: '-AK-BL', color:'Ford Cert. Pre-owned'},
+      {code: '-AM', color:'Ford Trucks'},
+      {code: '-BA-BL', color:'Hyundai-Blue'},
+      {code: '-BB2-GY', color:'Mitsu Motors'},
+      {code: '-AS', color:'Subaru'},               
     ],
     disableColorSelector: true,
     variationTextOverride: ['Brand:'],    
@@ -2713,20 +2718,6 @@ Designed to be used on a stationary vehicle located on a dealership log.`,
     code: "GP418CHRYSLER",
     name: "Clip-On Window Flag",
     fullname: "Clip-On Window Flag - CHRYSLER",
-    colors: ["Black"],
-    type: "sales",
-    default_color: "Black",
-
-    pricing: {
-      base: {
-        price: 0.00,
-      },
-    },
-  },
-  {
-    code: "GP418DODGE",
-    name: "Clip-On Window Flag",
-    fullname: "Clip-On Window Flag - DODGE",
     colors: ["Black"],
     type: "sales",
     default_color: "Black",
@@ -2828,20 +2819,6 @@ Designed to be used on a stationary vehicle located on a dealership log.`,
     colors: ["White"],
     type: "sales",
     default_color: "White",
-
-    pricing: {
-      base: {
-        price: 0.00,
-      },
-    },
-  },
-  {
-    code: "GP418HYUNDAI",
-    name: "Clip-On Window Flag",
-    fullname: "Clip-On Window Flag - HYUNDAI",
-    colors: ["Blue"],
-    type: "sales",
-    default_color: "Blue",
 
     pricing: {
       base: {
