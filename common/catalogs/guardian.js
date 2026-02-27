@@ -2694,6 +2694,7 @@ Designed to be used on a stationary vehicle located on a dealership log.`,
       {code: '-BG-BK', color:'Acura'},      
       {code: '-BUICK', color: 'Buick'},
       {code: '-BMW', color:'BMW'},
+      {code: '-CF-BLRD', color:'Buy Here Pay Here'},
       {code: '-CHEVY', color:'Chevrolet'},
       {code: '-DZ2', color:'Chrysler Jeep'},      
       {code: '-DY-BK', color:'Dodge-Black'},
@@ -2703,9 +2704,14 @@ Designed to be used on a stationary vehicle located on a dealership log.`,
       {code: '-BE', color:'Honda'},
       {code: '-BF', color:'Honda Cert. Pre-owned'},
       {code: '-BA-BL', color:'Hyundai-Blue'},
+      {code: '-CD-GNWT', color:'Jeep-Green'},
       {code: '-BC-SL', color:'Lexus'},
+      {code: '-BM', color:'Mazda'},
       {code: '-BB2-GY', color:'Mitsu Motors'},
-      {code: '-AS', color:'Subaru'},               
+      {code: '-BR-BU', color:'Rams Head Ram Logo'}, 
+      {code: '-AS', color:'Subaru'},
+      {code: '-BI-RD', color:'Toyota-Red'},
+      {code: '-CI', color:'Used Cars'},                
     ],
     disableColorSelector: true,
     variationTextOverride: ['Brand:'],    
@@ -2846,20 +2852,7 @@ Designed to be used on a stationary vehicle located on a dealership log.`,
         price: 0.00,
       },
     },
-  },
-  {
-    code: "GP418MAZDA",
-    name: "Clip-On Window Flag",
-    fullname: "Clip-On Window Flag - MAZDA",
-    colors: ["White"],
-    type: "sales",
-    default_color: "White",
-    pricing: {
-      base: {
-        price: 0.00,
-      },
-    },
-  },
+  }, 
   {
     code: "GP418MERCEDES",
     name: "Clip-On Window Flag",
@@ -2886,20 +2879,7 @@ Designed to be used on a stationary vehicle located on a dealership log.`,
       },
     },
   },
-  {
-    code: "GP418TOYOTA",
-    name: "Clip-On Window Flag",
-    fullname: "Clip-On Window Flag - TOYOTA",
-    colors: ["White"],
-    type: "sales",
-    default_color: "White",
-    pricing: {
-      base: {
-        price: 0.00,
-      },
-    },
-  },
-  {
+ {
     code: "GP418VW",
     name: "Clip-On Window Flag",
     fullname: "Clip-On Window Flag - VOLKSWAGEN",
@@ -2973,34 +2953,6 @@ Designed to be used on a stationary vehicle located on a dealership log.`,
     colors: ["Blue"],
     type: "sales",
     default_color: "Blue",
-
-    pricing: {
-      base: {
-        price: 0.00,
-      },
-    },
-  },
-  {
-    code: "GP418BHPH",
-    name: "Clip-On Window Flag",
-    fullname: "Clip-On Window Flag - BUY HERE PAY HERE",
-    colors: ["Red"],
-    type: "sales",
-    default_color: "Red",
-
-    pricing: {
-      base: {
-        price: 0.00,
-      },
-    },
-  },
-  {
-    code: "GP418BHPH2",
-    name: "Clip-On Window Flag",
-    fullname: "Clip-On Window Flag - BUY HERE PAY HERE",
-    colors: ["Red"],
-    type: "sales",
-    default_color: "Red",
 
     pricing: {
       base: {
@@ -3183,20 +3135,6 @@ Designed to be used on a stationary vehicle located on a dealership log.`,
     colors: ["White"],
     type: "sales",
     default_color: "White",
-
-    pricing: {
-      base: {
-        price: 0.00,
-      },
-    },
-  },
-  {
-    code: "GP418USDCRS",
-    name: "Clip-On Window Flag",
-    fullname: "Clip-On Window Flag - USED CARS",
-    colors: ["Red"],
-    type: "sales",
-    default_color: "Red",
 
     pricing: {
       base: {
