@@ -2700,7 +2700,10 @@ Designed to be used on a stationary vehicle located on a dealership log.`,
       {code: '-AJ', color:'Ford'},
       {code: '-AK-BL', color:'Ford Cert. Pre-owned'},
       {code: '-AM', color:'Ford Trucks'},
+      {code: '-BE', color:'Honda'},
+      {code: '-BF', color:'Honda Cert. Pre-owned'},
       {code: '-BA-BL', color:'Hyundai-Blue'},
+      {code: '-BC-SL', color:'Lexus'},
       {code: '-BB2-GY', color:'Mitsu Motors'},
       {code: '-AS', color:'Subaru'},               
     ],
@@ -2721,7 +2724,6 @@ Designed to be used on a stationary vehicle located on a dealership log.`,
     colors: ["Black"],
     type: "sales",
     default_color: "Black",
-
     pricing: {
       base: {
         price: 0.00,
@@ -2735,7 +2737,6 @@ Designed to be used on a stationary vehicle located on a dealership log.`,
     colors: ["Black"],
     type: "sales",
     default_color: "Black",
-
     pricing: {
       base: {
         price: 0.00,
@@ -2749,7 +2750,6 @@ Designed to be used on a stationary vehicle located on a dealership log.`,
     colors: ["White"],
     type: "sales",
     default_color: "White",
-
     pricing: {
       base: {
         price: 0.00,
@@ -2763,7 +2763,6 @@ Designed to be used on a stationary vehicle located on a dealership log.`,
     colors: ["White"],
     type: "sales",
     default_color: "White",
-
     pricing: {
       base: {
         price: 0.00,
@@ -2777,7 +2776,6 @@ Designed to be used on a stationary vehicle located on a dealership log.`,
     colors: ["Black"],
     type: "sales",
     default_color: "Black",
-
     pricing: {
       base: {
         price: 0.00,
@@ -2791,35 +2789,6 @@ Designed to be used on a stationary vehicle located on a dealership log.`,
     colors: ["White"],
     type: "sales",
     default_color: "White",
-
-    pricing: {
-      base: {
-        price: 0.00,
-      },
-    },
-  },
-  {
-    code: "GP418HONDA",
-    name: "Clip-On Window Flag",
-    fullname: "Clip-On Window Flag - HONDA",
-    colors: ["Strong Blue"],
-    type: "sales",
-    default_color: "Strong Blue",
-
-    pricing: {
-      base: {
-        price: 0.00,
-      },
-    },
-  },
-  {
-    code: "GP418HONDACERT",
-    name: "Clip-On Window Flag",
-    fullname: "Clip-On Window Flag - HONDA CERTIFIED PRE-OWNED",
-    colors: ["White"],
-    type: "sales",
-    default_color: "White",
-
     pricing: {
       base: {
         price: 0.00,
@@ -2833,7 +2802,6 @@ Designed to be used on a stationary vehicle located on a dealership log.`,
     colors: ["White"],
     type: "sales",
     default_color: "White",
-
     pricing: {
       base: {
         price: 0.00,
@@ -2847,7 +2815,6 @@ Designed to be used on a stationary vehicle located on a dealership log.`,
     colors: ["Black"],
     type: "sales",
     default_color: "Black",
-
     pricing: {
       base: {
         price: 0.00,
@@ -2861,21 +2828,6 @@ Designed to be used on a stationary vehicle located on a dealership log.`,
     colors: ["White"],
     type: "sales",
     default_color: "White",
-
-    pricing: {
-      base: {
-        price: 0.00,
-      },
-    },
-  },
-  {
-    code: "GP418LEXUS",
-    name: "Clip-On Window Flag",
-    fullname: "Clip-On Window Flag - LEXUS",
-    colors: ["Black"],
-    type: "sales",
-    default_color: "Black",
-
     pricing: {
       base: {
         price: 0.00,
@@ -2889,7 +2841,6 @@ Designed to be used on a stationary vehicle located on a dealership log.`,
     colors: ["Black"],
     type: "sales",
     default_color: "Black",
-
     pricing: {
       base: {
         price: 0.00,
@@ -2903,7 +2854,6 @@ Designed to be used on a stationary vehicle located on a dealership log.`,
     colors: ["White"],
     type: "sales",
     default_color: "White",
-
     pricing: {
       base: {
         price: 0.00,
@@ -2917,7 +2867,6 @@ Designed to be used on a stationary vehicle located on a dealership log.`,
     colors: ["White"],
     type: "sales",
     default_color: "White",
-
     pricing: {
       base: {
         price: 0.00,
@@ -2931,7 +2880,6 @@ Designed to be used on a stationary vehicle located on a dealership log.`,
     colors: ["Black"],
     type: "sales",
     default_color: "Black",
-
     pricing: {
       base: {
         price: 0.00,
@@ -2945,7 +2893,6 @@ Designed to be used on a stationary vehicle located on a dealership log.`,
     colors: ["White"],
     type: "sales",
     default_color: "White",
-
     pricing: {
       base: {
         price: 0.00,
@@ -2959,7 +2906,6 @@ Designed to be used on a stationary vehicle located on a dealership log.`,
     colors: ["Navy"],
     type: "sales",
     default_color: "Navy",
-
     pricing: {
       base: {
         price: 0.00,
@@ -2973,7 +2919,6 @@ Designed to be used on a stationary vehicle located on a dealership log.`,
     colors: ["Red"],
     type: "sales",
     default_color: "Red",
-
     pricing: {
       base: {
         price: 0.00,
@@ -2987,7 +2932,6 @@ Designed to be used on a stationary vehicle located on a dealership log.`,
     colors: ["White"],
     type: "sales",
     default_color: "White",
-
     pricing: {
       base: {
         price: 0.00,
