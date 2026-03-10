@@ -1,12 +1,55 @@
 export const catalog = [
   {
+    code: "TAMHDA-34PE-522228A",
+    name: "Black Plastic Frame",
+    fullname: "Black Plastic Frame w/white imprint",
+    colors: ["Black"],
+    type: "customs",
+    default_color: "Black",
+    supportedStores: [
+      "TAMCDA",
+      "TAMBDA",
+      "TAMSMO",
+      "TAMHDA",
+      "TAMKDI",
+      "TAMNMO",
+      "TAMKWE",
+      "ONLINE",
+      "AUDAMB",
+      "VOLVMO",
+      "VOLVMB"
+    ],
+    quantities: [500, 1000, 1500],
+    pricing: {
+      base: {
+        price: .89,
+        discount: {
+          1000: .69,
+          1500: .62,          
+        },
+      },
+    },
+  },
+  {
     code: "TAMHDA-33P3D-444019A",
     name: "Hard Front 3D Plates",
     fullname: "Hard Front 3D Plates",
     colors: ["Black"],
     type: "customs",
     default_color: "Black",
-    supportedStores: ["TAMCDA","TAMBDA","TAMSMO","TAMHDA","TAMKDI","TAMNMO","TAMKWE","ONLINE"],
+    supportedStores: [
+      "TAMCDA",
+      "TAMBDA",
+      "TAMSMO",
+      "TAMHDA",
+      "TAMKDI",
+      "TAMNMO",
+      "TAMKWE",
+      "ONLINE",
+      "AUDAMB",
+      "VOLVMO",
+      "VOLVMB"
+    ],
     quantities: [500, 1000, 1500, 2500],
     pricing: {
       base: {
@@ -26,7 +69,19 @@ export const catalog = [
     colors: ["Black"],
     type: "customs",
     default_color: "Black",
-    supportedStores: ["TAMCDA","TAMBDA","TAMSMO","TAMHDA","TAMKDI","TAMNMO","TAMKWE","ONLINE"],
+    supportedStores: [
+      "TAMCDA",
+      "TAMBDA",
+      "TAMSMO",
+      "TAMHDA",
+      "TAMKDI",
+      "TAMNMO",
+      "TAMKWE",
+      "ONLINE",
+      "AUDAMB",
+      "VOLVMO",
+      "VOLVMB"
+    ],
     quantities: [500, 1000, 1500, 2500],
     pricing: {
       base: {
@@ -46,7 +101,20 @@ export const catalog = [
     colors: ["Black", "White"],
     type: "customs",
     default_color: "Black",
-    supportedStores: ["TAMCDA","TAMBDA","TAMSMO","TAMHDA","TAMKDI","TAMNMO","TAMKWE","ONLINE"],
+    supportedStores: [
+      "TAMCDA",
+      "TAMBDA",
+      "TAMSMO",
+      "TAMHDA",
+      "TAMKDI",
+      "TAMNMO",
+      "TAMKWE",
+      "ONLINE",
+      "AUDAMB",
+      "VOLVMO",
+      "VOLVMB"
+
+    ],
     quantities: [500, 1000, 1500, 2500],
     pricing: {
       base: {
@@ -66,7 +134,19 @@ export const catalog = [
     colors: ["Black"],
     type: "customs",
     default_color: "Black",
-    supportedStores: ["TAMCDA","TAMBDA","TAMSMO","TAMHDA","TAMKDI","TAMNMO","TAMKWE","ONLINE"],
+    supportedStores: [
+      "TAMCDA",
+      "TAMBDA",
+      "TAMSMO",
+      "TAMHDA",
+      "TAMKDI",
+      "TAMNMO",
+      "TAMKWE",
+      "ONLINE",
+      "AUDAMB",
+      "VOLVMO",
+      "VOLVMB"
+    ],
     quantities: [250, 500, 1000],
     pricing: {
       base: {
@@ -85,7 +165,20 @@ export const catalog = [
     colors: ["Black"],
     type: "mens",
     default_color: "Black",
-    sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge", "3XLarge", "4XLarge", "LT", "XLT", "2XLT", "3XLT", "4XLT"],
+    sizes: [
+      "Small", 
+      "Medium", 
+      "Large", 
+      "XLarge", 
+      "2XLarge", 
+      "3XLarge", 
+      "4XLarge", 
+      "LT", 
+      "XLT", 
+      "2XLT", 
+      "3XLT", 
+      "4XLT"
+    ],
     pricing: {
       Small: { price: 38.99 },
       Medium: { price: 38.99 },
@@ -108,7 +201,17 @@ export const catalog = [
     colors: ["Iron Grey", "True Red", "Black", "True Royal"],
     type: "mens",
     default_color: "Black",
-    sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge", "3XLarge", "4XLarge", "5XLarge", "6XLarge"],
+    sizes: [
+      "Small", 
+      "Medium", 
+      "Large", 
+      "XLarge", 
+      "2XLarge", 
+      "3XLarge", 
+      "4XLarge", 
+      "5XLarge", 
+      "6XLarge"
+    ],
     pricing: {
       Small: { price: 24.99 },
       Medium: { price: 24.99 },
@@ -128,7 +231,17 @@ export const catalog = [
     colors: ["Black"],
     type: "mens",
     default_color: "Black",
-    sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge", "3XLarge", "4XLarge", "5XLarge", "6XLarge"],
+    sizes: [
+      "Small", 
+      "Medium", 
+      "Large", 
+      "XLarge", 
+      "2XLarge", 
+      "3XLarge", 
+      "4XLarge", 
+      "5XLarge", 
+      "6XLarge"
+    ],
     pricing: {
       Small: { price: 39.99 },
       Medium: { price: 39.99 },
@@ -148,7 +261,15 @@ export const catalog = [
     colors: ["Black"],
     type: "mens",
     default_color: "Black",
-    sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge", "3XLarge", "4XLarge"],
+    sizes: [
+      "Small", 
+      "Medium", 
+      "Large", 
+      "XLarge", 
+      "2XLarge", 
+      "3XLarge", 
+      "4XLarge"
+    ],
     pricing: {
       Small: { price: 60.99 },
       Medium: { price: 60.99 },
@@ -166,7 +287,15 @@ export const catalog = [
     colors: ["Black"],
     type: "womens",
     default_color: "Black",
-    sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge", "3XLarge", "4XLarge"],
+    sizes: [
+      "Small", 
+      "Medium", 
+      "Large", 
+      "XLarge", 
+      "2XLarge", 
+      "3XLarge", 
+      "4XLarge"
+    ],
     pricing: {
       Small: { price: 60.99 },
       Medium: { price: 60.99 },
@@ -184,7 +313,15 @@ export const catalog = [
     colors: ["Black", "Tour Blue"],
     type: "mens",
     default_color: "Black",
-    sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge", "3XLarge", "4XLarge"],
+    sizes: [
+      "Small", 
+      "Medium", 
+      "Large", 
+      "XLarge", 
+      "2XLarge", 
+      "3XLarge", 
+      "4XLarge"
+    ],
     pricing: {
       Small: { price: 63.99 },
       Medium: { price: 63.99 },
@@ -202,7 +339,15 @@ export const catalog = [
     colors: ["Blacktop"],
     type: "mens",
     default_color: "Blacktop",
-    sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge", "3XLarge", "4XLarge"],
+    sizes: [
+      "Small", 
+      "Medium", 
+      "Large", 
+      "XLarge", 
+      "2XLarge", 
+      "3XLarge", 
+      "4XLarge"
+    ],
     pricing: {
       Small: { price: 76.99 },
       Medium: { price: 76.99 },
@@ -220,7 +365,15 @@ export const catalog = [
     colors: ["Iron Grey", "True Red", "Black", "True Royal"],
     type: "womens",
     default_color: "Black",
-    sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge", "3XLarge", "4XLarge"],
+    sizes: [
+      "Small", 
+      "Medium", 
+      "Large", 
+      "XLarge", 
+      "2XLarge", 
+      "3XLarge", 
+      "4XLarge"
+    ],
     pricing: {
       Small: { price: 24.99 },
       Medium: { price: 24.99 },
@@ -238,7 +391,13 @@ export const catalog = [
     colors: ["Black"],
     type: "womens",
     default_color: "Black",
-    sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge"],
+    sizes: [
+      "Small", 
+      "Medium", 
+      "Large", 
+      "XLarge", 
+      "2XLarge"
+    ],
     pricing: {
       Small: { price: 38.99 },
       Medium: { price: 38.99 },
@@ -254,7 +413,15 @@ export const catalog = [
     colors: ["Black", "Tour Blue"],
     type: "womens",
     default_color: "Black",
-    sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge", "3XLarge", "4XLarge"],
+    sizes: [
+      "Small", 
+      "Medium", 
+      "Large", 
+      "XLarge", 
+      "2XLarge", 
+      "3XLarge", 
+      "4XLarge"
+    ],
     pricing: {
       Small: { price: 63.99 },
       Medium: { price: 63.99 },
@@ -272,7 +439,15 @@ export const catalog = [
     colors: ["Black"],
     type: "womens",
     default_color: "Black",
-    sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge", "3XLarge", "4XLarge"],
+    sizes: [
+      "Small", 
+      "Medium", 
+      "Large", 
+      "XLarge", 
+      "2XLarge", 
+      "3XLarge", 
+      "4XLarge"
+    ],
     pricing: {
       Small: { price: 39.99 },
       Medium: { price: 39.99 },

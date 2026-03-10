@@ -63,6 +63,21 @@ export const config = {
       address: "",
       code: "ONLINE",
     },
+    {
+      name: "C21 Audi Mobile",
+      address: "",
+      code: "AUDAMB",
+    },
+    {
+      name: "C22 Volvo Mobile",
+      address: "",
+      code: "VOLVMO",
+    },
+    {
+      name: "C23 VW Mobile",
+      address: "",
+      code: "VOLVMB",
+    },
   ],
   bypass_codes: ["TAMERO"],
   server_hostname: "https://mxfj3q6m01.execute-api.us-east-1.amazonaws.com",
