@@ -62,7 +62,7 @@ export const catalog = [
     colors: ["Plastic"],
     type: "service",
     default_color: "Plastic",
-    quantities: [500],
+    quantities: [1, 2, 3, 4, 5],
     pricing: {
       base: {
         price: 73.50,
