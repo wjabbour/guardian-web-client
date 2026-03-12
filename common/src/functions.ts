@@ -40,6 +40,8 @@ import { config as RossdowningConfig } from "../configs/rossdowning";
 import { config as TascaConfig } from "../configs/tasca";
 // @ts-ignore
 import { config as MullerConfig } from "../configs/muller";
+// @ts-ignore
+import { config as KrauseConfig } from "../configs/krause";
 
 // @ts-ignore - JS catalog files don't have type declarations
 import { catalog as CannonCatalog } from "../catalogs/cannon";
@@ -81,6 +83,8 @@ import { catalog as RossdowningCatalog } from "../catalogs/rossdowning";
 import { catalog as TascaCatalog } from "../catalogs/tasca";
 // @ts-ignore
 import { catalog as MullerCatalog } from "../catalogs/muller";
+// @ts-ignore
+import { catalog as KrauseCatalog } from "../catalogs/krause";
 
 const DEFAULT_CONFIG = {
   title: "Guardian",
@@ -110,6 +114,7 @@ const allConfigs: any[] = [
   RossdowningConfig,
   TascaConfig,
   MullerConfig,
+  KrauseConfig,
 ];
 
 export function getStoreCode(companyName: string, storeAddress: string): string | undefined {
@@ -192,6 +197,8 @@ export function getWebCatalog(): any {
     return TascaCatalog;
   } else if (url.includes("muller")) {
     return MullerCatalog;
+  } else if (url.includes("krause")) {
+    return KrauseCatalog;
   }
 }
 
@@ -240,6 +247,8 @@ export function getCatalog(companyName: string): any {
       return TascaCatalog;
     case "Muller":
       return MullerCatalog;
+    case "Krause":
+      return KrauseCatalog;
   }
 }
 
@@ -287,6 +296,8 @@ export function getWebConfigValue(val: string): any {
     return (TascaConfig as any)[val];
   } else if (url.includes("muller")) {
     return (MullerConfig as any)[val];
+  } else if (url.includes("krause")) {
+    return (KrauseConfig as any)[val];
   } else {
     // when the user is on gpc81.com landing page we need to display a string in the browser tab
     return (DEFAULT_CONFIG as any)[val];
@@ -334,6 +345,8 @@ export function getConfigValue(val: string, config: string): any {
       return (TascaConfig as any)[val];
     case "Muller":
       return (MullerConfig as any)[val];
+    case "Krause":
+      return (KrauseConfig as any)[val];
   }
 }
 
