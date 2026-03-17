@@ -1,6 +1,6 @@
 export const config = {
   title: "Tasca",
-  company_logo: "tasca landing.png",
+  company_logo: "tascalanding.png",
   logo_placements: {
     mens: ["Left Chest"],
     womens: ["Left Chest"],
