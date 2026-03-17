@@ -1,6 +1,6 @@
 export const config = {
   title: "Tasca",
-  company_logo: "tasca.png",
+  company_logo: "tasca landing.png",
   logo_placements: {
     mens: ["Left Chest"],
     womens: ["Left Chest"],
@@ -13,12 +13,14 @@ export const config = {
   embroideries: {
     hat: [],
     mens: [
+      "Tasca",
       "Yonkers Kia", 
       "Scarsdale Ford", 
       "Central Ave CDJR", 
       "Gary Crossley Ford"
     ],
     womens: [
+      "Tasca",
       "Yonkers Kia", 
       "Scarsdale Ford", 
       "Central Ave CDJR", 
