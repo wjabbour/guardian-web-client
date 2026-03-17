@@ -13,18 +13,16 @@ export const config = {
   embroideries: {
     hat: [],
     mens: [
-      "Tasca Ford", 
       "Yonkers Kia", 
       "Scarsdale Ford", 
       "Central Ave CDJR", 
-      "Gray Crossley Ford"
+      "Gary Crossley Ford"
     ],
     womens: [
-      "Tasca Ford", 
       "Yonkers Kia", 
       "Scarsdale Ford", 
       "Central Ave CDJR", 
-      "Gray Crossley Ford"
+      "Gary Crossley Ford"
     ],
     accessory: [],
     customs: [],

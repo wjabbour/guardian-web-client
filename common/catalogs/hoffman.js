@@ -335,11 +335,34 @@ export const catalog = [
     ],
     disableColorSelector: true,
     variationTextOverride: ['Color:'],
-    type: "sales", 
+    type: "office", 
     quantities: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],       
     pricing: {
       base: {
         price: 75.00,
+      },
+    },
+  },
+  {
+    code: "GP500",
+    name: "Deal Jackets - Plain",
+    fullname: "Plain Vehicle Deal Jackets - 12 in. x 9 in. - (DSA-500)",
+    description: `Packaged 500 per box`,    
+    sapVariations: [
+      {code: '-522', color:'Blue'},
+      {code: '-521', color:'Buff'},
+      {code: '-529', color:'Gray'},
+      {code: '-523', color:'Green'},
+      {code: '-524', color:'Pink'},
+      {code: '-525', color:'White'},             
+    ],
+    disableColorSelector: true,
+    variationTextOverride: ['Color:'],
+    type: "office", 
+    quantities: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],       
+    pricing: {
+      base: {
+        price: 59.99,
       },
     },
   },
@@ -462,23 +485,10 @@ export const catalog = [
     },
   },
   {
-    code: "SM100",
-    name: "Sticky Floor Mats",
-    fullname: "Sticky Floor Mats - Roll of 175",
-    colors: ["Plastic"],
-    type: "service",
-    default_color: "Plastic",
-    quantities: [1, 2, 3, 4, 5],
-    pricing: {
-      base: {
-        price: 95.00,
-      },
-    },
-  },
-  {
     code: "3088",
-    name: "Floor Mats",
-    fullname: "Floor Mats/Coated Paper - Box of 500",
+    name: "Floor Mats - Coated Paper",
+    fullname: "Floor Mats - Coated Paper - Box of 500",
+    description: "Box of 500",
     colors: ["White"],
     type: "service",
     default_color: "White",
@@ -486,6 +496,21 @@ export const catalog = [
     pricing: {
       base: {
         price: 45.72,
+      },
+    },
+  },
+  {
+    code: "129-600",
+    name: "Floor Mats - Adhesive",
+    fullname: "Floor Mats - Full Adhesive - 3 MIL/600' Roll",
+    description: "Packaged one roll of 350 mats per box",
+    colors: ["Clear"],
+    type: "service",
+    default_color: "Clear",
+    quantities: [1, 2, 3, 4, 5],
+    pricing: {
+      base: {
+        price: 99.00,
       },
     },
   },
