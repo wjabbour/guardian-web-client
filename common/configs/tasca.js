@@ -13,14 +13,14 @@ export const config = {
   embroideries: {
     hat: [],
     mens: [
-      "Tasca.EMB",
+      "Tasca",
       "Yonkers Kia", 
       "Scarsdale Ford", 
       "Central Ave CDJR", 
       "Gary Crossley Ford"
     ],
     womens: [
-      "Tasca.EMB",
+      "Tasca",
       "Yonkers Kia", 
       "Scarsdale Ford", 
       "Central Ave CDJR", 
