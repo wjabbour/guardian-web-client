@@ -226,6 +226,11 @@ export const config = {
       address: "1850 Central Park Ave, Yonkers, NY 10710",
       code: "TASKYO",
     },
+    {
+      name: "Tasca Nissan East Providence",
+      address: "845 Taunton Ave, East Providence, RI 02914",
+      code: "TASNEP",
+    },
   ],
   bypass_codes: ["TEST"],
   server_hostname: "https://mxfj3q6m01.execute-api.us-east-1.amazonaws.com",
