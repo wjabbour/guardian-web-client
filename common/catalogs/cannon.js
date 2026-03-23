@@ -407,7 +407,7 @@ export const catalog = [
     },
   },
   {
-    code: "BB18002C",
+    code: "BB18002",
     name: "Regular Long Sleeve #BB18002",
     fullname: "Brooks Brothers® Wrinkle-Free Stretch Nailhead Shirt (BB18002)",
     colors: ["White"],

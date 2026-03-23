@@ -151,6 +151,11 @@ export const config = {
       address: "900 Central Park Ave, Yonkers, NY 10704",
       code: "TASMYO",
     },
+     {
+      name: "Tasca Nissan East Providence",
+      address: "845 Taunton Ave, East Providence, RI 02914",
+      code: "TASNEP",
+    },
     {
       name: "Tasca Subaru Yonkers",
       address: "900 Central Park Ave, Yonkers, NY 10704",
@@ -182,6 +187,11 @@ export const config = {
       code: "TCDJRW",
     },
     {
+      name: "Arlington Heights Buick GMC",
+      address: "777 W Dundee Rd, Arlington Heights, IL 60004",
+      code: "TASBAR",
+    },
+    {
       name: "Arlington Heights Ford",
       address: "801 W Dundee Road, Arlington Heights, IL 60004",
       code: "ARLFAR",
@@ -200,12 +210,7 @@ export const config = {
       name: "Central Ave CDJR",
       address: "1839 Central Ave, Yonkers, NY 10710",
       code: "CENCYO",
-    },
-    {
-      name: "Scarsdale Ford",
-      address: "887 Central Park Ave, Scarsdale, NY 10583",
-      code: "SCAFSC",
-    },
+    },    
     {
       name: "Gary Crossley Ford",
       address: "8050 North Church Rd, Kansas City, MO 64158",
@@ -217,20 +222,15 @@ export const config = {
       code: "MOHVMO",
     },
     {
-      name: "Arlington Heights Buick GMC",
-      address: "777 W Dundee Rd, Arlington Heights, IL 60004",
-      code: "TASBAR",
+      name: "Scarsdale Ford",
+      address: "887 Central Park Ave, Scarsdale, NY 10583",
+      code: "SCAFSC",
     },
     {
       name: "Yonkers Kia",
       address: "1850 Central Park Ave, Yonkers, NY 10710",
       code: "TASKYO",
-    },
-    {
-      name: "Tasca Nissan East Providence",
-      address: "845 Taunton Ave, East Providence, RI 02914",
-      code: "TASNEP",
-    },
+    },   
     {
       name: "Tasca Corporate Office",
       address: "40 Sharp Drive Unit 3, Cranston, RI 02920",
