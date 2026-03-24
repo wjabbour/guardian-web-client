@@ -286,6 +286,10 @@
   background-color: black;
 }
 
+.Black_Stl_Gry {
+  background-color: black;
+}
+
 .Black_White_Stitch {
   background-color: black;
 }
@@ -1386,6 +1390,10 @@
   background-color: #d6c8adf1;
 }
 
+.Scarlet_Heather {
+  background-color: #9c291cf1;
+}
+
 .Sep {
   background-color: #dc73bb;
 }
@@ -1454,12 +1462,24 @@
   background-color: #474747;
 }
 
+.SteelGrey {
+  background-color: #474747;
+}
+
 .Sterling_Grey {
   background-color: #545252;
 }
 
 .Stone {
   background-color: #dacd93;
+}
+
+.Stonewashed_Blue {
+  background-color: #546fa0;
+}
+
+.Stonewashed_Green {
+  background-color: #728379;
 }
 
 .Storm_Grey {
@@ -1626,6 +1646,10 @@
   background-color: #09399e;
 }
 
+.True_Royal_Hthr {
+  background-color: #3d5996;
+}
+
 .True_Royal_White {
   background-color: #1e518f;
 }
@@ -1676,6 +1700,10 @@
 
 .Very_Berry {
   background-color: #a52d8b;
+}
+
+.Vintage_Hthr {
+  background-color: rgb(116, 119, 137);
 }
 
 .Vintage_Hthr_Navy {
