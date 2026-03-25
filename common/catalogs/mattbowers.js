@@ -1413,7 +1413,7 @@ export const catalog = [
       },
     },
   },
-   {
+  {
     code: "BOWHGU-34PEU-449908A",
     name: "Black Plastic Frame",
     fullname: "Black Plastic Frame w/white imprint",

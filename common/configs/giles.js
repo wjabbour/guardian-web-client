@@ -11,9 +11,9 @@ export const config = {
   minimum_apparel_order: false,
   enable_customs_store_picker: true,
   embroideries: {
-    mens: [""],
-    womens: [""],
-    tshirts: [""],
+    mens: ["Giles Automotive.EMB"],
+    womens: ["Giles Automotive.EMB"],
+    tshirts: ["Giles Automotive"],
     hat:  [],
     customs: [],
     office: [],
