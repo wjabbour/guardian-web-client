@@ -42,6 +42,8 @@ import { config as TascaConfig } from "../configs/tasca";
 import { config as MullerConfig } from "../configs/muller";
 // @ts-ignore
 import { config as KrauseConfig } from "../configs/krause";
+// @ts-ignore
+import { config as GilesConfig } from "../configs/giles";
 
 // @ts-ignore - JS catalog files don't have type declarations
 import { catalog as CannonCatalog } from "../catalogs/cannon";
@@ -85,6 +87,8 @@ import { catalog as TascaCatalog } from "../catalogs/tasca";
 import { catalog as MullerCatalog } from "../catalogs/muller";
 // @ts-ignore
 import { catalog as KrauseCatalog } from "../catalogs/krause";
+// @ts-ignore
+import { catalog as GilesCatalog } from "../catalogs/giles";
 
 const DEFAULT_CONFIG = {
   title: "Guardian",
@@ -115,6 +119,7 @@ const allConfigs: any[] = [
   TascaConfig,
   MullerConfig,
   KrauseConfig,
+  GilesConfig,
 ];
 
 export function getStoreCode(companyName: string, storeAddress: string): string | undefined {
@@ -199,6 +204,8 @@ export function getWebCatalog(): any {
     return MullerCatalog;
   } else if (url.includes("krause")) {
     return KrauseCatalog;
+  } else if (url.includes("giles")) {
+    return GilesCatalog;
   }
 }
 
@@ -249,6 +256,8 @@ export function getCatalog(companyName: string): any {
       return MullerCatalog;
     case "Krause":
       return KrauseCatalog;
+    case "Giles":
+      return GilesCatalog;
   }
 }
 
@@ -298,6 +307,8 @@ export function getWebConfigValue(val: string): any {
     return (MullerConfig as any)[val];
   } else if (url.includes("krause")) {
     return (KrauseConfig as any)[val];
+  } else if (url.includes("giles")) {
+    return (GilesConfig as any)[val];
   } else {
     // when the user is on gpc81.com landing page we need to display a string in the browser tab
     return (DEFAULT_CONFIG as any)[val];
@@ -347,6 +358,8 @@ export function getConfigValue(val: string, config: string): any {
       return (MullerConfig as any)[val];
     case "Krause":
       return (KrauseConfig as any)[val];
+    case "Giles":
+      return (GilesConfig as any)[val];
   }
 }
 
