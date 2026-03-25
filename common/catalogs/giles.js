@@ -843,7 +843,7 @@ export const catalog = [
     colors: ["Black"],
     type: "customs",
     default_color: "Black",   
-    supportedStores: ["GILNA","GILVEL","GILHAL","GILNOP","GILSLA","GILVLA"],
+    supportedStores: ["GILNLA","GILVEL","GILHAL","GILNOP","GILSLA","GILVLA"],
     quantities: [2000, 3000, 5000],
     pricing: {
       base: {
@@ -858,7 +858,7 @@ export const catalog = [
     colors: ["Black"],
     type: "customs",
     default_color: "Black",    
-    supportedStores: ["GILNA","GILVEL","GILHAL","GILNOP","GILSLA","GILVLA"],
+    supportedStores: ["GILNLA","GILVEL","GILHAL","GILNOP","GILSLA","GILVLA"],
     quantities: [2000, 3000, 5000],
     pricing: {
       base: {

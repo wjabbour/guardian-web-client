@@ -30,8 +30,8 @@ export const config = {
     customs: [],
     office: [],
   },
-   email_recipients: [
-    "lbudbill@gpcorp.com",    
+   email_recipients: [    
+    "kmay@gpcorp.com",    
     "shanell@gpcorp.com",
     "webportalorders@gpcorp.com",
   ],
@@ -296,7 +296,7 @@ export const config = {
   ],
   server_hostname: "https://mxfj3q6m01.execute-api.us-east-1.amazonaws.com",
   account_reps: [
-    { name: "Louis Budbill", phone: "678-287-1649"}],
+    { name: "Karen May", phone: "678-287-1640"}],
   route_prefix: "/tasca",
   paypal_not_supported: true,
   password: "TascA",
