@@ -815,7 +815,7 @@ export const catalog = [
   {
     code: "ST657",
     name: "Sport-Tek LS Polo #ST657",
-    fullname: "Sport-Tek® Long Sleeve Micropique Polo",
+    fullname: "Sport-Tek® Long Sleeve Micropique Polo (ST657)",
     colors: ["Black","White"],
     type: "mens",
     default_color: "Black",
