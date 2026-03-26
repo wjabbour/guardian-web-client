@@ -4,7 +4,7 @@ export default function Footer() {
   const accountReps = getWebConfigValue("account_reps");
   const accountRepString = accountReps
     .map((rep) => {
-      return `${rep.name} (${rep.phone})`;
+      return `${rep.name} (${rep.email})`;
     })
     .join(" & ");
   return (
