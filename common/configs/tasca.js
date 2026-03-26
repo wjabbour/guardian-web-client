@@ -296,7 +296,9 @@ export const config = {
   ],
   server_hostname: "https://mxfj3q6m01.execute-api.us-east-1.amazonaws.com",
   account_reps: [
-    { name: "Karen May", phone: "678-287-1640"}],
+    { name: "Karen May (PA, NY & NJ)", email: "kmay@gpcorp.com"},
+    { name: "Jennifer Warner (Florida)", email: "jwarner@gpcorp.com"}
+  ],
   route_prefix: "/tasca",
   paypal_not_supported: true,
   password: "TascA",
