@@ -251,6 +251,24 @@ export const catalog = [
     },
   },
   {
+    code: "HOFAPA-33AP-496163A",
+    name: "Black Acrylic Plate",
+    fullname: "Black Acrylic Plate w/white imprint",
+    colors: ["Black"],
+    type: "customs",
+    default_color: "Black",
+    supportedStores: ["HOFAPA"],
+    quantities: [300, 500],
+    pricing: {
+      base: {
+        price: 6.99,
+        discount: {
+          500: 6.49,
+        },
+      },
+    },
+  },
+  {
     code: "HOFAPA-34MLF-496173A",
     name: "Black Metal Frame",
     fullname: "Black Metal Frame w/acrylic insterts & white imprint",
@@ -269,20 +287,47 @@ export const catalog = [
     },
   },
   {
-    code: "HOFAPA-33AP-496163A",
-    name: "Black Acrylic Frame",
-    fullname: "Black Acrylic Frame w/white imprint",
+    code: "HOFAPA-34PEU-523925A",
+    name: "Black Plastic Frame",
+    fullname: "Black Plastic Frame w/white imprint (New London)",
     colors: ["Black"],
     type: "customs",
     default_color: "Black",
     supportedStores: ["HOFAPA"],
-    quantities: [300, 500],
+    quantities: [500, 1000, 1500],
     pricing: {
       base: {
-        price: 6.99,
-        discount: {
-          500: 6.49,
-        },
+        price: .55,
+      },
+    },
+  },
+  {
+    code: "HOFAPA-34PEU-523926A",
+    name: "Black Plastic Frame",
+    fullname: "Black Plastic Frame w/white imprint (Waterbury)",
+    colors: ["Black"],
+    type: "customs",
+    default_color: "Black",
+    supportedStores: ["HOFAPA"],
+    quantities: [500, 1000, 1500],
+    pricing: {
+      base: {
+        price: .55,
+      },
+    },
+  },
+  {
+    code: "HOFAPA-34PEU-523854A",
+    name: "Black Plastic Frame",
+    fullname: "Black Plastic Frame w/white imprint (Hoffman.com)",
+    colors: ["Black"],
+    type: "customs",
+    default_color: "Black",
+    supportedStores: ["HOFAPA"],
+    quantities: [500, 1000, 1500],
+    pricing: {
+      base: {
+        price: .55,
       },
     },
   },
