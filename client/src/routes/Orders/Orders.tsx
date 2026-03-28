@@ -82,8 +82,10 @@ export default function OrdersTable() {
   // --- Derived State (Performance) ---
   const storeOptions = useMemo(() => {
     return [
-      ...new Set(orders.map((o) => getStore(o.company_name ?? "", o.store))),
-    ];
+      ...new Set(
+        orders.map((o) => getStore(o.company_name ?? "", o.store)).filter(Boolean)
+      ),
+    ] as string[];
   }, [orders]);
 
   const displayedOrders = useMemo(() => {
