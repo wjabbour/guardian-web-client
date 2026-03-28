@@ -42,7 +42,7 @@ class Dynamo {
   }
 
   // return created_at so that we can re-fetch for tameron orders
-  async createOrder(order: Omit<Order, 'created_at' | 'paid_at'>, table_name: string) {
+  async createOrder(order: Omit<Order, 'created_at' | 'paid_at' | 'order_id'>, table_name: string) {
     const created_at = Date.now() + "";
 
     order["paid_at"] = "-1";
