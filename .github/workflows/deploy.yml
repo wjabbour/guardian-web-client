@@ -27,6 +27,10 @@ jobs:
         with:
           node-version: "22"
 
+      - name: Install npm 11
+        if: steps.changes.outputs.frontend == 'true'
+        run: npm install -g npm@11
+
       - name: Cache common dependencies
         if: steps.changes.outputs.frontend == 'true'
         id: cache-common-npm
@@ -120,7 +124,11 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: "22"
-      
+
+      - name: Install npm 11
+        if: steps.changes.outputs.backend == 'true'
+        run: npm install -g npm@11
+
       - name: Cache common dependencies
         if: steps.changes.outputs.backend == 'true'
         id: cache-common-npm
