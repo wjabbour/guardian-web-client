@@ -125,7 +125,7 @@ export function getRoutePrefix(password: string): string | undefined {
   return config ? config.route_prefix : undefined;
 }
 
-function getSiteByUrl(): { config: any; catalog: any } | undefined {
+function getSiteByUrl(): { urlKey: string; config: any } | undefined {
   const url = window.location.href;
   if (url.includes("localhost")) return SITE_REGISTRY.find((s) => s.urlKey === "hennessy");
   return SITE_REGISTRY.find((s) => url.includes(s.urlKey));
