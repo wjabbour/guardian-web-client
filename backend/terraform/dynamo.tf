@@ -27,6 +27,11 @@ resource "aws_dynamodb_table" "orders_table" {
   }
 
   attribute {
+    name = "paypal_order_id"
+    type = "S"
+  }
+
+  attribute {
     name = "bypass"
     type = "N"
   }
@@ -52,6 +57,15 @@ resource "aws_dynamodb_table" "orders_table" {
   global_secondary_index {
     name               = "order-id-index"
     hash_key           = "order_id"
+    write_capacity     = 1
+    read_capacity      = 1
+    projection_type    = "ALL"
+    non_key_attributes = []
+  }
+
+  global_secondary_index {
+    name               = "paypal-order-id-index"
+    hash_key           = "paypal_order_id"
     write_capacity     = 1
     read_capacity      = 1
     projection_type    = "ALL"
