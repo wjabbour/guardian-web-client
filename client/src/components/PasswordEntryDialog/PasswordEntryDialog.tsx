@@ -7,11 +7,13 @@ import TextField from "@mui/material/TextField";
 import CircularProgress from "@mui/material/CircularProgress";
 import { useState, useEffect } from "react";
 
-export default function PasswordEntryDialog({
-  isModalOpen,
-  setIsModalOpen,
-  onSubmit,
-}) {
+interface Props {
+  isModalOpen: boolean;
+  setIsModalOpen: (open: boolean) => void;
+  onSubmit: (password: string) => Promise<void>;
+}
+
+export default function PasswordEntryDialog({ isModalOpen, setIsModalOpen, onSubmit }: Props) {
   const [password, setPassword] = useState("");
   const [isLoading, setIsLoading] = useState(false);
 
@@ -35,7 +37,7 @@ export default function PasswordEntryDialog({
     }
   }
 
-  function handleKeyDown(e) {
+  function handleKeyDown(e: React.KeyboardEvent) {
     if (e.key === "Enter") {
       handleSubmit();
     }
@@ -54,7 +56,7 @@ export default function PasswordEntryDialog({
           variant="outlined"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
-          onKeyDown={handleKeyDown} // allow submitting by pressing Enter
+          onKeyDown={handleKeyDown}
           disabled={isLoading}
         />
       </DialogContent>
