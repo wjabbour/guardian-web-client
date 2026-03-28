@@ -21,11 +21,16 @@ export default function Root() {
   const navigation = useNavigation();
   const navigate = useNavigate();
   const location = useLocation();
+  const isGpc81 = useNextGenRouting();
+  const [catalogReady, setCatalogReady] = useState(!isGpc81);
 
   useEffect(() => {
-    loadCatalogForCurrentUrl();
+    if (!isGpc81) return;
+    setCatalogReady(false);
+    loadCatalogForCurrentUrl().then(() => setCatalogReady(true));
   }, [location.pathname]);
-  const useRouting = useNextGenRouting() && window.location.pathname === "/";
+
+  const useRouting = isGpc81 && window.location.pathname === "/";
   const [cart, set_cart] = useState(() => {
     // Rehydrate cart from sessionStorage using cart service
     return CartService.loadCart();
@@ -76,7 +81,10 @@ export default function Root() {
             {useRouting && <Gpc81Navbar setModalOpen={setModalOpen} />}
             {!useRouting && <Navbar cart={cart} setCart={set_cart} />}
             <div className="px-6 py-6">
-              <Outlet context={[cart, set_cart]} />
+              {catalogReady
+                ? <Outlet context={[cart, set_cart]} />
+                : <Box sx={{ display: "flex", justifyContent: "center", mt: 10 }}><CircularProgress /></Box>
+              }
             </div>
           </div>
         </UserContext.Provider>
