@@ -92,6 +92,11 @@ export interface CatalogItem {
    * Defaults to "Type:" if not specified.
    */
   variationTextOverride?: string;
+  /**
+   * Pre-defined quantity options presented as a dropdown on the modification page.
+   * When absent, the quantity selector falls back to free-text input.
+   */
+  quantities?: (number | string)[];
 }
 
 export interface CartItem {

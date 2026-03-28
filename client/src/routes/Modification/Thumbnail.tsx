@@ -1,10 +1,14 @@
 import { getWebConfigValue } from "guardian-common";
 
-export default function Thumbnail({ img }) {
+interface Props {
+  img: string;
+}
+
+export default function Thumbnail({ img }: Props) {
   // if there is no embroidery selected, we shouldnt show a thumbnail
   const show = img !== "" && getWebConfigValue("show_image_preview");
 
-  function getImagePath(logo_name) {
+  function getImagePath(logo_name: string) {
     return `/images/${logo_name.toLowerCase().split(" ").join("_")}.png`;
   }
 

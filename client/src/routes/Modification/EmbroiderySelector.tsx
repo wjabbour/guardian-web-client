@@ -1,16 +1,24 @@
 import Thumbnail from "./Thumbnail";
 import InputLabel from "@mui/material/InputLabel";
 import FormControl from "@mui/material/FormControl";
-import Select from "@mui/material/Select";
+import Select, { SelectChangeEvent } from "@mui/material/Select";
 import MenuItem from "@mui/material/MenuItem";
 import { useState } from "react";
 import { SvgIcon } from "@mui/material";
 import AddCircleIcon from "@mui/icons-material/AddCircle";
 import DoDisturbOnIcon from "@mui/icons-material/DoDisturbOn";
+import { CatalogItem } from "guardian-common";
 
 // --- EXTRACTED COMPONENTS (Defined Outside) ---
 
-const LogoSelect = ({ value, onChange, options, label = "Logo" }) => {
+interface LogoSelectProps {
+  value: string;
+  onChange: (e: SelectChangeEvent) => void;
+  options: string[];
+  label?: string;
+}
+
+const LogoSelect = ({ value, onChange, options, label = "Logo" }: LogoSelectProps) => {
   return (
     <div className="w-[250px]">
       <FormControl fullWidth>
@@ -31,7 +39,13 @@ const LogoSelect = ({ value, onChange, options, label = "Logo" }) => {
   );
 };
 
-const PlacementSelect = ({ value, onChange, options }) => {
+interface PlacementSelectProps {
+  value: string;
+  onChange: (e: SelectChangeEvent) => void;
+  options: string[];
+}
+
+const PlacementSelect = ({ value, onChange, options }: PlacementSelectProps) => {
   if (!options || options.length === 0) return null;
 
   return (
@@ -52,6 +66,20 @@ const PlacementSelect = ({ value, onChange, options }) => {
 
 // --- MAIN COMPONENT ---
 
+interface Props {
+  item: CatalogItem;
+  placements: string[];
+  embroideries: string[];
+  firstEmbroidery: string;
+  secondEmbroidery: string | null;
+  firstPlacement: string;
+  secondPlacement: string;
+  handleFirstEmbroideryChange: (value: string) => void;
+  handleSecondEmbroideryChange: (value: string | null) => void;
+  handleFirstPlacementChange: (value: string) => void;
+  handleSecondPlacementChange: (value: string) => void;
+}
+
 export default function EmbroiderySelector({
   item,
   placements,
@@ -64,7 +92,7 @@ export default function EmbroiderySelector({
   handleSecondEmbroideryChange,
   handleFirstPlacementChange,
   handleSecondPlacementChange,
-}) {
+}: Props) {
   const [secondLogo, setSecondLogo] = useState(false);
 
   // 1. SIMPLE VARIATIONS CASE

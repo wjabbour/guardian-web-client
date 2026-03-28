@@ -1,4 +1,4 @@
-import { getWebCatalog } from "guardian-common";
+import { getWebCatalog, CatalogItem, Cart } from "guardian-common";
 import { useLoaderData, useOutletContext } from "react-router-dom";
 import { useState, useEffect } from "react";
 import Snackbar from "@mui/material/Snackbar";
@@ -22,12 +22,12 @@ type UserSelection = {
   [key: string]: number;
 };
 
-export async function loader({ params }) {
+export async function loader({ params }: { params: { id?: string } }) {
   return getWebCatalog().find((i) => i.code === params.id);
 }
 
 export default function Modification() {
-  const item: any = useLoaderData();
+  const item = useLoaderData() as CatalogItem;
   const [selected_color, set_selected_color] = useState(
     item.default_color || ""
   );
@@ -55,7 +55,7 @@ export default function Modification() {
       : `/images/${item.code}.jpg`;
 
   const [image_source, set_image_source] = useState(initialImageSource);
-  const [cart, set_cart] = useOutletContext<any>();
+  const [cart, set_cart] = useOutletContext<[Cart, React.Dispatch<React.SetStateAction<Cart>>]>();
 
   // Update image source when selected_sapVariation changes (e.g., from ColorSelector)
   useEffect(() => {
@@ -81,7 +81,7 @@ export default function Modification() {
   const startsAtPrice = item.pricing[smallestSize].price;
 
   const [firstEmbroidery, setFirstEmbroidery] = useState("");
-  const [secondEmbroidery, setSecondEmbroidery] = useState(null);
+  const [secondEmbroidery, setSecondEmbroidery] = useState<string | null>(null);
   const logo_placements = getWebConfigValue("logo_placements")[item.type] || [];
   const embroideries = getEmbroidery(item.sub_category || item.type) || [];
   const [reset, setReset] = useState(Date.now());
@@ -105,7 +105,7 @@ export default function Modification() {
     setFirstEmbroidery(embroidery);
   };
 
-  const handleSecondEmbroideryChange = (embroidery: string) => {
+  const handleSecondEmbroideryChange = (embroidery: string | null) => {
     setSecondEmbroidery(embroidery);
   };
 

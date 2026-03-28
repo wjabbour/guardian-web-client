@@ -1,14 +1,23 @@
 import "./colors.css";
+import { CatalogItem } from "guardian-common";
+
+interface Props {
+  item: CatalogItem;
+  set_selected_color: (color: string) => void;
+  selected_color: string;
+  set_image_source: (src: string) => void;
+  selected_sapVariation: string | null;
+  set_selected_sapVariation: (code: string) => void;
+}
 
 export default function ColorSelector({
   item,
   set_selected_color,
   selected_color,
   set_image_source,
-  sapVariations,
   selected_sapVariation,
   set_selected_sapVariation,
-}) {
+}: Props) {
   // If color selector is disabled, don't render
   if (item.disableColorSelector) {
     return null;

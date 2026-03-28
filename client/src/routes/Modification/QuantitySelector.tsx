@@ -2,12 +2,13 @@ import { useEffect, useState } from "react";
 import Select, { SelectChangeEvent } from "@mui/material/Select";
 import MenuItem from "@mui/material/MenuItem";
 import { ColorOption, SizeOption } from "../../lib/constants";
+import { CatalogItem } from "guardian-common";
 
 // Helper to determine display mode
 const isMany = (arr?: string[]) => (arr ? arr.length >= 2 : false);
 
 interface Props {
-  item: any; // Ideally replace 'any' with your Product interface
+  item: CatalogItem;
   setUserSelection: (selection: Record<string, number>) => void;
   reset: number;
   selected_sapVariation?: string | null;

@@ -1,7 +1,11 @@
 import { useEffect, useRef, useState } from "react";
 
-const Description = ({ description }) => {
-  const contentRef = useRef(null);
+interface Props {
+  description: string;
+}
+
+const Description = ({ description }: Props) => {
+  const contentRef = useRef<HTMLDivElement>(null);
   const [isOverflowing, setIsOverflowing] = useState(false);
   const [expanded, setExpanded] = useState(false);
 
