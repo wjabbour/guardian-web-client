@@ -37,9 +37,9 @@ jobs:
         with:
           node-version: "22"
 
-      - name: Install npm 11
+      - name: Enable corepack
         if: steps.changes.outputs.frontend == 'true' || inputs.force_client == true
-        run: npm install -g npm@11.6.2
+        run: corepack enable
 
       - name: Cache common dependencies
         if: steps.changes.outputs.frontend == 'true' || inputs.force_client == true
@@ -135,9 +135,9 @@ jobs:
         with:
           node-version: "22"
 
-      - name: Install npm 11
+      - name: Enable corepack
         if: steps.changes.outputs.backend == 'true' || inputs.force_backend == true
-        run: npm install -g npm@11.6.2
+        run: corepack enable
 
       - name: Cache common dependencies
         if: steps.changes.outputs.backend == 'true' || inputs.force_backend == true
