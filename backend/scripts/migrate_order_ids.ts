@@ -14,13 +14,18 @@ import {
 } from "@aws-sdk/lib-dynamodb";
 import { randomUUID } from "crypto";
 
-const DRY_RUN = !process.argv.includes("--execute");
+const args = process.argv.slice(2);
+const DRY_RUN = !args.includes("--execute");
 const TABLES = ["orders", "archived_orders"];
 const REGION = "us-east-1";
 
 // Delay between writes — keep well under provisioned WCU limit (1 WCU = 1 write/sec for <=1KB items)
 const WRITE_DELAY_MS = 1200;
 const MAX_RETRIES = 6;
+
+const profileArg = args.find((a) => a.startsWith("--profile="));
+const profile = profileArg ? profileArg.split("=")[1] : undefined;
+if (profile) process.env.AWS_PROFILE = profile;
 
 const client = new DynamoDBClient({ region: REGION });
 const docClient = DynamoDBDocumentClient.from(client);
@@ -116,11 +121,12 @@ async function migrateTable(tableName: string) {
 }
 
 async function main() {
+  const profileLabel = profile ? `profile: ${profile}` : "profile: default";
   if (DRY_RUN) {
-    console.log("=== DRY RUN — no writes will occur ===");
+    console.log(`=== DRY RUN (${profileLabel}) — no writes will occur ===`);
     console.log("Run with --execute to apply changes.\n");
   } else {
-    console.log(`=== EXECUTING — ~${WRITE_DELAY_MS}ms between writes, up to ${MAX_RETRIES} retries per op ===\n`);
+    console.log(`=== EXECUTING (${profileLabel}) — ~${WRITE_DELAY_MS}ms between writes, up to ${MAX_RETRIES} retries per op ===\n`);
   }
 
   for (const table of TABLES) {
