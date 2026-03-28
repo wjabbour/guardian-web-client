@@ -122,7 +122,44 @@ Determines which server the client will make API calls to. This value should alw
 
 ### account_reps
 
-Determines the account rep information displayed on the client's footer.
+Determines the account rep information displayed in the footer of the client site. Each entry in the array supports the following fields:
+
+| Field | Required | Description |
+|---|---|---|
+| `name` | Yes | The rep's full name |
+| `territory` | No | States or regions the rep covers, e.g. `"FL"` or `"RI, CT"` |
+| `email` | No | The rep's email address. Takes precedence over `phone` if both are set |
+| `phone` | No | The rep's phone number |
+
+Each rep is rendered on its own line in the footer. The format is `Name (Territory) - contact`, where territory and contact are omitted if not provided.
+
+**Example — email format:**
+
+```js
+account_reps: [
+  { name: "Jennifer Warner", territory: "FL", email: "jwarner@gpcorp.com" },
+  { name: "Bob Sugden", territory: "RI, CT", email: "bsugden@gpcorp.com" },
+]
+```
+
+Renders as:
+```
+Jennifer Warner (FL) - jwarner@gpcorp.com
+Bob Sugden (RI, CT) - bsugden@gpcorp.com
+```
+
+**Example — phone format (legacy):**
+
+```js
+account_reps: [
+  { name: "Louis Budbill", phone: "678-287-1649" },
+]
+```
+
+Renders as:
+```
+Louis Budbill (678-287-1649)
+```
 
 ### route_prefix
 

@@ -74,17 +74,7 @@ export default function Root() {
         </UserContext.Provider>
       </CartContext.Provider>
 
-      {useRouting && (
-        <div className="cursor-default">
-          <div className="flex flex-col items-center mt-[80px] text-[24px] font-bold">
-            <span>
-              Guardian Products 5575 Spalding Drive, Peachtree Corners, GA 30092
-            </span>
-            <span>Phone 800 727-7222</span>
-          </div>
-        </div>
-      )}
-      {!useRouting && <Footer />}
+      <Footer />
       <PasswordEntryDialog
         isModalOpen={isModalOpen}
         setIsModalOpen={setModalOpen}

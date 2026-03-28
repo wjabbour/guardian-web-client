@@ -142,7 +142,7 @@ export default function OrdersTable() {
     (email, createdAt, message, severity) => {
       setOrders((prevOrders) =>
         prevOrders.filter(
-          (o) => o.email !== email && o.created_at !== createdAt
+          (o) => !(o.email === email && o.created_at === createdAt)
         )
       );
       setSnackbar({

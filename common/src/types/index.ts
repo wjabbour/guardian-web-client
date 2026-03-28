@@ -133,7 +133,9 @@ export interface Embroidery {
 
 export interface AccountRep {
   name: string;
-  phone: string;
+  phone?: string;
+  email?: string;
+  territory?: string;
 }
 
 export interface Store {
