@@ -1,3 +1,4 @@
+import { randomUUID } from "crypto";
 import { DynamoDBClient } from "@aws-sdk/client-dynamodb";
 import {
   QueryCommand,
@@ -46,6 +47,7 @@ class Dynamo {
 
     order["paid_at"] = "-1";
     order["created_at"] = created_at;
+    order["order_id"] = randomUUID();
     logger.info(order);
 
     await this.documentClient.send(
