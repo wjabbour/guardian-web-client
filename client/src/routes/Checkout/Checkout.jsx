@@ -1,5 +1,6 @@
 import { useOutletContext, useNavigate } from "react-router-dom";
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect, useContext } from "react";
+import { UserContext } from "../../root";
 import TextField from "@mui/material/TextField";
 import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
@@ -25,6 +26,8 @@ import CartItems from "./CartItems";
 import { getWebCatalog } from "guardian-common";
 
 export default function Checkout() {
+  const { role } = useContext(UserContext);
+  const isAdmin = role === "admin";
   const paypalRef = useRef(null);
   const navigate = useNavigate();
   const [script_loaded, set_script_loaded] = useState(false);
@@ -306,9 +309,8 @@ export default function Checkout() {
               variant="contained"
               disabled={
                 isLoading ||
-                !bypass_paypal ||
                 Object.values(cart).length === 0 ||
-                !allowTameronCheckout
+                (!isAdmin && (!bypass_paypal || !allowTameronCheckout))
               }
               startIcon={isLoading ? <CircularProgress size={16} color="inherit" /> : null}
             >
