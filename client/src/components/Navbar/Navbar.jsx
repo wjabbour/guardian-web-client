@@ -7,39 +7,35 @@ export default function Navbar({ cart, setCart }) {
   const navigate = useNavigate();
 
   return (
-    <div className="relative min-h-[150px]">
-      {/* Orders Container */}
-      <div
-        className="absolute top-[35px] left-[1%] flex justify-center items-center h-[35px] w-[145px] rounded-[25px] border-2 border-solid border-[#3434f3] cursor-pointer px-[5px]"
-        onClick={() => navigate(getDomainAwarePath("/orders"))}
-      >
-        <div className="text-[20px] font-bold text-[#3434f3]">View Orders</div>
-      </div>
+    <header className="border-b border-gray-200 bg-white">
+      <div className="flex items-center justify-between px-6 py-3">
+        {/* View Orders */}
+        <div
+          className="flex items-center justify-center h-[35px] w-[145px] rounded-[25px] border-2 border-solid border-[#3434f3] cursor-pointer px-[5px]"
+          onClick={() => navigate(getDomainAwarePath("/orders"))}
+        >
+          <div className="text-[20px] font-bold text-[#3434f3]">View Orders</div>
+        </div>
 
-      {/* Cart Container */}
-      <div className="absolute top-[35px] right-[1%]">
-        <CartDrawer cart={cart} setCart={setCart} />
-      </div>
-
-      {/* Guardian Logo */}
-      <div className="absolute top-[25px] left-[15%] cursor-pointer">
+        {/* Guardian Logo */}
         <img
-          className="h-[100px]"
-          src={"/images/guardian.png"}
+          className="h-[80px] cursor-pointer mr-[150px]"
+          src="/images/guardian.png"
           onClick={() => navigate(getDomainAwarePath("/"))}
           alt="Guardian Logo"
         />
-      </div>
 
-      {/* Company Logo */}
-      <div className="absolute top-[25px] right-[15%] cursor-pointer">
+        {/* Company Logo */}
         <img
-          className="h-[120px]"
+          className="h-[90px] cursor-pointer ml-[150px]"
           src={`/images/${getWebConfigValue("company_logo")}`}
           onClick={() => navigate(getDomainAwarePath("/"))}
           alt="Company Logo"
         />
+
+        {/* Cart */}
+        <CartDrawer cart={cart} setCart={setCart} />
       </div>
-    </div>
+    </header>
   );
 }

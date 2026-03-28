@@ -69,7 +69,9 @@ export default function Root() {
           <div className="app__content">
             {useRouting && <Gpc81Navbar setModalOpen={setModalOpen} />}
             {!useRouting && <Navbar cart={cart} setCart={set_cart} />}
-            <Outlet context={[cart, set_cart]} />
+            <div className="px-6 py-6">
+              <Outlet context={[cart, set_cart]} />
+            </div>
           </div>
         </UserContext.Provider>
       </CartContext.Provider>
