@@ -16,27 +16,28 @@ import {
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 import { update_historical_order, delete_order } from "../../lib/http";
-import { getStore } from "guardian-common";
+import { getStore, Order, CartItem } from "guardian-common";
 import OrderLineItem from "./OrderLineItem";
 import ConfirmationDialog from "../../components/ConfirmationDialog/ConfirmationDialog";
 
-export default function Row({
-  order,
-  editClick,
-  isAdmin,
-  handleResendEmail,
-  onOrderDeleted,
-}) {
+interface Props {
+  order: Order;
+  editClick: () => void;
+  isAdmin: boolean;
+  handleResendEmail: (email: string, created_at: string) => Promise<void>;
+  onOrderDeleted: (email: string, created_at: string, message: string, severity: "success" | "error") => void;
+}
+
+export default function Row({ order, editClick, isAdmin, handleResendEmail, onOrderDeleted }: Props) {
   const [open, setOpen] = useState(false);
-  const [orderItems, setOrderItems] = useState(order.order || []);
+  const [orderItems, setOrderItems] = useState<CartItem[]>(order.order || []);
   const [isResending, setIsResending] = useState(false);
   const [isDeleting, setIsDeleting] = useState(false);
   const [isDeleteModalOpen, setIsDeleteModalOpen] = useState(false);
 
-  // Get PayPal transaction ID or N/A
   const paypalTransactionId = order.transaction_id || "N/A";
 
-  const handleItemSave = async (updatedItem, index) => {
+  const handleItemSave = async (updatedItem: CartItem, index: number) => {
     const newItems = [...orderItems];
     newItems[index] = updatedItem;
 
@@ -67,25 +68,14 @@ export default function Row({
     setIsDeleteModalOpen(true);
   };
 
-  // execute this logic after successful deletion confirmation
   const handleConfirmDelete = async () => {
     setIsDeleteModalOpen(false);
     setIsDeleting(true);
     const result = await delete_order(order.email, order.created_at);
     if (result.success) {
-      onOrderDeleted(
-        order.email,
-        order.created_at,
-        "Order deleted successfully!",
-        "success"
-      );
+      onOrderDeleted(order.email, order.created_at, "Order deleted successfully!", "success");
     } else {
-      onOrderDeleted(
-        order.email,
-        order.created_at,
-        `${result.error.message}`,
-        "error"
-      );
+      onOrderDeleted(order.email, order.created_at, `${result.error.message}`, "error");
     }
     setIsDeleting(false);
   };
@@ -95,8 +85,7 @@ export default function Row({
     month: "long",
     day: "2-digit",
   }).format(parseInt(order.created_at));
-  const storeName =
-    getStore(order.company_name, order.store) ?? order.company_name;
+  const storeName = getStore(order.company_name, order.store) ?? order.company_name;
 
   return (
     <Fragment>
@@ -126,8 +115,6 @@ export default function Row({
         <TableCell align="center">{formattedDate}</TableCell>
         <TableCell align="center">{`${order.first_name} ${order.last_name}`}</TableCell>
         <TableCell align="center">{storeName}</TableCell>
-
-        {/* PayPal Transaction ID */}
         <TableCell align="center">{paypalTransactionId}</TableCell>
         <TableCell align="right">
           {isAdmin && (
@@ -172,7 +159,6 @@ export default function Row({
 
       <TableRow sx={{ backgroundColor: "#fdf1bb" }}>
         <TableCell style={{ paddingBottom: 0, paddingTop: 0 }} colSpan={7}>
-          {/* Note: colSpan increased to 7 to account for the new column in main row */}
           <Collapse in={open} timeout="auto" unmountOnExit>
             <Box
               margin={1}
@@ -192,33 +178,20 @@ export default function Row({
               >
                 Order Details
               </Typography>
-              <Table
-                size="small"
-                aria-label="purchases"
-                sx={{ marginBottom: 2 }}
-              >
+              <Table size="small" aria-label="purchases" sx={{ marginBottom: 2 }}>
                 <TableHead>
                   <TableRow>
                     <TableCell />
                     <TableCell sx={{ fontWeight: "bold" }}>Item Code</TableCell>
                     <TableCell sx={{ fontWeight: "bold" }}>Qty</TableCell>
                     <TableCell sx={{ fontWeight: "bold" }}>Price</TableCell>
-                    <TableCell sx={{ fontWeight: "bold" }}>
-                      Description
-                    </TableCell>
+                    <TableCell sx={{ fontWeight: "bold" }}>Description</TableCell>
                     <TableCell sx={{ fontWeight: "bold" }}>Size</TableCell>
                     <TableCell sx={{ fontWeight: "bold" }}>Color</TableCell>
-                    <TableCell sx={{ fontWeight: "bold" }}>
-                      Embroidery
-                    </TableCell>
-                    {/* Removed "Used Paypal" header from here */}
-                    <TableCell sx={{ fontWeight: "bold" }}>
-                      Customer PO
-                    </TableCell>
+                    <TableCell sx={{ fontWeight: "bold" }}>Embroidery</TableCell>
+                    <TableCell sx={{ fontWeight: "bold" }}>Customer PO</TableCell>
                     <TableCell sx={{ fontWeight: "bold" }}>PO</TableCell>
-                    <TableCell sx={{ fontWeight: "bold" }}>
-                      Est. Ship Date
-                    </TableCell>
+                    <TableCell sx={{ fontWeight: "bold" }}>Est. Ship Date</TableCell>
                   </TableRow>
                 </TableHead>
                 <TableBody>
@@ -226,12 +199,9 @@ export default function Row({
                     <OrderLineItem
                       key={`${item.code}-${index}`}
                       item={item}
-                      // Removed `order` prop
                       isAdmin={isAdmin}
                       onEditRequest={editClick}
-                      onSave={(updatedData) =>
-                        handleItemSave(updatedData, index)
-                      }
+                      onSave={(updatedData) => handleItemSave(updatedData, index)}
                     />
                   ))}
                 </TableBody>
