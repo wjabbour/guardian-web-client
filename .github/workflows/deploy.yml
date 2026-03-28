@@ -77,6 +77,11 @@ jobs:
         run: npm test
         working-directory: ./client
 
+      - name: Type check
+        if: steps.changes.outputs.frontend == 'true' || inputs.force_client == true
+        run: npx tsc --noEmit
+        working-directory: ./client
+
       - name: Build client
         if: steps.changes.outputs.frontend == 'true' || inputs.force_client == true
         run: npm run build

@@ -1,4 +1,4 @@
-import { vi, describe, it, expect, beforeEach } from "vitest";
+import { vi, describe, it, expect, beforeEach, type MockedFunction } from "vitest";
 import { CartService } from "./cartService";
 import { Cart, CatalogItem } from "guardian-common";
 import { getCatalogItem } from "../lib/utils";
@@ -8,8 +8,8 @@ import { recalculateDiscountsForCodeAndSize } from "../utils/discountUtils";
 vi.mock("../lib/utils");
 vi.mock("../utils/discountUtils");
 
-const mockGetCatalogItem = getCatalogItem as vi.MockedFunction<typeof getCatalogItem>;
-const mockRecalculateDiscountsForCodeAndSize = recalculateDiscountsForCodeAndSize as vi.MockedFunction<
+const mockGetCatalogItem = getCatalogItem as MockedFunction<typeof getCatalogItem>;
+const mockRecalculateDiscountsForCodeAndSize = recalculateDiscountsForCodeAndSize as MockedFunction<
   typeof recalculateDiscountsForCodeAndSize
 >;
 

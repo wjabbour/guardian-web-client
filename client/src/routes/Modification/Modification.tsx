@@ -227,7 +227,7 @@ export default function Modification() {
               set_selected_color={set_selected_color}
               selected_color={selected_color}
               set_image_source={set_image_source}
-              sapVariations={item.sapVariations}
+
               selected_sapVariation={selected_sapVariation}
               set_selected_sapVariation={set_selected_sapVariation}
             />
