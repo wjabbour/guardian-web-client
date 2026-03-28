@@ -92,6 +92,7 @@ import { catalog as GilesCatalog } from "../catalogs/giles";
 
 const DEFAULT_CONFIG = {
   title: "Guardian",
+  account_reps: [],
 };
 
 /*

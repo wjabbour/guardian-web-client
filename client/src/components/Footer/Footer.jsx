@@ -8,7 +8,7 @@ function formatRep(rep) {
 }
 
 export default function Footer() {
-  const accountReps = getWebConfigValue("account_reps");
+  const accountReps = getWebConfigValue("account_reps") ?? [];
   return (
     <footer className="border-t border-gray-200 bg-gray-50 mt-auto py-6 px-4">
       <div className="flex flex-col items-center gap-1 text-gray-600 text-sm">
