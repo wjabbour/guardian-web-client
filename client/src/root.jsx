@@ -1,5 +1,5 @@
 import "./App.css";
-import { Outlet, useNavigation, useNavigate } from "react-router-dom";
+import { Outlet, useNavigation, useNavigate, useLocation } from "react-router-dom";
 import CircularProgress from "@mui/material/CircularProgress";
 import Box from "@mui/material/Box";
 import Backdrop from "@mui/material/Backdrop";
@@ -12,6 +12,7 @@ import { getRoutePrefix } from "guardian-common";
 import Gpc81Navbar from "./components/Gpc81Navbar/Gpc81Navbar";
 import { getMe } from "./lib/http";
 import { CartService } from "./services/cartService";
+import { loadCatalogForCurrentUrl } from "./lib/catalogLoader";
 
 export const UserContext = createContext({ role: "user" });
 const CartContext = createContext({});
@@ -19,6 +20,11 @@ const CartContext = createContext({});
 export default function Root() {
   const navigation = useNavigation();
   const navigate = useNavigate();
+  const location = useLocation();
+
+  useEffect(() => {
+    loadCatalogForCurrentUrl();
+  }, [location.pathname]);
   const useRouting = useNextGenRouting() && window.location.pathname === "/";
   const [cart, set_cart] = useState(() => {
     // Rehydrate cart from sessionStorage using cart service
