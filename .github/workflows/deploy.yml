@@ -4,6 +4,16 @@ on:
   push:
     branches:
       - main
+  workflow_dispatch:
+    inputs:
+      force_client:
+        description: "Force client deploy (bypasses path filter)"
+        type: boolean
+        default: false
+      force_backend:
+        description: "Force backend deploy (bypasses path filter)"
+        type: boolean
+        default: false
 
 jobs:
   client:
@@ -22,17 +32,17 @@ jobs:
               - 'common/**'
 
       - name: Setup Node.js
-        if: steps.changes.outputs.frontend == 'true'
+        if: steps.changes.outputs.frontend == 'true' || inputs.force_client == true
         uses: actions/setup-node@v4
         with:
           node-version: "22"
 
       - name: Install npm 11
-        if: steps.changes.outputs.frontend == 'true'
+        if: steps.changes.outputs.frontend == 'true' || inputs.force_client == true
         run: npm install -g npm@11
 
       - name: Cache common dependencies
-        if: steps.changes.outputs.frontend == 'true'
+        if: steps.changes.outputs.frontend == 'true' || inputs.force_client == true
         id: cache-common-npm
         uses: actions/cache@v4
         with:
@@ -40,17 +50,17 @@ jobs:
           key: ${{ runner.os }}-node-common-${{ hashFiles('./common/package-lock.json') }}
 
       - name: Install common dependencies
-        if: steps.changes.outputs.frontend == 'true' && steps.cache-common-npm.outputs.cache-hit != 'true'
+        if: (steps.changes.outputs.frontend == 'true' || inputs.force_client == true) && steps.cache-common-npm.outputs.cache-hit != 'true'
         run: npm ci
         working-directory: ./common
 
       - name: Build common package
-        if: steps.changes.outputs.frontend == 'true'
+        if: steps.changes.outputs.frontend == 'true' || inputs.force_client == true
         run: npm run build
         working-directory: ./common
 
       - name: Cache client dependencies
-        if: steps.changes.outputs.frontend == 'true'
+        if: steps.changes.outputs.frontend == 'true' || inputs.force_client == true
         id: cache-client-npm
         uses: actions/cache@v4
         with:
@@ -58,24 +68,24 @@ jobs:
           key: ${{ runner.os }}-node-client-${{ hashFiles('./client/package-lock.json') }}
 
       - name: Install client dependencies
-        if: steps.changes.outputs.frontend == 'true' && steps.cache-client-npm.outputs.cache-hit != 'true'
+        if: (steps.changes.outputs.frontend == 'true' || inputs.force_client == true) && steps.cache-client-npm.outputs.cache-hit != 'true'
         run: npm ci
         working-directory: ./client
 
       - name: Run tests
-        if: steps.changes.outputs.frontend == 'true'
+        if: steps.changes.outputs.frontend == 'true' || inputs.force_client == true
         run: npm test
         working-directory: ./client
 
       - name: Build client
-        if: steps.changes.outputs.frontend == 'true'
+        if: steps.changes.outputs.frontend == 'true' || inputs.force_client == true
         run: npm run build
         working-directory: ./client
         env:
           CI: false
 
       - name: Configure AWS Credentials (Cannon)
-        if: steps.changes.outputs.frontend == 'true'
+        if: steps.changes.outputs.frontend == 'true' || inputs.force_client == true
         uses: aws-actions/configure-aws-credentials@v4
         with:
           aws-access-key-id: ${{ secrets.CANNON_KEY }}
@@ -83,12 +93,12 @@ jobs:
           aws-region: us-east-1
 
       - name: Upload to Cannon
-        if: steps.changes.outputs.frontend == 'true'
+        if: steps.changes.outputs.frontend == 'true' || inputs.force_client == true
         run: npm run upload-cannon
         working-directory: ./client
 
       - name: Configure AWS Credentials (GPC)
-        if: steps.changes.outputs.frontend == 'true'
+        if: steps.changes.outputs.frontend == 'true' || inputs.force_client == true
         uses: aws-actions/configure-aws-credentials@v4
         with:
           aws-access-key-id: ${{ secrets.GPC_KEY }}
@@ -96,7 +106,7 @@ jobs:
           aws-region: us-east-1
 
       - name: Upload to GPC
-        if: steps.changes.outputs.frontend == 'true'
+        if: steps.changes.outputs.frontend == 'true' || inputs.force_client == true
         run: npm run upload-gpc81
         working-directory: ./client
 
@@ -116,21 +126,21 @@ jobs:
               - 'common/**'
 
       - name: Setup Terraform
-        if: steps.changes.outputs.backend == 'true'
+        if: steps.changes.outputs.backend == 'true' || inputs.force_backend == true
         uses: hashicorp/setup-terraform@v3
 
       - name: Setup Node.js
-        if: steps.changes.outputs.backend == 'true'
+        if: steps.changes.outputs.backend == 'true' || inputs.force_backend == true
         uses: actions/setup-node@v4
         with:
           node-version: "22"
 
       - name: Install npm 11
-        if: steps.changes.outputs.backend == 'true'
+        if: steps.changes.outputs.backend == 'true' || inputs.force_backend == true
         run: npm install -g npm@11
 
       - name: Cache common dependencies
-        if: steps.changes.outputs.backend == 'true'
+        if: steps.changes.outputs.backend == 'true' || inputs.force_backend == true
         id: cache-common-npm
         uses: actions/cache@v4
         with:
@@ -138,17 +148,17 @@ jobs:
           key: ${{ runner.os }}-node-common-${{ hashFiles('./common/package-lock.json') }}
 
       - name: Install common dependencies
-        if: steps.changes.outputs.backend == 'true' && steps.cache-common-npm.outputs.cache-hit != 'true'
+        if: (steps.changes.outputs.backend == 'true' || inputs.force_backend == true) && steps.cache-common-npm.outputs.cache-hit != 'true'
         run: npm ci
         working-directory: ./common
 
       - name: Build common package
-        if: steps.changes.outputs.backend == 'true'
+        if: steps.changes.outputs.backend == 'true' || inputs.force_backend == true
         run: npm run build
         working-directory: ./common
 
       - name: Cache backend dependencies
-        if: steps.changes.outputs.backend == 'true'
+        if: steps.changes.outputs.backend == 'true' || inputs.force_backend == true
         id: cache-backend-npm
         uses: actions/cache@v4
         with:
@@ -156,12 +166,12 @@ jobs:
           key: ${{ runner.os }}-node-backend-${{ hashFiles('./backend/package-lock.json') }}
 
       - name: Install backend dependencies
-        if: steps.changes.outputs.backend == 'true' && steps.cache-backend-npm.outputs.cache-hit != 'true'
+        if: (steps.changes.outputs.backend == 'true' || inputs.force_backend == true) && steps.cache-backend-npm.outputs.cache-hit != 'true'
         run: npm ci
         working-directory: ./backend
 
       - name: Configure AWS Credentials (GPC)
-        if: steps.changes.outputs.backend == 'true'
+        if: steps.changes.outputs.backend == 'true' || inputs.force_backend == true
         uses: aws-actions/configure-aws-credentials@v4
         with:
           aws-access-key-id: ${{ secrets.GPC_KEY }}
@@ -169,7 +179,7 @@ jobs:
           aws-region: us-east-1
 
       - name: Deploy server (Standard)
-        if: steps.changes.outputs.backend == 'true'
+        if: steps.changes.outputs.backend == 'true' || inputs.force_backend == true
         run: npm run deploy
         working-directory: ./backend
         env:
