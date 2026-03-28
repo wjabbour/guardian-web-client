@@ -19,7 +19,8 @@ import InfoOutlinedIcon from "@mui/icons-material/InfoOutlined";
 import IconButton from "@mui/material/IconButton";
 import Tooltip from "@mui/material/Tooltip";
 import Typography from "@mui/material/Typography";
-import { LoadingButton } from "@mui/lab";
+import Button from "@mui/material/Button";
+import CircularProgress from "@mui/material/CircularProgress";
 import CartItems from "./CartItems";
 import { getWebCatalog } from "guardian-common";
 
@@ -300,18 +301,19 @@ export default function Checkout() {
                 : "visible opacity-100"
             }`}
           >
-            <LoadingButton
-              loading={isLoading}
+            <Button
               onClick={bypassPaypalCheckout}
               variant="contained"
               disabled={
+                isLoading ||
                 !bypass_paypal ||
                 Object.values(cart).length === 0 ||
                 !allowTameronCheckout
               }
+              startIcon={isLoading ? <CircularProgress size={16} color="inherit" /> : null}
             >
               Checkout
-            </LoadingButton>
+            </Button>
           </div>
         </div>
       </div>
