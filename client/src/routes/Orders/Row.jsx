@@ -1,5 +1,4 @@
 import { useState, Fragment } from "react";
-import moment from "moment";
 import {
   Box,
   Collapse,
@@ -91,9 +90,11 @@ export default function Row({
     setIsDeleting(false);
   };
 
-  const formattedDate = moment(parseInt(order.created_at)).format(
-    "MMMM DD, YYYY"
-  );
+  const formattedDate = new Intl.DateTimeFormat("en-US", {
+    year: "numeric",
+    month: "long",
+    day: "2-digit",
+  }).format(parseInt(order.created_at));
   const storeName =
     getStore(order.company_name, order.store) ?? order.company_name;
 
