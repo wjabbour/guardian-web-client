@@ -162,9 +162,6 @@ export default function Checkout() {
           layout: "vertical",
           tagline: false,
         },
-        onError: (error) => {
-          console.warn(error);
-        },
       })
       .render(paypalRef.current);
   };
