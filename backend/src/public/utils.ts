@@ -167,58 +167,46 @@ export function getCatalogItemDescription(item_code, company_name) {
   return item.fullname;
 }
 
-function createOrderCsv(orders): string {
-  let csv = "";
+export const CSV_HEADERS = [
+  "Date", "Store Code", "Store Name", "First Name", "Last Name",
+  "Item", "Quantity", "Description", "Size", "Color",
+  "Logo", "Placement", "Second Logo", "Second Placement",
+  "Price", "usedStoreCode", "transactionId", "orderId",
+];
 
-  function save(obj) {
-    let str = "";
+export function createOrderCsv(orders): string {
+  const rows: string[] = [CSV_HEADERS.join(",")];
 
-    Object.keys(obj).forEach((k) => {
-      str += `"${obj[k]}"` + ",";
-    });
+  for (const order of orders) {
+    const date = dayjs(Number(order.created_at)).format("MM/DD/YYYY");
 
-    str += "\n";
-    csv += str;
-  }
-
-  csv +=
-    "Date,Store Code,Store Name,First Name,Last Name,Item,Quantity,Description,Size,Color,Logo,Placement,Second Logo,Second Placement,Price,usedStoreCode,transactionId,orderId\n";
-
-  for (let i = 0; i < orders.length; i++) {
-    const order = orders[i];
-
-    console.log(order);
-    for (let j = 0; j < order.order.length; j++) {
-      const item = order.order[j];
-      const time = dayjs(Number(order.created_at));
-      const formatted_time = time.format("MM/DD/YYYY");
-      const itemCode = item.sapVariation 
-        ? `${item.code}${item.sapVariation}` 
-        : item.code;
-      save({
-        date: formatted_time,
-        store_code: order.store,
-        store_name: getStore(order.company_name, order.store),
-        first_name: order.first_name,
-        last_name: order.last_name,
-        item: itemCode,
-        quantity: item.quantity,
-        description: item.description,
-        size: item.size || "",
-        color: item.color,
-        logo: item.embroidery || "",
-        placement: item.placement || "",
-        secondLogo: item.secondEmbroidery || "",
-        secondPlacement: item.secondPlacement || "",
-        price: item.price,
-        usedStoreCode: order.bypass,
-        transactionId: order.transaction_id || "N/A",
-        orderId: order.order_id || "N/A",
-      });
+    for (const item of order.order) {
+      const itemCode = item.sapVariation ? `${item.code}${item.sapVariation}` : item.code;
+      const cols = [
+        date,
+        order.store,
+        getStore(order.company_name, order.store),
+        order.first_name,
+        order.last_name,
+        itemCode,
+        item.quantity,
+        item.description,
+        item.size || "",
+        item.color,
+        item.embroidery || "",
+        item.placement || "",
+        item.secondEmbroidery || "",
+        item.secondPlacement || "",
+        item.price,
+        order.bypass,
+        order.transaction_id || "N/A",
+        order.order_id || "N/A",
+      ];
+      rows.push(cols.map((v) => `"${v}"`).join(","));
     }
   }
 
-  return csv;
+  return rows.join("\n") + "\n";
 }
 
 function constructEmail(recipient: string, companyName: string, csv: string) {
