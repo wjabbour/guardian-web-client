@@ -57,12 +57,27 @@ async function withRetry<T>(fn: () => Promise<T>, label: string): Promise<T> {
   throw new Error("unreachable");
 }
 
+const PROGRESS_INTERVAL_MS = 15_000;
+
+function startProgressReporter(
+  tableName: string,
+  state: { scanned: number; migrated: number; skipped: number; startedAt: number }
+): NodeJS.Timeout {
+  return setInterval(() => {
+    const elapsed = Math.round((Date.now() - state.startedAt) / 1000);
+    const rate = elapsed > 0 ? (state.migrated / elapsed).toFixed(2) : "0.00";
+    console.log(
+      `  [${tableName}] ${elapsed}s elapsed — scanned: ${state.scanned} | migrated: ${state.migrated} | skipped: ${state.skipped} | rate: ${rate}/s`
+    );
+  }, PROGRESS_INTERVAL_MS);
+}
+
 async function migrateTable(tableName: string) {
   console.log(`\n--- ${tableName} ---`);
 
-  let totalScanned = 0;
-  let totalMigrated = 0;
-  let totalSkipped = 0;
+  const state = { scanned: 0, migrated: 0, skipped: 0, startedAt: Date.now() };
+  const progressTimer = startProgressReporter(tableName, state);
+
   let lastEvaluatedKey: Record<string, unknown> | undefined = undefined;
 
   do {
@@ -72,7 +87,7 @@ async function migrateTable(tableName: string) {
     );
 
     const items = scanResult.Items ?? [];
-    totalScanned += items.length;
+    state.scanned += items.length;
 
     for (const item of items) {
       const email = item.email as string;
@@ -80,7 +95,7 @@ async function migrateTable(tableName: string) {
 
       if (item.paypal_order_id !== undefined) {
         console.log(`  SKIP     [${email}] ${created_at} — already migrated`);
-        totalSkipped++;
+        state.skipped++;
         continue;
       }
 
@@ -111,13 +126,15 @@ async function migrateTable(tableName: string) {
         await sleep(WRITE_DELAY_MS);
       }
 
-      totalMigrated++;
+      state.migrated++;
     }
 
     lastEvaluatedKey = scanResult.LastEvaluatedKey as Record<string, unknown> | undefined;
   } while (lastEvaluatedKey !== undefined);
 
-  console.log(`\n  Scanned: ${totalScanned} | Migrated: ${totalMigrated} | Skipped: ${totalSkipped}`);
+  clearInterval(progressTimer);
+  const elapsed = Math.round((Date.now() - state.startedAt) / 1000);
+  console.log(`\n  Done in ${elapsed}s — scanned: ${state.scanned} | migrated: ${state.migrated} | skipped: ${state.skipped}`);
 }
 
 async function main() {
