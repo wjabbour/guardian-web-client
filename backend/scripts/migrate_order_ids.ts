@@ -1,17 +1,6 @@
 /**
  * Migration: rename order_id -> paypal_order_id, add order_id as UUID
  *
- * Before running:
- *   Ensure AWS credentials are configured (AWS_PROFILE or env vars).
- *
- * After running:
- *   1. Create a new DynamoDB GSI on `paypal_order_id` (so setPaid() can still
- *      look up orders by PayPal order ID).
- *   2. Update backend/src/public/dynamoClient.ts:
- *      - Remove the paypal_order_id -> order_id mapping in createOrder()
- *      - Update setPaid() to query the new GSI on paypal_order_id
- *      - Remove comments about the column name mismatch
- *
  * Usage:
  *   npx ts-node scripts/migrate_order_ids.ts            # dry run (safe, no writes)
  *   npx ts-node scripts/migrate_order_ids.ts --execute  # actually writes to DynamoDB
@@ -29,8 +18,39 @@ const DRY_RUN = !process.argv.includes("--execute");
 const TABLES = ["orders", "archived_orders"];
 const REGION = "us-east-1";
 
+// Delay between writes — keep well under provisioned WCU limit (1 WCU = 1 write/sec for <=1KB items)
+const WRITE_DELAY_MS = 1200;
+const MAX_RETRIES = 6;
+
 const client = new DynamoDBClient({ region: REGION });
 const docClient = DynamoDBDocumentClient.from(client);
+
+const sleep = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
+
+async function withRetry<T>(fn: () => Promise<T>, label: string): Promise<T> {
+  for (let attempt = 0; attempt <= MAX_RETRIES; attempt++) {
+    try {
+      return await fn();
+    } catch (err: any) {
+      const isThrottled =
+        err?.name === "ProvisionedThroughputExceededException" ||
+        err?.name === "RequestLimitExceeded" ||
+        err?.code === "ProvisionedThroughputExceededException";
+
+      if (isThrottled && attempt < MAX_RETRIES) {
+        const backoff = Math.min(1000 * 2 ** attempt, 30000);
+        const jitter = Math.random() * 500;
+        console.log(
+          `  THROTTLED ${label} — retry ${attempt + 1}/${MAX_RETRIES} in ${Math.round(backoff + jitter)}ms`
+        );
+        await sleep(backoff + jitter);
+      } else {
+        throw err;
+      }
+    }
+  }
+  throw new Error("unreachable");
+}
 
 async function migrateTable(tableName: string) {
   console.log(`\n--- ${tableName} ---`);
@@ -41,11 +61,9 @@ async function migrateTable(tableName: string) {
   let lastEvaluatedKey: Record<string, unknown> | undefined = undefined;
 
   do {
-    const scanResult = await docClient.send(
-      new ScanCommand({
-        TableName: tableName,
-        ExclusiveStartKey: lastEvaluatedKey,
-      })
+    const scanResult = await withRetry(
+      () => docClient.send(new ScanCommand({ TableName: tableName, ExclusiveStartKey: lastEvaluatedKey })),
+      "scan"
     );
 
     const items = scanResult.Items ?? [];
@@ -55,9 +73,8 @@ async function migrateTable(tableName: string) {
       const email = item.email as string;
       const created_at = item.created_at as string;
 
-      // Already migrated — skip
       if (item.paypal_order_id !== undefined) {
-        console.log(`  SKIP  [${email}] ${created_at} — already has paypal_order_id`);
+        console.log(`  SKIP     [${email}] ${created_at} — already migrated`);
         totalSkipped++;
         continue;
       }
@@ -66,39 +83,36 @@ async function migrateTable(tableName: string) {
       const newOrderId = randomUUID();
 
       console.log(
-        `  ${DRY_RUN ? "DRY " : ""}MIGRATE  [${email}] ${created_at}` +
-        `\n    order_id:        ${existingOrderId ?? "(missing)"} -> ${newOrderId}` +
-        `\n    paypal_order_id: (none) -> ${existingOrderId ?? "(missing)"}`
+        `  ${DRY_RUN ? "DRY-RUN" : "MIGRATE"} [${email}] ${created_at}` +
+        `\n           order_id:        ${existingOrderId ?? "(missing)"} -> ${newOrderId}` +
+        `\n           paypal_order_id: (none) -> ${existingOrderId ?? "(missing)"}`
       );
 
       if (!DRY_RUN) {
-        await docClient.send(
-          new UpdateCommand({
+        await withRetry(
+          () => docClient.send(new UpdateCommand({
             TableName: tableName,
             Key: { email, created_at },
-            UpdateExpression:
-              "SET paypal_order_id = :paypal_order_id, order_id = :new_order_id",
+            UpdateExpression: "SET paypal_order_id = :paypal_order_id, order_id = :new_order_id",
             ExpressionAttributeValues: {
               ":paypal_order_id": existingOrderId ?? "",
               ":new_order_id": newOrderId,
             },
-            // Guard against a race condition where another process writes between our scan and update
             ConditionExpression: "attribute_not_exists(paypal_order_id)",
-          })
+          })),
+          `update [${email}] ${created_at}`
         );
+
+        await sleep(WRITE_DELAY_MS);
       }
 
       totalMigrated++;
     }
 
-    lastEvaluatedKey = scanResult.LastEvaluatedKey as
-      | Record<string, unknown>
-      | undefined;
+    lastEvaluatedKey = scanResult.LastEvaluatedKey as Record<string, unknown> | undefined;
   } while (lastEvaluatedKey !== undefined);
 
-  console.log(
-    `\n  Scanned: ${totalScanned} | Migrated: ${totalMigrated} | Skipped: ${totalSkipped}`
-  );
+  console.log(`\n  Scanned: ${totalScanned} | Migrated: ${totalMigrated} | Skipped: ${totalSkipped}`);
 }
 
 async function main() {
@@ -106,7 +120,7 @@ async function main() {
     console.log("=== DRY RUN — no writes will occur ===");
     console.log("Run with --execute to apply changes.\n");
   } else {
-    console.log("=== EXECUTING — writing to DynamoDB ===\n");
+    console.log(`=== EXECUTING — ~${WRITE_DELAY_MS}ms between writes, up to ${MAX_RETRIES} retries per op ===\n`);
   }
 
   for (const table of TABLES) {
