@@ -168,7 +168,7 @@ export function getRoutePrefix(password: string): string | undefined {
 
 function getSiteByUrl(): { config: any; catalog: any } | undefined {
   const url = window.location.href;
-  if (url.includes("localhost:3000")) return SITE_REGISTRY.find((s) => s.urlKey === "hennessy");
+  if (url.includes("localhost")) return SITE_REGISTRY.find((s) => s.urlKey === "hennessy");
   return SITE_REGISTRY.find((s) => url.includes(s.urlKey));
 }
 
