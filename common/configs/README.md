@@ -6,31 +6,18 @@ If you're deploying a new site, you will need to do a few things:
 
    **e.g.** If you're deploying a site to `gp-honda.com` then you might choose to name the config file `honda.js` or `gp-honda.js`.
 
-2. Import the new config into `{project_root}/common/index.js`
+2. Add a catalog file to `{project_root}/common/catalogs` following the same naming convention.
 
-   **e.g.** `import { config as HondaConfig } from "../configs/honda";`
+3. Add a single entry to the `SITE_REGISTRY` array in `{project_root}/common/src/functions.ts`:
 
-3. Add a new case statement to the switch in the `getConfigValue` function in `{project_root}/common/index.js`.
-
-   **e.g.**
-
-   ```
-   case "Honda" {
-     return HondaConfig[val];
-   }
+   ```ts
+   { urlKey: "honda", config: HondaConfig, catalog: HondaCatalog },
    ```
 
-4. Add an `if else` statement in the `getWebConfigValue` function in `{project_root}/common/index.js`.
+   - `urlKey` must be a string present in both the site's domain (e.g. `gp-honda.com`) and its gpc81 path (e.g. `gpc81.com/honda`). This is used to resolve the correct config and catalog from the browser URL.
+   - Add the corresponding imports for the config and catalog at the top of the file.
 
-   **e.g.**
-
-   ```
-   else if (url.includes("gp-honda.com")) {
-     return HondaConfig[val];
-   }
-   ```
-
-5. Update the `allConfigs` array in `{project_root}/common/index.js`.
+   This single entry is all that's needed — `getWebConfigValue`, `getWebCatalog`, and `getConfigValue` are all driven by `SITE_REGISTRY` automatically.
 
 ## Config Options
 

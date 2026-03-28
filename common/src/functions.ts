@@ -95,32 +95,41 @@ const DEFAULT_CONFIG = {
 };
 
 /*
-  every new config should be added to this array
+  Every new site should be added to this array. Each entry needs:
+    - urlKey: a string present in both the site's domain and its gpc81 path (e.g. "hennessy" matches
+              hennessy.com and gpc81.com/hennessy)
+    - config: the site's config object
+    - catalog: the site's catalog array
+
+  This single registry drives getWebConfigValue, getWebCatalog, and getConfigValue — so adding
+  a new site only requires one entry here instead of three separate places.
 */
-const allConfigs: any[] = [
-  PremierConfig,
-  StiversConfig,
-  GuardianConfig,
-  TameronConfig,
-  NewCustomerConfig,
-  CannonConfig,
-  LeithConfig,
-  HennessyConfig,
-  PohankaConfig,
-  NavarreConfig,
-  HoffmanConfig,
-  TommycarConfig,
-  VaughnConfig,
-  FriendshipConfig,
-  MattbowersConfig,
-  JcmortgageConfig,
-  McdonaldConfig,
-  RossdowningConfig,
-  TascaConfig,
-  MullerConfig,
-  KrauseConfig,
-  GilesConfig,
+const SITE_REGISTRY: { urlKey: string; config: any; catalog: any }[] = [
+  { urlKey: "newcustomer",  config: NewCustomerConfig,  catalog: NewCustomerCatalog  },
+  { urlKey: "stivers",      config: StiversConfig,      catalog: StiversCatalog      },
+  { urlKey: "tameron",      config: TameronConfig,      catalog: TameronCatalog      },
+  { urlKey: "premier",      config: PremierConfig,      catalog: PremierCatalog      },
+  { urlKey: "guardian",     config: GuardianConfig,     catalog: GuardianCatalog     },
+  { urlKey: "cannon",       config: CannonConfig,       catalog: CannonCatalog       },
+  { urlKey: "leith",        config: LeithConfig,        catalog: LeithCatalog        },
+  { urlKey: "hennessy",     config: HennessyConfig,     catalog: HennessyCatalog     },
+  { urlKey: "pohanka",      config: PohankaConfig,      catalog: PohankaCatalog      },
+  { urlKey: "navarre",      config: NavarreConfig,      catalog: NavarreCatalog      },
+  { urlKey: "hoffman",      config: HoffmanConfig,      catalog: HoffmanCatalog      },
+  { urlKey: "tommycar",     config: TommycarConfig,     catalog: TommycarCatalog     },
+  { urlKey: "vaughn",       config: VaughnConfig,       catalog: VaughnCatalog       },
+  { urlKey: "friendship",   config: FriendshipConfig,   catalog: FriendshipCatalog   },
+  { urlKey: "mattbowers",   config: MattbowersConfig,   catalog: MattbowersCatalog   },
+  { urlKey: "jcmortgage",   config: JcmortgageConfig,   catalog: JcmortgageCatalog   },
+  { urlKey: "mcdonald",     config: McdonaldConfig,     catalog: McdonaldCatalog     },
+  { urlKey: "rossdowning",  config: RossdowningConfig,  catalog: RossdowningCatalog  },
+  { urlKey: "tasca",        config: TascaConfig,        catalog: TascaCatalog        },
+  { urlKey: "muller",       config: MullerConfig,       catalog: MullerCatalog       },
+  { urlKey: "krause",       config: KrauseConfig,       catalog: KrauseCatalog       },
+  { urlKey: "giles",        config: GilesConfig,        catalog: GilesCatalog        },
 ];
+
+const allConfigs: any[] = SITE_REGISTRY.map((s) => s.config);
 
 export function getStoreCode(companyName: string, storeAddress: string): string | undefined {
   const config = allConfigs.find((config) => config.title === companyName);
@@ -157,56 +166,14 @@ export function getRoutePrefix(password: string): string | undefined {
   return config ? config.route_prefix : undefined;
 }
 
-// TODO: consolidate web and server config and catalog retrieval functions
-export function getWebCatalog(): any {
+function getSiteByUrl(): { config: any; catalog: any } | undefined {
   const url = window.location.href;
-  if (url.includes("localhost:3000")) {
-    return HennessyCatalog;
-  } else if (url.includes("newcustomer")) {
-    return NewCustomerCatalog;
-  } else if (url.includes("stivers")) {
-    return StiversCatalog;
-  } else if (url.includes("tameron")) {
-    return TameronCatalog;
-  } else if (url.includes("premier")) {
-    return PremierCatalog;
-  } else if (url.includes("guardian")) {
-    return GuardianCatalog;
-  } else if (url.includes("cannon")) {
-    return CannonCatalog;
-  } else if (url.includes("leith")) {
-    return LeithCatalog;
-  } else if (url.includes("hennessy")) {
-    return HennessyCatalog;
-  } else if (url.includes("pohanka")) {
-    return PohankaCatalog;
-  } else if (url.includes("navarre")) {
-    return NavarreCatalog;
-  } else if (url.includes("hoffman")) {
-    return HoffmanCatalog;
-  } else if (url.includes("tommycar")) {
-    return TommycarCatalog;
-  } else if (url.includes("vaughn")) {
-    return VaughnCatalog;
-  } else if (url.includes("friendship")) {
-    return FriendshipCatalog;
-  } else if (url.includes("mattbowers")) {
-    return MattbowersCatalog;
-  } else if (url.includes("jcmortgage")) {
-    return JcmortgageCatalog;
-  } else if (url.includes("mcdonald")) {
-    return McdonaldCatalog;
-  } else if (url.includes("rossdowning")) {
-    return RossdowningCatalog;
-  } else if (url.includes("tasca")) {
-    return TascaCatalog;
-  } else if (url.includes("muller")) {
-    return MullerCatalog;
-  } else if (url.includes("krause")) {
-    return KrauseCatalog;
-  } else if (url.includes("giles")) {
-    return GilesCatalog;
-  }
+  if (url.includes("localhost:3000")) return SITE_REGISTRY.find((s) => s.urlKey === "hennessy");
+  return SITE_REGISTRY.find((s) => url.includes(s.urlKey));
+}
+
+export function getWebCatalog(): any {
+  return getSiteByUrl()?.catalog;
 }
 
 /*
@@ -262,104 +229,10 @@ export function getCatalog(companyName: string): any {
 }
 
 export function getWebConfigValue(val: string): any {
-  const url = window.location.href;
-  if (url.includes("localhost:3000")) {
-    return (HennessyConfig as any)[val];
-  } else if (url.includes("newcustomer")) {
-    return (NewCustomerConfig as any)[val];
-  } else if (url.includes("stivers")) {
-    return (StiversConfig as any)[val];
-  } else if (url.includes("tameron")) {
-    return (TameronConfig as any)[val];
-  } else if (url.includes("premier")) {
-    return (PremierConfig as any)[val];
-  } else if (url.includes("guardian")) {
-    return (GuardianConfig as any)[val];
-  } else if (url.includes("cannon")) {
-    return (CannonConfig as any)[val];
-  } else if (url.includes("leith")) {
-    return (LeithConfig as any)[val];
-  } else if (url.includes("hennessy")) {
-    return (HennessyConfig as any)[val];
-  } else if (url.includes("pohanka")) {
-    return (PohankaConfig as any)[val];
-  } else if (url.includes("navarre")) {
-    return (NavarreConfig as any)[val];
-  } else if (url.includes("hoffman")) {
-    return (HoffmanConfig as any)[val];
-  } else if (url.includes("tommycar")) {
-    return (TommycarConfig as any)[val];
-  } else if (url.includes("vaughn")) {
-    return (VaughnConfig as any)[val];
-  } else if (url.includes("friendship")) {
-    return (FriendshipConfig as any)[val];
-  } else if (url.includes("mattbowers")) {
-    return (MattbowersConfig as any)[val];
-  } else if (url.includes("jcmortgage")) {
-    return (JcmortgageConfig as any)[val];
-  } else if (url.includes("mcdonald")) {
-    return (McdonaldConfig as any)[val];
-  } else if (url.includes("rossdowning")) {
-    return (RossdowningConfig as any)[val];
-  } else if (url.includes("tasca")) {
-    return (TascaConfig as any)[val];
-  } else if (url.includes("muller")) {
-    return (MullerConfig as any)[val];
-  } else if (url.includes("krause")) {
-    return (KrauseConfig as any)[val];
-  } else if (url.includes("giles")) {
-    return (GilesConfig as any)[val];
-  } else {
-    // when the user is on gpc81.com landing page we need to display a string in the browser tab
-    return (DEFAULT_CONFIG as any)[val];
-  }
+  return (getSiteByUrl()?.config ?? DEFAULT_CONFIG)[val];
 }
 
 export function getConfigValue(val: string, config: string): any {
-  console.log(val, config);
-  switch (config) {
-    case "Cannon":
-      return (CannonConfig as any)[val];
-    case "Guardian":
-      return (GuardianConfig as any)[val];
-    case "Hennessy":
-      return (HennessyConfig as any)[val];
-    case "Leith":
-      return (LeithConfig as any)[val];
-    case "Pohanka":
-      return (PohankaConfig as any)[val];
-    case "Premier":
-      return (PremierConfig as any)[val];
-    case "Stivers":
-      return (StiversConfig as any)[val];
-    case "Tameron":
-      return (TameronConfig as any)[val];
-    case "Navarre":
-      return (NavarreConfig as any)[val];
-    case "Hoffman":
-      return (HoffmanConfig as any)[val];
-    case "Tommycar":
-      return (TommycarConfig as any)[val];
-    case "Vaughn":
-      return (VaughnConfig as any)[val];
-    case "Friendship":
-      return (FriendshipConfig as any)[val];
-    case "Mattbowers":
-      return (MattbowersConfig as any)[val];
-    case "Jcmortgage":
-      return (JcmortgageConfig as any)[val];
-    case "Mcdonald":
-      return (McdonaldConfig as any)[val];
-    case "Rossdowning":
-      return (RossdowningConfig as any)[val];
-    case "Tasca":
-      return (TascaConfig as any)[val];
-    case "Muller":
-      return (MullerConfig as any)[val];
-    case "Krause":
-      return (KrauseConfig as any)[val];
-    case "Giles":
-      return (GilesConfig as any)[val];
-  }
+  return allConfigs.find((c) => c.title === config)?.[val];
 }
 

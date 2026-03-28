@@ -1,7 +1,7 @@
 import "./App.css";
 import Catalog from "./routes/Catalog/Catalog";
-import Landing from "./routes/Landing/Landing";
-import LandingV2 from "./routes/LandingV2/Landing";
+import StoreLanding from "./routes/StoreLanding/StoreLanding";
+import Gpc81Landing from "./routes/Gpc81Landing/Gpc81Landing";
 import Root from "./root";
 import Modification, {
   loader as modificationLoader,
@@ -15,65 +15,44 @@ import { HelmetProvider } from "react-helmet-async";
 import { getWebConfigValue } from "guardian-common";
 import { useNextGenRouting } from "./hooks/useNextGenRouting";
 
+function storeRoutes(prefix = "") {
+  return [
+    { path: `${prefix}/`, element: <StoreLanding /> },
+    { path: `${prefix}/catalog/:storeCode/:type`, element: <Catalog /> },
+    { path: `${prefix}/catalog/:type`, element: <Catalog /> },
+    { path: `${prefix}/checkout`, element: <Checkout /> },
+    { path: `${prefix}/success`, element: <Success /> },
+    { path: `${prefix}/orders`, element: <Orders /> },
+    { path: `${prefix}/stores`, element: <StoreSelection /> },
+    {
+      path: `${prefix}/item/:id`,
+      loader: modificationLoader,
+      element: <Modification />,
+    },
+  ];
+}
+
 function App() {
   const useRouting = useNextGenRouting();
-  let router;
-  if (!useRouting) {
-    router = createBrowserRouter([
-      {
-        path: "/",
-        element: <Root />,
-        children: [
-          {
-            path: "/",
-            element: <Landing />,
-          },
-          { path: "/catalog/:storeCode/:type", element: <Catalog /> },
-          { path: "/catalog/:type", element: <Catalog /> },
-          { path: "/checkout", element: <Checkout /> },
-          { path: "/success", element: <Success /> },
-          { path: "/orders", element: <Orders /> },
-          { path: "/stores", element: <StoreSelection /> },
-          {
-            path: "/item/:id",
-            loader: modificationLoader,
-            element: <Modification />,
-          },
-        ],
-      },
-    ]);
-  } else {
-    router = createBrowserRouter([
-      {
-        path: "/",
-        element: <Root />,
-        children: [
-          {
-            path: "/",
-            element: <LandingV2 />,
-          },
-          {
-            path: "/:storeName",
-            element: <Landing />,
-          },
-          {
-            path: "/:storeName/catalog/:storeCode/:type",
-            element: <Catalog />,
-          },
-          { path: "/:storeName/catalog/:type", element: <Catalog /> },
-          { path: "/:storeName/checkout", element: <Checkout /> },
-          { path: "/:storeName/success", element: <Success /> },
-          { path: "/:storeName/orders", element: <Orders /> },
-          { path: "/:storeName/stores", element: <StoreSelection /> },
-          {
-            path: "/:storeName/item/:id",
-            loader: modificationLoader,
-            element: <Modification />,
-          },
-        ],
-      },
-    ]);
-  }
+
+  const router = useRouting
+    ? createBrowserRouter([
+        {
+          path: "/",
+          element: <Root />,
+          children: [
+            { path: "/", element: <Gpc81Landing /> },
+            ...storeRoutes("/:storeName"),
+          ],
+        },
+      ])
+    : createBrowserRouter([
+        {
+          path: "/",
+          element: <Root />,
+          children: storeRoutes(),
+        },
+      ]);
 
   return (
     <div className="main__page">
