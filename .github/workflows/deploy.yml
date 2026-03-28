@@ -185,7 +185,14 @@ jobs:
 
       - name: Deploy server (Standard)
         if: steps.changes.outputs.backend == 'true' || inputs.force_backend == true
-        run: npm run deploy
+        run: npm run deploy-standard
+        working-directory: ./backend
+        env:
+          CI: false
+
+      - name: Deploy server (Cannon)
+        if: steps.changes.outputs.backend == 'true' || inputs.force_backend == true
+        run: npm run deploy-cannon
         working-directory: ./backend
         env:
           CI: false
