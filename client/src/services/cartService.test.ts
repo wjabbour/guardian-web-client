@@ -1,22 +1,23 @@
+import { vi, describe, it, expect, beforeEach } from "vitest";
 import { CartService } from "./cartService";
 import { Cart, CatalogItem } from "guardian-common";
 import { getCatalogItem } from "../lib/utils";
 import { recalculateDiscountsForCodeAndSize } from "../utils/discountUtils";
 
 // Mock the dependencies
-jest.mock("../lib/utils");
-jest.mock("../utils/discountUtils");
+vi.mock("../lib/utils");
+vi.mock("../utils/discountUtils");
 
-const mockGetCatalogItem = getCatalogItem as jest.MockedFunction<typeof getCatalogItem>;
-const mockRecalculateDiscountsForCodeAndSize = recalculateDiscountsForCodeAndSize as jest.MockedFunction<
+const mockGetCatalogItem = getCatalogItem as vi.MockedFunction<typeof getCatalogItem>;
+const mockRecalculateDiscountsForCodeAndSize = recalculateDiscountsForCodeAndSize as vi.MockedFunction<
   typeof recalculateDiscountsForCodeAndSize
 >;
 
 describe("CartService", () => {
-  const mockSetCart = jest.fn();
+  const mockSetCart = vi.fn();
 
   beforeEach(() => {
-    jest.clearAllMocks();
+    vi.clearAllMocks();
     sessionStorage.clear();
     mockSetCart.mockClear();
   });
@@ -117,7 +118,7 @@ describe("CartService", () => {
     };
 
     beforeEach(() => {
-      mockGetCatalogItem.mockReturnValue(mockItemConfiguration);
+      mockGetCatalogItem.mockReturnValue(mockItemConfiguration as any);
       mockRecalculateDiscountsForCodeAndSize.mockImplementation(() => {});
     });
 
@@ -194,7 +195,7 @@ describe("CartService", () => {
     });
 
     it("should warn and return early if item not found", () => {
-      const consoleWarnSpy = jest.spyOn(console, "warn").mockImplementation();
+      const consoleWarnSpy = vi.spyOn(console, "warn").mockImplementation(() => {});
       const cart: Cart = {
         "C402,Small,Black,,,Default,Default": {
           code: "C402",

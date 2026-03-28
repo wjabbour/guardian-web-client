@@ -25,7 +25,7 @@ jobs:
         if: steps.changes.outputs.frontend == 'true'
         uses: actions/setup-node@v4
         with:
-          node-version: "20"
+          node-version: "22"
 
       - name: Cache common dependencies
         if: steps.changes.outputs.frontend == 'true'
@@ -60,7 +60,7 @@ jobs:
 
       - name: Run tests
         if: steps.changes.outputs.frontend == 'true'
-        run: npm test -- --watchAll=false --coverage=false
+        run: npm test
         working-directory: ./client
 
       - name: Build client
@@ -119,7 +119,7 @@ jobs:
         if: steps.changes.outputs.backend == 'true'
         uses: actions/setup-node@v4
         with:
-          node-version: "20"
+          node-version: "22"
       
       - name: Cache common dependencies
         if: steps.changes.outputs.backend == 'true'

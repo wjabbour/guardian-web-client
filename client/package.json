@@ -22,15 +22,19 @@
     "@types/react": "^18.2.48",
     "@types/react-dom": "^18.2.18",
     "@vitejs/plugin-react": "^4.3.4",
+    "@vitest/coverage-v8": "^4.1.2",
     "autoprefixer": "^10.4.27",
     "cross-env": "^7.0.3",
+    "jsdom": "^29.0.1",
     "tailwindcss": "^3.4.19",
     "typescript": "^4.9.5",
-    "vite": "^5.4.19"
+    "vite": "^5.4.19",
+    "vitest": "^4.1.2"
   },
   "scripts": {
     "start": "vite",
     "build": "vite build",
+    "test": "vitest run",
     "upload-cannon": "aws s3 sync build/images s3://cannonemployeestore.com/images --delete --size-only && aws s3 sync build s3://cannonemployeestore.com/ --delete --exclude \"images/*\" && aws cloudfront create-invalidation --distribution-id E14D6FK2VK66GQ --paths \"/*\"",
     "upload-gpc81": "aws s3 sync build/images s3://gpc81.com/images --delete --size-only && aws s3 sync build s3://gpc81.com/ --delete --exclude \"images/*\" && aws cloudfront create-invalidation --distribution-id E1R5RLNLHZTA8G --paths \"/*\"",
     "deploy": "npm run build && npm run upload-cannon && npm run upload-gpc81"
