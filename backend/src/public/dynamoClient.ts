@@ -8,20 +8,7 @@ import {
   UpdateCommand,
 } from "@aws-sdk/lib-dynamodb";
 import { logger } from "./utils";
-
-interface Order {
-  email: string;
-  order: any;
-  first_name: string;
-  last_name: string;
-  store: string;
-  company_name: string;
-  customer_po: string;
-  // Note: stored in DynamoDB as "order_id" — the column has not been renamed in the table
-  paypal_order_id: string;
-  bypass: number;
-  paid: number;
-}
+import { Order } from "guardian-common";
 
 class Dynamo {
   client: DynamoDBClient;
