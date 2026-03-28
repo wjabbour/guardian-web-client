@@ -17,7 +17,8 @@ interface Order {
   store: string;
   company_name: string;
   customer_po: string;
-  order_id: string;
+  // Note: stored in DynamoDB as "order_id" — the column has not been renamed in the table
+  paypal_order_id: string;
   bypass: number;
   paid: number;
 }
@@ -60,9 +61,13 @@ class Dynamo {
     order["created_at"] = created_at;
     logger.info(order);
 
+    // Map paypal_order_id -> order_id: the DynamoDB column is named "order_id" and hasn't been renamed yet
+    const { paypal_order_id, ...rest } = order as any;
+    const item = { ...rest, order_id: paypal_order_id };
+
     await this.documentClient.send(
       new PutCommand({
-        Item: order,
+        Item: item,
         TableName: table_name,
       })
     );
@@ -70,11 +75,12 @@ class Dynamo {
     return created_at;
   }
 
-  async setPaid(order_id: string, txId: string) {
+  async setPaid(paypal_order_id: string, txId: string) {
     const command = new QueryCommand({
       Select: "ALL_ATTRIBUTES",
       ExpressionAttributeValues: {
-        ":order_id": order_id,
+        // "order_id" is the DynamoDB column name — not renamed yet in the table
+        ":order_id": paypal_order_id,
       },
       KeyConditionExpression: "order_id = :order_id",
       TableName: "orders",

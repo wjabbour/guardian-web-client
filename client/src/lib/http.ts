@@ -50,8 +50,8 @@ export async function retrieve_orders() {
   }
 }
 
-export async function capture_order(order_id) {
-  const body = { order_id, companyName: getWebConfigValue("title") };
+export async function capture_order(paypal_order_id) {
+  const body = { paypal_order_id, companyName: getWebConfigValue("title") };
 
   try {
     const response = await axios.post(`${getHostname()}/v1/capture-order`, body, {

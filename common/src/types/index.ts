@@ -164,7 +164,8 @@ export interface Order {
   first_name: string;
   last_name: string;
   order: CartItem[];
-  order_id: string;
+  // Note: stored in DynamoDB as "order_id" — see backend/src/public/dynamoClient.ts
+  paypal_order_id: string;
   paid: 0 | 1;
   paid_at: string;
   store: string;

@@ -96,7 +96,7 @@ export const handler = async (
           company_name,
           customer_po,
           bypass: 1,
-          order_id: "-1",
+          paypal_order_id: "-1",
           paid: 1,
         },
         "archived_orders"
@@ -124,7 +124,7 @@ export const handler = async (
           company_name,
           customer_po,
           bypass: 1,
-          order_id: "-1",
+          paypal_order_id: "-1",
           paid: 1,
         },
         "archived_orders"
@@ -140,8 +140,8 @@ export const handler = async (
     }
 
     // bypassPaypal = false
-    const order_id = await create_paypal_order(price);
-    logger.info({ message: "Received order id", order_id });
+    const paypal_order_id = await create_paypal_order(price);
+    logger.info({ message: "Received order id", paypal_order_id });
 
     await dynamoClient.createOrder(
       {
@@ -153,13 +153,13 @@ export const handler = async (
         customer_po,
         company_name,
         bypass: 0,
-        order_id,
+        paypal_order_id,
         paid: 0,
       },
       "orders"
     );
 
-    return await buildResponse(200, { order_id }, origin, event);
+    return await buildResponse(200, { paypal_order_id }, origin, event);
   } catch (e) {
     logger.error(e);
     const origin = event.headers?.origin || event.headers?.Origin || "";

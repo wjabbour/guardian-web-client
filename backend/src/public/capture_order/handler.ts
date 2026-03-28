@@ -49,10 +49,10 @@ export const handler = async (
     const access_token = token_response.data.access_token;
     logger.info({ message: "Retrieved access token", access_token });
 
-    const order_id = body.order_id;
-    logger.info({ message: "Received order id", order_id });
+    const paypal_order_id = body.paypal_order_id;
+    logger.info({ message: "Received order id", paypal_order_id });
 
-    const txId = await capture_paypal_order(access_token, order_id);
+    const txId = await capture_paypal_order(access_token, paypal_order_id);
     logger.info({ message: "Captured paypal order" });
 
     const company_name = body.companyName;
@@ -64,7 +64,7 @@ export const handler = async (
 
     logger.info({ message: "Determined company name", company_name });
 
-    const { email, created_at } = await dynamoClient.setPaid(order_id, txId);
+    const { email, created_at } = await dynamoClient.setPaid(paypal_order_id, txId);
     logger.info({ message: "Set the order as paid in the database" });
     logger.info(`Retrieved the following order keys: ${email}, ${created_at}`);
 
@@ -77,7 +77,7 @@ export const handler = async (
 
     await sendEmail([order], company_name, email);
 
-    return await buildResponse(200, { order_id }, origin, event);
+    return await buildResponse(200, { paypal_order_id }, origin, event);
   } catch (e) {
     logger.error(e);
     const origin = event.headers?.origin || event.headers?.Origin || "";
@@ -85,14 +85,14 @@ export const handler = async (
   }
 };
 
-async function capture_paypal_order(access_token, order_id) {
+async function capture_paypal_order(access_token, paypal_order_id) {
   const headers = {
     "Content-Type": "application/json",
     Authorization: `Bearer ${access_token}`,
   };
 
   const response = await axios.post(
-    `https://api-m.paypal.com/v2/checkout/orders/${order_id}/capture`,
+    `https://api-m.paypal.com/v2/checkout/orders/${paypal_order_id}/capture`,
     null,
     { headers }
   );

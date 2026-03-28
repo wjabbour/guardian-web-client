@@ -121,10 +121,10 @@ export default function Checkout() {
             return "";
           } else {
             sessionStorage.setItem(
-              "order_id",
-              response.success?.data?.order_id
+              "paypal_order_id",
+              response.success?.data?.paypal_order_id
             );
-            return response.success?.data?.order_id;
+            return response.success?.data?.paypal_order_id;
           }
         },
         onError: function () {
@@ -133,7 +133,7 @@ export default function Checkout() {
         },
         onApprove: async function () {
           const response = await http.capture_order(
-            sessionStorage.getItem("order_id")
+            sessionStorage.getItem("paypal_order_id")
           );
           if (response.error) {
             setErrorSnackbarText(response.error.message);
