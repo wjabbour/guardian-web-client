@@ -170,6 +170,7 @@ export interface Order {
   last_name: string;
   order: CartItem[];
   paypal_order_id: string;
+  order_id: string;
   paid: 0 | 1;
   paid_at: string;
   store: string;

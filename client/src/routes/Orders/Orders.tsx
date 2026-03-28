@@ -183,6 +183,9 @@ export default function OrdersTable() {
                 Store
               </TableCell>
               <TableCell align="center" sx={{ fontWeight: "bold" }}>
+                Order ID
+              </TableCell>
+              <TableCell align="center" sx={{ fontWeight: "bold" }}>
                 PayPal Transaction ID
               </TableCell>
               <TableCell />
@@ -203,7 +206,7 @@ export default function OrdersTable() {
               ))
             ) : (
               <TableRow>
-                <TableCell colSpan={6} align="center">
+                <TableCell colSpan={7} align="center">
                   <Typography variant="body1" py={2}>
                     No orders found.
                   </Typography>

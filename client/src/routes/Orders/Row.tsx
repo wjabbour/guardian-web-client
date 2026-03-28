@@ -115,6 +115,7 @@ export default function Row({ order, editClick, isAdmin, handleResendEmail, onOr
         <TableCell align="center">{formattedDate}</TableCell>
         <TableCell align="center">{`${order.first_name} ${order.last_name}`}</TableCell>
         <TableCell align="center">{storeName}</TableCell>
+        <TableCell align="center">{order.order_id || "N/A"}</TableCell>
         <TableCell align="center">{paypalTransactionId}</TableCell>
         <TableCell align="right">
           {isAdmin && (
@@ -158,7 +159,7 @@ export default function Row({ order, editClick, isAdmin, handleResendEmail, onOr
       </TableRow>
 
       <TableRow sx={{ backgroundColor: "#fdf1bb" }}>
-        <TableCell style={{ paddingBottom: 0, paddingTop: 0 }} colSpan={7}>
+        <TableCell style={{ paddingBottom: 0, paddingTop: 0 }} colSpan={8}>
           <Collapse in={open} timeout="auto" unmountOnExit>
             <Box
               margin={1}
