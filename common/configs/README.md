@@ -1,31 +1,13 @@
 # Configs
 
-If you're deploying a new site, you will need to do a few things:
+The easiest way to add a new site is to run the interactive script from the project root:
 
-1. Add a config file to `{project_root}/common/configs`. The name of the config file needs to be unique and should be based on the domain name the site will be deployed to, but does not need to match exactly.
+```bash
+node scripts/add_site.js
+```
 
-   **e.g.** If you're deploying a site to `gp-honda.com` then you might choose to name the config file `honda.js` or `gp-honda.js`.
+This will prompt you for the site details and automatically create the config and catalog files and register the site in the codebase. See the root `README.md` for the full new-site checklist (DNS, S3, CloudFront, etc.).
 
-2. Add a catalog file to `{project_root}/common/catalogs` following the same naming convention.
-
-3. Add a single entry to the `SITE_REGISTRY` array in `{project_root}/common/src/functions.ts`:
-
-   ```ts
-   { urlKey: "honda", config: HondaConfig },
-   ```
-
-   - `urlKey` must be a string present in both the site's domain (e.g. `gp-honda.com`) and its gpc81 path (e.g. `gpc81.com/honda`). This is used to resolve the correct config from the browser URL.
-   - Add the corresponding config import at the top of `functions.ts`.
-
-4. Add a `getCatalog` case to `{project_root}/common/src/catalogFunctions.ts` and import the catalog at the top of that file:
-
-   ```ts
-   import { catalog as HondaCatalog } from "../catalogs/honda";
-   // ...
-   case "Honda": return HondaCatalog;
-   ```
-
-   **Note:** Catalogs are intentionally kept in a separate file from configs. The frontend (`webIndex.ts`) only imports `functions.ts` so that catalogs are excluded from the main bundle — each site's catalog is lazy-loaded at runtime. The backend imports `index.ts` which includes both.
 
 ## Config Options
 

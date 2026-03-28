@@ -323,10 +323,24 @@ Replace:
 
 ### 9. Create Configuration Files
 
-1. Create a new config file: `common/configs/{site-name}.js`
-2. Create a new catalog file: `common/catalogs/{site-name}.js`
-3. See existing configs/catalogs for structure examples
-4. Reference `common/configs/README.md` for configuration options
+Run the interactive setup script from the project root:
+
+```bash
+node scripts/add_site.js
+```
+
+The script will ask a series of questions (site name, domain, account reps, etc.) and automatically:
+- Create `common/configs/{site-name}.js`
+- Create `common/catalogs/{site-name}.js` (empty, ready to populate)
+- Register the site in `common/src/functions.ts` and `common/src/catalogFunctions.ts`
+
+After running the script:
+1. Add the company logo to `client/public/images/` (filename must match what you entered)
+2. Fill in the embroidery options in `common/configs/{site-name}.js`
+3. Add stores to the config (if applicable)
+4. Populate catalog items in `common/catalogs/{site-name}.js`
+
+See `common/configs/README.md` for a full reference of all config options.
 
 ## Git Workflow
 
