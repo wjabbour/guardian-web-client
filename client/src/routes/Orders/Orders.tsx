@@ -14,6 +14,7 @@ import {
   Box,
   Typography,
   AlertColor,
+  TextField,
 } from "@mui/material";
 import Row from "./Row";
 import PasswordEntryDialog from "../../components/PasswordEntryDialog/PasswordEntryDialog";
@@ -36,6 +37,7 @@ export default function OrdersTable() {
   const [orders, setOrders] = useState([]);
   const [selectedStore, setSelectedStore] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
+  const [searchText, setSearchText] = useState("");
 
   // UI State
   const [snackbar, setSnackbar] = useState<SnackbarState>({
@@ -85,12 +87,25 @@ export default function OrdersTable() {
   }, [orders]);
 
   const displayedOrders = useMemo(() => {
-    if (!selectedStore) return orders;
-    if (orders.length === 0) return [];
+    let filtered = orders;
 
-    const code = getStoreCode(orders[0].company_name, selectedStore);
-    return orders.filter((i) => i.store === code);
-  }, [orders, selectedStore]);
+    if (selectedStore && orders.length > 0) {
+      const code = getStoreCode(orders[0].company_name, selectedStore);
+      filtered = filtered.filter((i) => i.store === code);
+    }
+
+    if (searchText.trim()) {
+      const q = searchText.trim().toLowerCase();
+      filtered = filtered.filter((o) =>
+        `${o.first_name} ${o.last_name}`.toLowerCase().includes(q) ||
+        (o.store ?? "").toLowerCase().includes(q) ||
+        (o.order_id ?? "").toLowerCase().includes(q) ||
+        (o.transaction_id ?? "").toLowerCase().includes(q)
+      );
+    }
+
+    return filtered;
+  }, [orders, selectedStore, searchText]);
 
   // --- Handlers ---
   const handleEditClick = useCallback(() => {
@@ -161,8 +176,15 @@ export default function OrdersTable() {
 
   return (
     <div>
-      <div className="ml-4">
+      <div className="ml-4 flex gap-4 items-center">
         <StoreSelect stores={storeOptions} onChange={handleFilterChange} />
+        <TextField
+          size="small"
+          placeholder="Search"
+          value={searchText}
+          onChange={(e) => setSearchText(e.target.value)}
+          sx={{ width: 380 }}
+        />
       </div>
 
       <TableContainer component={Paper} sx={{ marginTop: 2 }}>
