@@ -13,8 +13,10 @@
     "isolatedModules": true,
     "noEmit": true,
     "noImplicitAny": false,
+    "types": ["node"]
   },
   "include": [
-    "src"
+    "src",
+    "scripts"
   ]
 }
