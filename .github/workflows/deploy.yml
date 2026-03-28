@@ -39,7 +39,7 @@ jobs:
 
       - name: Install npm 11
         if: steps.changes.outputs.frontend == 'true' || inputs.force_client == true
-        run: npm install -g npm@11
+        run: npm install -g npm@11.6.2
 
       - name: Cache common dependencies
         if: steps.changes.outputs.frontend == 'true' || inputs.force_client == true
@@ -137,7 +137,7 @@ jobs:
 
       - name: Install npm 11
         if: steps.changes.outputs.backend == 'true' || inputs.force_backend == true
-        run: npm install -g npm@11
+        run: npm install -g npm@11.6.2
 
       - name: Cache common dependencies
         if: steps.changes.outputs.backend == 'true' || inputs.force_backend == true
