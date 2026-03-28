@@ -11,13 +11,21 @@ If you're deploying a new site, you will need to do a few things:
 3. Add a single entry to the `SITE_REGISTRY` array in `{project_root}/common/src/functions.ts`:
 
    ```ts
-   { urlKey: "honda", config: HondaConfig, catalog: HondaCatalog },
+   { urlKey: "honda", config: HondaConfig },
    ```
 
-   - `urlKey` must be a string present in both the site's domain (e.g. `gp-honda.com`) and its gpc81 path (e.g. `gpc81.com/honda`). This is used to resolve the correct config and catalog from the browser URL.
-   - Add the corresponding imports for the config and catalog at the top of the file.
+   - `urlKey` must be a string present in both the site's domain (e.g. `gp-honda.com`) and its gpc81 path (e.g. `gpc81.com/honda`). This is used to resolve the correct config from the browser URL.
+   - Add the corresponding config import at the top of `functions.ts`.
 
-   This single entry is all that's needed — `getWebConfigValue`, `getWebCatalog`, and `getConfigValue` are all driven by `SITE_REGISTRY` automatically.
+4. Add a `getCatalog` case to `{project_root}/common/src/catalogFunctions.ts` and import the catalog at the top of that file:
+
+   ```ts
+   import { catalog as HondaCatalog } from "../catalogs/honda";
+   // ...
+   case "Honda": return HondaCatalog;
+   ```
+
+   **Note:** Catalogs are intentionally kept in a separate file from configs. The frontend (`webIndex.ts`) only imports `functions.ts` so that catalogs are excluded from the main bundle — each site's catalog is lazy-loaded at runtime. The backend imports `index.ts` which includes both.
 
 ## Config Options
 

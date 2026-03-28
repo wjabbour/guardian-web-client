@@ -45,50 +45,6 @@ import { config as KrauseConfig } from "../configs/krause";
 // @ts-ignore
 import { config as GilesConfig } from "../configs/giles";
 
-// @ts-ignore - JS catalog files don't have type declarations
-import { catalog as CannonCatalog } from "../catalogs/cannon";
-// @ts-ignore
-import { catalog as GuardianCatalog } from "../catalogs/guardian";
-// @ts-ignore
-import { catalog as HennessyCatalog } from "../catalogs/hennessy";
-// @ts-ignore
-import { catalog as LeithCatalog } from "../catalogs/leith";
-// @ts-ignore
-import { catalog as NewCustomerCatalog } from "../catalogs/newcustomer";
-// @ts-ignore
-import { catalog as PohankaCatalog } from "../catalogs/pohanka";
-// @ts-ignore
-import { catalog as PremierCatalog } from "../catalogs/premier";
-// @ts-ignore
-import { catalog as StiversCatalog } from "../catalogs/stivers";
-// @ts-ignore
-import { catalog as TameronCatalog } from "../catalogs/tameron";
-// @ts-ignore
-import { catalog as NavarreCatalog } from "../catalogs/navarre";
-// @ts-ignore
-import { catalog as HoffmanCatalog } from "../catalogs/hoffman";
-// @ts-ignore
-import { catalog as TommycarCatalog } from "../catalogs/tommycar";
-// @ts-ignore
-import { catalog as VaughnCatalog } from "../catalogs/vaughn";
-// @ts-ignore
-import { catalog as FriendshipCatalog } from "../catalogs/friendship";
-// @ts-ignore
-import { catalog as MattbowersCatalog } from "../catalogs/mattbowers";
-// @ts-ignore
-import { catalog as JcmortgageCatalog } from "../catalogs/jcmortgage";
-// @ts-ignore
-import { catalog as McdonaldCatalog } from "../catalogs/mcdonald";
-// @ts-ignore
-import { catalog as RossdowningCatalog } from "../catalogs/rossdowning";
-// @ts-ignore
-import { catalog as TascaCatalog } from "../catalogs/tasca";
-// @ts-ignore
-import { catalog as MullerCatalog } from "../catalogs/muller";
-// @ts-ignore
-import { catalog as KrauseCatalog } from "../catalogs/krause";
-// @ts-ignore
-import { catalog as GilesCatalog } from "../catalogs/giles";
 
 const DEFAULT_CONFIG = {
   title: "Guardian",
@@ -102,32 +58,34 @@ const DEFAULT_CONFIG = {
     - config: the site's config object
     - catalog: the site's catalog array
 
-  This single registry drives getWebConfigValue, getWebCatalog, and getConfigValue — so adding
-  a new site only requires one entry here instead of three separate places.
+  This single registry drives getWebConfigValue and getConfigValue — so adding
+  a new site only requires one entry here instead of multiple separate places.
+  Catalogs are intentionally excluded: the frontend lazy-loads only the current
+  site's catalog via initWebCatalog(); the backend uses getCatalog() from catalogFunctions.ts.
 */
-const SITE_REGISTRY: { urlKey: string; config: any; catalog: any }[] = [
-  { urlKey: "newcustomer",  config: NewCustomerConfig,  catalog: NewCustomerCatalog  },
-  { urlKey: "stivers",      config: StiversConfig,      catalog: StiversCatalog      },
-  { urlKey: "tameron",      config: TameronConfig,      catalog: TameronCatalog      },
-  { urlKey: "premier",      config: PremierConfig,      catalog: PremierCatalog      },
-  { urlKey: "guardian",     config: GuardianConfig,     catalog: GuardianCatalog     },
-  { urlKey: "cannon",       config: CannonConfig,       catalog: CannonCatalog       },
-  { urlKey: "leith",        config: LeithConfig,        catalog: LeithCatalog        },
-  { urlKey: "hennessy",     config: HennessyConfig,     catalog: HennessyCatalog     },
-  { urlKey: "pohanka",      config: PohankaConfig,      catalog: PohankaCatalog      },
-  { urlKey: "navarre",      config: NavarreConfig,      catalog: NavarreCatalog      },
-  { urlKey: "hoffman",      config: HoffmanConfig,      catalog: HoffmanCatalog      },
-  { urlKey: "tommycar",     config: TommycarConfig,     catalog: TommycarCatalog     },
-  { urlKey: "vaughn",       config: VaughnConfig,       catalog: VaughnCatalog       },
-  { urlKey: "friendship",   config: FriendshipConfig,   catalog: FriendshipCatalog   },
-  { urlKey: "mattbowers",   config: MattbowersConfig,   catalog: MattbowersCatalog   },
-  { urlKey: "jcmortgage",   config: JcmortgageConfig,   catalog: JcmortgageCatalog   },
-  { urlKey: "mcdonald",     config: McdonaldConfig,     catalog: McdonaldCatalog     },
-  { urlKey: "rossdowning",  config: RossdowningConfig,  catalog: RossdowningCatalog  },
-  { urlKey: "tasca",        config: TascaConfig,        catalog: TascaCatalog        },
-  { urlKey: "muller",       config: MullerConfig,       catalog: MullerCatalog       },
-  { urlKey: "krause",       config: KrauseConfig,       catalog: KrauseCatalog       },
-  { urlKey: "giles",        config: GilesConfig,        catalog: GilesCatalog        },
+const SITE_REGISTRY: { urlKey: string; config: any }[] = [
+  { urlKey: "newcustomer",  config: NewCustomerConfig  },
+  { urlKey: "stivers",      config: StiversConfig      },
+  { urlKey: "tameron",      config: TameronConfig      },
+  { urlKey: "premier",      config: PremierConfig      },
+  { urlKey: "guardian",     config: GuardianConfig     },
+  { urlKey: "cannon",       config: CannonConfig       },
+  { urlKey: "leith",        config: LeithConfig        },
+  { urlKey: "hennessy",     config: HennessyConfig     },
+  { urlKey: "pohanka",      config: PohankaConfig      },
+  { urlKey: "navarre",      config: NavarreConfig      },
+  { urlKey: "hoffman",      config: HoffmanConfig      },
+  { urlKey: "tommycar",     config: TommycarConfig     },
+  { urlKey: "vaughn",       config: VaughnConfig       },
+  { urlKey: "friendship",   config: FriendshipConfig   },
+  { urlKey: "mattbowers",   config: MattbowersConfig   },
+  { urlKey: "jcmortgage",   config: JcmortgageConfig   },
+  { urlKey: "mcdonald",     config: McdonaldConfig     },
+  { urlKey: "rossdowning",  config: RossdowningConfig  },
+  { urlKey: "tasca",        config: TascaConfig        },
+  { urlKey: "muller",       config: MullerConfig       },
+  { urlKey: "krause",       config: KrauseConfig       },
+  { urlKey: "giles",        config: GilesConfig        },
 ];
 
 const allConfigs: any[] = SITE_REGISTRY.map((s) => s.config);
@@ -173,60 +131,20 @@ function getSiteByUrl(): { config: any; catalog: any } | undefined {
   return SITE_REGISTRY.find((s) => url.includes(s.urlKey));
 }
 
-export function getWebCatalog(): any {
-  return getSiteByUrl()?.catalog;
+export function detectUrlKey(): string {
+  const url = window.location.href;
+  if (url.includes("localhost")) return "hennessy";
+  return SITE_REGISTRY.find((s) => url.includes(s.urlKey))?.urlKey ?? "";
 }
 
-/*
-  the values should exactly match one of the configs' value for title
+let _webCatalog: any = null;
 
-  e.g. a config must have title: "Cannon", "Guardian", etc
-*/
-export function getCatalog(companyName: string): any {
-  switch (companyName) {
-    case "Cannon":
-      return CannonCatalog;
-    case "Guardian":
-      return GuardianCatalog;
-    case "Hennessy":
-      return HennessyCatalog;
-    case "Leith":
-      return LeithCatalog;
-    case "Pohanka":
-      return PohankaCatalog;
-    case "Premier":
-      return PremierCatalog;
-    case "Stivers":
-      return StiversCatalog;
-    case "Tameron":
-      return TameronCatalog;
-    case "Navarre":
-      return NavarreCatalog;
-    case "Hoffman":
-      return HoffmanCatalog;
-    case "Tommycar":
-      return TommycarCatalog;
-    case "Vaughn":
-      return VaughnCatalog;
-    case "Friendship":
-      return FriendshipCatalog;
-    case "Mattbowers":
-      return MattbowersCatalog;
-    case "Jcmortgage":
-      return JcmortgageCatalog;
-    case "Mcdonald":
-      return McdonaldCatalog;
-    case "Rossdowning":
-      return RossdowningCatalog;
-    case "Tasca":
-      return TascaCatalog;
-    case "Muller":
-      return MullerCatalog;
-    case "Krause":
-      return KrauseCatalog;
-    case "Giles":
-      return GilesCatalog;
-  }
+export function initWebCatalog(catalog: any): void {
+  _webCatalog = catalog;
+}
+
+export function getWebCatalog(): any {
+  return _webCatalog;
 }
 
 export function getWebConfigValue(val: string): any {

@@ -42,7 +42,7 @@ export default defineConfig({
     // Point directly to source so Rollup can tree-shake named exports
     // without having to parse the CJS dist output
     alias: {
-      "guardian-common": path.resolve("../common/src/index.ts"),
+      "guardian-common": path.resolve("../common/src/webIndex.ts"),
     },
   },
   build: {
