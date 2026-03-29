@@ -22,12 +22,13 @@ export default function Root() {
   const navigate = useNavigate();
   const location = useLocation();
   const isGpc81 = useNextGenRouting();
-  const [catalogReady, setCatalogReady] = useState(!isGpc81);
+  const [catalogPathname, setCatalogPathname] = useState(null);
+  const catalogReady = !isGpc81 || catalogPathname === location.pathname;
 
   useEffect(() => {
     if (!isGpc81) return;
-    setCatalogReady(false);
-    loadCatalogForCurrentUrl().then(() => setCatalogReady(true));
+    setCatalogPathname(null);
+    loadCatalogForCurrentUrl().then(() => setCatalogPathname(location.pathname));
   }, [location.pathname]);
 
   const useRouting = isGpc81 && window.location.pathname === "/";
