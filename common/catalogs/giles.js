@@ -733,7 +733,7 @@ export const catalog = [
   {
     code: "PC380",
     name: "Port & Co Perf Tee #PC380",
-    fullname: "Port & Company Performance Tee",
+    fullname: "Port & Company Performance Tee (PC380)",
     colors: [
       "Carolina Blue",
       "Charcoal",
@@ -751,7 +751,7 @@ export const catalog = [
       "White"
    ],
     type: "mens",
-    sub_category: "tshirt",
+    sub_category: "tshirts",
     default_color: "Carolina Blue",
     sizes: [
       "Small", 
@@ -763,13 +763,13 @@ export const catalog = [
       "4XLarge",
     ],
     pricing: {
-      Small: { price: 9.99 },
-      Medium: { price: 9.99 },
-      Large: { price: 9.99 },
-      XLarge: { price: 9.99 },
-      "2XLarge": { price: 10.99 },
-      "3XLarge": { price: 11.99 },
-      "4XLarge": { price: 12.99 },
+      Small: { price: 11.99 },
+      Medium: { price: 11.99 },
+      Large: { price: 11.99 },
+      XLarge: { price: 11.99 },
+      "2XLarge": { price: 13.99 },
+      "3XLarge": { price: 16.99 },
+      "4XLarge": { price: 17.99 },
     },
   },
   {
@@ -799,8 +799,8 @@ export const catalog = [
     },
   },
   {
-    code: "PC380",
-    name: "Port & Co Perf L/S Tee #PC380",
+    code: "PC380LS",
+    name: "Port & Co Perf L/S Tee #PC380LS",
     fullname: "Port & Co™ Long Sleeve Performance Tee (PC380LS)",
     colors: [
       "Carolina Blue",
@@ -815,7 +815,7 @@ export const catalog = [
       "White"
    ],
     type: "mens",
-    sub_category: "tshirt",
+    sub_category: "tshirts",
     default_color: "Carolina Blue",
     sizes: [
       "Small", 
