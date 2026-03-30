@@ -36,7 +36,17 @@ export const config = {
       code: "GILNLA",
     },
     {
-      name: "Giles Volvo Cars El Paso (El Paso)",
+      name: "Giles Subaru (Lafayette)",
+      address: "100 Town Center Pkwy, Lafayette, LA 70503",
+      code: "GILSLA",
+    },
+    {
+      name: "Giles Volvo (Lafayette)",
+      address: "111 South City Pkwy, Lafayette, LA 70503",
+      code: "GILVLA",
+    },
+    {
+      name: "Giles Volvo Cars (El Paso)",
       address: "6585 S Desert Blvd, El Paso, TX 79932",
       code: "GILVEL",
     },
@@ -46,20 +56,11 @@ export const config = {
       code: "GILHAL",
     },
     {
-      name: "Giles Nissan Opelousas (Opelousas)",
+      name: "Giles Nissan (Opelousas)",
       address: "5731 I-49 S Service Rd, Opelousas, LA 70570",
       code: "GILNOP",
     },
-    {
-      name: "Giles Subaru (Lafayette)",
-      address: "100 Town Center Pkwy, Lafayette, LA 70503",
-      code: "GILSLA",
-    },
-    {
-      name: "Giles Volvo (Lafayette)",
-      address: "111 South City Pkwy, Lafayette, LA 70503",
-      code: "GILVLA",
-    },                  
+                      
     ],
   bypass_codes: ["GileS"],
   server_hostname: "https://mxfj3q6m01.execute-api.us-east-1.amazonaws.com",
