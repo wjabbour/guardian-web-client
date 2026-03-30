@@ -2,18 +2,30 @@ export const config = {
   title: "Krause",
   company_logo: "krause.png",
   logo_placements: {
-    mens: ["Left Chest"],
-    womens: ["Left Chest"],
+    mens: ["Left Chest", "Left Sleeve",],
+    womens: ["Left Chest", "Left Sleeve"],
     hat:[],
-    tshirts: ["Left Chest"],
+    tshirts: ["Left Chest", "Left Sleeve"],
   },
   show_image_preview: true,
   minimum_apparel_order: false,
   enable_customs_store_picker: true,
   embroideries: {
-    mens: ["Angela Krause Ford Lincoln.EMB"],
-    womens: ["Angela Krause Ford Lincoln.EMB"],
-    tshirts: ["Angela Krause Ford Lincoln"],
+    mens: [
+      "Angela Krause Ford Lincoln.EMB", 
+      "Angela Krause Lincoln.EMB", 
+      "Krause Family Ford Oval 1 Color.EMB"
+    ],
+    womens: [
+      "Angela Krause Ford Lincoln.EMB", 
+      "Angela Krause Lincoln.EMB", 
+      "Krause Family Ford Oval 1 Color.EMB"
+    ],
+    tshirts: [
+      "Angela Krause Ford Lincoln.EMB", 
+      "Angela Krause Lincoln.EMB", 
+      "Krause Family Ford Oval 1 Color.EMB"
+    ],
     hat:  [],
     customs: [],
     office: [],
@@ -31,9 +43,9 @@ export const config = {
   ],
   stores: [
     {
-      name: "Motorcars of Atlanta",
-      address: "7865 Roswell Rd, Atlanta, GA 30350",
-      code: "ROLMAT",
+      name: "Angela Krause Ford",
+      address: "1575 Mansell Rd, Alpharetta, GA 30009",
+      code: "KRAFAL",
     },              
     ],
   bypass_codes: ["TEST"],
