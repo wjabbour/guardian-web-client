@@ -750,8 +750,7 @@ export const catalog = [
       "True Royal",
       "White"
    ],
-    type: "mens",
-    sub_category: "tshirts",
+    type: "tshirts",    
     default_color: "Carolina Blue",
     sizes: [
       "Small", 
@@ -814,8 +813,7 @@ export const catalog = [
       "True Royal",
       "White"
    ],
-    type: "mens",
-    sub_category: "tshirts",
+    type: "tshirts",   
     default_color: "Carolina Blue",
     sizes: [
       "Small", 
