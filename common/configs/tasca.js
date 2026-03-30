@@ -237,6 +237,11 @@ export const config = {
       code: "TASCOR",
     },
     {
+      name: "Yonkers Ford Pro",
+      address: "1015 Saw Mill River Rd, Yonkers, NY 10710",
+      code: "YONFPR",
+    },
+    {
       name: "Autopaint RI",
       address: "",
       code: "",
