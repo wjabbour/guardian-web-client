@@ -592,7 +592,7 @@ export const catalog = [
     colors: ["Yellow"],
     type: "sales",
     default_color: "Yellow",
-    quantities: [1, 2, 3, 4, 5],
+    quantities: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
     pricing: {
       base: {
         price: 13.59,
@@ -734,7 +734,7 @@ export const catalog = [
     colors: ["Red"],
     type: "service",
     default_color: "Red",
-    quantities: [1, 2, 3, 4, 5],
+    quantities: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
     pricing: {
       base: {
         price: 23.99,
@@ -748,7 +748,7 @@ export const catalog = [
     colors: ["Plastic"],
     type: "service",
     default_color: "Plastic",
-    quantities: [1, 2, 3, 4, 5],
+    quantities: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
     pricing: {
       base: {
         price: 65.00,
@@ -762,7 +762,7 @@ export const catalog = [
     colors: ["Plastic"],
     type: "service",
     default_color: "Plastic",
-    quantities: [1, 2, 3, 4, 5],
+    quantities: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
     pricing: {
       base: {
         price: 45.61,
@@ -777,7 +777,7 @@ export const catalog = [
     colors: ["White"],
     type: "service",
     default_color: "White",
-    quantities: [1, 2, 3, 4, 5],
+    quantities: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
     pricing: {
       base: {
         price: 45.72,
@@ -792,7 +792,7 @@ export const catalog = [
     colors: ["Clear"],
     type: "service",
     default_color: "Clear",
-    quantities: [1, 2, 3, 4, 5],
+    quantities: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
     pricing: {
       base: {
         price: 99.00,
@@ -823,7 +823,7 @@ export const catalog = [
     type: "service",
     disableColorSelector: true,
     variationTextOverride: ['Series'],
-    quantities: [1, 2, 3, 4, 5],
+    quantities: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
     pricing: {
       base: {
         price: 49.99,
@@ -864,7 +864,7 @@ export const catalog = [
     colors: ["White"],
     type: "service",
     default_color: "White",
-    quantities: [1, 2, 3, 4, 5],
+    quantities: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
     pricing: {
       base: {
         price: 21.35,
@@ -882,7 +882,7 @@ export const catalog = [
     colors: ["Metallic"],
     type: "service",
     default_color: "Metallic",
-    quantities: [1, 2, 3, 4, 5],
+    quantities: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
     pricing: {
       base: {
         price: 120.99,

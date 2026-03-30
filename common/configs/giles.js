@@ -31,32 +31,32 @@ export const config = {
   ],
   stores: [
     {
-      name: "Giles Nissan",
+      name: "Giles Nissan (Lafayette)",
       address: "6137 Johnston St, Lafayette, LA 70503",
       code: "GILNLA",
     },
     {
-      name: "Giles Volvo Cars El Paso",
+      name: "Giles Volvo Cars El Paso (El Paso)",
       address: "6585 S Desert Blvd, El Paso, TX 79932",
       code: "GILVEL",
     },
     {
-      name: "Giles Hyundai",
+      name: "Giles Hyundai (Alexandria)",
       address: "3220 S MacArthur Dr, Alexandria, LA 71301",
       code: "GILHAL",
     },
     {
-      name: "Giles Nissan Opelousas",
+      name: "Giles Nissan Opelousas (Opelousas)",
       address: "5731 I-49 S Service Rd, Opelousas, LA 70570",
       code: "GILNOP",
     },
     {
-      name: "Giles Subaru",
+      name: "Giles Subaru (Lafayette)",
       address: "100 Town Center Pkwy, Lafayette, LA 70503",
       code: "GILSLA",
     },
     {
-      name: "Giles Volvo",
+      name: "Giles Volvo (Lafayette)",
       address: "111 South City Pkwy, Lafayette, LA 70503",
       code: "GILVLA",
     },                  
