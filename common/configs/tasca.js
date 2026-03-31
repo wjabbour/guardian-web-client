@@ -17,14 +17,16 @@ export const config = {
       "Yonkers Kia", 
       "Scarsdale Ford", 
       "Central Ave CDJR", 
-      "Gary Crossley Ford"
+      "Gary Crossley Ford",
+      "Ford Pro Yonkers"
     ],
     womens: [
       "Tasca",
       "Yonkers Kia", 
       "Scarsdale Ford", 
       "Central Ave CDJR", 
-      "Gary Crossley Ford"
+      "Gary Crossley Ford",
+      "Ford Pro Yonkers"
     ],
     accessory: [],
     customs: [],
