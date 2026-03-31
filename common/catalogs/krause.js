@@ -234,17 +234,92 @@ export const catalog = [
     },
   },
   {
-    code: "ROLMAT-34MLF-504929B",
-    name: "Standard Zinc Metal Frame",
-    fullname: "Standard Zinc Metal Frame w/black & 877 silver imprint",
+    code: "KRAFAL-34PEU-363791A",
+    name: "Black Plastic Frame",
+    fullname: "Black Plastic Frame w/white imprint",
     colors: ["Black"],
     type: "customs",
-    default_color: "Black",
-    supportedStores: ["ROLMAT"],    
-    quantities: [500],
+    default_color: "Black",   
+    supportedStores: ["KRAFAL"],
+    quantities: [500, 1000],
     pricing: {
       base: {
-        price: 3.89,
+        price: .79,
+        discount: {
+          1000: .69,
+        },
+      },
+    },
+  },
+  {
+    code: "KRAFAL-33P-42925B",
+    name: ".30 Gauge Plastic Plate",
+    fullname: ".30 Gauge Plastic Plate - White w/black & 877 metallic silver imprint",
+    colors: ["Black"],
+    type: "customs",
+    default_color: "Black",    
+    supportedStores: ["KRAFAL"],
+    quantities: [500, 1000],
+    pricing: {
+      base: {
+        price: 1.09,
+        discount: {
+          1000: .94,
+        },
+      },
+    },
+  },
+  {
+    code: "KRAFAL-33P35-363790C",
+    name: ".30 Gauge Plastic Plate",
+    fullname: ".30 Gauge Plastic Plate - White w/black, 428 gray & 294 blue imprint",
+    colors: ["Gray"],
+    type: "customs",
+    default_color: "Gray",    
+    supportedStores: ["KRAFAL"],
+    quantities: [500, 1000],
+    pricing: {
+      base: {
+        price: 1.09,
+        discount: {
+          1000: .94,
+        },
+      },
+    },
+  },
+  {
+    code: "KRAFAL-31DD364373A",
+    name: "Die Cut Decals",
+    fullname: "Die Cut Decal (4 in. x 1.18 in.)",
+    colors: ["Black"],
+    type: "customs",
+    default_color: "Black",    
+    supportedStores: ["KRAFAL"],
+    quantities: [500, 1000],
+    pricing: {
+      base: {
+        price: .99,
+        discount: {
+          1000: .79,
+        },
+      },
+    },
+  },
+  {
+    code: "KRAFAL-31DD455646A",
+    name: "Die Cut Decals",
+    fullname: "Die Cut Decal (4 in. x 1.69 in.)",
+    colors: ["Black"],
+    type: "customs",
+    default_color: "Black",    
+    supportedStores: ["KRAFAL"],
+    quantities: [500, 1000],
+    pricing: {
+      base: {
+        price: .99,
+        discount: {
+          1000: .79,
+        },
       },
     },
   },
