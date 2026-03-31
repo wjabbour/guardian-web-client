@@ -2595,12 +2595,25 @@ export const catalog = [
     },
   },
   {
-    code: "240",
+    code: "240W",
     name: "Poly Stock Stickers",
-    fullname: "Poly Stock Stickers #240 (250 per box)",
-    colors: ["White", "Yellow"],
+    fullname: "Poly Stock Stickers #240 (250/box)",
+    colors: ["White"],
     type: "sales",
     default_color: "White",
+    pricing: {
+      base: {
+        price: 0.0,
+      },
+    },
+  },
+  {
+    code: "240Y",
+    name: "Poly Stock Stickers",
+    fullname: "Poly Stock Stickers (250/box)",
+    colors: ["Yellow"],
+    type: "sales",
+    default_color: "Yellow",
     pricing: {
       base: {
         price: 0.0,
