@@ -2569,12 +2569,25 @@ export const catalog = [
     },
   },
   {
-    code: "250",
+    code: "250W",
     name: "Poly Key Tag",
-    fullname: "Poly Tag Key Tag #250 (250 per box)",
-    colors: ["White", "Yellow"],
+    fullname: "Poly Tag Key Tag #250 (250/box)",
+    colors: ["White"],
     type: "sales",
     default_color: "White",
+    pricing: {
+      base: {
+        price: 0.0,
+      },
+    },
+  },
+  {
+    code: "250Y",
+    name: "Poly Key Tag",
+    fullname: "Poly Tag Key Tag #250 (250/box)",
+    colors: ["Yellow"],
+    type: "sales",
+    default_color: "Yellow",
     pricing: {
       base: {
         price: 0.0,
