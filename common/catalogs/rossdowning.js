@@ -334,7 +334,16 @@ export const catalog = [
    ],
     type: "mens",
     default_color: "Black",
-    sizes: ["XSmall","Small", "Medium", "Large", "XLarge", "2XLarge", "3XLarge", "4XLarge"],
+    sizes: [
+      "XSmall",
+      "Small", 
+      "Medium", 
+      "Large", 
+      "XLarge", 
+      "2XLarge", 
+      "3XLarge", 
+      "4XLarge"
+    ],
     pricing: {
       XSmall: {price: 23.99},
       Small: { price: 23.99 },

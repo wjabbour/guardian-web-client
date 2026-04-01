@@ -618,6 +618,24 @@ export const catalog = [
     },
   },
   {
+    code: "KRAFAL-34CF-524396A",
+    name: "Chrome Faced Frame",
+    fullname: "Chrome Faced Black Plastic Frame",
+    colors: ["Chrome"],
+    type: "customs",
+    default_color: "Chrome",    
+    supportedStores: ["KRAFAL"],
+    quantities: [500, 1000],
+    pricing: {
+      base: {
+        price: 1.59,
+        discount: {
+          1000: 1.39,
+        },
+      },
+    },
+  },
+  {
     code: "KRAFAL-33P-429252B",
     name: ".30 Gauge Plastic Plate",
     fullname: ".30 Gauge Plastic Plate - White w/black & 877 metallic silver imprint",
@@ -653,6 +671,33 @@ export const catalog = [
       },
     },
   },
+  {
+    code: "KRAFAL-31DD",
+    name: "Decals - Multiple Options",
+    fullname: "Decals - MULTIPLE OPTIONS - Black & White ",
+    description: `500 @ $0.99 ea / 1000 @ $0.79 ea
+GREY DOES NOT PRINT ON DECALS.
+Ford Lincoln (4 in. x 1.18 in.)
+Lincoln (4 in. x 1.69 in.)`,    
+    type: "customs",
+    supportedStores: ["KRAFAL"],
+    disableColorSelector: true,    
+    sapVariations: [
+      {code: '364373A', color:'Ford Lincoln Black'},
+      {code: '-524715A', color:'Ford Lincoln White'},
+      {code: '-455646A', color:'Lincoln Black'},
+      {code: '-524720A', color:'Lincoln White'},       
+     ],   
+    quantities: [500, 1000],
+    pricing: {
+      base: {
+        price: .99,
+        discount: {
+          1000: .79,          
+        }, 
+      },
+    },
+  },  
   {
     code: "KRAFAL-31DD364373A",
     name: "Die Cut Decals",
