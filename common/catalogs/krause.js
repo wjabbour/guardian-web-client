@@ -463,6 +463,7 @@ export const catalog = [
     code: "GP790",
     name: "Not For Sale Sticker",
     fullname: "Vehicle Not for Sale Sticker (100/pk)",
+    disableColorSelector: true,
     colors: ["Yellow"],
     type: "sales",
     default_color: "Yellow",
