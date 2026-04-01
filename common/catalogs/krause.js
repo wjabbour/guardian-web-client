@@ -673,12 +673,12 @@ export const catalog = [
   },
   {
     code: "KRAFAL-31DD",
-    name: "Decals - Multiple Options",
-    fullname: "Decals - MULTIPLE OPTIONS - Black & White ",
+    name: "Die Cut Decals - Multiple Options",
+    fullname: "Die Cut Decals",
     description: `500 @ $0.99 ea / 1000 @ $0.79 ea
-GREY DOES NOT PRINT ON DECALS.
 Ford Lincoln (4 in. x 1.18 in.)
-Lincoln (4 in. x 1.69 in.)`,    
+Lincoln (4 in. x 1.69 in.)
+GREY DOES NOT PRINT ON DECALS.`,    
     type: "customs",
     supportedStores: ["KRAFAL"],
     disableColorSelector: true,    
@@ -695,42 +695,6 @@ Lincoln (4 in. x 1.69 in.)`,
         discount: {
           1000: .79,          
         }, 
-      },
-    },
-  },  
-  {
-    code: "KRAFAL-31DD364373A",
-    name: "Die Cut Decals",
-    fullname: "Die Cut Decal (4 in. x 1.18 in.)",
-    colors: ["Black"],
-    type: "customs",
-    default_color: "Black",    
-    supportedStores: ["KRAFAL"],
-    quantities: [500, 1000],
-    pricing: {
-      base: {
-        price: .99,
-        discount: {
-          1000: .79,
-        },
-      },
-    },
-  },
-  {
-    code: "KRAFAL-31DD455646A",
-    name: "Die Cut Decals",
-    fullname: "Die Cut Decal (4 in. x 1.69 in.)",
-    colors: ["Black"],
-    type: "customs",
-    default_color: "Black",    
-    supportedStores: ["KRAFAL"],
-    quantities: [500, 1000],
-    pricing: {
-      base: {
-        price: .99,
-        discount: {
-          1000: .79,
-        },
       },
     },
   },
