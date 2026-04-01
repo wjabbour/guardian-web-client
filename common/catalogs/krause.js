@@ -221,9 +221,8 @@ export const catalog = [
     code: "600088V",
     name: "Seat Covers (roll)",
     fullname: "No-Slip Plastic Seat Covers (500/roll)",
-    colors: ["Plastic"],
-    type: "service",
-    default_color: "Plastic",
+    disableColorSelector: true,
+    type: "service",    
     quantities: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
     pricing: {
       base: {
@@ -249,9 +248,8 @@ export const catalog = [
     code: "3044",
     name: "Spring Rings",
     fullname: "Metal Spring Rings (250/pk)",
-    colors: ["Metal"],
-    type: "service",
-    default_color: "Metal",
+    disableColorSelector: true,
+    type: "service",    
     quantities: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
     pricing: {
       base: {
@@ -476,9 +474,8 @@ export const catalog = [
     code: "250W",
     name: "Poly Key Tag",
     fullname: "Poly Tag Key Tag (250/bx)",
-    colors: ["White"],
-    type: "sales",
-    default_color: "White",
+    disableColorSelector: true,
+    type: "sales",    
     quantities: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
     pricing: {
       base: {
@@ -490,9 +487,8 @@ export const catalog = [
     code: "240W",
     name: "Poly Stock Stickers",
     fullname: "Poly Stock Stickers (250/bx)",
-    colors: ["White"],
-    type: "sales",
-    default_color: "White",
+    disableColorSelector: true,
+    type: "sales",    
     quantities: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
     pricing: {
       base: {
@@ -504,21 +500,22 @@ export const catalog = [
     code: "BOW30",
     name: "30 in. Giant Bow",
     fullname: "30 in. Giant Magnetic Car Bow (2/pk)",
-    colors: [
-      "Blue",
-      "Gold",
-      "Green",
-      "Patriotic",
-      "Pink",
-      "Red",
-      "Silver",
-      "White",
-      "Red Grn",
+    sapVariations: [
+      {code: '-BK', color:'Black'},
+      {code: '-BL', color:'Blue'},
+      {code: '-GD', color:'Gold'},
+      {code: '-GN', color:'Green'},
+      {code: '-PK', color:'Pink'},
+      {code: '-RD', color:'Red'},
+      {code: '-RDGN', color:'Red Green'},
+      {code: '-RWB', color:'Red White Blue'},
+      {code: '-SL', color:'Silver'},
+      {code: '-WT', color:'White'},             
     ],
-    halfColors: ["Red Grn"],
     description: `Sold in pairs of the same color.`,
     type: "sales",
-    default_color: "Blue",
+    disableColorSelector: true,
+    quantities: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
     pricing: {
       base: {
         price: 39.99,
