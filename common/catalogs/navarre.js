@@ -6,7 +6,17 @@ export const catalog = [
     colors: ["Black"],
     type: "customs",
     default_color: "Black",
-    supportedStores: ["NAVCLA","NAVCSU","NAVHLK","NAVBLA","NAVHLA","NAVCLK","VAUMAX","NAVCSL","NAVNLA"],
+    supportedStores: [
+      "NAVCLA",
+      "NAVCSU",
+      "NAVHLK",
+      "NAVBLA",
+      "NAVHLA",
+      "NAVCLK",
+      "VAUMAX",
+      "NAVCSL",
+      "NAVNLA"
+    ],
     quantities: [500, 1000, 2500, 5000, 10000],
     pricing: {
       base: {
@@ -27,7 +37,17 @@ export const catalog = [
     colors: ["Black"],
     type: "customs",
     default_color: "Black",
-    supportedStores: ["NAVCLA","NAVCSU","NAVHLK","NAVBLA","NAVHLA","NAVCLK","VAUMAX","NAVCSL","NAVNLA"],
+    supportedStores: [
+      "NAVCLA",
+      "NAVCSU",
+      "NAVHLK",
+      "NAVBLA",
+      "NAVHLA",
+      "NAVCLK",
+      "VAUMAX",
+      "NAVCSL",
+      "NAVNLA"
+    ],
     quantities: [500, 1000, 2500, 5000, 10000],
     pricing: {
       base: {
@@ -48,7 +68,17 @@ export const catalog = [
     colors: ["Black"],
     type: "customs",
     default_color: "Black",
-    supportedStores: ["NAVCLA","NAVCSU","NAVHLK","NAVBLA","NAVHLA","NAVCLK","VAUMAX","NAVCSL","NAVNLA"],
+    supportedStores: [
+      "NAVCLA",
+      "NAVCSU",
+      "NAVHLK",
+      "NAVBLA",
+      "NAVHLA",
+      "NAVCLK",
+      "VAUMAX",
+      "NAVCSL",
+      "NAVNLA"
+    ],
     quantities: [500, 1000, 2500, 5000, 10000],
     pricing: {
       base: {
@@ -109,7 +139,17 @@ export const catalog = [
     colors: ["Full Color"],
     type: "customs",
     default_color: "Full Color",
-    supportedStores: ["NAVCLA","NAVCSU","NAVHLK","NAVBLA","NAVHLA","NAVCLK","VAUMAX","NAVCSL","NAVNLA"],
+    supportedStores: [
+      "NAVCLA",
+      "NAVCSU",
+      "NAVHLK",
+      "NAVBLA",
+      "NAVHLA",
+      "NAVCLK",
+      "VAUMAX",
+      "NAVCSL",
+      "NAVNLA"
+    ],
     quantities: [1000, 2500, 5000],
     pricing: {
       base: {
@@ -128,7 +168,17 @@ export const catalog = [
     colors: ["White"],
     type: "customs",
     default_color: "White",
-    supportedStores: ["NAVCLA","NAVCSU","NAVHLK","NAVBLA","NAVHLA","NAVCLK","VAUMAX","NAVCSL","NAVNLA"],
+    supportedStores: [
+      "NAVCLA",
+      "NAVCSU",
+      "NAVHLK",
+      "NAVBLA",
+      "NAVHLA",
+      "NAVCLK",
+      "VAUMAX",
+      "NAVCSL",
+      "NAVNLA"
+    ],
     quantities: [2500, 5000],
     pricing: {
       base: {
@@ -146,7 +196,17 @@ export const catalog = [
     colors: ["White"],
     type: "customs",
     default_color: "White",
-    supportedStores: ["NAVCLA","NAVCSU","NAVHLK","NAVBLA","NAVHLA","NAVCLK","VAUMAX","NAVCSL","NAVNLA"],
+    supportedStores: [
+      "NAVCLA",
+      "NAVCSU",
+      "NAVHLK",
+      "NAVBLA",
+      "NAVHLA",
+      "NAVCLK",
+      "VAUMAX",
+      "NAVCSL",
+      "NAVNLA"
+    ],
     quantities: [2500, 5000],
     pricing: {
       base: {
@@ -164,7 +224,17 @@ export const catalog = [
     colors: ["White"],
     type: "customs",
     default_color: "White",
-    supportedStores: ["NAVCLA","NAVCSU","NAVHLK","NAVBLA","NAVHLA","NAVCLK","VAUMAX","NAVCSL","NAVNLA"],
+    supportedStores: [
+      "NAVCLA",
+      "NAVCSU",
+      "NAVHLK",
+      "NAVBLA",
+      "NAVHLA",
+      "NAVCLK",
+      "VAUMAX",
+      "NAVCSL",
+      "NAVNLA"
+    ],
     quantities: [2500],
     pricing: {
       base: {
@@ -294,36 +364,47 @@ export const catalog = [
     },
   },
   {
-    code: "SDNRG",
-    name: "Service Numbers",
-    fullname: "Service Dispatch Numbers (1000/bx)",
-    colors: [
-      "0000",
-      "1000",
-      "2000",
-      "3000",
-      "4000",
-      "5000",
-      "6000",
-      "7000",
-      "8000",
-      "9000",
+    code: "SDN-RG",
+    name: "Service Hang Numbers",
+    fullname: "Service Hang Numbers (1000/bx)",   
+    sapVariations: [
+      {code: '-H', color: '000-999'},
+      {code: '-J', color: '1000-1999'},
+      {code: '-K', color: '2000-2999'},
+      {code: '-L', color: '3000-3999'},
+      {code: '-M', color: '4000-4999'},
+      {code: '-N', color: '5000-5999'},
+      {code: '-O', color: '6000-6999'},
+      {code: '-P', color: '7000-7999'},
+      {code: '-Q', color: '8000-8999'},
+      {code: '-R', color: '9000-9999'},     
     ],
     type: "service",
-    default_color: "1000",
+    disableColorSelector: true,
+    variationTextOverride: ['Series:'],       
+    quantities: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],    
     pricing: {
       base: {
-        price: 65.00,
+        price: 65.00,        
       },
     },
   },
   {
     code: "VT400",
     name: "Stock Stickers",
-    fullname: "Kleer-Back Stock Stickers Versa #400 (100/pk)",
-    colors: ["Blue", "Green", "Orange", "Red", "White", "Yellow"],
-    type: "sales",
-    default_color: "Blue",
+    fullname: "Kleer-Back Stock Stickers Versa #400 (100/pk)",    
+    sapVariations: [
+      {code: 'B', color:'Blue'},
+      {code: 'G', color:'Green'},
+      {code: 'O', color:'Orange'},     
+      {code: 'R', color:'Red'},
+      {code: 'W', color:'White'},
+      {code: 'Y', color:'Yellow'},          
+    ],
+    disableColorSelector: true,
+    variationTextOverride: ['Color:'],
+    type: "sales", 
+    quantities: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],       
     pricing: {
       base: {
         price: 16.95,
@@ -333,21 +414,22 @@ export const catalog = [
   {
     code: "GP200",
     name: "Key Tags",
-    fullname: "Key Tag Versa #200 (250/box)",
-    colors: [
-      "Blue",
-      "Gray",
-      "Green",
-      "Lilac",
-      "Lime Green",
-      "Orange",
-      "Red",
-      "Tan",
-      "White",
-      "Yellow",
+    fullname: "Self-Protecting Key Tags #200 (250/bx)",    
+    sapVariations: [
+      {code: '-BG', color:'Beige'},
+      {code: '-BL', color:'Blue'},      
+      {code: '-GN', color:'Green'},      
+      {code: '-GY', color:'Gray'},
+      {code: '-LI', color:'Lilac'},
+      {code: '-OR', color:'Orange'},
+      {code: '-RD', color:'Red'},
+      {code: '-WT', color:'White'},
+      {code: '-YL', color:'Yellow'},              
     ],
-    type: "sales",
-    default_color: "Blue",
+    disableColorSelector: true,
+    variationTextOverride: ['Color:'],
+    type: "sales", 
+    quantities: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],       
     pricing: {
       base: {
         price: 35.95,
@@ -514,7 +596,15 @@ export const catalog = [
     colors: ["Black", "Graphite", "Grey Concrete"],
     type: "mens",
     default_color: "Black",
-    sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge", "3XLarge", "4XLarge"],
+    sizes: [
+      "Small", 
+      "Medium", 
+      "Large", 
+      "XLarge", 
+      "2XLarge", 
+      "3XLarge", 
+      "4XLarge"
+    ],
     pricing: {
       Small: { price: 26.99 },
       Medium: { price: 26.99 },
@@ -532,7 +622,20 @@ export const catalog = [
     colors: ["Anthracite", "Black", "Cool Grey"],
     type: "mens",
     default_color: "Black",
-    sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge", "3XLarge", "4XLarge", "LT", "XLT", "2XLT", "3XLT", "4XLT"],
+    sizes: [
+      "Small",
+      "Medium", 
+      "Large", 
+      "XLarge", 
+      "2XLarge", 
+      "3XLarge", 
+      "4XLarge", 
+      "LT", 
+      "XLT", 
+      "2XLT", 
+      "3XLT", 
+      "4XLT"
+    ],
     pricing: {
       Small: { price: 45.99 },
       Medium: { price: 45.99 },
@@ -561,7 +664,17 @@ export const catalog = [
     ],
     type: "mens",
     default_color: "Black",
-    sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge", "3XLarge", "4XLarge", "5XLarge", "6XLarge"],
+    sizes: [
+      "Small", 
+      "Medium", 
+      "Large", 
+      "XLarge", 
+      "2XLarge", 
+      "3XLarge", 
+      "4XLarge", 
+      "5XLarge", 
+      "6XLarge"
+    ],
     pricing: {
       Small: { price: 46.99 },
       Medium: { price: 46.99 },
@@ -587,7 +700,15 @@ export const catalog = [
     ],
     type: "womens",
     default_color: "Black",
-    sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge", "3XLarge", "4XLarge"],
+    sizes: [
+      "Small", 
+      "Medium", 
+      "Large", 
+      "XLarge", 
+      "2XLarge", 
+      "3XLarge", 
+      "4XLarge"
+    ],
     pricing: {
       Small: { price: 46.99 },
       Medium: { price: 46.99 },
@@ -605,7 +726,15 @@ export const catalog = [
     colors: ["Battleship Grey", "Black", "Black Charcoal Heather"],
     type: "mens",
     default_color: "Black",
-    sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge", "3XLarge", "4XLarge"],
+    sizes: [
+      "Small", 
+      "Medium", 
+      "Large", 
+      "XLarge", 
+      "2XLarge", 
+      "3XLarge", 
+      "4XLarge"
+    ],
     pricing: {
       Small: { price: 37.99 },
       Medium: { price: 37.99 },
@@ -623,7 +752,15 @@ export const catalog = [
     colors: ["Battleship Grey", "Black", "Black Charcoal Heather"],
     type: "womens",
     default_color: "Black",
-    sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge", "3XLarge", "4XLarge"],
+    sizes: [
+      "Small", 
+      "Medium", 
+      "Large", 
+      "XLarge", 
+      "2XLarge", 
+      "3XLarge", 
+      "4XLarge"
+    ],
     pricing: {
       Small: { price: 37.99 },
       Medium: { price: 37.99 },
@@ -641,7 +778,15 @@ export const catalog = [
     colors: ["Black"],
     type: "mens",
     default_color: "Black",
-    sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge", "3XLarge", "4XLarge"],
+    sizes: [
+      "Small", 
+      "Medium", 
+      "Large", 
+      "XLarge", 
+      "2XLarge", 
+      "3XLarge", 
+      "4XLarge"
+    ],
     pricing: {
       Small: { price: 68.99 },
       Medium: { price: 68.99 },
@@ -659,7 +804,15 @@ export const catalog = [
     colors: ["Black"],
     type: "womens",
     default_color: "Black",
-    sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge", "3XLarge", "4XLarge"],
+    sizes: [
+      "Small", 
+      "Medium", 
+      "Large", 
+      "XLarge", 
+      "2XLarge", 
+      "3XLarge", 
+      "4XLarge"
+    ],
     pricing: {
       Small: { price: 68.99 },
       Medium: { price: 68.99 },
