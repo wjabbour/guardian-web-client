@@ -662,7 +662,7 @@ export const catalog = [
   },
   {
     code: "KRAFAL-31DD",
-    name: "Die Cut Decals - Multiple Options",
+    name: "Die Cut Decals",
     fullname: "Die Cut Decals",
     description: `500 @ $0.99 ea / 1000 @ $0.79 ea
 Ford Lincoln (4 in. x 1.18 in.)
