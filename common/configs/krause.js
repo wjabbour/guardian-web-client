@@ -43,7 +43,7 @@ export const config = {
   ],
   stores: [
     {
-      name: "Angela Krause Ford",
+      name: "Angela Krause Ford (Alpharetta)",
       address: "1575 Mansell Rd, Alpharetta, GA 30009",
       code: "KRAFAL",
     },              
