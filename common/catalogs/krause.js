@@ -501,7 +501,6 @@ export const catalog = [
     name: "30 in. Giant Bow",
     fullname: "30 in. Giant Magnetic Car Bow (2/pk)",
     sapVariations: [
-      {code: '-BK', color:'Black'},
       {code: '-BL', color:'Blue'},
       {code: '-GD', color:'Gold'},
       {code: '-GN', color:'Green'},
@@ -597,9 +596,8 @@ export const catalog = [
     code: "KRAFAL-34PEU-363791A",
     name: "Black Plastic Frame",
     fullname: "Black Plastic Frame w/white imprint",
-    colors: ["Black"],
-    type: "customs",
-    default_color: "Black",   
+    disableColorSelector: true,
+    type: "customs",       
     supportedStores: ["KRAFAL"],
     quantities: [500, 1000],
     pricing: {
