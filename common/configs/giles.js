@@ -46,7 +46,7 @@ export const config = {
       code: "GILVLA",
     },
     {
-      name: "Giles Volvo Cars (El Paso)",
+      name: "Giles Volvo Cars      (El Paso)",
       address: "6585 S Desert Blvd, El Paso, TX 79932",
       code: "GILVEL",
     },
