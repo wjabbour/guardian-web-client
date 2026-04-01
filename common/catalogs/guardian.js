@@ -4783,9 +4783,9 @@ Designed to be used on a stationary vehicle located on a dealership log.`,
     code: "GP790",
     name: "Sticker",
     fullname: "Vehicle Not for Sale Sticker (100/pk)",
-    colors: ["Yellow"],
-    type: "sales",
-    default_color: "Yellow",
+    disableColorSelector: true,
+    quantities: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+    type: "sales",    
     quantities: [100],
     pricing: {
       base: {

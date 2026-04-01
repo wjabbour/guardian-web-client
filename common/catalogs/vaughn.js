@@ -27,7 +27,15 @@ export const catalog = [
     ],
     type: "mens",
     default_color: "Anthracite",
-    sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge", "3XLarge", "4XLarge"],
+    sizes: [
+      "Small", 
+      "Medium", 
+      "Large", 
+      "XLarge", 
+      "2XLarge", 
+      "3XLarge", 
+      "4XLarge"
+    ],
     pricing: {
       Small: { price: 47.50 },
       Medium: { price: 47.50 },
@@ -68,7 +76,14 @@ export const catalog = [
     colors: ["Grey Concrete"],
     type: "mens",
     default_color: "Grey Concrete",
-    sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge", "3XLarge"],
+    sizes: [
+      "Small", 
+      "Medium", 
+      "Large", 
+      "XLarge", 
+      "2XLarge", 
+      "3XLarge"
+    ],
     pricing: {
       Small: { price: 25.99 },
       Medium: { price: 25.99 },
@@ -82,10 +97,26 @@ export const catalog = [
     code: "NKDC2104",
     name: "Nike Long Sleeve Polo #NKDC2104",
     fullname: "Nike Dri-FIT Micro Pique 2.0 Long Sleeve Polo (NKDC2104)",
-    colors: ["Anthracite", "Black", "Game Royal", "Gym Blue", "Navy", "University Red", "White"],
+    colors: [
+      "Anthracite", 
+      "Black", 
+      "Game Royal", 
+      "Gym Blue", 
+      "Navy", 
+      "University Red", 
+      "White"
+    ],
     type: "mens",
     default_color: "Black",
-    sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge", "3XLarge", "4XLarge"],
+    sizes: [
+      "Small", 
+      "Medium", 
+      "Large", 
+      "XLarge", 
+      "2XLarge", 
+      "3XLarge", 
+      "4XLarge"
+    ],
     pricing: {
       Small: { price: 56.99 },
       Medium: { price: 56.99 },
@@ -111,7 +142,15 @@ export const catalog = [
     ],
     type: "mens",
     default_color: "Black",
-    sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge", "3XLarge", "4XLarge"],
+    sizes: [
+      "Small", 
+      "Medium", 
+      "Large", 
+      "XLarge", 
+      "2XLarge", 
+      "3XLarge", 
+      "4XLarge"
+    ],
     pricing: {
       Small: { price: 32.99 },
       Medium: { price: 32.99 },
@@ -180,7 +219,15 @@ export const catalog = [
     code: "NKDC2105",
     name: "Nike Long Sleeve Polo #NKDC2105",
     fullname: "Nike Women's Dri-FIT Micro Pique 2.0 Long Sleeve Polo (NKDC2105)",
-    colors: ["Anthracite", "Black", "Game Royal", "Gym Blue", "Navy", "University Red", "White"],
+    colors: [
+      "Anthracite", 
+      "Black", 
+      "Game Royal", 
+      "Gym Blue", 
+      "Navy", 
+      "University Red", 
+      "White"
+    ],
     type: "womens",
     default_color: "Black",
     sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge"],
@@ -199,7 +246,15 @@ export const catalog = [
     colors: ["Battleship Grey", "Black", "Black Charcoal Heather", "Dress Blue Navy"],
     type: "mens",
     default_color: "Battleship Grey",
-    sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge", "3XLarge", "4XLarge"],
+    sizes: [
+      "Small", 
+      "Medium", 
+      "Large", 
+      "XLarge", 
+      "2XLarge", 
+      "3XLarge", 
+      "4XLarge"
+    ],
     pricing: {
       Small: { price: 47.99 },
       Medium: { price: 47.99 },
@@ -214,10 +269,24 @@ export const catalog = [
     code: "L325",
     name: "Port Authority® Vest #L325",
     fullname: "Port Authority® Women's Core Soft Shell Vest (L325)",
-    colors: ["Battleship Grey", "Black", "Black Charcoal Heather", "Dress Blue Navy", "Marshmallow"],
+    colors: [
+      "Battleship Grey", 
+      "Black", 
+      "Black Charcoal Heather", 
+      "Dress Blue Navy", 
+      "Marshmallow"
+    ],
     type: "womens",
     default_color: "Battleship Grey",
-    sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge", "3XLarge", "4XLarge"],
+    sizes: [
+      "Small", 
+      "Medium", 
+      "Large", 
+      "XLarge", 
+      "2XLarge", 
+      "3XLarge", 
+      "4XLarge"
+    ],
     pricing: {
       Small: { price: 47.99 },
       Medium: { price: 47.99 },
@@ -235,7 +304,15 @@ export const catalog = [
     colors: ["Black Heather", "Grey Heather"],
     type: "mens",
     default_color: "Black Heather",
-    sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge", "3XLarge", "4XLarge"],
+    sizes: [
+      "Small", 
+      "Medium", 
+      "Large", 
+      "XLarge", 
+      "2XLarge", 
+      "3XLarge", 
+      "4XLarge"
+    ],
     pricing: {
       Small: { price: 47.99 },
       Medium: { price: 47.99 },

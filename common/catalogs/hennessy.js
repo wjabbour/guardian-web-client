@@ -161,7 +161,8 @@ export const catalog = [
     name: "Not for Sale Sticker",
     fullname: "Sticker - Vehicle Not for Sale (100/pk)",
     type: "sales",
-    default_color: "Yellow",
+    disableColorSelector: true,
+    quantities: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],    
     pricing: {
       base: {
         price: 27.95,
