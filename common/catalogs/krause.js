@@ -569,7 +569,6 @@ export const catalog = [
     name: "Two-Digit Oval Yr Stickers",
     fullname: "Two Digit Oval Year Stickers - Blue/Yellow (12/pk)",       
     sapVariations: [
-      {code: '06', color:'06'},
       {code: '08', color:'08'},
       {code: '09', color:'09'},
       {code: '10', color:'10'},
