@@ -1517,7 +1517,7 @@ export const catalog = [
     description: `Black will not show on white decal.`,
     type: "customs",
     supportedStores: ["MATFME"],
-     disableColorSelector: true,    
+    disableColorSelector: true,    
     sapVariations: [
       {code: '402399A', color:'Black'},
       {code: '402399A', color:'White'},
