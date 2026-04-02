@@ -1646,21 +1646,24 @@ export const catalog = [
     },
   },
   {
-    code: "BOWCME-31DD-451310A",
+    code: "BOWCME-31DD",
     name: "Vinyl Die Cut Decals",
     fullname: "Vinyl Die Cut Decal (6 in. x .80 in.)",
-    colors: ["Black", "White"],
-    type: "customs",
-    default_color: "Black",
     description: `Black will not show on white decal.`,
+    type: "customs",
     supportedStores: ["BOWCME"],
+    disableColorSelector: true,    
+    sapVariations: [
+      {code: '451310A', color:'Black'},
+      {code: '451310A', color:'White'},
+    ],
     quantities: [1000, 1500, 2500],
     pricing: {
       base: {
-        price: 0.64,
+        price: .64,
       },
     },
-  },
+  }, 
   {
     code: "BOWCME-THC-510784B",
     name: "Domecal Trailer Hitch Cover",
