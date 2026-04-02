@@ -319,7 +319,13 @@ export const catalog = [
     code: "NKBV6042",
     name: "Nike® Dry Essential Polo #NKBV6042",
     fullname: "Nike® Dry Essential Solid Polo (NKBV6042)",
-    colors: ["Black", "Game Royal", "Midnight Navy", "University Red", "White"],
+    colors: [
+      "Black", 
+      "Game Royal", 
+      "Midnight Navy", 
+      "University Red", 
+      "White"
+    ],
     type: "mens",
     default_color: "Black",
     sizes: [
@@ -382,7 +388,13 @@ export const catalog = [
     code: "NKBV6043",
     name: "Nike® Dry Essential Polo #NKBV6043",
     fullname: "Nike® Women's Dry Essential Solid Polo (NKBV6043)",
-    colors: ["Black", "Game Royal", "Midnight Navy", "University Red", "White"],
+    colors: [
+      "Black", 
+      "Game Royal", 
+      "Midnight Navy", 
+      "University Red", 
+      "White"
+    ],
     type: "womens",
     default_color: "Black",
     sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge"],
@@ -1806,32 +1818,21 @@ export const catalog = [
     },
   },
   {
-    code: "BOWNSO-31DD489756A",
-    name: "Vinyl Die Cut Decals",
-    fullname: "Vinyl Die Cut Decal (5 in. x 2.35 in.)",
-    disableColorSelector: true,
-    type: "customs",        
-    supportedStores: ["BOWNSO"],
-    quantities: [1000],
-    pricing: {
-      base: {
-        price: 0.64,
-      },
-    },
-  },
-  {
-    code: "BOWNSO-31DD519521A",
-    name: "Vinyl Die Cut Decals",
-    fullname: "Vinyl Die Cut Decal (5 in. x 2.37 in.)",
-    colors: ["White"],
+    code: "BOWNSO-31DD",
+    name: "Die Cut Decals",
+    fullname: "Vinyl Die Cut Decals (5 in. x 2.35 in.)",
+    description: `GREY DOES NOT PRINT ON WHITE DECAL.`,    
     type: "customs",
-    default_color: "White",
-    description: `Grey will not show on white decal.`,
     supportedStores: ["BOWNSO"],
+    disableColorSelector: true,    
+    sapVariations: [
+      {code: '489756A', color:'Black'},
+      {code: '519521A', color:'White'},
+    ],
     quantities: [1000],
     pricing: {
       base: {
-        price: 0.64,
+        price: .64,
       },
     },
   },

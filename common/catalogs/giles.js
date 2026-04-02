@@ -597,10 +597,20 @@ export const catalog = [
     code: "LK584",
     name: "Port Authority® 1/4-Zip #LK584",
     fullname: "Port Authority® Women's Silk Touch™ Performance 1/4-Zip (LK584)",
-    colors: ["Black SteelGrey","Navy SteelGrey","Royal SteelGrey","SteelGrey Black"],      
+    colors: [
+      "Black SteelGrey",
+      "Navy SteelGrey",
+      "Royal SteelGrey",
+      "SteelGrey Black"
+    ],      
     type: "womens",
     default_color: "Black SteelGrey",
-    halfColors: ['Black SteelGrey', 'Navy SteelGrey', 'Royal SteelGrey', 'SteelGrey Black'],
+    halfColors: [
+      'Black SteelGrey', 
+      'Navy SteelGrey', 
+      'Royal SteelGrey', 
+      'SteelGrey Black'
+    ],
     sizes: [
       "XSmall",
       "Small", 
@@ -838,10 +848,16 @@ export const catalog = [
     code: "GILNLA-34PEU-367055",
     name: "Black Plastic Frame",
     fullname: "Black Plastic Frame w/white imprint",
-    colors: ["Black"],
-    type: "customs",
-    default_color: "Black",   
-    supportedStores: ["GILNLA","GILVEL","GILHAL","GILNOP","GILSLA","GILVLA"],
+    disableColorSelector: true,
+    type: "customs",       
+    supportedStores: [
+      "GILNLA",
+      "GILVEL",
+      "GILHAL",
+      "GILNOP",
+      "GILSLA",
+      "GILVLA"
+    ],
     quantities: [2000, 3000, 5000],
     pricing: {
       base: {
@@ -853,10 +869,16 @@ export const catalog = [
     code: "GILNLA-33P-388416A",
     name: ".15 Gauge Plastic Plate",
     fullname: ".15 Gauge Plastic Plate - White w/black imprint",
-    colors: ["Black"],
-    type: "customs",
-    default_color: "Black",    
-    supportedStores: ["GILNLA","GILVEL","GILHAL","GILNOP","GILSLA","GILVLA"],
+    disableColorSelector: true,
+    type: "customs",        
+    supportedStores: [
+      "GILNLA",
+      "GILVEL",
+      "GILHAL",
+      "GILNOP",
+      "GILSLA",
+      "GILVLA"
+    ],
     quantities: [2000, 3000, 5000],
     pricing: {
       base: {
