@@ -1511,22 +1511,25 @@ export const catalog = [
     },
   },
   {
-    code: "MATFME-31DD-402399A",
+    code: "MATFME-31DD",
     name: "Vinyl Die Cut Decals",
     fullname: "Vinyl Die Cut Decal (3.75 in. x 1.33 in.)",
-    colors: ["Black", "White"],
-    type: "customs",
-    default_color: "Black",
     description: `Black will not show on white decal.`,
+    type: "customs",
     supportedStores: ["MATFME"],
+     disableColorSelector: true,    
+    sapVariations: [
+      {code: '402399A', color:'Black'},
+      {code: '402399A', color:'White'},
+    ],
     quantities: [1000, 1500, 2500],
     pricing: {
       base: {
-        price: 0.64,
+        price: .64,
       },
     },
-  },  
-  {
+  }, 
+ {
     code: "BOWHSL-34PEU-487072A",
     name: "Black Plastic Frame",
     fullname: "Black Plastic Frame w/white imprint",
