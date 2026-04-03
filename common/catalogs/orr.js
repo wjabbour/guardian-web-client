@@ -44,8 +44,8 @@ export const catalog = [
     description: `200 frames per box`,
     type: "customs",
     sapVariations: [
-      {code: '-CF-LA', color:'Style EN - 2 holes'},
-      {code: '-CF', color:'Style J - 4 holes'},      
+      {code: '-CF-LA', color:'Style EN - 4 holes'},
+      {code: '-CF', color:'Style J - 2 holes'},      
     ],        
     quantities: [200, 600, 1000],
     pricing: {
