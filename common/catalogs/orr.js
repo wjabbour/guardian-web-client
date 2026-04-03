@@ -29,10 +29,38 @@ export const catalog = [
     disableColorSelector: true,
     description: `250 plates per box; 12 in. x 6 in.`,
     type: "customs",        
-    quantities: [250],
+    quantities: [250, 500],
     pricing: {
       base: {
         price: 2.69,
+      },
+    },
+  },
+  {
+    code: "ORRATE-FRAME-CF",
+    name: "Chrome Faced Frame",
+    fullname: "Chrome Faced Black Plastic Frame",
+    disableColorSelector: true,
+    description: `200 frames per box`,
+    type: "customs",        
+    quantities: [200, 600, 1000],
+    pricing: {
+      base: {
+        price: 1.18,
+      },
+    },
+  },
+  {
+    code: "ORRATE-FRAME-CF-LA",
+    name: "Chrome Faced Frame",
+    fullname: "Chrome Faced Black Plastic Frame",
+    disableColorSelector: true,
+    description: `200 frames per box`,
+    type: "customs",        
+    quantities: [200, 600, 1000],
+    pricing: {
+      base: {
+        price: 1.18,
       },
     },
   },
