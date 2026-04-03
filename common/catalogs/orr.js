@@ -37,7 +37,7 @@ export const catalog = [
     },
   },
   {
-    code: "ORRATE-FRAME",
+    code: "ORR-FRAME",
     name: "Chrome Faced Frames",
     fullname: "Chrome Faced Black Plastic Frames",
     disableColorSelector: true,
