@@ -44,6 +44,9 @@ import { config as MullerConfig } from "../configs/muller";
 import { config as KrauseConfig } from "../configs/krause";
 // @ts-ignore
 import { config as GilesConfig } from "../configs/giles";
+// @ts-ignore
+import { config as OrrConfig } from "../configs/orr";
+
 
 
 const DEFAULT_CONFIG = {
@@ -86,6 +89,7 @@ const SITE_REGISTRY: { urlKey: string; config: any }[] = [
   { urlKey: "muller",       config: MullerConfig       },
   { urlKey: "krause",       config: KrauseConfig       },
   { urlKey: "giles",        config: GilesConfig        },
+  { urlKey: "orr",          config: OrrConfig          },
 ];
 
 const allConfigs: any[] = SITE_REGISTRY.map((s) => s.config);
