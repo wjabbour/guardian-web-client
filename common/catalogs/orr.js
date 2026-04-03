@@ -22,4 +22,18 @@ export const catalog = [
       },
     },
   },
+  {
+    code: "ORRATE-PLATE",
+    name: "White Aluminum Plate",
+    fullname: "White Aluminum Plate w/black & 186 red imprint",
+    disableColorSelector: true,
+    description: `250 plates per box; 12 in. x 6 in.`,
+    type: "customs",        
+    quantities: [250],
+    pricing: {
+      base: {
+        price: 2.69,
+      },
+    },
+  },
 ];
