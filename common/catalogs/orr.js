@@ -46,11 +46,30 @@ export const catalog = [
     sapVariations: [
       {code: '-CF-LA', color:'Style EN - 4 holes'},
       {code: '-CF', color:'Style J - 2 holes'},      
-    ],        
+    ], 
+    variationTextOverride: ['Style:'],       
     quantities: [200, 600, 1000],
     pricing: {
       base: {
         price: 1.18,
+      },
+    },
+  },
+  {
+    code: "ORRATE-TC",
+    name: "Tire Covers",
+    fullname: "32 in. Black Vinyl Tire Cover w/white & 186 red imprint",
+    disableColorSelector: true,    
+    type: "customs",
+    sapVariations: [
+      {code: '-CAM', color:'Camera'},
+      {code: '-NOCAM', color:'No Camera'},      
+    ],
+    variationTextOverride: ['Style:'],        
+    quantities: [22],
+    pricing: {
+      base: {
+        price: 46.99,
       },
     },
   },
