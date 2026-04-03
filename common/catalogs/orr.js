@@ -37,26 +37,16 @@ export const catalog = [
     },
   },
   {
-    code: "ORRATE-FRAME-CF",
-    name: "Chrome Faced Frame",
-    fullname: "Chrome Faced Black Plastic Frame",
+    code: "ORRATE-FRAME",
+    name: "Chrome Faced Frames",
+    fullname: "Chrome Faced Black Plastic Frames",
     disableColorSelector: true,
     description: `200 frames per box`,
-    type: "customs",        
-    quantities: [200, 600, 1000],
-    pricing: {
-      base: {
-        price: 1.18,
-      },
-    },
-  },
-  {
-    code: "ORRATE-FRAME-CF-LA",
-    name: "Chrome Faced Frame",
-    fullname: "Chrome Faced Black Plastic Frame",
-    disableColorSelector: true,
-    description: `200 frames per box`,
-    type: "customs",        
+    type: "customs",
+    sapVariations: [
+      {code: '-CF-LA', color:'Style EN - 2 holes'},
+      {code: '-CF', color:'Style J - 4 holes'},      
+    ],        
     quantities: [200, 600, 1000],
     pricing: {
       base: {
