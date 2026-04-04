@@ -54,7 +54,11 @@ export default function Modification() {
         .join("_")}.jpg`
       : `/images/${item.code}.jpg`;
 
-  const [image_source, set_image_source] = useState(initialImageSource);
+  const [image_source, set_image_source_raw] = useState(initialImageSource);
+  const set_image_source = (src: string) => {
+    setIsSwitching(true);
+    set_image_source_raw(src);
+  };
   const [cart, set_cart] = useOutletContext<[Cart, React.Dispatch<React.SetStateAction<Cart>>]>();
 
   // Update image source when selected_sapVariation changes (e.g., from ColorSelector)
@@ -71,6 +75,9 @@ export default function Modification() {
       }
     }
   }, [selected_sapVariation, item.sapVariations, item.code]);
+
+  const [isInitialLoading, setIsInitialLoading] = useState(true);
+  const [isSwitching, setIsSwitching] = useState(false);
 
   const [snackbarOpen, setSnackbarOpen] = useState(false);
   const [snackbarText] = useState("Item added to cart");
@@ -195,8 +202,16 @@ export default function Modification() {
   return (
     <div className="flex justify-center">
       <div className="flex gap-[50px] bg-white p-[25px] min-w-[1000px] border border-gray-400">
-        <div className="flex items-center justify-center max-h-[520px] min-w-[400px] max-w-[450px]">
-          <img className="max-h-full max-w-[450px] aspect-auto" src={image_source} alt={item.fullname} />
+        <div className="relative flex items-center justify-center max-h-[520px] min-w-[400px] max-w-[450px]">
+          {isInitialLoading && (
+            <div className="absolute inset-0 animate-pulse bg-gray-300 rounded-sm z-10" />
+          )}
+          <img
+            className={`max-h-full max-w-[450px] aspect-auto transition-opacity duration-300 ease-in-out ${isInitialLoading ? "opacity-0" : isSwitching ? "opacity-40" : "opacity-100"}`}
+            src={image_source}
+            alt={item.fullname}
+            onLoad={() => { setIsInitialLoading(false); setIsSwitching(false); }}
+          />
         </div>
 
         <div className="relative top-[50px] pb-[35px] flex flex-col flex-1">
