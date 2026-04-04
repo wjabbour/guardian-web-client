@@ -1,7 +1,7 @@
 import pino from "pino";
 import dayjs from "dayjs";
 import { SendRawEmailCommand, SESClient } from "@aws-sdk/client-ses";
-import { getStore, getConfigValue } from "guardian-common";
+import { getStore, getConfigValue, Order } from "guardian-common";
 import { getCatalog } from "guardian-common";
 import { APIGatewayProxyResult, APIGatewayEvent } from "aws-lambda";
 
@@ -171,7 +171,7 @@ export const CSV_HEADERS = [
   "Date", "Store Code", "Store Name", "First Name", "Last Name",
   "Item", "Quantity", "Description", "Size", "Color",
   "Logo", "Placement", "Second Logo", "Second Placement",
-  "Price", "usedStoreCode", "transactionId", "orderId",
+  "Price", "usedStoreCode", "Paypal Transaction Id", "Order Id",
 ];
 
 export function createOrderCsv(orders): string {
