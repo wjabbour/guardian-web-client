@@ -194,14 +194,20 @@ export default function QuantitySelector({
             <thead>
               <tr>
                 <th className="p-2 border bg-gray-100"></th>
-                {effectiveSizes.map((size: string) => (
-                  <th
-                    key={size}
-                    className="p-2 border bg-gray-50 text-xs font-bold uppercase text-center"
-                  >
-                    {size}
-                  </th>
-                ))}
+                {effectiveSizes.map((size: string) => {
+                  const price = item.pricing[size]?.price;
+                  return (
+                    <th
+                      key={size}
+                      className="p-2 border bg-gray-50 text-xs font-bold uppercase text-center"
+                    >
+                      {size}
+                      {price !== undefined && (
+                        <span className="block font-normal normal-case text-gray-500">${price.toFixed(2)} ea.</span>
+                      )}
+                    </th>
+                  );
+                })}
               </tr>
             </thead>
             <tbody>
@@ -288,9 +294,16 @@ export default function QuantitySelector({
             </div>
 
             <div className="flex flex-col gap-1">
-              <label className="text-sm font-bold text-gray-700">
-                Quantity
-              </label>
+              {(() => {
+                const price = item.pricing[selectedSize]?.price;
+                return (
+                  <label className="text-sm font-bold text-gray-700">
+                    Quantity{price !== undefined && (
+                      <span className="font-normal normal-case text-gray-500"> (${price.toFixed(2)} ea.)</span>
+                    )}
+                  </label>
+                );
+              })()}
               <Select {...qtyDropdownProps}>
                 <MenuItem value="" disabled>
                   Select
@@ -336,9 +349,16 @@ export default function QuantitySelector({
             </div>
 
             <div className="flex flex-col gap-1">
-              <label className="text-sm font-bold text-gray-700">
-                Quantity
-              </label>
+              {(() => {
+                const price = item.pricing[effectiveSizes[0]]?.price;
+                return (
+                  <label className="text-sm font-bold text-gray-700">
+                    Quantity{price !== undefined && (
+                      <span className="font-normal normal-case text-gray-500"> (${price.toFixed(2)} ea.)</span>
+                    )}
+                  </label>
+                );
+              })()}
               <Select {...qtyDropdownProps}>
                 <MenuItem value="" disabled>
                   Select
@@ -356,10 +376,13 @@ export default function QuantitySelector({
     }
 
     // Case A: Single Qty Dropdown (0-1 Size, 0-1 Color)
+    const caseAPrice = item.pricing[effectiveSizes[0]]?.price;
     return (
       <div className="flex flex-col gap-2 mt-4">
         <label className="text-sm font-bold text-gray-700">
-          Select Quantity:
+          Quantity{caseAPrice !== undefined && (
+            <span className="font-normal normal-case text-gray-500"> (${caseAPrice.toFixed(2)} ea.)</span>
+          )}
         </label>
         <Select
           value={String(selectedQty)} // FORCE STRING for rendering
@@ -391,14 +414,20 @@ export default function QuantitySelector({
           <thead>
             <tr>
               <th className="p-2 border bg-gray-100 text-xs uppercase text-gray-600"></th>
-              {effectiveSizes.map((size: string) => (
-                <th
-                  key={size}
-                  className="p-2 border bg-gray-50 text-xs font-bold uppercase text-center"
-                >
-                  {size !== SizeOption.BASE ? size : ""}
-                </th>
-              ))}
+              {effectiveSizes.map((size: string) => {
+                const price = item.pricing[size]?.price;
+                return (
+                  <th
+                    key={size}
+                    className="p-2 border bg-gray-50 text-xs font-bold uppercase text-center"
+                  >
+                    {size !== SizeOption.BASE ? size : ""}
+                    {price !== undefined && (
+                      <span className="block font-normal normal-case text-gray-500">${price.toFixed(2)} ea.</span>
+                    )}
+                  </th>
+                );
+              })}
             </tr>
           </thead>
           <tbody>
@@ -433,9 +462,14 @@ export default function QuantitySelector({
   }
 
   // Single Text Input
+  const singlePrice = item.pricing[effectiveSizes[0]]?.price;
   return (
     <div className="flex flex-col gap-2 mt-4">
-      <label className="text-sm font-bold text-gray-700">Input Quantity:</label>
+      <label className="text-sm font-bold text-gray-700">
+        Quantity{singlePrice !== undefined && (
+          <span className="font-normal normal-case text-gray-500"> (${singlePrice.toFixed(2)} ea.)</span>
+        )}
+      </label>
       <input
         type="text"
         inputMode="numeric"

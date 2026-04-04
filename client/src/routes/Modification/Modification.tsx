@@ -216,11 +216,6 @@ export default function Modification() {
 
         <div className="relative top-[50px] pb-[35px] flex flex-col flex-1">
           <div className="text-2xl font-bold">{item.fullname}</div>
-          {item.type !== "customs" && (
-            <div className="font-bold text-[16px] mb-[20px]">
-              Starts at ${startsAtPrice} each
-            </div>
-          )}
 
           <Description description={description} />
           <div className="mt-[10px] flex gap-[50px]">
