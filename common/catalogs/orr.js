@@ -73,4 +73,32 @@ export const catalog = [
       },
     },
   },
+  {
+    code: "ORRATE-AWMATT",
+    name: "All Weather Mats",
+    fullname: "All Weather Mats w/white & 186 red imprint",
+    description: `Sold as a 2pc set`,
+    disableColorSelector: true,    
+    type: "customs",          
+    quantities: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+    pricing: {
+      base: {
+        price: 28.50,
+      },
+    },
+  },
+  {
+    code: "ORRATE-3333",
+    name: "Black Shopper Tote",
+    fullname: "Black Non-Woven Shopper Tote w/white & 186 red imprint",
+    description: `size: 20 in. x 13 in. x 8 in.; imprint area: 10 in. x 8 in.`,
+    colors: ["Black"],     
+    type: "customs",          
+    quantities: [200],
+    pricing: {
+      base: {
+        price: 1.25,
+      },
+    },
+  },
 ];
