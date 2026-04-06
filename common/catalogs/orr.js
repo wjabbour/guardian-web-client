@@ -80,7 +80,7 @@ export const catalog = [
     description: `Sold as a 2pc set`,
     disableColorSelector: true,    
     type: "customs",          
-    quantities: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+    quantities: [1, 2, 3, 4, 5],
     pricing: {
       base: {
         price: 28.50,
