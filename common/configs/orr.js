@@ -106,7 +106,7 @@ export const config = {
       code: "CLAKTE",
     },                    
   ],
-  bypass_codes: ["OrrCheck"],
+  bypass_codes: ["ORRCHECK"],
   server_hostname: "https://mxfj3q6m01.execute-api.us-east-1.amazonaws.com)",
   account_reps: [
     { name: "Greg Murray", email: "gmurray@gpcorp.com / (770) 448-6982 ext 210" }
