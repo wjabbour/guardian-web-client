@@ -113,5 +113,5 @@ export const config = {
   ],
   route_prefix: "/orr",
   paypal_not_supported: true,
-  password: "GregorR",
+  password: "GreggorR",
 };
