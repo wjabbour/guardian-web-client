@@ -479,9 +479,8 @@ export const catalog = [
     code: "HOFAPA-LAPELPIN-484175Z",
     name: "Lapel Pin with Imprint",
     fullname: "White Lapel Pin w/full color imprint",
-    colors: ["White"],
-    type: "accessory",
-    default_color: "White",
+    disableColorSelector: true,    
+    type: "accessory",    
     quantities: [2000],
     pricing: {
       base: {
@@ -507,9 +506,8 @@ export const catalog = [
     code: "HOFAPA-33AP-496163A",
     name: "Black Acrylic Plate",
     fullname: "Black Acrylic Plate w/white imprint",
-    colors: ["Black"],
-    type: "customs",
-    default_color: "Black",
+    disableColorSelector: true,
+    type: "customs",    
     supportedStores: ["HOFAPA"],
     quantities: [300, 500],
     pricing: {
@@ -525,9 +523,8 @@ export const catalog = [
     code: "HOFAPA-34MLF-496173A",
     name: "Black Metal Frame",
     fullname: "Black Metal Frame w/acrylic insterts & white imprint",
-    colors: ["Black Metal"],
-    type: "customs",
-    default_color: "Black Metal",
+    disableColorSelector: true,
+    type: "customs",    
     supportedStores: ["HOFAPA"],
     quantities: [300, 500],
     pricing: {
@@ -543,9 +540,8 @@ export const catalog = [
     code: "HOFAPA-34PEU-523925A",
     name: "Black Plastic Frame",
     fullname: "Black Plastic Frame w/white imprint (New London)",
-    colors: ["Black"],
-    type: "customs",
-    default_color: "Black",
+    disableColorSelector: true,
+    type: "customs",    
     supportedStores: ["HOFAPA"],
     quantities: [500, 1000, 1500],
     pricing: {
@@ -558,9 +554,8 @@ export const catalog = [
     code: "HOFAPA-34PEU-523926A",
     name: "Black Plastic Frame",
     fullname: "Black Plastic Frame w/white imprint (Waterbury)",
-    colors: ["Black"],
-    type: "customs",
-    default_color: "Black",
+    disableColorSelector: true,
+    type: "customs",    
     supportedStores: ["HOFAPA"],
     quantities: [500, 1000, 1500],
     pricing: {
@@ -573,9 +568,8 @@ export const catalog = [
     code: "HOFAPA-34PEU-523854A",
     name: "Black Plastic Frame",
     fullname: "Black Plastic Frame w/white imprint (Hoffman.com)",
-    colors: ["Black"],
-    type: "customs",
-    default_color: "Black",
+    disableColorSelector: true,
+    type: "customs",    
     supportedStores: ["HOFAPA"],
     quantities: [500, 1000, 1500],
     pricing: {
@@ -698,9 +692,8 @@ export const catalog = [
     code: "HOFAPA-0201-507790Z",
     name: "Non-Expandable Cardstock Folder",
     fullname: "9-7/8 x 6 Non-Expandable White Marble Crush Cardstock w/full color imprint",
-    colors: ["White"],
-    type: "sales",
-    default_color: "White",
+    disableColorSelector: true,
+    type: "sales",    
     quantities: [2500],
     pricing: {
       base: {
@@ -712,9 +705,8 @@ export const catalog = [
     code: "HOFAPA-0211-489788Z",
     name: "Expandable Cardstock Folder",
     fullname: "9-7/8 x 6 White Expandable Marble Crush Cardstock w/full color imprint",
-    colors: ["White"],
-    type: "sales",
-    default_color: "White",
+    disableColorSelector: true,
+    type: "sales",    
     quantities: [2500, 5000],
     pricing: {
       base: {
@@ -729,9 +721,8 @@ export const catalog = [
     code: "GP-A-6780",
     name: "Heavy Duty Snow Rake",
     fullname: "Heavy Duty Snow Rake",
-    colors: ["Red"],
-    type: "service",
-    default_color: "Red",
+    disableColorSelector: true,
+    type: "service",    
     quantities: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
     pricing: {
       base: {
@@ -743,9 +734,8 @@ export const catalog = [
     code: "600088V",
     name: "No-Slip Seat Covers (roll)",
     fullname: "No-Slip Plastic Seat Covers - Roll of 500",    
-    colors: ["Plastic"],
-    type: "service",
-    default_color: "Plastic",
+    disableColorSelector: true,
+    type: "service",    
     quantities: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
     pricing: {
       base: {
@@ -757,9 +747,8 @@ export const catalog = [
     code: "55-010",
     name: "Steering Wheel Covers",
     fullname: "Steering Wheel Covers - Box of 500",
-    colors: ["Plastic"],
-    type: "service",
-    default_color: "Plastic",
+    disableColorSelector: true,
+    type: "service",    
     quantities: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
     pricing: {
       base: {
@@ -772,9 +761,8 @@ export const catalog = [
     name: "Floor Mats - Coated Paper",
     fullname: "Floor Mats - Coated Paper - Box of 500",
     description: "Box of 500",
-    colors: ["White"],
-    type: "service",
-    default_color: "White",
+    disableColorSelector: true,
+    type: "service",    
     quantities: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
     pricing: {
       base: {
@@ -787,9 +775,8 @@ export const catalog = [
     name: "Floor Mats - Adhesive",
     fullname: "Floor Mats - Full Adhesive - 3 MIL/600' Roll",
     description: "Packaged one roll of 350 mats per box",
-    colors: ["Clear"],
-    type: "service",
-    default_color: "Clear",
+    disableColorSelector: true,
+    type: "service",    
     quantities: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
     pricing: {
       base: {
@@ -859,9 +846,8 @@ export const catalog = [
 -Very slippery and dries tacky
 -No mixing or water
 -Rust inhibitors`,
-    colors: ["White"],
-    type: "service",
-    default_color: "White",
+    disableColorSelector: true,
+    type: "service",    
     quantities: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
     pricing: {
       base: {
@@ -877,9 +863,8 @@ export const catalog = [
 -Pre-segmented
 -Metallic effect is designed to match the color of the rim.
 -Easy removal`,
-    colors: ["Metallic"],
-    type: "service",
-    default_color: "Metallic",
+    disableColorSelector: true,
+    type: "service",    
     quantities: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
     pricing: {
       base: {
@@ -893,9 +878,8 @@ export const catalog = [
     fullname: "Sorbents - Fine Fiber Pads (100 per box)",
     description: `-High absorbency, up to 20 gallons. 
 -Dimensions: 19 in x 15 in x 15 in`,
-    colors: ["Gray"],
-    type: "service",
-    default_color: "Gray",
+    disableColorSelector: true,
+    type: "service",    
     quantities: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
     pricing: {
       base: {
