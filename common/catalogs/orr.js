@@ -90,10 +90,11 @@ export const catalog = [
   {
     code: "ORRATE-3333",
     name: "Black Shopper Tote",
-    fullname: "Black Non-Woven Shopper Tote w/white & 186 red imprint",
+    fullname: "Black Non-Woven Shopper Tote w/white & 186 red imprint (200/bx)",
     description: `size: 20 in. x 13 in. x 8 in.; imprint area: 10 in. x 8 in.`,
     colors: ["Black"],     
-    type: "customs",          
+    type: "customs",
+    default_color: "Black",          
     quantities: [200],
     pricing: {
       base: {
