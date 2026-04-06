@@ -18,10 +18,10 @@ export const config = {
       "Scarsdale Ford", 
       "Central Ave CDJR", 
       "Gary Crossley Ford",
-      "Ford Pro Yonkers",
-      "Ford Pro Arlington Heights",
+      "Ford Pro Yonkers",      
       "Ford Pro Berlin",
-      "Ford Pro Cranston"
+      "Ford Pro Cranston",
+      "Ford Pro Arlington Heights",
     ],
     womens: [
       "Tasca",
@@ -29,10 +29,10 @@ export const config = {
       "Scarsdale Ford", 
       "Central Ave CDJR", 
       "Gary Crossley Ford",
-      "Ford Pro Yonkers",
-      "Ford Pro Arlington Heights",
+      "Ford Pro Yonkers",      
       "Ford Pro Berlin",
-      "Ford Pro Cranston"
+      "Ford Pro Cranston",
+      "Ford Pro Arlington Heights",
     ],
     accessory: [],
     customs: [],
