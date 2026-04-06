@@ -42,6 +42,8 @@ import { catalog as MullerCatalog } from "../catalogs/muller";
 import { catalog as KrauseCatalog } from "../catalogs/krause";
 // @ts-ignore
 import { catalog as GilesCatalog } from "../catalogs/giles";
+// @ts-ignore
+import { catalog as OrrCatalog } from "../catalogs/orr";
 
 /*
   Used by backend Lambda functions to look up a catalog by company name.
@@ -72,5 +74,6 @@ export function getCatalog(companyName: string): any {
     case "Muller":      return MullerCatalog;
     case "Krause":      return KrauseCatalog;
     case "Giles":       return GilesCatalog;
+    case "Orr":         return OrrCatalog;
   }
 }
