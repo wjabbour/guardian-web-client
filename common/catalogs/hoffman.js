@@ -490,12 +490,11 @@ export const catalog = [
     },
   },
   {
-    code: "HOFAPA-33P-484091A",
+    code: "HOFAPA-33P-520422A",
     name: ".15 Gauge Plastic Plate",
-    fullname: "White Plastic Plate w/black imprint",
-    colors: ["Black"],
-    type: "customs",
-    default_color: "Black",
+    fullname: "White Plastic Plate w/black imprint",    
+    disableColorSelector: true,
+    type: "customs",    
     supportedStores: ["HOFAPA"],
     quantities: [5000],
     pricing: {
