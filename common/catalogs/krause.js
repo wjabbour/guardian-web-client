@@ -628,8 +628,8 @@ export const catalog = [
   },
   {
     code: "KRAFAL-33P-429252B",
-    name: ".30 Gauge Plastic Plate",
-    fullname: ".30 Gauge Plastic Plate - White w/black & 877 metallic silver imprint",
+    name: ".15 Gauge Plastic Plate",
+    fullname: ".15 Gauge Plastic Plate - White w/black & 877 metallic silver imprint",
     disableColorSelector: true,
     type: "customs",        
     supportedStores: ["KRAFAL"],
@@ -645,8 +645,8 @@ export const catalog = [
   },
   {
     code: "KRAFAL-33P35-363790C",
-    name: ".30 Gauge Plastic Plate",
-    fullname: ".30 Gauge Plastic Plate - White w/black, 428 gray & 294 blue imprint",
+    name: ".15 Gauge Plastic Plate",
+    fullname: ".15 Gauge Plastic Plate - White w/black, 428 gray & 294 blue imprint",
     disableColorSelector: true,
     type: "customs",        
     supportedStores: ["KRAFAL"],
