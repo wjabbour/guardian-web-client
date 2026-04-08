@@ -131,14 +131,18 @@ export function getRoutePrefix(password: string): string | undefined {
 
 function getSiteByUrl(): { urlKey: string; config: any } | undefined {
   const url = window.location.href;
+  const match = SITE_REGISTRY.find((s) => url.includes(s.urlKey));
+  if (match) return match;
   if (url.includes("localhost")) return SITE_REGISTRY.find((s) => s.urlKey === "hennessy");
-  return SITE_REGISTRY.find((s) => url.includes(s.urlKey));
+  return undefined;
 }
 
 export function detectUrlKey(): string {
   const url = window.location.href;
+  const match = SITE_REGISTRY.find((s) => url.includes(s.urlKey));
+  if (match) return match.urlKey;
   if (url.includes("localhost")) return "hennessy";
-  return SITE_REGISTRY.find((s) => url.includes(s.urlKey))?.urlKey ?? "";
+  return "";
 }
 
 let _webCatalog: any = null;
