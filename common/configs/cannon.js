@@ -138,6 +138,16 @@ export const config = {
       address: "",
       code: "CANCSE",
     },
+    {
+      name: "Cannon CDJRF",
+      address: "",
+      code: "CANCPA",
+    },
+    {
+      name: "Cannon Chevrolet",
+      address: "",
+      code: "CANCHP",
+    },
   ],
   bypass_codes: ["CANNON","NINA","KRISTY"],
   server_hostname: "https://o1yn7lpenj.execute-api.us-east-1.amazonaws.com",
