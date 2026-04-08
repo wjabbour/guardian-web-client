@@ -46,7 +46,7 @@ export const config = {
       code: "GILVLA",
     },
     {
-      name: "Giles Volvo Cars      (El Paso)",
+      name: "Giles Volvo Cars (El Paso)",
       address: "6585 S Desert Blvd, El Paso, TX 79932",
       code: "GILVEL",
     },
@@ -59,6 +59,11 @@ export const config = {
       name: "Giles Nissan (Opelousas)",
       address: "5731 I-49 S Service Rd, Opelousas, LA 70570",
       code: "GILNOP",
+    },
+    {
+      name: "Giles Kia of Las Cruces (Las Cruces)",
+      address: "1840 N Main St, Las Cruces, NM 88001",
+      code: "GILKCR",
     },
                       
     ],
