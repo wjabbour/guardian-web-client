@@ -856,7 +856,8 @@ export const catalog = [
       "GILHAL",
       "GILNOP",
       "GILSLA",
-      "GILVLA"
+      "GILVLA",
+      "GILKCR"
     ],
     quantities: [2000, 3000, 5000],
     pricing: {
@@ -877,7 +878,8 @@ export const catalog = [
       "GILHAL",
       "GILNOP",
       "GILSLA",
-      "GILVLA"
+      "GILVLA",
+      "GILKCR"
     ],
     quantities: [2000, 3000, 5000],
     pricing: {
