@@ -8,7 +8,7 @@ export const catalog = [
     supportedStores: ["CANFCL","CANLST","CANBCL","CANCGR","CANCWE","CANCOX",
       "CANHPO","CANCCL","CANFPA","CANCGE","CANPGR","CANTVI",
       "CANTMO","CANNMO","CANDWE","CANPJA","CANPCC","CANNGR",
-      "CANNJA","CANNOX","GREIGR","CANCLR","CANBVI","CANCSE",
+      "CANNJA","CANNOX","GREIGR","CANCLR","CANBVI","CANCSE", "CANCPA","CANCHP",
       ],
     quantities: [5000],
     pricing: {
@@ -26,7 +26,7 @@ export const catalog = [
     supportedStores: ["CANFCL","CANLST","CANBCL","CANCGR","CANCWE","CANCOX",
       "CANHPO","CANCCL","CANFPA","CANCGE","CANPGR","CANTVI",
       "CANTMO","CANNMO","CANDWE","CANPJA","CANPCC","CANNGR",
-      "CANNJA","CANNOX","GREIGR","CANCLR","CANBVI","CANCSE",
+      "CANNJA","CANNOX","GREIGR","CANCLR","CANBVI","CANCSE", "CANCPA","CANCHP",
       ],
     quantities: [5000],
     pricing: {
@@ -45,8 +45,9 @@ export const catalog = [
     supportedStores: ["CANFCL","CANLST","CANBCL","CANCGR","CANCWE","CANCOX",
       "CANHPO","CANCCL","CANFPA","CANCGE","CANPGR","CANTVI",
       "CANTMO","CANNMO","CANDWE","CANPJA","CANPCC","CANNGR",
-      "CANNJA","CANNOX","GREIGR","CANCLR","CANBVI","CANCSE",
+      "CANNJA","CANNOX","GREIGR","CANCLR","CANBVI","CANCSE","CANCPA","CANCHP",
       ],
+    quantities: [5000],
     pricing: {
       base: {
         price: 0.0,
