@@ -1,8 +1,8 @@
 export const catalog = [
   {
     code: "CP91L",
-    name: "Port & Company Beanie",
-    fullname: "Port & Company® Fleece-Lined Beanie Cap",
+    name: "Port & Company Beanie #CP91L",
+    fullname: "Port & Company® Fleece-Lined Beanie Cap (CP91L)",
     colors: [
       "Athletic Oxford", 
       "Athletic Red", 
@@ -20,8 +20,8 @@ export const catalog = [
   },
   {
     code: "CP95",
-    name: "Port Authority® Cotton Beanie",
-    fullname: "Port Authority® 100% Cotton Beanie",
+    name: "Port Authority® Beanie #CP95",
+    fullname: "Port Authority® 100% Cotton Beanie (CP95)",
     colors: ["Black", "Graphite", "Navy"],
     type: "hat",
     default_color: "Black",
@@ -32,8 +32,8 @@ export const catalog = [
   },
   {
     code: "NE205",
-    name: "New Era® Trucker Cap",
-    fullname: "New Era® Snapback Trucker Cap (addt'l logos cost extra)",
+    name: "New Era® Trucker Cap #NE205",
+    fullname: "New Era® Snapback Trucker Cap (NE205)",
     colors: ["Black", "Graphite", "Grey", "Deep Navywt"],
     type: "hat",
     default_color: "Black",
@@ -44,8 +44,8 @@ export const catalog = [
   },
   {
     code: "CP80",
-    name: "Port & Co™ Six-Panel Cap",
-    fullname: "Port & Co™ Six-Panel Twill Cap",
+    name: "Port & Co™ Six-Panel Cap #CP80",
+    fullname: "Port & Co™ Six-Panel Twill Cap (CP80)",
     colors: [
       "Athletic Gold",
       "Black",
@@ -76,8 +76,8 @@ export const catalog = [
   },
   {
     code: "C402",
-    name: "Port Authority Trucker Cap",
-    fullname: "Port Authority® Snapback Trucker Cap",
+    name: "Port Authority Trucker Cap #C402",
+    fullname: "Port Authority® Snapback Trucker Cap (C402)",
     colors: [
       "Black",
       "Black GreySteel",
@@ -113,8 +113,8 @@ export const catalog = [
   },
   {
     code: "STC39",
-    name: "Sport-Tek® Trucker Cap",
-    fullname: "Sport-Tek® YP Classics® Retro Trucker Cap (addt'l logos cost extra)",
+    name: "Sport-Tek® Trucker Cap #STC39",
+    fullname: "Sport-Tek® YP Classics® Retro Trucker Cap (STC39)",
     colors: [
       "Black", 
       "Graphite",       
@@ -201,6 +201,82 @@ export const catalog = [
       XLarge: { price: 0.00 },
       "2XLarge": { price: 0.00},
       "3XLarge": { price: 0.00 },                    
+    },
+  },
+  {
+    code: "5400",
+    name: "Gildan® Long Sleeve T-Shirt #5400",
+    fullname: "Gildan® Heavy Cotton™ 100% Cotton Long Sleeve T-Shirt (5400)",
+    colors: ["Black"],      
+    type: "tshirts",
+    default_color: "Black",
+    sizes: [
+      "Small", 
+      "Medium", 
+      "Large", 
+      "XLarge", 
+      "2XLarge",
+      "3XLarge",          
+    ],
+    pricing: {
+      Small: { price: 0.00 },
+      Medium: { price: 0.00 },
+      Large: { price: 0.00 },
+      XLarge: { price: 0.00 },
+      "2XLarge": { price: 0.00 },
+      "3XLarge": { price: 0.00 },                
+    },
+  },
+  {
+    code: "SF000",
+    name: "Gildan® Crewneck Sweatshirt #SF000",
+    fullname: "Gildan® Softstyle® Crewneck Sweatshirt (SF000)",
+    colors: ["Black"],      
+    type: "tshirts",
+    default_color: "Black",
+    sizes: [
+      "Small", 
+      "Medium", 
+      "Large", 
+      "XLarge", 
+      "2XLarge",
+      "3XLarge",
+      "4XLarge"        
+    ],
+    pricing: {
+      Small: { price: 0.00 },
+      Medium: { price: 0.00 },
+      Large: { price: 0.00 },
+      XLarge: { price: 0.00 },
+      "2XLarge": { price: 0.00 },
+      "3XLarge": { price: 0.00 },
+      "4XLarge": { price: 0.00 },                 
+    },
+  },
+  {
+    code: "PC590Q",
+    name: "Port & Co™ 1/4-Zip Sweatshirt #PC590Q",
+    fullname: "Port & Co™ Performance Fleece 1/4-Zip Pullover Sweatshirt (PC590Q)",
+    colors: ["Jet Black"],      
+    type: "tshirts",
+    default_color: "Jet Black",
+    sizes: [
+      "Small", 
+      "Medium", 
+      "Large", 
+      "XLarge", 
+      "2XLarge",
+      "3XLarge",
+      "4XLarge"        
+    ],
+    pricing: {
+      Small: { price: 0.00 },
+      Medium: { price: 0.00 },
+      Large: { price: 0.00 },
+      XLarge: { price: 0.00 },
+      "2XLarge": { price: 0.00 },
+      "3XLarge": { price: 0.00 },
+      "4XLarge": { price: 0.00 },                 
     },
   },
   {
@@ -1055,8 +1131,8 @@ export const catalog = [
   },
   {
     code: "L540LS",
-    name: "Port Authority® Polo",
-    fullname: "Port Authority Womens Long Sleeve Polo",
+    name: "Port Authority® Polo #L540LS",
+    fullname: "Port Authority Womens Long Sleeve Polo (L540LS)",
     colors: [
       "Black",
       "Bright Purple",
@@ -1547,6 +1623,32 @@ export const catalog = [
     },
   },
   {
+    code: "OE550",
+    name: "OGIO® Radius 1/4-Zip #OE550",
+    fullname: "OGIO® Radius 1/4-Zip (OE550)",
+    colors: ["Blacktop"],      
+    type: "mens",
+    default_color: "Blacktop",
+    sizes: [
+      "Small", 
+      "Medium", 
+      "Large", 
+      "XLarge", 
+      "2XLarge",
+      "3XLarge",
+      "4XLarge"        
+    ],
+    pricing: {
+      Small: { price: 0.00 },
+      Medium: { price: 0.00 },
+      Large: { price: 0.00 },
+      XLarge: { price: 0.00 },
+      "2XLarge": { price: 0.00 },
+      "3XLarge": { price: 0.00 },
+      "4XLarge": { price: 0.00 },                 
+    },
+  },
+  {
     code: "A476",
     name: "Adidas 1/4-Zip Pullover",
     fullname: "Women's Lightweight Mélange Quarter-Zip Pullover",
@@ -1811,7 +1913,7 @@ export const catalog = [
       "Royal", 
       "White"
     ],
-    type: "mens",
+    type: "tshirts",
     default_color: "Jet Black",
     sizes: [
       "Small", 
@@ -2093,13 +2195,77 @@ export const catalog = [
     },
   },
   {
+    code: "88184",
+    name: "Two-Layer Soft Shell Jacket #88184",
+    fullname: "Core365 Cruise Two-Layer Fleece Bonded Soft Shell Jacket (88184)",
+    colors: ["Black"],      
+    type: "mens",
+    default_color: "Black",
+    sizes: [
+      "Small", 
+      "Medium", 
+      "Large", 
+      "XLarge", 
+      "2XLarge",
+      "3XLarge",
+      "4XLarge",
+      "5XLarge"        
+    ],
+    pricing: {
+      Small: { price: 0.00 },
+      Medium: { price: 0.00 },
+      Large: { price: 0.00 },
+      XLarge: { price: 0.00 },
+      "2XLarge": { price: 0.00 },
+      "3XLarge": { price: 0.00 },
+      "4XLarge": { price: 0.00 },
+      "5XLarge": { price: 0.00 },                 
+    },
+  },
+  {
+    code: "78184",
+    name: "Two-Layer Soft Shell Jacket #78184",
+    fullname: "Core365 Cruise Two-Layer Fleece Bonded Soft Shell Jacket (78184)",
+    colors: ["Black"],      
+    type: "womens",
+    default_color: "Black",
+    sizes: [
+      "Small", 
+      "Medium", 
+      "Large", 
+      "XLarge", 
+      "2XLarge",
+      "3XLarge",             
+    ],
+    pricing: {
+      Small: { price: 0.00 },
+      Medium: { price: 0.00 },
+      Large: { price: 0.00 },
+      XLarge: { price: 0.00 },
+      "2XLarge": { price: 0.00 },
+      "3XLarge": { price: 0.00 },                       
+    },
+  },
+  {
     code: "NF0A88D5",
     name: "NF® Soft Shell Jacket",
     fullname: "The North Face® Chest Logo Ridgewall Soft Shell Jacket",
-    colors: ["Shady Blue", "TNF Black", "TNF Drk Gry Hthr", "Urban Navy Hthr"],
+    colors: [
+      "Shady Blue", 
+      "TNF Black", 
+      "TNF Drk Gry Hthr", 
+      "Urban Navy Hthr"
+    ],
     type: "mens",
     default_color: "TNF Black",
-    sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge", "3XLarge"],
+    sizes: [
+      "Small", 
+      "Medium", 
+      "Large", 
+      "XLarge", 
+      "2XLarge", 
+      "3XLarge"
+    ],
     pricing: {
       Small: { price: 0.00 },
       Medium: { price: 0.00 },
@@ -2116,7 +2282,15 @@ export const catalog = [
     colors: ["Black", "Engine Red", "Magnet", "True Navy", "True Royal"],
     type: "mens",
     default_color: "Black",
-    sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge", "3XLarge", "4XLarge"],
+    sizes: [
+      "Small", 
+      "Medium", 
+      "Large", 
+      "XLarge", 
+      "2XLarge", 
+      "3XLarge", 
+      "4XLarge"
+    ],
     pricing: {
       Small: { price: 0.00 },
       Medium: { price: 0.00 },
@@ -2134,7 +2308,15 @@ export const catalog = [
     colors: ["Black"],
     type: "mens",
     default_color: "Black",
-    sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge", "3XLarge", "4XLarge"],
+    sizes: [
+      "Small", 
+      "Medium", 
+      "Large", 
+      "XLarge", 
+      "2XLarge", 
+      "3XLarge", 
+      "4XLarge"
+    ],
     pricing: {
       Small: { price: 0.00 },
       Medium: { price: 0.00 },
@@ -2152,7 +2334,16 @@ export const catalog = [
     colors: ["Black"],
     type: "mens",
     default_color: "Black",
-    sizes: ["XSmall", "Small", "Medium", "Large", "XLarge", "2XLarge", "3XLarge", "4XLarge"],
+    sizes: [
+      "XSmall", 
+      "Small", 
+      "Medium", 
+      "Large", 
+      "XLarge", 
+      "2XLarge", 
+      "3XLarge", 
+      "4XLarge"
+    ],
     pricing: {
       XSmall: { price: 0.00 },
       Small: { price: 0.00 },
@@ -2171,7 +2362,16 @@ export const catalog = [
     colors: ["Black"],
     type: "womens",
     default_color: "Black",
-    sizes: ["XSmall", "Small", "Medium", "Large", "XLarge", "2XLarge", "3XLarge", "4XLarge"],
+    sizes: [
+      "XSmall", 
+      "Small", 
+      "Medium", 
+      "Large", 
+      "XLarge", 
+      "2XLarge", 
+      "3XLarge", 
+      "4XLarge"
+    ],
     pricing: {
       XSmall: { price: 0.00 },
       Small: { price: 0.00 },
@@ -2190,7 +2390,13 @@ export const catalog = [
     colors: ["TNF Black", "TNF Blackberry Wine", "TNF Drk Gry Hthr"],
     type: "womens",
     default_color: "TNF Black",
-    sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge"],
+    sizes: [
+      "Small", 
+      "Medium", 
+      "Large", 
+      "XLarge", 
+      "2XLarge"
+    ],
     pricing: {
       Small: { price: 0.00 },
       Medium: { price: 0.00 },
@@ -2203,7 +2409,18 @@ export const catalog = [
     code: "BOXLIDS",
     name: "Custom Color Lids",
     fullname: "Custom Color Gift Box Lids",
-    colors: ["Black", "Blue", "Burgundy", "Gold", "Green", "Orange", "Pink", "Purple", "Red", "Silver"],
+    colors: [
+      "Black", 
+      "Blue", 
+      "Burgundy", 
+      "Gold", 
+      "Green", 
+      "Orange", 
+      "Pink", 
+      "Purple", 
+      "Red", 
+      "Silver"
+    ],
     type: "accessory",
     default_color: "Black",
     quantities: [100, 250, 500, 1000, 1500],
