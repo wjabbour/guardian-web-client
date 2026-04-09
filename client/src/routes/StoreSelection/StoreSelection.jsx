@@ -20,6 +20,8 @@ export default function StoreSelection() {
         onSubmit={(password) => {
           if (password === requiredPassword) {
             navigate(getDomainAwarePath(`/catalog/${storeCode}/customs`));
+          } else {
+            throw new Error("Incorrect password");
           }
         }}
         setIsModalOpen={setModalOpen}

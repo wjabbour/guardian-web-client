@@ -74,22 +74,12 @@ export default function CartDrawer({ cart, setCart }: Props) {
   };
 
   const handlePasswordSubmit = async (password: string) => {
-    try {
-      const response = await login(password);
-
-      if (response.success) {
-        // Refresh the page to update user context with new role
-        window.location.reload();
-      } else {
-        setSnackbarMessage("Invalid password");
-        setSnackbarSeverity("error");
-        setSnackbarOpen(true);
-      }
-    } catch (error) {
-      console.error("Error validating password:", error);
-      setSnackbarMessage("Error validating password");
-      setSnackbarSeverity("error");
-      setSnackbarOpen(true);
+    const response = await login(password);
+    if (response.success) {
+      // Refresh the page to update user context with new role
+      window.location.reload();
+    } else {
+      throw new Error("Incorrect password");
     }
   };
 

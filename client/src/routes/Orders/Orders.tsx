@@ -160,11 +160,7 @@ export default function OrdersTable() {
       // Refresh the page to update user context with new role
       window.location.reload();
     } else {
-      setSnackbar({
-        open: true,
-        message: "Incorrect password",
-        severity: "error",
-      });
+      throw new Error("Incorrect password");
     }
   };
 

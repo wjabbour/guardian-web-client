@@ -5,6 +5,10 @@ import DialogActions from "@mui/material/DialogActions";
 import Button from "@mui/material/Button";
 import TextField from "@mui/material/TextField";
 import CircularProgress from "@mui/material/CircularProgress";
+import InputAdornment from "@mui/material/InputAdornment";
+import IconButton from "@mui/material/IconButton";
+import Visibility from "@mui/icons-material/Visibility";
+import VisibilityOff from "@mui/icons-material/VisibilityOff";
 import { useState, useEffect } from "react";
 
 interface Props {
@@ -16,11 +20,15 @@ interface Props {
 export default function PasswordEntryDialog({ isModalOpen, setIsModalOpen, onSubmit }: Props) {
   const [password, setPassword] = useState("");
   const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState("");
+  const [showPassword, setShowPassword] = useState(false);
 
   useEffect(() => {
     if (isModalOpen) {
       setPassword("");
       setIsLoading(false);
+      setError("");
+      setShowPassword(false);
     }
   }, [isModalOpen]);
 
@@ -30,8 +38,12 @@ export default function PasswordEntryDialog({ isModalOpen, setIsModalOpen, onSub
 
   async function handleSubmit() {
     setIsLoading(true);
+    setError("");
+    await new Promise((resolve) => setTimeout(resolve, 1500));
     try {
       await onSubmit(password);
+    } catch (e) {
+      setError(e instanceof Error ? e.message : "Incorrect password");
     } finally {
       setIsLoading(false);
     }
@@ -51,13 +63,28 @@ export default function PasswordEntryDialog({ isModalOpen, setIsModalOpen, onSub
           autoFocus
           margin="dense"
           label="Password"
-          type="password"
+          type={showPassword ? "text" : "password"}
           fullWidth
           variant="outlined"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
           onKeyDown={handleKeyDown}
           disabled={isLoading}
+          error={!!error}
+          helperText={error}
+          InputProps={{
+            endAdornment: (
+              <InputAdornment position="end">
+                <IconButton
+                  onClick={() => setShowPassword((prev) => !prev)}
+                  edge="end"
+                  disabled={isLoading}
+                >
+                  {showPassword ? <VisibilityOff /> : <Visibility />}
+                </IconButton>
+              </InputAdornment>
+            ),
+          }}
         />
       </DialogContent>
       <DialogActions>

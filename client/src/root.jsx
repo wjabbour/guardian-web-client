@@ -98,15 +98,16 @@ export default function Root() {
         onSubmit={async (password) => {
           // this password is used to determine which store the user is accessing, not the admin login password
           const prefix = getRoutePrefix(password);
-          if (prefix) {
-            const result = await getMe();
-            if (result.success && result.success.data) {
-              const role = result.success.data.role || "user";
-              setUser({ role });
-            }
-            setModalOpen(false);
-            navigate(prefix);
+          if (!prefix) {
+            throw new Error("Incorrect password");
           }
+          const result = await getMe();
+          if (result.success && result.success.data) {
+            const role = result.success.data.role || "user";
+            setUser({ role });
+          }
+          setModalOpen(false);
+          navigate(prefix);
         }}
       />
     </div>

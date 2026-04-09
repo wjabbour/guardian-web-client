@@ -2,7 +2,7 @@ import { getWebConfigValue } from "guardian-common";
 
 function formatRep(rep) {
   const territory = rep.territory ? ` (${rep.territory})` : "";
-  const contact = rep.email ?? rep.phone ?? "";
+  const contact = [rep.email, rep.phone].filter(Boolean).join(" | ");
   const separator = contact ? " — " : "";
   return `${rep.name}${territory}${separator}${contact}`;
 }
