@@ -23,6 +23,20 @@ export const catalog = [
     },
   },
   {
+    code: "ORRATE-LWS-525166",
+    name: "Long Window Sticker",
+    fullname: "Long Window Sticker - Red (13 in. x 1.5 in.)",
+    description: `Grey does not print.`,
+    type: "customs",    
+    disableColorSelector: true, 
+    quantities: [250, 500, 1000],
+    pricing: {
+      base: {
+        price: .69,
+      },
+    },
+  }, 
+  {
     code: "ORRATE-PLATE",
     name: "White Aluminum Plate",
     fullname: "White Aluminum Plate w/black & 186 red imprint",
