@@ -38,9 +38,10 @@ export const catalog = [
   {
     code: "CANNJA-31DD-502545A",
     name: "Die Cut Decals",
-    fullname: "Vinyl Diecut Decals",  
-    disableColorSelector: true,
-    description: `Available in Black, Red, Silver, White`,
+    fullname: "Vinyl Diecut Decals",
+    colors: ["Black", "Red","Silver", "White"],
+    type: "customs",
+    default_color: "Black", 
     type: "customs",    
     supportedStores: ["CANFCL","CANLST","CANBCL","CANCGR","CANCWE","CANCOX",
       "CANHPO","CANCCL","CANFPA","CANCGE","CANPGR","CANTVI",
