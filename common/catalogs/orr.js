@@ -23,7 +23,7 @@ export const catalog = [
     },
   },
   {
-    code: "ORRATE-LWS-525166",
+    code: "ORRATE-LWS-525166A",
     name: "Long Window Sticker",
     fullname: "Long Window Sticker - Red (13 in. x 1.5 in.)",
     description: `Grey does not print.`,
