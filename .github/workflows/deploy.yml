@@ -22,8 +22,6 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v6.0.2
-        with:
-
 
       - name: Fetch base commit for paths-filter
         if: github.event_name == 'push'
@@ -127,8 +125,6 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v6.0.2
-        with:
-
 
       - name: Fetch base commit for paths-filter
         if: github.event_name == 'push'
