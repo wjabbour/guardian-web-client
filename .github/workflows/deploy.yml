@@ -15,15 +15,18 @@ on:
         type: boolean
         default: false
 
+
 jobs:
   client:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6.0.2
+        with:
+          fetch-depth: 2
 
       - name: Check for client or common changes
-        uses: dorny/paths-filter@v3
+        uses: dorny/paths-filter@v4.0.1
         id: changes
         with:
           filters: |
@@ -33,7 +36,7 @@ jobs:
 
       - name: Setup Node.js
         if: steps.changes.outputs.frontend == 'true' || inputs.force_client == true
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v6.3.0
         with:
           node-version: "22"
 
@@ -44,7 +47,7 @@ jobs:
       - name: Cache common dependencies
         if: steps.changes.outputs.frontend == 'true' || inputs.force_client == true
         id: cache-common-npm
-        uses: actions/cache@v4
+        uses: actions/cache@v5.0.4
         with:
           path: ./common/node_modules
           key: ${{ runner.os }}-node-common-${{ hashFiles('./common/package-lock.json') }}
@@ -62,7 +65,7 @@ jobs:
       - name: Cache client dependencies
         if: steps.changes.outputs.frontend == 'true' || inputs.force_client == true
         id: cache-client-npm
-        uses: actions/cache@v4
+        uses: actions/cache@v5.0.4
         with:
           path: ./client/node_modules
           key: ${{ runner.os }}-node-client-${{ hashFiles('./client/package-lock.json') }}
@@ -91,7 +94,7 @@ jobs:
 
       - name: Configure AWS Credentials (Cannon)
         if: steps.changes.outputs.frontend == 'true' || inputs.force_client == true
-        uses: aws-actions/configure-aws-credentials@v4
+        uses: aws-actions/configure-aws-credentials@v6.1.0
         with:
           aws-access-key-id: ${{ secrets.CANNON_KEY }}
           aws-secret-access-key: ${{ secrets.CANNON_SECRET }}
@@ -104,7 +107,7 @@ jobs:
 
       - name: Configure AWS Credentials (GPC)
         if: steps.changes.outputs.frontend == 'true' || inputs.force_client == true
-        uses: aws-actions/configure-aws-credentials@v4
+        uses: aws-actions/configure-aws-credentials@v6.1.0
         with:
           aws-access-key-id: ${{ secrets.GPC_KEY }}
           aws-secret-access-key: ${{ secrets.GPC_SECRET }}
@@ -119,10 +122,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6.0.2
+        with:
+          fetch-depth: 2
 
       - name: Check for backend or common changes
-        uses: dorny/paths-filter@v3
+        uses: dorny/paths-filter@v4.0.1
         id: changes
         with:
           filters: |
@@ -132,11 +137,11 @@ jobs:
 
       - name: Setup Terraform
         if: steps.changes.outputs.backend == 'true' || inputs.force_backend == true
-        uses: hashicorp/setup-terraform@v3
+        uses: hashicorp/setup-terraform@v4.0.0
 
       - name: Setup Node.js
         if: steps.changes.outputs.backend == 'true' || inputs.force_backend == true
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v6.3.0
         with:
           node-version: "22"
 
@@ -147,7 +152,7 @@ jobs:
       - name: Cache common dependencies
         if: steps.changes.outputs.backend == 'true' || inputs.force_backend == true
         id: cache-common-npm
-        uses: actions/cache@v4
+        uses: actions/cache@v5.0.4
         with:
           path: ./common/node_modules
           key: ${{ runner.os }}-node-common-${{ hashFiles('./common/package-lock.json') }}
@@ -165,7 +170,7 @@ jobs:
       - name: Cache backend dependencies
         if: steps.changes.outputs.backend == 'true' || inputs.force_backend == true
         id: cache-backend-npm
-        uses: actions/cache@v4
+        uses: actions/cache@v5.0.4
         with:
           path: ./backend/node_modules
           key: ${{ runner.os }}-node-backend-${{ hashFiles('./backend/package-lock.json') }}
@@ -187,7 +192,7 @@ jobs:
 
       - name: Cache Terraform lambda builds
         if: steps.changes.outputs.backend == 'true' || inputs.force_backend == true
-        uses: actions/cache@v4
+        uses: actions/cache@v5.0.4
         with:
           path: ./backend/terraform/builds
           key: ${{ runner.os }}-lambda-builds-${{ hashFiles('backend/src/public/**/*.ts', 'common/src/**/*.ts') }}
@@ -196,7 +201,7 @@ jobs:
 
       - name: Configure AWS Credentials (GPC)
         if: steps.changes.outputs.backend == 'true' || inputs.force_backend == true
-        uses: aws-actions/configure-aws-credentials@v4
+        uses: aws-actions/configure-aws-credentials@v6.1.0
         with:
           aws-access-key-id: ${{ secrets.GPC_KEY }}
           aws-secret-access-key: ${{ secrets.GPC_SECRET }}
