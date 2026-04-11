@@ -26,6 +26,7 @@ jobs:
 
 
       - name: Fetch base commit for paths-filter
+        if: github.event_name == 'push'
         run: git fetch --depth=1 origin ${{ github.event.before }}
 
       - name: Check for client or common changes
@@ -130,6 +131,7 @@ jobs:
 
 
       - name: Fetch base commit for paths-filter
+        if: github.event_name == 'push'
         run: git fetch --depth=1 origin ${{ github.event.before }}
 
       - name: Check for backend or common changes
