@@ -102,7 +102,8 @@ export default function OrdersTable() {
         `${o.first_name} ${o.last_name}`.toLowerCase().includes(q) ||
         (o.store ?? "").toLowerCase().includes(q) ||
         (o.order_id ?? "").toLowerCase().includes(q) ||
-        (o.transaction_id ?? "").toLowerCase().includes(q)
+        (o.transaction_id ?? "").toLowerCase().includes(q) ||
+        (o.order ?? []).some((item) => (item.code ?? "").toLowerCase().includes(q))
       );
     }
 
