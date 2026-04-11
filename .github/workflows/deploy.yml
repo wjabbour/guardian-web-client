@@ -185,6 +185,15 @@ jobs:
         run: npx tsc --noEmit
         working-directory: ./backend
 
+      - name: Cache Terraform lambda builds
+        if: steps.changes.outputs.backend == 'true' || inputs.force_backend == true
+        uses: actions/cache@v4
+        with:
+          path: ./backend/terraform/builds
+          key: ${{ runner.os }}-lambda-builds-${{ hashFiles('backend/src/public/**/*.ts', 'common/src/**/*.ts') }}
+          restore-keys: |
+            ${{ runner.os }}-lambda-builds-
+
       - name: Configure AWS Credentials (GPC)
         if: steps.changes.outputs.backend == 'true' || inputs.force_backend == true
         uses: aws-actions/configure-aws-credentials@v4
