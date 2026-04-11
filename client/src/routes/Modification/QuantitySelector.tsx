@@ -3,6 +3,7 @@ import Select, { SelectChangeEvent } from "@mui/material/Select";
 import MenuItem from "@mui/material/MenuItem";
 import { ColorOption, SizeOption } from "../../lib/constants";
 import { CatalogItem } from "guardian-common";
+import { getPriceWithDiscount } from "../../utils/discountUtils";
 
 // Helper to determine display mode
 const isMany = (arr?: string[]) => (arr ? arr.length >= 2 : false);
@@ -295,7 +296,9 @@ export default function QuantitySelector({
 
             <div className="flex flex-col gap-1">
               {(() => {
-                const price = item.pricing[selectedSize]?.price;
+                const price = selectedQty !== ""
+                  ? getPriceWithDiscount(item, selectedSize, selectedQty)
+                  : item.pricing[selectedSize]?.price;
                 return (
                   <label className="text-sm font-bold text-gray-700">
                     Quantity{price !== undefined && (
@@ -350,7 +353,9 @@ export default function QuantitySelector({
 
             <div className="flex flex-col gap-1">
               {(() => {
-                const price = item.pricing[effectiveSizes[0]]?.price;
+                const price = selectedQty !== ""
+                  ? getPriceWithDiscount(item, effectiveSizes[0], selectedQty)
+                  : item.pricing[effectiveSizes[0]]?.price;
                 return (
                   <label className="text-sm font-bold text-gray-700">
                     Quantity{price !== undefined && (
@@ -376,7 +381,9 @@ export default function QuantitySelector({
     }
 
     // Case A: Single Qty Dropdown (0-1 Size, 0-1 Color)
-    const caseAPrice = item.pricing[effectiveSizes[0]]?.price;
+    const caseAPrice = selectedQty !== ""
+      ? getPriceWithDiscount(item, effectiveSizes[0], selectedQty)
+      : item.pricing[effectiveSizes[0]]?.price;
     return (
       <div className="flex flex-col gap-2 mt-4">
         <label className="text-sm font-bold text-gray-700">
