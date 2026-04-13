@@ -6,7 +6,7 @@ export const catalog = [
     type: "service",
     default_color: "Plastic",
     disableColorSelector: true,
-    quantitites: [1, 2, 3, 4, 5],
+    quantities: [1, 2, 3, 4, 5],
     pricing: {
       base: {
         price: 73.5,
@@ -17,7 +17,7 @@ export const catalog = [
     code: "3088",
     name: "Floor Mats",
     fullname: "Floor Mats/Coated Paper (500/bx)",    
-    quantitites: [1, 2, 3, 4, 5],
+    quantities: [1, 2, 3, 4, 5],
     type: "service",
     disableColorSelector: true,
     pricing: {
@@ -44,7 +44,7 @@ export const catalog = [
     name: "Buyers Guide",
     fullname: "Buyers Guide, Blank Front (100/pk)",    
     type: "sales",
-   disableColorSelector: true,
+    disableColorSelector: true,
     quantities: [1, 2, 3, 4, 5],
     pricing: {
       base: {
