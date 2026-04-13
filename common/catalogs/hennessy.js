@@ -2,9 +2,10 @@ export const catalog = [
   {
     code: "600088V",
     name: "Seat Covers",
-    fullname: "No-Slip Plastic Seat Covers (500/roll)",
+    fullname: "No-Slip Plastic Seat Covers (500/roll)",    
     type: "service",
     disableColorSelector: true,
+    quantitites: [1, 2, 3, 4, 5],
     pricing: {
       base: {
         price: 73.5,
@@ -14,9 +15,10 @@ export const catalog = [
   {
     code: "3088",
     name: "Floor Mats",
-    fullname: "Floor Mats/Coated Paper (500/bx)",
+    fullname: "Floor Mats/Coated Paper (500/bx)",    
+    quantitites: [1, 2, 3, 4, 5],
     type: "service",
-    default_color: "White",
+    disableColorSelector: true,
     pricing: {
       base: {
         price: 76.44,
@@ -26,9 +28,10 @@ export const catalog = [
   {
     code: "BGVinyl",
     name: "Vinyl Sheet",
-    fullname: "8.5 x 11 Blank Vinyl Sheet #9300 (100/pk)",
+    fullname: "8.5 x 11 Blank Vinyl Sheet (100/pk)",    
     type: "sales",
-    default_color: "White",
+    disableColorSelector: true,
+    quantities: [1, 2, 3, 4, 5],
     pricing: {
       base: {
         price: 135,
@@ -38,12 +41,50 @@ export const catalog = [
   {
     code: "BGE12-AL",
     name: "Buyers Guide",
-    fullname: "Buyers Guide, Blank Front (100/pk)",
+    fullname: "Buyers Guide, Blank Front (100/pk)",    
     type: "sales",
-    default_color: "White",
+   disableColorSelector: true,
+    quantities: [1, 2, 3, 4, 5],
     pricing: {
       base: {
         price: 74.95,
+      },
+    },
+  },
+  {
+    code: "3198WB",
+    name: "Oval Year Stickers - Blue",
+    fullname: "Oval Year Stickers - White/Blue (12/pk)",
+    colors: ["Blue"],
+    disableColorSelector: true,
+    sapVariations: [
+      { code: '07i', color: '2007' },
+      { code: '08i', color: '2008' },
+      { code: '09i', color: '2009' },
+      { code: '10i', color: '2010' },
+      { code: '11i', color: '2011' },
+      { code: '12i', color: '2012' },
+      { code: '13i', color: '2013' },
+      { code: '14i', color: '2014' },
+      { code: '15i', color: '2015' },
+      { code: '16i', color: '2016' },
+      { code: '17i', color: '2017' },
+      { code: '18i', color: '2018' },
+      { code: '19i', color: '2019' },
+      { code: '20i', color: '2020' },
+      { code: '21i', color: '2021' },
+      { code: '22i', color: '2022' },
+      { code: '23i', color: '2023' },
+      { code: '24i', color: '2024' },
+      { code: '25i', color: '2025' },
+      { code: '26i', color: '2026' },
+    ],
+    type: "sales",
+    default_color: "2007",
+    quantities: [1, 2, 3, 4, 5],
+    pricing: {
+      base: {
+        price: 10.99,
       },
     },
   },
@@ -110,7 +151,7 @@ export const catalog = [
   {
     code: "GP200",
     name: "Key Tags",
-    fullname: "Self-Protecting Key Tags #200 (250/bx)",    
+    fullname: "Self-Protecting Key Tags (250/bx)",    
     sapVariations: [
       {code: '-BG', color:'Beige'},
       {code: '-BL', color:'Blue'},      
@@ -125,7 +166,7 @@ export const catalog = [
     disableColorSelector: true,
     variationTextOverride: ['Color:'],
     type: "sales", 
-    quantities: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],       
+    quantities: [1, 2, 3, 4, 5],       
     pricing: {
       base: {
         price: 36.95,
@@ -159,10 +200,10 @@ export const catalog = [
   {
     code: "GP790",
     name: "Not for Sale Sticker",
-    fullname: "Sticker - Vehicle Not for Sale (100/pk)",
+    fullname: "Sticker - Vehicle Not for Sale (100/pk)",    
     type: "sales",
     disableColorSelector: true,
-    quantities: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],    
+    quantities: [1, 2, 3, 4, 5],    
     pricing: {
       base: {
         price: 27.95,
@@ -184,7 +225,7 @@ export const catalog = [
     disableColorSelector: true,
     variationTextOverride: ['Color:'],
     type: "sales", 
-    quantities: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],       
+    quantities: [1, 2, 3, 4, 5],       
     pricing: {
       base: {
         price: 17.95,
@@ -305,44 +346,7 @@ export const catalog = [
       "3XLarge": { price: 81.99 },
       "4XLarge": { price: 82.99 },
     },
-  },
-  {
-    code: "3198WB",
-    name: "Oval Year Stickers - Blue",
-    fullname: "Oval Year Stickers - White/Blue (12/pk)",
-    colors: ["Blue"],
-    disableColorSelector: true,
-    sapVariations: [
-      { code: '07i', color: '2007' },
-      { code: '08i', color: '2008' },
-      { code: '09i', color: '2009' },
-      { code: '10i', color: '2010' },
-      { code: '11i', color: '2011' },
-      { code: '12i', color: '2012' },
-      { code: '13i', color: '2013' },
-      { code: '14i', color: '2014' },
-      { code: '15i', color: '2015' },
-      { code: '16i', color: '2016' },
-      { code: '17i', color: '2017' },
-      { code: '18i', color: '2018' },
-      { code: '19i', color: '2019' },
-      { code: '20i', color: '2020' },
-      { code: '21i', color: '2021' },
-      { code: '22i', color: '2022' },
-      { code: '23i', color: '2023' },
-      { code: '24i', color: '2024' },
-      { code: '25i', color: '2025' },
-      { code: '26i', color: '2026' },
-    ],
-    type: "sales",
-    default_color: "2007",
-    quantities: [1, 2, 3, 4, 5],
-    pricing: {
-      base: {
-        price: 10.99,
-      },
-    },
-  },
+  },  
   {
     code: "BB18003",
     name: "Brooks Brothers® Shirt #BB18003",
@@ -502,7 +506,15 @@ export const catalog = [
     colors: ["Black", "Court Blue", "Light Blue", "White"],
     type: "mens",
     default_color: "Black",
-    sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge", "3XLarge", "4XLarge"],
+    sizes: [
+      "Small", 
+      "Medium", 
+      "Large", 
+      "XLarge", 
+      "2XLarge", 
+      "3XLarge", 
+      "4XLarge"
+    ],
     pricing: {
       Small: { price: 49.99 },
       Medium: { price: 49.99 },
@@ -543,7 +555,15 @@ export const catalog = [
     ],
     type: "mens",
     default_color: "Black",
-    sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge", "3XLarge", "4XLarge"],
+    sizes: [
+      "Small", 
+      "Medium", 
+      "Large", 
+      "XLarge", 
+      "2XLarge", 
+      "3XLarge", 
+      "4XLarge"
+    ],
     pricing: {
       Small: { price: 39.99 },
       Medium: { price: 39.99 },
@@ -568,7 +588,15 @@ export const catalog = [
     ],
     type: "mens",
     default_color: "Black",
-    sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge", "3XLarge", "4XLarge"],
+    sizes: [
+      "Small", 
+      "Medium", 
+      "Large", 
+      "XLarge", 
+      "2XLarge", 
+      "3XLarge", 
+      "4XLarge"
+    ],
     pricing: {
       Small: { price: 62.99 },
       Medium: { price: 62.99 },
@@ -586,7 +614,13 @@ export const catalog = [
     colors: ["Anthracite", "Black", "Cool Grey", "Navy", "White"],
     type: "womens",
     default_color: "Black",
-    sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge"],
+    sizes: [
+      "Small", 
+      "Medium", 
+      "Large", 
+      "XLarge", 
+      "2XLarge"
+    ],
     pricing: {
       Small: { price: 39.99 },
       Medium: { price: 39.99 },
@@ -609,7 +643,15 @@ export const catalog = [
     ],
     type: "mens",
     default_color: "Black",
-    sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge", "3XLarge", "4XLarge"],
+    sizes: [
+      "Small", 
+      "Medium", 
+      "Large", 
+      "XLarge", 
+      "2XLarge", 
+      "3XLarge", 
+      "4XLarge"
+    ],
     pricing: {
       Small: { price: 67 },
       Medium: { price: 67 },
@@ -634,7 +676,15 @@ export const catalog = [
     ],
     type: "mens",
     default_color: "Black",
-    sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge", "3XLarge", "4XLarge"],
+    sizes: [
+      "Small", 
+      "Medium", 
+      "Large", 
+      "XLarge", 
+      "2XLarge", 
+      "3XLarge", 
+      "4XLarge"
+    ],
     pricing: {
       Small: { price: 56 },
       Medium: { price: 56 },
@@ -696,7 +746,15 @@ export const catalog = [
     colors: ["Blacktop"],
     type: "mens",
     default_color: "Blacktop",
-    sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge", "3XLarge", "4XLarge"],
+    sizes: [
+      "Small", 
+      "Medium", 
+      "Large", 
+      "XLarge", 
+      "2XLarge", 
+      "3XLarge", 
+      "4XLarge"
+    ],
     pricing: {
       Small: { price: 32.99 },
       Medium: { price: 32.99 },
@@ -714,7 +772,15 @@ export const catalog = [
     colors: ["Blacktop"],
     type: "womens",
     default_color: "Blacktop",
-    sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge", "3XLarge", "4XLarge"],
+    sizes: [
+      "Small", 
+      "Medium", 
+      "Large", 
+      "XLarge", 
+      "2XLarge", 
+      "3XLarge", 
+      "4XLarge"
+    ],
     pricing: {
       Small: { price: 32.99 },
       Medium: { price: 32.99 },
@@ -788,7 +854,15 @@ export const catalog = [
     colors: ["Black"],
     type: "mens",
     default_color: "Black",
-    sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge", "3XLarge", "4XLarge"],
+    sizes: [
+      "Small", 
+      "Medium", 
+      "Large", 
+      "XLarge", 
+      "2XLarge", 
+      "3XLarge", 
+      "4XLarge"
+    ],
     pricing: {
       Small: { price: 10.99 },
       Medium: { price: 10.99 },
@@ -814,7 +888,15 @@ export const catalog = [
     ],
     type: "mens",
     default_color: "Black",
-    sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge", "3XLarge", "4XLarge"],
+    sizes: [
+      "Small", 
+      "Medium", 
+      "Large", 
+      "XLarge", 
+      "2XLarge", 
+      "3XLarge", 
+      "4XLarge"
+    ],
     pricing: {
       Small: { price: 29.99 },
       Medium: { price: 29.99 },
@@ -843,7 +925,15 @@ export const catalog = [
     ],
     type: "mens",
     default_color: "Jet Black",
-    sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge", "3XLarge", "4XLarge"],
+    sizes: [
+      "Small", 
+      "Medium", 
+      "Large", 
+      "XLarge", 
+      "2XLarge", 
+      "3XLarge", 
+      "4XLarge"
+    ],
     pricing: {
       Small: { price: 23.99 },
       Medium: { price: 23.99 },
@@ -871,7 +961,15 @@ export const catalog = [
     ],
     type: "mens",
     default_color: "Jet Black",
-    sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge", "3XLarge", "4XLarge"],
+    sizes: [
+      "Small", 
+      "Medium", 
+      "Large", 
+      "XLarge", 
+      "2XLarge", 
+      "3XLarge", 
+      "4XLarge"
+    ],
     pricing: {
       Small: { price: 31.98 },
       Medium: { price: 31.98 },
@@ -889,7 +987,15 @@ export const catalog = [
     colors: ["Deep Black", "Grey Steel", "True Navy"],
     type: "mens",
     default_color: "Deep Black",
-    sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge", "3XLarge", "4XLarge"],
+    sizes: [
+      "Small", 
+      "Medium", 
+      "Large", 
+      "XLarge", 
+      "2XLarge", 
+      "3XLarge", 
+      "4XLarge"
+    ],
     pricing: {
       Small: { price: 41.98 },
       Medium: { price: 41.98 },
@@ -907,7 +1013,14 @@ export const catalog = [
     colors: ["Black", "Blue Nights", "Drk Gry Hthr", "Light Blue Hthr"],
     type: "mens",
     default_color: "Black",
-    sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge", "3XLarge"],
+    sizes: [
+      "Small", 
+      "Medium", 
+      "Large", 
+      "XLarge", 
+      "2XLarge", 
+      "3XLarge"
+    ],
     pricing: {
       Small: { price: 104 },
       Medium: { price: 104 },
@@ -924,7 +1037,15 @@ export const catalog = [
     colors: ["Black"],
     type: "womens",
     default_color: "Black",
-    sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge", "3XLarge", "4XLarge"],
+    sizes: [
+      "Small", 
+      "Medium", 
+      "Large", 
+      "XLarge", 
+      "2XLarge", 
+      "3XLarge", 
+      "4XLarge"
+    ],
     pricing: {
       Small: { price: 49.99 },
       Medium: { price: 49.99 },
@@ -969,10 +1090,24 @@ export const catalog = [
     code: "J333",
     name: "Torrent Waterproof Jacket #J333",
     fullname: "Port Authority® Torrent Waterproof Jacket (J333)",
-    colors: ["Black", "Engine Red", "Magnet", "True Navy", "True Royal"],
+    colors: [
+      "Black", 
+      "Engine Red", 
+      "Magnet", 
+      "True Navy", 
+      "True Royal"
+    ],
     type: "mens",
     default_color: "Black",
-    sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge", "3XLarge", "4XLarge"],
+    sizes: [
+      "Small", 
+      "Medium", 
+      "Large", 
+      "XLarge", 
+      "2XLarge", 
+      "3XLarge", 
+      "4XLarge"
+    ],
     pricing: {
       Small: { price: 64.99 },
       Medium: { price: 64.99 },
@@ -990,7 +1125,15 @@ export const catalog = [
     colors: ["Black"],
     type: "mens",
     default_color: "Black",
-    sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge", "3XLarge", "4XLarge"],
+    sizes: [
+      "Small", 
+      "Medium", 
+      "Large", 
+      "XLarge", 
+      "2XLarge", 
+      "3XLarge", 
+      "4XLarge"
+    ],
     pricing: {
       Small: { price: 124 },
       Medium: { price: 124 },
@@ -1248,7 +1391,7 @@ export const catalog = [
     name: "Zinc Metal Frame",
     fullname: "Zinc Metal Frame w/glossy black imprint",
     type: "customs",
-    default_color: "Metal",
+    disableColorSelector: true,
     supportedStores: ["HENLAT"],
     quantities: [500, 1000, 1500, 2500],
     pricing: {
@@ -1262,7 +1405,7 @@ export const catalog = [
     name: "Poly Coated Plate",
     fullname: "Poly Coated Plate w/black imprint",
     type: "customs",
-    default_color: "Black",
+    disableColorSelector: true,
     supportedStores: ["HENLAT"],
     quantities: [500, 1000, 1500, 2500],
     pricing: {
@@ -1276,7 +1419,7 @@ export const catalog = [
     name: "Poly Coated Plate",
     fullname: "Poly Coated Plate w/black imprint",
     type: "customs",
-    default_color: "Black",
+    disableColorSelector: true,
     supportedStores: ["HENLAL"],
     quantities: [500, 1000, 1500, 2500],
     pricing: {
@@ -1290,7 +1433,7 @@ export const catalog = [
     name: "Plastic Plate",
     fullname: "Plastic plate w/full color imprint",
     type: "customs",
-    default_color: "Black",
+    disableColorSelector: true,
     supportedStores: ["HENLAT"],
     quantities: [500, 1000, 1500, 2500],
     pricing: {
@@ -1304,7 +1447,7 @@ export const catalog = [
     name: "Plastic Plate",
     fullname: "Plastic plate w/black imprint",
     type: "customs",
-    default_color: "Black",
+    disableColorSelector: true,
     supportedStores: ["HENLAT"],
     quantities: [500, 1000, 1500, 2500],
     pricing: {
@@ -1318,7 +1461,7 @@ export const catalog = [
     name: "Test Drive Plate",
     fullname: "TEST DRIVE - Plastic Plate w/black imprint",
     type: "customs",
-    default_color: "Black",
+    disableColorSelector: true,
     supportedStores: ["HENPRO"],
     quantities: [500, 1000, 1500, 2500],
     pricing: {
@@ -1332,7 +1475,7 @@ export const catalog = [
     name: "Test Drive Plate",
     fullname: "TEST DRIVE - Plastic Plate w/black imprint",
     type: "customs",
-    default_color: "Black",
+    disableColorSelector: true,
     supportedStores: ["HENPMA"],
     quantities: [500, 1000, 1500, 2500],
     pricing: {
@@ -1346,7 +1489,7 @@ export const catalog = [
     name: "Black Metal Frame",
     fullname: "Black Metal Frame w/white imprint",
     type: "customs",
-    default_color: "Black",
+    disableColorSelector: true,
     supportedStores: ["HENPRO"],
     quantities: [500, 1000, 1500, 2500],
     pricing: {
@@ -1360,7 +1503,7 @@ export const catalog = [
     name: "Black Metal Frame",
     fullname: "Black Metal Frame w/white imprint",
     type: "customs",
-    default_color: "Black",
+    disableColorSelector: true,
     supportedStores: ["HENPMA"],
     quantities: [500, 1000, 1500, 2500],
     pricing: {
@@ -1375,7 +1518,7 @@ export const catalog = [
     fullname: "Decal Thermo Die Cut Decal",
     colors: ["Black", "Silver", "White"],
     type: "customs",
-    default_color: "Black",
+    disableColorSelector: true,
     supportedStores: ["HENFAT"],
     quantities: [500, 1000, 1500, 2500],
     pricing: {
@@ -1389,7 +1532,7 @@ export const catalog = [
     name: "Die Cut Decal",
     fullname: "Black Vinyl Die Cut Decal",
     type: "customs",
-    default_color: "Black",
+    disableColorSelector: true,
     supportedStores: ["HENMMO"],
     quantities: [500, 1000, 1500, 2500],
     pricing: {
@@ -1403,7 +1546,7 @@ export const catalog = [
     name: "Aluminum Embossed Plate",
     fullname: "Aluminum Plate w/black imprint",
     type: "customs",
-    default_color: "Black",
+    disableColorSelector: true,
     supportedStores: ["HENFAT"],
     quantities: [500, 1000, 1500, 2500],
     pricing: {
@@ -1417,7 +1560,7 @@ export const catalog = [
     name: "Aluminum Embossed Plate",
     fullname: "White Aluminum Plate w/blue imprint",
     type: "customs",
-    default_color: "White",
+    disableColorSelector: true,
     supportedStores: ["HENFAT"],
     quantities: [500, 1000, 1500, 2500],
     pricing: {
@@ -1431,7 +1574,7 @@ export const catalog = [
     name: "Zinc Metal Frame",
     fullname: "Standard Zinc Metal Frame",
     type: "customs",
-    default_color: "Metal",
+    disableColorSelector: true,
     supportedStores: ["HENFAT"],
     quantities: [500, 1000, 1500, 2500],
     pricing: {
@@ -1445,7 +1588,7 @@ export const catalog = [
     name: "3D Plastic Plate",
     fullname: "Black 3D Plastic Plate w/matte silver imprint",
     type: "customs",
-    default_color: "Black",
+    disableColorSelector: true,
     supportedStores: ["HENLDU"],
     quantities: [500, 1000, 1500, 2500],
     pricing: {
@@ -1459,7 +1602,7 @@ export const catalog = [
     name: "Zinc Metal Frame",
     fullname: "Zinc Metal Frame w/black imprint",
     type: "customs",
-    default_color: "Metal",
+    disableColorSelector: true,
     supportedStores: ["HENLDU"],
     quantities: [500, 1000, 1500, 2500],
     pricing: {
@@ -1473,7 +1616,7 @@ export const catalog = [
     name: "Black Metal Frame",
     fullname: "Black Metal Frame w/white imprint",
     type: "customs",
-    default_color: "Black",
+    disableColorSelector: true,
     supportedStores: ["HENCDU"],
     quantities: [500, 1000, 1500, 2500],
     pricing: {
@@ -1487,7 +1630,7 @@ export const catalog = [
     name: "Certified Tag",
     fullname: "Lexus Certified Tag",
     type: "customs",
-    default_color: "Black",
+    disableColorSelector: true,
     supportedStores: ["HENLDU"],
     quantities: [500, 1000, 1500, 2500],
     pricing: {
@@ -1501,7 +1644,7 @@ export const catalog = [
     name: "Land Rover Tag",
     fullname: "Land Rover Black Tag",
     type: "customs",
-    default_color: "Black",
+    disableColorSelector: true,
     supportedStores: ["HENADU"],
     quantities: [500, 1000, 1500, 2500],
     pricing: {
@@ -1515,7 +1658,7 @@ export const catalog = [
     name: "Poly Coated Plate",
     fullname: "White Poly Coated Plate w/black & 36 metallic imprint",
     type: "customs",
-    default_color: "White",
+    disableColorSelector: true,
     supportedStores: ["HENLDU"],
     quantities: [500, 1000, 1500, 2500],
     pricing: {
@@ -1529,7 +1672,7 @@ export const catalog = [
     name: "Drive Out Tag",
     fullname: "White Poly Coated Plate w/black & 36 metallic gold imprint",
     type: "customs",
-    default_color: "White",
+    disableColorSelector: true,
     supportedStores: ["HENCDU"],
     quantities: [500, 1000, 1500, 2500],
     pricing: {
@@ -1543,7 +1686,7 @@ export const catalog = [
     name: "Hang Tag",
     fullname: "VIP OFFER Hang Tag",
     type: "service",
-    default_color: "White",
+    disableColorSelector: true,
     quantities: [500, 1000],
     pricing: {
       base: {
@@ -1559,7 +1702,7 @@ export const catalog = [
     name: "Hang Tag",
     fullname: "SOLD Hang Tag",
     type: "service",
-    default_color: "White",
+    disableColorSelector: true,
     quantities: [1000, 2500],
     pricing: {
       base: {
@@ -1575,7 +1718,7 @@ export const catalog = [
     name: "Poly Coated Plate",
     fullname: "Poly Coated Cardboard w/black/blue imprint",
     type: "customs",
-    default_color: "Black",
+    disableColorSelector: true,
     supportedStores: ["HENFAT"],
     quantities: [500, 1000, 1500, 2500],
     pricing: {
@@ -1589,7 +1732,7 @@ export const catalog = [
     name: "Poly Coated Plate",
     fullname: "Poly Coated Cardboard w/dark green imprint",
     type: "customs",
-    default_color: "Dk Green",
+    disableColorSelector: true,
     supportedStores: ["HENADU"],
     quantities: [500, 1000, 1500, 2500],
     pricing: {
@@ -1603,7 +1746,7 @@ export const catalog = [
     name: "Die Cut Decal",
     fullname: "Black & 285 Blue Die Cut Decal (screened on clear)",
     type: "customs",
-    default_color: "Black",
+    disableColorSelector: true,
     supportedStores: ["HENHWO"],
     quantities: [500, 1000, 1500, 2500],
     pricing: {
@@ -1617,7 +1760,7 @@ export const catalog = [
     name: "Drive Out Tag",
     fullname: "Poly Coated Cardboard w/black & 293 blue imprint",
     type: "customs",
-    default_color: "White",
+    disableColorSelector: true,
     supportedStores: ["HENHWO"],
     quantities: [500, 1000, 1500, 2500],
     pricing: {
@@ -1631,7 +1774,7 @@ export const catalog = [
     name: "Hennessy Cadillac Tag",
     fullname: "Poly Coated Cardboard w/cool gray 11 imprint",
     type: "customs",
-    default_color: "White",
+    disableColorSelector: true,
     supportedStores: ["HENCDU"],
     quantities: [500, 1000, 1500, 2500],
     pricing: {
@@ -1645,7 +1788,7 @@ export const catalog = [
     name: "Chrome Plated Frame",
     fullname: "Chrome Plated Frame w/black imprint",
     type: "customs",
-    default_color: "Chrome Plated",
+    disableColorSelector: true,
     supportedStores: ["HENHWO"],
     quantities: [500, 1000, 1500, 2500],
     pricing: {
@@ -1659,7 +1802,7 @@ export const catalog = [
     name: "Chrome Faced Frame",
     fullname: "Chrome Faced Frame w/black imprint",
     type: "customs",
-    default_color: "Chrome",
+    disableColorSelector: true,
     supportedStores: ["HENADU"],
     quantities: [500, 1000, 1500, 2500],
     pricing: {
@@ -1673,7 +1816,7 @@ export const catalog = [
     name: "Chrome Faced Frame",
     fullname: "Chrome Faced Frame w/black imprint",
     type: "customs",
-    default_color: "Chrome",
+    disableColorSelector: true,
     supportedStores: ["HENMMO"],
     quantities: [500, 1000, 1500, 2500],
     pricing: {
@@ -1687,7 +1830,7 @@ export const catalog = [
     name: "Chrome Faced Frame",
     fullname: "Chrome Faced Frame w/black imprint",
     type: "customs",
-    default_color: "Chrome",
+    disableColorSelector: true,
     supportedStores: ["HENMMO"],
     quantities: [500, 1000, 1500, 2500],
     pricing: {
@@ -1701,7 +1844,7 @@ export const catalog = [
     name: "Chrome Faced Frame",
     fullname: "Chrome Faced Frame w/black imprint",
     type: "customs",
-    default_color: "Chrome Faced",
+    disableColorSelector: true,
     supportedStores: ["HENLAL"],
     quantities: [500, 1000, 1500, 2500],
     pricing: {
@@ -1715,7 +1858,7 @@ export const catalog = [
     name: "Chrome Faced Frame",
     fullname: "Chrome Faced Frame w/black imprint",
     type: "customs",
-    default_color: "Chrome",
+    disableColorSelector: true,
     supportedStores: ["HENCDU"],
     quantities: [500, 1000, 1500, 2500],
     pricing: {
@@ -1729,7 +1872,7 @@ export const catalog = [
     name: "Domecal Hitch Cover",
     fullname: "Domecal Hitch Cover",
     type: "customs",
-    default_color: "Black",
+    disableColorSelector: true,
     supportedStores: ["HENMMO"],
     quantities: [250],
     pricing: {
@@ -1743,7 +1886,7 @@ export const catalog = [
     name: "3D Tag",
     fullname: "3D Black Plate w/white imprint",
     type: "customs",
-    default_color: "Black",
+    disableColorSelector: true,
     supportedStores: ["HENHWO"],
     quantities: [500, 1000, 1500, 2500],
     pricing: {
@@ -1757,7 +1900,7 @@ export const catalog = [
     name: "Service Due Sticker",
     fullname: "Service Due Sticker w/QR code",
     type: "service",
-    default_color: "White",
+    disableColorSelector: true,
     quantities: [5000, 10000],
     pricing: {
       base: {
@@ -1773,7 +1916,7 @@ export const catalog = [
     name: "Caution Sticker - Cadillac Duluth",
     fullname: "40 Mineral Orange Vinyl Sticker w/black imprint",
     type: "service",
-    default_color: "Orange",
+    disableColorSelector: true,
     quantities: [1500],
     pricing: {
       base: {
@@ -1786,7 +1929,7 @@ export const catalog = [
     name: "SVC Certificate - Cadillac Duluth",
     fullname: "Free Service Certificate",
     type: "service",
-    default_color: "Black",
+    disableColorSelector: true,
     quantities: [500],
     pricing: {
       base: {
@@ -1799,7 +1942,7 @@ export const catalog = [
     name: "Blue Maxiglide Pen - Cadillac Duluth",
     fullname: "Blue Maxiglide Pure Pen w/white imprint (#582)",
     type: "accessory",
-    default_color: "Blue",
+    disableColorSelector: true,
     quantities: [100, 250, 500, 1000, 1500],
     pricing: {
       base: {
@@ -1812,7 +1955,7 @@ export const catalog = [
     name: "15oz. Mug w/imprint",
     fullname: "Royal 15oz. Ember Mug w/silver imprint",
     type: "accessory",
-    default_color: "Royal",
+    disableColorSelector: true,
     quantities: [100, 250, 500, 1000, 1500],
     pricing: {
       base: {
@@ -1825,7 +1968,7 @@ export const catalog = [
     name: "15oz. Mug w/imprint",
     fullname: "Black 15oz. Mug w/laser engraved imprint",
     type: "accessory",
-    default_color: "Black",
+    disableColorSelector: true,
     quantities: [100, 250, 500, 1000, 1500],
     pricing: {
       base: {
@@ -1838,7 +1981,7 @@ export const catalog = [
     name: "Black Kan-Tastic - Cadillac Duluth",
     fullname: "Black Kan-Tastic w/white imprint (#34)",
     type: "accessory",
-    default_color: "Black",
+    disableColorSelector: true,
     quantities: [100, 250, 500, 1000, 1500],
     pricing: {
       base: {
@@ -1851,7 +1994,7 @@ export const catalog = [
     name: "Black 24oz Bottle - Cadillac Duluth",
     fullname: "Black 24oz Stainless Steel Bottle w/white imprint (#50240)",
     type: "accessory",
-    default_color: "Black",
+    disableColorSelector: true,
     quantities: [100, 250, 500, 1000, 1500],
     pricing: {
       base: {
@@ -1864,7 +2007,7 @@ export const catalog = [
     name: "Vinyl Tote w/imprint",
     fullname: "Vinyl Tote w/full color imprint",
     type: "accessory",
-    default_color: "Black",
+    disableColorSelector: true,
     quantities: [100, 250, 500, 1000, 1500],
     pricing: {
       base: {
@@ -1877,7 +2020,7 @@ export const catalog = [
     name: "Matte Tote 8 x 10 x 4",
     fullname: "White Matte Laminated Euro Tote w/black imprint (8x10x4)",
     type: "accessory",
-    default_color: "White",
+    disableColorSelector: true,
     quantities: [100, 250, 500, 1000, 1500],
     pricing: {
       base: {
@@ -1890,7 +2033,7 @@ export const catalog = [
     name: "Laminated Tote 13 x 10 x 5",
     fullname: "White Gloss Laminated Euro Tote w/black imprint (13x10x5)",
     type: "accessory",
-    default_color: "White",
+    disableColorSelector: true,
     quantities: [100, 250, 500, 1000, 1500],
     pricing: {
       base: {
@@ -1903,7 +2046,7 @@ export const catalog = [
     name: "Laminated Tote 16 x 12 x 6",
     fullname: "White Gloss Laminated Euro Tote w/black imprint (16x12x6)",
     type: "accessory",
-    default_color: "White",
+    disableColorSelector: true,
     quantities: [100, 250, 500, 1000, 1500],
     pricing: {
       base: {
@@ -1916,7 +2059,7 @@ export const catalog = [
     name: "Laminated Tote w/imprint",
     fullname: "Black Gloss Laminated Tote w/white imprint",
     type: "accessory",
-    default_color: "Black",
+    disableColorSelector: true,
     quantities: [100, 250, 500, 1000, 1500],
     pricing: {
       base: {

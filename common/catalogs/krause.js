@@ -706,7 +706,7 @@ export const catalog = [
     description: `500 @ $0.99 ea / 1000 @ $0.79 ea
 Ford Lincoln (4 in. x 1.18 in.)
 Lincoln (4 in. x 1.69 in.)
-GREY DOES NOT PRINT ON DECALS.`,    
+Grey does not print on white decal.`,    
     type: "customs",
     supportedStores: ["KRAFAL"],
     disableColorSelector: true,    
