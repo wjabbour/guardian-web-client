@@ -374,9 +374,8 @@ export const catalog = [
     name: "Steering Wheel Covers",
     fullname: "Steering Wheel Covers", 
     description: "Sold in boxes of 500",  
-    colors: ["Plastic"],
-    type: "service",
-    default_color: "Plastic",    
+    disableColorSelector: true,
+    type: "service",       
     quantities: [1, 2, 3, 4, 5],
     pricing: {
       base: {
@@ -430,9 +429,8 @@ export const catalog = [
     name: "Plastic Seat Covers (roll)",
     fullname: "No-Slip Plastic Seat Covers",
     description: "Sold in rolls of 500",
-    colors: ["Plastic"],
-    type: "service",
-    default_color: "Plastic", 
+    disableColorSelector: true,
+    type: "service",     
     quantities: [1, 2, 3, 4, 5],    
     pricing: {
       base: {

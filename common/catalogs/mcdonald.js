@@ -210,9 +210,8 @@ export const catalog = [
     code: "MCDONALD-PFRAMEI",
     name: "Black Plastic Frame",
     fullname: "Black Plastic Frame w/white imprint",
-    colors: ["Black"],
-    type: "customs",
-    default_color: "Black",    
+    disableColorSelector: true,
+    type: "customs",        
     quantities: [250, 500, 1000],
     pricing: {
       base: {
@@ -238,9 +237,8 @@ export const catalog = [
     code: "MCDONALD-CPMO",
     name: "Chrome Plastic Nameplate",
     fullname: "Chrome-Plated Plastic Nameplates",
-    colors: ["Chrome"],
-    type: "customs",
-    default_color: "Chrome",    
+    disableColorSelector: true,
+    type: "customs",        
     quantities: [250, 500, 1000],
     pricing: {
       base: {
@@ -252,9 +250,8 @@ export const catalog = [
     code: "MCDONALD-BPMO",
     name: "Black Plastic Nameplate",
     fullname: "Black Plastic Nameplates",
-    colors: ["Black"],
-    type: "customs",
-    default_color: "Black",    
+    disableColorSelector: true,
+    type: "customs",       
     quantities: [250, 500, 1000],
     pricing: {
       base: {
@@ -266,9 +263,8 @@ export const catalog = [
     code: "MCDONALD-33GT",
     name: ".20 Gauge Plastic Plate",
     fullname: ".20 Gauge White Plastic Plate",
-    colors: ["White"],
-    type: "customs",
-    default_color: "White",    
+    disableColorSelector: true,
+    type: "customs",        
     quantities: [250, 500, 1000],
     pricing: {
       base: {
@@ -280,9 +276,8 @@ export const catalog = [
     code: "GENOLI-33P-513164A",
     name: ".20 Gauge Plastic Plate",
     fullname: ".20 Gauge White Plastic Plate",
-    colors: ["White"],
-    type: "customs",
-    default_color: "White",    
+    disableColorSelector: true,
+    type: "customs",       
     quantities: [250, 500, 1000],
     pricing: {
       base: {
@@ -294,9 +289,8 @@ export const catalog = [
     code: "AUDPCO-33GT-513166Z",
     name: ".20 Gauge Plastic Plate",
     fullname: ".20 Gauge White Plastic Plate (4CP)",
-    colors: ["White"],
-    type: "customs",
-    default_color: "White",    
+    disableColorSelector: true,
+    type: "customs",       
     quantities: [250, 500, 1000],
     pricing: {
       base: {
@@ -308,9 +302,8 @@ export const catalog = [
     code: "MCDADE-33GT-513167Z",
     name: ".20 Gauge Plastic Plate",
     fullname: ".20 Gauge White Plastic Plate (4CP)",
-    colors: ["White"],
-    type: "customs",
-    default_color: "White",    
+    disableColorSelector: true,
+    type: "customs",        
     quantities: [250, 500, 1000],
     pricing: {
       base: {
@@ -322,9 +315,8 @@ export const catalog = [
     code: "POLDEN-33GT-513165Z",
     name: ".20 Gauge Plastic Plate",
     fullname: ".20 Gauge White Plastic Plate",
-    colors: ["White"],
-    type: "customs",
-    default_color: "White",    
+    disableColorSelector: true,
+    type: "customs",        
     quantities: [250, 500, 1000],
     pricing: {
       base: {
@@ -336,9 +328,8 @@ export const catalog = [
     code: "MCDMLA-33GT-513170Z",
     name: ".20 Gauge Plastic Plate",
     fullname: ".20 Gauge White Plastic Plate (4CP)",
-    colors: ["White"],
-    type: "customs",
-    default_color: "White",    
+    disableColorSelector: true,
+    type: "customs",        
     quantities: [250, 500, 1000],
     pricing: {
       base: {
@@ -350,9 +341,8 @@ export const catalog = [
     code: "MCDMLO-33GT-513168Z",
     name: ".20 Gauge Plastic Plate",
     fullname: ".20 Gauge White Plastic Plate (4CP)",
-    colors: ["White"],
-    type: "customs",
-    default_color: "White",    
+    disableColorSelector: true,
+    type: "customs",       
     quantities: [250, 500, 1000],
     pricing: {
       base: {
@@ -364,9 +354,8 @@ export const catalog = [
     code: "MCDMLI-33GT-513169Z",
     name: ".20 Gauge Plastic Plate",
     fullname: ".20 Gauge White Plastic Plate (4CP)",
-    colors: ["White"],
-    type: "customs",
-    default_color: "White",    
+    disableColorSelector: true,
+    type: "customs",       
     quantities: [500],
     pricing: {
       base: {
@@ -378,9 +367,8 @@ export const catalog = [
     code: "MCDHLI-33GT-513176Z",
     name: ".20 Gauge Plastic Plate",
     fullname: ".20 Gauge White Plastic Plate (4CP)",
-    colors: ["White"],
-    type: "customs",
-    default_color: "White",    
+    disableColorSelector: true,
+    type: "customs",        
     quantities: [250, 500, 1000],
     pricing: {
       base: {
@@ -392,9 +380,8 @@ export const catalog = [
     code: "MCDNHI-33GT-513172Z",
     name: ".20 Gauge Plastic Plate",
     fullname: ".20 Gauge White Plastic Plate (4CP)",
-    colors: ["White"],
-    type: "customs",
-    default_color: "White",    
+    disableColorSelector: true,
+    type: "customs",      
     quantities: [250, 500, 1000],
     pricing: {
       base: {
@@ -406,9 +393,8 @@ export const catalog = [
     code: "MCDTCO-33GT-513173Z",
     name: ".20 Gauge Plastic Plate",
     fullname: ".20 Gauge White Plastic Plate (4CP)",
-    colors: ["White"],
-    type: "customs",
-    default_color: "White",    
+    disableColorSelector: true,
+    type: "customs",       
     quantities: [250, 500, 1000],
     pricing: {
       base: {
@@ -420,9 +406,8 @@ export const catalog = [
     code: "MCDVLI-33GT-513174Z",
     name: ".20 Gauge Plastic Plate",
     fullname: ".20 Gauge White Plastic Plate (4CP)",
-    colors: ["White"],
-    type: "customs",
-    default_color: "White",    
+    disableColorSelector: true,
+    type: "customs",       
     quantities: [250, 500, 1000],
     pricing: {
       base: {
@@ -434,9 +419,8 @@ export const catalog = [
     code: "MCDVLT-33GT-513175Z",
     name: ".20 Gauge Plastic Plate",
     fullname: ".20 Gauge White Plastic Plate (4CP)",
-    colors: ["White"],
-    type: "customs",
-    default_color: "White",    
+    disableColorSelector: true,
+    type: "customs",        
     quantities: [250, 500, 1000],
     pricing: {
       base: {
@@ -448,9 +432,8 @@ export const catalog = [
     code: "3088",
     name: "Floor Mats",
     fullname: "Floor Mats/Coated Paper (500/bx)",
-    colors: ["White"],
-    type: "service",
-    default_color: "White",    
+    disableColorSelector: true,
+    type: "service",       
     pricing: {
       base: {
         price: 46.00,
@@ -461,9 +444,8 @@ export const catalog = [
     code: "600088V",
     name: "Seat Covers",
     fullname: "No-Slip Plastic Seat Covers (500/roll)",
-    colors: ["Plastic"],
-    type: "service",
-    default_color: "Plastic",
+    disableColorSelector: true,
+    type: "service",    
     pricing: {
       base: {
         price: 48.00,
@@ -513,9 +495,8 @@ export const catalog = [
     code: "55-010",
     name: "Steering Wheel Covers",
     fullname: "Steering Wheel Covers (500/bx)",
-    colors: ["Plastic"],
-    type: "service",
-    default_color: "Plastic",    
+    disableColorSelector: true,
+    type: "service",        
     pricing: {
       base: {
         price: 51.99,

@@ -51,7 +51,7 @@ export const config = {
       code: "ORRHHO",
     }, 
     {
-      name: "Gregg Orr Honda (Hot Springs)",
+      name: "Gregg Orr Toyota (Hot Springs)",
       address: "4709 Central Ave, Hot Springs, AR 71913",
       code: "ORRTHO",
     }, 
@@ -59,6 +59,11 @@ export const config = {
       name: "Orr Motors Cadillac GMC (Longview)",
       address: "400 TX-63 Spur N, Longview, TX 75601",
       code: "ORRMLO",
+    },
+    {
+      name: "Orr Chrysler Dodge Jeep (Searcy)",
+      address: "900 Truman Baker Dr, Searcy, AR 72143",
+      code: "ORRCSE",
     },
     {
       name: "Orr GM SuperStore (Searcy)",

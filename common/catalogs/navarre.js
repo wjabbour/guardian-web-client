@@ -96,9 +96,8 @@ export const catalog = [
     code: "NAVCLA-34CF-484294A",
     name: "Black Plastic Frame",
     fullname: "Black Plastic Chrome-Faced Frame",
-    colors: ["Chrome Faced"],
-    type: "customs",
-    default_color: "Chrome Faced",
+    disableColorSelector: true,
+    type: "customs",    
     supportedStores: ["NAVHLK"],
     quantities: [1000, 2500, 5000, 10000],
     pricing: {
@@ -116,9 +115,8 @@ export const catalog = [
     code: "NAVCLA-34PE-450838A",
     name: "Black Plastic Frame",
     fullname: "Black Plastic Frame w/white imprint",
-    colors: ["Black"],
-    type: "customs",
-    default_color: "Black",
+    disableColorSelector: true,
+    type: "customs",    
     supportedStores: ["NAVHLK"],
     quantities: [1000, 2500, 5000, 10000],
     pricing: {
@@ -136,9 +134,8 @@ export const catalog = [
     code: "NAVARRE-COLLISION",
     name: "Full Color Sticker",
     fullname: "2 x 2 Navarre Collision Full Color Sticker",
-    colors: ["Full Color"],
-    type: "customs",
-    default_color: "Full Color",
+    disableColorSelector: true,
+    type: "customs",    
     supportedStores: [
       "NAVCLA",
       "NAVCSU",
@@ -165,9 +162,8 @@ export const catalog = [
     code: "NAVCLA-31SD-504429A",
     name: "CARS Decal",
     fullname: "CARS Decal - 4.5 in. x 1.11 in.",
-    colors: ["White"],
-    type: "customs",
-    default_color: "White",
+    disableColorSelector: true,
+    type: "customs",    
     supportedStores: [
       "NAVCLA",
       "NAVCSU",
@@ -193,9 +189,8 @@ export const catalog = [
     code: "NAVCLA-31SD-504428A",
     name: "TRUCKS Decal",
     fullname: "TRUCKS Decal - 6 in. x 1.48 in.",
-    colors: ["White"],
-    type: "customs",
-    default_color: "White",
+    disableColorSelector: true,
+    type: "customs",    
     supportedStores: [
       "NAVCLA",
       "NAVCSU",
@@ -221,9 +216,8 @@ export const catalog = [
     code: "NAVCLA-31DD-492125A",
     name: "Vinyl Die Cut Decal",
     fullname: "Vinyl Die Cut Decal - 12 in. x 1.875 in.",
-    colors: ["White"],
-    type: "customs",
-    default_color: "White",
+    disableColorSelector: true,
+    type: "customs",    
     supportedStores: [
       "NAVCLA",
       "NAVCSU",
@@ -246,9 +240,8 @@ export const catalog = [
     code: "59204navarre",
     name: "Laser Engraved Keychain",
     fullname: "Black Avner Curve Keychain w/laser engraved imprint",
-    colors: ["Metal"],
-    type: "accessory",
-    default_color: "Metal",
+    disableColorSelector: true,
+    type: "accessory",    
     quantities: [1000],
     pricing: {
       base: {
@@ -260,9 +253,8 @@ export const catalog = [
     code: "NAVHLK-PEN-511504Z",
     name: "Premium Metallic Pen",
     fullname: "Black Wrap Elite Slim Premium Metallic Pen w/4cp imprint",
-    colors: ["Metallic"],
-    type: "accessory",
-    default_color: "Metallic",
+    disableColorSelector: true,
+    type: "accessory",    
     quantities: [5000],
     pricing: {
       base: {
@@ -288,9 +280,8 @@ export const catalog = [
     code: "NAVHLK-PLATE-511843A",
     name: "7 in. Plastic Plate",
     fullname: "7 in. Plastic Plate w/287 blue imprint",
-    colors: ["White"],
-    type: "accessory",
-    default_color: "White",
+    disableColorSelector: true,
+    type: "accessory",    
     quantities: [1000],
     pricing: {
       base: {
@@ -302,9 +293,8 @@ export const catalog = [
     code: "NAVHLK-NAPKIN-511844A",
     name: "Colorware Luncheon Napkin",
     fullname: "Colorware Luncheon Napkin w/287 blue imprint",
-    colors: ["White"],
-    type: "accessory",
-    default_color: "White",
+    disableColorSelector: true,
+    type: "accessory",    
     pricing: {
       base: {
         price: 0.28,
@@ -315,9 +305,8 @@ export const catalog = [
     code: "NAVHLK-CUP-511837A",
     name: "16 oz. Plastic Cup",
     fullname: "Clear 16 oz. Soft-Sided Plastic Cup w/287 blue imprint",
-    colors: ["Clear"],
-    type: "accessory",
-    default_color: "Clear",
+    disableColorSelector: true,
+    type: "accessory",    
     pricing: {
       base: {
         price: 0.32,

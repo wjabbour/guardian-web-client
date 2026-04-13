@@ -4,7 +4,7 @@ export const catalog = [
     name: "Seat Covers",
     fullname: "No-Slip Plastic Seat Covers (500/roll)",
     type: "service",
-    default_color: "Plastic",
+    disableColorSelector: true,
     pricing: {
       base: {
         price: 73.5,
