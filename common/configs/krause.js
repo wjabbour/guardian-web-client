@@ -46,7 +46,12 @@ export const config = {
       name: "Angela Krause Ford (Alpharetta)",
       address: "1575 Mansell Rd, Alpharetta, GA 30009",
       code: "KRAFAL",
-    },              
+    },
+    {
+      name: "Honda of Roanoke Rapids",
+      address: "403 Premier Blvd, Roanoke Rapids, NC 27870",
+      code: "HONHRO",
+    },                  
     ],
   bypass_codes: ["TEST"],
   server_hostname: "https://mxfj3q6m01.execute-api.us-east-1.amazonaws.com",

@@ -666,7 +666,7 @@ export const catalog = [
     fullname: ".15 Gauge Plastic Plate - White w/ 285 blue imprint",
     disableColorSelector: true,
     type: "customs",        
-    supportedStores: ["KRAFAL"],
+    supportedStores: ["HONHRO"],
     quantities: [500, 1000],
     pricing: {
       base: {
@@ -683,7 +683,7 @@ export const catalog = [
     fullname: "Vinyl Die Cut Decal (3.5 in. x 2 in.)",
     description: `Grey does not print on white decal.`,
     type: "customs",
-    supportedStores: ["KRAFAL"],
+    supportedStores: ["HONHRO"],
     disableColorSelector: true,    
     quantities: [500, 1000],
     sapVariations: [
