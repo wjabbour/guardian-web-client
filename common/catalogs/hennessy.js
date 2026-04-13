@@ -1518,7 +1518,7 @@ export const catalog = [
     fullname: "Decal Thermo Die Cut Decal",
     colors: ["Black", "Silver", "White"],
     type: "customs",
-    disableColorSelector: true,
+    default_color: "Black",
     supportedStores: ["HENFAT"],
     quantities: [500, 1000, 1500, 2500],
     pricing: {
