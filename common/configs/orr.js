@@ -61,7 +61,7 @@ export const config = {
       code: "ORRMLO",
     },
     {
-      name: "Orr Chrysler Dodge Jeep (Searcy)",
+      name: "Orr Chrysler Dodge Jeep Ram (Searcy)",
       address: "900 Truman Baker Dr, Searcy, AR 72143",
       code: "ORRCSE",
     },
