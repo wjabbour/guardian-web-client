@@ -661,9 +661,48 @@ export const catalog = [
     },
   },
   {
+    code: "HONHRO-33P-525036A",
+    name: ".15 Gauge Plastic Plate",
+    fullname: ".15 Gauge Plastic Plate - White w/ 285 blue imprint",
+    disableColorSelector: true,
+    type: "customs",        
+    supportedStores: ["KRAFAL"],
+    quantities: [500, 1000],
+    pricing: {
+      base: {
+        price: .79,
+        discount: {
+          1000: .79,
+        },
+      },
+    },
+  },
+  {
+    code: "HONHRO-31DD",
+    name: "Die Cut Decals",
+    fullname: "Vinyl Die Cut Decal (3.5 in. x 2 in.)",
+    description: `Grey does not print on white decal.`,
+    type: "customs",
+    supportedStores: ["KRAFAL"],
+    disableColorSelector: true,    
+    quantities: [500, 1000],
+    sapVariations: [
+      {code: '-525340A', color:'Black'},
+      {code: '-525037A', color:'White'},           
+     ],
+    pricing: {
+      base: {
+        price: .99,
+        discount: {
+          1000: .79,          
+        }, 
+      },
+    },
+  },
+  {
     code: "KRAFAL-31DD",
     name: "Die Cut Decals",
-    fullname: "Die Cut Decals",
+    fullname: "Vinyl Die Cut Decal",
     description: `500 @ $0.99 ea / 1000 @ $0.79 ea
 Ford Lincoln (4 in. x 1.18 in.)
 Lincoln (4 in. x 1.69 in.)
