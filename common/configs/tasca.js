@@ -60,12 +60,7 @@ export const config = {
       name: "Tasca Buick GMC Palm Harbor",
       address: "30777 US Hwy 19 N, Palm Harbor, FL 34684",
       code: "TASBPA",
-    },
-    {
-      name: "Tasca Lincoln Palm Harbor",
-      address: "30801 US Hwy 19 N, Palm Harbor, FL 34684",
-      code: "TASLPA",
-    },
+    },    
     {
       name: "Tasca Buick GMC Woonsocket",
       address: "55 Fortin Drive, Woonsocket, RI 02895",
@@ -150,6 +145,11 @@ export const config = {
       name: "Tasca Lincoln",
       address: "1300 Pontiac Ave, Cranston, RI 02920",
       code: "TASLCR",
+    },
+    {
+      name: "Tasca Lincoln Palm Harbor",
+      address: "30801 US Hwy 19 N, Palm Harbor, FL 34684",
+      code: "TASLPA",
     },
     {
       name: "Tasca Mazda Cranston RI",
