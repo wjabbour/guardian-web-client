@@ -358,10 +358,9 @@ export const catalog = [
     code: "3088",
     name: "Paper Floor Mats",
     fullname: "Floor Mats - Coated Paper",
-    description: "Sold in boxes of 500",
-    colors: ["White"],
+    description: "Sold in boxes of 500",    
     type: "service",
-    default_color: "White",
+    disableColorSelector: true,
     quantities: [1, 2, 3, 4, 5],
     pricing: {
       base: {
@@ -413,10 +412,9 @@ export const catalog = [
     code: "3044",
     name: "Spring Rings",
     fullname: "Metal Spring Rings",
-    description: "Sold in bags of 250 rings",
-    colors: ["Metal"],
+    description: "Sold in bags of 250 rings",    
     type: "service",
-    default_color: "Metal", 
+    disableColorSelector: true,
     quantities: [1, 2, 3, 4, 5],    
     pricing: {
       base: {

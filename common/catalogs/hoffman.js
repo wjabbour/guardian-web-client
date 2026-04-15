@@ -752,7 +752,7 @@ export const catalog = [
     quantities: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
     pricing: {
       base: {
-        price: 45.61,
+        price: 39.00,
       },
     },
   },

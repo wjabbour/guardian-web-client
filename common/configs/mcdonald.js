@@ -8,7 +8,7 @@ export const config = {
     tshirts: [],
     accessory: [],
   },
-  show_image_preview: true,
+  show_image_preview: true,  
   embroideries: {
     hat: [],
     mens: [  

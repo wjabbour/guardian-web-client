@@ -205,7 +205,14 @@ export const catalog = [
     colors: ["Grey Concrete"],
     type: "womens",
     default_color: "Grey Concrete",
-    sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge", "3XLarge"],
+    sizes: [
+      "Small", 
+      "Medium", 
+      "Large", 
+      "XLarge", 
+      "2XLarge", 
+      "3XLarge"
+    ],
     pricing: {
       Small: { price: 25.99 },
       Medium: { price: 25.99 },
@@ -330,7 +337,15 @@ export const catalog = [
     colors: ["Black Heather", "Grey Heather"],
     type: "womens",
     default_color: "Black Heather",
-    sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge", "3XLarge", "4XLarge"],
+    sizes: [
+      "Small", 
+      "Medium", 
+      "Large", 
+      "XLarge", 
+      "2XLarge", 
+      "3XLarge", 
+      "4XLarge"
+    ],
     pricing: {
       Small: { price: 47.99 },
       Medium: { price: 47.99 },
@@ -360,7 +375,15 @@ export const catalog = [
     ],
     type: "mens",
     default_color: "Battleship Grey",
-    sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge", "3XLarge", "4XLarge"],
+    sizes: [
+      "Small", 
+      "Medium", 
+      "Large", 
+      "XLarge", 
+      "2XLarge", 
+      "3XLarge", 
+      "4XLarge"
+    ],
     pricing: {
       Small: { price: 44.00 },
       Medium: { price: 44.00 },
@@ -389,7 +412,15 @@ export const catalog = [
     ],
     type: "womens",
     default_color: "Battleship Grey",
-    sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge", "3XLarge", "4XLarge"],
+    sizes: [
+      "Small", 
+      "Medium", 
+      "Large", 
+      "XLarge", 
+      "2XLarge", 
+      "3XLarge", 
+      "4XLarge"
+    ],
     pricing: {
       Small: { price: 44.00 },
       Medium: { price: 44.00 },
@@ -404,7 +435,14 @@ export const catalog = [
     code: "CP80",
     name: "Port & Co™ Twill Cap #CP80",
     fullname: "Port & Co™ Six-Panel Twill Cap (CP80)",
-    colors: ["Black", "Charcoal", "Neon Pink", "Purple", "Royal", "True Red"],
+    colors: [
+      "Black", 
+      "Charcoal", 
+      "Neon Pink", 
+      "Purple", 
+      "Royal", 
+      "True Red"
+    ],
     type: "hat",
     default_color: "Black",
     sizes: ["OSFA"],
@@ -416,7 +454,13 @@ export const catalog = [
     code: "C402",
     name: "Port Authority Trucker Cap #C402",
     fullname: "Port Authority® Snapback Trucker Cap (C402)",
-    colors: ["Black", "FlameRed", "FlameRed Black", "FlameRed White", "White"],
+    colors: [
+      "Black", 
+      "FlameRed", 
+      "FlameRed Black", 
+      "FlameRed White", 
+      "White"
+    ],
     type: "hat",
     halfColors: ['FlameRed Black', 'FlameRed White'],
     default_color: "Black",
@@ -432,7 +476,14 @@ export const catalog = [
     colors: ["Iron Grey"],
     type: "tshirts",
     default_color: "Iron Grey",
-    sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge", "3XLarge"],
+    sizes: [
+      "Small", 
+      "Medium", 
+      "Large", 
+      "XLarge", 
+      "2XLarge", 
+      "3XLarge"
+    ],
     pricing: {
       Small: { price: 15.99 },
       Medium: { price: 15.99 },
@@ -449,7 +500,14 @@ export const catalog = [
     colors: ["Iron Grey"],
     type: "tshirts",
     default_color: "Iron Grey",
-    sizes: ["Small", "Medium", "Large", "XLarge", "2XLarge", "3XLarge"],
+    sizes: [
+      "Small", 
+      "Medium", 
+      "Large", 
+      "XLarge", 
+      "2XLarge", 
+      "3XLarge"
+    ],
     pricing: {
       Small: { price: 15.99 },
       Medium: { price: 15.99 },
@@ -462,10 +520,9 @@ export const catalog = [
   {
     code: "VAUCBU-6303RC-477213Z",
     name: "Vinyl Key Fob",
-    fullname: "Opaque White Soft Vinyl Fob w/full color imprint",
-    colors: ["White"],
+    fullname: "Opaque White Soft Vinyl Fob w/full color imprint",   
     type: "accessory",
-    default_color: "White",
+    disableColorSelector: true,
     description: "Sold in quantities of 1500",
     quantities: [1500],
     pricing: {
@@ -731,9 +788,8 @@ export const catalog = [
     name: "Seat Covers (roll)",
     fullname: "No-Slip Plastic Seat Covers (#600088V)",
     description: '500 seat covers per roll',
-    colors: ["Plastic"],
-    type: "service",
-    default_color: "Plastic",    
+    disableColorSelector: true,
+    type: "service",   
     pricing: {
       base: {
         price: 73.50,
@@ -745,9 +801,8 @@ export const catalog = [
     name: "Steering Wheel Covers",
     fullname: "Steering Wheel Covers (#55-010)",
     description:'500 covers per box',
-    colors: ["Plastic"],
-    type: "service",
-    default_color: "Plastic",    
+    disableColorSelector: true,
+    type: "service",        
     pricing: {
       base: {
         price: 59.99,
@@ -759,9 +814,8 @@ export const catalog = [
     name: "Spring Rings",
     fullname: "Metal Spring Rings (#3044)",
     description: '250 rings per pack',
-    colors: ["Metal"],
-    type: "service",
-    default_color: "Metal",
+    disableColorSelector: true,
+    type: "service",    
     pricing: {
       base: {
         price: 15.99,
@@ -773,9 +827,8 @@ export const catalog = [
     name: "Floor Mats",
     fullname: "Floor Mats/Coated Paper (#3088)",
     description: '500 mats per box',
-    colors: ["White"],
-    type: "service",
-    default_color: "White",    
+    disableColorSelector: true,
+    type: "service",       
     pricing: {
       base: {
         price: 76.44,
@@ -787,9 +840,8 @@ export const catalog = [
     name: "Night Drop Envelopes",
     fullname: "Night Drop Envelopes (#NDESTOCK)",
     description:'500 per box',
-    colors: ["White"],
-    type: "service",
-    default_color: "White",
+    disableColorSelector: true,
+    type: "service",    
     pricing: {
       base: {
         price: 99.00,
@@ -800,9 +852,8 @@ export const catalog = [
     code: "TH100",
     name: "Temp L/P Protector #TH100",
     fullname: "License Plate Protector (100/pk)",
-    colors: ["Clear"],
-    type: "sales",
-    default_color: "Clear",
+    disableColorSelector: true,
+    type: "sales",    
     description: '1 pack: $99.00, 10 packs: $80.00',
     quantities: [1, 10],
     pricing: {
@@ -818,9 +869,8 @@ export const catalog = [
     code: "7290",
     name: "Inspection Form - 3 Part",
     fullname: "Multi-Point Inspection Form - 3 Part (250/pk)",
-    colors: ["White"],
+    disableColorSelector: true,
     type: "service",
-    default_color: "White",
     pricing: {
       base: {
         price: 34.14,
@@ -831,9 +881,8 @@ export const catalog = [
     code: "7291",
     name: "Inspection Form - 2 Part",
     fullname: "Multi-Point Inspection Form - 2 Part (250/pk)",
-    colors: ["White"],
-    type: "service",
-    default_color: "White",
+    disableColorSelector: true,
+    type: "service",    
     pricing: {
       base: {
         price: 38.14,
@@ -844,9 +893,8 @@ export const catalog = [
     code: "7292",
     name: "Inspection Form - GM",
     fullname: "Multi-Point Inspection Form (GM) 3 Part (250/pk)",
-    colors: ["White"],
-    type: "service",
-    default_color: "White",
+    disableColorSelector: true,
+    type: "service",    
     pricing: {
       base: {
         price: 34.14,
@@ -857,9 +905,8 @@ export const catalog = [
     code: "7293",
     name: "Inspection Form CHRYSLER",
     fullname: "Multi-Point Inspection Form (Chrysler) 3 Part (250/pk)",
-    colors: ["White"],
-    type: "service",
-    default_color: "White",
+    disableColorSelector: true,
+    type: "service",    
     pricing: {
       base: {
         price: 45.00,
@@ -870,9 +917,8 @@ export const catalog = [
     code: "7294-01",
     name: "Inspection Form MAZDA",
     fullname: "Multi-Point Inspection Form (Mazda) 3 Part (250/pk)",
-    colors: ["White"],
-    type: "service",
-    default_color: "White",
+    disableColorSelector: true,
+    type: "service",    
     pricing: {
       base: {
         price: 34.14,
@@ -883,9 +929,8 @@ export const catalog = [
     code: "7294-05",
     name: "Inspection Form NISSAN",
     fullname: "Multi-Point Inspection Form (Nissan) 3 Part (250/pk)",
-    colors: ["White"],
-    type: "service",
-    default_color: "White",
+    disableColorSelector: true,
+    type: "service",    
     pricing: {
       base: {
         price: 45.00,
@@ -896,9 +941,8 @@ export const catalog = [
     code: "7296-0200",
     name: "Inspection Form TOYOTA",
     fullname: "Multi-Point Inspection Form (Toyota) 3 Part (250/pk)",
-    colors: ["White"],
-    type: "service",
-    default_color: "White",
+    disableColorSelector: true,
+    type: "service",    
     pricing: {
       base: {
         price: 45.00,
@@ -909,9 +953,8 @@ export const catalog = [
     code: "7298",
     name: "Inspection Form HONDA",
     fullname: "Multi-Point Inspection Form (Honda) 3 Part (250/pk)",
-    colors: ["White"],
-    type: "service",
-    default_color: "White",
+    disableColorSelector: true,
+    type: "service",    
     pricing: {
       base: {
         price: 34.14,
