@@ -62,6 +62,11 @@ export const config = {
       code: "TASBPA",
     },
     {
+      name: "Tasca Lincoln Palm Harbor",
+      address: "30801 US Hwy 19 N, Palm Harbor, FL 34684",
+      code: "TASLPA",
+    },
+    {
       name: "Tasca Buick GMC Woonsocket",
       address: "55 Fortin Drive, Woonsocket, RI 02895",
       code: "TASBWO",
