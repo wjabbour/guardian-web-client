@@ -670,7 +670,7 @@ export const catalog = [
     quantities: [500, 1000],
     pricing: {
       base: {
-        price: .79,
+        price: .99,
         discount: {
           1000: .79,
         },
