@@ -46,6 +46,8 @@ import { config as KrauseConfig } from "../configs/krause";
 import { config as GilesConfig } from "../configs/giles";
 // @ts-ignore
 import { config as OrrConfig } from "../configs/orr";
+// @ts-ignore
+import { config as JacksonConfig } from "../configs/jackson";
 
 
 
@@ -90,6 +92,7 @@ const SITE_REGISTRY: { urlKey: string; config: any }[] = [
   { urlKey: "krause",       config: KrauseConfig       },
   { urlKey: "giles",        config: GilesConfig        },
   { urlKey: "orr",          config: OrrConfig          },
+  { urlKey: "jackson",      config: JacksonConfig      },
 ];
 
 const allConfigs: any[] = SITE_REGISTRY.map((s) => s.config);
