@@ -91,8 +91,7 @@ export const catalog = [
     ],
     type: "hat",
     default_color: "Black",
-    halfColors: [
-      `Black`,      
+    halfColors: [  
       `Black White`,      
       `FlameRed Black`,
       `GreySteel Black`,
