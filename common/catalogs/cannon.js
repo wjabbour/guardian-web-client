@@ -353,7 +353,7 @@ export const catalog = [
     },    
     restricted: true,
   },
-   {
+  {
     code: "F218",
     name: "Fleece Pullover #F218",
     fullname: "Port Authority® Value Fleece 1/4-Zip Pullover (F218)",
