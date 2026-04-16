@@ -1,5 +1,40 @@
 export const catalog = [
-  // Add catalog items here.
-  // Each item needs: code, name, fullname, colors, type, default_color, sizes (or quantities), pricing
-  // See common/catalogs/krause.js for examples.
+ {
+    code: "K540",
+    name: "Port Authority® Silk Touch™ Polo #K540",
+    fullname: "Port Authority® Silk Touch™ Performance Polo (K540)",
+    colors: [
+      "Black",
+      "Gusty Grey",
+      "Navy",
+      "Red",
+      "Royal",
+      "Steel Grey",
+      "White",      
+    ],
+    type: "mens",
+    default_color: "Black",
+    sizes: [
+      "Small", 
+      "Medium", 
+      "Large", 
+      "XLarge", 
+      "2XLarge", 
+      "3XLarge",
+      "4XLarge",
+      "5XLarge",
+      "6XLarge"
+    ],
+    pricing: {
+      Small: { price: 17.76 },
+      Medium: { price: 17.76 },
+      Large: { price: 17.76 },
+      XLarge: { price: 17.76 },
+      "2XLarge": { price: 19.76 },
+      "3XLarge": { price: 23.76 },
+      "4XLarge": { price: 25.76 },
+      "5XLarge": { price: 29.76 },
+      "6XLarge": { price: 31.76 },
+    },
+  },
 ];
