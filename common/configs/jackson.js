@@ -11,17 +11,17 @@ export const config = {
   minimum_apparel_order: false,
   enable_customs_store_picker: true,
   embroideries: {
-    mens:      [
+    mens:[
       "Subaru of Albany.EMB",
       "Toyota of Newport.EMB",
       "Toyota of Corvallis.EMB"
     ],
-    womens:    [
+    womens:[
       "Subaru of Albany.EMB",
       "Toyota of Newport.EMB",
       "Toyota of Corvallis.EMB"
     ],
-    tshirts:   [
+    tshirts:[
       "Subaru of Albany",
       "Toyota of Newport",
       "Toyota of Corvallis"
