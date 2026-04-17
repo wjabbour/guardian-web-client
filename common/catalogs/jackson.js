@@ -116,7 +116,7 @@ export const catalog = [
       "Royal",
       "White",      
     ],    
-    type: "tshirt",
+    type: "tshirts",
     default_color: "Charcoal",
     sizes: [
       "Small", 
@@ -149,7 +149,7 @@ export const catalog = [
       "True Royal",
       "White",      
     ],    
-    type: "tshirt",
+    type: "tshirts",
     default_color: "Bright Red",
     sizes: [
       "Small", 
@@ -187,7 +187,7 @@ export const catalog = [
       "Royal",
       "White",      
     ],    
-    type: "tshirt",
+    type: "tshirts",
     default_color: "Charcoal",
     sizes: [
       "Small", 
@@ -219,7 +219,7 @@ export const catalog = [
       "True Royal",
       "White",       
     ],    
-    type: "tshirt",
+    type: "tshirts",
     default_color: "Bright Red",
     sizes: [
       "Small", 

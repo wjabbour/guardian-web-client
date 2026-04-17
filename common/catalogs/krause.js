@@ -670,7 +670,24 @@ export const catalog = [
     quantities: [500, 1000],
     pricing: {
       base: {
-        price: .99,
+        price: .79,
+        discount: {
+          1000: .59,
+        },
+      },
+    },
+  },
+  {
+    code: "HONHRO-34PEU-525043A",
+    name: "Black Plastic Frame",
+    fullname: "Black Plastic Frame w/white imprint",
+    disableColorSelector: true,
+    type: "customs",       
+    supportedStores: ["HONHRO"],
+    quantities: [500, 1000],
+    pricing: {
+      base: {
+        price: .89,
         discount: {
           1000: .79,
         },
