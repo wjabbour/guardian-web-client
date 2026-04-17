@@ -980,5 +980,90 @@ export const catalog = [
       "3XLarge": { price: 48.62 },
       "4XLarge": { price: 50.62 },      
     },
-  },    
+  },
+  {
+    code: "SUBSAL-34CF-503013A",
+    name: "Chrome Faced Frame",
+    fullname: "Chrome Faced Black Plastic Frame",
+    disableColorSelector: true,
+    type: "customs",      
+    supportedStores: ["SUBSAL"],
+    quantities: [500, 1000, 1500, 2500, 5000],
+    pricing: {
+      base: {
+        price: 1.40,
+      },
+    },
+  },
+  {
+    code: "TOYCCO-34CF-519168A",
+    name: "Chrome Faced Frame",
+    fullname: "Chrome Faced Black Plastic Frame",
+    disableColorSelector: true,
+    type: "customs",      
+    supportedStores: ["TOYCCO"],
+    quantities: [500, 1000, 1500, 2500, 5000],
+    pricing: {
+      base: {
+        price: 1.40,
+      },
+    },
+  }, 
+  {
+    code: "TOYONO-34PEU-524182A",
+    name: "Black Plastic Frame",
+    fullname: "Black Plastic Frame w/white imprint",
+    disableColorSelector: true,
+    type: "customs",      
+    supportedStores: ["TOYONO"],
+    quantities: [500, 1000, 1500, 2500, 5000],
+    pricing: {
+      base: {
+        price: .80,
+        discount: {
+          1500: .75,
+          2500: .70,
+          5000: .70
+        },
+      },
+    },
+  }, 
+  {
+    code: "ACDJRA-34PEU-521860A",
+    name: "Black Plastic Frame",
+    fullname: "Black Plastic Frame w/white imprint",
+    disableColorSelector: true,
+    type: "customs",      
+    supportedStores: ["ACDJRA"],
+    quantities: [500, 1000, 1500, 2500, 5000],
+    pricing: {
+      base: {
+        price: .80,
+        discount: {
+          1500: .75,
+          2500: .70,
+          5000: .70
+        },
+      },
+    },
+  }, 
+  {
+    code: "HYUHAL-34PEU-523048A",
+    name: "Black Plastic Frame",
+    fullname: "Black Plastic Frame w/white imprint",
+    disableColorSelector: true,
+    type: "customs",      
+    supportedStores: ["HYUHAL"],
+    quantities: [500, 1000, 1500, 2500, 5000],
+    pricing: {
+      base: {
+        price: .80,
+        discount: {
+          1500: .75,
+          2500: .70,
+          5000: .70
+        },
+      },
+    },
+  },     
 ];
