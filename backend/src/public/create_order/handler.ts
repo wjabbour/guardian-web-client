@@ -86,7 +86,7 @@ export const handler = async (
       }
 
       logger.info({ message: "Tameron order, sending immediately" });
-      const created_at = await dynamoClient.createOrder(
+      const { created_at, order_id } = await dynamoClient.createOrder(
         {
           email,
           order: cart,
@@ -108,13 +108,13 @@ export const handler = async (
         "archived_orders"
       );
       await sendEmail([order], "Tameron", email, isAdmin);
-      return await buildResponse(200, {}, origin, event);
+      return await buildResponse(200, { order_id, created_at }, origin, event);
     }
 
     if (body.bypassPaypal) {
       logger.info({ message: "Bypassing PayPal" });
 
-      const created_at = await dynamoClient.createOrder(
+      const { created_at, order_id } = await dynamoClient.createOrder(
         {
           email,
           order: cart,
@@ -136,7 +136,7 @@ export const handler = async (
         "archived_orders"
       );
       await sendEmail([order], company_name, email, isAdmin);
-      return await buildResponse(200, {}, origin, event);
+      return await buildResponse(200, { order_id, created_at }, origin, event);
     }
 
     // bypassPaypal = false

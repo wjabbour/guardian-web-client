@@ -77,7 +77,7 @@ export const handler = async (
 
     await sendEmail([order], company_name, email);
 
-    return await buildResponse(200, { paypal_order_id }, origin, event);
+    return await buildResponse(200, { paypal_order_id, order_id: order.order_id, created_at: order.created_at }, origin, event);
   } catch (e) {
     logger.error(e);
     const origin = event.headers?.origin || event.headers?.Origin || "";

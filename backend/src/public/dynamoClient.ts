@@ -57,7 +57,7 @@ class Dynamo {
       })
     );
 
-    return created_at;
+    return { created_at, order_id: order["order_id"] as string };
   }
 
   async setPaid(paypal_order_id: string, txId: string) {
