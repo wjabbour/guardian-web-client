@@ -1,12 +1,13 @@
-import { DynamoDBClient, ScanCommand } from "@aws-sdk/client-dynamodb";
-import { PutCommand } from "@aws-sdk/lib-dynamodb";
-import { unmarshall } from "@aws-sdk/util-dynamodb";
+import { DynamoDBClient } from "@aws-sdk/client-dynamodb";
+import { DynamoDBDocumentClient, ScanCommand } from "@aws-sdk/lib-dynamodb";
 
 export class Dynamo {
   client: DynamoDBClient;
+  documentClient: DynamoDBDocumentClient;
 
   constructor() {
     this.client = new DynamoDBClient({ region: "us-east-1" });
+    this.documentClient = DynamoDBDocumentClient.from(this.client);
   }
 
   async getCurrentOrders(company_name: string) {
@@ -14,17 +15,12 @@ export class Dynamo {
       TableName: "orders",
       FilterExpression: 'company_name = :company_name',
       ExpressionAttributeValues: {
-        ":company_name": { 'S': company_name }
+        ":company_name": company_name,
       }
     });
 
-    const response = await this.client.send(command);
-
-    if (response.Items) {
-      return response.Items.map((i) => unmarshall(i));
-    } else {
-      return [];
-    }
+    const response = await this.documentClient.send(command);
+    return response.Items ?? [];
   }
 
   async getArchivedOrders(company_name: string) {
@@ -32,17 +28,11 @@ export class Dynamo {
       TableName: "archived_orders",
       FilterExpression: 'company_name = :company_name',
       ExpressionAttributeValues: {
-        ":company_name": { 'S': company_name }
+        ":company_name": company_name,
       }
     });
 
-    const response = await this.client.send(command);
-
-    if (response.Items) {
-      return response.Items.map((i) => unmarshall(i));
-    } else {
-      return [];
-    }
+    const response = await this.documentClient.send(command);
+    return response.Items ?? [];
   }
 }
-
