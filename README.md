@@ -38,7 +38,7 @@ guardian-web-client/
 
 Before you begin, ensure you have the following installed:
 
-- **Node.js** (v14 or higher) and npm
+- **Node.js** (v20 or higher) and npm
 - **Git** - [Download Git](https://git-scm.com/download)
 - **VS Code** (recommended) - [Download VS Code](https://code.visualstudio.com/download)
 - **AWS CLI** - Configured with appropriate credentials

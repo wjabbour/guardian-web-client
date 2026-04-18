@@ -29,10 +29,8 @@ Both tables share the same schema. The frontend `retrieve_orders` fetches from *
 `construct_cart` in `create_order/handler.ts` transforms the frontend `Cart` (dictionary) into an array before storing. Fields saved: `quantity`, `code`, `size`, `color`, `price`, `embroidery?`, `placement?`, `secondEmbroidery?`, `secondPlacement?`, `sapVariation?`, `description`, `customer_po`.
 Note: `name` is **not** stored (not copied from the frontend cart).
 
-### Key Quirk: DynamoDB Client Mismatch
-- `create_order` and `update_historical_order` write via `DynamoDBDocumentClient` (auto-marshals JS arrays/objects)
-- `retrieve_orders` reads via the **low-level** `DynamoDBClient` + manual `unmarshall`
-- These should be equivalent for well-formed data, but if any legacy orders have the `order` field stored as a DynamoDB `S` (string) type, `unmarshall` returns a JS string — and calling `.some()` on it would throw, silently dropping that order from search results.
+### DynamoDB Client
+All lambdas use `DynamoDBDocumentClient` for consistent auto-marshalling/unmarshalling of JS arrays and objects.
 
 ### Orders Page Search
 - Filter lives in `Orders.tsx:99-108`
