@@ -1,82 +1,72 @@
 import { useLocation } from "react-router-dom";
-import { ColorOption } from "../../lib/constants";
-import { getCatalogItem } from "../../lib/utils";
 
 export default function Success() {
   const location = useLocation();
 
   const cart = location.state?.cart || {};
+  const meta = location.state?.meta || {};
   const cart_keys = Object.keys(cart);
+
+  const totalItems = Object.values(cart).reduce((sum, item) => sum + item.quantity, 0);
+  const totalPrice = Object.values(cart).reduce((sum, item) => sum + item.price * item.quantity, 0).toFixed(2);
+
+  const formattedDate = meta.created_at
+    ? new Intl.DateTimeFormat("en-US", {
+        year: "numeric",
+        month: "long",
+        day: "2-digit",
+        hour: "2-digit",
+        minute: "2-digit",
+      }).format(parseInt(meta.created_at))
+    : null;
 
   return (
     <div className="flex justify-center p-[100px]">
-      <div className="flex flex-col bg-white w-[800px] p-[15px] gap-[15px] border border-gray-500">
-        <div className="flex justify-center text-xl font-bold mb-4">
-          <h1>Order Placed Successfully</h1>
+      <div className="flex flex-col w-[380px] border-2 border-gray-400 rounded-md overflow-hidden">
+        <div className="bg-gray-100 border-b-2 border-gray-400 p-3">
+          <h1 className="text-lg font-bold">Order Placed Successfully</h1>
         </div>
-        <div className="relative overflow-y-auto overflow-x-hidden">
+
+        <div className="flex flex-col gap-1 p-3 border-b-2 border-gray-400 text-sm bg-white">
+          {meta.order_id && <p><b>Order ID:</b> {meta.order_id}</p>}
+          {meta.email && <p><b>Email:</b> {meta.email}</p>}
+          {formattedDate && <p><b>Placed:</b> {formattedDate}</p>}
+          {meta.customer_po && <p><b>PO:</b> {meta.customer_po}</p>}
+          <p><b>Total:</b> {totalItems} item{totalItems !== 1 ? "s" : ""} — ${totalPrice}</p>
+        </div>
+
+        <div className="flex flex-col overflow-y-auto max-h-[600px]">
           {cart_keys.map((k) => {
             const item = cart[k];
-            const itemConfiguration = getCatalogItem(item.code);
-            const isDefaultColor =
-              item.color === ColorOption.DEFAULT ||
-              item.color === itemConfiguration.default_color;
-
-            const imagePath = isDefaultColor
-              ? `/images/${item.code}.jpg`
-              : `/images/${item.code}_${item.color
-                  .split(" ")
-                  .join("_")
-                  .toLowerCase()}.jpg`;
 
             return (
-              <div key={k} className="relative flex h-[320px] mt-[15px]">
-                <div className="flex items-center justify-center w-[300px] min-h-[300px]">
-                  <img
-                    className={`max-w-[270px] max-h-[270px] ${
-                      ["1240", "2240", "1640"].includes(item.code)
-                        ? "max-h-[100px]"
-                        : ""
-                    }`}
-                    src={imagePath}
-                    alt={item.name}
-                  />
-                </div>
-                <div className="absolute top-[40px] left-[300px]">
-                  <div className="text-2xl font-bold mb-[10px]">{item.name}</div>
-                  <div className="font-bold text-lg mb-[15px]">${item.price} each</div>
+              <div key={k} className="flex flex-col gap-1 p-3 border-b border-gray-200 text-sm">
+                <p><b>{item.name}</b></p>
+                <p><b>Price:</b> ${item.price} each</p>
 
-                  {!isDefaultColor && (
-                    <div className="relative bottom-[10px] font-medium text-lg">
-                      Color: {item.color}
-                    </div>
-                  )}
+                {item.color && item.color !== "default" && (
+                  <p><b>Color:</b> {item.color}</p>
+                )}
 
-                  {item.embroidery && (
-                    <div className="relative bottom-[10px] font-medium text-lg">
-                      <p>
-                        Embroidery: {item.embroidery}
-                        {item.secondEmbroidery && ` / ${item.secondEmbroidery}`}
-                      </p>
-                    </div>
-                  )}
+                {item.embroidery && (
+                  <p>
+                    <b>Embroidery:</b> {item.embroidery}
+                    {item.secondEmbroidery && ` / ${item.secondEmbroidery}`}
+                  </p>
+                )}
 
-                  {item.placement && (
-                    <div className="relative bottom-[10px] font-medium text-lg">
-                      Placement: {item.placement}
-                      {item.secondPlacement && ` / ${item.secondPlacement}`}
-                    </div>
-                  )}
+                {item.placement && (
+                  <p>
+                    <b>Placement:</b> {item.placement}
+                    {item.secondPlacement && ` / ${item.secondPlacement}`}
+                  </p>
+                )}
 
-                  {/* Only show size if it's not a customs/accessory item where size might be "default" */}
-                  {item.size && item.size !== "default" && (
-                    <div className="relative bottom-[10px] font-medium text-lg">Size: {item.size}</div>
-                  )}
+                {item.size && item.size !== "default" && (
+                  <p><b>Size:</b> {item.size}</p>
+                )}
 
-                  <div className="relative bottom-[10px] font-medium text-lg">
-                    Quantity: {item.quantity}
-                  </div>
-                </div>
+                <p><b>Quantity:</b> {item.quantity}</p>
               </div>
             );
           })}

@@ -96,17 +96,22 @@ export default function Checkout() {
       setLoading(false);
       return "";
     } else {
+      const { order_id, created_at } = response.success.data;
       setSnackbarText("Order placed successfully");
       setSnackbarOpen(true);
+      const meta = {
+        order_id,
+        created_at,
+        email: email_ref.current.value,
+        customer_po: customer_po_ref.current.value,
+      };
       first_name_ref.current.value = "";
       last_name_ref.current.value = "";
       email_ref.current.value = "";
       store_ref.current.value = "";
       customer_po_ref.current.value = "";
       navigate(getDomainAwarePath("/success"), {
-        state: {
-          cart: { ...cart },
-        },
+        state: { cart: { ...cart }, meta },
       });
       CartService.clearCart(set_cart);
     }
@@ -144,8 +149,15 @@ export default function Checkout() {
             setErrorSnackbarOpen(true);
             return "";
           } else {
+            const { order_id, created_at } = response.success.data;
             setSnackbarText("Order placed successfully");
             setSnackbarOpen(true);
+            const meta = {
+              order_id,
+              created_at,
+              email: email_ref.current.value,
+              customer_po: customer_po_ref.current.value,
+            };
             first_name_ref.current.value = "";
             last_name_ref.current.value = "";
             email_ref.current.value = "";
@@ -153,9 +165,7 @@ export default function Checkout() {
             customer_po_ref.current.value = "";
 
             navigate(getDomainAwarePath("/success"), {
-              state: {
-                cart: { ...cart },
-              },
+              state: { cart: { ...cart }, meta },
             });
             CartService.clearCart(set_cart);
           }
@@ -209,48 +219,43 @@ export default function Checkout() {
   return (
     <div className="flex justify-center p-[75px]">
       <div className="flex flex-col gap-[15px] w-[800px] border-2 border-gray-400 border-solid p-[15px] rounded-md">
-        <div className="relative flex flex-col gap-[15px]">
-          <CartItems />
+        <div className="flex justify-between">
+          <div className="flex flex-col gap-[15px]">
           <TextField
             inputRef={first_name_ref}
             className="w-[225px]"
             onChange={handle_first_name}
-            id=""
             label="First Name"
-            variant="filled"
+            variant="outlined"
+            size="small"
           />
           <TextField
             inputRef={last_name_ref}
             className="w-[225px]"
             onChange={handle_last_name}
-            id=""
             label="Last Name"
-            variant="filled"
+            variant="outlined"
+            size="small"
           />
           <TextField
             inputRef={email_ref}
             className="w-[225px]"
             onChange={handle_email}
-            id=""
             label="Email"
-            variant="filled"
+            variant="outlined"
+            size="small"
           />
           <TextField
             inputRef={customer_po_ref}
             className="w-[225px]"
             onChange={handle_customer_po}
-            id=""
             label="Customer PO"
-            variant="filled"
+            variant="outlined"
+            size="small"
           />
-          <FormControl
-            inputRef={store_ref}
-            className="w-[225px] relative right-[10px]"
-            variant="filled"
-            sx={{ m: 1, minWidth: 120 }}
-          >
+          <FormControl className="w-[225px]" variant="outlined" size="small">
             <InputLabel>Store</InputLabel>
-            <Select inputRef={store_ref} value={store} onChange={handle_store}>
+            <Select inputRef={store_ref} value={store} onChange={handle_store} label="Store">
               <MenuItem value="">
                 <em>None</em>
               </MenuItem>
@@ -266,44 +271,40 @@ export default function Checkout() {
             className="w-[225px]"
             onChange={handle_code}
             label="Code"
-            variant="filled"
+            variant="outlined"
+            size="small"
           />
+          </div>
+          <CartItems />
         </div>
 
-        <div className="relative h-[150px] border-t border-black">
-          <div className="absolute text-lg top-[15px] left-0 font-medium">
+        <div className="flex items-center justify-between border-t border-black pt-[15px]">
+          <div className="text-lg font-medium">
             Subtotal ({calculate_item_count(cart)} items): $
             {calculate_item_price(cart)}
           </div>
-          <div className={bypass_paypal || !isPayPalSupported ? "hidden" : ""}>
-            <div className="relative left-[350px] mt-[15px] w-[400px]" ref={paypalRef}></div>
-            <div className="absolute top-2 left-[310px]">
-              <Tooltip
-                title={
-                  <Typography variant="h6" gutterBottom>
-                    1. Please disable Adblock or manualy allow the PayPal window
-                    to open.
-                    <br></br>
-                    <br></br>
-                    2. Please do not refresh this page as you are entering your
-                    payment info.
-                  </Typography>
-                }
-              >
-                <IconButton>
-                  <InfoOutlinedIcon></InfoOutlinedIcon>
-                </IconButton>
-              </Tooltip>
-            </div>
+
+          <div className={`flex items-center gap-2 ${bypass_paypal || !isPayPalSupported ? "hidden" : ""}`}>
+            <Tooltip
+              title={
+                <Typography variant="h6" gutterBottom>
+                  1. Please disable Adblock or manualy allow the PayPal window
+                  to open.
+                  <br />
+                  <br />
+                  2. Please do not refresh this page as you are entering your
+                  payment info.
+                </Typography>
+              }
+            >
+              <IconButton>
+                <InfoOutlinedIcon />
+              </IconButton>
+            </Tooltip>
+            <div className="w-[400px]" ref={paypalRef} />
           </div>
 
-          <div
-            className={`absolute top-[15px] right-[75px] ${
-              !(bypass_paypal || !isPayPalSupported)
-                ? "invisible opacity-0 transition-opacity duration-500"
-                : "visible opacity-100"
-            }`}
-          >
+          <div className={!(bypass_paypal || !isPayPalSupported) ? "hidden" : ""}>
             <Button
               onClick={bypassPaypalCheckout}
               variant="contained"

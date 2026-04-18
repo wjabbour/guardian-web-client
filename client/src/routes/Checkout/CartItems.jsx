@@ -7,7 +7,7 @@ import { getCatalogItem } from "../../lib/utils";
 export default function CartItems() {
   const [cart, set_cart] = useOutletContext();
   return (
-    <div className="absolute flex flex-col gap-3 right-0 w-[340px] h-[400px] overflow-auto border-2 border-gray-400 border-solid">
+    <div className="flex flex-col gap-3 w-[340px] max-h-[400px] overflow-auto border-2 border-gray-400 border-solid rounded-md">
       <div className="border-b-2 border-gray-400 border-solid p-1">
         <p className="text-lg font-bold">Cart</p>
       </div>
