@@ -15,7 +15,10 @@ import {
   Typography,
   AlertColor,
   TextField,
+  Tooltip,
+  IconButton,
 } from "@mui/material";
+import InfoOutlinedIcon from "@mui/icons-material/InfoOutlined";
 import Row from "./Row";
 import PasswordEntryDialog from "../../components/PasswordEntryDialog/PasswordEntryDialog";
 import StoreSelect from "./StoreSelect";
@@ -109,7 +112,6 @@ export default function OrdersTable() {
       const q = searchText.trim().toLowerCase();
       filtered = filtered.filter((o) =>
         `${o.first_name} ${o.last_name}`.toLowerCase().includes(q) ||
-        (o.store ?? "").toLowerCase().includes(q) ||
         (o.order_id ?? "").toLowerCase().includes(q) ||
         (o.transaction_id ?? "").toLowerCase().includes(q) ||
         (o.order ?? []).some((item) => (item.code ?? "").toLowerCase().includes(q))
@@ -191,13 +193,20 @@ export default function OrdersTable() {
       <div className="ml-4 flex gap-4 items-center">
         <StoreSelect stores={storeCodeOptions} onChange={handleStoreCodeFilterChange} placeholder="Filter by store code" />
         <StoreSelect stores={storeOptions} onChange={handleFilterChange} />
-        <TextField
-          size="small"
-          placeholder="Search"
-          value={searchText}
-          onChange={(e) => setSearchText(e.target.value)}
-          sx={{ width: 380 }}
-        />
+        <div className="flex items-center">
+          <TextField
+            size="small"
+            placeholder="Search"
+            value={searchText}
+            onChange={(e) => setSearchText(e.target.value)}
+            sx={{ width: 380 }}
+          />
+          <Tooltip title="Search by customer name, order ID, PayPal transaction ID, or item code">
+            <IconButton size="small">
+              <InfoOutlinedIcon fontSize="small" />
+            </IconButton>
+          </Tooltip>
+        </div>
       </div>
 
       <TableContainer component={Paper} sx={{ marginTop: 2 }}>
