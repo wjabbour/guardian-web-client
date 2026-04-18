@@ -36,6 +36,7 @@ export default function OrdersTable() {
   // --- State Management ---
   const [orders, setOrders] = useState([]);
   const [selectedStore, setSelectedStore] = useState(null);
+  const [selectedStoreCode, setSelectedStoreCode] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
   const [searchText, setSearchText] = useState("");
 
@@ -88,8 +89,16 @@ export default function OrdersTable() {
     ] as string[];
   }, [orders]);
 
+  const storeCodeOptions = useMemo(() => {
+    return [...new Set(orders.map((o) => o.store).filter(Boolean))] as string[];
+  }, [orders]);
+
   const displayedOrders = useMemo(() => {
     let filtered = orders;
+
+    if (selectedStoreCode) {
+      filtered = filtered.filter((o) => o.store === selectedStoreCode);
+    }
 
     if (selectedStore && orders.length > 0) {
       const code = getStoreCode(orders[0].company_name, selectedStore);
@@ -108,7 +117,7 @@ export default function OrdersTable() {
     }
 
     return filtered;
-  }, [orders, selectedStore, searchText]);
+  }, [orders, selectedStore, selectedStoreCode, searchText]);
 
   // --- Handlers ---
   const handleEditClick = useCallback(() => {
@@ -137,6 +146,10 @@ export default function OrdersTable() {
 
   const handleFilterChange = (store) => {
     setSelectedStore(store || null);
+  };
+
+  const handleStoreCodeFilterChange = (code) => {
+    setSelectedStoreCode(code || null);
   };
 
   const handleOrderDeleted = useCallback(
@@ -176,6 +189,7 @@ export default function OrdersTable() {
   return (
     <div>
       <div className="ml-4 flex gap-4 items-center">
+        <StoreSelect stores={storeCodeOptions} onChange={handleStoreCodeFilterChange} placeholder="Filter by store code" />
         <StoreSelect stores={storeOptions} onChange={handleFilterChange} />
         <TextField
           size="small"
@@ -202,6 +216,9 @@ export default function OrdersTable() {
               </TableCell>
               <TableCell align="center" sx={{ fontWeight: "bold" }}>
                 Store
+              </TableCell>
+              <TableCell align="center" sx={{ fontWeight: "bold" }}>
+                Store Code
               </TableCell>
               <TableCell align="center" sx={{ fontWeight: "bold" }}>
                 Order ID
