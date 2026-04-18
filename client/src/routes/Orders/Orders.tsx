@@ -216,8 +216,7 @@ export default function OrdersTable() {
             {displayedOrders.length > 0 ? (
               displayedOrders.map((order, index) => (
                 <Row
-                  // Using ID if available, falling back to index to prevent render bugs
-                  key={order.id || index}
+                  key={`${order.email}_${order.created_at}`}
                   order={order}
                   editClick={handleEditClick}
                   isAdmin={isAdmin}
