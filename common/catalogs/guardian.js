@@ -5753,11 +5753,10 @@ Designed to be used on a stationary vehicle located on a dealership log.`,
     name: "Steering Wheel Covers",
     fullname: "Steering Wheel Covers (500/bx)",
     disableColorSelector: true,
-    type: "service",
-    quantities: [500],
+    type: "service",   
     pricing: {
       base: {
-        price: 0.0,
+        price: 47.00,
       },
     },
   },

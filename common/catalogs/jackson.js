@@ -176,7 +176,7 @@ export const catalog = [
   },
   {
     code: "PC380LS",
-    name: "Port & Co Perf Tee #PC380LS",
+    name: "Port & Co Performance Tee #PC380LS",
     fullname: "Port & Company Long Sleeve Performance Tee (PC380LS)",
     colors: [
       "Charcoal",
@@ -1690,7 +1690,7 @@ export const catalog = [
   {
     code: "GP200",
     name: "Key Tags",
-    fullname: "Self-Protecting Key Tags #200 (250 per box)",
+    fullname: "Self-Protecting Key Tags #200 (250/box)",
     colors: ["Beige","Blue","Gray","Green","Lilac","Orange","Red","White","Yellow"],
     default_color: ["Beige"],    
     sapVariations: [
@@ -1715,7 +1715,7 @@ export const catalog = [
   {
     code: "VT400",
     name: "Stock Stickers",
-    fullname: "Kleer-Back Stock Stickers Versa #400 (100 per pack)", 
+    fullname: "Kleer-Back Stock Stickers Versa #400 (100/pack)", 
     colors: ["Blue","Green","Orange","Red","White","Yellow"], 
     default_color: ["Blue"],  
     sapVariations: [
@@ -1737,7 +1737,7 @@ export const catalog = [
   {
     code: "226",
     name: "Combo Key Tags",
-    fullname: "Combo Key Tags - Numbered (125 per box)",
+    fullname: "Combo Key Tags - Numbered (125/box)",
     colors: ["Beige","Blue","Gray","Green","Lilac","Orange","Red","White","Yellow"],
     default_color: ["Beige"],
     sapVariations: [
@@ -1756,6 +1756,113 @@ export const catalog = [
     pricing: {
       base: {
         price: 52.99,
+      },
+    },
+  },
+  {
+    code: "GP839",
+    name: "License Plate Envelope",
+    fullname: "License Plate Envelope - 13 in x 6.5 in. (100/box)",
+    disableColorSelector: true,
+    type: "sales", 
+    pricing: {
+      base: {
+        price: 29.99,
+      },
+    },
+  },
+  {
+    code: "280SH",
+    name: "Hold/Sold Tag",
+    fullname: "Hold/Sold Tag - 8.5 in x 11 in. (50/pk)",
+    colors: ["Yellow"],
+    type: "sales",
+    default_color: "Yellow",
+    quantities: [50],
+    pricing: {
+      base: {
+        price: 29.99,
+      },
+    },
+  }, 
+  {
+    code: "GP790",
+    name: "Not For Sale Sticker",
+    fullname: "Vehicle Not for Sale Sticker (100/pk)",
+    disableColorSelector: true,
+    type: "sales",    
+    pricing: {
+      base: {
+        price: 22.99,
+      },
+    },
+  },
+  {
+    code: "600088V",
+    name: "Seat Covers (roll)",
+    fullname: "No-Slip Plastic Seat Covers (500/roll)",
+    disableColorSelector: true,
+    type: "service", 
+    pricing: {
+      base: {
+        price: 69.99,
+      },
+    },
+  },
+  {
+    code: "3044",
+    name: "Spring Rings",
+    fullname: "Metal Spring Rings (250/pk)",
+    disableColorSelector: true,
+    type: "service",       
+    pricing: {
+      base: {
+        price: 12.99,
+      },
+    },
+  },
+  {
+    code: "3088",
+    name: "Floor Mats",
+    fullname: "Floor Mats/Coated Paper (500/bx)",
+    disableColorSelector: true,
+    type: "service",     
+    pricing: {
+      base: {
+        price: 66.99,
+      },
+    },
+  }, 
+  {
+    code: "EIT50",
+    name: "Self-Locking Key Tags",
+    fullname: "Self-Locking Key Tags (1000/pk)",
+    colors: ["Blue", "Green", "Orange", "Red", "Yellow", "White"],
+    sapVariations: [
+      {code: 'B', color: 'Blue'},
+      {code: 'G', color: 'Green'},
+      {code: 'O', color: 'Orange'},
+      {code: 'R', color: 'Red'},
+      {code: 'W', color: 'White'},
+      {code: 'Y', color: 'Yellow'},        
+    ],
+    type: "service",
+    disableColorSelector: true,
+    variationTextOverride: ['Color:'],     
+    pricing: {
+      base: {
+        price: 25.99,
+      },
+    },
+  },
+  {
+    code: "NDESTOCK",
+    name: "Night Drop Envelopes",
+    fullname: "Night Drop Envelopes (500/bx)",    
+    type: "service",    
+    pricing: {
+      base: {
+        price: 105.00,
       },
     },
   },                                                                                                                        
