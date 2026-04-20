@@ -1323,28 +1323,7 @@ export const catalog = [
         },
       },
     },
-  }, 
-  {
-    code: "TOYONO-TOTE-523554A",
-    name: "Budget Shopper Tote",
-    fullname: "Red Non-woven Budget Shopper Tote w/black imprint",
-    description: `20 in. x 13 in. x 8 in.; no imprint on back of tote`,
-    disableColorSelector: true,
-    type: "customs",        
-    supportedStores: ["TOYONO"],
-    quantities: [500, 1000, 1500, 2500, 5000],
-    pricing: {
-      base: {
-        price: 1.99,
-        discount: {
-          1000: 1.85,
-          1500: 1.85,
-          2500: 1.70,
-          5000: 1.49
-        },
-      },
-    },
-  },
+  },   
   {
     code: "ACDJRA-TOTENOSAP",
     name: "Budget Shopper Tote",
@@ -1386,5 +1365,24 @@ export const catalog = [
         },
       },
     },
-  },                                                             
+  }, 
+  {
+    code: "SUBSAL-PEN-522943A",
+    name: "Soft Touch Paragon Pen",
+    fullname: "Blue Elite Engraved Soft Touch Paragon Pen w/white imprint",    
+    disableColorSelector: true,
+    type: "customs",        
+    supportedStores: ["SUBSAL"],
+    quantities: [1000, 1500, 2500, 5000],
+    pricing: {
+      base: {
+        price: .95,
+        discount: {          
+          1500: .93,
+          2500: .88,
+          5000: .83
+        },
+      },
+    },
+  },                                                                   
 ];
