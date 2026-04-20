@@ -1701,8 +1701,7 @@ export const catalog = [
       {code: '-RD', color:'Red'},
       {code: '-WT', color:'White'},
       {code: '-YL', color:'Yellow'},              
-    ],
-    disableColorSelector: true,
+    ],    
     variationTextOverride: ['Color:'],
     type: "sales",
           
@@ -1723,8 +1722,7 @@ export const catalog = [
       {code: 'R', color:'Red'},
       {code: 'W', color:'White'},
       {code: 'Y', color:'Yellow'},          
-    ],
-    disableColorSelector: true,
+    ],    
     variationTextOverride: ['Color:'],
     type: "sales",          
     pricing: {
