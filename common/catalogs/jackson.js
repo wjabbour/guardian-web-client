@@ -1155,5 +1155,110 @@ export const catalog = [
         },
       },
     },
-  },        
+  }, 
+  {
+    code: "SUBSAL-FOB-522941D",
+    name: "Carbon Fiber Key Chain",
+    fullname: "Charcoal Carbon Fiber Key Chain",
+    description: `Blue stitch key tag w/black, 7737 green, 447 grey & 280 blue imprint.`,
+    disableColorSelector: true,
+    type: "customs",        
+    supportedStores: ["SUBSAL"],
+    quantities: [500, 1000, 1500, 2500, 5000],
+    pricing: {
+      base: {
+        price: 3.75,
+        discount: {
+          1000: 3.50,
+          1500: 3.25,
+          2500: 2.99,
+          5000: 2.60
+        },
+      },
+    },
+  },
+  {
+    code: "TOYCCO-FOB-522981D",
+    name: "Carbon Fiber Key Chain",
+    fullname: "Charcoal Carbon Fiber Key Chain",
+    description: `186 red stitching key tag w/black, 186 red & 348 green imprint.`,
+    disableColorSelector: true,
+    type: "customs",        
+    supportedStores: ["TOYCCO"],
+    quantities: [500, 1000, 1500, 2500, 5000],
+    pricing: {
+      base: {
+        price: 3.75,
+        discount: {
+          1000: 3.50,
+          1500: 3.25,
+          2500: 2.99,
+          5000: 2.60
+        },
+      },
+    },
+  },
+  {
+    code: "TOYONO-FOB-523551D",
+    name: "Carbon Fiber Key Chain",
+    fullname: "Charcoal Carbon Fiber Key Chain",
+    description: `186 red stitching key tag w/black, 186 red imprint.`,
+    disableColorSelector: true,
+    type: "customs",        
+    supportedStores: ["TOYONO"],
+    quantities: [500, 1000, 1500, 2500, 5000],
+    pricing: {
+      base: {
+        price: 3.75,
+        discount: {
+          1000: 3.50,
+          1500: 3.25,
+          2500: 2.99,
+          5000: 2.60
+        },
+      },
+    },
+  }, 
+  {
+    code: "ACDJRA-KEYNOSAP",
+    name: "Carbon Fiber Key Chain",
+    fullname: "Charcoal Carbon Fiber Key Chain",
+    description: `TBD`,
+    disableColorSelector: true,
+    type: "customs",        
+    supportedStores: ["ACDJRA"],
+    quantities: [500, 1000, 1500, 2500, 5000],
+    pricing: {
+      base: {
+        price: 3.75,
+        discount: {
+          1000: 3.50,
+          1500: 3.25,
+          2500: 2.99,
+          5000: 2.60
+        },
+      },
+    },
+  }, 
+  {
+    code: "HYUHAL-KEYNOSAP",
+    name: "Carbon Fiber Key Chain",
+    fullname: "Charcoal Carbon Fiber Key Chain",
+    description: `TBD`,
+    disableColorSelector: true,
+    type: "customs",        
+    supportedStores: ["HYUHAL"],
+    quantities: [500, 1000, 1500, 2500, 5000],
+    pricing: {
+      base: {
+        price: 3.75,
+        discount: {
+          1000: 3.50,
+          1500: 3.25,
+          2500: 2.99,
+          5000: 2.60
+        },
+      },
+    },
+  },                               
 ];
