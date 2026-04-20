@@ -1065,5 +1065,59 @@ export const catalog = [
         },
       },
     },
-  },     
+  }, 
+  {
+    code: "SUBSAL-33GT-523011Z",
+    name: ".15 Gauge Plastic Plate",
+    fullname: ".15 Gauge Plastic Plate - White w/4CP imprint",
+    disableColorSelector: true,
+    type: "customs",        
+    supportedStores: ["SUBSAL"],
+    quantities: [500, 1000, 1500, 2500, 5000],
+    pricing: {
+      base: {
+        price: .59,
+        discount: {
+          2500: .50,
+          5000: .50
+        },
+      },
+    },
+  },
+  {
+    code: "TOYCCO-15GNOSAP",
+    name: ".15 Gauge Plastic Plate",
+    fullname: ".15 Gauge Plastic Plate - White w/4CP imprint",
+    disableColorSelector: true,
+    type: "customs",        
+    supportedStores: ["TOYCCO"],
+    quantities: [500, 1000, 1500, 2500, 5000],
+    pricing: {
+      base: {
+        price: .59,
+        discount: {
+          2500: .50,
+          5000: .50
+        },
+      },
+    },
+  },
+  {
+    code: "TOYONO-33P-524181A",
+    name: ".15 Gauge Plastic Plate",
+    fullname: ".15 Gauge Plastic Plate - White w/186 red imprint",
+    disableColorSelector: true,
+    type: "customs",        
+    supportedStores: ["TOYONO"],
+    quantities: [500, 1000, 1500, 2500, 5000],
+    pricing: {
+      base: {
+        price: .59,
+        discount: {
+          2500: .50,
+          5000: .50
+        },
+      },
+    },
+  },      
 ];
