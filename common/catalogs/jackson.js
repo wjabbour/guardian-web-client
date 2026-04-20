@@ -1463,7 +1463,7 @@ export const catalog = [
   },
   {
     code: "SUBSAL-KOO-522937A",
-    name: "12 oz. Collapsible Can Cooler",
+    name: "12 oz. Collapsible Can Cooler - STANDARD",
     fullname: "Royal Foamzone 12 oz. Collapsible Can Cooler w/white imprint",    
     disableColorSelector: true,
     type: "customs",        
@@ -1483,7 +1483,7 @@ export const catalog = [
   },
   {
     code: "TOYCCO-KOO-522979A",
-    name: "12 oz. Collapsible Can Cooler",
+    name: "12 oz. Collapsible Can Cooler - STANDARD",
     fullname: "RED Foamzone 12 oz. Collapsible Can Cooler w/white imprint",    
     disableColorSelector: true,
     type: "customs",        
@@ -1503,7 +1503,7 @@ export const catalog = [
   },
   {
     code: "TOYONO-KOO-523526A",
-    name: "12 oz. Collapsible Can Cooler",
+    name: "12 oz. Collapsible Can Cooler - STANDARD",
     fullname: "Red Foamzone 12 oz. Collapsible Can Cooler w/white imprint",    
     disableColorSelector: true,
     type: "customs",        
@@ -1523,7 +1523,7 @@ export const catalog = [
   },
   {
     code: "ACDJRA-KOONOSAP",
-    name: "12 oz. Collapsible Can Cooler",
+    name: "12 oz. Collapsible Can Cooler - STANDARD",
     fullname: "Foamzone 12 oz. Collapsible Can Cooler w/white imprint",    
     disableColorSelector: true,
     type: "customs",        
@@ -1543,7 +1543,7 @@ export const catalog = [
   },
   {
     code: "HYUHAL-KOONOSAP",
-    name: "12 oz. Collapsible Can Cooler",
+    name: "12 oz. Collapsible Can Cooler - STANDARD",
     fullname: "Foamzone 12 oz. Collapsible Can Cooler w/white imprint",    
     disableColorSelector: true,
     type: "customs",        
@@ -1560,5 +1560,105 @@ export const catalog = [
         },
       },
     },
-  },                                                                                           
+  },
+  {
+    code: "SUBSAL-SLIMKNOSAP",
+    name: "12 oz. Collapsible Can Cooler - SLIM",
+    fullname: "Slim Foamzone 12 oz. Collapsible Can Cooler w/white imprint",    
+    disableColorSelector: true,
+    type: "customs",        
+    supportedStores: ["SUBSAL"],
+    quantities: [500, 1000, 1500, 2500, 5000],
+    pricing: {
+      base: {
+        price: .98,
+        discount: { 
+          1000: .93,         
+          1500: .93,
+          2500: .87,
+          5000: .87
+        },
+      },
+    },
+  },
+  {
+    code: "TOYCCO-SLIMKNOSAP",
+    name: "12 oz. Collapsible Can Cooler - SLIM",
+    fullname: "Slim Foamzone 12 oz. Collapsible Can Cooler w/white imprint",    
+    disableColorSelector: true,
+    type: "customs",        
+    supportedStores: ["TOYCCO"],
+    quantities: [500, 1000, 1500, 2500, 5000],
+    pricing: {
+      base: {
+        price: .98,
+        discount: { 
+          1000: .93,         
+          1500: .93,
+          2500: .87,
+          5000: .87
+        },
+      },
+    },
+  },
+  {
+    code: "TOYONO-SLIMKNOSAP",
+    name: "12 oz. Collapsible Can Cooler - SLIM",
+    fullname: "Slim Foamzone 12 oz. Collapsible Can Cooler w/white imprint",    
+    disableColorSelector: true,
+    type: "customs",        
+    supportedStores: ["TOYONO"],
+    quantities: [500, 1000, 1500, 2500, 5000],
+    pricing: {
+      base: {
+        price: .98,
+        discount: { 
+          1000: .93,         
+          1500: .93,
+          2500: .87,
+          5000: .87
+        },
+      },
+    },
+  }, 
+  {
+    code: "ACDJRA-SLIMKNOSAP",
+    name: "12 oz. Collapsible Can Cooler - SLIM",
+    fullname: "Slim Foamzone 12 oz. Collapsible Can Cooler w/white imprint",    
+    disableColorSelector: true,
+    type: "customs",        
+    supportedStores: ["ACDJRA"],
+    quantities: [500, 1000, 1500, 2500, 5000],
+    pricing: {
+      base: {
+        price: .98,
+        discount: { 
+          1000: .93,         
+          1500: .93,
+          2500: .87,
+          5000: .87
+        },
+      },
+    },
+  },
+  {
+    code: "HYUHAL-SLIMKNOSAP",
+    name: "12 oz. Collapsible Can Cooler - SLIM",
+    fullname: "Slim Foamzone 12 oz. Collapsible Can Cooler w/white imprint",    
+    disableColorSelector: true,
+    type: "customs",        
+    supportedStores: ["HYUHAL"],
+    quantities: [500, 1000, 1500, 2500, 5000],
+    pricing: {
+      base: {
+        price: .98,
+        discount: { 
+          1000: .93,         
+          1500: .93,
+          2500: .87,
+          5000: .87
+        },
+      },
+    },
+  },                                                                                                                        
 ];
