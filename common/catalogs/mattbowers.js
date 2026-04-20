@@ -2862,7 +2862,7 @@ $115.76 ea / 5 boxes: $115.76 ea / 10 boxes: $105 ea`,
   {
     code: "G10D",
     name: "Hex Screws for Frames",
-    fullname: "Self-Tapping #14 x 3/4 Hex Slot Head Screw (100/bx) #EZ244",
+    fullname: "Self-Tapping #14 x 3/4 Hex Slot Head Screw (100/bx) #EZ244",    
     disableColorSelector: true,
     type: "service",        
     pricing: {

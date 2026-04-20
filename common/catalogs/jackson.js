@@ -1660,5 +1660,77 @@ export const catalog = [
         },
       },
     },
+  },
+  {
+    code: "G10D",
+    name: "Hex Screws for Frames",
+    fullname: "Self-Tapping #14 x 3/4 Hex Slot Head Screw (100/bx) #EZ244",
+    description: `Sold in boxes of 100 screws.`,
+    disableColorSelector: true,
+    type: "service",        
+    pricing: {
+      base: {
+        price: 18.99,        
+      },
+    },
+  },
+  {
+    code: "G10I",
+    name: "Hex Screws for Plates",
+    fullname: "Metric Screw #6 x 3/4 Phillips Pan Head Screw (100/bx) #EZ246",
+    description: `Sold in boxes of 100 screws.`,
+    disableColorSelector: true,
+    type: "service",         
+    pricing: {
+      base: {
+        price: 18.99,        
+      },
+    },
+  },
+  {
+    code: "GP200",
+    name: "Key Tags",
+    fullname: "Self-Protecting Key Tags #200 (250 per box)",    
+    sapVariations: [
+      {code: '-BG', color:'Beige'},
+      {code: '-BL', color:'Blue'},      
+      {code: '-GN', color:'Green'},      
+      {code: '-GY', color:'Gray'},
+      {code: '-LI', color:'Lilac'},
+      {code: '-OR', color:'Orange'},
+      {code: '-RD', color:'Red'},
+      {code: '-WT', color:'White'},
+      {code: '-YL', color:'Yellow'},              
+    ],
+    disableColorSelector: true,
+    variationTextOverride: ['Color:'],
+    type: "sales",
+          
+    pricing: {
+      base: {
+        price: 21.00        
+      },
+    },
+  },
+  {
+    code: "VT400",
+    name: "Stock Stickers",
+    fullname: "Kleer-Back Stock Stickers Versa #400 (100 per pack)",    
+    sapVariations: [
+      {code: 'B', color:'Blue'},
+      {code: 'G', color:'Green'},
+      {code: 'O', color:'Orange'},     
+      {code: 'R', color:'Red'},
+      {code: 'W', color:'White'},
+      {code: 'Y', color:'Yellow'},          
+    ],
+    disableColorSelector: true,
+    variationTextOverride: ['Color:'],
+    type: "sales",          
+    pricing: {
+      base: {
+        price: 11.99,
+      },
+    },
   },                                                                                                                        
 ];

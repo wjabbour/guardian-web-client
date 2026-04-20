@@ -43,6 +43,16 @@ export const config = {
   ],
   stores: [
     {
+      name: "Albany Chrysler Dodge Jeep Ram",
+      address: "2315 Santiam Hwy SE, Albany, OR 97322",
+      code: "ACDJRA",
+    },
+    {
+      name: "Hyundai of Albany",
+      address: "1620 Fescue St SE, Albany, OR 97322",
+      code: "HYUHAL",
+    },
+    {
       name: "Subaru of Albany",
       address: "520 Airport Rd SE, Albany, OR 97322",
       code: "SUBSAL",
@@ -56,17 +66,7 @@ export const config = {
       name: "Toyota of Newport",
       address: "3234 SW Coast Hwy, Newport, OR 97366",
       code: "TOYONO",
-    },
-    {
-      name: "Albany Chrysler Dodge Jeep Ram",
-      address: "2315 Santiam Hwy SE, Albany, OR 97322",
-      code: "ACDJRA",
-    },
-    {
-      name: "Hyundai of Albany",
-      address: "1620 Fescue St SE, Albany, OR 97322",
-      code: "HYUHAL",
-    },
+    },       
   ],
   bypass_codes: ["JACKSON"],
   server_hostname: "https://mxfj3q6m01.execute-api.us-east-1.amazonaws.com",
