@@ -1714,7 +1714,9 @@ export const catalog = [
   {
     code: "VT400",
     name: "Stock Stickers",
-    fullname: "Kleer-Back Stock Stickers Versa #400 (100 per pack)",    
+    fullname: "Kleer-Back Stock Stickers Versa #400 (100 per pack)", 
+    colors: ["Blue","Green","Orange","Red","White","Yellow"], 
+    default_color: ["Blue"],  
     sapVariations: [
       {code: 'B', color:'Blue'},
       {code: 'G', color:'Green'},
@@ -1722,12 +1724,37 @@ export const catalog = [
       {code: 'R', color:'Red'},
       {code: 'W', color:'White'},
       {code: 'Y', color:'Yellow'},          
-    ],    
+    ],
     variationTextOverride: ['Color:'],
     type: "sales",          
     pricing: {
       base: {
         price: 11.99,
+      },
+    },
+  },
+  {
+    code: "226",
+    name: "Combo Key Tags",
+    fullname: "Combo Key Tags - Numbered (125 per box)",
+    sapVariations: [
+      {code: '-BG', color:'Beige'},
+      {code: '-BL', color:'Blue'},
+      {code: '-GN', color:'Green'},
+      {code: '-GY', color:'Gray'},
+      {code: '-LI', color:'Lilac'},
+      {code: '-OR', color:'Orange'},
+      {code: '-RD', color:'Red'},
+      {code: '-WT', color:'White'},
+      {code: '-YL', color:'Yellow'},               
+    ],
+    disableColorSelector: true,
+    variationTextOverride: ['Color:'],
+    type: "sales", 
+    quantities: [1, 2, 3, 4, 5],       
+    pricing: {
+      base: {
+        price: 52.99,
       },
     },
   },                                                                                                                        
