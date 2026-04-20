@@ -1460,5 +1460,105 @@ export const catalog = [
         },
       },
     },
-  },                                                                               
+  },
+  {
+    code: "SUBSAL-KOO-522937A",
+    name: "12 oz. Collapsible Can Cooler",
+    fullname: "Royal Foamzone 12 oz. Collapsible Can Cooler w/white imprint",    
+    disableColorSelector: true,
+    type: "customs",        
+    supportedStores: ["SUBSAL"],
+    quantities: [500, 1000, 1500, 2500, 5000],
+    pricing: {
+      base: {
+        price: .90,
+        discount: { 
+          1000: .75,         
+          1500: .75,
+          2500: .65,
+          5000: .60
+        },
+      },
+    },
+  },
+  {
+    code: "TOYCCO-KOO-522979A",
+    name: "12 oz. Collapsible Can Cooler",
+    fullname: "RED Foamzone 12 oz. Collapsible Can Cooler w/white imprint",    
+    disableColorSelector: true,
+    type: "customs",        
+    supportedStores: ["TOYCCO"],
+    quantities: [500, 1000, 1500, 2500, 5000],
+    pricing: {
+      base: {
+        price: .90,
+        discount: { 
+          1000: .75,         
+          1500: .75,
+          2500: .65,
+          5000: .60
+        },
+      },
+    },
+  },
+  {
+    code: "TOYONO-KOO-523526A",
+    name: "12 oz. Collapsible Can Cooler",
+    fullname: "Red Foamzone 12 oz. Collapsible Can Cooler w/white imprint",    
+    disableColorSelector: true,
+    type: "customs",        
+    supportedStores: ["TOYONO"],
+    quantities: [500, 1000, 1500, 2500, 5000],
+    pricing: {
+      base: {
+        price: .90,
+        discount: { 
+          1000: .75,         
+          1500: .75,
+          2500: .65,
+          5000: .60
+        },
+      },
+    },
+  },
+  {
+    code: "ACDJRA-KOONOSAP",
+    name: "12 oz. Collapsible Can Cooler",
+    fullname: "Foamzone 12 oz. Collapsible Can Cooler w/white imprint",    
+    disableColorSelector: true,
+    type: "customs",        
+    supportedStores: ["ACDJRA"],
+    quantities: [500, 1000, 1500, 2500, 5000],
+    pricing: {
+      base: {
+        price: .90,
+        discount: { 
+          1000: .75,         
+          1500: .75,
+          2500: .65,
+          5000: .60
+        },
+      },
+    },
+  },
+  {
+    code: "HYUHAL-KOONOSAP",
+    name: "12 oz. Collapsible Can Cooler",
+    fullname: "Foamzone 12 oz. Collapsible Can Cooler w/white imprint",    
+    disableColorSelector: true,
+    type: "customs",        
+    supportedStores: ["HYUHAL"],
+    quantities: [500, 1000, 1500, 2500, 5000],
+    pricing: {
+      base: {
+        price: .90,
+        discount: { 
+          1000: .75,         
+          1500: .75,
+          2500: .65,
+          5000: .60
+        },
+      },
+    },
+  },                                                                                           
 ];
