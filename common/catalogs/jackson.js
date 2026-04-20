@@ -1384,5 +1384,81 @@ export const catalog = [
         },
       },
     },
-  },                                                                   
+  },
+  {
+    code: "TOYCCO-PEN-522983A",
+    name: "Soft Touch Paragon Pen",
+    fullname: "Red Elite Engraved Soft Touch Paragon Pen w/white imprint",    
+    disableColorSelector: true,
+    type: "customs",        
+    supportedStores: ["TOYCCO"],
+    quantities: [1000, 1500, 2500, 5000],
+    pricing: {
+      base: {
+        price: .95,
+        discount: {          
+          1500: .93,
+          2500: .88,
+          5000: .83
+        },
+      },
+    },
+  },
+  {
+    code: "TOYONO-PEN-523524A",
+    name: "Soft Touch Paragon Pen",
+    fullname: "Red Elite Engraved Soft Touch Paragon Pen w/white imprint",    
+    disableColorSelector: true,
+    type: "customs",        
+    supportedStores: ["TOYONO"],
+    quantities: [1000, 1500, 2500, 5000],
+    pricing: {
+      base: {
+        price: .95,
+        discount: {          
+          1500: .93,
+          2500: .88,
+          5000: .83
+        },
+      },
+    },
+  },
+  {
+    code: "ACDJRA-PEN-522959A",
+    name: "Soft Touch Paragon Pen",
+    fullname: "Red Elite Engraved Soft Touch Paragon Pen w/white imprint",    
+    disableColorSelector: true,
+    type: "customs",        
+    supportedStores: ["ACDJRA"],
+    quantities: [1000, 1500, 2500, 5000],
+    pricing: {
+      base: {
+        price: .95,
+        discount: {          
+          1500: .93,
+          2500: .88,
+          5000: .83
+        },
+      },
+    },
+  },
+  {
+    code: "HYUHAL-PEN-522976A",
+    name: "Soft Touch Paragon Pen",
+    fullname: "Blue Elite Engraved Soft Touch Paragon Pen w/white imprint",    
+    disableColorSelector: true,
+    type: "customs",        
+    supportedStores: ["HYUHAL"],
+    quantities: [1000, 1500, 2500, 5000],
+    pricing: {
+      base: {
+        price: .95,
+        discount: {          
+          1500: .93,
+          2500: .88,
+          5000: .83
+        },
+      },
+    },
+  },                                                                               
 ];
