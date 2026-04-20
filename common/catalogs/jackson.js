@@ -104,7 +104,7 @@ export const catalog = [
   },
   {
     code: "PC380",
-    name: "Port & Co Perf Tee #PC380",
+    name: "Port & Co Performance Tee #PC380",
     fullname: "Port & Co™ Performance Tee (PC380)",
     colors: [
       "Charcoal",
@@ -1703,7 +1703,8 @@ export const catalog = [
       {code: '-RD', color:'Red'},
       {code: '-WT', color:'White'},
       {code: '-YL', color:'Yellow'},              
-    ],  
+    ],
+    variationTextOverride: ['Color:'],  
     type: "sales",          
     pricing: {
       base: {
@@ -1725,6 +1726,7 @@ export const catalog = [
       {code: 'W', color:'White'},
       {code: 'Y', color:'Yellow'},          
     ],
+    variationTextOverride: ['Color:'],
     type: "sales",          
     pricing: {
       base: {
@@ -1748,7 +1750,8 @@ export const catalog = [
       {code: '-RD', color:'Red'},
       {code: '-WT', color:'White'},
       {code: '-YL', color:'Yellow'},               
-    ],  
+    ],
+    variationTextOverride: ['Color:'],  
     type: "sales",           
     pricing: {
       base: {
