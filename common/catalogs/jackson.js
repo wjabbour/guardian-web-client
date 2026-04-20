@@ -1085,9 +1085,9 @@ export const catalog = [
     },
   },
   {
-    code: "TOYCCO-15GNOSAP",
+    code: "TOYCCO-33GT-525637Z",
     name: ".15 Gauge Plastic Plate",
-    fullname: ".15 Gauge Plastic Plate - White w/4CP imprint",
+    fullname: ".15 Gauge Plastic Plate - White w/full color imprint",
     disableColorSelector: true,
     type: "customs",        
     supportedStores: ["TOYCCO"],
@@ -1260,5 +1260,131 @@ export const catalog = [
         },
       },
     },
-  },                               
+  }, 
+  {
+    code: "SUBSAL-TOTE-522938A",
+    name: "Budget Shopper Tote",
+    fullname: "Royal Non-woven Budget Shopper Tote w/white imprint",
+    description: `20 in. x 13 in. x 8 in.; no imprint on back of tote`,
+    disableColorSelector: true,
+    type: "customs",        
+    supportedStores: ["SUBSAL"],
+    quantities: [500, 1000, 1500, 2500, 5000],
+    pricing: {
+      base: {
+        price: 1.99,
+        discount: {
+          1000: 1.85,
+          1500: 1.85,
+          2500: 1.70,
+          5000: 1.49
+        },
+      },
+    },
+  },
+  {
+    code: "TOYCCO-TOTE-522980A",
+    name: "Budget Shopper Tote",
+    fullname: "Red Non-woven Budget Shopper Tote w/black imprint",
+    description: `20 in. x 13 in. x 8 in.; no imprint on back of tote`,
+    disableColorSelector: true,
+    type: "customs",        
+    supportedStores: ["TOYCCO"],
+    quantities: [500, 1000, 1500, 2500, 5000],
+    pricing: {
+      base: {
+        price: 1.99,
+        discount: {
+          1000: 1.85,
+          1500: 1.85,
+          2500: 1.70,
+          5000: 1.49
+        },
+      },
+    },
+  },
+  {
+    code: "TOYONO-TOTE-523554A",
+    name: "Budget Shopper Tote",
+    fullname: "Red Non-woven Budget Shopper Tote w/black imprint",
+    description: `20 in. x 13 in. x 8 in.; no imprint on back of tote`,
+    disableColorSelector: true,
+    type: "customs",        
+    supportedStores: ["TOYONO"],
+    quantities: [500, 1000, 1500, 2500, 5000],
+    pricing: {
+      base: {
+        price: 1.99,
+        discount: {
+          1000: 1.85,
+          1500: 1.85,
+          2500: 1.70,
+          5000: 1.49
+        },
+      },
+    },
+  }, 
+  {
+    code: "TOYONO-TOTE-523554A",
+    name: "Budget Shopper Tote",
+    fullname: "Red Non-woven Budget Shopper Tote w/black imprint",
+    description: `20 in. x 13 in. x 8 in.; no imprint on back of tote`,
+    disableColorSelector: true,
+    type: "customs",        
+    supportedStores: ["TOYONO"],
+    quantities: [500, 1000, 1500, 2500, 5000],
+    pricing: {
+      base: {
+        price: 1.99,
+        discount: {
+          1000: 1.85,
+          1500: 1.85,
+          2500: 1.70,
+          5000: 1.49
+        },
+      },
+    },
+  },
+  {
+    code: "ACDJRA-TOTENOSAP",
+    name: "Budget Shopper Tote",
+    fullname: "Non-woven Budget Shopper Tote w/imprint",
+    description: `20 in. x 13 in. x 8 in.; no imprint on back of tote`,
+    disableColorSelector: true,
+    type: "customs",        
+    supportedStores: ["ACDJRA"],
+    quantities: [500, 1000, 1500, 2500, 5000],
+    pricing: {
+      base: {
+        price: 1.99,
+        discount: {
+          1000: 1.85,
+          1500: 1.85,
+          2500: 1.70,
+          5000: 1.49
+        },
+      },
+    },
+  },
+  {
+    code: "HYUHAL-TOTENOSAP",
+    name: "Budget Shopper Tote",
+    fullname: "Non-woven Budget Shopper Tote w/imprint",
+    description: `20 in. x 13 in. x 8 in.; no imprint on back of tote`,
+    disableColorSelector: true,
+    type: "customs",        
+    supportedStores: ["HYUHAL"],
+    quantities: [500, 1000, 1500, 2500, 5000],
+    pricing: {
+      base: {
+        price: 1.99,
+        discount: {
+          1000: 1.85,
+          1500: 1.85,
+          2500: 1.70,
+          5000: 1.49
+        },
+      },
+    },
+  },                                                             
 ];
