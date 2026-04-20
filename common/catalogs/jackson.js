@@ -1690,21 +1690,21 @@ export const catalog = [
   {
     code: "GP200",
     name: "Key Tags",
-    fullname: "Self-Protecting Key Tags #200 (250 per box)",    
+    fullname: "Self-Protecting Key Tags #200 (250 per box)",
+    colors: ["Beige","Blue","Gray","Green","Lilac","Orange","Red","White","Yellow"],
+    default_color: ["Beige"],    
     sapVariations: [
       {code: '-BG', color:'Beige'},
-      {code: '-BL', color:'Blue'},      
-      {code: '-GN', color:'Green'},      
+      {code: '-BL', color:'Blue'},        
       {code: '-GY', color:'Gray'},
+      {code: '-GN', color:'Green'},
       {code: '-LI', color:'Lilac'},
       {code: '-OR', color:'Orange'},
       {code: '-RD', color:'Red'},
       {code: '-WT', color:'White'},
       {code: '-YL', color:'Yellow'},              
-    ],    
-    variationTextOverride: ['Color:'],
-    type: "sales",
-          
+    ],  
+    type: "sales",          
     pricing: {
       base: {
         price: 21.00        
@@ -1725,7 +1725,6 @@ export const catalog = [
       {code: 'W', color:'White'},
       {code: 'Y', color:'Yellow'},          
     ],
-    variationTextOverride: ['Color:'],
     type: "sales",          
     pricing: {
       base: {
@@ -1737,21 +1736,20 @@ export const catalog = [
     code: "226",
     name: "Combo Key Tags",
     fullname: "Combo Key Tags - Numbered (125 per box)",
+    colors: ["Beige","Blue","Gray","Green","Lilac","Orange","Red","White","Yellow"],
+    default_color: ["Beige"],
     sapVariations: [
       {code: '-BG', color:'Beige'},
       {code: '-BL', color:'Blue'},
-      {code: '-GN', color:'Green'},
       {code: '-GY', color:'Gray'},
+      {code: '-GN', color:'Green'},      
       {code: '-LI', color:'Lilac'},
       {code: '-OR', color:'Orange'},
       {code: '-RD', color:'Red'},
       {code: '-WT', color:'White'},
       {code: '-YL', color:'Yellow'},               
-    ],
-    disableColorSelector: true,
-    variationTextOverride: ['Color:'],
-    type: "sales", 
-    quantities: [1, 2, 3, 4, 5],       
+    ],  
+    type: "sales",           
     pricing: {
       base: {
         price: 52.99,
