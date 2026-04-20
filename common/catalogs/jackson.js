@@ -1119,5 +1119,41 @@ export const catalog = [
         },
       },
     },
-  },      
+  }, 
+  {
+    code: "ACDJRA-15GNOSAP",
+    name: ".15 Gauge Plastic Plate",
+    fullname: ".15 Gauge Plastic Plate - White w/4CP imprint",
+    disableColorSelector: true,
+    type: "customs",        
+    supportedStores: ["ACDJRA"],
+    quantities: [500, 1000, 1500, 2500, 5000],
+    pricing: {
+      base: {
+        price: .59,
+        discount: {
+          2500: .50,
+          5000: .50
+        },
+      },
+    },
+  },
+  {
+    code: "HYUHAL-15GNOSAP",
+    name: ".15 Gauge Plastic Plate",
+    fullname: ".15 Gauge Plastic Plate - White w/4CP imprint",
+    disableColorSelector: true,
+    type: "customs",        
+    supportedStores: ["HYUHAL"],
+    quantities: [500, 1000, 1500, 2500, 5000],
+    pricing: {
+      base: {
+        price: .59,
+        discount: {
+          2500: .50,
+          5000: .50
+        },
+      },
+    },
+  },        
 ];
