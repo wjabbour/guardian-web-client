@@ -1660,33 +1660,7 @@ export const catalog = [
         },
       },
     },
-  },
-  {
-    code: "G10D",
-    name: "Hex Screws for Frames",
-    fullname: "Self-Tapping #14 x 3/4 Hex Slot Head Screw (100/bx) #EZ244",
-    description: `Sold in boxes of 100 screws.`,
-    disableColorSelector: true,
-    type: "service",        
-    pricing: {
-      base: {
-        price: 18.99,        
-      },
-    },
-  },
-  {
-    code: "G10I",
-    name: "Hex Screws for Plates",
-    fullname: "Metric Screw #6 x 3/4 Phillips Pan Head Screw (100/bx) #EZ246",
-    description: `Sold in boxes of 100 screws.`,
-    disableColorSelector: true,
-    type: "service",         
-    pricing: {
-      base: {
-        price: 18.99,        
-      },
-    },
-  },
+  }, 
   {
     code: "GP200",
     name: "Key Tags",
@@ -1774,11 +1748,8 @@ export const catalog = [
   {
     code: "280SH",
     name: "Hold/Sold Tag",
-    fullname: "Hold/Sold Tag - 8.5 in x 11 in. (50/pk)",
-    colors: ["Yellow"],
-    type: "sales",
-    default_color: "Yellow",
-    quantities: [50],
+    fullname: "Hold/Sold Tag - 8.5 in x 11 in. (50/pk)",    
+    type: "sales",       
     pricing: {
       base: {
         price: 29.99,
@@ -1794,6 +1765,44 @@ export const catalog = [
     pricing: {
       base: {
         price: 22.99,
+      },
+    },
+  },
+  {
+    code: "G10D",
+    name: "Hex Screws for Frames",
+    fullname: "Self-Tapping #14 x 3/4 Hex Slot Head Screw (100/bx) #EZ244",
+    description: `Sold in boxes of 100 screws.`,
+    disableColorSelector: true,
+    type: "service",        
+    pricing: {
+      base: {
+        price: 18.99,        
+      },
+    },
+  },
+  {
+    code: "G10I",
+    name: "Hex Screws for Plates",
+    fullname: "Metric Screw #6 x 3/4 Phillips Pan Head Screw (100/bx) #EZ246",
+    description: `Sold in boxes of 100 screws.`,
+    disableColorSelector: true,
+    type: "service",         
+    pricing: {
+      base: {
+        price: 18.99,        
+      },
+    },
+  },
+  {
+    code: "55-010",
+    name: "Steering Wheel Covers",
+    fullname: "Steering Wheel Covers (500/bx)",
+    disableColorSelector: true,
+    type: "service",   
+    pricing: {
+      base: {
+        price: 47.00,
       },
     },
   },
@@ -1846,8 +1855,7 @@ export const catalog = [
       {code: 'W', color: 'White'},
       {code: 'Y', color: 'Yellow'},        
     ],
-    type: "service",
-    disableColorSelector: true,
+    type: "service",    
     variationTextOverride: ['Color:'],     
     pricing: {
       base: {

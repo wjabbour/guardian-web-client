@@ -5756,7 +5756,7 @@ Designed to be used on a stationary vehicle located on a dealership log.`,
     type: "service",   
     pricing: {
       base: {
-        price: 47.00,
+        price: 0.00,
       },
     },
   },
