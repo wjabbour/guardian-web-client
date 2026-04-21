@@ -26,7 +26,11 @@ export const config = {
       "Toyota of Newport",
       "Toyota of Corvallis"
     ],
-    hat:       [],
+    hat:       [
+      "Subaru of Albany.EMB",
+      "Toyota of Newport.EMB",
+      "Toyota of Corvallis.EMB"
+    ],
     customs:   [],
     office:    [],
     service:   [],
