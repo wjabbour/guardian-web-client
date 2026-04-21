@@ -1202,7 +1202,7 @@ export const catalog = [
     code: "TOYONO-FOB-523551D",
     name: "Carbon Fiber Key Chain",
     fullname: "Charcoal Carbon Fiber Key Chain",
-    description: `186 red stitching key tag w/black, 186 red imprint.`,
+    description: `186 red stitching key tag w/black & 186 red imprint.`,
     disableColorSelector: true,
     type: "customs",        
     supportedStores: ["TOYONO"],
@@ -1223,7 +1223,7 @@ export const catalog = [
     code: "ACDJRA-KEYNOSAP",
     name: "Carbon Fiber Key Chain",
     fullname: "Charcoal Carbon Fiber Key Chain",
-    description: `TBD`,
+    description: `186 red stitching key tag w/black imprint.`,
     disableColorSelector: true,
     type: "customs",        
     supportedStores: ["ACDJRA"],
@@ -1244,7 +1244,7 @@ export const catalog = [
     code: "HYUHAL-KEYNOSAP",
     name: "Carbon Fiber Key Chain",
     fullname: "Charcoal Carbon Fiber Key Chain",
-    description: `TBD`,
+    description: `288 blue stitching key tag w/black & 288 blue imprint.`,
     disableColorSelector: true,
     type: "customs",        
     supportedStores: ["HYUHAL"],
@@ -1327,7 +1327,7 @@ export const catalog = [
   {
     code: "ACDJRA-TOTENOSAP",
     name: "Budget Shopper Tote",
-    fullname: "Non-woven Budget Shopper Tote w/imprint",
+    fullname: "Non-woven Budget Shopper Tote w/black imprint",
     description: `20 in. x 13 in. x 8 in.; no imprint on back of tote`,
     disableColorSelector: true,
     type: "customs",        
@@ -1348,7 +1348,7 @@ export const catalog = [
   {
     code: "HYUHAL-TOTENOSAP",
     name: "Budget Shopper Tote",
-    fullname: "Non-woven Budget Shopper Tote w/imprint",
+    fullname: "Non-woven Budget Shopper Tote w/ white imprint",
     description: `20 in. x 13 in. x 8 in.; no imprint on back of tote`,
     disableColorSelector: true,
     type: "customs",        
@@ -1484,7 +1484,7 @@ export const catalog = [
   {
     code: "TOYCCO-KOO-522979A",
     name: "12 oz. Collapsible Can Cooler - STANDARD",
-    fullname: "RED Foamzone 12 oz. Collapsible Can Cooler w/white imprint",    
+    fullname: "RED Foamzone 12 oz. Collapsible Can Cooler w/black imprint",    
     disableColorSelector: true,
     type: "customs",        
     supportedStores: ["TOYCCO"],
@@ -1504,7 +1504,7 @@ export const catalog = [
   {
     code: "TOYONO-KOO-523526A",
     name: "12 oz. Collapsible Can Cooler - STANDARD",
-    fullname: "Red Foamzone 12 oz. Collapsible Can Cooler w/white imprint",    
+    fullname: "Red Foamzone 12 oz. Collapsible Can Cooler w/black imprint",    
     disableColorSelector: true,
     type: "customs",        
     supportedStores: ["TOYONO"],
@@ -1524,7 +1524,7 @@ export const catalog = [
   {
     code: "ACDJRA-KOONOSAP",
     name: "12 oz. Collapsible Can Cooler - STANDARD",
-    fullname: "Foamzone 12 oz. Collapsible Can Cooler w/white imprint",    
+    fullname: "Foamzone 12 oz. Collapsible Can Cooler w/black imprint",    
     disableColorSelector: true,
     type: "customs",        
     supportedStores: ["ACDJRA"],
@@ -1584,7 +1584,7 @@ export const catalog = [
   {
     code: "TOYCCO-SLIMKNOSAP",
     name: "12 oz. Collapsible Can Cooler - SLIM",
-    fullname: "Slim Foamzone 12 oz. Collapsible Can Cooler w/white imprint",    
+    fullname: "Slim Foamzone 12 oz. Collapsible Can Cooler w/black imprint",    
     disableColorSelector: true,
     type: "customs",        
     supportedStores: ["TOYCCO"],
@@ -1604,7 +1604,7 @@ export const catalog = [
   {
     code: "TOYONO-SLIMKNOSAP",
     name: "12 oz. Collapsible Can Cooler - SLIM",
-    fullname: "Slim Foamzone 12 oz. Collapsible Can Cooler w/white imprint",    
+    fullname: "Slim Foamzone 12 oz. Collapsible Can Cooler w/black imprint",    
     disableColorSelector: true,
     type: "customs",        
     supportedStores: ["TOYONO"],
@@ -1624,7 +1624,7 @@ export const catalog = [
   {
     code: "ACDJRA-SLIMKNOSAP",
     name: "12 oz. Collapsible Can Cooler - SLIM",
-    fullname: "Slim Foamzone 12 oz. Collapsible Can Cooler w/white imprint",    
+    fullname: "Slim Foamzone 12 oz. Collapsible Can Cooler w/black imprint",    
     disableColorSelector: true,
     type: "customs",        
     supportedStores: ["ACDJRA"],
