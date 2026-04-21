@@ -14,22 +14,30 @@ export const config = {
     mens:[
       "Subaru of Albany.EMB",
       "Toyota of Newport.EMB",
-      "Toyota of Corvallis.EMB"
+      "Toyota of Corvallis.EMB",
+      "Albany CDJR.EMB",
+      "Hyundai of Albany Oregon.EMB"
     ],
     womens:[
       "Subaru of Albany.EMB",
       "Toyota of Newport.EMB",
-      "Toyota of Corvallis.EMB"
+      "Toyota of Corvallis.EMB",
+      "Albany CDJR.EMB",
+      "Hyundai of Albany Oregon.EMB"
     ],
     tshirts:[
       "Subaru of Albany",
       "Toyota of Newport",
-      "Toyota of Corvallis"
+      "Toyota of Corvallis",
+      "Albany CDJR",
+      "Hyundai of Albany Oregon"
     ],
     hat:       [
       "Subaru of Albany.EMB",
       "Toyota of Newport.EMB",
-      "Toyota of Corvallis.EMB"
+      "Toyota of Corvallis.EMB",
+      "Albany CDJR.EMB",
+      "Hyundai of Albany Oregon.EMB"
     ],
     customs:   [],
     office:    [],
