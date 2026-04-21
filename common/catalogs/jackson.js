@@ -592,7 +592,7 @@ export const catalog = [
   },
   {
     code: "F218",
-    name: "Fleece Pullover #F218",
+    name: "Port Authority® Fleece Pullover #F218",
     fullname: "Port Authority® Value Fleece 1/4-Zip Pullover (F218)",
     colors: ["Black", "Iron Grey","True Navy"],
     type: "mens",
@@ -622,7 +622,7 @@ export const catalog = [
   },
   {
     code: "F224",
-    name: "Port Authority 1/2-Zip Pullover #F224",
+    name: "Port Authority® 1/2-Zip Pullover #F224",
     fullname: "Port Authority® Microfleece 1/2-Zip Pullover (F224)",
     colors: ["Black", "Pearl Grey","True Navy"],
     type: "mens",
@@ -713,7 +713,7 @@ export const catalog = [
   },  
   {
     code: "LK200",
-    name: "Port Authority Wearever Polo #LK200",
+    name: "Port Authority® Wearever Polo #LK200",
     fullname: "Port Authority® Wearever Signature Pique Polo (LK200)",
     colors: [
       "Awareness Pink",
@@ -1712,12 +1712,12 @@ export const catalog = [
     code: "226",
     name: "Combo Key Tags",
     fullname: "Combo Key Tags - Numbered (125/box)",
-    colors: ["Beige","Blue","Gray","Green","Lilac","Orange","Red","White","Yellow"],
+    colors: ["Beige","Blue","Grey","Green","Lilac","Orange","Red","White","Yellow"],
     default_color: ["Beige"],
     sapVariations: [
       {code: '-BG', color:'Beige'},
       {code: '-BL', color:'Blue'},
-      {code: '-GY', color:'Gray'},
+      {code: '-GY', color:'Grey'},
       {code: '-GN', color:'Green'},      
       {code: '-LI', color:'Lilac'},
       {code: '-OR', color:'Orange'},

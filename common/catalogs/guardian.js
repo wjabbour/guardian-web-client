@@ -3388,7 +3388,7 @@ export const catalog = [
       {code: '-BG', color:'Beige'},
       {code: '-BL', color:'Blue'},
       {code: '-GN', color:'Green'},
-      {code: '-GY', color:'Gray'},
+      {code: '-GY', color:'Grey'},
       {code: '-LI', color:'Lilac'},
       {code: '-OR', color:'Orange'},
       {code: '-RD', color:'Red'},
