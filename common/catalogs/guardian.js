@@ -5865,6 +5865,32 @@ Designed to be used on a stationary vehicle located on a dealership log.`,
     },
   },
   {
+    code: "G10D",
+    name: "Hex Screws - Domestic",
+    fullname: "Self-Tapping #14 x 3/4 Hex Slot Head Screw (100/bx) #EZ244",
+    description: `Sold in boxes of 100 screws.`,
+    disableColorSelector: true,
+    type: "service",        
+    pricing: {
+      base: {
+        price: 0.00,        
+      },
+    },
+  },
+  {
+    code: "G10I",
+    name: "Hex Screws - Import",
+    fullname: "Metric Screw #6 x 3/4 Phillips Pan Head Screw (100/bx) #EZ246",
+    description: `Sold in boxes of 100 screws.`,
+    disableColorSelector: true,
+    type: "service",         
+    pricing: {
+      base: {
+        price: 0.00,        
+      },
+    },
+  },
+  {
     code: "EIT50",
     name: "Self-Locking Key Tags",
     fullname: "Self-Locking Key Tags (1000/pk)",

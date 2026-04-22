@@ -1860,7 +1860,7 @@ export const catalog = [
   },    
   {
     code: "G10D",
-    name: "Hex Screws for Frames",
+    name: "Hex Screws - Domestic",
     fullname: "Self-Tapping #14 x 3/4 Hex Slot Head Screw (100/bx) #EZ244",
     disableColorSelector: true,
     type: "customs",     
@@ -1884,7 +1884,7 @@ export const catalog = [
   },
   {
     code: "G10I",
-    name: "Hex Screws for Plates",
+    name: "Hex Screws - Import",
     fullname: "Metric Screw #6 x 3/4 Phillips Pan Head (100/bx) #EZ246",
     disableColorSelector: true,
     type: "customs",    
