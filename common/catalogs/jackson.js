@@ -1021,9 +1021,10 @@ export const catalog = [
       base: {
         price: .80,
         discount: {
-          1500: .75,
-          2500: .70,
-          5000: .70
+          1000: .58,
+          1500: .58,
+          2500: .58,
+          5000: .58
         },
       },
     },
@@ -1040,9 +1041,10 @@ export const catalog = [
       base: {
         price: .80,
         discount: {
-          1500: .75,
-          2500: .70,
-          5000: .70
+          1000: .58,
+          1500: .58,
+          2500: .58,
+          5000: .58
         },
       },
     },
@@ -1059,9 +1061,10 @@ export const catalog = [
       base: {
         price: .80,
         discount: {
-          1500: .75,
-          2500: .70,
-          5000: .70
+          1000: .58,
+          1500: .58,
+          2500: .58,
+          5000: .58
         },
       },
     },
@@ -1078,8 +1081,10 @@ export const catalog = [
       base: {
         price: .59,
         discount: {
-          2500: .50,
-          5000: .50
+          1000: .37,
+          1500: .37,
+          2500: .37,
+          5000: .37
         },
       },
     },
@@ -1096,8 +1101,10 @@ export const catalog = [
       base: {
         price: .59,
         discount: {
-          2500: .50,
-          5000: .50
+          1000: .37,
+          1500: .37,
+          2500: .37,
+          5000: .37
         },
       },
     },
@@ -1114,8 +1121,10 @@ export const catalog = [
       base: {
         price: .59,
         discount: {
-          2500: .50,
-          5000: .50
+          1000: .37,
+          1500: .37,
+          2500: .37,
+          5000: .37
         },
       },
     },
@@ -1132,8 +1141,10 @@ export const catalog = [
       base: {
         price: .59,
         discount: {
-          2500: .50,
-          5000: .50
+          1000: .37,
+          1500: .37,
+          2500: .37,
+          5000: .37
         },
       },
     },
@@ -1150,8 +1161,10 @@ export const catalog = [
       base: {
         price: .59,
         discount: {
-          2500: .50,
-          5000: .50
+          1000: .37,
+          1500: .37,
+          2500: .37,
+          5000: .37
         },
       },
     },
@@ -1770,7 +1783,7 @@ export const catalog = [
   },
   {
     code: "G10D",
-    name: "Hex Screws for Frames",
+    name: "Hex Screws - Domestic",
     fullname: "Self-Tapping #14 x 3/4 Hex Slot Head Screw (100/bx) #EZ244",
     description: `Sold in boxes of 100 screws.`,
     disableColorSelector: true,
@@ -1783,7 +1796,7 @@ export const catalog = [
   },
   {
     code: "G10I",
-    name: "Hex Screws for Plates",
+    name: "Hex Screws - Import",
     fullname: "Metric Screw #6 x 3/4 Phillips Pan Head Screw (100/bx) #EZ246",
     description: `Sold in boxes of 100 screws.`,
     disableColorSelector: true,
