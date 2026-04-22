@@ -3282,6 +3282,32 @@ export const catalog = [
     },
   },
   {
+    code: "302-100",
+    name: "Printed Autofile Folders",
+    fullname: "Printed Autofile Folders (100/pk)",
+    disableColorSelector: true,
+    type: "office",    
+    quantities: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+    pricing: {
+      base: {
+        price: 0.00,
+      },
+    },
+  }, 
+  {
+    code: "839",
+    name: "Odometer Disclosure Form",
+    fullname: "Odometer Disclosure Form (ODOM-CT) (100/pk)",
+    disableColorSelector: true,
+    type: "office",    
+    quantities: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+    pricing: {
+      base: {
+        price: 0.00,
+      },
+    },
+  },   
+  {
     code: "GP200",
     name: "Key Tags",
     fullname: "Self-Protecting Key Tags #200 (250 per box)",
@@ -5729,6 +5755,19 @@ Designed to be used on a stationary vehicle located on a dealership log.`,
     variationTextOverride: ['Color:'],
     type: "sales",
     quantities: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],    
+    pricing: {
+      base: {
+        price: 0.00,
+      },
+    },
+  },
+  {
+    code: "JT10C",
+    name: "Job Ticket",
+    fullname: "Job Ticket (500/box)",
+    disableColorSelector: true,
+    type: "service",    
+    quantities: [1, 2, 3, 4, 5],
     pricing: {
       base: {
         price: 0.00,

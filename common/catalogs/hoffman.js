@@ -746,7 +746,7 @@ export const catalog = [
   {
     code: "JT10C",
     name: "Job Ticket",
-    fullname: "Job Ticket (500/box",
+    fullname: "Job Ticket (500/box)",
     disableColorSelector: true,
     type: "service",    
     quantities: [1, 2, 3, 4, 5],
