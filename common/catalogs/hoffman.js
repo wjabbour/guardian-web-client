@@ -590,6 +590,23 @@ export const catalog = [
         price: 13.59,
       },
     },
+  },
+  {
+    code: "HOFAPA-PEN-525963A",
+    name: "White Panther Pen",
+    fullname: "White Panther Pen (250/box)",
+    disableColorSelector: true,
+    type: "office",    
+    quantities: [1000, 2500, 5000],
+    pricing: {
+      base: {
+        price: .62,
+        discount: {                
+          2500: .57,
+          5000: .52
+        },
+      },
+    },
   }, 
   {
     code: "GP546",

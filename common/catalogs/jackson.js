@@ -1575,7 +1575,7 @@ export const catalog = [
     },
   },
   {
-    code: "SUBSAL-SLIMKNOSAP",
+    code: "SUBSAL-SKOO-525999A",
     name: "12 oz. Collapsible Can Cooler - SLIM",
     fullname: "Slim Foamzone 12 oz. Collapsible Can Cooler w/white imprint",    
     disableColorSelector: true,
