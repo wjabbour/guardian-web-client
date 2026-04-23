@@ -1635,7 +1635,7 @@ export const catalog = [
     },
   }, 
   {
-    code: "ACDJRA-SLIMKNOSAP",
+    code: "ACDJRA-SKOO-526009A",
     name: "12 oz. Collapsible Can Cooler - SLIM",
     fullname: "Slim Foamzone 12 oz. Collapsible Can Cooler w/black imprint",    
     disableColorSelector: true,
@@ -1655,7 +1655,7 @@ export const catalog = [
     },
   },
   {
-    code: "HYUHAL-SLIMKNOSAP",
+    code: "HYUHAL-SKOO-526012A",
     name: "12 oz. Collapsible Can Cooler - SLIM",
     fullname: "Slim Foamzone 12 oz. Collapsible Can Cooler w/white imprint",    
     disableColorSelector: true,
