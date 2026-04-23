@@ -1130,7 +1130,7 @@ export const catalog = [
     },
   }, 
   {
-    code: "ACDJRA-15GNOSAP",
+    code: "ACDJRA-33GT-521863Z",
     name: ".15 Gauge Plastic Plate",
     fullname: ".15 Gauge Plastic Plate - White w/4CP imprint",
     disableColorSelector: true,
@@ -1150,7 +1150,7 @@ export const catalog = [
     },
   },
   {
-    code: "HYUHAL-15GNOSAP",
+    code: "HYUHAL-33GT-524161Z",
     name: ".15 Gauge Plastic Plate",
     fullname: ".15 Gauge Plastic Plate - White w/4CP imprint",
     disableColorSelector: true,
@@ -1233,7 +1233,7 @@ export const catalog = [
     },
   }, 
   {
-    code: "ACDJRA-KEYNOSAP",
+    code: "ACDJRA-FOB-522951D",
     name: "Carbon Fiber Key Chain",
     fullname: "Charcoal Carbon Fiber Key Chain",
     description: `186 red stitching key tag w/black imprint.`,
@@ -1254,7 +1254,7 @@ export const catalog = [
     },
   }, 
   {
-    code: "HYUHAL-KEYNOSAP",
+    code: "HYUHAL-FOB-522974B",
     name: "Carbon Fiber Key Chain",
     fullname: "Charcoal Carbon Fiber Key Chain",
     description: `288 blue stitching key tag w/black & 288 blue imprint.`,
@@ -1338,7 +1338,7 @@ export const catalog = [
     },
   },   
   {
-    code: "ACDJRA-TOTENOSAP",
+    code: "ACDJRA-TOTE-522952A",
     name: "Budget Shopper Tote",
     fullname: "Non-woven Budget Shopper Tote w/black imprint",
     description: `20 in. x 13 in. x 8 in.; no imprint on back of tote`,
@@ -1359,7 +1359,7 @@ export const catalog = [
     },
   },
   {
-    code: "HYUHAL-TOTENOSAP",
+    code: "HYUHAL-TOTE-522977A",
     name: "Budget Shopper Tote",
     fullname: "Non-woven Budget Shopper Tote w/ white imprint",
     description: `20 in. x 13 in. x 8 in.; no imprint on back of tote`,
@@ -1535,7 +1535,7 @@ export const catalog = [
     },
   },
   {
-    code: "ACDJRA-KOONOSAP",
+    code: "ACDJRA-KOO-522957A",
     name: "12 oz. Collapsible Can Cooler - STANDARD",
     fullname: "Foamzone 12 oz. Collapsible Can Cooler w/black imprint",    
     disableColorSelector: true,
@@ -1555,7 +1555,7 @@ export const catalog = [
     },
   },
   {
-    code: "HYUHAL-KOONOSAP",
+    code: "HYUHAL-KOO-522978A",
     name: "12 oz. Collapsible Can Cooler - STANDARD",
     fullname: "Foamzone 12 oz. Collapsible Can Cooler w/white imprint",    
     disableColorSelector: true,
@@ -1595,7 +1595,7 @@ export const catalog = [
     },
   },
   {
-    code: "TOYCCO-SLIMKNOSAP",
+    code: "TOYCCO-SKOO-525600A",
     name: "12 oz. Collapsible Can Cooler - SLIM",
     fullname: "Slim Foamzone 12 oz. Collapsible Can Cooler w/black imprint",    
     disableColorSelector: true,
@@ -1615,7 +1615,7 @@ export const catalog = [
     },
   },
   {
-    code: "TOYONO-SLIMKNOSAP",
+    code: "TOYONO-SKOO-523603A",
     name: "12 oz. Collapsible Can Cooler - SLIM",
     fullname: "Slim Foamzone 12 oz. Collapsible Can Cooler w/black imprint",    
     disableColorSelector: true,
